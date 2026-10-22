@@ -1,40 +1,88 @@
 import { textmode } from 'textmode.js';
-import { contrastByte } from './style';
+import { labFragment } from './lab-shader';
+import type { LabStyle } from './presets';
+
+export type FrameSource = HTMLImageElement | HTMLVideoElement | HTMLCanvasElement;
+export function dimensions(source: FrameSource) {
+  if (source instanceof HTMLImageElement) return { width: source.naturalWidth, height: source.naturalHeight };
+  if (source instanceof HTMLVideoElement) return { width: source.videoWidth, height: source.videoHeight };
+  return { width: source.width, height: source.height };
+}
 
 export async function createRenderer(canvas: HTMLCanvasElement) {
-  const t = textmode.create({ canvas, width: 768, height: 512, fontSize: 16, seed: 0, loadingScreen: { transition: 'none' } });
+  let presented = () => {};
+  const t = textmode.create({ canvas, width: 768, height: 512, fontSize: 16, seed: 0,
+    loadingScreen: { transition: 'none' },
+    plugins: [{ name: 'lab-presentation', install(_t, context) { context.on('postDraw', () => presented()); } }],
+  });
   const sample = document.createElement('canvas');
-  const context = sample.getContext('2d', { willReadFrequently: true })!;
+  const context = sample.getContext('2d')!;
   let texture: ReturnType<typeof t.createTexture>;
-  await t.setup(() => {
+  let current: FrameSource | undefined;
+  let style: LabStyle;
+  let started = 0;
+  let pending: Array<() => void> = [];
+  let capture: ((blob: Blob | null) => void) | undefined;
+  presented = () => {
+    if (!current) return;
+    canvas.dataset.frame = String(Number(canvas.dataset.frame ?? 0) + 1);
+    canvas.dataset.renderMs = (performance.now() - started).toFixed(1);
+    canvas.dataset.mediaTime = current instanceof HTMLVideoElement ? String(current.currentTime) : '0';
+    if (capture) {
+      const copy = document.createElement('canvas');
+      copy.width = canvas.width; copy.height = canvas.height;
+      copy.getContext('2d')!.drawImage(canvas, 0, 0);
+      copy.toBlob(capture, 'image/png');
+      capture = undefined;
+    }
+    const callbacks = pending; pending = [];
+    callbacks.forEach(resolve => resolve());
+  };
+  await t.setup(async () => {
+    const shader = await t.createMaterialShader(labFragment);
+    t.conversions.register({
+      id: 'lab', createShader: () => shader,
+      createUniforms: context => ({ ...context.createBaseUniforms(), u_contrast: style.contrast,
+        u_gamma: style.gamma, u_colorMode: { mono: 0, sampled: 1, limited: 2 }[style.color] }),
+    });
     texture = t.createTexture(sample);
-    texture.characters(' .:-=+*#%@').charColorMode('fixed').charColor('#e7e5dc')
-      .cellColorMode('fixed').cellColor('#111310');
+    texture.conversionMode('lab');
     t.noLoop();
   });
   t.draw(() => {
+    if (!current) return;
+    started = performance.now();
+    // Frame-local ramp override refreshes conversion uniforms without recompiling shaders.
+    texture.characters(style.ramp);
     t.background('#111310');
     t.image(texture, t.grid!.cols, t.grid!.rows);
-    canvas.dataset.frame = String(Number(canvas.dataset.frame ?? 0) + 1);
   });
   return {
-    render(image: HTMLImageElement, columns = 96, contrast = 1, ramp = ' .:-=+*#%@') {
+    render(source: FrameSource, next: LabStyle): Promise<void> {
+      current = source; style = next;
+      const size = dimensions(source);
       const grid = t.grid!;
-      grid.cols = columns;
-      grid.rows = Math.max(1, Math.round(columns * image.naturalHeight / image.naturalWidth * grid.cellWidth / grid.cellHeight));
-      t.resizeCanvas(grid.cols * grid.cellWidth, grid.rows * grid.cellHeight);
-      sample.width = grid.cols;
-      sample.height = grid.rows;
-      context.drawImage(image, 0, 0, sample.width, sample.height);
-      const frame = context.getImageData(0, 0, sample.width, sample.height);
-      for (let i = 0; i < frame.data.length; i += 4) {
-        const luminance = contrastByte(0.2126 * frame.data[i] + 0.7152 * frame.data[i + 1] + 0.0722 * frame.data[i + 2], contrast);
-        frame.data[i] = frame.data[i + 1] = frame.data[i + 2] = luminance;
+      const rows = Math.max(1, Math.round(next.columns * size.height / size.width * grid.cellWidth / grid.cellHeight));
+      if (grid.cols !== next.columns || grid.rows !== rows || sample.width !== next.columns || sample.height !== rows) {
+        grid.cols = next.columns; grid.rows = rows;
+        t.resizeCanvas(grid.cols * grid.cellWidth, grid.rows * grid.cellHeight);
+        sample.width = grid.cols; sample.height = grid.rows;
       }
-      context.putImageData(frame, 0, 0);
-      texture.characters(ramp);
+      // Dynamic source textures upload before draw(); prepare pixels before requesting the frame.
+      context.drawImage(source, 0, 0, sample.width, sample.height);
+      // Store the base ramp before the first atlas activation as well as per-frame overrides.
+      texture.characters(style.ramp);
+      const ready = new Promise<void>(resolve => pending.push(resolve));
       t.redraw();
-      return { cols: grid.cols, rows: grid.rows };
+      return ready;
     },
+    get grid() { return { cols: t.grid!.cols, rows: t.grid!.rows }; },
+    snapshot(): Promise<Blob> {
+      return new Promise((resolve, reject) => {
+        capture = blob => blob ? resolve(blob) : reject(new Error('PNG export failed.'));
+        t.redraw();
+      });
+    },
+    dispose() { t.destroy(); },
   };
 }

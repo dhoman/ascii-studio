@@ -1,0 +1,83 @@
+import { test, expect } from '@playwright/test';
+import { readFile } from 'node:fs/promises';
+
+test('a saved style survives reload and can be reused on video', async ({ page }) => {
+  await page.goto('/');
+  await expect(page.locator('#status')).toHaveText('Ready');
+  await page.getByLabel('Glyph color', { exact: true }).selectOption('limited');
+  await page.locator('#gamma').fill('1.5');
+  await page.getByText('Save a look / export a study', { exact: true }).click();
+  await page.getByLabel('Preset name', { exact: true }).fill('Moss test');
+  await page.getByRole('button', { name: 'Save style', exact: true }).click();
+  await expect(page.locator('#study-message')).toContainText('Saved');
+  await page.reload();
+  await expect(page.locator('#status')).toHaveText('Ready');
+  await page.getByLabel('Input mode', { exact: true }).selectOption('video');
+  await expect(page.locator('#status')).toHaveText('Ready');
+  await page.getByText('Save a look / export a study', { exact: true }).click();
+  await page.getByLabel('Saved styles', { exact: true }).selectOption('Moss test');
+  await page.getByRole('button', { name: 'Load style', exact: true }).click();
+  await expect(page.locator('#color')).toHaveValue('limited');
+  await expect(page.locator('#gamma')).toHaveValue('1.5');
+});
+
+test('study JSON round-trips and PNG exports rendered pixels, not a blank canvas', async ({ page }) => {
+  await page.goto('/');
+  await expect(page.locator('#status')).toHaveText('Ready');
+  await page.getByText('Save a look / export a study', { exact: true }).click();
+  await page.locator('#gamma').fill('1.5');
+  const jsonEvent = page.waitForEvent('download');
+  await page.getByRole('button', { name: 'Export study JSON', exact: true }).click();
+  const json = await jsonEvent;
+  const bytes = await readFile((await json.path())!);
+  const study = JSON.parse(bytes.toString());
+  expect(study.style.gamma).toBe(1.5);
+  expect(study.source.name).toBe('1000009352.jpg');
+  expect(study.font).toContain('UrsaFont');
+  expect(study.seed).toBe(0);
+  await page.getByRole('button', { name: 'Reset style', exact: true }).click();
+  await page.getByLabel('Import study JSON', { exact: true }).setInputFiles({ name: 'study.json', mimeType: 'application/json', buffer: bytes });
+  await expect(page.locator('#gamma')).toHaveValue('1.5');
+  await expect(page.locator('#study-message')).toContainText('restored');
+  const pngEvent = page.waitForEvent('download');
+  await page.getByRole('button', { name: 'Export PNG', exact: true }).click();
+  const png = await pngEvent;
+  const pngBytes = await readFile((await png.path())!);
+  expect(pngBytes.subarray(1,4).toString()).toBe('PNG');
+  const colors = await page.evaluate(async data => {
+    const image = new Image(); image.src = `data:image/png;base64,${data}`; await image.decode();
+    const canvas = document.createElement('canvas'); canvas.width = 128; canvas.height = 128;
+    const ctx = canvas.getContext('2d')!; ctx.drawImage(image, 0, 0, 128, 128);
+    const pixels = ctx.getImageData(0, 0, 128, 128).data;
+    const colors = new Set<string>();
+    for (let i=0; i<pixels.length; i+=4) colors.add(`${pixels[i]},${pixels[i+1]},${pixels[i+2]},${pixels[i+3]}`);
+    return colors.size;
+  }, pngBytes.toString('base64'));
+  expect(colors).toBeGreaterThan(4);
+  const unsupported = { ...study, font: 'An unavailable font', style: { ...study.style, gamma: 2 } };
+  await page.getByLabel('Import study JSON', { exact: true }).setInputFiles({ name: 'unsupported.json', mimeType: 'application/json', buffer: Buffer.from(JSON.stringify(unsupported)) });
+  await expect(page.locator('#study-message')).toContainText('Unsupported font');
+  await expect(page.locator('#gamma')).toHaveValue('1.5');
+});
+
+test('video study restores the source, paused time, and style without autoplay', async ({ page }) => {
+  await page.goto('/'); await expect(page.locator('#status')).toHaveText('Ready');
+  await page.locator('#mode').selectOption('video');
+  await expect(page.locator('#status')).toHaveText('Ready');
+  await page.locator('#seek').fill('2');
+  await expect.poll(() => page.locator('#original-video').evaluate((v: HTMLVideoElement) => v.currentTime)).toBeCloseTo(2, 2);
+  await page.locator('#color').selectOption('sampled');
+  await page.getByText('Save a look / export a study', { exact: true }).click();
+  const download = page.waitForEvent('download');
+  await page.getByRole('button', { name: 'Export study JSON', exact: true }).click();
+  const bytes = await readFile((await (await download).path())!);
+  await page.locator('#mode').selectOption('image');
+  await expect(page.locator('#status')).toHaveText('Ready');
+  await page.getByRole('button', { name: 'Reset style', exact: true }).click();
+  await page.getByLabel('Import study JSON', { exact: true }).setInputFiles({ name: 'video-study.json', mimeType: 'application/json', buffer: bytes });
+  await expect(page.locator('#study-message')).toContainText('restored');
+  await expect(page.locator('#mode')).toHaveValue('video');
+  await expect(page.locator('#color')).toHaveValue('sampled');
+  const state = await page.locator('#original-video').evaluate((v: HTMLVideoElement) => ({ time: v.currentTime, paused: v.paused }));
+  expect(state.time).toBeCloseTo(2, 2); expect(state.paused).toBe(true);
+});

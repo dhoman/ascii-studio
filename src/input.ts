@@ -4,6 +4,11 @@ export const sources = Object.entries(images).map(([path, url]) => ({
   name: path.split('/').pop()!, url: url as string,
 })).sort((a, b) => a.name.localeCompare(b.name));
 
+const videos = import.meta.glob('../references/**/*.{mp4,webm}', { eager: true, query: '?url', import: 'default' });
+export const videoSources = Object.entries(videos).map(([path, url]) => ({
+  name: path.split('/').pop()!, url: url as string,
+})).sort((a, b) => a.name.localeCompare(b.name));
+
 export async function loadStill(url: string): Promise<HTMLImageElement> {
   const image = new Image();
   image.src = url;
