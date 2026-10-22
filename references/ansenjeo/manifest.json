@@ -1,0 +1,142 @@
+{
+  "account": "Ansenjeo",
+  "retrieval": "xurl X API v2; MP4 bytes from returned X media URLs",
+  "videos": [
+    {
+      "post_id": "2113010044937625855",
+      "post_url": "https://x.com/Ansenjeo/status/2113010044937625855",
+      "created_at": "2026-10-21T20:50:27.000Z",
+      "text": "Making the ASCII MMORPG of my dreams!\n\nI've been working a lot on the skill system. As I already mentioned in our Discord, my main idea is to combine MMORPG and ARPG.\n\nIs RF OP in MMOs? Also sharing some widescreen gameplay\ud83d\ude4c\n\nAnsenjeo. #mmorpg #indiegames #poe #ascii https://t.co/eaJ5Mxgjge",
+      "media_key": "13_2113009584163971073",
+      "download_url": "https://video.twimg.com/amplify_video/2113009584163971073/vid/avc1/2304x1440/pDcSFbfdoKoeREjd.mp4",
+      "bit_rate": 10368000,
+      "api_width": 2304,
+      "api_height": 1440,
+      "api_duration_ms": 94533,
+      "file": "/opt/data/downloads/ansenjeo/2026-10-21_2113010044937625855_1.mp4",
+      "status": "verified",
+      "bytes": 118182499,
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "codec_type": "video",
+            "width": 2304,
+            "height": 1440
+          },
+          {
+            "codec_name": "aac",
+            "codec_type": "audio"
+          }
+        ],
+        "format": {
+          "duration": "94.598095"
+        }
+      }
+    },
+    {
+      "post_id": "2112626286132601104",
+      "post_url": "https://x.com/Ansenjeo/status/2112626286132601104",
+      "created_at": "2026-10-20T19:25:31.000Z",
+      "text": "Making the ASCII MMORPG of my dreams!\n\nSome work from the past few days\ud83d\ude4c\n\n1.Tested the trading system \n2.Tested the clouds \n3.Added fake shadows to characters and objects \n4.Tweaked the animations a bit\n\nAnsenjeo. #mmorpg #indiegame #ascii https://t.co/ZVrA9XjFqF",
+      "media_key": "13_2112626108839383041",
+      "download_url": "https://video.twimg.com/amplify_video/2112626108839383041/vid/avc1/720x1280/vWKJ8ro6xX1jYMdq.mp4",
+      "bit_rate": 2176000,
+      "api_width": 720,
+      "api_height": 1280,
+      "api_duration_ms": 46566,
+      "file": "/opt/data/downloads/ansenjeo/2026-10-20_2112626286132601104_1.mp4",
+      "status": "verified",
+      "bytes": 7444267,
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "codec_type": "video",
+            "width": 720,
+            "height": 1280
+          },
+          {
+            "codec_name": "aac",
+            "codec_type": "audio"
+          }
+        ],
+        "format": {
+          "duration": "46.625669"
+        }
+      }
+    },
+    {
+      "post_id": "2112626286132601104",
+      "post_url": "https://x.com/Ansenjeo/status/2112626286132601104",
+      "created_at": "2026-10-20T19:25:31.000Z",
+      "text": "Making the ASCII MMORPG of my dreams!\n\nSome work from the past few days\ud83d\ude4c\n\n1.Tested the trading system \n2.Tested the clouds \n3.Added fake shadows to characters and objects \n4.Tweaked the animations a bit\n\nAnsenjeo. #mmorpg #indiegame #ascii https://t.co/ZVrA9XjFqF",
+      "media_key": "13_2112626108843560960",
+      "download_url": "https://video.twimg.com/amplify_video/2112626108843560960/vid/avc1/720x1280/UDaehDEz0_O7h2da.mp4",
+      "bit_rate": 2176000,
+      "api_width": 720,
+      "api_height": 1280,
+      "api_duration_ms": 63566,
+      "file": "/opt/data/downloads/ansenjeo/2026-10-20_2112626286132601104_2.mp4",
+      "status": "verified",
+      "bytes": 14355442,
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "codec_type": "video",
+            "width": 720,
+            "height": 1280
+          },
+          {
+            "codec_name": "aac",
+            "codec_type": "audio"
+          }
+        ],
+        "format": {
+          "duration": "63.622676"
+        }
+      }
+    },
+    {
+      "post_id": "2112256088569520454",
+      "post_url": "https://x.com/Ansenjeo/status/2112256088569520454",
+      "created_at": "2026-10-19T18:54:29.000Z",
+      "text": "Making the ASCII MMORPG of my dreams!\n\nRight now, I\u2019m mainly working on gameplay, but I\u2019m also polishing the visuals.\n\nFinally added a fake shadow for the character, made cloud reflections now that we have clouds, and fixed a bunch of little things.\n\nAnsenjeo. #mmorpg #indiegames https://t.co/UpxW9Usdhf",
+      "media_key": "13_2112256011318808576",
+      "download_url": "https://video.twimg.com/amplify_video/2112256011318808576/vid/avc1/720x1280/hdWY1aCAe75VKfR4.mp4",
+      "bit_rate": 2176000,
+      "api_width": 720,
+      "api_height": 1280,
+      "api_duration_ms": 37800,
+      "file": "/opt/data/downloads/ansenjeo/2026-10-19_2112256088569520454_1.mp4",
+      "status": "verified",
+      "bytes": 7639798,
+      "probe": {
+        "programs": [],
+        "stream_groups": [],
+        "streams": [
+          {
+            "codec_name": "h264",
+            "codec_type": "video",
+            "width": 720,
+            "height": 1280
+          },
+          {
+            "codec_name": "aac",
+            "codec_type": "audio"
+          }
+        ],
+        "format": {
+          "duration": "37.848526"
+        }
+      }
+    }
+  ]
+}
