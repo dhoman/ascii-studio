@@ -1,0 +1,104 @@
+{
+  "url": "https://github.com/manthrax/JSlug",
+  "final_url": "https://github.com/manthrax/JSlug",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:48:00.775087+00:00",
+  "stars": 119,
+  "forks": 3,
+  "description": "Javascript implementation of Slug font loading and rendering, for THREEJS",
+  "homepage": "",
+  "topics": [],
+  "license": "NOASSERTION",
+  "archived": false,
+  "created_at": "2026-03-19T03:29:43.000Z",
+  "branch": "master",
+  "commit": "eb212fef355a477c6f3be4e2007dd8c6ecabf9f6",
+  "readme": "three-slug: Native Three.js GPU Text Rendering three-slug is a Javascript and WebGL port of Eric Lengyel's Slug font rendering algorithm, implemented natively for Three.js. Unlike traditional MSDF (Multi-Channel Signed Distance Field) font rendering which can suffer from corner rounding and texture resolution limits, the Slug algorithm evaluates the quadratic bezier curves of the TrueType font directly within the fragment shader. This enables resolution-independent font rendering, sharp corners, and precise anti-aliasing. Demo Demo Screenshots Features Client-side Generation: Parses .ttf and .otf data dynamically using opentype.js to compute curve layouts and spatial binning locally. Binary Format: Serializes curves and bin maps to .sluggish file payloads for cache delivery. Instanced Rendering: Passes coordinate frames and glyph indexing variables to WebGL vertex attributes backends. Typography Alignment: Iterates layout structures utilizing metric scalars mapping direct width increments. Phase 2: Native PBR & Shadow Integration Modular Shader Chunks: The core Slug mathematical raytracer has been decoupled into distinct Three.js #include chunks (slug_fragment_core, slug_fragment_standard, slug_pars_vertex). Standard Material Hooks: Utilizes onBeforeCompile to non-destructively splice the font rendering algorithm directly into native Three.js materials (e.g. MeshStandardMaterial, MeshDepthMaterial). Physical Lighting: Evaluates vector glyphs securely under physically based rendering paradigms, seamlessly scattering Light arrays and mapping PBR Specular boundaries. Dynamic Occlusions: Typography casts and receives accurate, anti-aliased shadows inside the active scene viewport using standard Depth buffer constraints and custom MeshDistanceMaterial definitions. Quick Start Example import * as THREE from 'three'; import { SlugLoader, SlugGeometry, injectSlug } from 'three-slug'; // 1. Load the pre-compiled .sluggish binary font data new SlugLoader().load('path/to/font.sluggish', (slugData) => { // 2. Initialize the scalable vector geometry const geometry = new SlugGeometry(1000); // Specify max glyph capacity // 3. Create a native Three.js Standard Material const material = new THREE.MeshStandardMaterial({ color: 0xffcc00, roughness: 1.0, metalness: 0.0, side: THREE.DoubleSide }); // 4. Spawn the finalized PBR Mesh const slugMesh = new THREE.Mesh(geometry, material); // 5. Inject the mathematical Slug raytracer and auto-bind Shadow caches seamlessly injectSlug(slugMesh, material, slugData); // 6. Append your text geometry.addText('MyString! WOOHOO!', slugData, { fontScale: 0.5, justify: 'center' }); slugMesh.castShadow = true; slugMesh.receiveShadow = true; scene.add(slugMesh); }); Alternative: Live .ttf Parsing (No offline conversion needed) If you have a raw .ttf font file and want to render it instantly without pre-packing a .sluggish binary offline, you can use the SlugGenerator directly inside your client loops! import * as THREE from 'three'; import { SlugGenerator, SlugGeometry, injectSlug } from 'three-slug'; // 1. Initialize the Live Generator const generator = new SlugGenerator(); generator.generateFromUrl('path/to/font.ttf').then((slugData) => { const geometry = new SlugGeometry(1000); // specify max glyph capacity const material = new THREE.MeshStandardMaterial({ color: 0xff4400, roughness: 1.0, metalness: 0.0, side: THREE.DoubleSide }); const slugMesh = new THREE.Mesh(geometry, material); injectSlug(slugMesh, material, slugData); geometry.addText('Live .TTF Rendering!', slugData, { fontScale: 0.4, justify: 'left' }); slugMesh.castShadow = true; scene.add(slugMesh); }); TipPerformance Guideline: For production, pre-compiling fonts into .sluggish is highly recommended! It removes opentype.js heavy calculation streams that load client parses and reduces loading buffers dramatically! Usage Serve the repository locally (e.g., npx http-server). Open demo/index.html. Use the UI to load a standard .ttf file. The Javascript generator will parse the curves, initialize the GPU textures, and dynamically render standard PBR typography inside the demo viewer. Toggle the RawShader Fallback to swap between Native Standard Lighting graphs or unlit baseline GLSL debugging buffers. (Optional) Click Download .sluggish to cache the generated font data to a serialized binary array. NPM npm install three-slug GitHub git clone https://github.com/manthrax/JSlug.git Credits & Acknowledgements Eric Lengyel for the Slug Algorithm. The Sluggish C++ Port Sluggish implementation for providing the architectural reference for mapping Slug textures directly to generic WebGL buffer pipelines. opentype.js for providing the native Javascript TrueType parsing core. Ported to Javascript and Three.js by manthrax.",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://github.com/manthrax/JSlug#three-slug-native-threejs-gpu-text-rendering"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/manthrax/JSlug#demo"
+    },
+    {
+      "label": "Demo",
+      "url": "https://manthrax.github.io/JSlug/demo/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/manthrax/JSlug#screenshots"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/manthrax/JSlug/blob/master/screenshot.png"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/manthrax/JSlug#features"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/manthrax/JSlug#phase-2-native-pbr--shadow-integration"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/manthrax/JSlug#quick-start-example"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/manthrax/JSlug#alternative-live-ttf-parsing-no-offline-conversion-needed"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/manthrax/JSlug#usage"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/manthrax/JSlug#npm"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/manthrax/JSlug#github"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/manthrax/JSlug#credits--acknowledgements"
+    },
+    {
+      "label": "Slug Algorithm",
+      "url": "http://sluglibrary.com/"
+    },
+    {
+      "label": "Sluggish implementation",
+      "url": "https://github.com/mightycow/Sluggish/"
+    },
+    {
+      "label": "opentype.js",
+      "url": "https://github.com/opentypejs/opentype.js"
+    },
+    {
+      "label": "manthrax",
+      "url": "https://github.com/manthrax"
+    }
+  ],
+  "root_files": [
+    "demo",
+    "src",
+    ".gitignore",
+    "GOAL.md",
+    "LICENSE",
+    "LICENSE-APACHE",
+    "LICENSE-MIT",
+    "NOTICE",
+    "README.md",
+    "UNLICENSE.MD",
+    "package-lock.json",
+    "package.json",
+    "screenshot.png"
+  ],
+  "release_count": 0,
+  "status": "verified"
+}

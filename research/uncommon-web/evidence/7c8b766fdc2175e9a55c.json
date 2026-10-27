@@ -1,0 +1,207 @@
+{
+  "url": "https://github.com/dicebear/dicebear",
+  "final_url": "https://github.com/dicebear/dicebear",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:47:44.211194+00:00",
+  "stars": 9918,
+  "forks": 434,
+  "description": "DiceBear is an avatar library for designers and developers. 🌍",
+  "homepage": "https://www.dicebear.com",
+  "topics": [
+    "api",
+    "avataaars",
+    "avatar",
+    "avatar-placeholder",
+    "avatars",
+    "bottts",
+    "dicebear",
+    "figma",
+    "pixel-art"
+  ],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2017-03-21T12:58:17.000Z",
+  "branch": "11.x",
+  "commit": "4db7af08605ecbf1c142b710ad1819473c096895",
+  "readme": "DiceBear Avatar Library DiceBear is an open source avatar library. It turns any seed string (a username or an email address, for example) into an SVG avatar in one of 63 styles, from hand-drawn characters to abstract patterns. The same seed always produces the same avatar, so you store a string instead of an image and never ask users to upload a profile picture. Avatars are customizable through style options: colors, backgrounds, rotation, individual features like hair or glasses. Playground | Documentation | Editor One library, seven languages DiceBear 10 ships as native libraries for JavaScript, PHP, Python, Rust, Go, Dart, and C#. Every port passes a shared test suite that requires byte-identical SVG output to the JavaScript reference. Generate an avatar in the browser, regenerate it later in a Go or PHP backend, and you get the same bytes. Language Package Install JavaScript / TypeScript @dicebear/core npm install @dicebear/core PHP dicebear/core composer require dicebear/core Python dicebear-core pip install dicebear-core Rust dicebear-core cargo add dicebear-core Go dicebear-go go get github.com/dicebear/dicebear-go/v11 Dart dicebear_core dart pub add dicebear_core C# DiceBear.Core dotnet add package DiceBear.Core In JavaScript it looks like this; the documentation has the equivalent for each language: import { Avatar, Style } from '@dicebear/core'; import definition from '@dicebear/styles/lorelei.json' with { type: 'json' }; const avatar = new Avatar(new Style(definition), { seed: 'John', size: 128, }); avatar.toString(); // SVG string avatar.toDataUri(); // data:image/svg+xml;charset=utf-8,... The 63 avatar styles are plain JSON definitions from the dicebear/styles repository, available as a package for each language. You can also create your own style, with Figma or from scratch. Without writing code The HTTP API returns avatars from a plain URL, free and without an account: https://api.dicebear.com/10.x/lorelei/svg?seed=Felix. For full control and privacy you can host it yourself with a single Docker container. The CLI prints an avatar to the terminal or generates files in bulk: npx dicebear create lorelei -o ./avatars --count 10. The editor lets you assemble a single avatar by hand and export it. This repository This monorepo contains the seven core libraries, the CLI, the SVG-to-raster converter, the documentation site (dicebear.com), and the editor. Related projects live in their own repositories: dicebear/styles: the official avatar style definitions dicebear/schema: the JSON Schema behind definitions and options dicebear/api: the self-hostable HTTP API dicebear/studio: DiceBear Studio, the plugin for Figma for style authors Contributions are welcome; CONTRIBUTING.md explains the setup and where each kind of change belongs. License The code is MIT licensed, including commercial use. The avatar styles are the work of their respective creators and carry their own licenses; the license overview lists them all, and many only ask for attribution. Star this repository If DiceBear saved you some work, a star makes the project easier to find for the next person looking for an avatar library. The support page lists the other ways to help. Sponsors Advertisement: Many thanks to our sponsors who provide us with free or discounted products.",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/9303dc1e74c74820c7b70f1c9ec62354d2d5f05b6501c5c0083342079e69cd77/68747470733a2f2f7777772e64696365626561722e636f6d2f6c6f676f2d726561646d652e737667"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/dicebear/dicebear#-dicebear-avatar-library"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/7b22a4793b3cbeded98e266acf942b8fffeb1cb92ec0441108c7160d595f4944/68747470733a2f2f7777772e64696365626561722e636f6d2f726561646d652d6865726f2e737667"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@dicebear/core"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/dicebear/dicebear/stargazers"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/dicebear/dicebear/blob/11.x/LICENSE"
+    },
+    {
+      "label": "Playground",
+      "url": "https://www.dicebear.com/playground"
+    },
+    {
+      "label": "Documentation",
+      "url": "https://www.dicebear.com/start/what-is-dicebear/"
+    },
+    {
+      "label": "Editor",
+      "url": "https://editor.dicebear.com"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/dicebear/dicebear#one-library-seven-languages"
+    },
+    {
+      "label": "@dicebear/core",
+      "url": "https://www.npmjs.com/package/@dicebear/core"
+    },
+    {
+      "label": "dicebear/core",
+      "url": "https://packagist.org/packages/dicebear/core"
+    },
+    {
+      "label": "dicebear-core",
+      "url": "https://pypi.org/project/dicebear-core/"
+    },
+    {
+      "label": "dicebear-core",
+      "url": "https://crates.io/crates/dicebear-core"
+    },
+    {
+      "label": "dicebear-go",
+      "url": "https://pkg.go.dev/github.com/dicebear/dicebear-go/v11"
+    },
+    {
+      "label": "dicebear_core",
+      "url": "https://pub.dev/packages/dicebear_core"
+    },
+    {
+      "label": "DiceBear.Core",
+      "url": "https://www.nuget.org/packages/DiceBear.Core"
+    },
+    {
+      "label": "documentation",
+      "url": "https://www.dicebear.com/start/what-is-dicebear/"
+    },
+    {
+      "label": "dicebear/styles",
+      "url": "https://github.com/dicebear/styles"
+    },
+    {
+      "label": "create your own style",
+      "url": "https://www.dicebear.com/create-styles/with-figma/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/dicebear/dicebear#without-writing-code"
+    },
+    {
+      "label": "HTTP API",
+      "url": "https://www.dicebear.com/integrations/http-api/"
+    },
+    {
+      "label": "host it yourself",
+      "url": "https://www.dicebear.com/recipes/self-host-the-http-api/"
+    },
+    {
+      "label": "CLI",
+      "url": "https://www.dicebear.com/integrations/cli/"
+    },
+    {
+      "label": "editor",
+      "url": "https://editor.dicebear.com"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/dicebear/dicebear#this-repository"
+    },
+    {
+      "label": "dicebear.com",
+      "url": "https://www.dicebear.com"
+    },
+    {
+      "label": "dicebear/styles",
+      "url": "https://github.com/dicebear/styles"
+    },
+    {
+      "label": "dicebear/schema",
+      "url": "https://github.com/dicebear/schema"
+    },
+    {
+      "label": "dicebear/api",
+      "url": "https://github.com/dicebear/api"
+    },
+    {
+      "label": "dicebear/studio",
+      "url": "https://github.com/dicebear/studio"
+    },
+    {
+      "label": "CONTRIBUTING.md",
+      "url": "https://github.com/dicebear/dicebear/blob/11.x/CONTRIBUTING.md"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/dicebear/dicebear#license"
+    },
+    {
+      "label": "MIT licensed",
+      "url": "https://github.com/dicebear/dicebear/blob/11.x/LICENSE"
+    },
+    {
+      "label": "license overview",
+      "url": "https://www.dicebear.com/licenses/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/dicebear/dicebear#star-this-repository"
+    },
+    {
+      "label": "support page",
+      "url": "https://www.dicebear.com/support/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/dicebear/dicebear#sponsors"
+    },
+    {
+      "label": "",
+      "url": "https://bunny.net/"
+    }
+  ],
+  "root_files": [
+    ".github/workflows",
+    ".vscode",
+    "apps",
+    "scripts",
+    "src",
+    "tests",
+    ".editorconfig",
+    ".gitignore",
+    ".prettierignore",
+    ".prettierrc",
+    "CHANGELOG.md",
+    "CONTRIBUTING.md",
+    "LICENSE",
+    "README.md",
+    "eslint.config.mjs",
+    "package-lock.json",
+    "package.json",
+    "turbo.json"
+  ],
+  "release_count": 17,
+  "status": "verified"
+}

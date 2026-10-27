@@ -1,0 +1,59 @@
+{
+  "url": "https://github.com/m1el/woscope",
+  "final_url": "https://github.com/m1el/woscope",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:47:59.998145+00:00",
+  "stars": 256,
+  "forks": 18,
+  "description": "WebGL-powered oscilloscope",
+  "homepage": "",
+  "topics": [],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2015-09-04T07:17:49.000Z",
+  "branch": "master",
+  "commit": "74af1e3f3c1ff9e0da8e82bf01b5b2dd52f3da5d",
+  "readme": "woscope: oscilloscope emulator This is a POC oscilloscope emulator with live demo Full explanation available on the blag Code is available under MIT license. Example <audio id=\"myAudio\" controls src=\"woscope-music/khrang.m4a\"></audio><br> <canvas id=\"myCanvas\" width=\"800\" height=\"800\"></canvas> <script src=\"dist/woscope.js\"></script> <script> var myCanvas = document.getElementById('myCanvas'), myAudio = document.getElementById('myAudio'); woscope({ canvas: myCanvas, audio: myAudio, callback: function () { myAudio.play(); }, error: function (msg) { console.log('woscope error:', msg); } }); </script> Dev commands npm install # install dev dependencies npm run demo # run demo locally with livereload npm run build # lint and build dist files",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://github.com/m1el/woscope#woscope-oscilloscope-emulator"
+    },
+    {
+      "label": "live demo",
+      "url": "http://m1el.github.io/woscope/"
+    },
+    {
+      "label": "the blag",
+      "url": "http://m1el.github.io/woscope-how/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/m1el/woscope#example"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/m1el/woscope#dev-commands"
+    }
+  ],
+  "root_files": [
+    "demo",
+    "dist",
+    "shaders",
+    "woscope-music",
+    ".editorconfig",
+    ".gitignore",
+    ".gitmodules",
+    ".jshintrc",
+    ".travis.yml",
+    "LICENSE",
+    "Readme.md",
+    "banner.txt",
+    "bower.json",
+    "index.html",
+    "index.js",
+    "package.json"
+  ],
+  "release_count": 0,
+  "status": "verified"
+}

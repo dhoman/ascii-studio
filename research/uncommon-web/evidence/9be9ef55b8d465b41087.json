@@ -1,0 +1,138 @@
+{
+  "url": "https://github.com/wix-incubator/kampos",
+  "final_url": "https://github.com/wix-incubator/kampos",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:48:25.579422+00:00",
+  "stars": 148,
+  "forks": 9,
+  "description": "Tiny and fast effects compositor on WebGL",
+  "homepage": "https://wix-incubator.github.io/kampos",
+  "topics": [
+    "filter-effects",
+    "javascript",
+    "transitions",
+    "video",
+    "webgl"
+  ],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2019-06-19T07:39:49.000Z",
+  "branch": "master",
+  "commit": "7c3f9225de4bf4679fb80e85766aa928bfb5dde2",
+  "readme": "kampos Tiny and fast effects compositor on WebGL kampos lets you add filter effects and beautiful transitions to video and images (or any other media). Just like SVG filter effects, only using WebGL, which means it works everywhere! Intro Read the blog post introducing kampos on Wix Engineering Blog. Posts CSS-Tricks: Nailing That Cool Dissolve Transition Demo Check out the live demo. Documentation For API reference and examples, read the docs. Features Filter effects for images and videos that you can mix and compose. As tiny as ~4KB (minified and gzipped). Core engine for creating and running effects. Plugins for effects and transitions - available for import. Custom plugins? Extremely easy by using the effects/transitions descriptors DSL. Usage Here's a simple example for using kampos: import { Kampos, effects } from 'kampos'; const target = document.querySelector('canvas'); const media = document.querySelector('video'); const hueSaturation = effects.hueSaturation(); hueSaturation.hue = 90; const kampos = new Kampos({ target, effects: [hueSaturation] }); kampos.setSource(media); kampos.play(); Getting started Grab the source from here, or install via package manager. npm example: npm install kampos Import the default build: import { Kampos, Ticker, effects, transitions } from 'kampos'; Or take just what you need: import Kampos from './node_modules/kampos/src/kampos'; import duotone from './node_modules/kampos/src/effects/duotone'; import displacement from './node_modules/kampos/src/effects/displacement'; Building locally npm install npm run build Running tests npm run test Contributing Contributions are welcome! (: License kampos is distributed under the MIT license.",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://github.com/wix-incubator/kampos/blob/master/kampos.svg?sanitize=true"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/wix-incubator/kampos#kampos"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/wix-incubator/kampos#tiny-and-fast-effects-compositor-on-webgl"
+    },
+    {
+      "label": "SVG filter effects",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Filter_effects"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/wix-incubator/kampos#intro"
+    },
+    {
+      "label": "blog post",
+      "url": "https://www.wix.engineering/post/introducing-kampos-a-tiny-and-fast-effects-compositor"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/wix-incubator/kampos#posts"
+    },
+    {
+      "label": "Nailing That Cool Dissolve Transition",
+      "url": "https://css-tricks.com/nailing-that-cool-dissolve-transition/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/wix-incubator/kampos#demo"
+    },
+    {
+      "label": "live demo",
+      "url": "https://wix-incubator.github.io/kampos/demo/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/wix-incubator/kampos#documentation"
+    },
+    {
+      "label": "the docs",
+      "url": "https://wix-incubator.github.io/kampos/docs/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/wix-incubator/kampos#features"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/wix-incubator/kampos#usage"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/wix-incubator/kampos#getting-started"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/wix-incubator/kampos#npm-example"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/wix-incubator/kampos#building-locally"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/wix-incubator/kampos#running-tests"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/wix-incubator/kampos#contributing"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/wix-incubator/kampos#license"
+    }
+  ],
+  "root_files": [
+    ".github/workflows",
+    ".vscode",
+    "demo",
+    "dist",
+    "docs",
+    "src",
+    "test",
+    ".editorconfig",
+    ".gitignore",
+    ".npmignore",
+    ".npmrc",
+    ".nvmrc",
+    ".prettierignore",
+    ".prettierrc",
+    ".travis.yml",
+    "CHANGELOG.md",
+    "LICENSE",
+    "README.md",
+    "documentation.yml",
+    "index.html",
+    "index.js",
+    "index.umd.js",
+    "kampos.svg",
+    "package-lock.json",
+    "package.json",
+    "rollup.build.js",
+    "rollup.umd.js",
+    "types.d.ts",
+    "vite.config.mjs"
+  ],
+  "release_count": 0,
+  "status": "verified"
+}

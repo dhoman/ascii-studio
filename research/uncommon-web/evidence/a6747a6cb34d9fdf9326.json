@@ -1,0 +1,105 @@
+{
+  "url": "https://github.com/jhammann/sakura",
+  "final_url": "https://github.com/jhammann/sakura",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:47:54.518686+00:00",
+  "stars": 175,
+  "forks": 23,
+  "description": "🌸 A javascript plugin to Make it rain sakura petals using CSS animations and requestAnimationFrame (vanilla JS and improved version of jQuery-Sakura).",
+  "homepage": "https://jhammann.github.io/sakura/",
+  "topics": [
+    "css3-animations",
+    "es6",
+    "javascript",
+    "javascript-plugin",
+    "npm",
+    "vanilla-javascript"
+  ],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2019-01-09T12:04:08.000Z",
+  "branch": "master",
+  "commit": "b78b3f4cbbe2fcf218b6926fea8d2742ce6d54d6",
+  "readme": "Sakura.js Sakura.js is an improved vanilla JS version of the jQuery-Sakura plugin. It makes it rain petals on a (section) of your page. Credits to the original creator of the jQuery plugin. I made this plugin because I wanted a tweaked vanilla JS version with NPM support. Sakura.js (like its original jQuery plugin) uses CSS3 animations and requestAnimationFrame to add elements which look like blossom petals to the DOM. You can add it on any element like the body, a div etc. They will animate on your page influenced by wind and gravity. Of course this doesn't have to be limited to blossom petals. It can be regular leafs as well or something completely different. Demo You can check a demo here: jhammann.github.io/sakura/ Install You can install Sakura.js with NPM: $ npm install sakura-js Or with Yarn if you prefer: $ yarn add sakura-js Setup Include the Sakura.js files inside your page and initialize it within your javascript. Below code shows the petals in your body (see the demo for the results). <!DOCTYPE html> <html lang=\"en\"> <head> ... <link rel=\"stylesheet\" href=\"path/to/sakura.min.css\"> </head> <body> ... <script src=\"path/to/sakura.min.js\"></script> <script> var sakura = new Sakura('body'); </script> </body> </html> Options Name Description Type Default className Classname of the petals. This corresponds with the Sakura CSS. String 'sakura' fallSpeed Speed factor in which the petal falls (the higher the number the slower it falls). Integer 1 maxSize The maximum size of the petals. Integer 14 minSize The minimum size of the petals. Integer 10 delay The delay between petals (in ms). If you increase it, it will take longer for a new petal to drop and vice versa. Integer 300 colors.gradientColorStart The petals are made with a linear-gradient. This is the start color (in rgba). String 'rgba(255, 183, 197, 0.9)' colors.gradientColorEnd The linear-gradient end color (in rgba). String 'rgba(255, 197, 208, 0.9)' colors.gradientColorDegree The degree in which the linear-gradient tilts. Integer 120 lifeTime The life time of the petals (0 is infinity). Integer 0 Adding multiple colors You can add multiple colors like the example below. Colors are randomly picked. var sakura = new Sakura('body', { colors: [ { gradientColorStart: 'rgba(255, 183, 197, 0.9)', gradientColorEnd: 'rgba(255, 197, 208, 0.9)', gradientColorDegree: 120, }, { gradientColorStart: 'rgba(255,189,189)', gradientColorEnd: 'rgba(227,170,181)', gradientColorDegree: 120, }, { gradientColorStart: 'rgba(212,152,163)', gradientColorEnd: 'rgba(242,185,196)', gradientColorDegree: 120, }, ], }); Methods After you initialize Sakura you have its initialized instance in a variable (like the sakura variable in the example above) with helpful methods. Name Description sakura.stop(graceful); Stops the petals from dropping and removes them from the DOM. Set graceful (boolean) to true to let the petals finish their animation instead of removing them from the DOM abruptly. sakura.start(); Start Sakura after stopping it. Development Sakura.js uses gulp to build development and production versions (both located in /dist/). The plugin is originally made in ES6 Javascript and SCSS. With gulp we use babel to create browser compatible versions. First you need to install gulp-cli globally. Then you have to install the project's dependencies. In the root of the repo do: $ npm install or if you use Yarn: $ yarn install Tasks You can run the watch task if you're actively developing. This watches for file changes and builds the correct files. This command also runs eslint. $ gulp watch If you want to run eslint individually. You can run the lint task: $ gulp lint Finally to build the project without watching or linting run the default gulp task: $ gulp Compatibility I tested this with the latest versions of Chrome, Firefox, Safari and IE11 on desktop and with Chrome for Android, Samsung Internet and iOS Safari. If you see compatibliy issues (or any issue for that matter) please add them in this repo's issue tracker.",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://github.com/jhammann/sakura#sakurajs"
+    },
+    {
+      "label": "jQuery-Sakura",
+      "url": "https://github.com/almightynay/jQuery-Sakura"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/af8239f149885f706159aa42ac7dfac93a1b869d2a3915a7b0c97883170b0844/68747470733a2f2f692e696d6775722e636f6d2f51766d6a34734d2e676966"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/jhammann/sakura#demo"
+    },
+    {
+      "label": "jhammann.github.io/sakura/",
+      "url": "https://jhammann.github.io/sakura/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/jhammann/sakura#install"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/jhammann/sakura#setup"
+    },
+    {
+      "label": "demo",
+      "url": "https://jhammann.github.io/sakura/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/jhammann/sakura#options"
+    },
+    {
+      "label": "linear-gradient",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/linear-gradient"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/jhammann/sakura#adding-multiple-colors"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/jhammann/sakura#methods"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/jhammann/sakura#development"
+    },
+    {
+      "label": "gulp-cli",
+      "url": "https://gulpjs.com/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/jhammann/sakura#tasks"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/jhammann/sakura#compatibility"
+    }
+  ],
+  "root_files": [
+    "dist",
+    "scripts",
+    "src",
+    ".eslintrc",
+    ".gitignore",
+    "LICENSE",
+    "README.md",
+    "gulpfile.js",
+    "index.html",
+    "package.json",
+    "yarn.lock"
+  ],
+  "release_count": 4,
+  "status": "verified"
+}

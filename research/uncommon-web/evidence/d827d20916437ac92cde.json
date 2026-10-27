@@ -1,0 +1,200 @@
+{
+  "url": "https://github.com/LukyVj/GSS",
+  "final_url": "https://github.com/LukyVj/GSS",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:47:27.459978+00:00",
+  "stars": 115,
+  "forks": 6,
+  "description": "❴ ● ❵ GSS — GPU Style Sheets. A CSS-like language for 3D scenes: selectors, the cascade, nesting, keyframes and transitions, compiled into one raymarching shader for WebGPU and WebGL2. No Three.js, no meshes. Playground, VS Code extension, and a <gss-scene> tag for any page.",
+  "homepage": "https://www.gss-lang.dev",
+  "topics": [
+    "3d",
+    "compiler",
+    "creative-coding",
+    "css",
+    "glsl",
+    "programming-language",
+    "raymarching",
+    "sdf",
+    "shader",
+    "webgl2",
+    "webgpu",
+    "wgsl"
+  ],
+  "license": "Apache-2.0",
+  "archived": false,
+  "created_at": "2026-09-29T15:21:01.000Z",
+  "branch": "main",
+  "commit": "d2b325cb0b25c13966189030e47f47046f0e66dc",
+  "readme": "Style sheets for the GPU. 3D scenes written in CSS, compiled into a single shader for WebGL2 and WebGPU. Website · Playground · Reference GSS (GPU Style Sheets) is a 3D language for people who already speak CSS. Declare shapes in a @scene, style them with selectors, and the compiler turns it all into one raymarched shader. No Three.js, no meshes. @scene { torus#ring; sphere#ball; } #ring { translate: 0 1.2 0; rotate-x: 70deg; radius: 1.1; thickness: 0.14; color: #e8e6e1; } #ball { translate: 0 1.2 0; radius: 0.55; color: #ff5a36; material: jelly(0.6); animation: float 2s ease-in-out alternate; } @keyframes float { from { translate: 0 1.2 0; } to { translate: 0 1.5 0; } } Documentation Getting started: why GSS, and your first scene. Installation: a tag, npm or Vite; WebGPU, TypeScript and the editor. Every page: each at-rule, selector, shape, property and function, with examples. The same pages, with every example to edit live: gss-lang.dev/docs. What it can do Selectors and the cascade: classes, ids, combinators, :hover, :has(), :nth-child(), nesting. Shapes: cube, sphere, torus, cylinder, cone, capsule, path, prism, lathe and more. Materials: matte(), metal(), glass(), jelly(), emissive(), iridescent(), and textures. Motion: @keyframes, transition, scroll-driven animations, offset-path. Values: calc(), var(), @property, random() and the CSS color functions. Effects: gradients, noise, masks, blur, bloom and grain. The scene: floor, background, lights, fog, shadows and an orbit camera. Responsive: @media, light-dark() and if(). Install A tag, no build step: <script type=\"module\" src=\"https://cdn.jsdelivr.net/npm/gss-lang@0.0.6/lib/embed.js\"></script> <gss-scene src=\"logo.gss\"></gss-scene> npm: npm install gss-lang@0.0.6 import { mount } from \"gss-lang\"; mount(canvas, \"@scene { sphere; }\"); Vite, compiled at build time: // vite.config.ts import gss from \"gss-lang/vite\"; export default { plugins: [gss()] }; // main.ts import { mount } from \"gss-lang/runtime\"; import logo from \"./logo.gss\"; mount(canvas, logo); WebGPU, TypeScript and the editor: see Installation. Tools Playground: a live editor, errors under their line, the generated GLSL and WGSL, export to Shadertoy. Reference: searchable, one live example per entry. VS Code: highlighting, formatting and snippets. code --install-extension lukyvj.gss-language Status 0.0.6, early: the syntax may still change. See the changelog. Contribute Bugs and ideas: issues or @GSS_lang. Pull requests are welcome. npm install npm run dev # the site, the playground and the reference npm test Before a pull request, read the contributing guide: where things live, and which branch to start from. License Apache 2.0.",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://www.gss-lang.dev"
+    },
+    {
+      "label": "Website",
+      "url": "https://www.gss-lang.dev"
+    },
+    {
+      "label": "Playground",
+      "url": "https://www.gss-lang.dev/playground"
+    },
+    {
+      "label": "Reference",
+      "url": "https://www.gss-lang.dev/docs"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/gss-lang"
+    },
+    {
+      "label": "",
+      "url": "https://www.gss-lang.dev/playground"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/LukyVj/GSS#documentation"
+    },
+    {
+      "label": "Getting started",
+      "url": "https://github.com/LukyVj/GSS/blob/main/docs/getting-started.md"
+    },
+    {
+      "label": "Installation",
+      "url": "https://github.com/LukyVj/GSS/blob/main/docs/installation.md"
+    },
+    {
+      "label": "Every page",
+      "url": "https://github.com/LukyVj/GSS/blob/main/docs/README.md"
+    },
+    {
+      "label": "gss-lang.dev/docs",
+      "url": "https://www.gss-lang.dev/docs"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/LukyVj/GSS#what-it-can-do"
+    },
+    {
+      "label": "Selectors and the cascade",
+      "url": "https://github.com/LukyVj/GSS/blob/main/docs/selectors.md"
+    },
+    {
+      "label": "Shapes",
+      "url": "https://github.com/LukyVj/GSS/blob/main/docs/shapes.md"
+    },
+    {
+      "label": "Materials",
+      "url": "https://github.com/LukyVj/GSS/blob/main/docs/materials.md"
+    },
+    {
+      "label": "Motion",
+      "url": "https://github.com/LukyVj/GSS/blob/main/docs/animations.md"
+    },
+    {
+      "label": "Values",
+      "url": "https://github.com/LukyVj/GSS/blob/main/docs/values.md"
+    },
+    {
+      "label": "Effects",
+      "url": "https://github.com/LukyVj/GSS/blob/main/docs/filters.md"
+    },
+    {
+      "label": "The scene",
+      "url": "https://github.com/LukyVj/GSS/blob/main/docs/scene-properties.md"
+    },
+    {
+      "label": "Responsive",
+      "url": "https://github.com/LukyVj/GSS/blob/main/docs/at-rules.md#at-media"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/LukyVj/GSS#install"
+    },
+    {
+      "label": "Installation",
+      "url": "https://github.com/LukyVj/GSS/blob/main/docs/installation.md"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/LukyVj/GSS#tools"
+    },
+    {
+      "label": "Playground",
+      "url": "https://www.gss-lang.dev/playground"
+    },
+    {
+      "label": "Reference",
+      "url": "https://www.gss-lang.dev/docs"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/LukyVj/GSS#status"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/LukyVj/GSS/blob/main/CHANGELOG.md"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/LukyVj/GSS#contribute"
+    },
+    {
+      "label": "issues",
+      "url": "https://github.com/LukyVj/GSS/issues"
+    },
+    {
+      "label": "@GSS_lang",
+      "url": "https://x.com/GSS_lang"
+    },
+    {
+      "label": "contributing guide",
+      "url": "https://github.com/LukyVj/GSS/blob/main/CONTRIBUTING.md"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/LukyVj/GSS#license"
+    },
+    {
+      "label": "Apache 2.0",
+      "url": "https://github.com/LukyVj/GSS/blob/main/LICENSE"
+    }
+  ],
+  "root_files": [
+    "design/reference",
+    "docs",
+    "editors/vscode",
+    "public",
+    "scripts",
+    "src",
+    "types",
+    ".gitignore",
+    "CHANGELOG.md",
+    "CLAUDE.md",
+    "CONTRIBUTING.md",
+    "DECISIONS.md",
+    "DESIGN.md",
+    "LICENSE",
+    "OPTIMIZATION.MD",
+    "README.md",
+    "ROADMAP.md",
+    "bench.html",
+    "brand.html",
+    "docs.html",
+    "index.html",
+    "middleware.js",
+    "package-lock.json",
+    "package.json",
+    "playground.html",
+    "showcase.html",
+    "tsconfig.json",
+    "tsconfig.lib.json",
+    "vercel.json",
+    "vite.config.ts",
+    "vite.embed.config.ts",
+    "vite.lib.config.ts"
+  ],
+  "release_count": 1,
+  "status": "verified"
+}

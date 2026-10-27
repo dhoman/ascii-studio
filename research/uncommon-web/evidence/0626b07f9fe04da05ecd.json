@@ -1,0 +1,186 @@
+{
+  "url": "https://github.com/cocopon/tweakpane",
+  "final_url": "https://github.com/cocopon/tweakpane",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:47:40.726922+00:00",
+  "stars": 4613,
+  "forks": 127,
+  "description": ":control_knobs: Compact GUI for fine-tuning parameters and monitoring value changes",
+  "homepage": "https://tweakpane.github.io/docs/",
+  "topics": [
+    "creative-coding",
+    "gui",
+    "tweakpane",
+    "tweaks",
+    "zero-dependency"
+  ],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2016-05-10T15:45:13.000Z",
+  "branch": "main",
+  "commit": "50a18c3dba67cb78431d7248dbe4d5a76336885a",
+  "readme": "Tweakpane Tweakpane is a compact pane library for fine-tuning parameters and monitoring value changes, inspired by dat.GUI. Clean and simple design Dependency-free Extensible (dat.GUI user? The migration guide can be helpful) Installation Refer to the Getting Started section for concrete steps. Remember to install @tweakpane/core if you are developing with TypeScript. Features See the official page for details. Bindings Number, String, Boolean, Color, Point 2D/3D/4D Readonly bindings Number, String, Boolean UI components Folder, Tab, Button, Separator Theming Plugins Misc Mobile support TypeScript type definitions JSON import / export Development CommonJS and ES modules From version 4, Tweakpane has been migrated to ES modules. If you are looking for a CommonJS version of the package, use version 3.x. Build your own Tweakpane $ npm ci $ npm run setup $ cd packages/tweakpane $ npm start The above commands start a web server for the document, build source files, and watch for changes. Open http://localhost:8080/ to browse the document. Other resources Design Kit Includes the basics, styles and components for Tweakpane, providing a practical resource for creating your own plugin. License MIT License. See LICENSE.txt for more information.",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://github.com/cocopon/tweakpane#tweakpane"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/cocopon/tweakpane/workflows/CI/badge.svg"
+    },
+    {
+      "label": "",
+      "url": "https://coveralls.io/github/cocopon/tweakpane"
+    },
+    {
+      "label": "",
+      "url": "https://badge.fury.io/js/tweakpane"
+    },
+    {
+      "label": "",
+      "url": "https://user-images.githubusercontent.com/602961/146529897-38829c6f-56df-46f6-81fe-d65fb2027eaa.png"
+    },
+    {
+      "label": "dat.GUI",
+      "url": "https://github.com/dataarts/dat.gui"
+    },
+    {
+      "label": "migration guide",
+      "url": "https://tweakpane.github.io/docs/migration/#datgui"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/cocopon/tweakpane#installation"
+    },
+    {
+      "label": "Getting Started",
+      "url": "https://tweakpane.github.io/docs/getting-started/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/cocopon/tweakpane#features"
+    },
+    {
+      "label": "official page",
+      "url": "https://tweakpane.github.io/docs/"
+    },
+    {
+      "label": "Bindings",
+      "url": "https://tweakpane.github.io/docs/input-bindings/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/cocopon/tweakpane#bindings"
+    },
+    {
+      "label": "",
+      "url": "https://user-images.githubusercontent.com/602961/184479032-38f50be3-e235-4914-85c0-dce316b33ed2.png"
+    },
+    {
+      "label": "Readonly bindings",
+      "url": "https://tweakpane.github.io/docs/monitor-bindings/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/cocopon/tweakpane#readonly-bindings"
+    },
+    {
+      "label": "",
+      "url": "https://user-images.githubusercontent.com/602961/184479060-44fda993-9f40-4ef1-b363-18e9f9deff7f.png"
+    },
+    {
+      "label": "UI components",
+      "url": "https://tweakpane.github.io/docs/ui-components/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/cocopon/tweakpane#ui-components"
+    },
+    {
+      "label": "",
+      "url": "https://user-images.githubusercontent.com/602961/184479079-84ee5436-b5f6-4c35-92eb-94cc8709ff12.png"
+    },
+    {
+      "label": "Theming",
+      "url": "https://tweakpane.github.io/docs/theming/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/cocopon/tweakpane#theming"
+    },
+    {
+      "label": "",
+      "url": "https://user-images.githubusercontent.com/602961/115102105-e6676500-9f83-11eb-8a74-ae4f76122000.png"
+    },
+    {
+      "label": "Plugins",
+      "url": "https://tweakpane.github.io/docs/plugins/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/cocopon/tweakpane#plugins"
+    },
+    {
+      "label": "",
+      "url": "https://user-images.githubusercontent.com/602961/184479086-cc8c72c2-c958-4e4e-8ae4-2690f721c544.png"
+    },
+    {
+      "label": "Misc",
+      "url": "https://tweakpane.github.io/docs/misc/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/cocopon/tweakpane#misc"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/cocopon/tweakpane#development"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/cocopon/tweakpane#commonjs-and-es-modules"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/cocopon/tweakpane#build-your-own-tweakpane"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/cocopon/tweakpane#other-resources"
+    },
+    {
+      "label": "Design Kit",
+      "url": "https://www.figma.com/community/file/1324202557355874089"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/cocopon/tweakpane#design-kit"
+    },
+    {
+      "label": "",
+      "url": "https://www.figma.com/community/file/1324202557355874089"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/cocopon/tweakpane#license"
+    }
+  ],
+  "root_files": [
+    ".github",
+    "packages",
+    ".editorconfig",
+    ".eslintignore",
+    ".eslintrc.js",
+    ".gitignore",
+    ".npmrc",
+    "LICENSE.txt",
+    "README.md",
+    "package-lock.json",
+    "package.json",
+    "prettier.config.js",
+    "tsconfig.json"
+  ],
+  "release_count": 73,
+  "status": "verified"
+}

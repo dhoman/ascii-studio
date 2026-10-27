@@ -1,0 +1,302 @@
+{
+  "url": "https://github.com/Shopify/draggable",
+  "final_url": "https://github.com/Shopify/draggable",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:47:30.051766+00:00",
+  "stars": 18476,
+  "forks": 1115,
+  "description": "The JavaScript Drag & Drop library your grandparents warned you about.",
+  "homepage": "https://shopify.github.io/draggable",
+  "topics": [
+    "drag-and-drop",
+    "draggable",
+    "es6",
+    "javascript"
+  ],
+  "license": "MIT",
+  "archived": true,
+  "created_at": "2017-09-27T15:31:23.000Z",
+  "branch": "main",
+  "commit": "8a1eed57f3ab2dff9371e8ce60fb39ac85871e8d",
+  "readme": "Development Draggable is no longer maintained by its original authors. Maintenance of this repo has been passed on to new collaborators and is no longer worked on by anyone at Shopify. We are still looking for more maintainers! If anyone is interested in answering / triaging issues, reviewing / rejecting / approving PRs, and authoring code for bug fixes / new features — please send an email to max.hoffmann (at) shopify (dot) com. You may be asked a few questions before obtaining collaboration permission, but if everything checks out, we will happily add you as a collaborator. Get complete control over drag and drop behaviour with Draggable! Draggable abstracts native browser events into a comprehensive API to create a custom drag and drop experience. Draggable comes with additional modules: Sortable, Droppable, Swappable. Draggable itself does not perform any sorting behaviour while dragging, but does the heavy lifting, e.g. creates mirror, emits events, manages sensor events, makes elements draggable. The additional modules are built on top of Draggable and therefore provide a similar API interface, for more information read the documentation below. Features Works with native drag, mouse, touch and force touch events Can extend dragging behaviour by hooking into draggables event life cycle Can extend drag detection by adding sensors to draggable The library is targeted ES6 first Table of Contents Install Documentation Contributing Roadmap Copyright Install You can install the library via npm. npm install @shopify/draggable --save or via yarn: yarn add @shopify/draggable or via CDN <!-- Entire bundle --> <script type=\"module\"> import { Draggable, Sortable, Droppable, Swappable, } from 'https://cdn.jsdelivr.net/npm/@shopify/draggable/build/esm/index.mjs'; </script> <!-- Draggable only --> <script type=\"module\"> import Draggable from 'https://cdn.jsdelivr.net/npm/@shopify/draggable/build/esm/Draggable/Draggable.mjs'; </script> <!-- Sortable only --> <script type=\"module\"> import Sortable from 'https://cdn.jsdelivr.net/npm/@shopify/draggable/build/esm/Sortable/Sortable.mjs'; </script> <!-- Droppable only --> <script type=\"module\"> import Droppable from 'https://cdn.jsdelivr.net/npm/@shopify/draggable/build/esm/Droppable/Droppable.mjs'; </script> <!-- Swappable only --> <script type=\"module\"> import Swappable from 'https://cdn.jsdelivr.net/npm/@shopify/draggable/build/esm/Swappable/Swappable.mjs'; </script> <!-- Plugins only --> <script type=\"module\"> import * as Plugins from 'https://cdn.jsdelivr.net/npm/@shopify/draggable/build/esm/Plugins/index.mjs'; </script> <!-- UMD browser --> <script src=\"https://cdn.jsdelivr.net/npm/@shopify/draggable/build/umd/index.min.js\"></script> <script> console.log(window.Draggable); </script> Browser Compatibility Check the \"browserlist\" property in package.json for more info Last 3 versions ✔ Last 3 versions ✔ Last 3 versions ✔ Last 3 versions ✔ Last 3 versions ✔ Documentation You can find the documentation for each module within their respective directories. Draggable DragEvent DraggableEvent Plugins Announcement Focusable Mirror MirrorEvent Scrollable Sensors DragSensor ForceTouchSensor MouseSensor Sensor SensorEvent TouchSensor Droppable DroppableEvent Plugins Collidable ResizeMirror Snappable SwapAnimation SortAnimation Sortable SortableEvent Swappable SwappableEvent TypeScript Draggable includes TypeScript definitions. Documentation Running examples To run the examples project locally, simply run the following from the draggable root: yarn && yarn start This will start a server that hosts the contents of examples/. It also watches for file changes from both src/ and examples/src and reloads the browser. Contributing Contributions are more than welcome, the code base is still new and needs more love. For more information, please checkout the contributing document. Related resources Ember CLI Shim on Github by @timrourke Ember CLI Shim on NPM by @timrourke Copyright Copyright (c) 2018-present Shopify. See LICENSE.md for further details.",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@shopify/draggable"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/Shopify/draggable/actions?query=branch%3Amain"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/Shopify/draggable/blob/main/CONTRIBUTING.md"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/9d4723d1830790e4276a76d9019d677cb5c7a978602f17272f437680b988792f/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f42756e646c6525323073697a652d31362e326b422d7265642e737667"
+    },
+    {
+      "label": "",
+      "url": "https://shopify.github.io/draggable"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/Shopify/draggable#development"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/Shopify/draggable#table-of-contents"
+    },
+    {
+      "label": "Install",
+      "url": "https://github.com/Shopify/draggable#install"
+    },
+    {
+      "label": "Documentation",
+      "url": "https://github.com/Shopify/draggable#documentation"
+    },
+    {
+      "label": "Contributing",
+      "url": "https://github.com/Shopify/draggable#contributing"
+    },
+    {
+      "label": "Roadmap",
+      "url": "https://github.com/Shopify/draggable#roadmap"
+    },
+    {
+      "label": "Copyright",
+      "url": "https://github.com/Shopify/draggable#copyright"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/Shopify/draggable#install"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/Shopify/draggable#browser-compatibility"
+    },
+    {
+      "label": "package.json",
+      "url": "https://github.com/Shopify/draggable/blob/main/package.json#L88"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/93493ce75a42afeff2f13f072b5457b72191f116bf9d267d0f5f036bf1e77eab/68747470733a2f2f7261772e6769746875622e636f6d2f616c7272612f62726f777365722d6c6f676f732f6d61737465722f7372632f6368726f6d652f6368726f6d655f34387834382e706e67"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/a7097e9171e47d9da253b4a2c0c98527b17708af27a81d0115ffe41f6a3b8773/68747470733a2f2f7261772e6769746875622e636f6d2f616c7272612f62726f777365722d6c6f676f732f6d61737465722f7372632f66697265666f782f66697265666f785f34387834382e706e67"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/df1831fa72221102cb55e7758ddfdc670945e00ec29d3f1a7eb9acd7256656d6/68747470733a2f2f7261772e6769746875622e636f6d2f616c7272612f62726f777365722d6c6f676f732f6d61737465722f7372632f6f706572612f6f706572615f34387834382e706e67"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/fbfa8651c9ee872fc2cd0cb21952cafc060bac06b2e85f26df731e1d9c6ed51d/68747470733a2f2f7261772e6769746875622e636f6d2f616c7272612f62726f777365722d6c6f676f732f6d61737465722f7372632f7361666172692f7361666172695f34387834382e706e67"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/bbcc4722615598ef5530d21ed29ef12bd10d2eeac989cd7fb78c04a86feca729/68747470733a2f2f7261772e6769746875622e636f6d2f616c7272612f62726f777365722d6c6f676f732f6d61737465722f7372632f656467652f656467655f34387834382e706e67"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/Shopify/draggable#documentation"
+    },
+    {
+      "label": "Draggable",
+      "url": "https://github.com/Shopify/draggable/blob/main/src/Draggable"
+    },
+    {
+      "label": "DragEvent",
+      "url": "https://github.com/Shopify/draggable/blob/main/src/Draggable/DragEvent"
+    },
+    {
+      "label": "DraggableEvent",
+      "url": "https://github.com/Shopify/draggable/blob/main/src/Draggable/DraggableEvent"
+    },
+    {
+      "label": "Plugins",
+      "url": "https://github.com/Shopify/draggable/blob/main/src/Draggable/Plugins"
+    },
+    {
+      "label": "Announcement",
+      "url": "https://github.com/Shopify/draggable/blob/main/src/Draggable/Plugins/Announcement"
+    },
+    {
+      "label": "Focusable",
+      "url": "https://github.com/Shopify/draggable/blob/main/src/Draggable/Plugins/Focusable"
+    },
+    {
+      "label": "Mirror",
+      "url": "https://github.com/Shopify/draggable/blob/main/src/Draggable/Plugins/Mirror"
+    },
+    {
+      "label": "MirrorEvent",
+      "url": "https://github.com/Shopify/draggable/blob/main/src/Draggable/Plugins/Mirror/MirrorEvent"
+    },
+    {
+      "label": "Scrollable",
+      "url": "https://github.com/Shopify/draggable/blob/main/src/Draggable/Plugins/Scrollable"
+    },
+    {
+      "label": "Sensors",
+      "url": "https://github.com/Shopify/draggable/blob/main/src/Draggable/Sensors"
+    },
+    {
+      "label": "DragSensor",
+      "url": "https://github.com/Shopify/draggable/blob/main/src/Draggable/Sensors/DragSensor"
+    },
+    {
+      "label": "ForceTouchSensor",
+      "url": "https://github.com/Shopify/draggable/blob/main/src/Draggable/Sensors/ForceTouchSensor"
+    },
+    {
+      "label": "MouseSensor",
+      "url": "https://github.com/Shopify/draggable/blob/main/src/Draggable/Sensors/MouseSensor"
+    },
+    {
+      "label": "Sensor",
+      "url": "https://github.com/Shopify/draggable/blob/main/src/Draggable/Sensors/Sensor"
+    },
+    {
+      "label": "SensorEvent",
+      "url": "https://github.com/Shopify/draggable/blob/main/src/Draggable/Sensors/SensorEvent"
+    },
+    {
+      "label": "TouchSensor",
+      "url": "https://github.com/Shopify/draggable/blob/main/src/Draggable/Sensors/TouchSensor"
+    },
+    {
+      "label": "Droppable",
+      "url": "https://github.com/Shopify/draggable/blob/main/src/Droppable"
+    },
+    {
+      "label": "DroppableEvent",
+      "url": "https://github.com/Shopify/draggable/blob/main/src/Droppable/DroppableEvent"
+    },
+    {
+      "label": "Plugins",
+      "url": "https://github.com/Shopify/draggable/blob/main/src/Plugins"
+    },
+    {
+      "label": "Collidable",
+      "url": "https://github.com/Shopify/draggable/blob/main/src/Plugins/Collidable"
+    },
+    {
+      "label": "ResizeMirror",
+      "url": "https://github.com/Shopify/draggable/blob/main/src/Plugins/ResizeMirror"
+    },
+    {
+      "label": "Snappable",
+      "url": "https://github.com/Shopify/draggable/blob/main/src/Plugins/Snappable"
+    },
+    {
+      "label": "SwapAnimation",
+      "url": "https://github.com/Shopify/draggable/blob/main/src/Plugins/SwapAnimation"
+    },
+    {
+      "label": "SortAnimation",
+      "url": "https://github.com/Shopify/draggable/blob/main/src/Plugins/SortAnimation"
+    },
+    {
+      "label": "Sortable",
+      "url": "https://github.com/Shopify/draggable/blob/main/src/Sortable"
+    },
+    {
+      "label": "SortableEvent",
+      "url": "https://github.com/Shopify/draggable/blob/main/src/Sortable/SortableEvent"
+    },
+    {
+      "label": "Swappable",
+      "url": "https://github.com/Shopify/draggable/blob/main/src/Swappable"
+    },
+    {
+      "label": "SwappableEvent",
+      "url": "https://github.com/Shopify/draggable/blob/main/src/Swappable/SwappableEvent"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/Shopify/draggable#typescript"
+    },
+    {
+      "label": "TypeScript",
+      "url": "http://typescriptlang.org"
+    },
+    {
+      "label": "Documentation",
+      "url": "https://github.com/Shopify/draggable/blob/main/doc/typescript.md"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/Shopify/draggable#running-examples"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/Shopify/draggable#contributing"
+    },
+    {
+      "label": "contributing document",
+      "url": "https://github.com/Shopify/draggable/blob/main/CONTRIBUTING.md"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/Shopify/draggable#related-resources"
+    },
+    {
+      "label": "Ember CLI Shim",
+      "url": "https://github.com/timrourke/ember-cli-shopify-draggable-shim"
+    },
+    {
+      "label": "@timrourke",
+      "url": "https://github.com/timrourke"
+    },
+    {
+      "label": "Ember CLI Shim",
+      "url": "https://www.npmjs.com/package/ember-cli-shopify-draggable-shim"
+    },
+    {
+      "label": "@timrourke",
+      "url": "https://github.com/timrourke"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/Shopify/draggable#copyright"
+    }
+  ],
+  "root_files": [
+    ".changeset",
+    ".github",
+    ".vscode",
+    "config/typescript",
+    "doc",
+    "examples",
+    "src",
+    "test",
+    ".editorconfig",
+    ".eslintignore",
+    ".eslintrc.js",
+    ".gitignore",
+    ".nvmrc",
+    ".prettierignore",
+    ".prettierrc",
+    "AUTHORS",
+    "CHANGELOG.md",
+    "CODE_OF_CONDUCT.md",
+    "CONTRIBUTING.md",
+    "LICENSE.md",
+    "README.md",
+    "babel.config.js",
+    "esdoc.json",
+    "index.d.ts",
+    "jest.config.js",
+    "package.json",
+    "rollup.config.ts",
+    "rollup.development.config.ts",
+    "tsconfig.json",
+    "yarn.lock"
+  ],
+  "release_count": 19,
+  "status": "verified"
+}

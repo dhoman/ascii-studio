@@ -1,0 +1,189 @@
+{
+  "url": "https://github.com/sparkjsdev/spark",
+  "final_url": "https://github.com/sparkjsdev/spark",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:48:18.614077+00:00",
+  "stars": 3796,
+  "forks": 570,
+  "description": ":sparkles:  An advanced 3D Gaussian Splatting renderer for THREE.js",
+  "homepage": "",
+  "topics": [],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2025-05-23T15:52:14.000Z",
+  "branch": "main",
+  "commit": "ffe210dc0a45d0515a06c9235878108112827d61",
+  "readme": "An advanced 3D Gaussian Splatting renderer for THREE.js Features - Getting Started - Documentation - FAQ Built by World Labs. Features Integrates with THREE.js rendering pipeline to fuse splat and mesh-based objects Portable: Works across almost all devices, targeting 98%+ WebGL2 support Renders fast even on low-powered mobile devices Render multiple splat objects together with correct sorting Most major splat file formats supported including: .PLY (also compressed), .SPZ, .SPLAT, .KSPLAT, .SOG Render multiple viewpoints simultaneously Fully dynamic: each splat can be transformed and edited for animation Real-time splat color editing, displacement, and skeletal animation Shader graph system to dynamically create/edit splats on the GPU Check out all the examples Getting Started Copy Code Copy the following code into an index.html file. <style> body {margin: 0;} </style> <script type=\"importmap\"> { \"imports\": { \"three\": \"https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.module.js\", \"three/addons/\": \"https://cdn.jsdelivr.net/npm/three@0.180.0/examples/jsm/\", \"@sparkjsdev/spark\": \"https://sparkjs.dev/releases/spark/2.4.0/spark.module.js\" } } </script> <script type=\"module\"> import * as THREE from \"three\"; import { SparkRenderer, SplatMesh } from \"@sparkjsdev/spark\"; const scene = new THREE.Scene(); const camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 0.01, 1000); const renderer = new THREE.WebGLRenderer(); renderer.setSize(window.innerWidth, window.innerHeight); document.body.appendChild(renderer.domElement) const spark = new SparkRenderer({ renderer }); scene.add(spark); const splatURL = \"https://sparkjs.dev/assets/splats/butterfly.spz\"; const butterfly = new SplatMesh({ url: splatURL }); butterfly.quaternion.set(1, 0, 0, 0); butterfly.position.set(0, 0, -3); scene.add(butterfly); renderer.setAnimationLoop(function animate(time) { renderer.render(scene, camera); butterfly.rotation.y += 0.01; }); </script> CDN <script type=\"importmap\"> { \"imports\": { \"three\": \"https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.module.js\", \"three/addons/\": \"https://cdn.jsdelivr.net/npm/three@0.180.0/examples/jsm/\", \"@sparkjsdev/spark\": \"https://sparkjs.dev/releases/spark/2.4.0/spark.module.js\" } } </script> NPM npm install @sparkjsdev/spark Run Examples locally Install Rust if it's not already installed in your machine. Next, build Spark by running: npm install npm run build:wasm npm run build This will first build the Rust Wasm component (npm run build:wasm), then Spark itself (npm run build). The examples fetch assets from a remote URL. This step is optional, but offline development and faster loading times are possible if you download and cache the assets files locally with the following command: npm run assets:download Once you've built Spark and optionally downloaded the assets, you can now run the examples: npm start This will run a dev server by default at http://localhost:8080/. Check the console log output to see if yours is served on a different port. Develop and contribute to the project Build troubleshooting First try cleaning all the build files and re-building everything: npm run clean npm install npm run build:wasm npm run build There's no versioning system for assets. If you need to re-download a specific file you can delete that asset file individually or download all assets from scratch: npm run assets:clean npm run assets:download Ignore dist directory during development To ignore the dist directory and prevent accidental commits and merge conflicts git update-index --assume-unchanged dist/* To revert and be able to commit into to the dist directory again: git update-index --no-assume-unchanged dist/* To list ignored files in case of need to troubleshoot git ls-files -v | grep '^[a-z]' | cut -c3- Build docs and site Install Mkdocs Material pip install mkdocs-material If you hit an externally managed environment error on macOS and if you installed python via brew try: brew install mkdocs-material Edit markdown in /docs directory npm run docs Build Spark website Build the static site and docs in a site directory. npm run site:build You can run any static server in the site directory but for convenience you can run npm run site:serve Deploy Spark website The following command will generate a static site from the docs directory and push it to the repo that hosts the site via gh-pages npm run site:deploy Compress splats To compress a splat to spz run npm run assets:compress <file or URL to ply>",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://github.com/user-attachments/assets/5287631a-083c-4c86-80f6-4dca24aa263f#gh-light-mode-only"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/user-attachments/assets/91e8d74b-84a5-4073-bd72-d7228f948dc6#gh-dark-mode-only"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/sparkjsdev/spark#an-advanced-3d-gaussian-splatting-renderer-for-threejs"
+    },
+    {
+      "label": "Features",
+      "url": "https://github.com/sparkjsdev/spark#features"
+    },
+    {
+      "label": "Getting Started",
+      "url": "https://github.com/sparkjsdev/spark#getting-started"
+    },
+    {
+      "label": "Documentation",
+      "url": "https://sparkjs.dev/"
+    },
+    {
+      "label": "FAQ",
+      "url": "https://sparkjs.dev/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/sparkjsdev/spark/blob/main/LICENSE"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@sparkjsdev/spark"
+    },
+    {
+      "label": "",
+      "url": "https://sparkjs.dev"
+    },
+    {
+      "label": "World Labs",
+      "url": "https://www.worldlabs.ai"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/sparkjsdev/spark#features"
+    },
+    {
+      "label": ".PLY",
+      "url": "https://github.com/graphdeco-inria/gaussian-splatting"
+    },
+    {
+      "label": "compressed",
+      "url": "https://blog.playcanvas.com/compressing-gaussian-splats/#compressed-ply-format"
+    },
+    {
+      "label": ".SPZ",
+      "url": "https://github.com/nianticlabs/spz"
+    },
+    {
+      "label": ".SPLAT",
+      "url": "https://github.com/antimatter15/splat"
+    },
+    {
+      "label": ".KSPLAT",
+      "url": "https://github.com/mkkellogg/GaussianSplats3D"
+    },
+    {
+      "label": ".SOG",
+      "url": "https://developer.playcanvas.com/user-manual/gaussian-splatting/formats/sog/"
+    },
+    {
+      "label": "examples",
+      "url": "https://sparkjs.dev/examples/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/sparkjsdev/spark#getting-started"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/sparkjsdev/spark#copy-code"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/sparkjsdev/spark#cdn"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/sparkjsdev/spark#npm"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/sparkjsdev/spark#run-examples-locally"
+    },
+    {
+      "label": "Rust",
+      "url": "https://www.rust-lang.org/tools/install"
+    },
+    {
+      "label": "http://localhost:8080/",
+      "url": "http://localhost:8080/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/sparkjsdev/spark#develop-and-contribute-to-the-project"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/sparkjsdev/spark#build-troubleshooting"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/sparkjsdev/spark#ignore-dist-directory-during-development"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/sparkjsdev/spark#build-docs-and-site"
+    },
+    {
+      "label": "Mkdocs Material",
+      "url": "https://squidfunk.github.io/mkdocs-material/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/sparkjsdev/spark#build-spark-website"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/sparkjsdev/spark#deploy-spark-website"
+    },
+    {
+      "label": "repo",
+      "url": "https://github.com/sparkjsdev/sparkjsdev.github.io"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/sparkjsdev/spark#compress-splats"
+    },
+    {
+      "label": "spz",
+      "url": "https://scaniverse.com/spz"
+    }
+  ],
+  "root_files": [
+    ".github/workflows",
+    "dist",
+    "docs",
+    "examples",
+    "rust",
+    "scripts",
+    "src",
+    "test",
+    " .gitattributes",
+    ".gitignore",
+    "CHANGELOG.md",
+    "LICENSE",
+    "README.md",
+    "biome.json",
+    "examples.html",
+    "index.html",
+    "lefthook.yml",
+    "mkdocs.yml",
+    "package-lock.json",
+    "package.json",
+    "tsconfig.json",
+    "vite.config.ts"
+  ],
+  "release_count": 17,
+  "status": "verified"
+}

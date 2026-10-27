@@ -1,0 +1,408 @@
+{
+  "url": "https://github.com/LottieFiles/dotlottie-web",
+  "final_url": "https://github.com/LottieFiles/dotlottie-web",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:47:27.400071+00:00",
+  "stars": 924,
+  "forks": 57,
+  "description": "High-performance Lottie & dotLottie web player powered by Rust + WASM, with React, Vue, Svelte, Solid & Web Components.",
+  "homepage": "https://lottiefiles.com/dotlottie",
+  "topics": [
+    "animation",
+    "animation-library",
+    "canvas",
+    "dotlottie",
+    "javascript",
+    "lottie",
+    "lottie-animation",
+    "lottie-player",
+    "motion-graphics",
+    "react",
+    "solidjs",
+    "svelte",
+    "thorvg",
+    "typescript",
+    "vue",
+    "wasm",
+    "web-components",
+    "webassembly",
+    "webgl",
+    "webgpu"
+  ],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2023-10-20T06:42:23.000Z",
+  "branch": "main",
+  "commit": "d8a4e9e2cf76740b7b3848257f962b38d71aa71a",
+  "readme": "dotLottie Web The official LottieFiles player for Lottie (.json) and dotLottie (.lottie) animations on the web — a Rust + WASM core powered by ThorVG, with Software, WebGL2, and WebGPU rendering backends and full dotLottie v2 support (theming, state machines, and audio). 🌐 Live Viewer · 📊 Perf Playground · 📚 Docs · 🦀 dotLottie-rs Why dotLottie Web 📦 Lottie + dotLottie, one player — point src at a classic Lottie .json or a .lottie archive. The .lottie format bundles multiple animations, themes, state machines, and embedded assets into a single compressed file. 🦀 Rust + WASM core — powered by dotlottie-rs, the same engine that ships in iOS, Android, and native dotLottie players. One battle-tested implementation across every platform. 🎨 ThorVG renderer — an industrial-grade vector graphics engine with the broadest Lottie feature coverage of any web renderer. See the ThorVG Lottie support matrix. ⚡ Three rendering backends — Software (Canvas2D), WebGL2, and WebGPU (experimental). Switch with a one-line import change — same DotLottie class everywhere. 📁 dotLottie v2 ready — first-class theming, interactive state machines, and audio in a single .lottie file. No userland wiring required. 🧵 Off-main-thread — DotLottieWorker renders on a Web Worker with OffscreenCanvas, keeping your UI buttery-smooth even with dozens of animations. ⚛️ 6 first-party SDKs — Vanilla JS, React, Vue, Svelte, Solid, and a Web Component. Plus SSR-safe (Next.js example included) and Node.js 18+ support. 🎛️ Rich runtime control — themes, slots (color/scalar/vector/gradient/text/image), markers, segments, layouts (fit + align), playback modes (forward/reverse/bounce), frame interpolation, 25+ typed events. Quick Start Install the package for your framework, then drop in a few lines. The same player loads both Lottie .json and dotLottie .lottie files — just point src at either: Vanilla JS npm install @lottiefiles/dotlottie-web <canvas id=\"canvas\" style=\"width: 300px; height: 300px\"></canvas> import { DotLottie } from '@lottiefiles/dotlottie-web'; const dotLottie = new DotLottie({ canvas: document.getElementById('canvas'), src: 'https://your-animation-url.lottie', autoplay: true, loop: true, }); ⚛️ React npm install @lottiefiles/dotlottie-react import { DotLottieReact } from '@lottiefiles/dotlottie-react'; const App = () => ( <DotLottieReact src=\"path/to/animation.lottie\" loop autoplay /> ); 💚 Vue npm install @lottiefiles/dotlottie-vue <script setup> import { DotLottieVue } from '@lottiefiles/dotlottie-vue'; </script> <template> <DotLottieVue style=\"height: 500px; width: 500px\" autoplay loop src=\"https://path-to-lottie.lottie\" /> </template> 🧡 Svelte npm install @lottiefiles/dotlottie-svelte <script lang=\"ts\"> import { DotLottieSvelte } from '@lottiefiles/dotlottie-svelte'; </script> <DotLottieSvelte src=\"path/to/animation.lottie\" loop autoplay /> 🔵 Solid npm install @lottiefiles/dotlottie-solid import { DotLottieSolid } from '@lottiefiles/dotlottie-solid'; const App = () => ( <DotLottieSolid src=\"path/to/animation.lottie\" loop autoplay /> ); 🌐 Web Component (drop-in, no build step) <dotlottie-wc src=\"https://lottie.host/4db68bbd-31f6-4cd8-84eb-189de081159a/IGmMCqhzpt.lottie\" autoplay loop ></dotlottie-wc> <script type=\"module\" src=\"https://unpkg.com/@lottiefiles/dotlottie-wc@latest/dist/dotlottie-wc.js\" ></script> Or via npm: npm install @lottiefiles/dotlottie-wc import '@lottiefiles/dotlottie-wc'; Features 🤖 Interactive State Machines dotLottie v2 ships state machines built into the file format — no JS glue required. Define states, transitions, and inputs in a single .lottie and drive them at runtime through pointer events, custom events, or input values. const dotLottie = new DotLottie({ canvas: document.getElementById('canvas'), src: 'interactive-button.lottie', stateMachineId: 'main', autoplay: true, }); The player exposes typed events for stateMachineStart, stateMachineTransition, stateMachineStateEntered, custom events, and input changes — perfect for wiring animations into your UI logic. 🎨 Runtime Theming Switch palettes, animate gradients, swap text, or replace images at runtime — without re-exporting from After Effects. Themes can be embedded in the .lottie manifest or supplied programmatically. // Use a theme defined in the .lottie manifest dotLottie.setTheme('dark'); // Or supply a theme object at runtime dotLottie.setThemeData({ rules: [ { id: 'primary', type: 'Color', value: [0.9, 0.2, 0.4, 1.0] }, ], }); The full Theme type covers color, scalar, position, vector, gradient, image, and text rules — all keyframe-aware. 🔊 Audio Support dotLottie files can carry embedded audio tracks alongside the animation timeline — handy for UI sound effects, onboarding flows, or interactive characters. Audio is decoded and played in lockstep with the animation timeline. Audio is an experimental feature in dotlottie-rs. Browser autoplay policies still apply — initiate playback from a user gesture. 🧵 Off-Main-Thread Rendering For pages with many animations, swap DotLottie for DotLottieWorker. Identical API, but rendering happens on a Web Worker with an OffscreenCanvas, freeing the main thread for layout, scrolling, and your app code. import { DotLottieWorker } from '@lottiefiles/dotlottie-web'; const player = new DotLottieWorker({ canvas: document.getElementById('canvas'), src: 'animation.lottie', autoplay: true, loop: true, workerId: 'shared-pool', // optional: share one worker across many instances }); All DotLottieWorker methods are async (Promise-returning) since they cross a worker boundary. ⚡ Hardware-Accelerated Rendering The default Software backend works everywhere. For demanding workloads — many concurrent animations, large canvases, complex masks — opt in to GPU rendering via subpath imports: // WebGL2 — broadly supported import { DotLottie } from '@lottiefiles/dotlottie-web/webgl'; // WebGPU — experimental, modern Chromium / Safari TP import { DotLottie } from '@lottiefiles/dotlottie-web/webgpu'; The class name (DotLottie) and API surface are identical across all three backends, so swapping renderers is a one-line change. Each backend ships its own optimized WASM build via package.json conditional exports. Want to see the difference on your own hardware? The hosted perf-test page compares Software vs WebGL vs WebGPU vs Skottie/CanvasKit head-to-head. 🖼️ More built-in capabilities Multi-animation .lottie files — animationId config + loadAnimation(id) to switch between bundled animations Named markers — setMarker(name) and markers() to play AE-defined segments Frame segments — setSegment(start, end) for arbitrary frame ranges Layout — fit (contain / cover / fill / fit-width / fit-height / none) + normalized align: [x, y] Slots — bind dynamic data to color, scalar, vector, gradient, text, and image slots at runtime Playback modes — forward / reverse / bounce / reverse-bounce with configurable loop counts Frame interpolation — smooth subframe playback (default on) or pinned to the original AE frame rate Freeze on offscreen — automatically pause rendering when the canvas leaves the viewport 25+ typed events — play, pause, frame, complete, loop, load, loadError, freeze, plus the full state-machine event suite Packages All packages render both Lottie (.json) and dotLottie (.lottie) animations. Package Description @lottiefiles/dotlottie-web Core Lottie & dotLottie player — Rust/WASM via dotlottie-rs, Canvas2D / WebGL / WebGPU, Node-isomorphic @lottiefiles/dotlottie-react React component for Lottie & dotLottie @lottiefiles/dotlottie-vue Vue 3 component for Lottie & dotLottie @lottiefiles/dotlottie-svelte Svelte component for Lottie & dotLottie @lottiefiles/dotlottie-solid Solid component for Lottie & dotLottie @lottiefiles/dotlottie-wc Framework-agnostic Web Component for Lottie & dotLottie Each package README contains its full API reference, prop tables, and event documentation. dotLottie Viewer A hosted companion app at lottiefiles.github.io/dotlottie-web for inspecting, debugging, and benchmarking animations: Page What it does Home Drop a .lottie or .json file to preview rendering and inspect manifest details Playground Interactive editor for player config, themes, markers, and animation switching Performance Stress test across 40+ animations — compare Software / WebGL / WebGPU / Skottie head-to-head on your own hardware, with seedable runs for reproducibility List Gallery of curated animations Embed Embedding patterns and demos Source: apps/viewer/. Live Examples (CodePen) @lottiefiles/dotlottie-web — Getting Started · Playback Controls · Dynamic Loading · Worker · Multi Animations · Advanced Layout · Named Markers · Theming · Interactivity @lottiefiles/dotlottie-react — Getting Started · Custom Controls @lottiefiles/dotlottie-vue — Getting Started Local Examples Runnable example apps in examples/: Example Package Highlights web @lottiefiles/dotlottie-web State machines, themes, segments, layout web-node @lottiefiles/dotlottie-web (Node.js) Server-side rendering to a buffer react @lottiefiles/dotlottie-react Renderer selection (canvas/webgl/webgpu) vue @lottiefiles/dotlottie-vue Theme toggling, ref/event patterns solid @lottiefiles/dotlottie-solid Signal-based state, theme/animation switching wc @lottiefiles/dotlottie-wc Web Component usage and event delegation next @lottiefiles/dotlottie-react (Next.js) SSR-safe rendering with the App Router pnpm install && pnpm run build cd examples/web pnpm run dev Browser & Runtime Support Required: WebAssembly · Canvas 2D · Fetch API Optional (enhances perf): Web Workers · OffscreenCanvas · WebGL2 (for /webgl) · WebGPU (for /webgpu) Browser Minimum version Chrome 57+ (Mar 2017) Firefox 52+ (Mar 2017) Safari 11+ (Sep 2017) Edge 16+ (Oct 2017) iOS Safari 11+ (Sep 2017) Node.js: 18+ — @lottiefiles/dotlottie-web is isomorphic and runs server-side for thumbnail generation, frame extraction, or static rendering. Development Prerequisites: Node.js 22+, pnpm 10+ git clone https://github.com/LottieFiles/dotlottie-web.git cd dotlottie-web pnpm install pnpm run build # Build all packages pnpm run dev # Watch mode pnpm run test # Run tests pnpm run lint # Lint pnpm run format # Format Contributing Contributions are welcome! Read the Contributing Guidelines and Code of Conduct before opening an issue or PR. License MIT © LottieFiles",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/fad43e8688b6c56a5f8efe74a0af6aa83b6c935346b6bb56bc58b13cee086a01/68747470733a2f2f696d672e736869656c64732e696f2f6e706d2f762f406c6f7474696566696c65732f646f746c6f747469652d7765623f6c6162656c3d2534306c6f7474696566696c6573253246646f746c6f747469652d776562"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/0c75bdbc3f12df4ba7dd43f2e6ed7f0d0832fb6a2351dfe322d9c59d0428b207/68747470733a2f2f696d672e736869656c64732e696f2f62756e646c6570686f6269612f6d696e7a69702f406c6f7474696566696c65732f646f746c6f747469652d776562"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/a17ca9a750499d66e04ca51b2013fdc993584d7a0d084d9c83328d86d994929f/68747470733a2f2f696d672e736869656c64732e696f2f6e706d2f64772f406c6f7474696566696c65732f646f746c6f747469652d776562"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/32990ef347949da71e0fd0608033a03d8e75bdb0d700c4cc274a4eade567d513/68747470733a2f2f696d672e736869656c64732e696f2f6a7364656c6976722f6e706d2f68772f2534306c6f7474696566696c65732f646f746c6f747469652d776562"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/81967d7f5f89965e6663507258a7bf4728382e4acedadbe0e83e7a72f090c506/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f6c6963656e73652f4c6f7474696546696c65732f646f746c6f747469652d776562"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/a3be2cf867b3d1c3b87a13a659589bcd418efc2150e7803a93706f6a39d8fcda/68747470733a2f2f6c6f747469652e686f73742f34336634333634362d623031382d346437322d613936622d3032613932396364393732372f674152786449657462452e737667"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/LottieFiles/dotlottie-web#dotlottie-web"
+    },
+    {
+      "label": "ThorVG",
+      "url": "https://github.com/thorvg/thorvg"
+    },
+    {
+      "label": "dotLottie v2",
+      "url": "https://lottiefiles.com/dotlottie"
+    },
+    {
+      "label": "🌐 Live Viewer",
+      "url": "https://lottiefiles.github.io/dotlottie-web/"
+    },
+    {
+      "label": "📊 Perf Playground",
+      "url": "https://lottiefiles.github.io/dotlottie-web/perf-test"
+    },
+    {
+      "label": "📚 Docs",
+      "url": "https://developers.lottiefiles.com/docs/dotlottie-player/dotlottie-web/"
+    },
+    {
+      "label": "🦀 dotLottie-rs",
+      "url": "https://github.com/LottieFiles/dotlottie-rs"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/LottieFiles/dotlottie-web#why-dotlottie-web"
+    },
+    {
+      "label": ".json",
+      "url": "https://lottiefiles.github.io/lottie-docs/"
+    },
+    {
+      "label": ".lottie",
+      "url": "https://lottiefiles.com/dotlottie"
+    },
+    {
+      "label": "dotlottie-rs",
+      "url": "https://github.com/LottieFiles/dotlottie-rs"
+    },
+    {
+      "label": "ThorVG Lottie support matrix",
+      "url": "https://github.com/thorvg/thorvg/wiki/Lottie-Support"
+    },
+    {
+      "label": "React",
+      "url": "https://github.com/LottieFiles/dotlottie-web/blob/main/packages/react/README.md"
+    },
+    {
+      "label": "Vue",
+      "url": "https://github.com/LottieFiles/dotlottie-web/blob/main/packages/vue/README.md"
+    },
+    {
+      "label": "Svelte",
+      "url": "https://github.com/LottieFiles/dotlottie-web/blob/main/packages/svelte/README.md"
+    },
+    {
+      "label": "Solid",
+      "url": "https://github.com/LottieFiles/dotlottie-web/blob/main/packages/solid/README.md"
+    },
+    {
+      "label": "Web Component",
+      "url": "https://github.com/LottieFiles/dotlottie-web/blob/main/packages/wc/README.md"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/LottieFiles/dotlottie-web#quick-start"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/LottieFiles/dotlottie-web#vanilla-js"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/LottieFiles/dotlottie-web#features"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/LottieFiles/dotlottie-web#-interactive-state-machines"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/LottieFiles/dotlottie-web#-runtime-theming"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/LottieFiles/dotlottie-web#-audio-support"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/LottieFiles/dotlottie-web#-off-main-thread-rendering"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/LottieFiles/dotlottie-web#-hardware-accelerated-rendering"
+    },
+    {
+      "label": "package.json conditional exports",
+      "url": "https://github.com/LottieFiles/dotlottie-web/blob/main/packages/web/package.json"
+    },
+    {
+      "label": "perf-test page",
+      "url": "https://lottiefiles.github.io/dotlottie-web/perf-test"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/LottieFiles/dotlottie-web#️-more-built-in-capabilities"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/LottieFiles/dotlottie-web#packages"
+    },
+    {
+      "label": "@lottiefiles/dotlottie-web",
+      "url": "https://github.com/LottieFiles/dotlottie-web/blob/main/packages/web/README.md"
+    },
+    {
+      "label": "@lottiefiles/dotlottie-react",
+      "url": "https://github.com/LottieFiles/dotlottie-web/blob/main/packages/react/README.md"
+    },
+    {
+      "label": "@lottiefiles/dotlottie-vue",
+      "url": "https://github.com/LottieFiles/dotlottie-web/blob/main/packages/vue/README.md"
+    },
+    {
+      "label": "@lottiefiles/dotlottie-svelte",
+      "url": "https://github.com/LottieFiles/dotlottie-web/blob/main/packages/svelte/README.md"
+    },
+    {
+      "label": "@lottiefiles/dotlottie-solid",
+      "url": "https://github.com/LottieFiles/dotlottie-web/blob/main/packages/solid/README.md"
+    },
+    {
+      "label": "@lottiefiles/dotlottie-wc",
+      "url": "https://github.com/LottieFiles/dotlottie-web/blob/main/packages/wc/README.md"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/LottieFiles/dotlottie-web#dotlottie-viewer"
+    },
+    {
+      "label": "lottiefiles.github.io/dotlottie-web",
+      "url": "https://lottiefiles.github.io/dotlottie-web/"
+    },
+    {
+      "label": "Home",
+      "url": "https://lottiefiles.github.io/dotlottie-web/"
+    },
+    {
+      "label": "Playground",
+      "url": "https://lottiefiles.github.io/dotlottie-web/playground"
+    },
+    {
+      "label": "Performance",
+      "url": "https://lottiefiles.github.io/dotlottie-web/perf-test"
+    },
+    {
+      "label": "List",
+      "url": "https://lottiefiles.github.io/dotlottie-web/list"
+    },
+    {
+      "label": "Embed",
+      "url": "https://lottiefiles.github.io/dotlottie-web/embed"
+    },
+    {
+      "label": "apps/viewer/",
+      "url": "https://github.com/LottieFiles/dotlottie-web/blob/main/apps/viewer"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/LottieFiles/dotlottie-web#live-examples-codepen"
+    },
+    {
+      "label": "@lottiefiles/dotlottie-web",
+      "url": "https://github.com/LottieFiles/dotlottie-web/blob/main/packages/web/README.md"
+    },
+    {
+      "label": "Getting Started",
+      "url": "https://codepen.io/lottiefiles/pen/JjzJZmL"
+    },
+    {
+      "label": "Playback Controls",
+      "url": "https://codepen.io/lottiefiles/pen/dyrRKwg"
+    },
+    {
+      "label": "Dynamic Loading",
+      "url": "https://codepen.io/lottiefiles/pen/JjzJZgB"
+    },
+    {
+      "label": "Worker",
+      "url": "https://codepen.io/lottiefiles/pen/VwJZPrQ"
+    },
+    {
+      "label": "Multi Animations",
+      "url": "https://codepen.io/lottiefiles/pen/wvOxdRa"
+    },
+    {
+      "label": "Advanced Layout",
+      "url": "https://codepen.io/lottiefiles/pen/LYvZveR"
+    },
+    {
+      "label": "Named Markers",
+      "url": "https://codepen.io/lottiefiles/pen/RwOROKp"
+    },
+    {
+      "label": "Theming",
+      "url": "https://codepen.io/lottiefiles/pen/BaEzEeq"
+    },
+    {
+      "label": "Interactivity",
+      "url": "https://codepen.io/lottiefiles/pen/VwJvdRN"
+    },
+    {
+      "label": "@lottiefiles/dotlottie-react",
+      "url": "https://github.com/LottieFiles/dotlottie-web/blob/main/packages/react/README.md"
+    },
+    {
+      "label": "Getting Started",
+      "url": "https://codepen.io/lottiefiles/pen/vYPJpBN"
+    },
+    {
+      "label": "Custom Controls",
+      "url": "https://codepen.io/lottiefiles/pen/WNmEdxd"
+    },
+    {
+      "label": "@lottiefiles/dotlottie-vue",
+      "url": "https://github.com/LottieFiles/dotlottie-web/blob/main/packages/vue/README.md"
+    },
+    {
+      "label": "Getting Started",
+      "url": "https://codepen.io/lottiefiles/pen/yLwgeoJ"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/LottieFiles/dotlottie-web#local-examples"
+    },
+    {
+      "label": "examples/",
+      "url": "https://github.com/LottieFiles/dotlottie-web/blob/main/examples"
+    },
+    {
+      "label": "web",
+      "url": "https://github.com/LottieFiles/dotlottie-web/blob/main/examples/web"
+    },
+    {
+      "label": "web-node",
+      "url": "https://github.com/LottieFiles/dotlottie-web/blob/main/examples/web-node"
+    },
+    {
+      "label": "react",
+      "url": "https://github.com/LottieFiles/dotlottie-web/blob/main/examples/react"
+    },
+    {
+      "label": "vue",
+      "url": "https://github.com/LottieFiles/dotlottie-web/blob/main/examples/vue"
+    },
+    {
+      "label": "solid",
+      "url": "https://github.com/LottieFiles/dotlottie-web/blob/main/examples/solid"
+    },
+    {
+      "label": "wc",
+      "url": "https://github.com/LottieFiles/dotlottie-web/blob/main/examples/wc"
+    },
+    {
+      "label": "next",
+      "url": "https://github.com/LottieFiles/dotlottie-web/blob/main/examples/next"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/LottieFiles/dotlottie-web#browser--runtime-support"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/LottieFiles/dotlottie-web#development"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/LottieFiles/dotlottie-web#contributing"
+    },
+    {
+      "label": "Contributing Guidelines",
+      "url": "https://github.com/LottieFiles/dotlottie-web/blob/main/CONTRIBUTING.md"
+    },
+    {
+      "label": "Code of Conduct",
+      "url": "https://github.com/LottieFiles/dotlottie-web/blob/main/CODE_OF_CONDUCT.md"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/LottieFiles/dotlottie-web#license"
+    },
+    {
+      "label": "MIT",
+      "url": "https://github.com/LottieFiles/dotlottie-web/blob/main/LICENSE"
+    },
+    {
+      "label": "LottieFiles",
+      "url": "https://www.lottiefiles.com"
+    }
+  ],
+  "root_files": [
+    ".changeset",
+    ".github",
+    "apps/viewer",
+    "assets",
+    "examples",
+    "fixtures",
+    "guidelines",
+    "packages",
+    "references",
+    "scripts",
+    ".editorconfig",
+    ".eslintignore",
+    ".gitattributes",
+    ".gitignore",
+    ".gitmodules",
+    ".nvmrc",
+    ".remarkignore",
+    ".remarkrc.mjs",
+    ".size-limit.js",
+    "CODE_OF_CONDUCT.md",
+    "CONTRIBUTING.md",
+    "LICENSE",
+    "README.md",
+    "SKILL.md",
+    "biome.json",
+    "commitlint.config.ts",
+    "index.html",
+    "lefthook.yml",
+    "package.json",
+    "pnpm-lock.yaml",
+    "pnpm-workspace.yaml",
+    "tsconfig.build.json",
+    "tsconfig.dev.json",
+    "tsconfig.json",
+    "turbo.json",
+    "vitest.config.ts"
+  ],
+  "release_count": 735,
+  "status": "verified"
+}

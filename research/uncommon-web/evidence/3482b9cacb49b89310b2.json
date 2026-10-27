@@ -1,0 +1,255 @@
+{
+  "url": "https://github.com/rough-stuff/rough",
+  "final_url": "https://github.com/rough-stuff/rough",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:48:14.573625+00:00",
+  "stars": 21296,
+  "forks": 667,
+  "description": "Create graphics with a hand-drawn, sketchy, appearance",
+  "homepage": "http://roughjs.com",
+  "topics": [
+    "canvas",
+    "draw",
+    "graphics",
+    "html5-canvas",
+    "svg",
+    "svg-path"
+  ],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2016-12-13T09:12:55.000Z",
+  "branch": "master",
+  "commit": "56a2762171b1294d643501e8d14f120db6b27bd7",
+  "readme": "Rough.js Rough.js is a small (<9 kB) graphics library that lets you draw in a sketchy, hand-drawn-like, style. The library defines primitives to draw lines, curves, arcs, polygons, circles, and ellipses. It also supports drawing SVG paths. Rough.js works with both Canvas and SVG. @RoughLib on Twitter. Install from npm: npm install --save roughjs Or get the latest using unpkg: https://unpkg.com/roughjs@latest/bundled/rough.js If you are looking for bundled version in different formats, the npm package will have these in the following locations: CommonJS: roughjs/bundled/rough.cjs.js ESM: roughjs/bundled/rough.esm.js Browser IIFE: roughjs/bundled/rough.js Usage const rc = rough.canvas(document.getElementById('canvas')); rc.rectangle(10, 10, 200, 200); // x, y, width, height or SVG const rc = rough.svg(svg); let node = rc.rectangle(10, 10, 200, 200); // x, y, width, height svg.appendChild(node); Lines and Ellipses rc.circle(80, 120, 50); // centerX, centerY, diameter rc.ellipse(300, 100, 150, 80); // centerX, centerY, width, height rc.line(80, 120, 300, 100); // x1, y1, x2, y2 Filling rc.circle(50, 50, 80, { fill: 'red' }); // fill with red hachure rc.rectangle(120, 15, 80, 80, { fill: 'red' }); rc.circle(50, 150, 80, { fill: \"rgb(10,150,10)\", fillWeight: 3 // thicker lines for hachure }); rc.rectangle(220, 15, 80, 80, { fill: 'red', hachureAngle: 60, // angle of hachure, hachureGap: 8 }); rc.rectangle(120, 105, 80, 80, { fill: 'rgba(255,0,200,0.2)', fillStyle: 'solid' // solid fill }); Fill styles can be: hachure(default), solid, zigzag, cross-hatch, dots, dashed, or zigzag-line Sketching style rc.rectangle(15, 15, 80, 80, { roughness: 0.5, fill: 'red' }); rc.rectangle(120, 15, 80, 80, { roughness: 2.8, fill: 'blue' }); rc.rectangle(220, 15, 80, 80, { bowing: 6, stroke: 'green', strokeWidth: 3 }); SVG Paths rc.path('M80 80 A 45 45, 0, 0, 0, 125 125 L 125 80 Z', { fill: 'green' }); rc.path('M230 80 A 45 45, 0, 1, 0, 275 125 L 275 80 Z', { fill: 'purple' }); rc.path('M80 230 A 45 45, 0, 0, 1, 125 275 L 125 230 Z', { fill: 'red' }); rc.path('M230 230 A 45 45, 0, 1, 1, 275 275 L 275 230 Z', { fill: 'blue' }); SVG Path with simplification: Examples View examples here API & Documentation Full Rough.js API Credits Some of the core algorithms were adapted from handy processing lib. Algorithm to convert SVG arcs to Canvas described here was adapted from Mozilla codebase Contributors Financial Contributors Become a financial contributor and help us sustain our community. [Contribute] Individuals Organizations Support this project with your organization. Your logo will show up here with a link to your website. [Contribute] License MIT License (c) Preet Shihn",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://github.com/rough-stuff/rough#roughjs"
+    },
+    {
+      "label": "SVG paths",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Paths"
+    },
+    {
+      "label": "Canvas",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API"
+    },
+    {
+      "label": "SVG",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/SVG"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/c83edb407f007aa00118a596bb98d2fd30484be34b9fc4a2c55a98b4da528291/68747470733a2f2f726f7567686a732e636f6d2f696d616765732f6361705f64656d6f2e706e67"
+    },
+    {
+      "label": "@RoughLib",
+      "url": "https://twitter.com/RoughLib"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/rough-stuff/rough#install"
+    },
+    {
+      "label": "https://unpkg.com/roughjs@latest/bundled/rough.js",
+      "url": "https://unpkg.com/roughjs@latest/bundled/rough.js"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/rough-stuff/rough#usage"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/9312393793d3211f705077149b7c8198d6cbab25e0814a382a44d4236d26fa90/68747470733a2f2f726f7567686a732e636f6d2f696d616765732f6d312e706e67"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/rough-stuff/rough#lines-and-ellipses"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/973dd3e70be8f0a3275e46daac6c1f34e717c6d8c0b526cdd017f6e45537e4ae/68747470733a2f2f726f7567686a732e636f6d2f696d616765732f6d322e706e67"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/rough-stuff/rough#filling"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/98b37b2db65a6dd4005b664515f30d06006b2f1f7937b8271d131bcbdd235119/68747470733a2f2f726f7567686a732e636f6d2f696d616765732f6d332e706e67"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/16e345190e23db22b8483a179de2d6c69921b4e71b0e5553bd03bf65dd5fe35f/68747470733a2f2f726f7567686a732e636f6d2f696d616765732f6d31342e706e67"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/rough-stuff/rough#sketching-style"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/501e1f7389e75fa4d21427033d45ff513093efa3e215267056274272eb63af60/68747470733a2f2f726f7567686a732e636f6d2f696d616765732f6d342e706e67"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/rough-stuff/rough#svg-paths"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/f0b68f5c834346f0b0b152e4409025fca3d6c9e76f8e55933621016147132311/68747470733a2f2f726f7567686a732e636f6d2f696d616765732f6d352e706e67"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/1250c5532e934bf81cd8d5b02a16247f13f4312c8b701c9b5997702260a1e4b5/68747470733a2f2f726f7567686a732e636f6d2f696d616765732f6d392e706e67"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/09bea80ca7e20363394248b1841b06d34fe338df0e857f6d6c80f130482f62ff/68747470733a2f2f726f7567686a732e636f6d2f696d616765732f6d31302e706e67"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/rough-stuff/rough#examples"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/0a726f8007016fae986efd017285861a5c3e56e73cb61c34972cd125d9696bcd/68747470733a2f2f726f7567686a732e636f6d2f696d616765732f6d362e706e67"
+    },
+    {
+      "label": "View examples here",
+      "url": "https://github.com/pshihn/rough/wiki/Examples"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/rough-stuff/rough#api--documentation"
+    },
+    {
+      "label": "Full Rough.js API",
+      "url": "https://github.com/pshihn/rough/wiki"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/rough-stuff/rough#credits"
+    },
+    {
+      "label": "handy",
+      "url": "https://www.gicentre.net/software/#/handy/"
+    },
+    {
+      "label": "described here",
+      "url": "https://www.w3.org/TR/SVG/implnote.html"
+    },
+    {
+      "label": "Mozilla codebase",
+      "url": "https://hg.mozilla.org/mozilla-central/file/17156fbebbc8/content/svg/content/src/nsSVGPathDataParser.cpp#l887"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/rough-stuff/rough#contributors"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/rough-stuff/rough#financial-contributors"
+    },
+    {
+      "label": "Contribute",
+      "url": "https://opencollective.com/rough/contribute"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/rough-stuff/rough#individuals"
+    },
+    {
+      "label": "",
+      "url": "https://opencollective.com/rough"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/rough-stuff/rough#organizations"
+    },
+    {
+      "label": "Contribute",
+      "url": "https://opencollective.com/rough/contribute"
+    },
+    {
+      "label": "",
+      "url": "https://excalidraw.com/"
+    },
+    {
+      "label": "",
+      "url": "https://www.diagrams.net/"
+    },
+    {
+      "label": "",
+      "url": "https://terrastruct.com/"
+    },
+    {
+      "label": "",
+      "url": "https://opencollective.com/rough/organization/0/website"
+    },
+    {
+      "label": "",
+      "url": "https://opencollective.com/rough/organization/1/website"
+    },
+    {
+      "label": "",
+      "url": "https://opencollective.com/rough/organization/2/website"
+    },
+    {
+      "label": "",
+      "url": "https://opencollective.com/rough/organization/3/website"
+    },
+    {
+      "label": "",
+      "url": "https://opencollective.com/rough/organization/4/website"
+    },
+    {
+      "label": "",
+      "url": "https://opencollective.com/rough/organization/5/website"
+    },
+    {
+      "label": "",
+      "url": "https://opencollective.com/rough/organization/6/website"
+    },
+    {
+      "label": "",
+      "url": "https://opencollective.com/rough/organization/7/website"
+    },
+    {
+      "label": "",
+      "url": "https://opencollective.com/rough/organization/8/website"
+    },
+    {
+      "label": "",
+      "url": "https://opencollective.com/rough/organization/9/website"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/rough-stuff/rough#license"
+    },
+    {
+      "label": "MIT License",
+      "url": "https://github.com/pshihn/rough/blob/master/LICENSE"
+    },
+    {
+      "label": "Preet Shihn",
+      "url": "https://twitter.com/preetster"
+    }
+  ],
+  "root_files": [
+    ".github",
+    "src",
+    "visual-tests",
+    ".eslintrc.json",
+    ".gitignore",
+    ".npmignore",
+    "CHANGELOG.md",
+    "LICENSE",
+    "README.md",
+    "package-lock.json",
+    "package.json",
+    "rollup.config.js",
+    "tsconfig.json"
+  ],
+  "release_count": 15,
+  "status": "verified"
+}

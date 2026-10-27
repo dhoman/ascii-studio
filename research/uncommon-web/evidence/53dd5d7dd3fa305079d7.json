@@ -1,0 +1,243 @@
+{
+  "url": "https://github.com/fskpf/svg2roughjs",
+  "final_url": "https://github.com/fskpf/svg2roughjs",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:47:48.053538+00:00",
+  "stars": 218,
+  "forks": 16,
+  "description": "Create sketchy, hand-drawn-like images from SVGs",
+  "homepage": "https://fskpf.github.io/",
+  "topics": [
+    "drawing",
+    "hand-drawn",
+    "hand-drawn-graphs",
+    "roughjs",
+    "roughness",
+    "sketch",
+    "sketching",
+    "svg",
+    "svg-files"
+  ],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2019-12-25T19:39:14.000Z",
+  "branch": "master",
+  "commit": "fa88f518e2d6a5870bc8ca0e108fbd688d52312a",
+  "readme": "svg2rough.js Utilizes Rough.js to convert an SVG to a hand-drawn visualization. Try the sample application here. NPM Install from the NPM registry with npm install --save svg2roughjs Usage Just import Svg2Roughjs and instantiate it with an output div in which the SVG sketch should be created. Calling sketch() outputs the current svg to the given element as hand-drawn sketch. For reference, a sample application is provided in /sample-application/. ES Module import { Svg2Roughjs } from 'svg2roughjs' const svg2roughjs = new Svg2Roughjs('#output-div') svg2roughjs.svg = document.getElementById('input-svg') svg2roughjs.sketch() UMD Bundle An UMD bundle that ca be loaded via script tags or a module loader e.g. RequireJS is included in the NPM package or can be loaded from unpkg: https://unpkg.com/svg2roughjs/dist/svg2roughjs.umd.min.js <!-- script loading --> <script src=\"https://unpkg.com/svg2roughjs/dist/svg2roughjs.umd.min.js\"></script> <script> const svgConverter = new svg2roughjs.Svg2Roughjs('#output-div') svgConverter.svg = document.getElementById('input-svg') svgConverter.sketch() </script> <!-- requirejs --> <script src=\"https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js\"></script> <script> window.requirejs(['https://unpkg.com/svg2roughjs/dist/svg2roughjs.umd.min.js'], svg2roughjs => { const svgConverter = new svg2roughjs.Svg2Roughjs('#output-div') svgConverter.svg = document.getElementById('input-svg') svgConverter.sketch() }); </script> API Module Exports Svg2Roughjs: The main class for the conversion. OutputType: An enum that is used to switch between SVG and CANVAS output when targetting an HTMLDivElement as output container. Methods constructor(target, outputType?, roughConfig?) Creates a new Svg2Rough.js instance. target may either be a container HTMLDivElement (or a selector for the container) into which a new sketch should be created, or directly an SVGSVGElement or HTMLCanvasElement that should be used for the output. The optional outputType defaults to the respective mode if target is either SVGSVGElement or HTMLCanvasElement. If targetting an HTML container element, then OutputType.SVG is used by default. sketch(sourceSvgChanged = false): Promise<SVGSVGElement | HTMLCanvasElement | null> Clears the configured target element and converts the current svg2roughj.svg to a hand-drawn sketch. Setting sourceSvgChanged to true re-evaluates the given svg2roughj.svg as it was set anew. May be used to re-use the same Svg2Rough.js instance and the same SVG element as source container. Properties Property Description Default svg The given SVGSVGElement that should be converted. undefined outputType Switch between canvas or SVG output. OutputType.SVG roughConfig Rough.js options object, e.g. to change the fill-style, roughness or bowing. {} fontFamily Font with which text elements should be drawn.If set to null, the text element's original font-family is used. 'Comic Sans MS, cursive' backgroundColor Sets a background color onto which the sketch is drawn. transparent randomize Randomize Rough.js' fillWeight, hachureAngle and hachureGap. true seed Optional, numerical seed for the randomness when creating the sketch. null sketchPatterns Whether to sketch pattern fills/strokes or just copy them to the output true pencilFilter Applies a pencil effect on the SVG rendering. false Sample Images Some sample images with different Svg2rough.js settings. Try it yourself here. SVG Sketch (created with yEd Live) (created with yEd Live) (created with yEd Live) Local Build To build the project locally, make sure to have Node.js installed and run > npm install > npm run build This creates a local /dist/ folder containing both, the ES module and UMD build of svg2roughjs. Tests To perform all tests on the current build, run npm run test-all This converts all given tests in /test/ and compares the output SVG with the expected string. Each test contains a configuration file with different settings and a fixed seed to account for the randomness in the sketched output. Credits Rough.js – Draws the hand-drawn elements svg-pathdata – Parses SVGPathElements TinyColor – Color manipulation License MIT License © Fabian Schwarzkopf and Johannes Rössel",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://github.com/fskpf/svg2roughjs#svg2roughjs"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/387b4e59d766473026054eb85910e5cb6120ffdf64f5860bb6b8f92fdbcdbd4d/68747470733a2f2f66736b70662e6769746875622e696f2f7374617469632f6173736574732f73766732726f7567686a732d6865726f2d736b657463682e737667"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/fskpf/svg2roughjs"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/fskpf/svg2roughjs/blob/master/LICENSE.md"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/svg2roughjs"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/svg2roughjs"
+    },
+    {
+      "label": "Rough.js",
+      "url": "https://github.com/pshihn/rough"
+    },
+    {
+      "label": "here",
+      "url": "https://fskpf.github.io/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/fskpf/svg2roughjs#npm"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/fskpf/svg2roughjs#usage"
+    },
+    {
+      "label": "sample application",
+      "url": "https://fskpf.github.io/"
+    },
+    {
+      "label": "/sample-application/",
+      "url": "https://github.com/fskpf/svg2roughjs/tree/master/sample-application"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/fskpf/svg2roughjs#es-module"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/fskpf/svg2roughjs#umd-bundle"
+    },
+    {
+      "label": "RequireJS",
+      "url": "https://requirejs.org/"
+    },
+    {
+      "label": "unpkg",
+      "url": "https://unpkg.com/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/fskpf/svg2roughjs#api"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/fskpf/svg2roughjs#module-exports"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/fskpf/svg2roughjs#methods"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/fskpf/svg2roughjs#properties"
+    },
+    {
+      "label": "Rough.js options",
+      "url": "https://github.com/rough-stuff/rough/wiki#options"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/fskpf/svg2roughjs#sample-images"
+    },
+    {
+      "label": "here",
+      "url": "https://fskpf.github.io/"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/253702ab7b14ce1ecba03fffd0abadd3eba3c917d2ef642ad060036d49c5f8ff/68747470733a2f2f66736b70662e6769746875622e696f2f7374617469632f73616d706c652d696d616765732f62706d6e312e737667"
+    },
+    {
+      "label": "yEd Live",
+      "url": "https://www.yworks.com/yed-live"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/3b53c9e94eadf802ab63fd9ec780b0c4ad9c16959985252a8040282a36d2b8b2/68747470733a2f2f66736b70662e6769746875622e696f2f7374617469632f73616d706c652d696d616765732f62706d6e315f736b657463682e737667"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/2be9bc3a2606d00d3cb5eeb0e99eec991c84d11f442850ac9d5a1513b9cd13a3/68747470733a2f2f66736b70662e6769746875622e696f2f7374617469632f73616d706c652d696d616765732f686965726172636869635f6469616772616d2e737667"
+    },
+    {
+      "label": "yEd Live",
+      "url": "https://www.yworks.com/yed-live"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/26cd23bbce9f53980241547ff4f186023ad3ff27c1c911c650fcba067466457f/68747470733a2f2f66736b70662e6769746875622e696f2f7374617469632f73616d706c652d696d616765732f686965726172636869635f6469616772616d5f736b657463682e737667"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/036eb91546b7cd97f839e14cd8876a533e60ccf8562d4150790158ea302095f6/68747470733a2f2f66736b70662e6769746875622e696f2f7374617469632f73616d706c652d696d616765732f666c6f7763686172742e737667"
+    },
+    {
+      "label": "yEd Live",
+      "url": "https://www.yworks.com/yed-live"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/5973a5d25b436b08259c01c0f36e8d0ae35f2acc54a3f010c567474c6867ba92/68747470733a2f2f66736b70662e6769746875622e696f2f7374617469632f73616d706c652d696d616765732f666c6f7763686172745f736b657463682e737667"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/d440c0c587f4942a87d6067b55f3ebce067057fc641db23bd6959d565600f241/68747470733a2f2f66736b70662e6769746875622e696f2f7374617469632f73616d706c652d696d616765732f63686972616c6974792e737667"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/0817ac12546993ac1cf9a76300977f7b17d939a35d769d17c5ea54f4c0236c10/68747470733a2f2f66736b70662e6769746875622e696f2f7374617469632f73616d706c652d696d616765732f63686972616c6974795f736b657463682e737667"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/91eaac85851301ed3fe5048f574b48479ea15b20959885e825bb1095fc423cbf/68747470733a2f2f66736b70662e6769746875622e696f2f7374617469632f73616d706c652d696d616765732f636f6d69635f626f792e737667"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/0e110918b05dc9f1f49f28a9f2c78ca635347ebfed6eb0719431b7b71d2687d2/68747470733a2f2f66736b70662e6769746875622e696f2f7374617469632f73616d706c652d696d616765732f636f6d69635f626f795f736b657463682e737667"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/298e96c81eef89c5ba3f90cb4890f6b2bf68647d2fe3d4739ed48ec5d8860f8d/68747470733a2f2f66736b70662e6769746875622e696f2f7374617469632f73616d706c652d696d616765732f6d6172735f726f7665725f626c75657072696e742e737667"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/32d4e69ecc99c22f5754aae9b4c0120d35e6d3fc61c753c0466caa97f50d4c4c/68747470733a2f2f66736b70662e6769746875622e696f2f7374617469632f73616d706c652d696d616765732f6d6172735f726f7665725f736b657463682e737667"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/fskpf/svg2roughjs#local-build"
+    },
+    {
+      "label": "Node.js",
+      "url": "https://nodejs.org/en"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/fskpf/svg2roughjs#tests"
+    },
+    {
+      "label": "/test/",
+      "url": "https://github.com/fskpf/svg2roughjs/tree/master/test"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/fskpf/svg2roughjs#credits"
+    },
+    {
+      "label": "Rough.js",
+      "url": "https://github.com/pshihn/rough"
+    },
+    {
+      "label": "svg-pathdata",
+      "url": "https://github.com/nfroidure/svg-pathdata"
+    },
+    {
+      "label": "TinyColor",
+      "url": "https://github.com/bgrins/TinyColor"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/fskpf/svg2roughjs#license"
+    },
+    {
+      "label": "MIT License",
+      "url": "https://github.com/fskpf/svg2roughjs/blob/master/LICENSE.md"
+    }
+  ],
+  "root_files": [
+    ".github/ISSUE_TEMPLATE",
+    ".vscode",
+    "nodejs-cli",
+    "sample-application",
+    "src",
+    "test",
+    ".gitignore",
+    ".prettierignore",
+    ".prettierrc",
+    "CODE_OF_CONDUCT.md",
+    "LICENSE.md",
+    "README.md",
+    "eslint.config.js",
+    "package-lock.json",
+    "package.json",
+    "rollup.config.js",
+    "tsconfig.json",
+    "web-test-runner.config.mjs"
+  ],
+  "release_count": 13,
+  "status": "verified"
+}

@@ -1,0 +1,413 @@
+{
+  "url": "https://github.com/educlopez/smoothui",
+  "final_url": "https://github.com/educlopez/smoothui",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:47:45.287218+00:00",
+  "stars": 1021,
+  "forks": 59,
+  "description": "SmoothUI is a collection of beautifully designed components with smooth animations built with React, Tailwind CSS, Shadcn/ui and Motion",
+  "homepage": "https://smoothui.dev",
+  "topics": [
+    "animation",
+    "components",
+    "framer-motion",
+    "motion",
+    "nextjs",
+    "react",
+    "shadcn",
+    "shadcn-ui",
+    "tailwindcss"
+  ],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2024-07-03T15:32:46.000Z",
+  "branch": "main",
+  "commit": "4d29b8bda94393ebe9970284d6f8d9c2fc4750d2",
+  "readme": "SmoothUI SmoothUI is a collection of beautifully designed components with smooth animations built with React, Tailwind CSS, and Motion. This project aims to provide developers with a set of reusable UI components that enhance user experience through delightful animations and modern design patterns. Table of Contents SmoothUI Table of Contents Features Quick Start Installation Using SmoothUI CLI Using shadcn CLI Manual Installation Usage Basic Usage Advanced Usage Available Components UI Components Interactive Components Layout Components Utility Components MCP Support 🤖 AI Assistant Integration Quick MCP Setup Registry System Automatic Dependencies Component Structure Registry Features Troubleshooting Common Issues 1. Authentication Error (401) 2. Registry Not Found 3. Import Path Issues 4. Missing Dependencies Getting Help Contributing Development Setup License Features Modern Design System: A cohesive and contemporary design language with a new mascot called Smoothy Smooth Animations: Built-in animations powered by Motion for delightful user experiences Responsive Design: Fully responsive components designed with Tailwind CSS Dark Mode Support: Components support both light and dark themes out of the box Color Customization: Dynamic color switcher for easy theme customization Documentation: Comprehensive documentation with props, examples, and usage guidelines Accessibility: Enhanced accessibility features across all components TypeScript Support: Full TypeScript support with type definitions Easy Integration: Simple API for integrating components into your projects CLI Tools: Dedicated SmoothUI CLI and shadcn registry support for easy component installation Quick Start Get started with SmoothUI in just one command: # Using SmoothUI CLI (recommended) npx smoothui-cli add siri-orb # Or using shadcn CLI npx shadcn@latest add @smoothui/siri-orb Then use the component: import { SiriOrb } from \"@/components/smoothui/ui/SiriOrb\"; export default function App() { return <SiriOrb size=\"200px\" />; } Installation Using SmoothUI CLI The SmoothUI CLI provides an interactive way to browse and install components with automatic dependency resolution. # Add a single component npx smoothui-cli add siri-orb # Add multiple components npx smoothui-cli add siri-orb rich-popover float-input # Interactive mode - browse and select components npx smoothui-cli add # List all available components npx smoothui-cli list Features: Interactive component picker with search and categories Auto-detects package manager (npm, pnpm, yarn, bun) Auto-detects component paths and tsconfig aliases Shows dependency tree before installation Handles file conflicts with overwrite prompts Auto-installs npm dependencies Using shadcn CLI SmoothUI is an official shadcn registry, so you can install components directly using the @smoothui namespace: # Install a single component npx shadcn@latest add @smoothui/siri-orb # Install multiple components npx shadcn@latest add @smoothui/rich-popover @smoothui/float-input Manual Installation If you prefer to install components manually, you can copy the component files directly: Install dependencies: pnpm add motion tailwindcss lucide-react clsx tailwind-merge Copy component files from the components directory Set up utilities: # Create lib/utils/cn.ts mkdir -p lib/utils // lib/utils/cn.ts import { clsx, type ClassValue } from \"clsx\"; import { twMerge } from \"tailwind-merge\"; export function cn(...inputs: ClassValue[]) { return twMerge(clsx(inputs)); } Usage Basic Usage import { SiriOrb } from \"@/components/smoothui/ui/SiriOrb\"; export default function App() { return ( <div className=\"flex min-h-screen items-center justify-center\"> <SiriOrb size=\"200px\" colors={{ bg: \"oklch(95% 0.02 264.695)\", c1: \"oklch(75% 0.15 350)\", c2: \"oklch(80% 0.12 200)\", c3: \"oklch(78% 0.14 280)\", }} animationDuration={20} /> </div> ); } Advanced Usage import { RichPopover } from \"@/components/smoothui/ui/RichPopover\"; import { ScrollableCardStack } from \"@/components/smoothui/ui/ScrollableCardStack\"; export default function Dashboard() { const cards = [ { id: \"1\", name: \"John Doe\", handle: \"@johndoe\", avatar: \"/avatars/john.jpg\", video: \"/videos/john.mp4\", href: \"https://twitter.com/johndoe\", }, // ... more cards ]; return ( <div className=\"space-y-8\"> <RichPopover /> <ScrollableCardStack items={cards} /> </div> ); } Available Components SmoothUI includes a wide variety of components: UI Components SiriOrb - Animated orb with smooth color transitions RichPopover - Advanced popover with rich content ScrollableCardStack - Interactive card stack with smooth scrolling FloatInput - Input field with smooth animations DynamicIsland - iOS-style dynamic island component FluidMorph - Fluid morphing animations MatrixCard - Matrix-style card with particle effects Interactive Components CursorFollow - Custom cursor following component ScrambleHover - Text scramble effect on hover WaveText - Animated wave text effect TypewriterText - Typewriter text animation Layout Components ExpandableCards - Expandable card layout ScrollableCardStack - Stack of scrollable cards AppDownloadStack - App download showcase Utility Components ButtonCopy - Copy button with feedback ClipCornersButton - Button with clipped corners DotMorphButton - Button with morphing dot animation View all components → MCP Support SmoothUI is fully compatible with the shadcn MCP server, enabling AI assistants to discover and install components automatically. 🤖 AI Assistant Integration With MCP support, AI assistants like Claude, Cursor, and GitHub Copilot can: Discover Components: Browse all available SmoothUI components Install Components: Automatically install components with dependencies Provide Usage Examples: Get code examples and integration help Smart Suggestions: Receive intelligent component recommendations Quick MCP Setup Configure your registry in components.json: { \"registries\": { \"@smoothui\": \"https://smoothui.dev/r/{name}.json\" } } Install MCP server: npx shadcn@latest mcp init --client claude # or for Cursor: npx shadcn@latest mcp init --client cursor # or for VS Code: npx shadcn@latest mcp init --client vscode Try these prompts: \"Show me the components in the smoothui registry\" \"Install the SiriOrb component from smoothui\" \"Create a landing page using smoothui components\" Learn more about MCP support → Registry System SmoothUI uses a custom registry system compatible with shadcn CLI v3. Each component includes: Automatic Dependencies Package Dependencies: Required npm packages are automatically included Utility Files: Shared utilities like cn are automatically bundled Import Paths: All import paths are automatically resolved Component Structure When you install a component, you get: components/smoothui/ui/ ├── ComponentName.tsx # Main component file lib/utils/ └── cn.ts # Utility functions (if needed) Registry Features Self-contained: Each component includes all necessary dependencies Type-safe: Full TypeScript support with proper types Optimized: Components are optimized for performance Accessible: Built-in accessibility features Troubleshooting Common Issues 1. Authentication Error (401) Error: You are not authorized to access the item Solution: This usually happens with Vercel preview deployments. Use the production URL: { \"registries\": { \"@smoothui\": \"https://smoothui.dev/r/{name}.json\" } } 2. Registry Not Found Error: The item at https://smoothui.dev/r/registry.json was not found Solution: The search command might not work as expected. Install components directly: npx shadcn@latest add @smoothui/siri-orb 3. Import Path Issues Error: Cannot find module '@/lib/utils/cn' Solution: Make sure your tsconfig.json includes the path alias: { \"compilerOptions\": { \"paths\": { \"@/*\": [\"./src/*\"] } } } 4. Missing Dependencies Error: Cannot find module 'clsx' Solution: Install missing dependencies: pnpm add clsx tailwind-merge motion Getting Help Documentation: Visit smoothui.dev for detailed documentation Issues: Report bugs on GitHub Issues Discussions: Join discussions on GitHub Discussions Contributing We welcome contributions! Please see our Contributing Guide for details. Development Setup Clone the repository: git clone https://github.com/educlopez/smoothui.git cd smoothui Install dependencies: pnpm install Start development server: pnpm dev Build registry: pnpm run build:registry License This project is licensed under the MIT License - see the LICENSE file for details.",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://github.com/educlopez/smoothui#smoothui"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/educlopez/smoothui/blob/main/apps/docs/public/readme.png"
+    },
+    {
+      "label": "",
+      "url": "https://vercel.com/oss"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/2cfab3719d4fdb556fc1fb5ee1e333d508e668caea42cf5cd1a7278cb87e5d5c/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4e6578742e6a732d3030303f6c6f676f3d6e657874646f746a73266c6f676f436f6c6f723d666666267374796c653d666c6174"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/cc91c607e9a5bdc39a39dde29b6abfd5bb24ec82f602826754b2e8c295e7966a/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f5461696c77696e642532304353532d3036423644343f6c6f676f3d7461696c77696e64637373266c6f676f436f6c6f723d666666267374796c653d666c6174"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/3668a40167a4131e3ec1d772e7139267729d1f97b69e66b1234d6962922117e1/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4d6f74696f6e2d4543443533463f7374796c653d666c6174"
+    },
+    {
+      "label": "",
+      "url": "https://actions-badge.atrox.dev/educlopez/smoothui/goto?ref=main"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/04c670122da83ffb0fcdfada956bce0765c071216f79fc9e6dd4b680b526ddf1/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f73746172732f656475636c6f70657a2f736d6f6f74687569"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/56b32ca1d434da2be04c537c58d0ebd6533f7a61cf2db4f9361a38cf52d810a6/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f6973737565732f656475636c6f70657a2f736d6f6f74687569"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/944a3611018754b624e70f2df04e677e66190ac4883fea53cf4aeb0ce280e745/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f666f726b732f656475636c6f70657a2f736d6f6f74687569"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/ccfb64d3501cffed2990757e2c2f3cb4c80df0202341ec8881b17fe22e3ac3d3/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f6973737565732d70722f656475636c6f70657a2f736d6f6f74687569"
+    },
+    {
+      "label": "",
+      "url": "https://smoothui.dev"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/educlopez/smoothui#table-of-contents"
+    },
+    {
+      "label": "SmoothUI",
+      "url": "https://github.com/educlopez/smoothui#smoothui"
+    },
+    {
+      "label": "Table of Contents",
+      "url": "https://github.com/educlopez/smoothui#table-of-contents"
+    },
+    {
+      "label": "Features",
+      "url": "https://github.com/educlopez/smoothui#features"
+    },
+    {
+      "label": "Quick Start",
+      "url": "https://github.com/educlopez/smoothui#quick-start"
+    },
+    {
+      "label": "Installation",
+      "url": "https://github.com/educlopez/smoothui#installation"
+    },
+    {
+      "label": "Using SmoothUI CLI",
+      "url": "https://github.com/educlopez/smoothui#using-smoothui-cli"
+    },
+    {
+      "label": "Using shadcn CLI",
+      "url": "https://github.com/educlopez/smoothui#using-shadcn-cli"
+    },
+    {
+      "label": "Manual Installation",
+      "url": "https://github.com/educlopez/smoothui#manual-installation"
+    },
+    {
+      "label": "Usage",
+      "url": "https://github.com/educlopez/smoothui#usage"
+    },
+    {
+      "label": "Basic Usage",
+      "url": "https://github.com/educlopez/smoothui#basic-usage"
+    },
+    {
+      "label": "Advanced Usage",
+      "url": "https://github.com/educlopez/smoothui#advanced-usage"
+    },
+    {
+      "label": "Available Components",
+      "url": "https://github.com/educlopez/smoothui#available-components"
+    },
+    {
+      "label": "UI Components",
+      "url": "https://github.com/educlopez/smoothui#ui-components"
+    },
+    {
+      "label": "Interactive Components",
+      "url": "https://github.com/educlopez/smoothui#interactive-components"
+    },
+    {
+      "label": "Layout Components",
+      "url": "https://github.com/educlopez/smoothui#layout-components"
+    },
+    {
+      "label": "Utility Components",
+      "url": "https://github.com/educlopez/smoothui#utility-components"
+    },
+    {
+      "label": "MCP Support",
+      "url": "https://github.com/educlopez/smoothui#mcp-support"
+    },
+    {
+      "label": "🤖 AI Assistant Integration",
+      "url": "https://github.com/educlopez/smoothui#-ai-assistant-integration"
+    },
+    {
+      "label": "Quick MCP Setup",
+      "url": "https://github.com/educlopez/smoothui#quick-mcp-setup"
+    },
+    {
+      "label": "Registry System",
+      "url": "https://github.com/educlopez/smoothui#registry-system"
+    },
+    {
+      "label": "Automatic Dependencies",
+      "url": "https://github.com/educlopez/smoothui#automatic-dependencies"
+    },
+    {
+      "label": "Component Structure",
+      "url": "https://github.com/educlopez/smoothui#component-structure"
+    },
+    {
+      "label": "Registry Features",
+      "url": "https://github.com/educlopez/smoothui#registry-features"
+    },
+    {
+      "label": "Troubleshooting",
+      "url": "https://github.com/educlopez/smoothui#troubleshooting"
+    },
+    {
+      "label": "Common Issues",
+      "url": "https://github.com/educlopez/smoothui#common-issues"
+    },
+    {
+      "label": "1. Authentication Error (401)",
+      "url": "https://github.com/educlopez/smoothui#1-authentication-error-401"
+    },
+    {
+      "label": "2. Registry Not Found",
+      "url": "https://github.com/educlopez/smoothui#2-registry-not-found"
+    },
+    {
+      "label": "3. Import Path Issues",
+      "url": "https://github.com/educlopez/smoothui#3-import-path-issues"
+    },
+    {
+      "label": "4. Missing Dependencies",
+      "url": "https://github.com/educlopez/smoothui#4-missing-dependencies"
+    },
+    {
+      "label": "Getting Help",
+      "url": "https://github.com/educlopez/smoothui#getting-help"
+    },
+    {
+      "label": "Contributing",
+      "url": "https://github.com/educlopez/smoothui#contributing"
+    },
+    {
+      "label": "Development Setup",
+      "url": "https://github.com/educlopez/smoothui#development-setup"
+    },
+    {
+      "label": "License",
+      "url": "https://github.com/educlopez/smoothui#license"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/educlopez/smoothui#features"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/educlopez/smoothui#quick-start"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/educlopez/smoothui#installation"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/educlopez/smoothui#using-smoothui-cli"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/educlopez/smoothui#using-shadcn-cli"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/educlopez/smoothui#manual-installation"
+    },
+    {
+      "label": "components directory",
+      "url": "https://github.com/educlopez/smoothui/blob/main/src/components/smoothui/ui"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/educlopez/smoothui#usage"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/educlopez/smoothui#basic-usage"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/educlopez/smoothui#advanced-usage"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/educlopez/smoothui#available-components"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/educlopez/smoothui#ui-components"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/educlopez/smoothui#interactive-components"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/educlopez/smoothui#layout-components"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/educlopez/smoothui#utility-components"
+    },
+    {
+      "label": "View all components →",
+      "url": "https://smoothui.dev"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/educlopez/smoothui#mcp-support"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/educlopez/smoothui#-ai-assistant-integration"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/educlopez/smoothui#quick-mcp-setup"
+    },
+    {
+      "label": "Learn more about MCP support →",
+      "url": "https://smoothui.dev/doc/mcp"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/educlopez/smoothui#registry-system"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/educlopez/smoothui#automatic-dependencies"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/educlopez/smoothui#component-structure"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/educlopez/smoothui#registry-features"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/educlopez/smoothui#troubleshooting"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/educlopez/smoothui#common-issues"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/educlopez/smoothui#1-authentication-error-401"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/educlopez/smoothui#2-registry-not-found"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/educlopez/smoothui#3-import-path-issues"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/educlopez/smoothui#4-missing-dependencies"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/educlopez/smoothui#getting-help"
+    },
+    {
+      "label": "smoothui.dev",
+      "url": "https://smoothui.dev"
+    },
+    {
+      "label": "GitHub Issues",
+      "url": "https://github.com/educlopez/smoothui/issues"
+    },
+    {
+      "label": "GitHub Discussions",
+      "url": "https://github.com/educlopez/smoothui/discussions"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/educlopez/smoothui#contributing"
+    },
+    {
+      "label": "Contributing Guide",
+      "url": "https://github.com/educlopez/smoothui/blob/main/CONTRIBUTING.md"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/educlopez/smoothui#development-setup"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/educlopez/smoothui#license"
+    },
+    {
+      "label": "LICENSE",
+      "url": "https://github.com/educlopez/smoothui/blob/main/LICENSE"
+    }
+  ],
+  "root_files": [
+    ".agents/skills/capture-component-posters",
+    ".claude",
+    ".cursor/skills",
+    ".github",
+    ".husky",
+    ".opencode/skills",
+    ".ui-craft",
+    ".vscode",
+    "apps/docs",
+    "docs/contributing",
+    "packages",
+    "scripts",
+    "sdd/library-site-improvements",
+    "tests/browser",
+    ".autorc",
+    ".eslintrc.json",
+    ".gitignore",
+    ".gitleaksignore",
+    ".nvmrc",
+    ".release-please-manifest.json",
+    "AGENTS.md",
+    "ANIMATION_IMPROVEMENTS.md",
+    "CLAUDE.md",
+    "COMPONENT_BACKLOG.md",
+    "CONTRIBUTING.md",
+    "DEMO_BACKLOG.md",
+    "LICENSE",
+    "MEDIA_AUDIT.md",
+    "README.md",
+    "RELEASING.md",
+    "SECURITY.md",
+    "biome.jsonc",
+    "package.json",
+    "playwright.config.ts",
+    "pnpm-lock.yaml",
+    "pnpm-workspace.yaml",
+    "release-please-config.json",
+    "tsconfig.json",
+    "turbo.json",
+    "vitest.risk.config.ts"
+  ],
+  "release_count": 14,
+  "status": "verified"
+}

@@ -1,0 +1,192 @@
+{
+  "url": "https://github.com/rive-app/rive-wasm",
+  "final_url": "https://github.com/rive-app/rive-wasm",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:48:13.728518+00:00",
+  "stars": 1011,
+  "forks": 94,
+  "description": "Wasm/JS runtime for Rive",
+  "homepage": "",
+  "topics": [],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2020-08-17T00:21:31.000Z",
+  "branch": "master",
+  "commit": "929b3f1eb2185ed125885620b53af2828d7dcd88",
+  "readme": "Rive Web A JavaScript/TypeScript and Web Assembly (WASM) runtime library for Rive. This library allows full control over Rive files with a high-level API for hooking up many simple interactions and animations, as well as a low-level API that allows you to drive your own render loop to create multiple artboards, animations, and state machines all in one canvas. Table of contents ⭐ Rive Overview 🚀 Getting Started & API docs 🔍 Supported Browsers 📚 Examples 🏃 Migration Guides 👨‍💻 Contributing ❓ Issues Rive overview Rive is a real-time interactive design and animation tool that helps teams create and run interactive animations anywhere. Designers and developers use our collaborative editor to create motion graphics that respond to different states and user inputs. Our lightweight open-source runtime libraries allow them to load their animations into apps, games, and websites. 🏡 Homepage 📘 Rive docs Getting started Follow along with the link below for a quick start in getting Rive JS integrated into your web applications. Getting Started with Rive in Web API documentation For more information, see the Runtime sections of the Rive help documentation: Layout State Machines Data Binding Rive Events Loading Assets Supported browsers Rive can be used in all major browsers. We're constantly working to improve performance with our renderer so that animations playback smoothly for all. Examples Check out some of the demos using this JS/WASM runtime in the Rive documentation. Awesome Rive For even more examples and resources on using Rive at runtime or in other tools, checkout the awesome-rive repo. Migration guides Using an older version of the runtime and need to learn how to upgrade to the latest version? Check out the migration guides below in our help center that help guide you through major version bumps; breaking changes and all! Migration guides Contributing We love contributions! Check out our contributing docs to get more details into how to run this project, the examples, and more all locally. Issues Have an issue with using the runtime, or want to suggest a feature/API to help make your development life better? Log an issue in our issues tab! You can also browse older issues and discussion threads there to see solutions that may have worked for common problems.",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://github.com/rive-app/rive-wasm/actions/workflows/build.yml/badge.svg"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/dc732c78c4ce9563008afc382fda42109c90fb11215ff5abf6baa0bedadcbb2e/68747470733a2f2f696d672e736869656c64732e696f2f646973636f72642f353332333635343733363032363030393635"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/04d5fb93ceed4d690339f26a7b4eccdf861a1c6306e2e14b46561847f87d869a/68747470733a2f2f696d672e736869656c64732e696f2f747769747465722f666f6c6c6f772f726976655f6170702e7376673f7374796c653d736f6369616c266c6162656c3d466f6c6c6f77"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/rive-app/rive-wasm#rive-web"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/b7174852683f9ce3cfb225237f07d0a7af6486573969966d2ec3ae1cc18f98da/68747470733a2f2f63646e2e726976652e6170702f726976655f6c6f676f5f6461726b5f62672e706e67"
+    },
+    {
+      "label": "WASM",
+      "url": "https://developer.mozilla.org/en-US/docs/WebAssembly"
+    },
+    {
+      "label": "Rive",
+      "url": "https://rive.app"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/rive-app/rive-wasm#table-of-contents"
+    },
+    {
+      "label": "Rive Overview",
+      "url": "https://github.com/rive-app/rive-wasm#rive-overview"
+    },
+    {
+      "label": "Getting Started & API docs",
+      "url": "https://github.com/rive-app/rive-wasm#getting-started"
+    },
+    {
+      "label": "Supported Browsers",
+      "url": "https://github.com/rive-app/rive-wasm#supported-browsers"
+    },
+    {
+      "label": "Examples",
+      "url": "https://github.com/rive-app/rive-wasm#examples"
+    },
+    {
+      "label": "Migration Guides",
+      "url": "https://github.com/rive-app/rive-wasm#migration-guides"
+    },
+    {
+      "label": "Contributing",
+      "url": "https://github.com/rive-app/rive-wasm#contributing"
+    },
+    {
+      "label": "Issues",
+      "url": "https://github.com/rive-app/rive-wasm#issues"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/rive-app/rive-wasm#rive-overview"
+    },
+    {
+      "label": "Rive",
+      "url": "https://rive.app"
+    },
+    {
+      "label": "Homepage",
+      "url": "https://rive.app/"
+    },
+    {
+      "label": "Rive docs",
+      "url": "https://rive.app/docs/getting-started/introduction"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/rive-app/rive-wasm#getting-started"
+    },
+    {
+      "label": "Getting Started with Rive in Web",
+      "url": "https://rive.app/docs/runtimes/web/web-js"
+    },
+    {
+      "label": "API documentation",
+      "url": "https://rive.app/docs/runtimes/web/rive-parameters"
+    },
+    {
+      "label": "Layout",
+      "url": "https://rive.app/docs/runtimes/layout"
+    },
+    {
+      "label": "State Machines",
+      "url": "https://rive.app/docs/runtimes/state-machines"
+    },
+    {
+      "label": "Data Binding",
+      "url": "https://rive.app/docs/runtimes/data-binding"
+    },
+    {
+      "label": "Rive Events",
+      "url": "https://rive.app/docs/runtimes/rive-events"
+    },
+    {
+      "label": "Loading Assets",
+      "url": "https://rive.app/docs/runtimes/web/loading-assets"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/rive-app/rive-wasm#supported-browsers"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/rive-app/rive-wasm#examples"
+    },
+    {
+      "label": "Rive documentation",
+      "url": "https://rive.app/docs/runtimes/demos"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/rive-app/rive-wasm#awesome-rive"
+    },
+    {
+      "label": "awesome-rive",
+      "url": "https://github.com/rive-app/awesome-rive"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/rive-app/rive-wasm#migration-guides"
+    },
+    {
+      "label": "Migration guides",
+      "url": "https://rive.app/docs/runtimes/web/migration-guides"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/rive-app/rive-wasm#contributing"
+    },
+    {
+      "label": "contributing docs",
+      "url": "https://github.com/rive-app/rive-wasm/blob/master/CONTRIBUTING.md"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/rive-app/rive-wasm#issues"
+    },
+    {
+      "label": "issues",
+      "url": "https://github.com/rive-app/rive-wasm/issues"
+    }
+  ],
+  "root_files": [
+    ".github",
+    "assets",
+    "js",
+    "scripting_lane",
+    "wasm",
+    ".clang-format",
+    ".gitignore",
+    ".gitmodules",
+    ".rive_head",
+    "CHANGELOG.md",
+    "CONTRIBUTING.md",
+    "LICENSE",
+    "README.md",
+    "generate_size_report.sh",
+    "increment.sh",
+    "number",
+    "query_wasm_size_change.sh"
+  ],
+  "release_count": 16,
+  "status": "verified"
+}

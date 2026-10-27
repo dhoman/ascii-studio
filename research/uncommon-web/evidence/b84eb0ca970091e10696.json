@@ -1,0 +1,261 @@
+{
+  "url": "https://github.com/greensock/GSAP",
+  "final_url": "https://github.com/greensock/GSAP",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:47:50.261026+00:00",
+  "stars": 29625,
+  "forks": 2290,
+  "description": "GSAP (GreenSock Animation Platform), a JavaScript animation library for the modern web",
+  "homepage": "https://gsap.com",
+  "topics": [
+    "animation",
+    "gsap",
+    "javascript",
+    "javascript-library",
+    "scroll"
+  ],
+  "license": "",
+  "archived": false,
+  "created_at": "2012-09-21T18:03:25.000Z",
+  "branch": "master",
+  "commit": "13e2b790546426a1a2e0e9b409f3f8dc6d6611f2",
+  "readme": "GSAP (GreenSock Animation Platform) GSAP is a framework-agnostic JavaScript animation library that turns developers into animation superheroes. Build high-performance animations that work in every major browser. Animate CSS, SVG, canvas, React, Vue, WebGL, colors, strings, motion paths, generic objects... anything JavaScript can touch! GSAP's ScrollTrigger plugin delivers jaw-dropping scroll-based animations with minimal code. gsap.matchMedia() makes building responsive, accessibility-friendly animations a breeze. No other library delivers such advanced sequencing, reliability, and tight control while solving real-world problems on over 12 million sites. GSAP works around countless browser inconsistencies; your animations just work. At its core, GSAP is a high-speed property manipulator, updating values over time with extreme accuracy. It's up to 20x faster than jQuery! GSAP is completely flexible; sprinkle it wherever you want. Zero dependencies. There are many optional plugins and easing functions for achieving advanced effects easily like scrolling, morphing, text splitting, animating along a motion path or FLIP animations. There's even a handy Observer for normalizing event detection across browsers/devices. Get Started Docs & Installation View the full documentation here, including an installation guide. CDN <script src=\"https://cdn.jsdelivr.net/npm/gsap@3.15/dist/gsap.min.js\"></script> See JSDelivr's dedicated GSAP page for quick CDN links to the core files/plugins. There are more installation instructions at gsap.com. Every major ad network excludes GSAP from file size calculations and most have it on their own CDNs, so contact them for the appropriate URL(s). NPM See the guide to using GSAP via NPM here. npm install gsap GSAP's core can animate almost anything including CSS and attributes, plus it includes all of the utility methods like interpolate(), mapRange(), most of the eases, and it can do snapping and modifiers. // typical import import gsap from \"gsap\"; // get other plugins: import ScrollTrigger from \"gsap/ScrollTrigger\"; import Flip from \"gsap/Flip\"; import Draggable from \"gsap/Draggable\"; // or all tools are exported from the \"all\" file (excluding members-only plugins): import { gsap, ScrollTrigger, Draggable, MotionPathPlugin } from \"gsap/all\"; // don't forget to register plugins gsap.registerPlugin(ScrollTrigger, Draggable, Flip, MotionPathPlugin); The NPM files are ES modules, but there's also a /dist/ directory with UMD files for extra compatibility. GSAP is FREE! Thanks to Webflow, GSAP is now 100% FREE including ALL of the bonus plugins like SplitText, MorphSVG, and all the others that were exclusively available to Club GSAP members. That's right - the entire GSAP toolset is FREE, even for commercial use! 🤯 Read more here ScrollTrigger & ScrollSmoother If you're looking for scroll-driven animations, GSAP's ScrollTrigger plugin is the standard. There's a companion ScrollSmoother as well. Using React? There's a @gsap/react package that exposes a useGSAP() hook which is a drop-in replacement for useEffect()/useLayoutEffect(), automating cleanup tasks. Please read the React guide for details. Resources gsap.com Getting started guide Docs Demos & starter templates Community forums Ease Visualizer Showcase YouTube Channel Cheat sheet Webflow Need help? Ask in the friendly GSAP forums. Or share your knowledge and help someone else - it's a great way to sharpen your skills! Report any bugs there too (or file an issue here if you prefer). License GreenSock's standard \"no charge\" license can be viewed at https://gsap.com/standard-license. Copyright (c) 2008-2026, GreenSock. All rights reserved.",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://github.com/greensock/GSAP#gsap-greensock-animation-platform"
+    },
+    {
+      "label": "",
+      "url": "https://gsap.com"
+    },
+    {
+      "label": "ScrollTrigger",
+      "url": "https://gsap.com/docs/v3/Plugins/ScrollTrigger/"
+    },
+    {
+      "label": "gsap.matchMedia()",
+      "url": "https://gsap.com/docs/v3/GSAP/gsap.matchMedia()"
+    },
+    {
+      "label": "plugins",
+      "url": "https://gsap.com/docs/v3/Plugins"
+    },
+    {
+      "label": "easing",
+      "url": "https://gsap.com/docs/v3/Eases"
+    },
+    {
+      "label": "scrolling",
+      "url": "https://gsap.com/docs/v3/Plugins/ScrollTrigger/"
+    },
+    {
+      "label": "morphing",
+      "url": "https://gsap.com/docs/v3/Plugins/MorphSVGPlugin"
+    },
+    {
+      "label": "text splitting",
+      "url": "https://gsap.com/docs/v3/Plugins/SplitText"
+    },
+    {
+      "label": "motion path",
+      "url": "https://gsap.com/docs/v3/Plugins/MotionPathPlugin"
+    },
+    {
+      "label": "FLIP",
+      "url": "https://gsap.com/docs/v3/Plugins/Flip/"
+    },
+    {
+      "label": "Observer",
+      "url": "https://gsap.com/docs/v3/Plugins/Observer/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/greensock/GSAP#get-started"
+    },
+    {
+      "label": "",
+      "url": "https://gsap.com/get-started"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/greensock/GSAP#docs--installation"
+    },
+    {
+      "label": "full documentation here",
+      "url": "https://gsap.com/docs"
+    },
+    {
+      "label": "installation guide",
+      "url": "https://gsap.com/install"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/greensock/GSAP#cdn"
+    },
+    {
+      "label": "JSDelivr's dedicated GSAP page",
+      "url": "https://www.jsdelivr.com/gsap"
+    },
+    {
+      "label": "installation instructions",
+      "url": "https://gsap.com/install"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/greensock/GSAP#npm"
+    },
+    {
+      "label": "guide to using GSAP via NPM here",
+      "url": "https://gsap.com/install"
+    },
+    {
+      "label": "utility methods",
+      "url": "https://gsap.com/docs/v3/GSAP/UtilityMethods"
+    },
+    {
+      "label": "interpolate()",
+      "url": "https://gsap.com/docs/v3/GSAP/UtilityMethods/interpolate()"
+    },
+    {
+      "label": "mapRange()",
+      "url": "https://gsap.com/docs/v3/GSAP/UtilityMethods/mapRange()"
+    },
+    {
+      "label": "eases",
+      "url": "https://gsap.com/docs/v3/Eases"
+    },
+    {
+      "label": "UMD",
+      "url": "https://www.davidbcalhoun.com/2014/what-is-amd-commonjs-and-umd/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/greensock/GSAP#gsap-is-free"
+    },
+    {
+      "label": "Webflow",
+      "url": "https://webflow.com"
+    },
+    {
+      "label": "SplitText",
+      "url": "https://gsap.com/docs/v3/Plugins/SplitText"
+    },
+    {
+      "label": "MorphSVG",
+      "url": "https://gsap.com/docs/v3/Plugins/MorphSVGPlugin"
+    },
+    {
+      "label": "here",
+      "url": "https://webflow.com/blog/gsap-becomes-free"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/greensock/GSAP#scrolltrigger--scrollsmoother"
+    },
+    {
+      "label": "ScrollTrigger",
+      "url": "https://gsap.com/docs/v3/Plugins/ScrollTrigger/"
+    },
+    {
+      "label": "ScrollSmoother",
+      "url": "https://gsap.com/docs/v3/Plugins/ScrollSmoother/"
+    },
+    {
+      "label": "",
+      "url": "https://gsap.com/docs/v3/Plugins/ScrollTrigger"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/greensock/GSAP#using-react"
+    },
+    {
+      "label": "@gsap/react",
+      "url": "https://www.npmjs.com/package/@gsap/react"
+    },
+    {
+      "label": "React guide",
+      "url": "https://gsap.com/react"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/greensock/GSAP#resources"
+    },
+    {
+      "label": "gsap.com",
+      "url": "https://gsap.com/"
+    },
+    {
+      "label": "Getting started guide",
+      "url": "https://gsap.com/get-started/"
+    },
+    {
+      "label": "Docs",
+      "url": "https://gsap.com/docs/"
+    },
+    {
+      "label": "Demos & starter templates",
+      "url": "https://gsap.com/demos"
+    },
+    {
+      "label": "Community forums",
+      "url": "https://gsap.com/community/"
+    },
+    {
+      "label": "Ease Visualizer",
+      "url": "https://gsap.com/docs/v3/Eases"
+    },
+    {
+      "label": "Showcase",
+      "url": "https://gsap.com/showcase"
+    },
+    {
+      "label": "YouTube Channel",
+      "url": "https://www.youtube.com/@GreenSockLearning"
+    },
+    {
+      "label": "Cheat sheet",
+      "url": "https://gsap.com/cheatsheet"
+    },
+    {
+      "label": "Webflow",
+      "url": "https://webflow.com"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/greensock/GSAP#need-help"
+    },
+    {
+      "label": "GSAP forums",
+      "url": "https://gsap.com/community/"
+    },
+    {
+      "label": "file an issue here",
+      "url": "https://github.com/greensock/GSAP/issues"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/greensock/GSAP#license"
+    },
+    {
+      "label": "",
+      "url": "https://gsap.com/standard-license"
+    },
+    {
+      "label": "https://gsap.com/standard-license",
+      "url": "https://gsap.com/standard-license"
+    }
+  ],
+  "root_files": [
+    "dist",
+    "esm",
+    "src",
+    "types",
+    ".gitignore",
+    "README.md",
+    "SECURITY.md",
+    "package.json"
+  ],
+  "release_count": 0,
+  "status": "verified"
+}

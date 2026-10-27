@@ -1,0 +1,128 @@
+{
+  "url": "https://github.com/yiliansource/party-js",
+  "final_url": "https://github.com/yiliansource/party-js",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:48:26.379573+00:00",
+  "stars": 1022,
+  "forks": 49,
+  "description": "A JavaScript library to brighten up your user's site experience with visual effects!",
+  "homepage": "https://party.js.org",
+  "topics": [
+    "emitters",
+    "javascript-library",
+    "particles",
+    "party",
+    "visual-effects"
+  ],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2020-10-22T14:40:41.000Z",
+  "branch": "main",
+  "commit": "4dd80223e35446baa6c963d66e7b0678c897dbb4",
+  "readme": "Installation • Usage • Contributing Installation The library is written in TypeScript and compiled to an UMD module to allow integration into different environments. Browsers You can grab the latest version from jsdelivr. <script src=\"https://cdn.jsdelivr.net/npm/party-js@latest/bundle/party.min.js\"></script> The library instance is loaded into the global party object. Node.JS If you are using a package-managed environment, you can also install the latest version via npm. npm install party-js # or yarn add party-js To use it, simply require or import it. import party from \"party-js\"; // or const party = require(\"party-js\"); Usage The library essentially offers a fully customizeable particle-system implementation into HTML documents. Users of the library have the ability to create and fine-tune effects to their individual liking. The library offers a few simple effects right out-of-the-box, so you don't have to waste time re-creating simple effects. document.querySelector(\".button\").addEventListener(\"click\", function (e) { party.confetti(this, { count: party.variation.range(20, 40), }); }); If you want to learn more, check out the quick start guide! Known Issues \"The particles are getting cut off inside the screen!\" When creating the particle container, the library calculates the document <body>'s size once. If your document size changes during the lifetime of your application you can either: Remove the #party-js-container. This forces the library to re-initialize the container and will re-calculate the size. All particles will remain in memory, so nothing will be lost. Manually calculate the needed container size and update it yourself. The library does not do this on a per-frame basis, in order not to unvoluntarily slow down older devices with timeout polling, and watching for document size changes is an expensive task, as of writing. Contributing First of all, thank you so much for wanting to contribute to the project! ❤ Please refer to the contribution guidelines when opening issues or creating pull requests.",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://raw.githubusercontent.com/yiliansource/party-js/main/.github/banner.svg"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/yiliansource/party-js#----"
+    },
+    {
+      "label": "Installation",
+      "url": "https://github.com/yiliansource/party-js#installation"
+    },
+    {
+      "label": "Usage",
+      "url": "https://github.com/yiliansource/party-js#usage"
+    },
+    {
+      "label": "Contributing",
+      "url": "https://github.com/yiliansource/party-js#contributing"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/party-js"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/59ade30b78aa505db33720f8f9b8977dcdc59316e5ed06a7a3f9eb906c76eaaf/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f73746172732f79696c69616e736f757263652f70617274792d6a733f7374796c653d666c6174"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/a41253a7c0a0e87bb9c57cf52d6a776ec6270eef1093df0143006c312b358e7d/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f616374696f6e732f776f726b666c6f772f7374617475732f79696c69616e736f757263652f70617274792d6a732f63692d6c69622e796d6c3f7374796c653d666c6174266c6f676f3d4e6f64652e6a73"
+    },
+    {
+      "label": "",
+      "url": "https://party.js.org/"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/f3104302565ba379888e077c86503870159aac7652008c9f971938f4e1edeb81/68747470733a2f2f696d672e736869656c64732e696f2f6e706d2f646d2f70617274792d6a733f7374796c653d666c6174"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/yiliansource/party-js#installation"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/yiliansource/party-js#browsers"
+    },
+    {
+      "label": "jsdelivr",
+      "url": "https://www.jsdelivr.com/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/yiliansource/party-js#nodejs"
+    },
+    {
+      "label": "npm",
+      "url": "https://www.npmjs.com/package/party-js"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/yiliansource/party-js#usage"
+    },
+    {
+      "label": "quick start",
+      "url": "https://party.js.org/docs/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/yiliansource/party-js#known-issues"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/yiliansource/party-js#contributing"
+    },
+    {
+      "label": "contribution guidelines",
+      "url": "https://github.com/yiliansource/party-js/blob/main/.github/CONTRIBUTING.md"
+    }
+  ],
+  "root_files": [
+    ".github",
+    "docs",
+    "samples",
+    "src",
+    "tests",
+    ".eslintignore",
+    ".eslintrc.js",
+    ".gitattributes",
+    ".gitignore",
+    ".npmignore",
+    ".prettierignore",
+    ".prettierrc",
+    "CHANGELOG.md",
+    "LICENSE.md",
+    "README.md",
+    "package.json",
+    "tsconfig.json",
+    "webpack.config.js",
+    "yarn.lock"
+  ],
+  "release_count": 11,
+  "status": "verified"
+}

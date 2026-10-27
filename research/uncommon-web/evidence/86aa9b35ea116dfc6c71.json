@@ -1,0 +1,107 @@
+{
+  "url": "https://github.com/motion-canvas/motion-canvas",
+  "final_url": "https://github.com/motion-canvas/motion-canvas",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:48:03.825882+00:00",
+  "stars": 19429,
+  "forks": 850,
+  "description": "Visualize Your Ideas With Code",
+  "homepage": "https://motion-canvas.io",
+  "topics": [
+    "animation",
+    "presentation",
+    "visualization"
+  ],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2022-08-03T16:30:14.000Z",
+  "branch": "main",
+  "commit": "7b91435c301d530351dcf5ebb91dd139c002e405",
+  "readme": "Motion Canvas Motion Canvas is two things: A TypeScript library that uses generators to program animations. An editor providing a real-time preview of said animations. It's a specialized tool designed to create informative vector animations and synchronize them with voice-overs. Aside from providing the preview, the editor allows you to edit certain aspects of the animation which could otherwise be tedious. Using Motion Canvas Check out our getting started guide to learn how to use Motion Canvas. Developing Motion Canvas locally The project is maintained as one monorepo containing the following packages: Name Description 2d The default renderer for 2D motion graphics core All logic related to running and rendering animations. create A package for bootstrapping new projects. docs Our documentation website. e2e End-to-end tests. examples Animation examples used in documentation. internal Internal helpers used for building the packages. player A custom element for displaying animations in a browser. template A template project included for developer's convenience. ui The user interface used for editing. vite-plugin A plugin for Vite used for developing and bundling animations. After cloning the repo, run npm install in the root of the project to install all necessary dependencies. Then run npx lerna run build to build all the packages. Developing Editor When developing the editor, run the following command: npm run template:dev It will start a vite server that watches the core, 2d, ui, and vite-plugin packages. The template package itself contains a simple Motion Canvas project that can be used during development. Developing Player To develop the player, first build the template: npm run template:build. Then, start npm run player:dev. Installing a local version of Motion Canvas in a project It can be useful to install a local version of Motion Canvas in a standalone project. For example, when you want to use your own fork with some custom-made features to create your animations. Let's assume the following project structure: projects/ ├── motion-canvas/ <- your local monorepo └── my-project/ <- a bootstrapped project └── package.json You can link the local packages from the monorepo by updating the package.json of your project. Simply replace the version with a file: followed by a relative path to the package you want to link: \"dependencies\": { - \"@motion-canvas/core\": \"^3.11.0\", + \"@motion-canvas/core\": \"file:../motion-canvas/packages/core\", // ... }, If you're linking the ui package, you'll also need to modify vite.config.ts to allow vite to load external files: import {defineConfig} from 'vite'; import motionCanvas from '@motion-canvas/vite-plugin'; export default defineConfig({ server: { fs: { // let it load external files strict: false, }, }, plugins: [motionCanvas()], }); This is necessary because the editor styles are loaded using the /@fs/ prefix and since the linked ui package is outside the project, vite needs permission to access it. Then run npm install in to apply the changes and that's it. You can use the same technique to test out any custom package you're working on. Contributing Read through our Contribution Guide to learn how you can help make Motion Canvas better.",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://motion-canvas.github.io"
+    },
+    {
+      "label": "",
+      "url": "https://lerna.js.org"
+    },
+    {
+      "label": "",
+      "url": "https://vitejs.dev"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@motion-canvas/core"
+    },
+    {
+      "label": "",
+      "url": "https://chat.motion-canvas.io"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/motion-canvas/motion-canvas#motion-canvas"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/motion-canvas/motion-canvas#using-motion-canvas"
+    },
+    {
+      "label": "getting started",
+      "url": "https://motion-canvas.io/docs/quickstart"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/motion-canvas/motion-canvas#developing-motion-canvas-locally"
+    },
+    {
+      "label": "Our documentation website.",
+      "url": "https://motion-canvas.io/docs/quickstart"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/motion-canvas/motion-canvas#developing-editor"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/motion-canvas/motion-canvas#developing-player"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/motion-canvas/motion-canvas#installing-a-local-version-of-motion-canvas-in-a-project"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/motion-canvas/motion-canvas#contributing"
+    },
+    {
+      "label": "Contribution Guide",
+      "url": "https://github.com/motion-canvas/motion-canvas/blob/main/CONTRIBUTING.md"
+    }
+  ],
+  "root_files": [
+    ".github",
+    ".husky",
+    "packages",
+    ".eslintrc.json",
+    ".gitignore",
+    ".npmrc",
+    ".prettierignore",
+    ".prettierrc",
+    "CHANGELOG.md",
+    "CODE_OF_CONDUCT.md",
+    "CONTRIBUTING.md",
+    "FUNDING.yml",
+    "LICENSE",
+    "README.md",
+    "SECURITY.md",
+    "commitlint.config.js",
+    "lerna.json",
+    "package-lock.json",
+    "package.json",
+    "tsdoc.json"
+  ],
+  "release_count": 94,
+  "status": "verified"
+}

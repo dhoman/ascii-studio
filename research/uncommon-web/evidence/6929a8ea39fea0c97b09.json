@@ -1,0 +1,111 @@
+{
+  "url": "https://github.com/fand/vfx-js",
+  "final_url": "https://github.com/fand/vfx-js",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:47:48.020245+00:00",
+  "stars": 1156,
+  "forks": 37,
+  "description": "WebGL effects made easy.",
+  "homepage": "https://amagi.dev/vfx-js",
+  "topics": [
+    "animation",
+    "animations",
+    "creative-coding",
+    "frontend",
+    "frontend-web",
+    "glsl",
+    "image-effect",
+    "image-effects",
+    "javascript",
+    "post-processing",
+    "react",
+    "shader",
+    "shaders",
+    "typescript",
+    "video-effect",
+    "video-effects",
+    "visual-effect",
+    "visual-effects",
+    "web-development",
+    "webgl"
+  ],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2019-12-14T11:59:21.000Z",
+  "branch": "main",
+  "commit": "bbe54e6876f04ef1494fc604c88357adf7762cb0",
+  "readme": "VFX-JS: Visual Effects Framework for Web VFX-JS is a JavaScript library to add WebGL-powered effects to your website. You can easily attach it to normal <img>, <video> elements etc. See also @vfx-js/react for React bindings. Usage Install via npm: npm i @vfx-js/core Then create VFX object in your script: import { VFX } from '@vfx-js/core'; const img = document.querySelector('#img'); const vfx = new VFX(); vfx.add(img, { shader: \"glitch\", overflow: 100 }); Or compose prebuilt effects from @vfx-js/effects: import { VFX } from '@vfx-js/core'; import { BloomEffect, PixelateEffect } from '@vfx-js/effects'; const vfx = new VFX(); vfx.add(img, { effect: [new PixelateEffect({ size: 10 }), new BloomEffect({ intensity: 5 })], }); Examples You can find basic examples on the VFX-JS website. Or visit VFX-JS Examples for more advanced use cases. https://amagi.dev/vfx-js/ https://amagi.dev/vfx-js/examples Author AMAGI LICENSE MIT",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://amagi.dev/vfx-js/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/fand/vfx-js#vfx-js-visual-effects-framework-for-web"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/fand/vfx-js"
+    },
+    {
+      "label": "@vfx-js/react",
+      "url": "https://www.npmjs.com/package/@vfx-js/react"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/fand/vfx-js#usage"
+    },
+    {
+      "label": "@vfx-js/effects",
+      "url": "https://www.npmjs.com/package/@vfx-js/effects"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/fand/vfx-js#examples"
+    },
+    {
+      "label": "https://amagi.dev/vfx-js/",
+      "url": "https://amagi.dev/vfx-js/"
+    },
+    {
+      "label": "https://amagi.dev/vfx-js/examples",
+      "url": "https://amagi.dev/vfx-js/examples"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/fand/vfx-js#author"
+    },
+    {
+      "label": "AMAGI",
+      "url": "https://twitter.com/amagitakayosi"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/fand/vfx-js#license"
+    }
+  ],
+  "root_files": [
+    ".changeset",
+    ".github",
+    ".husky",
+    ".vscode",
+    ".zed",
+    "docs",
+    "packages",
+    ".gitattributes",
+    ".gitignore",
+    "CLAUDE.md",
+    "CONTRIBUTING.md",
+    "LICENSE",
+    "README.md",
+    "biome.json",
+    "package.json",
+    "plan.md",
+    "pnpm-lock.yaml",
+    "pnpm-workspace.yaml",
+    "turbo.json"
+  ],
+  "release_count": 34,
+  "status": "verified"
+}

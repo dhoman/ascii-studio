@@ -1,0 +1,128 @@
+{
+  "url": "https://github.com/kitao/pyxel",
+  "final_url": "https://github.com/kitao/pyxel",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:47:57.385959+00:00",
+  "stars": 18441,
+  "forks": 966,
+  "description": "A retro game engine for Python",
+  "homepage": "",
+  "topics": [
+    "game",
+    "game-development",
+    "game-engine",
+    "gamedev",
+    "graphics",
+    "html",
+    "opengl",
+    "pico-8",
+    "pixel-art",
+    "python",
+    "pyxel",
+    "retro-game",
+    "rust",
+    "tic-80",
+    "wasm",
+    "webgl"
+  ],
+  "license": "NOASSERTION",
+  "archived": false,
+  "created_at": "2018-06-10T04:58:54.000Z",
+  "branch": "main",
+  "commit": "9553dcd5809b7268014b4effe64bdf53ecc91684",
+  "readme": "A retro game engine for Python ▸ Website",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://kitao.dev/pyxel/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/kitao/pyxel"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/kitao/pyxel"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/sponsors/kitao"
+    },
+    {
+      "label": "",
+      "url": "https://www.patreon.com/tkitao"
+    },
+    {
+      "label": "",
+      "url": "https://ko-fi.com/H2H27VDKD"
+    },
+    {
+      "label": "▸ Website",
+      "url": "https://kitao.dev/pyxel/"
+    },
+    {
+      "label": "",
+      "url": "https://kitao.dev/pyxel/user-examples/"
+    },
+    {
+      "label": "",
+      "url": "https://gihyo.jp/book/2025/978-4-297-14657-3"
+    },
+    {
+      "label": "",
+      "url": "https://kitao.dev/pyxel/showcase/examples/02-jump-game.html"
+    },
+    {
+      "label": "",
+      "url": "https://kitao.dev/pyxel/showcase/examples/10-platformer.html"
+    },
+    {
+      "label": "",
+      "url": "https://kitao.dev/pyxel/showcase/apps/30sec-of-daylight.html"
+    },
+    {
+      "label": "",
+      "url": "https://kitao.dev/pyxel/showcase/apps/megaball.html"
+    },
+    {
+      "label": "",
+      "url": "https://kitao.dev/pyxel/showcase/tools/image-editor.html"
+    },
+    {
+      "label": "",
+      "url": "https://kitao.dev/pyxel/showcase/tools/sound-editor.html"
+    },
+    {
+      "label": "",
+      "url": "https://kitao.dev/pyxel/showcase/examples/c04-mesh-and-motion.html"
+    },
+    {
+      "label": "",
+      "url": "https://kitao.dev/pyxel/showcase/examples/c05-3d-collision.html"
+    },
+    {
+      "label": "",
+      "url": "https://kitao.dev/pyxel/showcase/examples/c06-3d-physics.html"
+    }
+  ],
+  "root_files": [
+    ".github",
+    ".vscode",
+    "crates",
+    "docs",
+    "python",
+    "scripts",
+    "wasm",
+    "web",
+    ".gitattributes",
+    ".gitignore",
+    ".nojekyll",
+    "CHANGELOG.md",
+    "LICENSE",
+    "Makefile",
+    "README.md",
+    "rust-toolchain.toml"
+  ],
+  "release_count": 188,
+  "status": "verified"
+}

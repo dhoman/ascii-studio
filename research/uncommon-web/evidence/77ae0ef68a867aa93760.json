@@ -1,0 +1,413 @@
+{
+  "url": "https://github.com/darkroomengineering/lenis",
+  "final_url": "https://github.com/darkroomengineering/lenis",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:47:43.399688+00:00",
+  "stars": 16808,
+  "forks": 751,
+  "description": "Smooth scroll as it should be",
+  "homepage": "https://lenis.dev",
+  "topics": [
+    "darkroom-engineering",
+    "performance",
+    "react",
+    "scroll",
+    "smooth",
+    "smooth-scroll",
+    "snap",
+    "vanilla",
+    "vue"
+  ],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2022-02-21T14:57:09.000Z",
+  "branch": "main",
+  "commit": "e01eefb1f55cd08bc051521d74f5f8182b71ee9d",
+  "readme": "Introduction Lenis (\"smooth\" in latin) is a lightweight, robust, and performant smooth scroll library. It's designed by @darkroom.engineering to be simple to use and easy to integrate into your projects. It's built with performance in mind and is optimized for modern browsers. It's perfect for creating smooth scrolling experiences on your website such as WebGL scroll syncing, parallax effects, and much more, see Demo and Showcase. Read our Manifesto to learn more about the inspiration behind Lenis. Features Sponsors Packages Showcase Installation Setup No-code usage Settings Properties Methods Events Considerations Limitations Troubleshooting Tutorials Plugins License Features Lightweight & dependency-free — the whole library is a few KB with zero runtime dependencies Runs on native scroll — wraps the browser's own scroll, so position: sticky, anchor links, and accessibility keep working Any axis — smooth vertical, horizontal, and nested scrolling from a single instance Built for sync — drives WebGL scroll scenes, GSAP ScrollTrigger, and parallax off one loop Framework adapters — first-class packages for React, Vue, and Framer Scroll snapping — the snap plugin aligns sections without fighting the smooth scroll Sponsors If you’ve used Lenis and it made your site feel just a little more alive, consider sponsoring. Your support helps us smooth out the internet one library at a time—and lets us keep building tools that care about the details most folks overlook. Packages lenis lenis/react lenis/vue lenis/framer lenis/snap Installation Using a package manager: npm i lenis # or yarn add lenis # or pnpm add lenis import Lenis from 'lenis' Using scripts: <script src=\"https://unpkg.com/lenis@1.3.27/dist/lenis.min.js\"></script> Setup Basic: // Initialize Lenis const lenis = new Lenis({ autoRaf: true, }); // Listen for the scroll event and log the event data lenis.on('scroll', (e) => { console.log(e); }); Custom raf loop: // Initialize Lenis const lenis = new Lenis(); // Use requestAnimationFrame to continuously update the scroll function raf(time) { lenis.raf(time); requestAnimationFrame(raf); } requestAnimationFrame(raf); Recommended CSS: Import stylesheet: import 'lenis/dist/lenis.css' Or link the CSS file: <link rel=\"stylesheet\" href=\"https://unpkg.com/lenis@1.3.27/dist/lenis.css\"> Or add it manually: See lenis.css stylesheet GSAP ScrollTrigger: // Initialize a new Lenis instance for smooth scrolling const lenis = new Lenis(); // Synchronize Lenis scrolling with GSAP's ScrollTrigger plugin lenis.on('scroll', ScrollTrigger.update); // Add Lenis's requestAnimationFrame (raf) method to GSAP's ticker // This ensures Lenis's smooth scroll animation updates on each GSAP tick gsap.ticker.add((time) => { lenis.raf(time * 1000); // Convert time from seconds to milliseconds }); // Disable lag smoothing in GSAP to prevent any delay in scroll animations gsap.ticker.lagSmoothing(0); No-code usage One line, no build step — just drop this into your HTML: <link rel=\"stylesheet\" href=\"https://unpkg.com/lenis@1.3.27/dist/lenis.css\"> <script src=\"https://unpkg.com/lenis@1.3.27/dist/lenis.min.js\"></script> <script>new Lenis({ autoRaf: true, autoToggle: true, anchors: true, allowNestedScroll: true, naiveDimensions: true, stopInertiaOnNavigate: true })</script> That's it, your page now has smooth scrolling and should handle most of the usual issues such as: compatibility with other packages modals smooth anchors scroll reset on page change Settings Option Type Default Description allowNestedScroll boolean false Automatically allow nested scrollable elements to scroll natively. This is the simplest way to handle nested scroll. ⚠️ Can create performance issues since it checks the DOM tree on every scroll event. If that's a concern, use prevent option instead. anchors boolean, ScrollToOptions false Scroll to anchor links when clicked. If true is passed, it will enable anchor links with default options. If ScrollToOptions is passed, it will enable anchor links with the given options. autoRaf boolean false Whether or not to automatically run requestAnimationFrame loop. autoResize boolean true Resize instance automatically based on ResizeObserver. If false you must resize manually using .resize(). autoToggle boolean false Automatically start or stop the lenis instance based on the wrapper's overflow property, ⚠️ this requires Lenis recommended CSS. Safari > 17.3, Chrome > 116 and Firefox > 128 (https://caniuse.com/?search=transition-behavior). content HTMLElement document.documentElement The element that contains the content that will be scrolled, usually wrapper's direct child. duration number 1.2 The duration of scroll animation (in seconds). Useless if lerp defined. easing function (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)) The easing function to use for the scroll animation, our default is custom but you can pick one from Easings.net. Useless if lerp defined. eventsTarget HTMLElement, Window wrapper The element that will listen to wheel and touch events. gestureOrientation string vertical The orientation of the gestures. Can be vertical, horizontal or both. infinite boolean false Enable infinite scrolling! syncTouch: true is required on touch devices (See example). lerp number 0.1 Linear interpolation (lerp) intensity (between 0 and 1). naiveDimensions boolean false If true, Lenis will use naive dimensions calculation. ⚠️ Be careful, this has a performance impact. orientation string vertical The orientation of the scrolling. Can be vertical or horizontal. overscroll boolean true Similar to CSS overscroll-behavior (https://developer.mozilla.org/en-US/docs/Web/CSS/overscroll-behavior). prevent function undefined Manually prevent scroll to be smoothed based on elements traversed by events. If true is returned, it will prevent the scroll to be smoothed. Example: (node) => node.classList.contains('cookie-modal'). respectReducedMotion boolean true Honor the user's prefers-reduced-motion setting: smoothing is disabled and programmatic scrolls are instant, while scroll keeps running on the main thread (see Reduced motion). smoothWheel boolean true Smooth the scroll initiated by wheel events. stopInertiaOnNavigate boolean false If true, Lenis will stop inertia when an internal link is clicked. syncTouch boolean false Mimic touch device scroll while allowing scroll sync (can be unstable on iOS<16). syncTouchLerp number 0.075 Lerp applied during syncTouch inertia. touchInertiaExponent number 1.7 Manage the strength of syncTouch inertia. touchMultiplier number 1 The multiplier to use for touch events. virtualScroll function undefined Manually modify the events before they get consumed. If false is returned, the scroll will not be smoothed. Examples: (e) => { e.deltaY /= 2 } (to slow down vertical scroll) or ({ event }) => !event.shiftKey (to prevent scroll to be smoothed if shift key is pressed). wheelMultiplier number 1 The multiplier to use for mouse wheel events. wrapper HTMLElement, Window window The element that will be used as the scroll container. Properties Property Type Description actualScroll number Current scroll value registered by the browser animatedScroll number Current scroll value className (getter) string rootElement className dimensions object Dimensions instance direction number 1: scrolling up, -1: scrolling down isHorizontal (getter) boolean Whether or not the instance is horizontal isScrolling (getter) boolean, string Whether or not the scroll is being animated, smooth, native or false isStopped (getter) boolean Whether or not the user should be able to scroll lastVelocity number Last scroll velocity limit (getter) number Maximum scroll value options object Instance options prefersReducedMotion (getter) boolean Whether the user prefers reduced motion and Lenis is honoring it progress (getter) number Scroll progress from 0 to 1 rootElement (getter) HTMLElement Element on which Lenis is instanced scroll (getter) number Current scroll value (handles infinite scroll if activated) targetScroll number Target scroll value time number Time elapsed since instance creation velocity number Current scroll velocity Methods Method Description Arguments destroy() Destroys the instance and removes all events. on(id, function) id can be any of the following instance events to listen. raf(time) Must be called every frame for internal usage. time: in ms resize() Compute internal sizes, it has to be used if autoResize option is false. scrollTo(target, options) Scroll to target. target: goal to reachnumber: value to scroll in pixelsstring: CSS selector or keyword (top, left, start, bottom, right, end)Element: DOM element (HTML or SVG)optionsoffset(number): equivalent to scroll-padding-toplerp(number): animation lerp intensityduration(number): animation duration (in seconds)easing(function): animation easingimmediate(boolean): ignore duration, easing and lerplock(boolean): whether or not to prevent the user from scrolling until the target is reachedforce(boolean): reach target even if instance is stoppedonComplete(function): called when the target is reacheduserData(object): this object will be forwarded through scroll events start() Resumes the scroll stop() Pauses the scroll Events Event Callback Arguments scroll Lenis instance virtual-scroll {deltaX, deltaY, event} Considerations Nested scroll The simplest and most reliable way to handle nested scrollable elements is to use the allowNestedScroll option: const lenis = new Lenis({ allowNestedScroll: true, }) This automatically detects nested scrollable elements and lets them scroll natively. However, this can create performance issues since Lenis needs to check the DOM tree on every scroll event. If you experience performance problems, use data-lenis-prevent instead. Using HTML attributes <div data-lenis-prevent>scrollable content</div> See example Attribute Description data-lenis-prevent Prevent all smooth scroll events data-lenis-prevent-wheel Prevent wheel events only data-lenis-prevent-touch Prevent touch events only data-lenis-prevent-vertical Prevent vertical scroll events only data-lenis-prevent-horizontal Prevent horizontal scroll events only Using Javascript <div id=\"modal\">scrollable content</div> const lenis = new Lenis({ prevent: (node) => node.id === 'modal', }) See example Anchor links By default, Lenis will prevent anchor links from working while scrolling. To enable them, you must set anchors: true. new Lenis({ anchors: true }) You can also use scrollTo options: new Lenis({ anchors: { offset: 100, onComplete: ()=>{ console.log('scrolled to anchor') } } }) Reduced motion By default, Lenis honors the user's prefers-reduced-motion setting: when it is set to reduce, smoothing is disabled (lerp is forced to 1 so the scroll tracks the input device 1:1, ignoring duration/easing) and programmatic scrolls (scrollTo, anchor links) jump instantly to their target. Lenis keeps running so WebGL/DOM synchronization stays intact, and the preference is picked up live without a reload. You can check lenis.prefersReducedMotion to adapt your own animations. You can opt out (not recommended) with: const lenis = new Lenis({ respectReducedMotion: false, }) Limitations no support for CSS scroll-snap, you must use (lenis/snap) capped to 60fps on Safari (source) and 30fps on low power mode smooth scroll will stop working over iframe since they don't forward wheel events position fixed seems to lag on MacOS Safari pre-M1 (source) touch events may behave unexpectedly when syncTouch is enabled on iOS < 16 nested scroll containers require proper configuration to work correctly Troubleshooting Make sure you use the latest version of Lenis Include the recommended CSS If using GSAP ScrollTrigger, ensure proper integration (see GSAP ScrollTrigger setup section) Test without Lenis to ensure your element/page is scrollable Be sure to use autoRaf: true or manually call lenis.raf(time) in your animation loop Tutorials Infinite Scrolling with Lenis by Matt Rothenberg Building Smooth Scroll in 2025 with Lenis by Edoardo Lunardi Plugins r3f-scroll-rig by 14islands locomotive-scroll by Locomotive License MIT © darkroom.engineering",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://github.com/darkroomengineering/lenis"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/lenis"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/lenis"
+    },
+    {
+      "label": "",
+      "url": "https://bundlephobia.com/package/lenis"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/darkroomengineering/lenis#introduction"
+    },
+    {
+      "label": "@darkroom.engineering",
+      "url": "https://twitter.com/darkroomdevs"
+    },
+    {
+      "label": "Demo",
+      "url": "https://lenis.darkroom.engineering/"
+    },
+    {
+      "label": "Showcase",
+      "url": "https://www.lenis.dev/showcase"
+    },
+    {
+      "label": "Manifesto",
+      "url": "https://github.com/darkroomengineering/lenis/blob/main/MANIFESTO.md"
+    },
+    {
+      "label": "Features",
+      "url": "https://github.com/darkroomengineering/lenis#features"
+    },
+    {
+      "label": "Sponsors",
+      "url": "https://github.com/darkroomengineering/lenis#sponsors"
+    },
+    {
+      "label": "Packages",
+      "url": "https://github.com/darkroomengineering/lenis#packages"
+    },
+    {
+      "label": "Showcase",
+      "url": "https://www.lenis.dev/showcase"
+    },
+    {
+      "label": "Installation",
+      "url": "https://github.com/darkroomengineering/lenis#installation"
+    },
+    {
+      "label": "Setup",
+      "url": "https://github.com/darkroomengineering/lenis#setup"
+    },
+    {
+      "label": "No-code usage",
+      "url": "https://github.com/darkroomengineering/lenis#no-code-usage"
+    },
+    {
+      "label": "Settings",
+      "url": "https://github.com/darkroomengineering/lenis#settings"
+    },
+    {
+      "label": "Properties",
+      "url": "https://github.com/darkroomengineering/lenis#properties"
+    },
+    {
+      "label": "Methods",
+      "url": "https://github.com/darkroomengineering/lenis#methods"
+    },
+    {
+      "label": "Events",
+      "url": "https://github.com/darkroomengineering/lenis#events"
+    },
+    {
+      "label": "Considerations",
+      "url": "https://github.com/darkroomengineering/lenis#considerations"
+    },
+    {
+      "label": "Limitations",
+      "url": "https://github.com/darkroomengineering/lenis#limitations"
+    },
+    {
+      "label": "Troubleshooting",
+      "url": "https://github.com/darkroomengineering/lenis#troubleshooting"
+    },
+    {
+      "label": "Tutorials",
+      "url": "https://github.com/darkroomengineering/lenis#tutorials"
+    },
+    {
+      "label": "Plugins",
+      "url": "https://github.com/darkroomengineering/lenis#plugins"
+    },
+    {
+      "label": "License",
+      "url": "https://github.com/darkroomengineering/lenis#license"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/darkroomengineering/lenis#features"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/darkroomengineering/lenis#sponsors"
+    },
+    {
+      "label": "sponsoring",
+      "url": "https://github.com/sponsors/darkroomengineering"
+    },
+    {
+      "label": "",
+      "url": "https://www.contentarchitecture.dev/?utm_source=lenis&utm_medium=github"
+    },
+    {
+      "label": "",
+      "url": "https://glauber.org/?utm_source=lenis&utm_medium=github"
+    },
+    {
+      "label": "",
+      "url": "https://smsunarto.com/?utm_source=lenis&utm_medium=github"
+    },
+    {
+      "label": "",
+      "url": "https://bizar.ro/?utm_source=lenis&utm_medium=github"
+    },
+    {
+      "label": "",
+      "url": "https://www.edoardolunardi.dev/?utm_source=lenis&utm_medium=github"
+    },
+    {
+      "label": "",
+      "url": "https://www.cachet.studio/?utm_source=lenis&utm_medium=github"
+    },
+    {
+      "label": "",
+      "url": "https://good-fella.com/?utm_source=lenis&utm_medium=github"
+    },
+    {
+      "label": "",
+      "url": "https://oho.design/?utm_source=lenis&utm_medium=github"
+    },
+    {
+      "label": "",
+      "url": "https://itsoffbrand.com/?utm_source=lenis&utm_medium=github"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/darkroomengineering/lenis#packages"
+    },
+    {
+      "label": "lenis",
+      "url": "https://github.com/darkroomengineering/lenis/blob/main/README.md"
+    },
+    {
+      "label": "lenis/react",
+      "url": "https://github.com/darkroomengineering/lenis/blob/main/packages/react/README.md"
+    },
+    {
+      "label": "lenis/vue",
+      "url": "https://github.com/darkroomengineering/lenis/tree/main/packages/vue/README.md"
+    },
+    {
+      "label": "lenis/framer",
+      "url": "https://lenis.framer.website/"
+    },
+    {
+      "label": "lenis/snap",
+      "url": "https://github.com/darkroomengineering/lenis/tree/main/packages/snap/README.md"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/darkroomengineering/lenis#installation"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/darkroomengineering/lenis#setup"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/darkroomengineering/lenis#basic"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/darkroomengineering/lenis#custom-raf-loop"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/darkroomengineering/lenis#recommended-css"
+    },
+    {
+      "label": "See lenis.css stylesheet",
+      "url": "https://github.com/darkroomengineering/lenis/blob/main/packages/core/lenis.css"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/darkroomengineering/lenis#gsap-scrolltrigger"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/darkroomengineering/lenis#no-code-usage"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/darkroomengineering/lenis#settings"
+    },
+    {
+      "label": "https://caniuse.com/?search=transition-behavior",
+      "url": "https://caniuse.com/?search=transition-behavior"
+    },
+    {
+      "label": "Easings.net",
+      "url": "https://easings.net/en"
+    },
+    {
+      "label": "See example",
+      "url": "https://codepen.io/ClementRoche/pen/OJqBLod"
+    },
+    {
+      "label": "https://developer.mozilla.org/en-US/docs/Web/CSS/overscroll-behavior",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/overscroll-behavior"
+    },
+    {
+      "label": "see Reduced motion",
+      "url": "https://github.com/darkroomengineering/lenis#reduced-motion"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/darkroomengineering/lenis#properties"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/darkroomengineering/lenis#methods"
+    },
+    {
+      "label": "instance events",
+      "url": "https://github.com/darkroomengineering/lenis#instance-events"
+    },
+    {
+      "label": "scroll-padding-top",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/scroll-padding-top"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/darkroomengineering/lenis#events"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/darkroomengineering/lenis#considerations"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/darkroomengineering/lenis#nested-scroll"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/darkroomengineering/lenis#using-html-attributes"
+    },
+    {
+      "label": "See example",
+      "url": "https://codepen.io/ClementRoche/pen/PoLdjpw"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/darkroomengineering/lenis#using-javascript"
+    },
+    {
+      "label": "See example",
+      "url": "https://codepen.io/ClementRoche/pen/emONGYN"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/darkroomengineering/lenis#anchor-links"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/darkroomengineering/lenis#reduced-motion"
+    },
+    {
+      "label": "prefers-reduced-motion",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/darkroomengineering/lenis#limitations"
+    },
+    {
+      "label": "lenis/snap",
+      "url": "https://github.com/darkroomengineering/lenis/tree/main/packages/snap/README.md"
+    },
+    {
+      "label": "source",
+      "url": "https://bugs.webkit.org/show_bug.cgi?id=173434"
+    },
+    {
+      "label": "source",
+      "url": "https://github.com/darkroomengineering/lenis/issues/103"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/darkroomengineering/lenis#troubleshooting"
+    },
+    {
+      "label": "Lenis",
+      "url": "https://www.npmjs.com/package/lenis?activeTab=versions"
+    },
+    {
+      "label": "GSAP ScrollTrigger setup",
+      "url": "https://github.com/darkroomengineering/lenis#setup"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/darkroomengineering/lenis#tutorials"
+    },
+    {
+      "label": "Infinite Scrolling with Lenis",
+      "url": "https://tympanus.net/Development/ScrollAnimationsGrid/"
+    },
+    {
+      "label": "Matt Rothenberg",
+      "url": "https://mattrothenberg.com/"
+    },
+    {
+      "label": "Building Smooth Scroll in 2025 with Lenis",
+      "url": "https://www.edoardolunardi.dev/blog/building-smooth-scroll-in-2025-with-lenis"
+    },
+    {
+      "label": "Edoardo Lunardi",
+      "url": "https://www.edoardolunardi.dev/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/darkroomengineering/lenis#plugins"
+    },
+    {
+      "label": "r3f-scroll-rig",
+      "url": "https://github.com/14islands/r3f-scroll-rig"
+    },
+    {
+      "label": "14islands",
+      "url": "https://14islands.com/"
+    },
+    {
+      "label": "locomotive-scroll",
+      "url": "https://github.com/locomotivemtl/locomotive-scroll"
+    },
+    {
+      "label": "Locomotive",
+      "url": "https://locomotive.ca/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/darkroomengineering/lenis#license"
+    },
+    {
+      "label": "darkroom.engineering",
+      "url": "https://github.com/darkroomengineering"
+    }
+  ],
+  "root_files": [
+    ".github",
+    ".vscode",
+    "packages",
+    "playground",
+    "scripts",
+    ".gitignore",
+    "CONTRIBUTING.md",
+    "LICENSE",
+    "MANIFESTO.md",
+    "README.md",
+    "V2-ROADMAP.md",
+    "biome.json",
+    "bun.lock",
+    "package.json",
+    "tsconfig.json",
+    "tsdown.config.ts"
+  ],
+  "release_count": 115,
+  "status": "verified"
+}

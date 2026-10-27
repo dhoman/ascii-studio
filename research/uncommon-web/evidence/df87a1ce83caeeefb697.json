@@ -1,0 +1,95 @@
+{
+  "url": "https://github.com/ibelick/motion-primitives",
+  "final_url": "https://github.com/ibelick/motion-primitives",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:47:51.897585+00:00",
+  "stars": 6788,
+  "forks": 293,
+  "description": "UI kit to make beautiful, animated interfaces, faster. Customizable. Open Source.",
+  "homepage": "https://motion-primitives.com",
+  "topics": [
+    "animate",
+    "animated",
+    "animation",
+    "components",
+    "framer-motion",
+    "library",
+    "motion",
+    "tailwindcss",
+    "ui"
+  ],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2024-07-03T15:58:42.000Z",
+  "branch": "main",
+  "commit": "120f64f6ca60348e251f929e9c81f11ccbe45eda",
+  "readme": "Motion-Primitives Beautifully designed, easy-to-integrate motion components for engineers and designers, built with motion and Tailwind CSS. This project is in beta. Expect new components to be released regularly and significant updates to the code. Documentation Visit motion-primitives.com/docs to view the full documentation. Contributing Please read the contributing guide. License Licensed under the MIT license.",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://github.com/ibelick/motion-primitives#motion-primitives"
+    },
+    {
+      "label": "motion",
+      "url": "https://motion.dev/"
+    },
+    {
+      "label": "Tailwind CSS",
+      "url": "https://tailwindcss.com/"
+    },
+    {
+      "label": "",
+      "url": "https://raw.githubusercontent.com/ibelick/motion-primitives/main/app/opengraph-image.jpg"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/ibelick/motion-primitives#documentation"
+    },
+    {
+      "label": "motion-primitives.com/docs",
+      "url": "http://motion-primitives.com/docs"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/ibelick/motion-primitives#contributing"
+    },
+    {
+      "label": "contributing guide",
+      "url": "https://github.com/ibelick/motion-primitives/blob/main/CONTRIBUTING.md"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/ibelick/motion-primitives#license"
+    },
+    {
+      "label": "MIT license",
+      "url": "https://github.com/ibelick/motion-primitives/blob/main/LICENSE.md"
+    }
+  ],
+  "root_files": [
+    ".github/workflows",
+    "app",
+    "cli",
+    "components",
+    "hooks",
+    "lib",
+    "public",
+    "scripts",
+    ".eslintrc.json",
+    ".gitignore",
+    "CONTRIBUTING.md",
+    "LICENCE.md",
+    "README.md",
+    "components.json",
+    "mdx-components.tsx",
+    "next.config.mjs",
+    "package-lock.json",
+    "package.json",
+    "postcss.config.mjs",
+    "prettier.config.js",
+    "tsconfig.json",
+    "wrangler.jsonc"
+  ],
+  "release_count": 0,
+  "status": "verified"
+}

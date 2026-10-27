@@ -1,0 +1,460 @@
+{
+  "url": "https://github.com/copy/v86",
+  "final_url": "https://github.com/copy/v86",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:47:40.887718+00:00",
+  "stars": 23619,
+  "forks": 1929,
+  "description": "x86 PC emulator and x86-to-wasm JIT, running in the browser",
+  "homepage": "https://copy.sh/v86/",
+  "topics": [
+    "emulator",
+    "virtualization",
+    "wasm",
+    "x86"
+  ],
+  "license": "BSD-2-Clause",
+  "archived": false,
+  "created_at": "2013-11-06T00:12:12.000Z",
+  "branch": "master",
+  "commit": "cc37f35c43bf14865d74ad76879ecf9410f69eb1",
+  "readme": "or #v86 on irc.libera.chat v86 emulates an x86-compatible CPU and hardware. Machine code is translated to WebAssembly modules at runtime in order to achieve decent performance. Here's a list of emulated hardware: An x86-compatible CPU. The instruction set is around Pentium 4 level, including full SSE3 support. Some features are missing, in particular: Task gates, far calls in protected mode Some 16 bit protected mode features Single stepping (trap flag, debug registers) Some exceptions, especially floating point and SSE Multicore 64-bit extensions A floating point unit (FPU). Calculations are done using the Berkeley SoftFloat library and therefore should be precise (but slow). Trigonometric and log functions are emulated using 64-bit floats and may be less precise. Not all FPU exceptions are supported. A floppy disk controller (8272A). An 8042 Keyboard Controller, PS2. With mouse support. An 8254 Programmable Interval Timer (PIT). An 8259 Programmable Interrupt Controller (PIC). Partial APIC support. A CMOS Real Time Clock (RTC). A generic VGA card with SVGA support and Bochs VBE Extensions. A PCI bus. This one is partly incomplete and not used by every device. An IDE disk controller. A built-in ISO 9660 CD-ROM generator with Joliet support. An NE2000 (RTL8390) PCI network card. Various virtio devices: Filesystem, network and balloon. A SoundBlaster 16 sound card. A hayes-compatible dial-up Modem. Demos 9front — Arch Linux — Android-x86 1.6-r2 — Android-x86 4.4-r2 — BasicLinux — Buildroot Linux — Damn Small Linux — ELKS — FreeDOS — FreeBSD — FiwixOS — Haiku — SkiffOS — ReactOS — Windows 2000 — Windows 98 — Windows 95 — Windows 1.01 — MS-DOS 6.22 — OpenBSD — Oberon — KolibriOS — SkiftOS — QNX Documentation How it works — Networking — Dial-up modem networking — Alpine Linux guest setup — Arch Linux guest setup — Debian with xfce guest setup — MS-DOS/FreeDOS guest setup — Windows 3.1x guest setup — Windows 9x guest setup — Windows NT guest setup — 9p filesystem — Linux rootfs on 9p — Profiling Compatibility Here's an overview of the operating systems supported in v86: Linux works pretty well. 64-bit kernels are not supported. Buildroot can be used to build a minimal image. humphd/browser-vm and darin755/browser-buildroot have some useful scripts for building one. SkiffOS (based on Buildroot) can cross-compile a custom image. Ubuntu and other Debian derivatives works up to the latest version that supported i386 (16.04 LTS or 18.04 LTS for some variants). Alpine Linux works. An image can be built from a Dockerfile, see tools/docker/alpine/. Arch Linux 32 works. See archlinux.md for building an image. ReactOS works. FreeDOS, Windows 1.01 and MS-DOS run very well. KolibriOS works. Haiku works. Android-x86 has been tested up to 4.4-r2. Windows 1, 3.x, 95, 98, ME, NT and 2000 work reasonably well. In Windows 2000 and higher the PC type has to be changed from ACPI PC to Standard PC There are some known boot issues (#250, #433, #507, #555, #620, #645) See Windows 9x guest setup Windows XP, Vista and 8 work under certain conditions (see #86, #208) See Windows NT guest setup Many hobby operating systems work. 9front works. Plan 9 doesn't work. QNX works. OS/2 doesn't work. FreeBSD works. OpenBSD works with a specific boot configuration. At the boot> prompt type boot -c, then at the UKC> prompt disable mpbios and exit. NetBSD works only with a custom kernel, see #350. SerenityOS works (only 32-bit versions). SkiftOS works. You can get some information on the disk images here: https://github.com/copy/images. How to build, run and embed? You need: make Rust with the wasm32-unknown-unknown target A version of clang compatible with Rust java (for Closure Compiler, not necessary when using debug.html) nodejs (a recent version is required, v24.16 is known to be working) To run tests: nasm, gdb, qemu-system, gcc, libc-i386 and rustfmt See tools/docker/test-image/Dockerfile for a full setup on Debian or WSL. Run make to build the debug build (at debug.html). Run make all to build the optimized build (at index.html). ROM and disk images are loaded via XHR, so if you want to try out index.html locally, make sure to serve it from a local webserver. You can use make run to serve the files using Python's http module. If you only want to embed v86 in a webpage you can use libv86.js. For usage, check out the examples. You can download it from the release section. For bundler-based setups (Vite/React/Next/Webpack), there is also an official npm package: https://www.npmjs.com/package/v86 This package was originally maintained by @giulioz (bundler-optimized fork) and was made \"official\" for this repo by @basicer with the author's permission. It is published automatically from this repository via GitHub Actions (.github/workflows/ci.yml, Upload release job) on pushes to master and uses npm publish --provenance. Install: npm install v86 Alternatively, to build using Docker If you have Docker installed, you can run the whole system inside a container. See tools/docker/exec to find the Dockerfile required for this. You can run docker build -f tools/docker/exec/Dockerfile -t v86:alpine-3.19 . from the root directory to generate docker image. Then you can simply run docker run -it -p 8000:8000 v86:alpine-3.19 to start the server. Check localhost:8000 for hosted server. Running via Dev Container If you are using an IDE that supports Dev Containers, such as GitHub Codespaces, the Visual Studio Code Remote Container extension, or possibly others such as Jetbrains' IntelliJ IDEA, you can setup the development environment in a Dev Container. Follow the instructions from your development environment to setup the container. Run the Task \"Fetch images\" in order to download images for testing. Testing The disk images for testing are not included in this repository. You can download them directly from the website using: mkdir -p images && curl --compressed --output-dir images/ --remote-name-all https://i.copy.sh/{linux.iso,linux3.iso,linux4.iso,buildroot-bzimage68.bin,TinyCore-11.0.iso,oberon.img,msdos.img,openbsd-floppy.img,kolibri.img,windows101.img,os8.img,freedos722.img,mobius-fd-release5.img,msdos622.img} Run integration tests: make tests Run all tests: make jshint rustfmt kvm-unit-test nasmtests nasmtests-force-jit expect-tests jitpagingtests qemutests rust-test tests See tests/Readme.md for more information. API examples Basic Programmatically using the serial terminal A Lua interpreter Two instances in one window Networking between browser windows/tabs using the Broadcast Channel API TCP Terminal (fetch-based networking) Saving and restoring emulator state Using v86 for your own purposes is as easy as: var emulator = new V86({ screen_container: document.getElementById(\"screen_container\"), bios: { url: \"../../bios/seabios.bin\", }, vga_bios: { url: \"../../bios/vgabios.bin\", }, cdrom: { url: \"../../images/linux.iso\", }, autostart: true, }); See v86.d.ts for TypeScript definitions. You can use make doc (TypeDoc) or make denodoc (Deno) to generate HTML documentation in ./docs/api/. Generative AI At this time, v86 does not accept pull requests or issues written partially or entirely by generative AI tools. Exceptions may be made on a case-by-case basis. License v86 is distributed under the terms of the Simplified BSD License, see LICENSE. The following third-party dependencies are included in the repository under their own licenses: lib/softfloat/softfloat.c lib/zstd/zstddeclib.c tests/kvm-unit-tests/ tests/qemutests/ src/floppy.js/ contains parts ported from qemu under the MIT license, see LICENSE.MIT. Credits CPU test cases via QEMU More tests via kvm-unit-tests zstd support is included for better compression of state images Berkeley SoftFloat is included to precisely emulate 80-bit floating point numbers The jor1k project for 9p, filesystem and uart drivers WinWorld sources of some old operating systems OS/2 Museum sources of some old operating systems ArchiveOS sources of several operating systems More questions? Shoot me an email to copy@copy.sh. Please report bugs on GitHub.",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://gitter.im/copy/v86"
+    },
+    {
+      "label": "irc.libera.chat",
+      "url": "https://libera.chat/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/copy/v86#demos"
+    },
+    {
+      "label": "9front",
+      "url": "https://copy.sh/v86/?profile=9front"
+    },
+    {
+      "label": "Arch Linux",
+      "url": "https://copy.sh/v86/?profile=archlinux"
+    },
+    {
+      "label": "Android-x86 1.6-r2",
+      "url": "https://copy.sh/v86?profile=android"
+    },
+    {
+      "label": "Android-x86 4.4-r2",
+      "url": "https://copy.sh/v86?profile=android4"
+    },
+    {
+      "label": "BasicLinux",
+      "url": "https://copy.sh/v86/?profile=basiclinux"
+    },
+    {
+      "label": "Buildroot Linux",
+      "url": "https://copy.sh/v86/?profile=buildroot"
+    },
+    {
+      "label": "Damn Small Linux",
+      "url": "https://copy.sh/v86/?profile=dsl"
+    },
+    {
+      "label": "ELKS",
+      "url": "https://copy.sh/v86/?profile=elks"
+    },
+    {
+      "label": "FreeDOS",
+      "url": "https://copy.sh/v86/?profile=freedos"
+    },
+    {
+      "label": "FreeBSD",
+      "url": "https://copy.sh/v86/?profile=freebsd"
+    },
+    {
+      "label": "FiwixOS",
+      "url": "https://copy.sh/v86/?profile=fiwix"
+    },
+    {
+      "label": "Haiku",
+      "url": "https://copy.sh/v86/?profile=haiku"
+    },
+    {
+      "label": "SkiffOS",
+      "url": "https://copy.sh/v86/?profile=copy/skiffos"
+    },
+    {
+      "label": "ReactOS",
+      "url": "https://copy.sh/v86/?profile=reactos"
+    },
+    {
+      "label": "Windows 2000",
+      "url": "https://copy.sh/v86/?profile=windows2000"
+    },
+    {
+      "label": "Windows 98",
+      "url": "https://copy.sh/v86/?profile=windows98"
+    },
+    {
+      "label": "Windows 95",
+      "url": "https://copy.sh/v86/?profile=windows95"
+    },
+    {
+      "label": "Windows 1.01",
+      "url": "https://copy.sh/v86/?profile=windows1"
+    },
+    {
+      "label": "MS-DOS 6.22",
+      "url": "https://copy.sh/v86/?profile=msdos"
+    },
+    {
+      "label": "OpenBSD",
+      "url": "https://copy.sh/v86/?profile=openbsd"
+    },
+    {
+      "label": "Oberon",
+      "url": "https://copy.sh/v86/?profile=oberon"
+    },
+    {
+      "label": "KolibriOS",
+      "url": "https://copy.sh/v86/?profile=kolibrios"
+    },
+    {
+      "label": "SkiftOS",
+      "url": "https://copy.sh/v86?profile=skift"
+    },
+    {
+      "label": "QNX",
+      "url": "https://copy.sh/v86/?profile=qnx"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/copy/v86#documentation"
+    },
+    {
+      "label": "How it works",
+      "url": "https://github.com/copy/v86/blob/master/docs/how-it-works.md"
+    },
+    {
+      "label": "Networking",
+      "url": "https://github.com/copy/v86/blob/master/docs/networking.md"
+    },
+    {
+      "label": "Dial-up modem networking",
+      "url": "https://github.com/copy/v86/blob/master/docs/modem.md"
+    },
+    {
+      "label": "Alpine Linux guest setup",
+      "url": "https://github.com/copy/v86/blob/master/tools/docker/alpine"
+    },
+    {
+      "label": "Arch Linux guest setup",
+      "url": "https://github.com/copy/v86/blob/master/docs/archlinux.md"
+    },
+    {
+      "label": "Debian with xfce guest setup",
+      "url": "https://github.com/copy/v86/blob/master/tools/docker/debian"
+    },
+    {
+      "label": "MS-DOS/FreeDOS guest setup",
+      "url": "https://github.com/copy/v86/blob/master/docs/dos.md"
+    },
+    {
+      "label": "Windows 3.1x guest setup",
+      "url": "https://github.com/copy/v86/blob/master/docs/windows-31x.md"
+    },
+    {
+      "label": "Windows 9x guest setup",
+      "url": "https://github.com/copy/v86/blob/master/docs/windows-9x.md"
+    },
+    {
+      "label": "Windows NT guest setup",
+      "url": "https://github.com/copy/v86/blob/master/docs/windows-nt.md"
+    },
+    {
+      "label": "9p filesystem",
+      "url": "https://github.com/copy/v86/blob/master/docs/filesystem.md"
+    },
+    {
+      "label": "Linux rootfs on 9p",
+      "url": "https://github.com/copy/v86/blob/master/docs/linux-9p-image.md"
+    },
+    {
+      "label": "Profiling",
+      "url": "https://github.com/copy/v86/blob/master/docs/profiling.md"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/copy/v86#compatibility"
+    },
+    {
+      "label": "Buildroot",
+      "url": "https://buildroot.org/"
+    },
+    {
+      "label": "humphd/browser-vm",
+      "url": "https://github.com/humphd/browser-vm"
+    },
+    {
+      "label": "darin755/browser-buildroot",
+      "url": "https://github.com/Darin755/browser-buildroot"
+    },
+    {
+      "label": "SkiffOS",
+      "url": "https://github.com/skiffos/SkiffOS/tree/master/configs/browser/v86"
+    },
+    {
+      "label": "tools/docker/alpine/",
+      "url": "https://github.com/copy/v86/blob/master/tools/docker/alpine"
+    },
+    {
+      "label": "archlinux.md",
+      "url": "https://github.com/copy/v86/blob/master/docs/archlinux.md"
+    },
+    {
+      "label": "#250",
+      "url": "https://github.com/copy/v86/issues/250"
+    },
+    {
+      "label": "#433",
+      "url": "https://github.com/copy/v86/issues/433"
+    },
+    {
+      "label": "#507",
+      "url": "https://github.com/copy/v86/issues/507"
+    },
+    {
+      "label": "#555",
+      "url": "https://github.com/copy/v86/issues/555"
+    },
+    {
+      "label": "#620",
+      "url": "https://github.com/copy/v86/issues/620"
+    },
+    {
+      "label": "#645",
+      "url": "https://github.com/copy/v86/issues/645"
+    },
+    {
+      "label": "Windows 9x guest setup",
+      "url": "https://github.com/copy/v86/blob/master/docs/windows-9x.md"
+    },
+    {
+      "label": "#86",
+      "url": "https://github.com/copy/v86/issues/86"
+    },
+    {
+      "label": "#208",
+      "url": "https://github.com/copy/v86/issues/208"
+    },
+    {
+      "label": "Windows NT guest setup",
+      "url": "https://github.com/copy/v86/blob/master/docs/windows-nt.md"
+    },
+    {
+      "label": "#350",
+      "url": "https://github.com/copy/v86/issues/350"
+    },
+    {
+      "label": "SkiftOS",
+      "url": "https://skiftos.org/"
+    },
+    {
+      "label": "https://github.com/copy/images",
+      "url": "https://github.com/copy/images"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/copy/v86#how-to-build-run-and-embed"
+    },
+    {
+      "label": "tools/docker/test-image/Dockerfile",
+      "url": "https://github.com/copy/v86/blob/master/tools/docker/test-image/Dockerfile"
+    },
+    {
+      "label": "WSL",
+      "url": "https://docs.microsoft.com/en-us/windows/wsl/install"
+    },
+    {
+      "label": "examples",
+      "url": "https://github.com/copy/v86/blob/master/examples"
+    },
+    {
+      "label": "release section",
+      "url": "https://github.com/copy/v86/releases"
+    },
+    {
+      "label": "https://www.npmjs.com/package/v86",
+      "url": "https://www.npmjs.com/package/v86"
+    },
+    {
+      "label": "@giulioz",
+      "url": "https://github.com/giulioz"
+    },
+    {
+      "label": "@basicer",
+      "url": "https://github.com/basicer"
+    },
+    {
+      "label": ".github/workflows/ci.yml",
+      "url": "https://github.com/copy/v86/blob/master/.github/workflows/ci.yml"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/copy/v86#alternatively-to-build-using-docker"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/copy/v86#running-via-dev-container"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/copy/v86#testing"
+    },
+    {
+      "label": "tests/Readme.md",
+      "url": "https://github.com/copy/v86/blob/master/tests/Readme.md"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/copy/v86#api-examples"
+    },
+    {
+      "label": "Basic",
+      "url": "https://github.com/copy/v86/blob/master/examples/basic.html"
+    },
+    {
+      "label": "Programmatically using the serial terminal",
+      "url": "https://github.com/copy/v86/blob/master/examples/serial.html"
+    },
+    {
+      "label": "A Lua interpreter",
+      "url": "https://github.com/copy/v86/blob/master/examples/lua.html"
+    },
+    {
+      "label": "Two instances in one window",
+      "url": "https://github.com/copy/v86/blob/master/examples/two_instances.html"
+    },
+    {
+      "label": "Networking between browser windows/tabs using the Broadcast Channel API",
+      "url": "https://github.com/copy/v86/blob/master/examples/broadcast-network.html"
+    },
+    {
+      "label": "TCP Terminal (fetch-based networking)",
+      "url": "https://github.com/copy/v86/blob/master/examples/tcp_terminal.html"
+    },
+    {
+      "label": "Saving and restoring emulator state",
+      "url": "https://github.com/copy/v86/blob/master/examples/save_restore.html"
+    },
+    {
+      "label": "v86.d.ts",
+      "url": "https://github.com/copy/v86/blob/master/v86.d.ts"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/copy/v86#generative-ai"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/copy/v86#license"
+    },
+    {
+      "label": "LICENSE",
+      "url": "https://github.com/copy/v86/blob/master/LICENSE"
+    },
+    {
+      "label": "lib/softfloat/softfloat.c",
+      "url": "https://github.com/copy/v86/blob/master/lib/softfloat/softfloat.c"
+    },
+    {
+      "label": "lib/zstd/zstddeclib.c",
+      "url": "https://github.com/copy/v86/blob/master/lib/zstd/zstddeclib.c"
+    },
+    {
+      "label": "tests/kvm-unit-tests/",
+      "url": "https://github.com/copy/v86/blob/master/tests/kvm-unit-tests"
+    },
+    {
+      "label": "tests/qemutests/",
+      "url": "https://github.com/copy/v86/blob/master/tests/qemutests"
+    },
+    {
+      "label": "src/floppy.js/",
+      "url": "https://github.com/copy/v86/blob/master/src/floppy.js"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/copy/v86#credits"
+    },
+    {
+      "label": "QEMU",
+      "url": "https://wiki.qemu.org/Main_Page"
+    },
+    {
+      "label": "kvm-unit-tests",
+      "url": "https://www.linux-kvm.org/page/KVM-unit-tests"
+    },
+    {
+      "label": "zstd",
+      "url": "https://github.com/facebook/zstd"
+    },
+    {
+      "label": "Berkeley SoftFloat",
+      "url": "http://www.jhauser.us/arithmetic/SoftFloat.html"
+    },
+    {
+      "label": "The jor1k project",
+      "url": "https://github.com/s-macke/jor1k"
+    },
+    {
+      "label": "WinWorld",
+      "url": "https://winworldpc.com/"
+    },
+    {
+      "label": "OS/2 Museum",
+      "url": "https://www.os2museum.com/"
+    },
+    {
+      "label": "ArchiveOS",
+      "url": "https://archiveos.org/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/copy/v86#more-questions"
+    }
+  ],
+  "root_files": [
+    ".cargo",
+    ".devcontainer",
+    ".github",
+    ".vscode",
+    "bios",
+    "docs",
+    "examples",
+    "gen",
+    "lib",
+    "src",
+    "tests",
+    "tools",
+    ".editorconfig",
+    ".gitattributes",
+    ".gitignore",
+    ".rustfmt.toml",
+    "Cargo.toml",
+    "LICENSE",
+    "LICENSE.MIT",
+    "Makefile",
+    "Readme.md",
+    "debug.html",
+    "eslint.config.mjs",
+    "index.html",
+    "manifest.json",
+    "package.json",
+    "v86.css",
+    "v86.d.ts"
+  ],
+  "release_count": 1,
+  "status": "verified"
+}

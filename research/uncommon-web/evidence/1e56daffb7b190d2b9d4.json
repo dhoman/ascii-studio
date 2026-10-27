@@ -1,0 +1,300 @@
+{
+  "url": "https://github.com/captbaritone/webamp",
+  "final_url": "https://github.com/captbaritone/webamp",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:47:38.398734+00:00",
+  "stars": 11308,
+  "forks": 807,
+  "description": "Winamp 2 reimplemented for the browser",
+  "homepage": "https://webamp.org",
+  "topics": [
+    "html5",
+    "javascript",
+    "port",
+    "reimplementation",
+    "webaudio-api",
+    "winamp"
+  ],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2014-11-04T02:50:52.000Z",
+  "branch": "master",
+  "commit": "7734cd3c7cf144bab2d8614ce9f9ba2ff21e163e",
+  "readme": "Webamp A reimplementation of Winamp in HTML5 and JavaScript with full skin support. As seen on TechCrunch, Motherboard, Gizmodo, Hacker News (1, 2, 3, 4), and elsewhere. Check out this Twitter thread for an illustrated list of features. Works in modern versions of Edge, Firefox, Safari and Chrome. IE is not supported. Read the docs The Webamp Documentation site contains detailed instructions showing how to add Webamp to your site and customize it to meet your needs. About This Repository Webamp uses a monorepo approach, so in addition to the Webamp NPM module, this repository contains code for a few closely related projects and some pieces of Webamp which are published as standalone modules: packages/webamp: The Webamp NPM module packages/webamp-demo: The demo site which lives at webamp.org packages/webamp-docs: The documentation site for Webamp the NPM library which lives at docs.webamp.org packages/ani-cursor: An NPM module for rendering animiated .ani cursors as CSS animations packages/skin-database: The server component of https://skins.webamp.org which also runs our Twitter bot, and a Discord bot for our community chat packages/winamp-eqf: An NPM module for parsing and constructing Winamp equalizer preset files (.eqf) packages/webamp-modern: A prototype exploring rendering \"modern\" Winamp skins in the browser examples: A few examples showing how to use the NPM module Community Join our community chat on Discord: https://discord.gg/fBTDMqR Related communites: Winamp Community Update Pack - \"New plug-ins to add additional features to Winamp as well as replacement plug-ins to provide better implementations of some of the plug-ins natively included with Winamp\". (Forum / Discord server) In the Wild An incomplete list of websites using Webamp: Internet Archive - The Internet Archive lets you preview winamp skins and listen to audio tracks using Webamp Winampify.io - An online Spotify client using Webamp Webamp Desktop - An Electron app version of Webamp 98.js.org - A Windows 98 clone in JavaScript (GitHub) winxp.now.sh - A Windows XP clone in JavaScript with React (GitHub) Try Andy's Desk - A quirky Windows themed desktop experience. www.dkdomino.zone - Someone's personal music player Bamp - A web app for a tool that converts winamp skins to/from a format that streamlines skin design. (GitHub) Thanks Butterchurn, the amazing Milkdrop 2 WebGL implementation. Built and integrated into Webamp by: jberg Research and feature prototyping: @PAEz Beta feedback, catching many small UI inconsistencies: LuigiHann Beta feedback and insider answers to obscure Winamp questions: Darren Owen Donating the webamp NPM module name: Dave Eddy Thank you to Justin Frankel and everyone at Nullsoft for Winamp which inspired so many of us. License While the Winamp name, interface, and, sample audio file are surely property of Nullsoft, the code within this project is released under the MIT License. That being said, if you do anything interesting with this code, please let me know. I'd love to see it. Development This repository uses Turborepo for efficient monorepo management. Turborepo provides intelligent caching and parallel execution of tasks across all packages. Quick Start # Install dependencies pnpm install # Build all packages (automatically handles dependencies) npx turbo build # Build library bundles for packages that need them npx turbo build-library # Run all tests npx turbo test # Lint and type-check all packages npx turbo lint type-check # Work on a specific package and its dependencies npx turbo dev --filter=\"webamp\" Package Dependencies The monorepo dependency graph is automatically managed by Turborepo: ani-cursor and winamp-eqf are standalone packages built with TypeScript webamp depends on both ani-cursor and winamp-eqf for workspace linking All packages are built in the correct topological order Builds are cached and only rebuild what has changed Available Tasks build - Main build output (Vite for demos, TypeScript compilation for libraries) build-library - Library bundles for NPM publishing (only applies to webamp) test - Run unit tests with Jest type-check - TypeScript type checking without emitting files lint - ESLint code quality checks dev - Development server (for packages that support it) For more details on individual packages, see their respective README files.",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://bundlephobia.com/result?p=webamp"
+    },
+    {
+      "label": "",
+      "url": "https://webamp.org/chat"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/captbaritone/webamp#webamp"
+    },
+    {
+      "label": "TechCrunch",
+      "url": "https://techcrunch.com/2018/02/09/whip-the-llamas-ass-with-this-javascript-winamp-emulator/"
+    },
+    {
+      "label": "Motherboard",
+      "url": "https://motherboard.vice.com/en_us/article/qvebbv/winamp-2-mp3-music-player-emulator"
+    },
+    {
+      "label": "Gizmodo",
+      "url": "https://gizmodo.com/winamp-2-has-been-immortalized-in-html5-for-your-pleasu-1655373653"
+    },
+    {
+      "label": "1",
+      "url": "https://news.ycombinator.com/item?id=8565665"
+    },
+    {
+      "label": "2",
+      "url": "https://news.ycombinator.com/item?id=15314629"
+    },
+    {
+      "label": "3",
+      "url": "https://news.ycombinator.com/item?id=16333550"
+    },
+    {
+      "label": "4",
+      "url": "https://news.ycombinator.com/item?id=17583997"
+    },
+    {
+      "label": "elsewhere",
+      "url": "https://github.com/captbaritone/webamp/blob/master/packages/webamp/docs/press.md"
+    },
+    {
+      "label": "",
+      "url": "https://webamp.org"
+    },
+    {
+      "label": "Twitter thread",
+      "url": "https://twitter.com/captbaritone/status/961274714013319168"
+    },
+    {
+      "label": "not supported",
+      "url": "http://caniuse.com/#feat=audio-api"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/captbaritone/webamp#read-the-docs"
+    },
+    {
+      "label": "Webamp Documentation",
+      "url": "https://docs.webamp.org"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/captbaritone/webamp#about-this-repository"
+    },
+    {
+      "label": "monorepo",
+      "url": "https://en.wikipedia.org/wiki/Monorepo"
+    },
+    {
+      "label": "packages/webamp",
+      "url": "https://github.com/captbaritone/webamp/tree/master/packages/webamp"
+    },
+    {
+      "label": "Webamp NPM module",
+      "url": "https://www.npmjs.com/package/webamp"
+    },
+    {
+      "label": "packages/webamp-demo",
+      "url": "https://github.com/captbaritone/webamp/tree/master/packages/webamp-demo"
+    },
+    {
+      "label": "webamp.org",
+      "url": "https://webamp.org"
+    },
+    {
+      "label": "packages/webamp-docs",
+      "url": "https://github.com/captbaritone/webamp/tree/master/packages/webamp-docs"
+    },
+    {
+      "label": "docs.webamp.org",
+      "url": "https://docs.webamp.org"
+    },
+    {
+      "label": "packages/ani-cursor",
+      "url": "https://github.com/captbaritone/webamp/tree/master/packages/ani-cursor"
+    },
+    {
+      "label": "packages/skin-database",
+      "url": "https://github.com/captbaritone/webamp/tree/master/packages/skin-database"
+    },
+    {
+      "label": "https://skins.webamp.org",
+      "url": "https://skins.webamp.org"
+    },
+    {
+      "label": "Twitter bot",
+      "url": "https://twitter.com/winampskins"
+    },
+    {
+      "label": "packages/winamp-eqf",
+      "url": "https://github.com/captbaritone/webamp/tree/master/packages/winamp-eqf"
+    },
+    {
+      "label": "packages/webamp-modern",
+      "url": "https://github.com/captbaritone/webamp/tree/master/packages/webamp-modern"
+    },
+    {
+      "label": "examples",
+      "url": "https://github.com/captbaritone/webamp/tree/master/examples"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/captbaritone/webamp#community"
+    },
+    {
+      "label": "https://discord.gg/fBTDMqR",
+      "url": "https://discord.gg/fBTDMqR"
+    },
+    {
+      "label": "Winamp Community Update Pack",
+      "url": "https://getwacup.com/"
+    },
+    {
+      "label": "Forum",
+      "url": "https://getwacup.com/community/"
+    },
+    {
+      "label": "Discord server",
+      "url": "https://discord.gg/5pVTdbj"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/captbaritone/webamp#in-the-wild"
+    },
+    {
+      "label": "Internet Archive",
+      "url": "https://blog.archive.org/2018/10/02/dont-click-on-the-llama/"
+    },
+    {
+      "label": "Winampify.io",
+      "url": "https://winampify.io/"
+    },
+    {
+      "label": "Webamp Desktop",
+      "url": "https://desktop.webamp.org/"
+    },
+    {
+      "label": "98.js.org",
+      "url": "https://98.js.org/"
+    },
+    {
+      "label": "GitHub",
+      "url": "https://github.com/1j01/98"
+    },
+    {
+      "label": "winxp.now.sh",
+      "url": "https://winxp.now.sh/"
+    },
+    {
+      "label": "GitHub",
+      "url": "https://github.com/ShizukuIchi"
+    },
+    {
+      "label": "Try Andy's Desk",
+      "url": "https://desk.glitchy.website/"
+    },
+    {
+      "label": "www.dkdomino.zone",
+      "url": "https://www.dkdomino.zone/album.html"
+    },
+    {
+      "label": "Bamp",
+      "url": "https://www.bamp.skin"
+    },
+    {
+      "label": "GitHub",
+      "url": "https://github.com/dp-mason/bamp"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/captbaritone/webamp#thanks"
+    },
+    {
+      "label": "Butterchurn",
+      "url": "https://github.com/jberg/butterchurn"
+    },
+    {
+      "label": "jberg",
+      "url": "https://github.com/jberg"
+    },
+    {
+      "label": "LuigiHann",
+      "url": "https://twitter.com/LuigiHann"
+    },
+    {
+      "label": "Darren Owen",
+      "url": "https://twitter.com/The_DoctorO"
+    },
+    {
+      "label": "Dave Eddy",
+      "url": "http://daveeddy.com/"
+    },
+    {
+      "label": "Justin Frankel",
+      "url": "http://www.1014.org/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/captbaritone/webamp#license"
+    },
+    {
+      "label": "MIT License",
+      "url": "https://github.com/captbaritone/webamp/blob/master/LICENSE.txt"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/captbaritone/webamp#development"
+    },
+    {
+      "label": "Turborepo",
+      "url": "https://turbo.build/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/captbaritone/webamp#quick-start"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/captbaritone/webamp#package-dependencies"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/captbaritone/webamp#available-tasks"
+    }
+  ],
+  "root_files": [
+    ".claude/skills/release",
+    ".github",
+    "config",
+    "docs",
+    "examples",
+    "packages",
+    "patches",
+    "scripts",
+    ".editorconfig",
+    ".eslintignore",
+    ".eslintrc",
+    ".gitattributes",
+    ".gitignore",
+    ".nvmrc",
+    ".prettierignore",
+    "LICENSE.txt",
+    "README.md",
+    "netlify.toml",
+    "package.json",
+    "pnpm-lock.yaml",
+    "pnpm-workspace.yaml",
+    "turbo.json"
+  ],
+  "release_count": 0,
+  "status": "verified"
+}

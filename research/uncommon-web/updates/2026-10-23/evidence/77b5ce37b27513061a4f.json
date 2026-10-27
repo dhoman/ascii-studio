@@ -1,0 +1,98 @@
+{
+  "url": "https://github.com/mapbox/webgl-wind",
+  "final_url": "https://github.com/mapbox/webgl-wind",
+  "http_status": 200,
+  "checked_at": "2026-10-23T17:46:55.908644+00:00",
+  "stars": 1112,
+  "forks": 230,
+  "description": "Wind power visualization with WebGL particles",
+  "homepage": "https://mapbox.github.io/webgl-wind/demo/",
+  "topics": [
+    "gpu",
+    "javascript",
+    "map",
+    "particles",
+    "simulation",
+    "visualization",
+    "webgl",
+    "wind"
+  ],
+  "license": "ISC",
+  "archived": false,
+  "created_at": "2016-11-16T15:45:39.000Z",
+  "branch": "master",
+  "commit": "b1f6468d90d2f39763a8795a5042f316a32ff3c8",
+  "readme": "WebGL Wind — Demo A WebGL-powered visualization of wind power. Capable of rendering up to 1 million wind particles at 60fps. This project is heavily inspired by the work of: Cameron Beccario and his wonderful Earth project with its open-source version. Fernanda Viégas and Martin Wattenberg and their US Wind Map project. Chris Wellons and his WebGL tutorials, in particular A GPU Approach to Particle Physics. Greggman and his WebGL Fundamentals guide. Running the demo locally npm install npm run build npm start # open http://127.0.0.1:1337/demo/ Downloading weather data Install ecCodes (e.g. brew install eccodes). Edit constants in data/download.sh for desired date, time and resolution. Run ./data/download.sh <dir> to generate wind data files (png and json) for use with the library.",
+  "readme_links": [
+    {
+      "label": "Demo",
+      "url": "https://mapbox.github.io/webgl-wind/demo/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/mapbox/webgl-wind#webgl-wind--demo"
+    },
+    {
+      "label": "Cameron Beccario",
+      "url": "https://twitter.com/cambecc"
+    },
+    {
+      "label": "Earth project",
+      "url": "https://earth.nullschool.net/"
+    },
+    {
+      "label": "open-source version",
+      "url": "https://github.com/cambecc/earth"
+    },
+    {
+      "label": "Fernanda Viégas and Martin Wattenberg",
+      "url": "http://hint.fm/"
+    },
+    {
+      "label": "US Wind Map project",
+      "url": "http://hint.fm/projects/wind/"
+    },
+    {
+      "label": "Chris Wellons",
+      "url": "http://nullprogram.com"
+    },
+    {
+      "label": "A GPU Approach to Particle Physics",
+      "url": "http://nullprogram.com/blog/2014/06/29/"
+    },
+    {
+      "label": "Greggman",
+      "url": "http://games.greggman.com/game/"
+    },
+    {
+      "label": "WebGL Fundamentals",
+      "url": "http://webglfundamentals.org/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/mapbox/webgl-wind#running-the-demo-locally"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/mapbox/webgl-wind#downloading-weather-data"
+    },
+    {
+      "label": "ecCodes",
+      "url": "https://confluence.ecmwf.int//display/ECC/ecCodes+Home"
+    }
+  ],
+  "root_files": [
+    "data",
+    "demo",
+    "dist",
+    "src",
+    ".gitignore",
+    "CODEOWNERS",
+    "LICENSE",
+    "README.md",
+    "package.json",
+    "rollup.config.js"
+  ],
+  "release_count": 0,
+  "status": "verified"
+}

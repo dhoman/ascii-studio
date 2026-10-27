@@ -1,0 +1,75 @@
+{
+  "url": "https://github.com/tol-is/springface",
+  "final_url": "https://github.com/tol-is/springface",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:48:22.043628+00:00",
+  "stars": 3,
+  "forks": 0,
+  "description": "Variable-font typography that springs toward your cursor. Each glyph's wdth and wght axes are driven by spring physics tied to pointer proximity, with a chromatic shadow stack that trails the motion.",
+  "homepage": "https://springface.vercel.app/",
+  "topics": [],
+  "license": "",
+  "archived": false,
+  "created_at": "2026-05-15T15:54:54.000Z",
+  "branch": "main",
+  "commit": "99a9eb8ed530eb12e2ceac13a88cea3f3067e0fb",
+  "readme": "use-springface A React hook that drives variable-font axes with pointer-proximity spring physics, plus a chromatic text-shadow stack that trails the motion. Live demo: springface.vercel.app npm: use-springface Per-glyph spring physics on any set of font-variation-settings axes Chromatic shadow stack pointing away from the cursor — or locked to a fixed angle Frame-rate independent (60Hz, 120Hz, 144Hz behave identically) Respects prefers-reduced-motion Imperative — writes inline styles in a requestAnimationFrame loop, doesn't re-render React Install npm install use-springface Peer dependency: react >= 18. Usage Wrap your text in any container ref, mark each animated glyph with data-letter, and pass the ref + params to the hook. import { useRef } from \"react\"; import { useSpringface } from \"use-springface\"; export function Headline() { const rootRef = useRef<HTMLElement>(null); useSpringface(rootRef, { axes: [ { tag: \"wdth\", rest: 50, peak: 120 }, { tag: \"wght\", rest: 100, peak: 950 }, ], shadowColors: [\"#FFB3BA\", \"#FFDFBA\", \"#FFFFBA\", \"#BAFFC9\"], shadowStep: 0.02, shadowAngle: null, // null = follow pointer; number = lock to that angle (deg) maxDistancePx: 200, smoothing: 0.15, springStiffness: 220, springDamping: 13, }); return ( <h1 ref={rootRef} style={{ fontFamily: \"YourVariableFont\" }}> {Array.from(\"ART WILL SURVIVE\").map((ch, i) => ch === \" \" ? ( <span key={i}>{\" \"}</span> ) : ( <span key={i} data-letter style={{ display: \"inline-block\" }}> {ch} </span> ), )} </h1> ); } The hook queries every [data-letter] descendant of the ref and animates each one independently. The font must expose the axes you list (wdth, wght, opsz, custom axes, etc.). Params Param Type Notes axes Axis[] { tag, rest, peak } per axis. Interpolated between rest and peak by pointer proximity. shadowColors string[] One shadow layer per color, in order. shadowStep number Distance between layers, in em. shadowAngle number | null null follows the pointer. A number locks the angle in degrees (0° = right, 90° = down). maxDistancePx number Pixel radius around the cursor inside which letters react. smoothing number (0–1) Per-60Hz-frame easing on shadow direction/magnitude. Frame-rate-independent. springStiffness number Spring pulling each axis toward its target. Higher = snappier. springDamping number Resistance. Low overshoots; high settles smoothly. Notes Reduced motion. When prefers-reduced-motion: reduce is set the hook skips the rAF loop entirely; glyphs sit at their rest values. Re-evaluated when the media query changes. Layout cost. Each glyph's center is measured once on mount and on resize — not per frame. Param updates. All params (except the axis set's tag list) can change every render without restarting the loop. SSR / Next.js. The hook only touches the DOM inside useEffect, so it's SSR-safe. In Next.js app router, mark the consuming component \"use client\". Demo Source includes a playground at src/App.tsx (controls via Leva). git clone https://github.com/tol-is/springface cd springface npm install npm run dev License ISC",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://github.com/tol-is/springface#use-springface"
+    },
+    {
+      "label": "springface.vercel.app",
+      "url": "https://springface.vercel.app/"
+    },
+    {
+      "label": "use-springface",
+      "url": "https://www.npmjs.com/package/use-springface"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/tol-is/springface#install"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/tol-is/springface#usage"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/tol-is/springface#params"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/tol-is/springface#notes"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/tol-is/springface#demo"
+    },
+    {
+      "label": "Leva",
+      "url": "https://github.com/pmndrs/leva"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/tol-is/springface#license"
+    }
+  ],
+  "root_files": [
+    "src",
+    ".DS_Store",
+    ".gitignore",
+    "README.md",
+    "index.html",
+    "package-lock.json",
+    "package.json",
+    "tsconfig.json",
+    "tsconfig.lib.json",
+    "tsconfig.node.json",
+    "vite.config.ts",
+    "vite.lib.config.ts"
+  ],
+  "release_count": 0,
+  "status": "verified"
+}

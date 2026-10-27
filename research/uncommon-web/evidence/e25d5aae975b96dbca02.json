@@ -1,0 +1,300 @@
+{
+  "url": "https://github.com/excalidraw/excalidraw",
+  "final_url": "https://github.com/excalidraw/excalidraw",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:47:47.235202+00:00",
+  "stars": 134396,
+  "forks": 15796,
+  "description": "Virtual whiteboard for sketching hand-drawn like diagrams",
+  "homepage": "https://excalidraw.com",
+  "topics": [
+    "canvas",
+    "collaboration",
+    "diagrams",
+    "drawing",
+    "hacktoberfest",
+    "productivity",
+    "whiteboard"
+  ],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2020-01-02T01:04:43.000Z",
+  "branch": "master",
+  "commit": "1d4dc2c0e6e476911d0760e9c3cf3694f2d43384",
+  "readme": "Excalidraw Editor | Blog | Documentation | Excalidraw+ An open source virtual hand-drawn style whiteboard. Collaborative and end-to-end encrypted. Create beautiful hand-drawn like diagrams, wireframes, or whatever you like. Features The Excalidraw editor (npm package) supports: 💯 Free & open-source. 🎨 Infinite, canvas-based whiteboard. ✍️ Hand-drawn like style. 🌓 Dark mode. 🏗️ Customizable. 📷 Image support. 😀 Shape libraries support. 🌐 Localization (i18n) support. 🖼️ Export to PNG, SVG & clipboard. 💾 Open format - export drawings as an .excalidraw json file. ⚒️ Wide range of tools - rectangle, circle, diamond, arrow, line, free-draw, eraser... ➡️ Arrow-binding & labeled arrows. 🔙 Undo / Redo. 🔍 Zoom and panning support. Excalidraw.com The app hosted at excalidraw.com is a minimal showcase of what you can build with Excalidraw. Its source code is part of this repository as well, and the app features: 📡 PWA support (works offline). 🤼 Real-time collaboration. 🔒 End-to-end encryption. 💾 Local-first support (autosaves to the browser). 🔗 Shareable links (export to a readonly link you can share with others). We'll be adding these features as drop-in plugins for the npm package in the future. Quick start Note: following instructions are for installing the Excalidraw npm package when integrating Excalidraw into your own app. To run the repository locally for development, please refer to our Development Guide. Use npm or yarn to install the package. npm install react react-dom @excalidraw/excalidraw # or yarn add react react-dom @excalidraw/excalidraw Check out our documentation for more details! Contributing Missing something or found a bug? Report here. Want to contribute? Check out our contribution guide or let us know on Discord. Want to help with translations? See the translation guide. Integrations VScode extension npm package Who's integrating Excalidraw Google Cloud • Meta • CodeSandbox • Obsidian Excalidraw • Replit • Slite • Notion • HackerRank • and many others Sponsors & support If you like the project, you can become a sponsor at Open Collective or use Excalidraw+. Thank you for supporting Excalidraw Last but not least, we're thankful to these companies for offering their services for free:",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://excalidraw.com/"
+    },
+    {
+      "label": "Excalidraw Editor",
+      "url": "https://excalidraw.com"
+    },
+    {
+      "label": "Blog",
+      "url": "https://plus.excalidraw.com/blog"
+    },
+    {
+      "label": "Documentation",
+      "url": "https://docs.excalidraw.com"
+    },
+    {
+      "label": "Excalidraw+",
+      "url": "https://plus.excalidraw.com"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/excalidraw/excalidraw#--excalidraw-editor---blog---documentation---excalidraw"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/excalidraw/excalidraw#----an-open-source-virtual-hand-drawn-style-whiteboard-----collaborative-and-end-to-end-encrypted-----"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/excalidraw/excalidraw/blob/master/LICENSE"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@excalidraw/excalidraw"
+    },
+    {
+      "label": "",
+      "url": "https://docs.excalidraw.com/docs/introduction/contributing"
+    },
+    {
+      "label": "",
+      "url": "https://discord.gg/UexuTaE"
+    },
+    {
+      "label": "",
+      "url": "https://deepwiki.com/excalidraw/excalidraw"
+    },
+    {
+      "label": "",
+      "url": "https://twitter.com/excalidraw"
+    },
+    {
+      "label": "",
+      "url": "https://excalidraw.com"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/excalidraw/excalidraw#features"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/excalidraw/excalidraw#excalidrawcom"
+    },
+    {
+      "label": "excalidraw.com",
+      "url": "https://excalidraw.com"
+    },
+    {
+      "label": "source code",
+      "url": "https://github.com/excalidraw/excalidraw/tree/master/excalidraw-app"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/excalidraw/excalidraw#quick-start"
+    },
+    {
+      "label": "npm package",
+      "url": "https://www.npmjs.com/package/@excalidraw/excalidraw"
+    },
+    {
+      "label": "Development Guide",
+      "url": "https://docs.excalidraw.com/docs/introduction/development"
+    },
+    {
+      "label": "documentation",
+      "url": "https://docs.excalidraw.com/docs/@excalidraw/excalidraw/installation"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/excalidraw/excalidraw#contributing"
+    },
+    {
+      "label": "Report here",
+      "url": "https://github.com/excalidraw/excalidraw/issues"
+    },
+    {
+      "label": "contribution guide",
+      "url": "https://docs.excalidraw.com/docs/introduction/contributing"
+    },
+    {
+      "label": "Discord",
+      "url": "https://discord.gg/UexuTaE"
+    },
+    {
+      "label": "translation guide",
+      "url": "https://docs.excalidraw.com/docs/introduction/contributing#translating"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/excalidraw/excalidraw#integrations"
+    },
+    {
+      "label": "VScode extension",
+      "url": "https://marketplace.visualstudio.com/items?itemName=pomdtr.excalidraw-editor"
+    },
+    {
+      "label": "npm package",
+      "url": "https://www.npmjs.com/package/@excalidraw/excalidraw"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/excalidraw/excalidraw#whos-integrating-excalidraw"
+    },
+    {
+      "label": "Google Cloud",
+      "url": "https://googlecloudcheatsheet.withgoogle.com/architecture"
+    },
+    {
+      "label": "Meta",
+      "url": "https://meta.com/"
+    },
+    {
+      "label": "CodeSandbox",
+      "url": "https://codesandbox.io/"
+    },
+    {
+      "label": "Obsidian Excalidraw",
+      "url": "https://github.com/zsviczian/obsidian-excalidraw-plugin"
+    },
+    {
+      "label": "Replit",
+      "url": "https://replit.com/"
+    },
+    {
+      "label": "Slite",
+      "url": "https://slite.com/"
+    },
+    {
+      "label": "Notion",
+      "url": "https://notion.so/"
+    },
+    {
+      "label": "HackerRank",
+      "url": "https://www.hackerrank.com/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/excalidraw/excalidraw#sponsors--support"
+    },
+    {
+      "label": "Open Collective",
+      "url": "https://opencollective.com/excalidraw"
+    },
+    {
+      "label": "Excalidraw+",
+      "url": "https://plus.excalidraw.com/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/excalidraw/excalidraw#thank-you-for-supporting-excalidraw"
+    },
+    {
+      "label": "",
+      "url": "https://opencollective.com/excalidraw/tiers/sponsors/0/website"
+    },
+    {
+      "label": "",
+      "url": "https://opencollective.com/excalidraw/tiers/sponsors/1/website"
+    },
+    {
+      "label": "",
+      "url": "https://opencollective.com/excalidraw/tiers/sponsors/2/website"
+    },
+    {
+      "label": "",
+      "url": "https://opencollective.com/excalidraw/tiers/sponsors/3/website"
+    },
+    {
+      "label": "",
+      "url": "https://opencollective.com/excalidraw/tiers/sponsors/4/website"
+    },
+    {
+      "label": "",
+      "url": "https://opencollective.com/excalidraw/tiers/sponsors/5/website"
+    },
+    {
+      "label": "",
+      "url": "https://opencollective.com/excalidraw/tiers/sponsors/6/website"
+    },
+    {
+      "label": "",
+      "url": "https://opencollective.com/excalidraw/tiers/sponsors/7/website"
+    },
+    {
+      "label": "",
+      "url": "https://opencollective.com/excalidraw/tiers/sponsors/8/website"
+    },
+    {
+      "label": "",
+      "url": "https://opencollective.com/excalidraw/tiers/sponsors/9/website"
+    },
+    {
+      "label": "",
+      "url": "https://opencollective.com/excalidraw/tiers/sponsors/10/website"
+    },
+    {
+      "label": "",
+      "url": "https://opencollective.com/excalidraw#category-CONTRIBUTE"
+    },
+    {
+      "label": "",
+      "url": "https://vercel.com"
+    },
+    {
+      "label": "",
+      "url": "https://sentry.io"
+    },
+    {
+      "label": "",
+      "url": "https://crowdin.com"
+    }
+  ],
+  "root_files": [
+    ".codesandbox",
+    ".github",
+    ".husky",
+    "dev-docs",
+    "examples",
+    "excalidraw-app",
+    "firebase-project",
+    "packages",
+    "public",
+    "scripts",
+    ".dockerignore",
+    ".editorconfig",
+    ".env.development",
+    ".env.production",
+    ".env.test",
+    ".eslintignore",
+    ".eslintrc.json",
+    ".gitattributes",
+    ".gitignore",
+    ".lintstagedrc.js",
+    ".npmrc",
+    ".prettierignore",
+    ".watchmanconfig",
+    "AGENTS.md",
+    "CLAUDE.md",
+    "CONTRIBUTING.md",
+    "Dockerfile",
+    "LICENSE",
+    "README.md",
+    "crowdin.yml",
+    "docker-compose.yml",
+    "package.json",
+    "setupTests.ts",
+    "tsconfig.json",
+    "vercel.json",
+    "vitest.config.mts",
+    "yarn.lock"
+  ],
+  "release_count": 15,
+  "status": "verified"
+}

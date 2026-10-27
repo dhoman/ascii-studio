@@ -1,0 +1,383 @@
+{
+  "url": "https://github.com/KilledByAPixel/ZzFX",
+  "final_url": "https://github.com/KilledByAPixel/ZzFX",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:47:26.711545+00:00",
+  "stars": 806,
+  "forks": 50,
+  "description": "A Tiny JavaScript Sound FX System",
+  "homepage": "https://zzfx.3d2k.com",
+  "topics": [
+    "codegolf",
+    "game-development",
+    "html5",
+    "javascript",
+    "sizecoding",
+    "sound",
+    "sound-effects",
+    "sound-synthesis"
+  ],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2019-04-01T16:55:25.000Z",
+  "branch": "master",
+  "commit": "aab7e2b6b9086746b6e55fab75c75ce03e716c49",
+  "readme": "ZzFX - Zuper Zmall Zound Zynth ZzFX is a tiny sound generator designed to produce a wide variety of sound effects with minimal code overhead. It's perfect for games, prototypes, and any web application that needs sound without the bulk of traditional sound files. ZzFX Sound Designer - Soundboard Demo 🌟 Features Compact: Less than 1 kilobyte when compressed! Versatile: 20 controllable parameters for diverse sound effects. No Dependencies: Standalone with no external libraries. Fast: Precache generated sounds and play them later instantly. Cross-Browser: Compatible with nearly all web browsers. Open Source: MIT licensed, use it anywhere! 🔊 Why Use ZzFX? Code-Driven Sound: Add or change sound effects with just one line of code. Lightweight: No sound asset files mean faster download times. Prototyping: Ideal for placeholder sound effects. Game Jams: Minimal overhead for size-limited competitions like JS13K. Not Just for Games: Enhance any website with sound! 🚀 How to Use Download from github or use npm install zzfx Import ZZFX as a module with using import {ZZFX, zzfx} from './ZzFX.js' Or paste the code from ZzFXMicro.min.js To play a sound just call zzfx(), something like zzfx(...[,,,,.1,,,,9]) Use the ZzFX sound designer web app to craft new sounds. ZzFX is also available for the Playdate portable console. Sample sounds... zzfx(...[,,925,.04,.3,.6,1,.3,,6.27,-184,.09,.17]); // Game Over zzfx(...[,,537,.02,.02,.22,1,1.59,-6.98,4.97]); // Heart zzfx(...[1.5,.8,270,,.1,,1,1.5,,,,,,,,.1,.01]); // Piano zzfx(...[,,129,.01,,.15,,,,,,,,5]); // Drum 🎶 ZzFX Music ZzFX now supports music via ZzFXM by Keith Clark! Super tiny player and songs. Compatible with NoteCraft exports. 🛠️ ZzFX UI Features Random Sound Generation: Create sounds from presets. Sound Management: Auto-save, rename, and favorite sounds. Sound Visualization: View sound wave images on playback. Sharing: Load sounds via pasted zzfx code. Export/Import: Drag-and-drop support for sound lists. Offline Playback: Save sounds as .wav files. 🖥️ ZzFX Micro Code Here's all the code you need to play ZzFX sounds with JavaScript! let // ZzFXMicro - Zuper Zmall Zound Zynth - v1.4.0 by Frank Force zzfxV=.3, // volume zzfxX=new AudioContext, // audio context zzfx= // play sound (p=1,k=.05,b=220,e=0,r=0,t=.1,q=0,D=1,u=0,y=0,v=0,z=0,l=0,E=0,A=0,F=0,c=0,w=1,m=0,B=0 ,N=0)=>{let M=Math,d=2*M.PI,R=44100,G=u*=500*d/R/R,C=b*=(1-k+2*k*M.random(k=[]))*d/R, g=0,H=0,a=0,n=1,I=0,J=0,f=0,h=N<0?-1:1,x=d*h*N*2/R,L=M.cos(x),Z=M.sin,K=Z(x)/4,O=1+K, X=-2*L/O,Y=(1-K)/O,P=(1+h*L)/2/O,Q=-(h+L)/O,S=P,T=0,U=0,V=0,W=0;e=R*e+9;m*=R;r*=R;t*= R;c*=R;y*=500*d/R**3;A*=d/R;v*=d/R;z*=R;l=R*l|0;p*=zzfxV;for(h=e+m+r+t+c|0;a<h;k[a++] =f*p)++J%(100*F|0)||(f=q?1<q?2<q?3<q?4<q?(g/d%1<D/2)*2-1:Z(g**3):M.max(M.min(M.tan(g) ,1),-1):1-(2*g/d%2+2)%2:1-4*M.abs(M.round(g/d)-g/d):Z(g),f=(l?1-B+B*Z(d*a/l):1)*(4<q? f:(f<0?-1:1)*M.abs(f)**D)*(a<e?a/e:a<e+m?1-(a-e)/m*(1-w):a<e+m+r?w:a<h-c?(h-a-c)/t*w: 0),f=c?f/2+(c>a?0:(a<h-c?1:(h-a)/c)*k[a-c|0]/2/p):f,N?f=W=S*T+Q*(T=U)+P*(U=f)-Y*V-X*( V=W):0),x=(b+=u+=y)*M.cos(A*H++),g+=x+x*E*(a*a*d%2-1),n&&++n>z&&(b+=v,C+=v,n=0),!l||++I%l ||(b=C,u=G,n=n||1);X=zzfxX,p=X.createBuffer(1,h,R);p.getChannelData(0).set(k);b=X. createBufferSource();b.buffer=p;b.connect(X.destination);b.start()} 🎮 Games Using ZzFX Space Huggers / Driven Wild / Clawstrike / Cat Survivors / Triska the Ninja Cat / Black Cat Squadron / Kuro Neko Market / The Way of the Dodo / Squad 13 / Coup Ahoo / Bubble Burst / Packabunchas / Galaxy Rider / The Adventures of Captain Callisto / Welcome to Space / Bogus Roads / NoteCraft / The Wandering Wraith / Bounce Back / Hue Jumper / Bubba's Back Room / Backstabber Hero / Spendotron: 2019 / Dioretsa / Back 2 Back / Quick Wins / Back Relax / Back To The Island / Backspace It / Back To The Stars / Can't Get Back / Letchworth Village / Noegnud / Sausage Redemption / Marshmallow Sky / Big Champ / I want to google the game / Edge Not Found / Stolen Sword / Highway 404 / The Last Spartan / OS13k / Crab Story / Cooking for Skully / Egg Time Rewind / Charon Jr. / 13 / Soul Surf / Dead Again / Trench Fisher / Path to Glory / Merlin vs Alfonso / Casual Crusade / Squirtcopter / Wendol Village / Brewing Disaster / Data Warrior: 13kb limit / Unblock / 204Snake! / GATOR / A Hedgehog's Search",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://github.com/KilledByAPixel/ZzFX#zzfx---zuper-zmall-zound-zynth"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/zzfx"
+    },
+    {
+      "label": "",
+      "url": "https://bundlephobia.com/result?p=zzfx"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmtrends.com/zzfx"
+    },
+    {
+      "label": "",
+      "url": "https://deepscan.io/dashboard#view=project&tid=22950&pid=26379&bid=838286"
+    },
+    {
+      "label": "ZzFX Sound Designer",
+      "url": "https://killedbyapixel.github.io/ZzFX"
+    },
+    {
+      "label": "Soundboard Demo",
+      "url": "https://codepen.io/KilledByAPixel/full/BaowKzv"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/KilledByAPixel/ZzFX#zzfx-sound-designer---soundboard-demo"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/KilledByAPixel/ZzFX/blob/master/screenshot.png"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/KilledByAPixel/ZzFX#-features"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/KilledByAPixel/ZzFX#-why-use-zzfx"
+    },
+    {
+      "label": "JS13K",
+      "url": "https://js13kgames.com/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/KilledByAPixel/ZzFX#-how-to-use"
+    },
+    {
+      "label": "ZzFXMicro.min.js",
+      "url": "https://github.com/KilledByAPixel/ZzFX/blob/master/ZzFXMicro.min.js"
+    },
+    {
+      "label": "the ZzFX sound designer web app",
+      "url": "https://killedbyapixel.github.io/ZzFX"
+    },
+    {
+      "label": "ZzFX is also available for the Playdate portable console.",
+      "url": "https://github.com/KilledByAPixel/ZzFX-Playdate"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/KilledByAPixel/ZzFX#-zzfx-music"
+    },
+    {
+      "label": "ZzFX now supports music via ZzFXM by Keith Clark!",
+      "url": "https://keithclark.github.io/ZzFXM/"
+    },
+    {
+      "label": "NoteCraft",
+      "url": "https://killedbyapixel.github.io/NoteCraft/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/KilledByAPixel/ZzFX#️-zzfx-ui-features"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/KilledByAPixel/ZzFX#️-zzfx-micro-code"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/KilledByAPixel/ZzFX#-games-using-zzfx"
+    },
+    {
+      "label": "Space Huggers",
+      "url": "https://js13kgames.com/entries/space-huggers"
+    },
+    {
+      "label": "Driven Wild",
+      "url": "https://www.newgrounds.com/portal/view/972740"
+    },
+    {
+      "label": "Clawstrike",
+      "url": "https://js13kgames.com/2025/games/clawstrike"
+    },
+    {
+      "label": "Cat Survivors",
+      "url": "https://js13kgames.com/2025/games/cat-survivors"
+    },
+    {
+      "label": "Triska the Ninja Cat",
+      "url": "https://js13kgames.com/2025/games/triska-the-ninja-cat"
+    },
+    {
+      "label": "Black Cat Squadron",
+      "url": "https://js13kgames.com/2025/games/black-cat-squadron"
+    },
+    {
+      "label": "Kuro Neko Market",
+      "url": "https://js13kgames.com/2025/games/kuro-neko-market"
+    },
+    {
+      "label": "The Way of the Dodo",
+      "url": "https://js13kgames.com/games/the-way-of-the-dodo"
+    },
+    {
+      "label": "Squad 13",
+      "url": "https://js13kgames.com/2024/games/squad-13"
+    },
+    {
+      "label": "Coup Ahoo",
+      "url": "https://js13kgames.com/2024/games/coup-ahoo"
+    },
+    {
+      "label": "Bubble Burst",
+      "url": "https://js13kgames.com/games/bubble-burst"
+    },
+    {
+      "label": "Packabunchas",
+      "url": "https://js13kgames.com/entries/packabunchas"
+    },
+    {
+      "label": "Galaxy Rider",
+      "url": "https://js13kgames.com/entries/galaxy-rider"
+    },
+    {
+      "label": "The Adventures of Captain Callisto",
+      "url": "https://js13kgames.com/entries/the-adventures-of-captain-callisto"
+    },
+    {
+      "label": "Welcome to Space",
+      "url": "https://js13kgames.com/entries/welcome-to-space"
+    },
+    {
+      "label": "Bogus Roads",
+      "url": "https://www.newgrounds.com/portal/view/747570"
+    },
+    {
+      "label": "NoteCraft",
+      "url": "https://js13kgames.com/entries/notecraft"
+    },
+    {
+      "label": "The Wandering Wraith",
+      "url": "https://js13kgames.com/entries/the-wandering-wraith"
+    },
+    {
+      "label": "Bounce Back",
+      "url": "https://www.newgrounds.com/portal/view/755171"
+    },
+    {
+      "label": "Hue Jumper",
+      "url": "https://killedbyapixel.itch.io/hue-jumper"
+    },
+    {
+      "label": "Bubba's Back Room",
+      "url": "https://js13kgames.com/entries/bubbas-back-room"
+    },
+    {
+      "label": "Backstabber Hero",
+      "url": "https://js13kgames.com/entries/backstabber-hero"
+    },
+    {
+      "label": "Spendotron: 2019",
+      "url": "https://killedbyapixel.itch.io/currency-wars"
+    },
+    {
+      "label": "Dioretsa",
+      "url": "https://js13kgames.com/entries/20461-dioretsa"
+    },
+    {
+      "label": "Back 2 Back",
+      "url": "https://js13kgames.com/entries/back-2-back"
+    },
+    {
+      "label": "Quick Wins",
+      "url": "https://js13kgames.com/entries/quick-wins"
+    },
+    {
+      "label": "Back Relax",
+      "url": "http://js13kgames.com/entries/back-relax"
+    },
+    {
+      "label": "Back To The Island",
+      "url": "https://js13kgames.com/entries/back-to-the-island"
+    },
+    {
+      "label": "Backspace It",
+      "url": "http://js13kgames.com/entries/backspace-it"
+    },
+    {
+      "label": "Back To The Stars",
+      "url": "https://js13kgames.com/entries/back-to-the-stars"
+    },
+    {
+      "label": "Can't Get Back",
+      "url": "https://js13kgames.com/entries/cant-get-back"
+    },
+    {
+      "label": "Letchworth Village",
+      "url": "https://js13kgames.com/entries/letchworth-village"
+    },
+    {
+      "label": "Noegnud",
+      "url": "https://js13kgames.com/entries/noegnud"
+    },
+    {
+      "label": "Sausage Redemption",
+      "url": "https://gogoprog.itch.io/sausage-redemption"
+    },
+    {
+      "label": "Marshmallow Sky",
+      "url": "https://github.com/baturinsky/marshmallow-sky"
+    },
+    {
+      "label": "Big Champ",
+      "url": "https://js13kgames.com/entries/big-champ"
+    },
+    {
+      "label": "I want to google the game",
+      "url": "https://js13kgames.com/entries/i-want-to-google-the-game"
+    },
+    {
+      "label": "Edge Not Found",
+      "url": "https://js13kgames.com/entries/edge-not-found"
+    },
+    {
+      "label": "Stolen Sword",
+      "url": "https://js13kgames.com/entries/stolen-sword"
+    },
+    {
+      "label": "Highway 404",
+      "url": "https://js13kgames.com/entries/highway-404"
+    },
+    {
+      "label": "The Last Spartan",
+      "url": "https://js13kgames.com/entries/the-last-spartan"
+    },
+    {
+      "label": "OS13k",
+      "url": "https://github.com/KilledByAPixel/OS13k"
+    },
+    {
+      "label": "Crab Story",
+      "url": "https://www.crabstory.io/"
+    },
+    {
+      "label": "Cooking for Skully",
+      "url": "https://github.com/gheja/js13k2022"
+    },
+    {
+      "label": "Egg Time Rewind",
+      "url": "https://js13kgames.com/entries/egg-time-rewind"
+    },
+    {
+      "label": "Charon Jr.",
+      "url": "https://js13kgames.com/entries/charon-jr"
+    },
+    {
+      "label": "13",
+      "url": "https://js13kgames.com/entries/13"
+    },
+    {
+      "label": "Soul Surf",
+      "url": "https://js13kgames.com/entries/soul-surf"
+    },
+    {
+      "label": "Dead Again",
+      "url": "https://js13kgames.com/entries/dead-again"
+    },
+    {
+      "label": "Trench Fisher",
+      "url": "https://swashvirus.github.io/trench-fisher"
+    },
+    {
+      "label": "Path to Glory",
+      "url": "https://js13kgames.com/entries/path-to-glory"
+    },
+    {
+      "label": "Merlin vs Alfonso",
+      "url": "https://js13kgames.com/entries/merlin-vs-alfonso"
+    },
+    {
+      "label": "Casual Crusade",
+      "url": "https://js13kgames.com/entries/casual-crusade"
+    },
+    {
+      "label": "Squirtcopter",
+      "url": "https://joachimford.uk/squirtcopter/"
+    },
+    {
+      "label": "Wendol Village",
+      "url": "https://js13kgames.com/2024/games/wendol-village"
+    },
+    {
+      "label": "Brewing Disaster",
+      "url": "https://js13kgames.com/2024/games/brewing-disaster"
+    },
+    {
+      "label": "Data Warrior: 13kb limit",
+      "url": "https://js13kgames.com/2024/games/data-warrior-13kb-limit"
+    },
+    {
+      "label": "Unblock",
+      "url": "https://js13kgames.com/games/unblock"
+    },
+    {
+      "label": "204Snake!",
+      "url": "https://www.newgrounds.com/portal/view/960100"
+    },
+    {
+      "label": "GATOR",
+      "url": "https://www.newgrounds.com/portal/view/960757"
+    },
+    {
+      "label": "A Hedgehog's Search",
+      "url": "https://willsm1111.itch.io/a-hedgehogs-search"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/KilledByAPixel/ZzFX/blob/master/icon.png"
+    }
+  ],
+  "root_files": [
+    ".github",
+    ".gitattributes",
+    ".gitignore",
+    "LICENSE",
+    "README.md",
+    "ZzFX.js",
+    "ZzFXMicro.js",
+    "ZzFXMicro.min.js",
+    "icon.png",
+    "index.html",
+    "manifest.json",
+    "package.json",
+    "screenshot.png",
+    "social.png",
+    "wav.js"
+  ],
+  "release_count": 27,
+  "status": "verified"
+}

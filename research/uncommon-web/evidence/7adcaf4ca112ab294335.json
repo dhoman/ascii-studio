@@ -1,0 +1,62 @@
+{
+  "url": "https://tangled.org/did:plc:h7e4sqbb5nq5nnsbgib7csll",
+  "final_url": "https://tangled.org/did:plc:h7e4sqbb5nq5nnsbgib7csll",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:48:26.133892+00:00",
+  "status": "fetched",
+  "page_text": "if (!document.documentElement.dataset.theme && matchMedia('(prefers-color-scheme: dark)').matches) document.documentElement.dataset.theme = 'dark'; document.addEventListener('DOMContentLoaded', () => { const nodes = document.querySelectorAll('pre.mermaid'); if (!nodes.length) return; const script = document.createElement('script'); script.src = '/static/mermaid.min.js'; script.onload = async () => { mermaid.initialize({ startOnLoad: true, theme: window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'default', }); await mermaid.run({ nodes }); }; document.head.appendChild(script); }); document.addEventListener('DOMContentLoaded', () => { const nodes = document.querySelectorAll('span.math'); if (!nodes.length) return; window.MathJax = { tex: { inlineMath: [['\\\\(', '\\\\)']], displayMath: [['\\\\[', '\\\\]']], }, options: { skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'], enableMenu: false, menuOptions: { settings: { enrich: false, speech: false, braille: false, assistiveMml: false, collapsible: false, }, }, }, startup: { typeset: false }, }; const script = document.createElement('script'); script.src = '/static/mathjax.min.js'; script.onload = () => { MathJax.typesetPromise(Array.from(nodes)); }; document.head.appendChild(script); }); window.addEventListener('scroll', function() { document.querySelectorAll('[data-profile-popover]:not(.hidden)').forEach(function(p) { p.classList.add('hidden'); }); }, { passive: true }); did:plc:h7e4sqbb5nq5nnsbgib7csll · Tangled alpha Login or Join now did:plc:h7e4sqbb5nq5nnsbgib7csll This user hasn't joined Tangled yet. Let them know we're waiting for them! © 2026 Tangled Labs Oy. Blog Docs Source Brand Discord Bluesky Twitter (X) Terms Privacy",
+  "page_links": [
+    {
+      "label": "alpha",
+      "url": "https://tangled.org/"
+    },
+    {
+      "label": "Login",
+      "url": "https://tangled.org/login"
+    },
+    {
+      "label": "Join now",
+      "url": "https://tangled.org/signup"
+    },
+    {
+      "label": "",
+      "url": "https://tangled.org/"
+    },
+    {
+      "label": "Blog",
+      "url": "https://blog.tangled.org"
+    },
+    {
+      "label": "Docs",
+      "url": "https://docs.tangled.org"
+    },
+    {
+      "label": "Source",
+      "url": "https://tangled.org/tangled.org/core"
+    },
+    {
+      "label": "Brand",
+      "url": "https://tangled.org/brand"
+    },
+    {
+      "label": "Discord",
+      "url": "https://chat.tangled.org"
+    },
+    {
+      "label": "Bluesky",
+      "url": "https://bsky.app/profile/tangled.org"
+    },
+    {
+      "label": "Twitter (X)",
+      "url": "https://x.com/tangled_org"
+    },
+    {
+      "label": "Terms",
+      "url": "https://tangled.org/terms"
+    },
+    {
+      "label": "Privacy",
+      "url": "https://tangled.org/privacy"
+    }
+  ]
+}

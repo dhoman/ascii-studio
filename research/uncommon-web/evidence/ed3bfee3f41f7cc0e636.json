@@ -1,0 +1,85 @@
+{
+  "url": "https://github.com/uiverse-io/galaxy",
+  "final_url": "https://github.com/uiverse-io/galaxy",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:48:22.160082+00:00",
+  "stars": 13640,
+  "forks": 969,
+  "description": "The largest Open-Source UI Library! Community-made and free to use. Made with either CSS or Tailwind.",
+  "homepage": "https://Uiverse.io",
+  "topics": [
+    "community",
+    "css",
+    "tailwind",
+    "ui"
+  ],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2023-10-01T17:22:04.000Z",
+  "branch": "main",
+  "commit": "adbd2adde0a299a3956ea288fb444ec01891ca41",
+  "readme": "Galaxy Welcome to the galaxy, a collection of over 3000 unique UI elements from Uiverse.io. Every single UI element you find in here is sourced from our main platform, Uiverse.io. As designers and enthusiasts share their creations on our website, we automatically curate and upload them here for ease of access and implementation. Browsing the Collection While this repository provides an archive of all the UI elements, the best way to browse is on Uiverse.io. There, you can search and interact with all the elements while having a visual overview. Contribution Interested in growing this universe of UI components? Contribution is simple: Create & Submit: Craft your unique UI element and submit it to Uiverse.io. Approval: Once your submission is reviewed and approved on our platform, it will automatically be uploaded to this repo. Please note: Direct contributions or pull requests to this repository will be ignored. The galaxy is exclusively managed through the Uiverse.io platform to ensure consistency and quality. Licensing and Attribution All UI elements in this repository are available under the MIT License, granting you the freedom to use, modify, and distribute them as you please. However, while not mandatory, we deeply value and appreciate attribution. When implementing a UI element from this collection, kindly consider giving credit to both the original creator and Uiverse.io. This simple act promotes the ethos of sharing, acknowledges the designer's effort, and celebrates the community spirit.",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://raw.githubusercontent.com/uiverse-io/.github/main/cover.png"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/uiverse-io/galaxy#galaxy"
+    },
+    {
+      "label": "Uiverse.io",
+      "url": "https://uiverse.io/"
+    },
+    {
+      "label": "Uiverse.io",
+      "url": "http://uiverse.io/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/uiverse-io/galaxy#browsing-the-collection"
+    },
+    {
+      "label": "Uiverse.io",
+      "url": "https://uiverse.io/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/uiverse-io/galaxy#contribution"
+    },
+    {
+      "label": "Uiverse.io",
+      "url": "https://uiverse.io/"
+    },
+    {
+      "label": "Uiverse.io",
+      "url": "http://uiverse.io/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/uiverse-io/galaxy#licensing-and-attribution"
+    },
+    {
+      "label": "Uiverse.io",
+      "url": "https://uiverse.io/"
+    }
+  ],
+  "root_files": [
+    "Buttons",
+    "Cards",
+    "Checkboxes",
+    "Forms",
+    "Inputs",
+    "Notifications",
+    "Patterns",
+    "Radio-buttons",
+    "Toggle-switches",
+    "Tooltips",
+    "loaders",
+    "LICENSE",
+    "README.md"
+  ],
+  "release_count": 0,
+  "status": "verified"
+}

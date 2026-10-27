@@ -1,0 +1,123 @@
+{
+  "url": "https://github.com/igorfelipeduca/aqua",
+  "final_url": "https://github.com/igorfelipeduca/aqua",
+  "http_status": 200,
+  "checked_at": "2026-10-23T17:46:55.164148+00:00",
+  "stars": 17,
+  "forks": 1,
+  "description": "The classic Mac OS X interface rebuilt as a shadcn/ui registry — gel buttons, pinstripes, brushed metal, the Dock and the iPod.",
+  "homepage": "https://aqua.duca.dev",
+  "topics": [
+    "aqua",
+    "design-system",
+    "mac-os-x",
+    "radix-ui",
+    "react",
+    "shadcn",
+    "shadcn-registry",
+    "skeuomorphism",
+    "tailwindcss"
+  ],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2026-07-19T04:27:08.000Z",
+  "branch": "main",
+  "commit": "d72926188b9b7259bd513f1502ba8c75e60a09df",
+  "readme": "Aqua The classic Mac OS X interface — gel buttons, pinstripes, brushed metal — rebuilt as a shadcn/ui registry. aqua.duca.dev · Docs · Mail demo · Chat demo Aqua recreates the Apple interface of 2000–2007 as accessible React components: Radix primitives underneath, Tailwind CSS gel gradients on top. Like everything in the shadcn ecosystem, it is not a package you import — components are copied into your project as open code. Change anything, own everything. Quick start Register the namespace in your components.json: { \"registries\": { \"@aqua\": \"https://aqua.duca.dev/r/{name}.json\" } } Install the theme, then add components: npx shadcn@latest add @aqua/theme npx shadcn@latest add @aqua/button @aqua/tabs @aqua/select Components import from your own project: import { Button } from \"@/components/ui/button\" <Button>gorgeous</Button> Components Core — Alert, Avatar, Badge, Button, Checkbox, Code Block, Cursor, Dialog, Dropdown Menu, Input, Label, Loader, Progress, Radio Group, Select, Slider, Switch, Tabs, Textarea, Toast, Tooltip Signature — the pieces that only make sense in this design language: Window — brushed metal chrome with traffic lights Dock — magnifying icons, haloed labels, running indicators Chat Bubble — iChat gradient bubbles with sculpted tails iPod — white shell, LCD screen, a working click wheel Cursor — wrap your app and get the era arrow, hand and I-beam back Every component is themable through a single CSS variable: :root { --aqua-accent: #e02f6b; /* strawberry */ } The gel gradients, edges and focus rings are derived with color-mix, so one line rethemes everything — globally or scoped to any subtree. For AI agents Aqua ships /llms.txt and /llms-full.txt with complete setup and per-component usage, and every docs page has a Copy AI prompt button that produces a ready-to-paste instruction for your agent of choice. Development This repository is the registry and its documentation site (Next.js 15, Tailwind v4, Bun). bun install bun run dev # docs site on localhost:3000 bun run registry:build # rebuild public/r/*.json from registry.json Component sources live in registry/aqua/ui/. The docs live in components/docs-content.tsx. Credits Designed and built by Igor Duca (@ducaswtf). The original design language belongs to Apple — this is a tribute, not an affiliation. License MIT",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://github.com/igorfelipeduca/aqua/blob/main/.github/assets/og.png"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/igorfelipeduca/aqua#aqua"
+    },
+    {
+      "label": "shadcn/ui",
+      "url": "https://ui.shadcn.com"
+    },
+    {
+      "label": "aqua.duca.dev",
+      "url": "https://aqua.duca.dev"
+    },
+    {
+      "label": "Docs",
+      "url": "https://aqua.duca.dev/docs/introduction"
+    },
+    {
+      "label": "Mail demo",
+      "url": "https://aqua.duca.dev/demo/mail"
+    },
+    {
+      "label": "Chat demo",
+      "url": "https://aqua.duca.dev/demo/chat"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/igorfelipeduca/aqua#quick-start"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/igorfelipeduca/aqua#components"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/igorfelipeduca/aqua#for-ai-agents"
+    },
+    {
+      "label": "/llms.txt",
+      "url": "https://aqua.duca.dev/llms.txt"
+    },
+    {
+      "label": "/llms-full.txt",
+      "url": "https://aqua.duca.dev/llms-full.txt"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/igorfelipeduca/aqua#development"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/igorfelipeduca/aqua#credits"
+    },
+    {
+      "label": "Igor Duca",
+      "url": "https://duca.dev"
+    },
+    {
+      "label": "@ducaswtf",
+      "url": "https://x.com/ducaswtf"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/igorfelipeduca/aqua#license"
+    },
+    {
+      "label": "MIT",
+      "url": "https://github.com/igorfelipeduca/aqua/blob/main/LICENSE"
+    }
+  ],
+  "root_files": [
+    ".github/assets",
+    "app",
+    "components",
+    "lib",
+    "public",
+    "registry/aqua/ui",
+    ".gitignore",
+    "CONTRIBUTING.md",
+    "LICENSE",
+    "README.md",
+    "bun.lock",
+    "components.json",
+    "eslint.config.mjs",
+    "next.config.ts",
+    "package.json",
+    "postcss.config.mjs",
+    "registry.json",
+    "tsconfig.json"
+  ],
+  "release_count": 0,
+  "status": "verified"
+}

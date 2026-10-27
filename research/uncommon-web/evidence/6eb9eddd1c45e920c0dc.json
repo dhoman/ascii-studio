@@ -1,0 +1,119 @@
+{
+  "url": "https://github.com/sindresorhus/cli-spinners",
+  "final_url": "https://github.com/sindresorhus/cli-spinners",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:48:17.352411+00:00",
+  "stars": 2940,
+  "forks": 131,
+  "description": "Spinners for use in the terminal",
+  "homepage": "",
+  "topics": [],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2016-03-03T18:13:57.000Z",
+  "branch": "main",
+  "commit": "c5f18f654e0f6bdbf830713927f815a42190d774",
+  "readme": "cli-spinners 70+ spinners for use in the terminal The list of spinners is just a JSON file and can be used wherever. You probably want to use one of these spinners through the ora package. Install npm install cli-spinners Usage import cliSpinners from 'cli-spinners'; console.log(cliSpinners.dots); /* { interval: 80, frames: ['⠋', '⠙', '⠹', '⠸', '⠼', '⠴', '⠦', '⠧', '⠇', '⠏'] } */ interval is the intended time per frame, in milliseconds. frames is an array of frames to show for the spinner. Preview The header GIF is outdated. See live demo. API cliSpinners Each spinner comes with a recommended interval and an array of frames. See the spinners. randomSpinner() Get a random spinner. import {randomSpinner} from 'cli-spinners'; console.log(randomSpinner()); /* { interval: 80, frames: ['⠋', '⠙', '⠹', '⠸', '⠼', '⠴', '⠦', '⠧', '⠇', '⠏'] } */ Related ora - Elegant terminal spinner CLISpinner - Swift port py-spinners - Python port spinners - Rust port go-spinners - Go port bash-cli-spinners - Bash port spinner.nvim - Neovim port",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://github.com/sindresorhus/cli-spinners#cli-spinners"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/sindresorhus/cli-spinners/blob/main/screenshot.svg"
+    },
+    {
+      "label": "JSON file",
+      "url": "https://github.com/sindresorhus/cli-spinners/blob/main/spinners.json"
+    },
+    {
+      "label": "ora",
+      "url": "https://github.com/sindresorhus/ora"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/sindresorhus/cli-spinners#install"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/sindresorhus/cli-spinners#usage"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/sindresorhus/cli-spinners#preview"
+    },
+    {
+      "label": "live demo",
+      "url": "https://jsfiddle.net/df0okLhv/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/sindresorhus/cli-spinners#api"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/sindresorhus/cli-spinners#clispinners"
+    },
+    {
+      "label": "See the spinners.",
+      "url": "https://github.com/sindresorhus/cli-spinners/blob/main/spinners.json"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/sindresorhus/cli-spinners#randomspinner"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/sindresorhus/cli-spinners#related"
+    },
+    {
+      "label": "ora",
+      "url": "https://github.com/sindresorhus/ora"
+    },
+    {
+      "label": "CLISpinner",
+      "url": "https://github.com/kiliankoe/CLISpinner"
+    },
+    {
+      "label": "py-spinners",
+      "url": "https://github.com/ManrajGrover/py-spinners"
+    },
+    {
+      "label": "spinners",
+      "url": "https://github.com/FGRibreau/spinners"
+    },
+    {
+      "label": "go-spinners",
+      "url": "https://github.com/gabe565/go-spinners"
+    },
+    {
+      "label": "bash-cli-spinners",
+      "url": "https://github.com/simeg/bash-cli-spinners"
+    },
+    {
+      "label": "spinner.nvim",
+      "url": "https://github.com/xieyonn/spinner.nvim"
+    }
+  ],
+  "root_files": [
+    ".github",
+    ".editorconfig",
+    ".gitattributes",
+    ".gitignore",
+    ".npmrc",
+    "example-all.js",
+    "example.js",
+    "index.d.ts",
+    "index.js",
+    "license",
+    "package.json",
+    "readme.md",
+    "screenshot.gif",
+    "screenshot.svg",
+    "spinners.json",
+    "test.js"
+  ],
+  "release_count": 19,
+  "status": "verified"
+}

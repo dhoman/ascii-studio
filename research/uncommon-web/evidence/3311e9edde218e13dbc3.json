@@ -1,0 +1,87 @@
+{
+  "url": "https://github.com/danielpetho/fancy",
+  "final_url": "https://github.com/danielpetho/fancy",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:47:42.557785+00:00",
+  "stars": 3262,
+  "forks": 124,
+  "description": "",
+  "homepage": "https://fancycomponents.dev",
+  "topics": [
+    "animation",
+    "design",
+    "framer-motion",
+    "motion",
+    "tailwindcss",
+    "ui-components"
+  ],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2024-06-02T08:48:30.000Z",
+  "branch": "main",
+  "commit": "f9f62c61207b2dd3210476dd98af3c9a5be24094",
+  "readme": "Fancy Components A growing library of fancy, fun, animated react components & microinteractions to make the web fun again. Free & Open Source. Documentation Visit https://fancycomponents.dev/docs/introduction to view the documentation. Contributing Please read the contribution guidelines. Acknowledgments Huge thanks to shadcn, as many parts of this repository—documentation page, structure, registry system, guides, and many more—is built upon it. License Licensed under the MIT license.",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://github.com/danielpetho/fancy#fancy-components"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/danielpetho/fancy#documentation"
+    },
+    {
+      "label": "https://fancycomponents.dev/docs/introduction",
+      "url": "https://fancycomponents.dev/docs/introduction"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/danielpetho/fancy#contributing"
+    },
+    {
+      "label": "contribution guidelines",
+      "url": "https://github.com/danielpetho/fancy/blob/main/CONTRIBUTING.md"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/danielpetho/fancy#acknowledgments"
+    },
+    {
+      "label": "shadcn",
+      "url": "https://github.com/shadcn-ui/ui"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/danielpetho/fancy#license"
+    },
+    {
+      "label": "MIT license",
+      "url": "https://github.com/danielpetho/fancy/blob/main/LICENSE"
+    },
+    {
+      "label": "",
+      "url": "https://vercel.com/oss"
+    }
+  ],
+  "root_files": [
+    "public",
+    "src",
+    ".eslintignore",
+    ".eslintrc.json",
+    ".gitignore",
+    ".prettierignore",
+    "ACCEPTANCE_CRITERIA.md",
+    "CONTRIBUTING.md",
+    "LICENSE",
+    "README.md",
+    "components.json",
+    "next.config.js",
+    "package-lock.json",
+    "package.json",
+    "postcss.config.mjs",
+    "prettier.config.cjs",
+    "tsconfig.json"
+  ],
+  "release_count": 0,
+  "status": "verified"
+}

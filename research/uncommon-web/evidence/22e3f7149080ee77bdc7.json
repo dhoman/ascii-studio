@@ -1,0 +1,1811 @@
+{
+  "url": "https://github.com/tsparticles/tsparticles",
+  "final_url": "https://github.com/tsparticles/tsparticles",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:48:22.185678+00:00",
+  "stars": 8995,
+  "forks": 946,
+  "description": "tsParticles - Easily create highly customizable JavaScript particles effects, confetti explosions and fireworks animations and use them as animated backgrounds for your website. Ready to use components available for React.js, Vue.js (2.x and 3.x), Angular, Svelte, jQuery, Preact, Inferno, Solid, Riot and Web Components.",
+  "homepage": "https://particles.js.org",
+  "topics": [
+    "2d",
+    "angular",
+    "animations",
+    "bg",
+    "canvas",
+    "confetti",
+    "fireworks",
+    "hacktoberfest",
+    "html",
+    "javascript",
+    "js",
+    "npm",
+    "particles",
+    "react",
+    "svelte",
+    "ts",
+    "tsparticles",
+    "typescript",
+    "vue",
+    "web"
+  ],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2020-02-05T18:00:01.000Z",
+  "branch": "main",
+  "commit": "d78159e1a26ff6466e9acce1ec712b36b4b5aa39",
+  "readme": "tsParticles - TypeScript Particles A lightweight TypeScript library for creating particles. Dependency free (*), browser ready and compatible with React.js, Vue.js (2.x and 3.x), Angular, Svelte, jQuery, Preact, Inferno, Riot.js, Solid.js, and Web Components Table of Contents tsParticles - TypeScript Particles Table of Contents Do you want to use it on your website? Start here in 2 minutes Library installation Hosting / CDN jsDelivr cdnjs unpkg npm yarn pnpm Import and require Usage Official components for some of the most used frameworks Angular @tsparticles/angular Astro @tsparticles/astro Ember.js @tsparticles/ember Inferno @tsparticles/inferno jQuery @tsparticles/jquery Preact @tsparticles/preact Qwik @tsparticles/qwik ReactJS @tsparticles/nextjs @tsparticles/react RiotJS @tsparticles/riot SolidJS @tsparticles/solid Svelte @tsparticles/svelte VueJS 2.x @tsparticles/nuxt2 @tsparticles/vue2 VueJS 3.x @tsparticles/nuxt3 @tsparticles/nuxt4 @tsparticles/vue3 Web Components @tsparticles/webcomponents WordPress @tsparticles/wordpress Elementor Presets Ambient Big Circles Bubbles Confetti Confetti Cannon Confetti Explosions Confetti Falling Confetti Parade Party Fire Firefly Fireworks Fountain Hyperspace Links Sea Anemone Snow Squares Stars Triangles Templates and Resources Demo / Generator Video Tutorials Characters as particles Polygon mask Animated stars Nyan cat flying on scrolling stars Snow particles Background Mask particles Options Want to see it in action and try it? Migrating from Particles.js Plugins/Customizations Dependency Graph Do you want to use it on your website? Documentation and Development references here 📖 This library is available on two of the most popular CDNs and it's easy and ready to use, if you were using particles.js it's even easier. You'll find the instructions below, with all the links you need, and don't be scared by TypeScript, it's just the source language. The output files are just JavaScript. 🤩 CDNs and npm have all the sources you need in Javascript, a bundle browser ready (tsparticles.engine.min.js), and all files splitted for import syntax. If you are interested there are some simple instructions just below to guide you to migrate from the old particles.js library. Start here in 2 minutes If you are new to tsParticles, this path is usually the fastest: Install @tsparticles/engine and @tsparticles/slim Load the slim bundle once Start with a small config and iterate import { tsParticles } from \"@tsparticles/engine\"; import { loadSlim } from \"@tsparticles/slim\"; await loadSlim(tsParticles); await tsParticles.load({ id: \"tsparticles\", options: { background: { color: \"#0d1117\", }, particles: { move: { enable: true, }, number: { value: 60, }, }, }, }); Useful docs for the next step: Docs home: https://particles.js.org/docs/ Options guide: https://github.com/tsparticles/tsparticles/blob/main/markdown/Options.md Migration guide: https://github.com/tsparticles/tsparticles/blob/main/markdown/pjsMigration.md Presets catalog: https://github.com/tsparticles/presets Quick checklist Install @tsparticles/engine and one bundle (@tsparticles/slim is the common default) Load the bundle before calling tsParticles.load(...) Start from a small config, then extend incrementally Choose your quick-start path I want fewer dependencies: use @tsparticles/engine + only needed feature packages I want the easiest default: use @tsparticles/slim I need everything enabled: use @tsparticles/all Common pitfalls Loading options that require plugins before loading those plugin packages Starting with very high particle counts before checking FPS Mixing legacy snake_case keys with modern camelCase options Related docs Main docs: https://particles.js.org/docs/ Root options guide: https://github.com/tsparticles/tsparticles/blob/main/markdown/Options.md Migration guide: https://github.com/tsparticles/tsparticles/blob/main/markdown/pjsMigration.md Library installation Hosting / CDN Please use these hosts or your own to load tsParticles on your projects jsDelivr cdnjs unpkg https://unpkg.com/@tsparticles/confetti/ https://unpkg.com/@tsparticles/particles/ https://unpkg.com/@tsparticles/engine/ https://unpkg.com/@tsparticles/fireworks/ https://unpkg.com/@tsparticles/basic/ https://unpkg.com/@tsparticles/slim/ https://unpkg.com/tsparticles/ https://unpkg.com/@tsparticles/all/ npm tsParticles Confetti tsParticles Particles tsParticles Engine tsParticles Fireworks tsParticles Basic tsParticles Slim tsParticles tsParticles All npm install @tsparticles/engine yarn yarn add @tsparticles/engine pnpm pnpm install @tsparticles/engine Import and require const tsParticles = require(\"@tsparticles/engine\"); // or import { tsParticles } from \"@tsparticles/engine\"; The imported tsParticles is the same instance you have when including the script in the page using the <script> tag. Usage Load tsParticles and configure the particles: index.html <div id=\"tsparticles\"></div> <script src=\"tsparticles.engine.min.js\"></script> app.js // @path-json can be an object or an array, the first will be loaded directly, and the object from the array will be randomly selected /* tsParticles.load(@params); */ tsParticles .load({ id: \"tsparticles\", url: \"presets/default.json\", }) .then((container) => { console.log(\"callback - tsparticles config loaded\"); }) .catch((error) => { console.error(error); }); //or tsParticles.load({ id: \"tsparticles\", options: {/* options here */}, }); //or tsParticles.load({ id: \"tsparticles\", options: [{/* options here */}, {/* other options here */}], }); //random object tsParticles.load({ id: \"tsparticles\", options: [{/* options here */}, {/* other options here */}], index: 1, }); //the second one // Important! If the index is not in range 0...<array.length, the index will be ignored. // after initialization this can be used. /* tsParticles.setOnClickHandler(@callback); */ /* this will be fired from all particles loaded */ tsParticles.setOnClickHandler((event, particles) => { /* custom on click handler */ }); // now you can control the animations too, it's possible to pause and resume the animations // these methods don't change the config so you're safe with all your configurations // domItem(0) returns the first tsParticles instance loaded in the dom const particles = tsParticles.item(0); // play will start the animations, if the move is not enabled it won't enable it, it just updates the frame particles.play(); // pause will stop the animations particles.pause(); Official components for some of the most used frameworks Angular @tsparticles/angular Instructions available here Astro @tsparticles/astro Instructions available here Ember.js @tsparticles/ember Instructions available here Inferno @tsparticles/inferno Instructions available here jQuery @tsparticles/jquery Instructions available here Preact @tsparticles/preact Instructions available here Qwik @tsparticles/qwik Instructions available here ReactJS @tsparticles/nextjs Instructions available here @tsparticles/react Instructions available here RiotJS @tsparticles/riot Instructions available here SolidJS @tsparticles/solid Instructions available here Svelte @tsparticles/svelte Instructions available here VueJS 2.x @tsparticles/nuxt2 Instructions available here @tsparticles/vue2 Instructions available here VueJS 3.x @tsparticles/nuxt3 Instructions available here @tsparticles/nuxt4 Instructions available here @tsparticles/vue3 Instructions available here Web Components @tsparticles/webcomponents Instructions available here WordPress @tsparticles/wordpress The plugin page hosted on WordPress.org can be found here Elementor Actually, an official tsParticles plugin isn't existing, but I have a collaboration with the Premium Addons for Elementor plugin collection. Premium Addons for Elementor is one of the most common plugins for Elementor that offers more than 55 highly customizable Elementor Widgets and Section Add-ons. tsParticles is exclusively included in Premium Particles Section Add-on for Elementor Page Builder. Check It Now. Use Premium Addons for Elementor Page Builder and get the chance to include tsParticles in your next WordPress website without the need to write a single line of code. See a Live Example. Presets There are some presets ready to be used in this repository, and they also have a bundle file that contains everything needed to run. Ambient This preset loads ambient circles on a dark background. You can find the instructions here Big Circles This preset loads big colored circles moving upwards on a white background. You can find the instructions here Bubbles This preset loads colored bubbles coming from the bottom of the screen on a white background. You can find the instructions here Confetti This preset loads white and red confetti launched from the screen center on a transparent background. You can find the instructions here Confetti Cannon This preset loads confetti launched from a draggable cannon. You can find the instructions here Confetti Explosions This preset loads confetti bursts at multiple points on the screen. You can find the instructions here Confetti Falling This preset loads slowly falling confetti particles. You can find the instructions here Confetti Parade This preset loads confetti moving horizontally across the screen like a parade. You can find the instructions here Party This preset creates an animated confetti-like celebration effect. You can find the instructions here Fire This preset loads a faded red to a black background with particles colored like fire and ash sparks. You can find the instructions here Firefly This preset loads a mouse trail made with small fading particles like little fireflies. You can find the instructions here Fireworks This preset loads a beautiful fireworks effect. You can find the instructions here Hyperspace This preset loads a hyperspace tunnel effect with fast-moving particles. You can find the instructions here Fountain You can find the instructions here Links You can find the instructions here Sea Anemone You can find the instructions here Snow You can find the instructions here Squares You can find the instructions here Stars You can find the instructions here Triangles You can find the instructions here Templates and Resources You can find some tsParticles related templates here. The templates are created for Vanilla Javascript, ReactJS, VueJS, Angular, SvelteJS, and other frameworks. The templates will vary, new ones can be created or older ones updated with the latest features or changed to a better style. Check them out once in a while. If you created some good design with tsParticles feel free to submit a pull request with your cool template, you'll be credited as the template author! https://github.com/tsparticles/templates Demo / Generator https://particles.js.org/samples Video Tutorials You can find all video tutorials on the website here: https://particles.js.org/video.html More videos are coming soon! Check every day if there are some new contents. Characters as particles Polygon mask Animated stars Nyan cat flying on scrolling stars Snow particles Background Mask particles particles.json You can find some config samples here 📖 Options You can find all options available here 📖 If you want a practical map with examples, check these markdown docs too: Root options: https://github.com/tsparticles/tsparticles/blob/main/markdown/Options.md Colors: https://github.com/tsparticles/tsparticles/blob/main/markdown/Color.md Container API: https://github.com/tsparticles/tsparticles/blob/main/markdown/Container.md Want to see it in action and try it? I've created a tsParticles collection on CodePen 😮 or you can check out my profile Otherwise, there's the demo page link below. Want to see even more demos? Clone the repository on your computer and follow these instructions $ pnpm i $ pnpm run build $ cd demo/vanilla $ pnpm start Boom! 💥 http://localhost:3000 and you can check out other demos. Note: demo/wordpress contains documentation only. The WordPress wrapper runs as a plugin inside a WordPress installation, not as a standalone demo app. If you are brave enough you can switch to the dev branch for trying the features under development. Migrating from Particles.js tsParticles has a package that makes this library 100% compatible with the particles.js configuration. Seriously, you just need to change the script from particles.js to the bundled compatibility package, et-voilà, you're ready 🧙! You can read more here Want to know 5 reasons to do the switch? Read here Below you can find all the information you need to install tsParticles and its new syntax. Migration quick guide in this repository: https://github.com/tsparticles/tsparticles/blob/main/markdown/pjsMigration.md Plugins/Customizations tsParticles now supports some customizations 🥳. You can create your own plugins Read more here... Practical customization guide (shape + preset examples): https://github.com/tsparticles/tsparticles/blob/main/markdown/Plugins.md Dependency Graph flowchart TD subgraph core [Core] engine[tsParticles Engine] perlin-noise[Perlin Noise Lib] simplex-noise[Simplex Noise Lib] configs[tsParticles Configs] end subgraph bundle-basic [tsParticles Basic] subgraph basic-plugins [Plugins] plugin-move[Move] subgraph basic-plugins-colors [Colors] plugin-hex-color[Hex Color] plugin-hsl-color[HSL Color] plugin-rgb-color[RGB Color] end end subgraph basic-shapes [Shapes] shape-circle[Circle] end subgraph basic-updates [Updaters] updater-fill-color[Color] updater-opacity[Opacity] updater-out-modes[Out Modes] updater-size[Size] end end engine --> bundle-basic subgraph bundle-confetti [tsParticles Confetti] subgraph confetti-plugins [Plugins] plugin-emitters plugin-motion end subgraph confetti-shapes [Shapes] shape-cards shape-emoji shape-heart shape-image shape-polygon shape-square shape-star end subgraph confetti-updaters [Updaters] updater-life updater-roll updater-rotate updater-tilt updater-wobble end end bundle-basic --> bundle-confetti subgraph bundle-slim [tsParticles Slim] subgraph slim-interactions [Interactions] subgraph slim-interactions-external [Externals] interaction-external-attract[Attract] interaction-external-bounce[Bounce] interaction-external-bubble[Bubble] interaction-external-connect[Connect] interaction-external-grab[Grab] interaction-external-parallax[Parallax] interaction-external-pause[Pause] interaction-external-push[Push] interaction-external-remove[Remove] interaction-external-repulse[Repulse] interaction-external-slow[Slow] end subgraph slim-interactions-particles [Particles] interaction-particles-attract[Attract] interaction-particles-collisions[Collisions] interaction-particles-links[Links] end end subgraph slim-plugins [Plugins] plugin-interactivity[Interactivity] subgraph slim-plugins-easings [Easings] plugin-easing-quad[Quad] end end subgraph slim-shapes [Shapes] shape-emoji[Emoji] shape-image[Image] shape-line[Line] shape-polygon[Polygon] shape-square[Square] shape-star[Star] end subgraph slim-updaters [Updaters] updater-life[Life] updater-rotate[Rotate] updater-stroke-color[Stroke Color] end end bundle-basic --> bundle-slim subgraph bundle-fireworks [tsParticles Fireworks] subgraph fireworks-effects [Effects] effect-trail end subgraph fireworks-plugins [Plugins] plugin-emitters subgraph fireworks-plugin-emitters-shapes [Emitters Shapes] plugin-emitters-shape-square end plugin-sounds end subgraph fireworks-updaters [Updaters] updater-destroy updater-life updater-rotate end end bundle-basic --> bundle-fireworks subgraph bundle-full [tsParticles] subgraph full-interactions [Interactions] subgraph full-interactions-external [Externals] interaction-external-trail[Trail] end end subgraph full-plugins [Plugins] plugin-absorbers[Absorbers] plugin-emitters[Emitters] subgraph full-plugin-emitters-shapes [Emitters Shapes] plugin-emitters-shape-circle[Circle] plugin-emitters-shape-square[Square] end end subgraph full-shapes [Shapes] shape-text[Text] end subgraph full-updaters [Updaters] updater-destroy[Destroy] updater-roll[Roll] updater-tilt[Tilt] updater-twinkle[Twinkle] updater-wobble[Wobble] end end bundle-slim --> bundle-full subgraph bundle-all [tsParticles All] subgraph all-effects [Effects] effect-bubble[Bubble] effect-particles[Particles] effect-shadow[Shadow] effect-trail[Trail] end subgraph all-interactions [Interactions] subgraph all-interactions-external [External] interaction-external-particle[Particle] interaction-external-pop[Pop] end interaction-light[Light] subgraph all-interactions-particles [Particles] interaction-particles-repulse[Repulse] end end subgraph all-paths [Paths] path-branches[Branches] path-brownian[Brownian] path-curl-noise[Curl Noise] path-curves[Curves] path-fractal-noise[Fractal Noise] path-grid[Grid] path-levy[Levy] path-perlin-noise[Perlin Noise] path-polygon[Polygon] path-random[Random] path-simplex-noise[Simplex Noise] path-spiral[Spiral] path-svg[SVG] path-zig-zag[Zig Zag] end subgraph all-plugins [Plugins] plugin-background-mask[Background Mask] plugin-blend[Blend] plugin-canvas-mask[Canvas Mask] subgraph all-plugins-colors [Colors] plugin-hsv-color[HSV Color] plugin-hwb-color[HWB Color] plugin-lab-color[Lab Color] plugin-lch-color[Lch Color] plugin-named-color[Named Color] plugin-oklab-color[Oklab Color] plugin-oklch-color[Oklch Color] end subgraph all-plugins-easings [Easings] plugin-easing-back[Back] plugin-easing-bounce[Bounce] plugin-easing-circ[Circ] plugin-easing-cubic[Cubic] plugin-easing-elastic[Elastic] plugin-easing-expo[Expo] plugin-easing-gaussian[Gaussian] plugin-easing-linear[Linear] plugin-easing-quart[Quart] plugin-easing-quint[Quint] plugin-easing-sigmoid[Sigmoid] plugin-easing-sine[Sine] plugin-easing-smoothstep[Smoothstep] end subgraph all-plugin-emitters-shapes [Emitters Shapes] plugin-emitters-shape-canvas[Canvas] plugin-emitters-shape-path[Path] plugin-emitters-shape-polygon[Polygon] end subgraph all-plugins-exports [Exports] plugin-export-image[Image] plugin-export-json[JSON] plugin-export-video[Video] end plugin-infection[Infection] plugin-manual-particles[Manual Particles] plugin-motion[Motion] plugin-poisson-disc[Poisson Disc] plugin-polygon-mask[Polygon Mask] plugin-responsive[Responsive] plugin-sounds[Sounds] plugin-themes[Themes] plugin-trail[Trail] plugin-zoom[Zoom] end subgraph all-shapes [Shapes] shape-arrow[Arrow] shape-cards[Cards] shape-cog[Cog] shape-heart[Heart] shape-infinity[Infinity] shape-matrix[Matrix] shape-path[Path] shape-rounded-polygon[Rounded Polygon] shape-rounded-rect[Rounded Rect] shape-spiral[Spiral] shape-squircle[Squircle] end subgraph all-updaters [Updaters] updater-gradient[Gradient] updater-orbit[Orbit] end simplex-noise --> path-curl-noise perlin-noise --> path-perlin-noise simplex-noise --> path-simplex-noise end bundle-full --> bundle-all Loading",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://particles.js.org"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/tsparticles/tsparticles#tsparticles---typescript-particles"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/sponsors/matteobruni"
+    },
+    {
+      "label": "",
+      "url": "https://www.jsdelivr.com/package/npm/tsparticles"
+    },
+    {
+      "label": "",
+      "url": "https://cdnjs.com/libraries/tsparticles"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/tsparticles"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/tsparticles"
+    },
+    {
+      "label": "",
+      "url": "https://www.codefactor.io/repository/github/tsparticles/tsparticles"
+    },
+    {
+      "label": "",
+      "url": "https://www.codacy.com/manual/ar3s/tsparticles?utm_source=github.com&utm_medium=referral&utm_content=tsparticles/tsparticles&utm_campaign=Badge_Grade"
+    },
+    {
+      "label": "",
+      "url": "https://openbase.com/js/tsparticles?utm_source=embedded&utm_medium=badge&utm_campaign=rating-badge&utm_term=js/tsparticles"
+    },
+    {
+      "label": "",
+      "url": "https://gitpod.io/#https://github.com/tsparticles/tsparticles"
+    },
+    {
+      "label": "",
+      "url": "https://repl.it/github/tsparticles/tsparticles"
+    },
+    {
+      "label": "",
+      "url": "https://discord.gg/hACwv45Hme"
+    },
+    {
+      "label": "",
+      "url": "https://t.me/tsparticles"
+    },
+    {
+      "label": "",
+      "url": "https://www.reddit.com/r/tsParticles/"
+    },
+    {
+      "label": "",
+      "url": "https://www.producthunt.com/posts/tsparticles?utm_source=badge-featured&utm_medium=badge&utm_source=badge-tsparticles"
+    },
+    {
+      "label": "",
+      "url": "https://www.buymeacoffee.com/matteobruni"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/tsparticles/tsparticles#table-of-contents"
+    },
+    {
+      "label": "tsParticles - TypeScript Particles",
+      "url": "https://github.com/tsparticles/tsparticles#tsparticles---typescript-particles"
+    },
+    {
+      "label": "Table of Contents",
+      "url": "https://github.com/tsparticles/tsparticles#table-of-contents"
+    },
+    {
+      "label": "Do you want to use it on your website?",
+      "url": "https://github.com/tsparticles/tsparticles#do-you-want-to-use-it-on-your-website"
+    },
+    {
+      "label": "Start here in 2 minutes",
+      "url": "https://github.com/tsparticles/tsparticles#start-here-in-2-minutes"
+    },
+    {
+      "label": "Library installation",
+      "url": "https://github.com/tsparticles/tsparticles#library-installation"
+    },
+    {
+      "label": "Hosting / CDN",
+      "url": "https://github.com/tsparticles/tsparticles#hosting--cdn"
+    },
+    {
+      "label": "jsDelivr",
+      "url": "https://github.com/tsparticles/tsparticles#jsdelivr"
+    },
+    {
+      "label": "cdnjs",
+      "url": "https://github.com/tsparticles/tsparticles#cdnjs"
+    },
+    {
+      "label": "unpkg",
+      "url": "https://github.com/tsparticles/tsparticles#unpkg"
+    },
+    {
+      "label": "npm",
+      "url": "https://github.com/tsparticles/tsparticles#npm"
+    },
+    {
+      "label": "yarn",
+      "url": "https://github.com/tsparticles/tsparticles#yarn"
+    },
+    {
+      "label": "pnpm",
+      "url": "https://github.com/tsparticles/tsparticles#pnpm"
+    },
+    {
+      "label": "Import and require",
+      "url": "https://github.com/tsparticles/tsparticles#import-and-require"
+    },
+    {
+      "label": "Usage",
+      "url": "https://github.com/tsparticles/tsparticles#usage"
+    },
+    {
+      "label": "Official components for some of the most used frameworks",
+      "url": "https://github.com/tsparticles/tsparticles#official-components-for-some-of-the-most-used-frameworks"
+    },
+    {
+      "label": "Angular",
+      "url": "https://github.com/tsparticles/tsparticles#angular"
+    },
+    {
+      "label": "@tsparticles/angular",
+      "url": "https://github.com/tsparticles/tsparticles#tsparticlesangular"
+    },
+    {
+      "label": "Astro",
+      "url": "https://github.com/tsparticles/tsparticles#astro"
+    },
+    {
+      "label": "@tsparticles/astro",
+      "url": "https://github.com/tsparticles/tsparticles#tsparticlesastro"
+    },
+    {
+      "label": "Ember.js",
+      "url": "https://github.com/tsparticles/tsparticles#emberjs"
+    },
+    {
+      "label": "@tsparticles/ember",
+      "url": "https://github.com/tsparticles/tsparticles#tsparticlesember"
+    },
+    {
+      "label": "Inferno",
+      "url": "https://github.com/tsparticles/tsparticles#inferno"
+    },
+    {
+      "label": "@tsparticles/inferno",
+      "url": "https://github.com/tsparticles/tsparticles#tsparticlesinferno"
+    },
+    {
+      "label": "jQuery",
+      "url": "https://github.com/tsparticles/tsparticles#jquery"
+    },
+    {
+      "label": "@tsparticles/jquery",
+      "url": "https://github.com/tsparticles/tsparticles#tsparticlesjquery"
+    },
+    {
+      "label": "Preact",
+      "url": "https://github.com/tsparticles/tsparticles#preact"
+    },
+    {
+      "label": "@tsparticles/preact",
+      "url": "https://github.com/tsparticles/tsparticles#tsparticlespreact"
+    },
+    {
+      "label": "Qwik",
+      "url": "https://github.com/tsparticles/tsparticles#qwik"
+    },
+    {
+      "label": "@tsparticles/qwik",
+      "url": "https://github.com/tsparticles/tsparticles#tsparticlesqwik"
+    },
+    {
+      "label": "ReactJS",
+      "url": "https://github.com/tsparticles/tsparticles#reactjs"
+    },
+    {
+      "label": "@tsparticles/nextjs",
+      "url": "https://github.com/tsparticles/tsparticles#tsparticlesnextjs"
+    },
+    {
+      "label": "@tsparticles/react",
+      "url": "https://github.com/tsparticles/tsparticles#tsparticlesreact"
+    },
+    {
+      "label": "RiotJS",
+      "url": "https://github.com/tsparticles/tsparticles#riotjs"
+    },
+    {
+      "label": "@tsparticles/riot",
+      "url": "https://github.com/tsparticles/tsparticles#tsparticlesriot"
+    },
+    {
+      "label": "SolidJS",
+      "url": "https://github.com/tsparticles/tsparticles#solidjs"
+    },
+    {
+      "label": "@tsparticles/solid",
+      "url": "https://github.com/tsparticles/tsparticles#tsparticlessolid"
+    },
+    {
+      "label": "Svelte",
+      "url": "https://github.com/tsparticles/tsparticles#svelte"
+    },
+    {
+      "label": "@tsparticles/svelte",
+      "url": "https://github.com/tsparticles/tsparticles#tsparticlessvelte"
+    },
+    {
+      "label": "VueJS 2.x",
+      "url": "https://github.com/tsparticles/tsparticles#vuejs-2x"
+    },
+    {
+      "label": "@tsparticles/nuxt2",
+      "url": "https://github.com/tsparticles/tsparticles#tsparticlesnuxt2"
+    },
+    {
+      "label": "@tsparticles/vue2",
+      "url": "https://github.com/tsparticles/tsparticles#tsparticlesvue2"
+    },
+    {
+      "label": "VueJS 3.x",
+      "url": "https://github.com/tsparticles/tsparticles#vuejs-3x"
+    },
+    {
+      "label": "@tsparticles/nuxt3",
+      "url": "https://github.com/tsparticles/tsparticles#tsparticlesnuxt3"
+    },
+    {
+      "label": "@tsparticles/nuxt4",
+      "url": "https://github.com/tsparticles/tsparticles#tsparticlesnuxt4"
+    },
+    {
+      "label": "@tsparticles/vue3",
+      "url": "https://github.com/tsparticles/tsparticles#tsparticlesvue3"
+    },
+    {
+      "label": "Web Components",
+      "url": "https://github.com/tsparticles/tsparticles#web-components"
+    },
+    {
+      "label": "@tsparticles/webcomponents",
+      "url": "https://github.com/tsparticles/tsparticles#tsparticleswebcomponents"
+    },
+    {
+      "label": "WordPress",
+      "url": "https://github.com/tsparticles/tsparticles#wordpress"
+    },
+    {
+      "label": "@tsparticles/wordpress",
+      "url": "https://github.com/tsparticles/tsparticles#tsparticleswordpress"
+    },
+    {
+      "label": "Elementor",
+      "url": "https://github.com/tsparticles/tsparticles#elementor"
+    },
+    {
+      "label": "Presets",
+      "url": "https://github.com/tsparticles/tsparticles#presets"
+    },
+    {
+      "label": "Ambient",
+      "url": "https://github.com/tsparticles/tsparticles#ambient"
+    },
+    {
+      "label": "Big Circles",
+      "url": "https://github.com/tsparticles/tsparticles#big-circles"
+    },
+    {
+      "label": "Bubbles",
+      "url": "https://github.com/tsparticles/tsparticles#bubbles"
+    },
+    {
+      "label": "Confetti",
+      "url": "https://github.com/tsparticles/tsparticles#confetti"
+    },
+    {
+      "label": "Confetti Cannon",
+      "url": "https://github.com/tsparticles/tsparticles#confetti-cannon"
+    },
+    {
+      "label": "Confetti Explosions",
+      "url": "https://github.com/tsparticles/tsparticles#confetti-explosions"
+    },
+    {
+      "label": "Confetti Falling",
+      "url": "https://github.com/tsparticles/tsparticles#confetti-falling"
+    },
+    {
+      "label": "Confetti Parade",
+      "url": "https://github.com/tsparticles/tsparticles#confetti-parade"
+    },
+    {
+      "label": "Party",
+      "url": "https://github.com/tsparticles/tsparticles#party"
+    },
+    {
+      "label": "Fire",
+      "url": "https://github.com/tsparticles/tsparticles#fire"
+    },
+    {
+      "label": "Firefly",
+      "url": "https://github.com/tsparticles/tsparticles#firefly"
+    },
+    {
+      "label": "Fireworks",
+      "url": "https://github.com/tsparticles/tsparticles#fireworks"
+    },
+    {
+      "label": "Fountain",
+      "url": "https://github.com/tsparticles/tsparticles#fountain"
+    },
+    {
+      "label": "Hyperspace",
+      "url": "https://github.com/tsparticles/tsparticles#hyperspace"
+    },
+    {
+      "label": "Links",
+      "url": "https://github.com/tsparticles/tsparticles#links"
+    },
+    {
+      "label": "Sea Anemone",
+      "url": "https://github.com/tsparticles/tsparticles#sea-anemone"
+    },
+    {
+      "label": "Snow",
+      "url": "https://github.com/tsparticles/tsparticles#snow"
+    },
+    {
+      "label": "Squares",
+      "url": "https://github.com/tsparticles/tsparticles#squares"
+    },
+    {
+      "label": "Stars",
+      "url": "https://github.com/tsparticles/tsparticles#stars"
+    },
+    {
+      "label": "Triangles",
+      "url": "https://github.com/tsparticles/tsparticles#triangles"
+    },
+    {
+      "label": "Templates and Resources",
+      "url": "https://github.com/tsparticles/tsparticles#templates-and-resources"
+    },
+    {
+      "label": "Demo / Generator",
+      "url": "https://github.com/tsparticles/tsparticles#demo--generator"
+    },
+    {
+      "label": "Video Tutorials",
+      "url": "https://github.com/tsparticles/tsparticles#video-tutorials"
+    },
+    {
+      "label": "Characters as particles",
+      "url": "https://github.com/tsparticles/tsparticles#characters-as-particles"
+    },
+    {
+      "label": "Polygon mask",
+      "url": "https://github.com/tsparticles/tsparticles#polygon-mask"
+    },
+    {
+      "label": "Animated stars",
+      "url": "https://github.com/tsparticles/tsparticles#animated-stars"
+    },
+    {
+      "label": "Nyan cat flying on scrolling stars",
+      "url": "https://github.com/tsparticles/tsparticles#nyan-cat-flying-on-scrolling-stars"
+    },
+    {
+      "label": "Snow particles",
+      "url": "https://github.com/tsparticles/tsparticles#snow-particles"
+    },
+    {
+      "label": "Background Mask particles",
+      "url": "https://github.com/tsparticles/tsparticles#background-mask-particles"
+    },
+    {
+      "label": "Options",
+      "url": "https://github.com/tsparticles/tsparticles#options"
+    },
+    {
+      "label": "Want to see it in action and try it?",
+      "url": "https://github.com/tsparticles/tsparticles#want-to-see-it-in-action-and-try-it"
+    },
+    {
+      "label": "Migrating from Particles.js",
+      "url": "https://github.com/tsparticles/tsparticles#migrating-from-particlesjs"
+    },
+    {
+      "label": "Plugins/Customizations",
+      "url": "https://github.com/tsparticles/tsparticles#pluginscustomizations"
+    },
+    {
+      "label": "Dependency Graph",
+      "url": "https://github.com/tsparticles/tsparticles#dependency-graph"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/tsparticles/tsparticles#do-you-want-to-use-it-on-your-website"
+    },
+    {
+      "label": "here",
+      "url": "https://particles.js.org/docs/"
+    },
+    {
+      "label": "below",
+      "url": "https://github.com/tsparticles/tsparticles/blob/main/README.md#library-installation"
+    },
+    {
+      "label": "below",
+      "url": "https://github.com/tsparticles/tsparticles/blob/main/README.md#library-installation"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/tsparticles/tsparticles#start-here-in-2-minutes"
+    },
+    {
+      "label": "https://particles.js.org/docs/",
+      "url": "https://particles.js.org/docs/"
+    },
+    {
+      "label": "https://github.com/tsparticles/tsparticles/blob/main/markdown/Options.md",
+      "url": "https://github.com/tsparticles/tsparticles/blob/main/markdown/Options.md"
+    },
+    {
+      "label": "https://github.com/tsparticles/tsparticles/blob/main/markdown/pjsMigration.md",
+      "url": "https://github.com/tsparticles/tsparticles/blob/main/markdown/pjsMigration.md"
+    },
+    {
+      "label": "https://github.com/tsparticles/presets",
+      "url": "https://github.com/tsparticles/presets"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/tsparticles/tsparticles#quick-checklist"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/tsparticles/tsparticles#choose-your-quick-start-path"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/tsparticles/tsparticles#common-pitfalls"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/tsparticles/tsparticles#related-docs"
+    },
+    {
+      "label": "https://particles.js.org/docs/",
+      "url": "https://particles.js.org/docs/"
+    },
+    {
+      "label": "https://github.com/tsparticles/tsparticles/blob/main/markdown/Options.md",
+      "url": "https://github.com/tsparticles/tsparticles/blob/main/markdown/Options.md"
+    },
+    {
+      "label": "https://github.com/tsparticles/tsparticles/blob/main/markdown/pjsMigration.md",
+      "url": "https://github.com/tsparticles/tsparticles/blob/main/markdown/pjsMigration.md"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/tsparticles/tsparticles#library-installation"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/tsparticles/tsparticles#hosting--cdn"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/tsparticles/tsparticles#jsdelivr"
+    },
+    {
+      "label": "",
+      "url": "https://www.jsdelivr.com/package/npm/@tsparticles/confetti"
+    },
+    {
+      "label": "",
+      "url": "https://www.jsdelivr.com/package/npm/@tsparticles/particles"
+    },
+    {
+      "label": "",
+      "url": "https://www.jsdelivr.com/package/npm/@tsparticles/engine"
+    },
+    {
+      "label": "",
+      "url": "https://www.jsdelivr.com/package/npm/@tsparticles/fireworks"
+    },
+    {
+      "label": "",
+      "url": "https://www.jsdelivr.com/package/npm/@tsparticles/basic"
+    },
+    {
+      "label": "",
+      "url": "https://www.jsdelivr.com/package/npm/@tsparticles/slim"
+    },
+    {
+      "label": "",
+      "url": "https://www.jsdelivr.com/package/npm/tsparticles"
+    },
+    {
+      "label": "",
+      "url": "https://www.jsdelivr.com/package/npm/@tsparticles/all"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/tsparticles/tsparticles#cdnjs"
+    },
+    {
+      "label": "",
+      "url": "https://cdnjs.com/libraries/tsparticles"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/tsparticles/tsparticles#unpkg"
+    },
+    {
+      "label": "https://unpkg.com/@tsparticles/confetti/",
+      "url": "https://unpkg.com/@tsparticles/confetti/"
+    },
+    {
+      "label": "https://unpkg.com/@tsparticles/particles/",
+      "url": "https://unpkg.com/@tsparticles/particles/"
+    },
+    {
+      "label": "https://unpkg.com/@tsparticles/engine/",
+      "url": "https://unpkg.com/@tsparticles/engine/"
+    },
+    {
+      "label": "https://unpkg.com/@tsparticles/fireworks/",
+      "url": "https://unpkg.com/@tsparticles/fireworks/"
+    },
+    {
+      "label": "https://unpkg.com/@tsparticles/basic/",
+      "url": "https://unpkg.com/@tsparticles/basic/"
+    },
+    {
+      "label": "https://unpkg.com/@tsparticles/slim/",
+      "url": "https://unpkg.com/@tsparticles/slim/"
+    },
+    {
+      "label": "https://unpkg.com/tsparticles/",
+      "url": "https://unpkg.com/tsparticles/"
+    },
+    {
+      "label": "https://unpkg.com/@tsparticles/all/",
+      "url": "https://unpkg.com/@tsparticles/all/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/tsparticles/tsparticles#npm"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@tsparticles/confetti"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@tsparticles/confetti"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@tsparticles/particles"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@tsparticles/particles"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@tsparticles/engine"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@tsparticles/engine"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@tsparticles/fireworks"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@tsparticles/fireworks"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@tsparticles/basic"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@tsparticles/basic"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@tsparticles/slim"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@tsparticles/slim"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/tsparticles"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/tsparticles"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@tsparticles/all"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@tsparticles/all"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/tsparticles/tsparticles#yarn"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/tsparticles/tsparticles#pnpm"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/tsparticles/tsparticles#import-and-require"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/tsparticles/tsparticles#usage"
+    },
+    {
+      "label": "",
+      "url": "https://particles.js.org"
+    },
+    {
+      "label": "",
+      "url": "https://confetti.js.org"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/tsparticles/tsparticles#official-components-for-some-of-the-most-used-frameworks"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/tsparticles/tsparticles#angular"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/tsparticles/tsparticles#tsparticlesangular"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@tsparticles/angular"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@tsparticles/angular"
+    },
+    {
+      "label": "here",
+      "url": "https://github.com/tsparticles/tsparticles/tree/main/wrappers/angular#readme"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/tsparticles/tsparticles#astro"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/tsparticles/tsparticles#tsparticlesastro"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@tsparticles/astro"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@tsparticles/astro"
+    },
+    {
+      "label": "here",
+      "url": "https://github.com/tsparticles/tsparticles/tree/main/wrappers/astro#readme"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/tsparticles/tsparticles#emberjs"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/tsparticles/tsparticles#tsparticlesember"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@tsparticles/ember"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@tsparticles/ember"
+    },
+    {
+      "label": "here",
+      "url": "https://github.com/tsparticles/tsparticles/tree/main/wrappers/ember#readme"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/tsparticles/tsparticles#inferno"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/tsparticles/tsparticles#tsparticlesinferno"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@tsparticles/inferno"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@tsparticles/inferno"
+    },
+    {
+      "label": "here",
+      "url": "https://github.com/tsparticles/tsparticles/tree/main/wrappers/inferno#readme"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/tsparticles/tsparticles#jquery"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/tsparticles/tsparticles#tsparticlesjquery"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@tsparticles/jquery"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@tsparticles/jquery"
+    },
+    {
+      "label": "here",
+      "url": "https://github.com/tsparticles/tsparticles/tree/main/wrappers/jquery#readme"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/tsparticles/tsparticles#preact"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/tsparticles/tsparticles#tsparticlespreact"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@tsparticles/preact"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@tsparticles/preact"
+    },
+    {
+      "label": "here",
+      "url": "https://github.com/tsparticles/tsparticles/tree/main/wrappers/preact#readme"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/tsparticles/tsparticles#qwik"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/tsparticles/tsparticles#tsparticlesqwik"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@tsparticles/qwik"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@tsparticles/qwik"
+    },
+    {
+      "label": "here",
+      "url": "https://github.com/tsparticles/tsparticles/tree/main/wrappers/qwik#readme"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/tsparticles/tsparticles#reactjs"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/tsparticles/tsparticles#tsparticlesnextjs"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@tsparticles/nextjs"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@tsparticles/nextjs"
+    },
+    {
+      "label": "here",
+      "url": "https://github.com/tsparticles/tsparticles/tree/main/wrappers/nextjs#readme"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/tsparticles/tsparticles#tsparticlesreact"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@tsparticles/react"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@tsparticles/react"
+    },
+    {
+      "label": "here",
+      "url": "https://github.com/tsparticles/tsparticles/tree/main/wrappers/react#readme"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/tsparticles/tsparticles#riotjs"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/tsparticles/tsparticles#tsparticlesriot"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@tsparticles/riot"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@tsparticles/riot"
+    },
+    {
+      "label": "here",
+      "url": "https://github.com/tsparticles/tsparticles/tree/main/wrappers/riot#readme"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/tsparticles/tsparticles#solidjs"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/tsparticles/tsparticles#tsparticlessolid"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@tsparticles/solid"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@tsparticles/solid"
+    },
+    {
+      "label": "here",
+      "url": "https://github.com/tsparticles/tsparticles/tree/main/wrappers/solid#readme"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/tsparticles/tsparticles#svelte"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/tsparticles/tsparticles#tsparticlessvelte"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@tsparticles/svelte"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@tsparticles/svelte"
+    },
+    {
+      "label": "here",
+      "url": "https://github.com/tsparticles/tsparticles/tree/main/wrappers/svelte#readme"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/tsparticles/tsparticles#vuejs-2x"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/tsparticles/tsparticles#tsparticlesnuxt2"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@tsparticles/nuxt2"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@tsparticles/nuxt2"
+    },
+    {
+      "label": "here",
+      "url": "https://github.com/tsparticles/tsparticles/tree/main/wrappers/nuxt2#readme"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/tsparticles/tsparticles#tsparticlesvue2"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@tsparticles/vue2"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@tsparticles/vue2"
+    },
+    {
+      "label": "here",
+      "url": "https://github.com/tsparticles/tsparticles/tree/main/wrappers/vue2#readme"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/tsparticles/tsparticles#vuejs-3x"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/tsparticles/tsparticles#tsparticlesnuxt3"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@tsparticles/nuxt3"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@tsparticles/nuxt3"
+    },
+    {
+      "label": "here",
+      "url": "https://github.com/tsparticles/tsparticles/tree/main/wrappers/nuxt3#readme"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/tsparticles/tsparticles#tsparticlesnuxt4"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@tsparticles/nuxt4"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@tsparticles/nuxt4"
+    },
+    {
+      "label": "here",
+      "url": "https://github.com/tsparticles/tsparticles/tree/main/wrappers/nuxt4#readme"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/tsparticles/tsparticles#tsparticlesvue3"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@tsparticles/vue3"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@tsparticles/vue3"
+    },
+    {
+      "label": "here",
+      "url": "https://github.com/tsparticles/tsparticles/tree/main/wrappers/vue3#readme"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/tsparticles/tsparticles#web-components"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/tsparticles/tsparticles#tsparticleswebcomponents"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@tsparticles/webcomponents"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@tsparticles/webcomponents"
+    },
+    {
+      "label": "here",
+      "url": "https://github.com/tsparticles/tsparticles/tree/main/wrappers/webcomponents#readme"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/tsparticles/tsparticles#wordpress"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/tsparticles/tsparticles#tsparticleswordpress"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@tsparticles/wordpress"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@tsparticles/wordpress"
+    },
+    {
+      "label": "",
+      "url": "https://wordpress.org/plugins/tsparticles-block/"
+    },
+    {
+      "label": "",
+      "url": "https://wordpress.org/plugins/tsparticles-block/"
+    },
+    {
+      "label": "here",
+      "url": "https://wordpress.org/plugins/tsparticles-block/#description"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/tsparticles/tsparticles#elementor"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/4ee38b0d1c75b673036de7d74741d75be13a796bbbd5d545a457616b75998673/68747470733a2f2f7061727469636c65732e6a732e6f72672f696d616765732f7072656d69756d2d6164646f6e732d776f726470726573732d706c7567696e2e706e67"
+    },
+    {
+      "label": "Check It Now",
+      "url": "https://premiumaddons.com/particles-section-addon-for-elementor-page-builder/"
+    },
+    {
+      "label": "See a Live Example",
+      "url": "https://premiumaddons.com/particles-section-addon-for-elementor-page-builder/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/tsparticles/tsparticles#presets"
+    },
+    {
+      "label": "this repository",
+      "url": "https://github.com/tsparticles/presets"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/tsparticles/tsparticles#ambient"
+    },
+    {
+      "label": "",
+      "url": "https://www.jsdelivr.com/package/npm/@tsparticles/preset-ambient"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@tsparticles/preset-ambient"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@tsparticles/preset-ambient"
+    },
+    {
+      "label": "",
+      "url": "https://particles.js.org/demos/recipes/ambient"
+    },
+    {
+      "label": "here",
+      "url": "https://github.com/tsparticles/tsparticles/tree/main/presets/ambient#readme"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/tsparticles/tsparticles#big-circles"
+    },
+    {
+      "label": "",
+      "url": "https://www.jsdelivr.com/package/npm/@tsparticles/preset-big-circles"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@tsparticles/preset-big-circles"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@tsparticles/preset-big-circles"
+    },
+    {
+      "label": "",
+      "url": "https://particles.js.org/demos/recipes/big-circles"
+    },
+    {
+      "label": "here",
+      "url": "https://github.com/tsparticles/tsparticles/tree/main/presets/bigCircles#readme"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/tsparticles/tsparticles#bubbles"
+    },
+    {
+      "label": "",
+      "url": "https://www.jsdelivr.com/package/npm/tsparticles"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@tsparticles/preset-bubbles"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@tsparticles/preset-bubbles"
+    },
+    {
+      "label": "",
+      "url": "https://particles.js.org/demos/recipes/bubbles"
+    },
+    {
+      "label": "here",
+      "url": "https://github.com/tsparticles/tsparticles/tree/main/presets/bubbles#readme"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/tsparticles/tsparticles#confetti"
+    },
+    {
+      "label": "",
+      "url": "https://www.jsdelivr.com/package/npm/@tsparticles/preset-confetti"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@tsparticles/preset-confetti"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@tsparticles/preset-confetti"
+    },
+    {
+      "label": "",
+      "url": "https://particles.js.org/demos/recipes/confetti"
+    },
+    {
+      "label": "here",
+      "url": "https://github.com/tsparticles/tsparticles/tree/main/presets/confetti#readme"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/tsparticles/tsparticles#confetti-cannon"
+    },
+    {
+      "label": "",
+      "url": "https://www.jsdelivr.com/package/npm/@tsparticles/preset-confetti-cannon"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@tsparticles/preset-confetti-cannon"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@tsparticles/preset-confetti-cannon"
+    },
+    {
+      "label": "",
+      "url": "https://particles.js.org/demos/recipes/confettiCannon"
+    },
+    {
+      "label": "here",
+      "url": "https://github.com/tsparticles/tsparticles/tree/main/presets/confettiCannon#readme"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/tsparticles/tsparticles#confetti-explosions"
+    },
+    {
+      "label": "",
+      "url": "https://www.jsdelivr.com/package/npm/@tsparticles/preset-confetti-explosions"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@tsparticles/preset-confetti-explosions"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@tsparticles/preset-confetti-explosions"
+    },
+    {
+      "label": "",
+      "url": "https://particles.js.org/demos/recipes/confettiExplosions"
+    },
+    {
+      "label": "here",
+      "url": "https://github.com/tsparticles/tsparticles/tree/main/presets/confettiExplosions#readme"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/tsparticles/tsparticles#confetti-falling"
+    },
+    {
+      "label": "",
+      "url": "https://www.jsdelivr.com/package/npm/@tsparticles/preset-confetti-falling"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@tsparticles/preset-confetti-falling"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@tsparticles/preset-confetti-falling"
+    },
+    {
+      "label": "",
+      "url": "https://particles.js.org/demos/recipes/confettiFalling"
+    },
+    {
+      "label": "here",
+      "url": "https://github.com/tsparticles/tsparticles/tree/main/presets/confettiFalling#readme"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/tsparticles/tsparticles#confetti-parade"
+    },
+    {
+      "label": "",
+      "url": "https://www.jsdelivr.com/package/npm/@tsparticles/preset-confetti-parade"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@tsparticles/preset-confetti-parade"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@tsparticles/preset-confetti-parade"
+    },
+    {
+      "label": "",
+      "url": "https://particles.js.org/demos/recipes/confettiParade"
+    },
+    {
+      "label": "here",
+      "url": "https://github.com/tsparticles/tsparticles/tree/main/presets/confettiParade#readme"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/tsparticles/tsparticles#party"
+    },
+    {
+      "label": "",
+      "url": "https://www.jsdelivr.com/package/npm/@tsparticles/preset-party"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@tsparticles/preset-party"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@tsparticles/preset-party"
+    },
+    {
+      "label": "",
+      "url": "https://particles.js.org/demos/recipes/party"
+    },
+    {
+      "label": "here",
+      "url": "https://github.com/tsparticles/tsparticles/tree/main/presets/party#readme"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/tsparticles/tsparticles#fire"
+    },
+    {
+      "label": "",
+      "url": "https://www.jsdelivr.com/package/npm/@tsparticles/preset-fire"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@tsparticles/preset-fire"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@tsparticles/preset-fire"
+    },
+    {
+      "label": "",
+      "url": "https://particles.js.org/demos/recipes/fire"
+    },
+    {
+      "label": "here",
+      "url": "https://github.com/tsparticles/tsparticles/tree/main/presets/fire#readme"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/tsparticles/tsparticles#firefly"
+    },
+    {
+      "label": "",
+      "url": "https://www.jsdelivr.com/package/npm/@tsparticles/preset-firefly"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@tsparticles/preset-firefly"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@tsparticles/preset-firefly"
+    },
+    {
+      "label": "",
+      "url": "https://particles.js.org/demos/recipes/firefly"
+    },
+    {
+      "label": "here",
+      "url": "https://github.com/tsparticles/tsparticles/tree/main/presets/firefly#readme"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/tsparticles/tsparticles#fireworks"
+    },
+    {
+      "label": "",
+      "url": "https://www.jsdelivr.com/package/npm/@tsparticles/preset-fireworks"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@tsparticles/preset-fireworks"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@tsparticles/preset-fireworks"
+    },
+    {
+      "label": "",
+      "url": "https://particles.js.org/demos/recipes/fireworks"
+    },
+    {
+      "label": "here",
+      "url": "https://github.com/tsparticles/tsparticles/tree/main/presets/fireworks#readme"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/tsparticles/tsparticles#hyperspace"
+    },
+    {
+      "label": "",
+      "url": "https://www.jsdelivr.com/package/npm/@tsparticles/preset-hyperspace"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@tsparticles/preset-hyperspace"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@tsparticles/preset-hyperspace"
+    },
+    {
+      "label": "",
+      "url": "https://particles.js.org/demos/recipes/hyperspace"
+    },
+    {
+      "label": "here",
+      "url": "https://github.com/tsparticles/tsparticles/tree/main/presets/hyperspace#readme"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/tsparticles/tsparticles#fountain"
+    },
+    {
+      "label": "",
+      "url": "https://www.jsdelivr.com/package/npm/@tsparticles/preset-fountain"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@tsparticles/preset-fountain"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@tsparticles/preset-fountain"
+    },
+    {
+      "label": "",
+      "url": "https://particles.js.org/demos/recipes/fountain"
+    },
+    {
+      "label": "here",
+      "url": "https://github.com/tsparticles/tsparticles/tree/main/presets/fountain#readme"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/tsparticles/tsparticles#links"
+    },
+    {
+      "label": "",
+      "url": "https://www.jsdelivr.com/package/npm/@tsparticles/preset-links"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@tsparticles/preset-links"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@tsparticles/preset-links"
+    },
+    {
+      "label": "",
+      "url": "https://particles.js.org/demos/recipes/links"
+    },
+    {
+      "label": "here",
+      "url": "https://github.com/tsparticles/tsparticles/tree/main/presets/links#readme"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/tsparticles/tsparticles#sea-anemone"
+    },
+    {
+      "label": "",
+      "url": "https://www.jsdelivr.com/package/npm/@tsparticles/preset-sea-anemone"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@tsparticles/preset-sea-anemone"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@tsparticles/preset-sea-anemone"
+    },
+    {
+      "label": "",
+      "url": "https://particles.js.org/demos/recipes/sea-anemone"
+    },
+    {
+      "label": "here",
+      "url": "https://github.com/tsparticles/tsparticles/tree/main/presets/seaAnemone#readme"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/tsparticles/tsparticles#snow"
+    },
+    {
+      "label": "",
+      "url": "https://www.jsdelivr.com/package/npm/@tsparticles/preset-snow"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@tsparticles/preset-snow"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@tsparticles/preset-snow"
+    },
+    {
+      "label": "",
+      "url": "https://particles.js.org/demos/recipes/snow"
+    },
+    {
+      "label": "here",
+      "url": "https://github.com/tsparticles/tsparticles/tree/main/presets/snow#readme"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/tsparticles/tsparticles#squares"
+    },
+    {
+      "label": "",
+      "url": "https://www.jsdelivr.com/package/npm/@tsparticles/preset-squares"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@tsparticles/preset-squares"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@tsparticles/preset-squares"
+    },
+    {
+      "label": "",
+      "url": "https://particles.js.org/demos/recipes/squares"
+    },
+    {
+      "label": "here",
+      "url": "https://github.com/tsparticles/tsparticles/tree/main/presets/squares#readme"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/tsparticles/tsparticles#stars"
+    },
+    {
+      "label": "",
+      "url": "https://www.jsdelivr.com/package/npm/@tsparticles/preset-stars"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@tsparticles/preset-stars"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@tsparticles/preset-stars"
+    },
+    {
+      "label": "",
+      "url": "https://particles.js.org/demos/recipes/stars"
+    },
+    {
+      "label": "here",
+      "url": "https://github.com/tsparticles/tsparticles/tree/main/presets/stars#readme"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/tsparticles/tsparticles#triangles"
+    },
+    {
+      "label": "",
+      "url": "https://www.jsdelivr.com/package/npm/@tsparticles/preset-triangles"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@tsparticles/preset-triangles"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@tsparticles/preset-triangles"
+    },
+    {
+      "label": "",
+      "url": "https://particles.js.org/demos/recipes/triangles"
+    },
+    {
+      "label": "here",
+      "url": "https://github.com/tsparticles/tsparticles/tree/main/presets/triangles#readme"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/tsparticles/tsparticles#templates-and-resources"
+    },
+    {
+      "label": "here",
+      "url": "https://github.com/tsparticles/templates"
+    },
+    {
+      "label": "https://github.com/tsparticles/templates",
+      "url": "https://github.com/tsparticles/templates"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/tsparticles/tsparticles#demo--generator"
+    },
+    {
+      "label": "https://particles.js.org/samples",
+      "url": "https://particles.js.org/samples"
+    },
+    {
+      "label": "",
+      "url": "https://particles.js.org/samples"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/tsparticles/tsparticles#video-tutorials"
+    },
+    {
+      "label": "https://particles.js.org/video.html",
+      "url": "https://particles.js.org/video.html"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/tsparticles/tsparticles#characters-as-particles"
+    },
+    {
+      "label": "",
+      "url": "https://particles.js.org/samples/#chars"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/tsparticles/tsparticles#polygon-mask"
+    },
+    {
+      "label": "",
+      "url": "https://particles.js.org/samples/#polygonMask"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/tsparticles/tsparticles#animated-stars"
+    },
+    {
+      "label": "",
+      "url": "https://particles.js.org/samples/#nasa"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/tsparticles/tsparticles#nyan-cat-flying-on-scrolling-stars"
+    },
+    {
+      "label": "",
+      "url": "https://particles.js.org/samples/#nyancat2"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/tsparticles/tsparticles#snow-particles"
+    },
+    {
+      "label": "",
+      "url": "https://particles.js.org/samples/#snow"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/tsparticles/tsparticles#background-mask-particles"
+    },
+    {
+      "label": "",
+      "url": "https://particles.js.org/samples/#background"
+    },
+    {
+      "label": "here",
+      "url": "https://particles.js.org/demos/presets/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/tsparticles/tsparticles#options"
+    },
+    {
+      "label": "here",
+      "url": "https://particles.js.org/docs/interfaces/tsParticles_Engine.Options_Interfaces_IOptions.IOptions.html"
+    },
+    {
+      "label": "https://github.com/tsparticles/tsparticles/blob/main/markdown/Options.md",
+      "url": "https://github.com/tsparticles/tsparticles/blob/main/markdown/Options.md"
+    },
+    {
+      "label": "https://github.com/tsparticles/tsparticles/blob/main/markdown/Color.md",
+      "url": "https://github.com/tsparticles/tsparticles/blob/main/markdown/Color.md"
+    },
+    {
+      "label": "https://github.com/tsparticles/tsparticles/blob/main/markdown/Container.md",
+      "url": "https://github.com/tsparticles/tsparticles/blob/main/markdown/Container.md"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/tsparticles/tsparticles#want-to-see-it-in-action-and-try-it"
+    },
+    {
+      "label": "CodePen",
+      "url": "https://codepen.io/collection/DPOage"
+    },
+    {
+      "label": "profile",
+      "url": "https://codepen.io/matteobruni"
+    },
+    {
+      "label": "",
+      "url": "https://particles.js.org/samples/"
+    },
+    {
+      "label": "http://localhost:3000",
+      "url": "http://localhost:3000"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/tsparticles/tsparticles#migrating-from-particlesjs"
+    },
+    {
+      "label": "",
+      "url": "https://www.jsdelivr.com/package/npm/@tsparticles/pjs"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@tsparticles/pjs"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@tsparticles/pjs"
+    },
+    {
+      "label": "here",
+      "url": "https://dev.to/matteobruni/migrating-from-particles-js-to-tsparticles-2a6m"
+    },
+    {
+      "label": "Read here",
+      "url": "https://dev.to/matteobruni/5-reasons-to-use-tsparticles-and-not-particles-js-1gbe"
+    },
+    {
+      "label": "https://github.com/tsparticles/tsparticles/blob/main/markdown/pjsMigration.md",
+      "url": "https://github.com/tsparticles/tsparticles/blob/main/markdown/pjsMigration.md"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/tsparticles/tsparticles#pluginscustomizations"
+    },
+    {
+      "label": "here",
+      "url": "https://particles.js.org/docs/modules/Core_Interfaces_IPlugin.html"
+    },
+    {
+      "label": "https://github.com/tsparticles/tsparticles/blob/main/markdown/Plugins.md",
+      "url": "https://github.com/tsparticles/tsparticles/blob/main/markdown/Plugins.md"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/tsparticles/tsparticles#dependency-graph"
+    }
+  ],
+  "root_files": [
+    ".agents/skills",
+    ".claude",
+    ".codex",
+    ".cursor",
+    ".gemini",
+    ".github",
+    ".husky",
+    ".opencode",
+    ".planning",
+    "bundles",
+    "cli",
+    "demo",
+    "effects",
+    "engine",
+    "integrations/mcp-server",
+    "interactions",
+    "markdown",
+    "palettes",
+    "patches",
+    "paths",
+    "plugins",
+    "presets",
+    "scripts",
+    "shapes",
+    "templates",
+    "updaters",
+    "utils",
+    "websites",
+    "wrappers",
+    ".commitlintrc.json",
+    ".firebaserc",
+    ".gitattributes",
+    ".gitignore",
+    ".gitpod.yml",
+    ".nvmrc",
+    ".puppeteerrc.cjs",
+    "AGENTS.md",
+    "CHANGELOG.md",
+    "CLAUDE.md",
+    "CODE_OF_CONDUCT.md",
+    "CONTRIBUTING.md",
+    "LICENSE",
+    "README.md",
+    "SECURITY.md",
+    "crowdin.yml",
+    "deploy.docs-json.js",
+    "firebase.json",
+    "lerna.json",
+    "nx.json",
+    "opencode.json",
+    "package.json",
+    "pnpm-lock.yaml",
+    "pnpm-workspace.yaml",
+    "prettier.readme.config.json",
+    "renovate-base.json",
+    "renovate-cli.json",
+    "renovate-demo.json",
+    "renovate-templates.json",
+    "renovate-websites.json",
+    "renovate-wrappers.json",
+    "renovate.json",
+    "sweep.yaml",
+    "tsconfig.json"
+  ],
+  "release_count": 13,
+  "status": "verified"
+}

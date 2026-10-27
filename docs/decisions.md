@@ -1,5 +1,18 @@
 # Rendering decisions
 
+## Sindri hero look-development page
+
+- Swing choreography uses explicit ready/lift/load/contact/rebound/recovery key poses, with the head above the fist in the ready grip and no inverted wrist revolution. The hero opens in ready at time 0; thumbnails remain at 2.42 for comparison. A smaller hammer keeps the head readable away from the elbow; the gripping hand is composited in front of the anvil rim. Impact still occurs at phase 2.16. Test both the held ready silhouette and the full cycle, not only joint connectivity.
+
+- Hammer-arm anatomy uses a fixed outer-tunic shoulder and a two-bone elbow solve in `armPoseAt`. Both segment lengths stay constant, the elbow stays on a continuous outward branch, and the wrist carries the hammer independently. The contact face still meets the billet at the spark origin. Never move the shoulder toward the neck just to make a rigid hammer arc land on target; solve the wrist and elbow instead. Regression coverage checks actual scene anchoring, constant lengths, continuity, and contact alignment.
+
+- A separate Vite entry at `/sindri.html` leaves textmode.js and the media lab unchanged. Both pages are production build inputs; the new page adds no runtime dependency.
+- `sindri-scene.ts` is an original neutral 640×540 authored illustration. `sindri-presets.ts` owns 20 treatments and deterministic 3.8-second hammer timing. `sindri-renderer.ts` independently samples that image into ASCII, dither, pixels, edges, hatching, dots, or ember fragments, then composites procedural particles. `sindri.ts` owns DOM/input and the only requestAnimationFrame loop, with a 24 fps draw cap.
+- This is intentionally a 2D silhouette/website-hero experiment, not Milestone B's real 3D renderer. Future geometry, light/shadow/depth buffers, and GPU postprocessing can replace the source and sampling implementation without coupling to the gallery controls or simulation timing. CPU sampling here is a prototype, not a performance claim.
+- All thumbnails share time 2.42 and the active preview preserves time across look switches. Particle placement is seeded by stable integer hashes. Pausing freezes both the scene and particles; reduced-motion starts paused. Background tabs do not advance simulation time.
+- Shortlists contain only validated look IDs. PNG export pauses and saves the artwork only, without HTML hero copy. Study JSON records the source/renderer revision, seed, time, speed, canvas size, palette/treatment, and font stack; it is a snapshot, not an implemented import format. Monospace glyph appearance remains host-dependent.
+- Keep sufficient vertical framing for the raised hammer; a good contact-frame crop can cut off the swing. Validate time-separated frames, not only the default strike thumbnail. The capture script uses a paused Playwright clock plus explicit frame stepping and CDP screenshots, feeding the system ffmpeg directly; Playwright's own video capture needs a separate ffmpeg bundle.
+
 ## Still-image lab
 
 - Vite + TypeScript, plain HTML/CSS controls, textmode.js 0.18.0. Dependencies are pinned in package-lock.json. No UI framework or Three.js is needed for this slice.

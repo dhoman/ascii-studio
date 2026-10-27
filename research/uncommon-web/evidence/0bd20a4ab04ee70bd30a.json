@@ -1,0 +1,165 @@
+{
+  "url": "https://github.com/OutThisLife/crt-shader",
+  "final_url": "https://github.com/OutThisLife/crt-shader",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:47:29.221532+00:00",
+  "stars": 12,
+  "forks": 0,
+  "description": "Multi-pass CRT reconstruction for WebGL, Three.js and React",
+  "homepage": "https://crt-shader.vercel.app",
+  "topics": [
+    "crt",
+    "glsl",
+    "pixel-art",
+    "postprocessing",
+    "react",
+    "react-three-fiber",
+    "retro",
+    "scanlines",
+    "shader",
+    "threejs",
+    "webgl",
+    "webgl2"
+  ],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2026-09-22T19:38:06.000Z",
+  "branch": "main",
+  "commit": "aa0e89cbd958b43e058670ff8f35a3471e601b3b",
+  "readme": "crt-shader Multi-pass CRT rendering for WebGL 2, with image, React, Three.js and pmndrs adapters. The pipeline applies signal filtering, brightness-dependent scanlines and display optics. Documentation · Gallery · npm Install Add the skill to your coding agent: npx skills add OutThisLife/crt-shader Then ask for what you want, like \"put a CRT effect on the hero image\". The agent installs the package and wires it in. Or install it yourself: pnpm add crt-shader The package ships ES modules and TypeScript declarations. Get started has working examples and the dependencies for each adapter. Paste this into a browser module, such as src/main.js in a Vite app. It draws its own source image. import { createRuntime, prepareInput } from 'crt-shader'; const source = document.createElement('canvas'); source.width = 64; source.height = 48; const context = source.getContext('2d'); context.fillStyle = '#fff'; context.font = 'bold 24px monospace'; context.fillText('CRT', 4, 32); const output = document.body.appendChild(document.createElement('canvas')); output.setAttribute('aria-label', 'CRT text'); output.style.maxWidth = '100%'; const runtime = createRuntime(); try { await runtime.render({ source: prepareInput(source), output, width: 512, height: 384, preset: 'reference', }); } finally { runtime.dispose(); } Integrations Import Use Guide crt-shader Image preparation, runtime, CRTRenderer, presets Vanilla JavaScript crt-shader/react <CRTImage> for still images React crt-shader/three CRTPass for Three's native EffectComposer Three.js crt-shader/postprocessing CRTPass for the pmndrs composer pmndrs crt-shader/r3f <CRT> inside @react-three/postprocessing React Three Fiber crt-shader/presets Immutable PRESETS Options Images preserve native pixels by default; photo downsampling is opt-in. Scene adapters default to inputResolution=\"auto\", which downsamples the rendered scene. For native-resolution CRT, set a numeric resolution at least as large as the input buffer's longest edge. See scene input sizing. The effect processes full frames with opaque RGB output on a black matte. For custom integrations, see the GLSL reference and porting guide. Development Use the pnpm version pinned in package.json. pnpm install pnpm docs:dev The docs run at http://127.0.0.1:3000/. Use pnpm dev for the standalone examples. Build, package and release commands are in Contributing. Credit and license Code by Brooklyn (OutThisLife), with visual inspiration from Datagubbe's CRT article and follow-up. Original code is MIT-licensed; retain LICENSE and NOTICE.md when copying or porting it. Third-party images and articles have separate rights. See Credits.",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://github.com/OutThisLife/crt-shader#crt-shader"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/crt-shader"
+    },
+    {
+      "label": "Documentation",
+      "url": "https://crt-shader.vercel.app/"
+    },
+    {
+      "label": "Gallery",
+      "url": "https://crt-shader.vercel.app/examples/gallery/"
+    },
+    {
+      "label": "npm",
+      "url": "https://www.npmjs.com/package/crt-shader"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/OutThisLife/crt-shader#install"
+    },
+    {
+      "label": "Get started",
+      "url": "https://crt-shader.vercel.app/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/OutThisLife/crt-shader#integrations"
+    },
+    {
+      "label": "Vanilla JavaScript",
+      "url": "https://crt-shader.vercel.app/guides/vanilla/"
+    },
+    {
+      "label": "React",
+      "url": "https://crt-shader.vercel.app/guides/react/"
+    },
+    {
+      "label": "Three.js",
+      "url": "https://crt-shader.vercel.app/guides/three/"
+    },
+    {
+      "label": "pmndrs",
+      "url": "https://crt-shader.vercel.app/guides/postprocessing/"
+    },
+    {
+      "label": "React Three Fiber",
+      "url": "https://crt-shader.vercel.app/guides/r3f/"
+    },
+    {
+      "label": "Options",
+      "url": "https://crt-shader.vercel.app/options/"
+    },
+    {
+      "label": "scene input sizing",
+      "url": "https://crt-shader.vercel.app/scenes/#input-resolution-and-modes"
+    },
+    {
+      "label": "GLSL reference",
+      "url": "https://github.com/OutThisLife/crt-shader/blob/main/docs/glsl.md"
+    },
+    {
+      "label": "porting guide",
+      "url": "https://crt-shader.vercel.app/agents/PORTING/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/OutThisLife/crt-shader#development"
+    },
+    {
+      "label": "package.json",
+      "url": "https://github.com/OutThisLife/crt-shader/blob/main/package.json"
+    },
+    {
+      "label": "examples",
+      "url": "https://github.com/OutThisLife/crt-shader/blob/main/examples"
+    },
+    {
+      "label": "Contributing",
+      "url": "https://crt-shader.vercel.app/CONTRIBUTING/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/OutThisLife/crt-shader#credit-and-license"
+    },
+    {
+      "label": "OutThisLife",
+      "url": "https://github.com/OutThisLife"
+    },
+    {
+      "label": "CRT article",
+      "url": "https://datagubbe.se/crt/"
+    },
+    {
+      "label": "follow-up",
+      "url": "https://datagubbe.se/crt2/"
+    },
+    {
+      "label": "LICENSE",
+      "url": "https://github.com/OutThisLife/crt-shader/blob/main/LICENSE"
+    },
+    {
+      "label": "NOTICE.md",
+      "url": "https://github.com/OutThisLife/crt-shader/blob/main/NOTICE.md"
+    },
+    {
+      "label": "Credits",
+      "url": "https://crt-shader.vercel.app/CREDITS/"
+    }
+  ],
+  "root_files": [
+    ".changeset",
+    ".github/workflows",
+    "docs",
+    "examples",
+    "packages/crt-shader",
+    "scripts",
+    "skills/crt-shader",
+    "tests",
+    "verification",
+    ".gitignore",
+    "LICENSE",
+    "NOTICE.md",
+    "README.md",
+    "package.json",
+    "pnpm-lock.yaml",
+    "pnpm-workspace.yaml",
+    "vercel.json"
+  ],
+  "release_count": 2,
+  "status": "verified"
+}

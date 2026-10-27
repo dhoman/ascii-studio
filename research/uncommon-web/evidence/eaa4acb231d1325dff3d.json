@@ -1,0 +1,4111 @@
+{
+  "url": "https://github.com/thi-ng/umbrella",
+  "final_url": "https://github.com/thi-ng/umbrella",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:48:21.352164+00:00",
+  "stars": 3832,
+  "forks": 169,
+  "description": "⛱  Broadly scoped ecosystem & mono-repository of 215 TypeScript projects (and ~185 examples) for general purpose, functional, data driven development",
+  "homepage": "https://thi.ng",
+  "topics": [
+    "color",
+    "data-structures",
+    "dsl",
+    "functional-programming",
+    "geometry",
+    "html",
+    "monorepo",
+    "parser-combinators",
+    "reactive-programming",
+    "shadergraph",
+    "streams",
+    "tensors",
+    "transducers",
+    "typescript",
+    "ui",
+    "vectors",
+    "visualization",
+    "webassembly",
+    "webgl",
+    "ziglang"
+  ],
+  "license": "Apache-2.0",
+  "archived": false,
+  "created_at": "2018-01-24T02:31:44.000Z",
+  "branch": "develop",
+  "commit": "5c5e334241a88fbd3ea31b906a091746539e682b",
+  "readme": "Project migrated to Codeberg. The original Github repo is now just a readonly mirror and will be deleted later this year. About Getting Started Documentation Project templates #HowToThing Blog posts Videos Examples & Showcase awesome.thi.ng Generative art projects Community, contributing, getting help Wiki Projects Latest updates Algorithms & data structures DSLs File / file format / hardware support Frontend / UI Fundamentals Geometry, image & visualization Iterator, stream & sequence processing Low-level, binary, memory management, interop Maths Network Randomness Reactive programming WebGL / GPGPU Deprecated packages Building Building example projects Testing Building API docs Extracting code examples from readme files & comments Acknowledgements License Contributors About This is LLM-free, human-made and cared for software, maintained as an ecosystem and anti-framework. \"A collection of functional programming libraries that can be composed together. Unlike a framework, thi.ng is a suite of instruments and you (the user) must be the composer of. Geared towards versatility, not any specific type of music.\" — @loganpowell via Twitter Please visit thi.ng for additional information. You might also find the following tools useful to find & explore projects in this vast ecosystem: thi.ng tag browser tag-based search on the thi.ng website repo-wide doc string search generated API docs This project is NOT a framework and all packages can be used in isolation. Not including deprecations, this mono-repository is home to 217 individual TypeScript libraries/packages/tools and ~185 example projects illustrating their usage, currently totalling ~250k SLOC and ~4350 source files... Some of the projects have been in regular development since 2015. The monorepo exists in its current form since January 2018. Unlike most other large mono-repos, this one is not for a single project, but a broad collection of jointly developed, yet independent libraries, tools and general purpose building blocks for the following non-exhaustive list of topics (see package overview below): Functional programming (ES6 iterators/generators, composition, memoization, transducers, multi-methods) Reactive programming, stream / transducer based dataflow graphs / pipelines / DOM Fiber process tree abstraction for ES6 generators (co-routines / cooperative multitasking) Data structures & data transformations for wide range of use cases (maps, sets, heaps, queues, graphs etc.) WebAssembly bridge APIs & data structure bindings code generators for multiple target languages (primarily aimed at Zig & C11) PEG-style functional parser combinators w/ (optional) custom grammar definition language Customizable HTML & Markdown parsers 2D/3D geometry generation, shape primitives, math, manipulation, intersections, conversions & visualizations Canvas abstractions, pixel buffers & SVG serialization/conversion Comprehensive function collection (900+) for nD-vectors and matrices (dense & sparse) ECS implementations with optional support for strided memory layouts Semi-declarative WebGL 1/2 abstraction layer DSL for shader functions defined in TypeScript and cross-compilation to GLSL, JS, VEX etc. Value-based equivalence (vs. native object identity) and associative data structures (sets, maps) DSP building blocks: oscillators, noise generators, filters, 1D FFT/IFFT, muxers, rate converters Immutable data handling, state containers, transacted state updates, Undo-Redo history Reactive UI component toolkits (DOM-based, canvas-based, immediate-mode, multiple approaches...) Multi-format, multi-channel pixel buffers (int & float based), conversions, dithering, Porter-Duff alpha-blending operators Color space/format conversions, matrix based color manipulation, gradient generators, color palettes, dominant color extraction Date-time abstraction, relative dates, iterators, formatters, math WebWorker workflow abstractions Forth-style pointfree DSL for functional composition and DSL development/extension S-expression parser & runtime (interpreter) infrastructure for custom DSL creation WASM-based SIMD batch-processing of vector data Pen-plotter (AxiDraw) toolchain & geometry conversions Interpolations, math helpers, automatic differentiation (Dual numbers) etc. Once more, this project is NOT a framework. There's no turn-key, one-size-fits-all approach and instead the overall design philosophy encourages a mix & match philosophy for key aspects of application design (inside & outside the browser). Customization points are provided wherever useful and only expect certain interfaces/type signatures rather than hard-coded concrete implementations. In many cases presets are provided too. All packages: are versioned independently have auto-generated online documentation at docs.thi.ng built via esbuild and tested via bun.sh released via thi.ng/monopub publishing toolchain distributed as ESM modules (ES2022 syntax) with export maps, TypeScript typings & change logs highly modular with often only a single function / class (incl. closely related functions) per file to help w/ selective imports and tree shaking provide re-exports of all their publics for full library imports have either none or only @thi.ng internal runtime dependencies (w/ very few exceptions! All dependencies are listed in each package readme) declare public interfaces, enums & types in an api.ts file licensed under Apache Software License 2.0 Getting started A common misconception is to think of this repo as single project. It is not! The sheer number and varied nature & purpose of these packages makes it impossible to provide traditional \"Getting started\" tutorials — there would have to be dozens of them... To compensate, this repo provides ~180 example projects, detailed package readmes (at the very least for all the larger and/or more important ones), as well as hundreds of small usage examples/snippets in doc strings & readme files. Documentation Generated API docs (overview) Single page API docs for all pacakges (work-in-progress) Hundreds of usage examples/snippets If you're unsure about something, please reach out! Any constructive feedback is always highly appreciated! Project templates You might find one of the following template repos an useful starting point (only updated sporadically, make sure to update dependencies manually): tpl-umbrella-basic: Bare-bones template repo for browser-based projects tpl-umbrella-fxhash: Project template repo for generative art projects on the fx(hash) platform tpl-umbrella-zig: Minimal browser project template for hybrid TypeScript & Zig (WebAssembly) apps #HowToThing Between August-November 2023, #HowToThing was a series of short posts & mini-tutorials on Mastodon, demonstrating a range of different techniques, patterns and use cases from across the thi.ng/umbrella ecosystem. These are not necessarily intro examples, but each one comes with heavily commented code (and often with visual outputs/results). 001: FPS counter with moving average 002: Sorting an array by potentially CPU-costly sort criteria 003: Multiple key states and extracting commands via FSM 004: Creating text-based plots to debug & visualize sequential data 005: Barnsley fern IFS fractal 006: Clustering arbitrary n-dimensional data using K-means 007: Converting Google Maps bookmarks to KML 008: CSV parsing into structured data & multi-plot SVG dataviz 009: 2D canvas drawing & threadLast() dataflow operator 010: Basic web app UI/DOM via Zig/WASM and thi.ng/wasm-api 011: 2D cellular automata as WebGL2 multi-pass shader pipeline 012: Pure CSS image transition/reveal with thi.ng/hiccup-css 013: Lisp interpreter using thi.ng/sexpr & thi.ng/defmulti 014: A simple browser REPL for a Lispy mini language 015: Generative audio synth offline renderer and WAV file export 016: Building a reactive Mastodon UI, parsing & transforming API data 017: (Re)Constructing the thi.ng logo as 2D signed-distance field 018: Topological sorting, creating & visualizing a task dependency graph 019: Building a responsive & reactive stacked column layout 020: Generating randomized 4-point 2D multicolor gradient maps/images 021: Iterative animated convex polygon subdivision & heat map viz 022: Quasi-random voronoi lattice generator 023: Tag-based Jaccard similarity ranking/filtering using bitfields 024: 2.5D hidden line visualization of digital elevation files (DEM) 025: Fitting, transforming & plotting 10k data points per frame using SIMD 026: Shader meta-programming to generate animated function plots 027: Flocking sim with neighborhood queries to visualize proximity 028: Randomized, space-filling, nested 2D grid layout generator 029: Forth-like DSL & livecoding playground for 2D geometry generation 030: Procedural stochastic text generation via custom DSL & parse grammar Blog posts \"Of umbrellas, transducers, reactive streams & mushrooms\" (ongoing series): Part 1 - Project & series overview Part 2 - HOFs, Transducers, Reducers Part 3 - Convolution, 1D/2D Cellular automata Part 4 - Disjoint Sets, Graph analysis, Signed Distance Fields How to UI in 2018 The Jacob's Ladder of coding Videos The following videos have been migrated from YouTube to their new home at makertube.net (more to come): Building a web editor for creating/testing parse grammars Building a shader graph editor (WebGL, shader AST transpiler, UI) Crash course: TypeScript mapped types in action Examples & Showcase There's a steadily growing number (~180) of standalone examples of different complexities (often combining functionality from several packages) in the examples directory. Example screenshots (small selection) awesome.thi.ng Due to other priorities still very much in its infancy & planning stage, but please help to document your own usage of these packages by contributing project information to the awesome.thi.ng repo, which will be used to build a showcase site... Thank you! Generative art projects Several generative art projects by Karsten Schmidt on fx(hash) were created exclusively with libraries from this collection. De/Frag series Quasiflock C-SCAPE ASCII-SCAPE Bubblemania Danza (unreleased) S-TRACE (unreleased) Community, contributing, getting help NoteMy Mastodon account is the best place to learn about ongoing developments. This is a multi-purpose account, but you can view #ThingUmbrella tagged posts only and/or subscribe to those via RSS. Join the discussions here on Github, get in touch via Mastodon or use the issue tracker. If you'd like to contribute in other ways, please first read this document. In general, we welcome contributions of all kinds (docs, examples, bug fixes, feature requests, financial contributions etc.) Note: The default branch for this repo is develop and all PRs should be based on this branch. This too means, the README files on this branch might refer to yet-unreleased features or packages. Please use the main branch for viewing the most recently released version(s)!. Wiki To date, the wiki has only been updated sporadically, but please be sure to check it out for project-wide glossary, information, cookbooks, useful snippets etc. Projects Latest updates As of: 2026-10-14 Status Package Version Changelog @thi.ng/hiccup-sanitize changelog Algorithms & data structures Project Version Changelog Description @thi.ng/adjacency changelog Adjacency matrices & graph algorithms @thi.ng/arrays changelog Array utilities @thi.ng/associative changelog Alt Set & Map implementations @thi.ng/atom changelog Immutable value wrappers, views, history @thi.ng/bitfield changelog 1D/2D bit field implementations @thi.ng/bidir-index changelog Bi-directional key-value map/index @thi.ng/buffers changelog Generic read/write buffers w/ diff. behaviors @thi.ng/cache changelog In-memory caches / strategies @thi.ng/cellular changelog Highly configurable 1D Cellular automata @thi.ng/column-store changelog Extensible in-memory column store database @thi.ng/dcons changelog Doubly-linked list @thi.ng/diff changelog Array & object diffing @thi.ng/disjoint-set changelog Disjoint Set data structure @thi.ng/dgraph changelog Dependency graph @thi.ng/ecs changelog Entity-Component System @thi.ng/gp changelog Genetic programming helpers / AST gen @thi.ng/heaps changelog Binary & d-ary heap impls @thi.ng/idgen changelog Versioned ID generation / free-list @thi.ng/k-means changelog K-means clustering of n-D data @thi.ng/leaky-bucket changelog Counter-based Leaky Bucket implementation @thi.ng/ramp changelog Parametric, interpolated lookup tables @thi.ng/quad-edge changelog Quad-edge, dual-graph data structure @thi.ng/resolve-map changelog DAG computations & value resolution @thi.ng/sorted-map changelog Sorted map & set datastructure @thi.ng/sparse-set changelog Sparse set datastructure @thi.ng/tensors changelog 1D-4D tensors, views & operations @thi.ng/text-analysis changelog Tokenization, statistics, vector encoding, clustering @thi.ng/trie changelog Trie-based map datastructure w/ prefix queries @thi.ng/vclock changelog Vector clock functions / comparators @thi.ng/zipper changelog Immutable tree editing / navigation DSLs Project Version Changelog Description @thi.ng/lispy changelog Extensible, interpreted Lisp-style DSL @thi.ng/pointfree changelog Stack-based DSL & functional composition @thi.ng/pointfree-lang changelog Forth-like syntax layer for @thi.ng/pointfree @thi.ng/proctext changelog Procedural text generation engine @thi.ng/sexpr changelog S-Expression parser & runtime infrastructure File / file format / hardware support Project Version Changelog Description @thi.ng/axidraw changelog Minimal, declarative AxiDraw plotter controller @thi.ng/bencode changelog Bencode binary format encoding @thi.ng/csv changelog Customizable CSV parser/object mapper @thi.ng/dot changelog Graphviz DOM & export @thi.ng/dsp-io-wav changelog WAV file format exporter @thi.ng/egf changelog Extensible Graph Format @thi.ng/file-io changelog Assorted file I/O utils for NodeJS @thi.ng/geom-io-obj changelog Wavefront OBJ model parser @thi.ng/hiccup-css changelog CSS from nested JS data structures @thi.ng/hiccup-html changelog Type-checked HTML5 element wrappers for hiccup @thi.ng/hiccup-html-parse changelog HTML parsing & transformation to hiccup format @thi.ng/hiccup-markdown changelog Hiccup-to-Markdown serialization @thi.ng/hiccup-svg changelog hiccup based SVG vocab @thi.ng/iges changelog IGES format geometry serialization @thi.ng/markdown-table changelog Markdown table generator / formatter @thi.ng/mime changelog File extension to MIME type mappings @thi.ng/msgpack changelog Msgpack serialization/deserialization @thi.ng/pixel-io-geotiff changelog GeoTIFF reader support for thi.ng/pixel @thi.ng/pixel-io-netpbm changelog 1/8/16/24bit NetPBM image format reader/writer @thi.ng/pixel-io-pfm changelog Portable FloatMap image format reader/writer @thi.ng/pixel-io-tiff changelog Minimal TIFF reader @thi.ng/prefixes changelog Linked Data, RDF & xmlns prefixes/URLs @thi.ng/sax changelog SAX-like XML parser / transducer @thi.ng/tangle changelog Literate programming utilities Frontend / UI Project Version Changelog Description @thi.ng/blurhash changelog Fast image blurhash encoder/decoder @thi.ng/canvas changelog Canvas creation & HDPI support helpers @thi.ng/dl-asset changelog Asset/canvas/file download helpers @thi.ng/emoji changelog Bi-directional emoji lookup tables (names/chars) @thi.ng/hdiff changelog String diffing w/ hiccup output (includes CLI) @thi.ng/hdom changelog Hiccup based VDOM & diffing @thi.ng/hdom-canvas changelog hdom adapter for hiccup-canvas @thi.ng/hdom-components changelog hdom based UI components @thi.ng/hdom-mock changelog hdom mock implementation (testing / prototyping) @thi.ng/hiccup changelog S-expression based HTML/XML serialization @thi.ng/hiccup-canvas changelog hiccup interpreter for canvas api @thi.ng/hiccup-carbon-icons changelog IBM Carbon icons in hiccup format @thi.ng/imgui changelog Immediate mode GUI @thi.ng/interceptors changelog Composable event handlers & processor @thi.ng/meta-css changelog CSS framework codegen, transpiler, bundler @thi.ng/rdom changelog Reactive, diff-less, async UI components @thi.ng/rdom-canvas changelog rdom component wrapper for thi.ng/hiccup-canvas @thi.ng/rdom-components changelog Unstyled, customizable component collection @thi.ng/rdom-forms changelog Datadriven HTML form generation @thi.ng/router changelog Customizable browser & non-browser router @thi.ng/text-canvas changelog Text-mode canvas, drawing, tables, charts @thi.ng/text-format changelog Color text formatting w/ ANSI & HTML presets @thi.ng/text-format-image changelog Bitmap image formatting for CLI/Terminal Fundamentals Project Version Changelog Description @thi.ng/args changelog Declarative & functional CLI arg parsing & coercions @thi.ng/api changelog Common types, decorators, mixins @thi.ng/bench changelog Basic benchmarking helpers @thi.ng/checks changelog Type & value checks @thi.ng/compare changelog Comparators @thi.ng/compose changelog Functional composition helpers @thi.ng/date changelog Date/time iterators, formatters, rounding @thi.ng/defmulti changelog Dynamic multiple dispatch @thi.ng/distance changelog n-D distance metrics & K-nearest neighborhoods @thi.ng/equiv changelog Deep value equivalence checking @thi.ng/errors changelog Custom error types @thi.ng/expose changelog Conditional global variable exposition @thi.ng/fibers changelog Process hierarchies & ops for cooperative multitasking @thi.ng/hex changelog Hex value formatters for U4-64 words @thi.ng/logger changelog Basis infrastructure for arbitrary logging @thi.ng/memoize changelog Function memoization w/ customizable caching @thi.ng/metrics changelog Computing & aggregating value metrics (mean, range, sd) @thi.ng/object-utils changelog Plain JS object & map manipulation @thi.ng/oquery changelog Pattern based query engine for JS objects @thi.ng/parse changelog Parser combinators & AST generator/transformer @thi.ng/paths changelog Immutable nested object accessors @thi.ng/strings changelog Higher-order string formatting utils @thi.ng/system changelog Minimal life cycle container for stateful app components @thi.ng/timestamp changelog Timestamp abstraction/wrapper @thi.ng/transclude changelog Template engine for text document generation @thi.ng/units changelog Extensible SI unit conversions @thi.ng/validate changelog Composable functional data validation @thi.ng/validate-schema changelog JSON schema validation Geometry, image & visualization Project Version Changelog Description @thi.ng/boids changelog Configurable n-dimensional boids simulation @thi.ng/color changelog Color conversions, gradients @thi.ng/color-palettes changelog Collection of image-based color palettes @thi.ng/dgraph-dot changelog Dependency graph -> Graphviz @thi.ng/distance-transform changelog Image based distance field generation @thi.ng/fuzzy-viz changelog Visualization, instrumentation for @thi.ng/fuzzy @thi.ng/geom changelog 2D only geometry types & ops @thi.ng/geom-accel changelog Spatial indexing data structures @thi.ng/geom-axidraw changelog Shape conversions for AxiDraw pen plotter @thi.ng/geom-arc changelog 2D elliptic arc utils @thi.ng/geom-clip-line changelog 2D line clipping @thi.ng/geom-clip-poly changelog 2D convex polygon clipping @thi.ng/geom-closest-point changelog Closest point helpers @thi.ng/geom-fuzz changelog Fuzzy 2D shape drawing / filling @thi.ng/geom-hull changelog 2D convex hull (Graham scan) @thi.ng/geom-isec changelog Point & shape intersection tests @thi.ng/geom-isoline changelog 2D contour line extraction @thi.ng/geom-poly-utils changelog 2D polygon helpers @thi.ng/geom-resample changelog nD polyline / curve resampling @thi.ng/geom-sdf changelog 2D SDF creation, conversions, operators, utilities @thi.ng/geom-splines changelog nD cubic / quadratic spline ops @thi.ng/geom-subdiv-curve changelog nD iterative subdivision curves @thi.ng/geom-tessellate changelog nD convex polygon tessellators @thi.ng/geom-trace-bitmap changelog bitmap image to vector conversion @thi.ng/geom-voronoi changelog 2D iterative delaunay/voronoi @thi.ng/geom-webgl changelog thi.ng/geom / WebGL shape conversion & interop @thi.ng/imago changelog Declarative & extensible image processing pipelines @thi.ng/lsys changelog Extensible L-System architecture @thi.ng/pixel changelog Multi-format pixel buffers @thi.ng/pixel-analysis changelog Image color & feature analysis utilities @thi.ng/pixel-convolve changelog Extensible image convolution & kernel presets @thi.ng/pixel-dominant-colors changelog k-means based dominant colors extraction @thi.ng/pixel-dither changelog Image dithering w/ various algorithm presets @thi.ng/pixel-flow changelog Optical flow analysis @thi.ng/poisson changelog nD Poisson disk sampling @thi.ng/porter-duff changelog Alpha blending / compositing ops @thi.ng/rasterize changelog Shape drawing, filling & rasterization @thi.ng/scenegraph changelog Extensible 2D/3D scenegraph @thi.ng/simd changelog WebAssembly SIMD vector batch processing @thi.ng/tsne changelog Configurable t-SNE visualization solver @thi.ng/viz changelog Declarative & functional data visualization toolkit Iterator, stream & sequence processing Project Version Changelog Description @thi.ng/csp changelog Channel based async ops @thi.ng/grid-iterators changelog 2D grid iterator strategies @thi.ng/seq changelog Lisp/Clojure-style sequence abstraction @thi.ng/transducers changelog Composable data transformations @thi.ng/transducers-async changelog Async transducers, reducers & iterators @thi.ng/transducers-binary changelog Binary data related transducers @thi.ng/transducers-fsm changelog Finite state transducer @thi.ng/transducers-hdom changelog Transducer based hdom UI updates @thi.ng/transducers-patch changelog Patch-based, array & object editing @thi.ng/transducers-stats changelog Technical / statistical analysis Low-level, binary, memory management, interop Project Version Changelog Description @thi.ng/base-n changelog Arbitrary base-n encoding/decoding with presets @thi.ng/binary changelog Assorted binary / bitwise ops, utilities @thi.ng/bitstream changelog Bitwise input / output streams @thi.ng/block-fs changelog Block-based storage & filesystem @thi.ng/dlogic changelog Digital logic ops / constructs @thi.ng/leb128 changelog WASM based LEB128 varint encoder / decoder @thi.ng/malloc changelog Raw & typed array memory pool & allocator @thi.ng/morton changelog Z-order-curve / Morton coding @thi.ng/range-coder changelog Binary data Range encoder / decoder @thi.ng/rle-pack changelog Run-length encoding data compression @thi.ng/soa changelog Memory mapped data structures & serialization @thi.ng/unionstruct changelog Wrapper for C-like structs / unions @thi.ng/vector-pools changelog Data structures for memory mapped vectors @thi.ng/wasm-api changelog Modular, extensible JS/WebAssembly bridge API @thi.ng/wasm-api-bindgen changelog Polyglot bindings code generator for C/Zig/TS @thi.ng/wasm-api-canvas changelog WASM-side Canvas2D API bindings @thi.ng/wasm-api-dom changelog WASM-side DOM manipulation @thi.ng/wasm-api-schedule changelog WASM-side delayed code execution/scheduling Maths Project Version Changelog Description @thi.ng/dual-algebra changelog Dual number algebra / automatic differentiation @thi.ng/dsp changelog DSP utils, composable signal gens/processors @thi.ng/fuzzy changelog Fuzzy logic primitives & rule inference engine @thi.ng/intervals changelog Open/closed intervals, queries, set ops @thi.ng/math changelog Assorted common math functions & utilities @thi.ng/matrices changelog Matrix operations @thi.ng/sparse changelog Sparse matrix & vector impls @thi.ng/timestep changelog Fixed timestep simulation updates with state interpolation @thi.ng/vectors changelog Fixed & arbitrary-length vector ops Network Project Version Changelog Description @thi.ng/server changelog Minimal, extensible, interceptor-based HTTP server Randomness Project Version Changelog Description @thi.ng/colored-noise changelog 1D colored noise generators @thi.ng/ksuid changelog K-sortable unique identifiers, binary & base-N encoded @thi.ng/lowdisc changelog n-D Low discrepancy sequence generators @thi.ng/random changelog Seedable PRNG implementations, distributions & utilities @thi.ng/random-fxhash changelog PRNG impl & utilities for fxhash projects @thi.ng/uuid changelog Binary & string-based UUID v4 generator Reactive programming Project Version Changelog Description @thi.ng/rstream changelog Push-based, reactive event stream primitves @thi.ng/rstream-csp changelog Adapter bridge CSP -> rstream @thi.ng/rstream-dot changelog Graphviz visualization of rstream topologies @thi.ng/rstream-gestures changelog Mouse & touch event stream abstraction @thi.ng/rstream-graph changelog Declarative dataflow graph construction @thi.ng/rstream-log changelog Hierarchical structured data logging @thi.ng/rstream-log-file changelog Log-file output handler @thi.ng/rstream-query changelog Triple store & query engine WebGL / GPGPU Project Version Changelog Description @thi.ng/shader-ast changelog AST DSL for x-platform shader code @thi.ng/shader-ast-glsl changelog GLSL code generator @thi.ng/shader-ast-js changelog JS code generator @thi.ng/shader-ast-optimize changelog AST code optimization strategies @thi.ng/shader-ast-stdlib changelog 100+ useful AST shader functions @thi.ng/webgl changelog WebGL 1/2 / GPGPU facilities @thi.ng/webgl-msdf changelog MSDF font rendering @thi.ng/webgl-shadertoy changelog Shadertoy-like WebGL setup Deprecated packages The following packages have been deprecated. Their readmes describe reasons and alternatives: Project Version Changelog Description @thi.ng/fsm changelog FSM / parser primitives @thi.ng/geom-api changelog Shared types for thi.ng/geom packages @thi.ng/iterators changelog ES6 generators / iterators @thi.ng/testament changelog Minimal test runner Building ImportantBun is required for running some build & other project tasks. git clone https://codeberg.org/thi.ng/umbrella.git cd umbrella yarn install yarn build Once the entire mono-repo has been fully built at least once before, individual packages can then be (re)built like so: yarn workspace @thi.ng/transducers run build # or (cd packages/transducers && yarn build) # or (cd packages/transducers && yarn build:esbuild) Note: The yarn build script alias will also generate TS type declaration files. This step is only needed once in the beginning or if updating the public API of a package. If you're confident it's not needed, using the build:esbuild alias is sufficient and much faster. Also, TS declaration files can be manually rebuilt via build:decl... Building example projects Please see the example build instructions in the wiki for further details. Testing (Most, but not all packages have tests) Test for all packages are run via bun.sh. # build all packages, then run all tests (in one go) yarn test # only run all tests yarn test:only # or individually yarn workspace @thi.ng/rstream run test Building API docs Autogenerated documentation (using TypeDoc) will be saved under /packages/*/doc/ (more info). yarn doc Extracting code examples from readme files & comments All packages in this repo have prepared infrastructure to extract various code examples & snippets from their README files and from comments in the source code. Altogether, there're 800-1000 of them in this repo, but only ~420 have been processed thus far (it's an ongoing time consuming manual process to prepare & check each of them, but work is under way! Please get in touch if you want to help!). The code extraction is handled via thi.ng/tangle, itself a part of thi.ng/umbrella. You can read more details about this process here: Mastodon post #1 Mastodon post #2 thi.ng/tangle readme To extract code blocks as source files from readmes: # in the repo root (to process all packages) yarn doc:readme # for a single package only (cd packages/<name> && yarn doc:readme) To extract example code blocks from doc strings (API docs) in source code: # in the repo root (to process all packages) yarn tool:tangle # for a single package only (cd packages/<name> && yarn tool:tangle) In all cases, the extracted files will be saved in each package's /export folder and can then be run directly via bun: bun packages/arrays/export/topo-sort.ts Acknowledgements Maintaining a large monorepo like this requires a lot of infrastructure and I'm grateful for the tooling provided by the following projects to simplify those tasks: bun esbuild html-minifier-terser typedoc TypeScript Vite @thi.ng/monopub License © 2015 - 2026 Karsten Schmidt // Apache Software License 2.0 Contributors ✨ Thanks goes to these wonderful people (emoji key): Karsten Schmidt💻 📖 🚧 💵 Alberto💻 💡 🐛 🤔 💵 Arthur Carabott💻 🤔 💡 📝 💵 André Wachter💻 🤔 🐛 Gavin Cannizzaro💻 🐛 🤔 Logan Powell📖 🐛 🤔 💵 Marcin Ignac🐛 arcticnoah💻 allforabit🐛 💻 🤔 💵 Yifan Wu🐛 📖 stwind💻 🐛 evilive💻 Bnaya Peretz💻 🐛 🤔 oljeger🐛 Nik Shevchenko🐛 💻 Matei Adriel💻 🐛 🤔 Pierre Grimaud📖 Matt Huebert💵 Raphael Saunier💵 Eric Ihli💵 David Pham💵 TBD🐛 🤔 Pedro Henriques dos Santos Teixeira💵 Jamie Owen💻 🐛 Robert Kesteson🐛 💻 Chancy Kennedy💵 Jarred Sumner🐛 Jamie Slome🐛 🛡️ d3v53c🐛 🛡️ Jannis Pohlmann🐛 Shakthi Prasad G S🐛 💻 Robin Gower🐛 Michael Latzoni🐛 Z Yin🐛 Damien Seguin🐛 💻 Rui Gil🐛 Ja|nz💻 🚇 🚧 Tyler Freeman🐛 💻 blackhuman🐛 David Negstad💻 Muhammad Ridho🐛 💻 MarcusWagberg💻 Masashi Yoshikawa🐛 Guido Schmidt🐛 💵 tsukamotohideki💵 Dave Meehan💻 🤔 Aurélien Bottazini🐛 Alex🐛 💵 Ross Cairns💵 Ruslan Prakapchuk💵 Jarrod Davis💵 Nicolas Lebrun💡 Dawid Górny💵 Michael Reitzenstein💵 Sam Nosenzo💵 Igor Loskutov💻 🤔 Yury💻 🤔 💵 Jean-Frédéric Faust💻 🐛 Brandt Ryan🐛 bit-app-3000🐛 🤔 This project follows the all-contributors specification. Contributions of any kind welcome!",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/c51c7db512401aa369c413096634bd16eee2ef56a7a051ae4fb912b2104eebad/68747470733a2f2f636f6465626572672e6f72672f7468692e6e672f756d6272656c6c612f6d656469612f6272616e63682f646576656c6f702f6173736574732f62616e6e6572732f7468696e672d756d6272656c6c612d6d617374686561642e6a7067"
+    },
+    {
+      "label": "Codeberg",
+      "url": "https://codeberg.org/thi.ng/umbrella"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/thi-ng/umbrella#project-migrated-to-codeberg-the-original-github-repo-is-now-just-a-readonly-mirror-and-will-be-deleted-later-this-year"
+    },
+    {
+      "label": "",
+      "url": "https://liberapay.com/thi.ng/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/sponsors/postspectacular/"
+    },
+    {
+      "label": "",
+      "url": "https://www.patreon.com/thing_umbrella"
+    },
+    {
+      "label": "",
+      "url": "https://mastodon.thi.ng/@toxi"
+    },
+    {
+      "label": "About",
+      "url": "https://github.com/thi-ng/umbrella#about"
+    },
+    {
+      "label": "Getting Started",
+      "url": "https://github.com/thi-ng/umbrella#getting-started"
+    },
+    {
+      "label": "Documentation",
+      "url": "https://github.com/thi-ng/umbrella#documentation"
+    },
+    {
+      "label": "Project templates",
+      "url": "https://github.com/thi-ng/umbrella#project-templates"
+    },
+    {
+      "label": "#HowToThing",
+      "url": "https://github.com/thi-ng/umbrella#howtothing"
+    },
+    {
+      "label": "Blog posts",
+      "url": "https://github.com/thi-ng/umbrella#blog-posts"
+    },
+    {
+      "label": "Videos",
+      "url": "https://github.com/thi-ng/umbrella#videos"
+    },
+    {
+      "label": "Examples & Showcase",
+      "url": "https://github.com/thi-ng/umbrella#examples--showcase"
+    },
+    {
+      "label": "awesome.thi.ng",
+      "url": "https://github.com/thi-ng/umbrella#awesomething"
+    },
+    {
+      "label": "Generative art projects",
+      "url": "https://github.com/thi-ng/umbrella#generative-art-projects"
+    },
+    {
+      "label": "Community, contributing, getting help",
+      "url": "https://github.com/thi-ng/umbrella#community-contributing-getting-help"
+    },
+    {
+      "label": "Wiki",
+      "url": "https://github.com/thi-ng/umbrella#wiki"
+    },
+    {
+      "label": "Projects",
+      "url": "https://github.com/thi-ng/umbrella#projects"
+    },
+    {
+      "label": "Latest updates",
+      "url": "https://github.com/thi-ng/umbrella#latest-updates"
+    },
+    {
+      "label": "Algorithms & data structures",
+      "url": "https://github.com/thi-ng/umbrella#algorithms--data-structures"
+    },
+    {
+      "label": "DSLs",
+      "url": "https://github.com/thi-ng/umbrella#dsls"
+    },
+    {
+      "label": "File / file format / hardware support",
+      "url": "https://github.com/thi-ng/umbrella#file--file-format--hardware-support"
+    },
+    {
+      "label": "Frontend / UI",
+      "url": "https://github.com/thi-ng/umbrella#frontend--ui"
+    },
+    {
+      "label": "Fundamentals",
+      "url": "https://github.com/thi-ng/umbrella#fundamentals"
+    },
+    {
+      "label": "Geometry, image & visualization",
+      "url": "https://github.com/thi-ng/umbrella#geometry-image--visualization"
+    },
+    {
+      "label": "Iterator, stream & sequence processing",
+      "url": "https://github.com/thi-ng/umbrella#iterator-stream--sequence-processing"
+    },
+    {
+      "label": "Low-level, binary, memory management, interop",
+      "url": "https://github.com/thi-ng/umbrella#low-level-binary-memory-management-interop"
+    },
+    {
+      "label": "Maths",
+      "url": "https://github.com/thi-ng/umbrella#maths"
+    },
+    {
+      "label": "Network",
+      "url": "https://github.com/thi-ng/umbrella#network"
+    },
+    {
+      "label": "Randomness",
+      "url": "https://github.com/thi-ng/umbrella#randomness"
+    },
+    {
+      "label": "Reactive programming",
+      "url": "https://github.com/thi-ng/umbrella#reactive-programming"
+    },
+    {
+      "label": "WebGL / GPGPU",
+      "url": "https://github.com/thi-ng/umbrella#webgl--gpgpu"
+    },
+    {
+      "label": "Deprecated packages",
+      "url": "https://github.com/thi-ng/umbrella#deprecated-packages"
+    },
+    {
+      "label": "Building",
+      "url": "https://github.com/thi-ng/umbrella#building"
+    },
+    {
+      "label": "Building example projects",
+      "url": "https://github.com/thi-ng/umbrella#building-example-projects"
+    },
+    {
+      "label": "Testing",
+      "url": "https://github.com/thi-ng/umbrella#testing"
+    },
+    {
+      "label": "Building API docs",
+      "url": "https://github.com/thi-ng/umbrella#building-api-docs"
+    },
+    {
+      "label": "Extracting code examples from readme files & comments",
+      "url": "https://github.com/thi-ng/umbrella#extracting-code-examples-from-readme-files--comments"
+    },
+    {
+      "label": "Acknowledgements",
+      "url": "https://github.com/thi-ng/umbrella#acknowledgements"
+    },
+    {
+      "label": "License",
+      "url": "https://github.com/thi-ng/umbrella#license"
+    },
+    {
+      "label": "Contributors",
+      "url": "https://github.com/thi-ng/umbrella#contributors-%E2%9C%A8"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/thi-ng/umbrella#about"
+    },
+    {
+      "label": "@loganpowell",
+      "url": "https://twitter.com/logantpowell/status/1186334119812304901"
+    },
+    {
+      "label": "thi.ng",
+      "url": "https://thi.ng"
+    },
+    {
+      "label": "thi.ng tag browser",
+      "url": "https://demo.thi.ng/umbrella/thing-browser/"
+    },
+    {
+      "label": "tag-based search on the thi.ng website",
+      "url": "https://thi.ng/#tags"
+    },
+    {
+      "label": "repo-wide doc string search",
+      "url": "https://demo.thi.ng/umbrella/rdom-search-docs/"
+    },
+    {
+      "label": "generated API docs",
+      "url": "https://docs.thi.ng/"
+    },
+    {
+      "label": "package overview",
+      "url": "https://github.com/thi-ng/umbrella#projects"
+    },
+    {
+      "label": "docs.thi.ng",
+      "url": "https://docs.thi.ng"
+    },
+    {
+      "label": "esbuild",
+      "url": "https://esbuild.github.io/"
+    },
+    {
+      "label": "bun.sh",
+      "url": "https://bun.sh"
+    },
+    {
+      "label": "thi.ng/monopub",
+      "url": "https://github.com/thi-ng/monopub"
+    },
+    {
+      "label": "Apache Software License 2.0",
+      "url": "https://github.com/thi-ng/umbrella#license"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/thi-ng/umbrella#getting-started"
+    },
+    {
+      "label": "packages",
+      "url": "https://github.com/thi-ng/umbrella#packages"
+    },
+    {
+      "label": "example projects",
+      "url": "https://github.com/thi-ng/umbrella#examples--showcase"
+    },
+    {
+      "label": "hundreds of small usage examples/snippets in doc strings & readme files",
+      "url": "https://github.com/thi-ng/umbrella#extracting-code-examples-from-readme-files--comments"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/thi-ng/umbrella#documentation"
+    },
+    {
+      "label": "Generated API docs (overview)",
+      "url": "https://docs.thi.ng/"
+    },
+    {
+      "label": "Single page API docs for all pacakges (work-in-progress)",
+      "url": "https://docs.thi.ng/umbrella"
+    },
+    {
+      "label": "Hundreds of usage examples/snippets",
+      "url": "https://github.com/thi-ng/umbrella#extracting-code-examples-from-readme-files--comments"
+    },
+    {
+      "label": "reach out",
+      "url": "https://github.com/thi-ng/umbrella#community-contributing-getting-help"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/thi-ng/umbrella#project-templates"
+    },
+    {
+      "label": "tpl-umbrella-basic",
+      "url": "https://github.com/thi-ng/tpl-umbrella-basic"
+    },
+    {
+      "label": "tpl-umbrella-fxhash",
+      "url": "https://github.com/thi-ng/tpl-umbrella-fxhash"
+    },
+    {
+      "label": "tpl-umbrella-zig",
+      "url": "https://github.com/thi-ng/tpl-umbrella-zig"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/thi-ng/umbrella#howtothing"
+    },
+    {
+      "label": "#HowToThing",
+      "url": "https://mastodon.thi.ng/tags/HowToThing"
+    },
+    {
+      "label": "001: FPS counter with moving average",
+      "url": "https://mastodon.thi.ng/@toxi/110898928550740865"
+    },
+    {
+      "label": "002: Sorting an array by potentially CPU-costly sort criteria",
+      "url": "https://mastodon.thi.ng/@toxi/110904190618425908"
+    },
+    {
+      "label": "003: Multiple key states and extracting commands via FSM",
+      "url": "https://mastodon.thi.ng/@toxi/110934031101245644"
+    },
+    {
+      "label": "004: Creating text-based plots to debug & visualize sequential data",
+      "url": "https://mastodon.thi.ng/@toxi/110942967462856117"
+    },
+    {
+      "label": "005: Barnsley fern IFS fractal",
+      "url": "https://mastodon.thi.ng/@toxi/110946943031183702"
+    },
+    {
+      "label": "006: Clustering arbitrary n-dimensional data using K-means",
+      "url": "https://mastodon.thi.ng/@toxi/110955825785005618"
+    },
+    {
+      "label": "007: Converting Google Maps bookmarks to KML",
+      "url": "https://mastodon.thi.ng/@toxi/110961348580185768"
+    },
+    {
+      "label": "008: CSV parsing into structured data & multi-plot SVG dataviz",
+      "url": "https://mastodon.thi.ng/@toxi/110967240994840257"
+    },
+    {
+      "label": "009: 2D canvas drawing & threadLast() dataflow operator",
+      "url": "https://mastodon.thi.ng/@toxi/110972322869333970"
+    },
+    {
+      "label": "010: Basic web app UI/DOM via Zig/WASM and thi.ng/wasm-api",
+      "url": "https://mastodon.thi.ng/@toxi/110975292505640048"
+    },
+    {
+      "label": "011: 2D cellular automata as WebGL2 multi-pass shader pipeline",
+      "url": "https://mastodon.thi.ng/@toxi/110983734311624640"
+    },
+    {
+      "label": "012: Pure CSS image transition/reveal with thi.ng/hiccup-css",
+      "url": "https://mastodon.thi.ng/@toxi/110995613345369326"
+    },
+    {
+      "label": "013: Lisp interpreter using thi.ng/sexpr & thi.ng/defmulti",
+      "url": "https://mastodon.thi.ng/@toxi/111006345413482231"
+    },
+    {
+      "label": "014: A simple browser REPL for a Lispy mini language",
+      "url": "https://mastodon.thi.ng/@toxi/111012777135967117"
+    },
+    {
+      "label": "015: Generative audio synth offline renderer and WAV file export",
+      "url": "https://mastodon.thi.ng/@toxi/111018580750654608"
+    },
+    {
+      "label": "016: Building a reactive Mastodon UI, parsing & transforming API data",
+      "url": "https://mastodon.thi.ng/@toxi/111069280667363259"
+    },
+    {
+      "label": "017: (Re)Constructing the thi.ng logo as 2D signed-distance field",
+      "url": "https://mastodon.thi.ng/@toxi/111124858346572300"
+    },
+    {
+      "label": "018: Topological sorting, creating & visualizing a task dependency graph",
+      "url": "https://mastodon.thi.ng/@toxi/111141659277277568"
+    },
+    {
+      "label": "019: Building a responsive & reactive stacked column layout",
+      "url": "https://mastodon.thi.ng/@toxi/111182345509593440"
+    },
+    {
+      "label": "020: Generating randomized 4-point 2D multicolor gradient maps/images",
+      "url": "https://mastodon.thi.ng/@toxi/111205034763399083"
+    },
+    {
+      "label": "021: Iterative animated convex polygon subdivision & heat map viz",
+      "url": "https://mastodon.thi.ng/@toxi/111221943333023306"
+    },
+    {
+      "label": "022: Quasi-random voronoi lattice generator",
+      "url": "https://mastodon.thi.ng/@toxi/111244412425832657"
+    },
+    {
+      "label": "023: Tag-based Jaccard similarity ranking/filtering using bitfields",
+      "url": "https://mastodon.thi.ng/@toxi/111256960928934577"
+    },
+    {
+      "label": "024: 2.5D hidden line visualization of digital elevation files (DEM)",
+      "url": "https://mastodon.thi.ng/@toxi/111269505611983570"
+    },
+    {
+      "label": "025: Fitting, transforming & plotting 10k data points per frame using SIMD",
+      "url": "https://mastodon.thi.ng/@toxi/111283262419126958"
+    },
+    {
+      "label": "026: Shader meta-programming to generate animated function plots",
+      "url": "https://mastodon.thi.ng/@toxi/111295842650216136"
+    },
+    {
+      "label": "027: Flocking sim with neighborhood queries to visualize proximity",
+      "url": "https://mastodon.thi.ng/@toxi/111308439597090930"
+    },
+    {
+      "label": "028: Randomized, space-filling, nested 2D grid layout generator",
+      "url": "https://mastodon.thi.ng/@toxi/111324566926701431"
+    },
+    {
+      "label": "029: Forth-like DSL & livecoding playground for 2D geometry generation",
+      "url": "https://mastodon.thi.ng/@toxi/111335025037332972"
+    },
+    {
+      "label": "030: Procedural stochastic text generation via custom DSL & parse grammar",
+      "url": "https://mastodon.thi.ng/@toxi/111347074558293056"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/thi-ng/umbrella#blog-posts"
+    },
+    {
+      "label": "Part 1 - Project & series overview",
+      "url": "https://github.com/thi-ng/blog/blob/main/2019/20190304-of-umbrellas-transducers-reactive-streams-pt1.md"
+    },
+    {
+      "label": "Part 2 - HOFs, Transducers, Reducers",
+      "url": "https://github.com/thi-ng/blog/blob/main/2019/20190307-of-umbrellas-transducers-reactive-streams-pt2.md"
+    },
+    {
+      "label": "Part 3 - Convolution, 1D/2D Cellular automata",
+      "url": "https://github.com/thi-ng/blog/blob/main/2019/20190310-of-umbrellas-transducers-reactive-streams-pt3.md"
+    },
+    {
+      "label": "Part 4 - Disjoint Sets, Graph analysis, Signed Distance Fields",
+      "url": "https://github.com/thi-ng/blog/blob/main/2019/20190314-of-umbrellas-transducers-reactive-streams-pt4.md"
+    },
+    {
+      "label": "How to UI in 2018",
+      "url": "https://github.com/thi-ng/blog/blob/main/2018/20180204-how-to-ui-in-2018.md"
+    },
+    {
+      "label": "The Jacob's Ladder of coding",
+      "url": "https://github.com/thi-ng/blog/blob/main/2015/20151215-jacobs-ladder-of-coding.md"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/thi-ng/umbrella#videos"
+    },
+    {
+      "label": "makertube.net",
+      "url": "https://makertube.net/c/thingumbrella/videos"
+    },
+    {
+      "label": "Building a web editor for creating/testing parse grammars",
+      "url": "https://makertube.net/w/ursFuQNJQQskmejx1ydL7q"
+    },
+    {
+      "label": "Building a shader graph editor (WebGL, shader AST transpiler, UI)",
+      "url": "https://makertube.net/w/aTZXyecXhcexvt9G3hNX15"
+    },
+    {
+      "label": "Crash course: TypeScript mapped types in action",
+      "url": "https://makertube.net/w/vai9TDyGjkduwapg7C9aJo"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/thi-ng/umbrella#examples--showcase"
+    },
+    {
+      "label": "examples",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/examples/README.md"
+    },
+    {
+      "label": "",
+      "url": "https://codeberg.org/thi.ng/umbrella/src/branch/develop/examples/boid-basics"
+    },
+    {
+      "label": "",
+      "url": "https://codeberg.org/thi.ng/umbrella/src/branch/develop/examples/imgui"
+    },
+    {
+      "label": "",
+      "url": "https://codeberg.org/thi.ng/umbrella/src/branch/develop/examples/shader-ast-raymarch"
+    },
+    {
+      "label": "",
+      "url": "https://codeberg.org/thi.ng/umbrella/src/branch/develop/examples/geom-terrain-viz"
+    },
+    {
+      "label": "",
+      "url": "https://codeberg.org/thi.ng/umbrella/src/branch/develop/examples/poly-subdiv"
+    },
+    {
+      "label": "",
+      "url": "https://codeberg.org/thi.ng/umbrella/src/branch/develop/examples/crypto-chart"
+    },
+    {
+      "label": "",
+      "url": "https://codeberg.org/thi.ng/umbrella/src/branch/develop/examples/layout-gridgen"
+    },
+    {
+      "label": "",
+      "url": "https://codeberg.org/thi.ng/umbrella/src/branch/develop/examples/webgl-channel-mixer"
+    },
+    {
+      "label": "",
+      "url": "https://codeberg.org/thi.ng/umbrella/src/branch/develop/examples/geom-tessel"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/thi-ng/umbrella#awesomething"
+    },
+    {
+      "label": "awesome.thi.ng",
+      "url": "https://github.com/thi-ng/awesome.thi.ng"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/thi-ng/umbrella#generative-art-projects"
+    },
+    {
+      "label": "Karsten Schmidt on fx(hash)",
+      "url": "https://www.fxhash.xyz/u/toxi"
+    },
+    {
+      "label": "",
+      "url": "https://www.fxhash.xyz/generative/981"
+    },
+    {
+      "label": "",
+      "url": "https://www.fxhash.xyz/generative/3496"
+    },
+    {
+      "label": "",
+      "url": "https://www.fxhash.xyz/generative/4304"
+    },
+    {
+      "label": "",
+      "url": "https://www.fxhash.xyz/generative/6671"
+    },
+    {
+      "label": "",
+      "url": "https://www.fxhash.xyz/generative/13992"
+    },
+    {
+      "label": "",
+      "url": "https://www.fxhash.xyz/generative/16205"
+    },
+    {
+      "label": "",
+      "url": "https://www.fxhash.xyz/generative/26702"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/assets/fxhash/danza-240.jpg"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/assets/fxhash/s-trace-240.jpg"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/thi-ng/umbrella#community-contributing-getting-help"
+    },
+    {
+      "label": "Mastodon",
+      "url": "https://mastodon.thi.ng/@toxi"
+    },
+    {
+      "label": "#ThingUmbrella tagged posts",
+      "url": "http://mastodon.thi.ng/@toxi/tagged/ThingUmbrella"
+    },
+    {
+      "label": "subscribe to those via RSS",
+      "url": "http://mastodon.thi.ng/@toxi/tagged/ThingUmbrella.rss"
+    },
+    {
+      "label": "discussions here on Github",
+      "url": "https://github.com/thi-ng/umbrella/discussions"
+    },
+    {
+      "label": "Mastodon",
+      "url": "https://mastodon.thi.ng/@toxi"
+    },
+    {
+      "label": "issue tracker",
+      "url": "https://codeberg.org/thi.ng/umbrella/issues"
+    },
+    {
+      "label": "this document",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/CONTRIBUTING.md"
+    },
+    {
+      "label": "financial contributions",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/CONTRIBUTING.md#donations"
+    },
+    {
+      "label": "main",
+      "url": "https://codeberg.org/thi.ng/umbrella/src/branch/main"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/thi-ng/umbrella#wiki"
+    },
+    {
+      "label": "wiki",
+      "url": "https://codeberg.org/thi.ng/umbrella/wiki"
+    },
+    {
+      "label": "glossary",
+      "url": "https://codeberg.org/thi.ng/umbrella/wiki/Glossary"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/thi-ng/umbrella#projects"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/thi-ng/umbrella#latest-updates"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/a771b465cfe6959a361383efa39d0b27c2fc973db4722093d99f1d1072c0e75d/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f2d666561742d677265656e"
+    },
+    {
+      "label": "@thi.ng/hiccup-sanitize",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/hiccup-sanitize"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/hiccup-sanitize"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/hiccup-sanitize/CHANGELOG.md"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/thi-ng/umbrella#algorithms--data-structures"
+    },
+    {
+      "label": "@thi.ng/adjacency",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/adjacency"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/adjacency"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/adjacency/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/arrays",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/arrays"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/arrays"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/arrays/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/associative",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/associative"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/associative"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/associative/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/atom",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/atom"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/atom"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/atom/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/bitfield",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/bitfield"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/bitfield"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/bitfield/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/bidir-index",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/bidir-index"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/bidir-index"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/bidir-index/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/buffers",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/buffers"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/buffers"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/buffers/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/cache",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/cache"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/cache"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/cache/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/cellular",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/cellular"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/cellular"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/cellular/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/column-store",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/column-store"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/column-store"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/column-store/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/dcons",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/dcons"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/dcons"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/dcons/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/diff",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/diff"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/diff"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/diff/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/disjoint-set",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/disjoint-set"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/disjoint-set"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/disjoint-set/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/dgraph",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/dgraph"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/dgraph"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/dgraph/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/ecs",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/ecs"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/ecs"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/ecs/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/gp",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/gp"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/gp"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/gp/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/heaps",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/heaps"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/heaps"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/heaps/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/idgen",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/idgen"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/idgen"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/idgen/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/k-means",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/k-means"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/k-means"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/k-means/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/leaky-bucket",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/leaky-bucket"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/leaky-bucket"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/leaky-bucket/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/ramp",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/ramp"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/ramp"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/ramp/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/quad-edge",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/quad-edge"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/quad-edge"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/quad-edge/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/resolve-map",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/resolve-map"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/resolve-map"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/resolve-map/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/sorted-map",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/sorted-map"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/sorted-map"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/sorted-map/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/sparse-set",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/sparse-set"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/sparse-set"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/sparse-set/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/tensors",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/tensors"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/tensors"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/tensors/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/text-analysis",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/text-analysis"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/text-analysis"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/text-analysis/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/trie",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/trie"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/trie"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/trie/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/vclock",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/vclock"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/vclock"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/vclock/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/zipper",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/zipper"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/zipper"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/zipper/CHANGELOG.md"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/thi-ng/umbrella#dsls"
+    },
+    {
+      "label": "@thi.ng/lispy",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/lispy"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/lispy"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/lispy/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/pointfree",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/pointfree"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/pointfree"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/pointfree/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/pointfree-lang",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/pointfree-lang"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/pointfree-lang"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/pointfree-lang/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/proctext",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/proctext"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/proctext"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/proctext/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/sexpr",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/sexpr"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/sexpr"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/sexpr/CHANGELOG.md"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/thi-ng/umbrella#file--file-format--hardware-support"
+    },
+    {
+      "label": "@thi.ng/axidraw",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/axidraw"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/axidraw"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/axidraw/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/bencode",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/bencode"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/bencode"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/bencode/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/csv",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/csv"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/csv"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/csv/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/dot",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/dot"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/dot"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/dot/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/dsp-io-wav",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/dsp-io-wav"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/dsp-io-wav"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/dsp-io-wav/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/egf",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/egf"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/egf"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/egf/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/file-io",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/file-io"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/file-io"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/file-io/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/geom-io-obj",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/geom-io-obj"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/geom-io-obj"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/geom-io-obj/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/hiccup-css",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/hiccup-css"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/hiccup-css"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/hiccup-css/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/hiccup-html",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/hiccup-html"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/hiccup-html"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/hiccup-html/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/hiccup-html-parse",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/hiccup-html-parse"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/hiccup-html-parse"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/hiccup-html-parse/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/hiccup-markdown",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/hiccup-markdown"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/hiccup-markdown"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/hiccup-markdown/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/hiccup-svg",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/hiccup-svg"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/hiccup-svg"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/hiccup-svg/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/iges",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/iges"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/iges"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/iges/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/markdown-table",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/markdown-table"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/markdown-table"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/markdown-table/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/mime",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/mime"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/mime"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/mime/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/msgpack",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/msgpack"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/msgpack"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/msgpack/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/pixel-io-geotiff",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/pixel-io-geotiff"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/pixel-io-geotiff"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/pixel-io-geotiff/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/pixel-io-netpbm",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/pixel-io-netpbm"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/pixel-io-netpbm"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/pixel-io-netpbm/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/pixel-io-pfm",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/pixel-io-pfm"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/pixel-io-pfm"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/pixel-io-pfm/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/pixel-io-tiff",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/pixel-io-tiff"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/pixel-io-tiff"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/pixel-io-tiff/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/prefixes",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/prefixes"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/prefixes"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/prefixes/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/sax",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/sax"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/sax"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/sax/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/tangle",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/tangle"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/tangle"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/tangle/CHANGELOG.md"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/thi-ng/umbrella#frontend--ui"
+    },
+    {
+      "label": "@thi.ng/blurhash",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/blurhash"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/blurhash"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/blurhash/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/canvas",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/canvas"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/canvas"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/canvas/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/dl-asset",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/dl-asset"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/dl-asset"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/dl-asset/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/emoji",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/emoji"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/emoji"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/emoji/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/hdiff",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/hdiff"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/hdiff"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/hdiff/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/hdom",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/hdom"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/hdom"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/hdom/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/hdom-canvas",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/hdom-canvas"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/hdom-canvas"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/hdom-canvas/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/hdom-components",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/hdom-components"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/hdom-components"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/hdom-components/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/hdom-mock",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/hdom-mock"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/hdom-mock"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/hdom-mock/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/hiccup",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/hiccup"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/hiccup"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/hiccup/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/hiccup-canvas",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/hiccup-canvas"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/hiccup-canvas"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/hiccup-canvas/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/hiccup-carbon-icons",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/hiccup-carbon-icons"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/hiccup-carbon-icons"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/hiccup-carbon-icons/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/imgui",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/imgui"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/imgui"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/imgui/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/interceptors",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/interceptors"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/interceptors"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/interceptors/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/meta-css",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/meta-css"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/meta-css"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/meta-css/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/rdom",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/rdom"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/rdom"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/rdom/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/rdom-canvas",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/rdom-canvas"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/rdom-canvas"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/rdom-canvas/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/rdom-components",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/rdom-components"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/rdom-components"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/rdom-components/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/rdom-forms",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/rdom-forms"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/rdom-forms"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/rdom-forms/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/router",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/router"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/router"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/router/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/text-canvas",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/text-canvas"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/text-canvas"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/text-canvas/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/text-format",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/text-format"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/text-format"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/text-format/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/text-format-image",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/text-format-image"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/text-format-image"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/text-format-image/CHANGELOG.md"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/thi-ng/umbrella#fundamentals"
+    },
+    {
+      "label": "@thi.ng/args",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/args"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/args"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/args/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/api",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/api"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/api"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/api/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/bench",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/bench"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/bench"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/bench/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/checks",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/checks"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/checks"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/checks/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/compare",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/compare"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/compare"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/compare/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/compose",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/compose"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/compose"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/compose/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/date",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/date"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/date"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/date/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/defmulti",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/defmulti"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/defmulti"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/defmulti/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/distance",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/distance"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/distance"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/distance/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/equiv",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/equiv"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/equiv"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/equiv/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/errors",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/errors"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/errors"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/errors/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/expose",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/expose"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/expose"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/expose/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/fibers",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/fibers"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/fibers"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/fibers/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/hex",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/hex"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/hex"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/hex/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/logger",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/logger"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/logger"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/logger/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/memoize",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/memoize"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/memoize"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/memoize/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/metrics",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/metrics"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/metrics"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/metrics/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/object-utils",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/object-utils"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/object-utils"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/object-utils/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/oquery",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/oquery"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/oquery"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/oquery/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/parse",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/parse"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/parse"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/parse/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/paths",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/paths"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/paths"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/paths/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/strings",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/strings"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/strings"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/strings/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/system",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/system"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/system"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/system/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/timestamp",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/timestamp"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/timestamp"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/timestamp/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/transclude",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/transclude"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/transclude"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/transclude/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/units",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/units"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/units"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/units/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/validate",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/validate"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/validate"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/validate/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/validate-schema",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/validate-schema"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/validate-schema"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/validate-schema/CHANGELOG.md"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/thi-ng/umbrella#geometry-image--visualization"
+    },
+    {
+      "label": "@thi.ng/boids",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/boids"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/boids"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/boids/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/color",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/color"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/color"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/color/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/color-palettes",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/color-palettes"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/color-palettes"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/color-palettes/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/dgraph-dot",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/dgraph-dot"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/dgraph-dot"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/dgraph-dot/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/distance-transform",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/distance-transform"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/distance-transform"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/distance-transform/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/fuzzy-viz",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/fuzzy-viz"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/fuzzy-viz"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/fuzzy-viz/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/geom",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/geom"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/geom"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/geom/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/geom-accel",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/geom-accel"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/geom-accel"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/geom-accel/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/geom-axidraw",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/geom-axidraw"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/geom-axidraw"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/geom-axidraw/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/geom-arc",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/geom-arc"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/geom-arc"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/geom-arc/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/geom-clip-line",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/geom-clip-line"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/geom-clip-line"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/geom-clip-line/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/geom-clip-poly",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/geom-clip-poly"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/geom-clip-poly"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/geom-clip-poly/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/geom-closest-point",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/geom-closest-point"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/geom-closest-point"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/geom-closest-point/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/geom-fuzz",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/geom-fuzz"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/geom-fuzz"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/geom-fuzz/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/geom-hull",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/geom-hull"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/geom-hull"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/geom-hull/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/geom-isec",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/geom-isec"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/geom-isec"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/geom-isec/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/geom-isoline",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/geom-isoline"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/geom-isoline"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/geom-isoline/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/geom-poly-utils",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/geom-poly-utils"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/geom-poly-utils"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/geom-poly-utils/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/geom-resample",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/geom-resample"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/geom-resample"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/geom-resample/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/geom-sdf",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/geom-sdf"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/geom-sdf"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/geom-sdf/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/geom-splines",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/geom-splines"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/geom-splines"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/geom-splines/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/geom-subdiv-curve",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/geom-subdiv-curve"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/geom-subdiv-curve"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/geom-subdiv-curve/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/geom-tessellate",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/geom-tessellate"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/geom-tessellate"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/geom-tessellate/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/geom-trace-bitmap",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/geom-trace-bitmap"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/geom-trace-bitmap"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/geom-trace-bitmap/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/geom-voronoi",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/geom-voronoi"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/geom-voronoi"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/geom-voronoi/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/geom-webgl",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/geom-webgl"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/geom-webgl"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/geom-webgl/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/imago",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/imago"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/imago"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/imago/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/lsys",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/lsys"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/lsys"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/lsys/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/pixel",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/pixel"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/pixel"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/pixel/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/pixel-analysis",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/pixel-analysis"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/pixel-analysis"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/pixel-analysis/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/pixel-convolve",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/pixel-convolve"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/pixel-convolve"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/pixel-convolve/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/pixel-dominant-colors",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/pixel-dominant-colors"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/pixel-dominant-colors"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/pixel-dominant-colors/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/pixel-dither",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/pixel-dither"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/pixel-dither"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/pixel-dither/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/pixel-flow",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/pixel-flow"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/pixel-flow"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/pixel-flow/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/poisson",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/poisson"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/poisson"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/poisson/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/porter-duff",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/porter-duff"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/porter-duff"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/porter-duff/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/rasterize",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/rasterize"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/rasterize"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/rasterize/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/scenegraph",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/scenegraph"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/scenegraph"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/scenegraph/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/simd",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/simd"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/simd"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/simd/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/tsne",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/tsne"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/tsne"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/tsne/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/viz",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/viz"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/viz"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/viz/CHANGELOG.md"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/thi-ng/umbrella#iterator-stream--sequence-processing"
+    },
+    {
+      "label": "@thi.ng/csp",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/csp"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/csp"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/csp/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/grid-iterators",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/grid-iterators"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/grid-iterators"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/grid-iterators/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/seq",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/seq"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/seq"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/seq/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/transducers",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/transducers"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/transducers"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/transducers/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/transducers-async",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/transducers-async"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/transducers-async"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/transducers-async/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/transducers-binary",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/transducers-binary"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/transducers-binary"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/transducers-binary/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/transducers-fsm",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/transducers-fsm"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/transducers-fsm"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/transducers-fsm/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/transducers-hdom",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/transducers-hdom"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/transducers-hdom"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/transducers-hdom/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/transducers-patch",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/transducers-patch"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/transducers-patch"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/transducers-patch/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/transducers-stats",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/transducers-stats"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/transducers-stats"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/transducers-stats/CHANGELOG.md"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/thi-ng/umbrella#low-level-binary-memory-management-interop"
+    },
+    {
+      "label": "@thi.ng/base-n",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/base-n"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/base-n"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/base-n/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/binary",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/binary"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/binary"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/binary/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/bitstream",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/bitstream"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/bitstream"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/bitstream/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/block-fs",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/block-fs"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/block-fs"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/block-fs/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/dlogic",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/dlogic"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/dlogic"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/dlogic/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/leb128",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/leb128"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/leb128"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/leb128/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/malloc",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/malloc"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/malloc"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/malloc/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/morton",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/morton"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/morton"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/morton/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/range-coder",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/range-coder"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/range-coder"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/range-coder/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/rle-pack",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/rle-pack"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/rle-pack"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/rle-pack/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/soa",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/soa"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/soa"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/soa/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/unionstruct",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/unionstruct"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/unionstruct"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/unionstruct/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/vector-pools",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/vector-pools"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/vector-pools"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/vector-pools/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/wasm-api",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/wasm-api"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/wasm-api"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/wasm-api/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/wasm-api-bindgen",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/wasm-api-bindgen"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/wasm-api-bindgen"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/wasm-api-bindgen/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/wasm-api-canvas",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/wasm-api-canvas"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/wasm-api-canvas"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/wasm-api-canvas/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/wasm-api-dom",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/wasm-api-dom"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/wasm-api-dom"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/wasm-api-dom/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/wasm-api-schedule",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/wasm-api-schedule"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/wasm-api-schedule"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/wasm-api-schedule/CHANGELOG.md"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/thi-ng/umbrella#maths"
+    },
+    {
+      "label": "@thi.ng/dual-algebra",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/dual-algebra"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/dual-algebra"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/dual-algebra/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/dsp",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/dsp"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/dsp"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/dsp/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/fuzzy",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/fuzzy"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/fuzzy"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/fuzzy/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/intervals",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/intervals"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/intervals"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/intervals/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/math",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/math"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/math"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/math/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/matrices",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/matrices"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/matrices"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/matrices/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/sparse",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/sparse"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/sparse"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/sparse/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/timestep",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/timestep"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/timestep"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/timestep/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/vectors",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/vectors"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/vectors"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/vectors/CHANGELOG.md"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/thi-ng/umbrella#network"
+    },
+    {
+      "label": "@thi.ng/server",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/server"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/server"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/server/CHANGELOG.md"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/thi-ng/umbrella#randomness"
+    },
+    {
+      "label": "@thi.ng/colored-noise",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/colored-noise"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/colored-noise"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/colored-noise/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/ksuid",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/ksuid"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/ksuid"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/ksuid/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/lowdisc",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/lowdisc"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/lowdisc"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/lowdisc/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/random",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/random"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/random"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/random/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/random-fxhash",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/random-fxhash"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/random-fxhash"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/random-fxhash/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/uuid",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/uuid"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/uuid"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/uuid/CHANGELOG.md"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/thi-ng/umbrella#reactive-programming"
+    },
+    {
+      "label": "@thi.ng/rstream",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/rstream"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/rstream"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/rstream/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/rstream-csp",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/rstream-csp"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/rstream-csp"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/rstream-csp/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/rstream-dot",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/rstream-dot"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/rstream-dot"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/rstream-dot/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/rstream-gestures",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/rstream-gestures"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/rstream-gestures"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/rstream-gestures/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/rstream-graph",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/rstream-graph"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/rstream-graph"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/rstream-graph/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/rstream-log",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/rstream-log"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/rstream-log"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/rstream-log/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/rstream-log-file",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/rstream-log-file"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/rstream-log-file"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/rstream-log-file/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/rstream-query",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/rstream-query"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/rstream-query"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/rstream-query/CHANGELOG.md"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/thi-ng/umbrella#webgl--gpgpu"
+    },
+    {
+      "label": "@thi.ng/shader-ast",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/shader-ast"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/shader-ast"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/shader-ast/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/shader-ast-glsl",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/shader-ast-glsl"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/shader-ast-glsl"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/shader-ast-glsl/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/shader-ast-js",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/shader-ast-js"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/shader-ast-js"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/shader-ast-js/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/shader-ast-optimize",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/shader-ast-optimize"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/shader-ast-optimize"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/shader-ast-optimize/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/shader-ast-stdlib",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/shader-ast-stdlib"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/shader-ast-stdlib"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/shader-ast-stdlib/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/webgl",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/webgl"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/webgl"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/webgl/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/webgl-msdf",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/webgl-msdf"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/webgl-msdf"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/webgl-msdf/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/webgl-shadertoy",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/webgl-shadertoy"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/webgl-shadertoy"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/webgl-shadertoy/CHANGELOG.md"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/thi-ng/umbrella#deprecated-packages"
+    },
+    {
+      "label": "@thi.ng/fsm",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/deprecated/packages/fsm"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/fsm"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/fsm/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/geom-api",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/deprecated/packages/geom-api"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/geom-api"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/geom-api/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/iterators",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/deprecated/packages/iterators"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/iterators"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/iterators/CHANGELOG.md"
+    },
+    {
+      "label": "@thi.ng/testament",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/deprecated/packages/testament"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@thi.ng/testament"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/thi-ng/umbrella/blob/develop/packages/testament/CHANGELOG.md"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/thi-ng/umbrella#building"
+    },
+    {
+      "label": "Bun",
+      "url": "https://bun.sh"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/thi-ng/umbrella#building-example-projects"
+    },
+    {
+      "label": "example build instructions",
+      "url": "https://codeberg.org/thi.ng/umbrella/wiki/Example-build-instructions"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/thi-ng/umbrella#testing"
+    },
+    {
+      "label": "bun.sh",
+      "url": "https://bun.sh"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/thi-ng/umbrella#building-api-docs"
+    },
+    {
+      "label": "TypeDoc",
+      "url": "https://github.com/TypeStrong/typedoc"
+    },
+    {
+      "label": "more info",
+      "url": "https://github.com/thi-ng/umbrella#documentation"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/thi-ng/umbrella#extracting-code-examples-from-readme-files--comments"
+    },
+    {
+      "label": "thi.ng/tangle",
+      "url": "https://codeberg.org/thi.ng/umbrella/src/branch/develop/packages/tangle"
+    },
+    {
+      "label": "Mastodon post #1",
+      "url": "https://mastodon.thi.ng/@toxi/111959275083112668"
+    },
+    {
+      "label": "Mastodon post #2",
+      "url": "https://mastodon.thi.ng/@toxi/112026554577015934"
+    },
+    {
+      "label": "thi.ng/tangle readme",
+      "url": "https://codeberg.org/thi.ng/umbrella/src/branch/develop/packages/tangle/README.md"
+    },
+    {
+      "label": "bun",
+      "url": "https://bun.sh"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/thi-ng/umbrella#acknowledgements"
+    },
+    {
+      "label": "bun",
+      "url": "https://bun.sh"
+    },
+    {
+      "label": "esbuild",
+      "url": "https://github.com/evanw/esbuild"
+    },
+    {
+      "label": "html-minifier-terser",
+      "url": "https://terser.org/html-minifier-terser/"
+    },
+    {
+      "label": "typedoc",
+      "url": "https://typedoc.org/"
+    },
+    {
+      "label": "TypeScript",
+      "url": "https://www.typescriptlang.org/"
+    },
+    {
+      "label": "Vite",
+      "url": "http://vitejs.dev/"
+    },
+    {
+      "label": "@thi.ng/monopub",
+      "url": "https://github.com/thi-ng/monopub"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/thi-ng/umbrella#license"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/thi-ng/umbrella#contributors-"
+    },
+    {
+      "label": "emoji key",
+      "url": "https://allcontributors.org/docs/en/emoji-key"
+    },
+    {
+      "label": "Karsten Schmidt",
+      "url": "http://thi.ng"
+    },
+    {
+      "label": "💻",
+      "url": "https://github.com/thi-ng/umbrella/commits?author=postspectacular"
+    },
+    {
+      "label": "📖",
+      "url": "https://github.com/thi-ng/umbrella/commits?author=postspectacular"
+    },
+    {
+      "label": "🚧",
+      "url": "https://github.com/thi-ng/umbrella#maintenance-postspectacular"
+    },
+    {
+      "label": "💵",
+      "url": "https://github.com/thi-ng/umbrella#financial-postspectacular"
+    },
+    {
+      "label": "Alberto",
+      "url": "https://github.com/nkint"
+    },
+    {
+      "label": "💻",
+      "url": "https://github.com/thi-ng/umbrella/commits?author=nkint"
+    },
+    {
+      "label": "💡",
+      "url": "https://github.com/thi-ng/umbrella#example-nkint"
+    },
+    {
+      "label": "🐛",
+      "url": "https://github.com/thi-ng/umbrella/issues?q=author%3Ankint"
+    },
+    {
+      "label": "🤔",
+      "url": "https://github.com/thi-ng/umbrella#ideas-nkint"
+    },
+    {
+      "label": "💵",
+      "url": "https://github.com/thi-ng/umbrella#financial-nkint"
+    },
+    {
+      "label": "Arthur Carabott",
+      "url": "http://www.arthurcarabott.com/"
+    },
+    {
+      "label": "💻",
+      "url": "https://github.com/thi-ng/umbrella/commits?author=acarabott"
+    },
+    {
+      "label": "🤔",
+      "url": "https://github.com/thi-ng/umbrella#ideas-acarabott"
+    },
+    {
+      "label": "💡",
+      "url": "https://github.com/thi-ng/umbrella#example-acarabott"
+    },
+    {
+      "label": "📝",
+      "url": "https://github.com/thi-ng/umbrella#blog-acarabott"
+    },
+    {
+      "label": "💵",
+      "url": "https://github.com/thi-ng/umbrella#financial-acarabott"
+    },
+    {
+      "label": "André Wachter",
+      "url": "http://andrewachter.de"
+    },
+    {
+      "label": "💻",
+      "url": "https://github.com/thi-ng/umbrella/commits?author=andrew8er"
+    },
+    {
+      "label": "🤔",
+      "url": "https://github.com/thi-ng/umbrella#ideas-andrew8er"
+    },
+    {
+      "label": "🐛",
+      "url": "https://github.com/thi-ng/umbrella/issues?q=author%3Aandrew8er"
+    },
+    {
+      "label": "Gavin Cannizzaro",
+      "url": "https://github.com/gavinpc-mindgrub"
+    },
+    {
+      "label": "💻",
+      "url": "https://github.com/thi-ng/umbrella/commits?author=gavinpc-mindgrub"
+    },
+    {
+      "label": "🐛",
+      "url": "https://github.com/thi-ng/umbrella/issues?q=author%3Agavinpc-mindgrub"
+    },
+    {
+      "label": "🤔",
+      "url": "https://github.com/thi-ng/umbrella#ideas-gavinpc-mindgrub"
+    },
+    {
+      "label": "Logan Powell",
+      "url": "https://github.com/loganpowell"
+    },
+    {
+      "label": "📖",
+      "url": "https://github.com/thi-ng/umbrella/commits?author=loganpowell"
+    },
+    {
+      "label": "🐛",
+      "url": "https://github.com/thi-ng/umbrella/issues?q=author%3Aloganpowell"
+    },
+    {
+      "label": "🤔",
+      "url": "https://github.com/thi-ng/umbrella#ideas-loganpowell"
+    },
+    {
+      "label": "💵",
+      "url": "https://github.com/thi-ng/umbrella#financial-loganpowell"
+    },
+    {
+      "label": "Marcin Ignac",
+      "url": "http://marcinignac.com"
+    },
+    {
+      "label": "🐛",
+      "url": "https://github.com/thi-ng/umbrella/issues?q=author%3Avorg"
+    },
+    {
+      "label": "arcticnoah",
+      "url": "https://github.com/arcticnoah"
+    },
+    {
+      "label": "💻",
+      "url": "https://github.com/thi-ng/umbrella/commits?author=arcticnoah"
+    },
+    {
+      "label": "allforabit",
+      "url": "https://github.com/allforabit"
+    },
+    {
+      "label": "🐛",
+      "url": "https://github.com/thi-ng/umbrella/issues?q=author%3Aallforabit"
+    },
+    {
+      "label": "💻",
+      "url": "https://github.com/thi-ng/umbrella/commits?author=allforabit"
+    },
+    {
+      "label": "🤔",
+      "url": "https://github.com/thi-ng/umbrella#ideas-allforabit"
+    },
+    {
+      "label": "💵",
+      "url": "https://github.com/thi-ng/umbrella#financial-allforabit"
+    },
+    {
+      "label": "Yifan Wu",
+      "url": "https://yifanwu.studio/"
+    },
+    {
+      "label": "🐛",
+      "url": "https://github.com/thi-ng/umbrella/issues?q=author%3AIvanWoo"
+    },
+    {
+      "label": "📖",
+      "url": "https://github.com/thi-ng/umbrella/commits?author=IvanWoo"
+    },
+    {
+      "label": "stwind",
+      "url": "https://pngupngu.com/"
+    },
+    {
+      "label": "💻",
+      "url": "https://github.com/thi-ng/umbrella/commits?author=stwind"
+    },
+    {
+      "label": "🐛",
+      "url": "https://github.com/thi-ng/umbrella/issues?q=author%3Astwind"
+    },
+    {
+      "label": "evilive",
+      "url": "https://github.com/evilive3000"
+    },
+    {
+      "label": "💻",
+      "url": "https://github.com/thi-ng/umbrella/commits?author=evilive3000"
+    },
+    {
+      "label": "Bnaya Peretz",
+      "url": "https://github.com/Bnaya"
+    },
+    {
+      "label": "💻",
+      "url": "https://github.com/thi-ng/umbrella/commits?author=Bnaya"
+    },
+    {
+      "label": "🐛",
+      "url": "https://github.com/thi-ng/umbrella/issues?q=author%3ABnaya"
+    },
+    {
+      "label": "🤔",
+      "url": "https://github.com/thi-ng/umbrella#ideas-Bnaya"
+    },
+    {
+      "label": "oljeger",
+      "url": "https://github.com/oljeger"
+    },
+    {
+      "label": "🐛",
+      "url": "https://github.com/thi-ng/umbrella/issues?q=author%3Aoljeger"
+    },
+    {
+      "label": "Nik Shevchenko",
+      "url": "https://shevchenkonik.com"
+    },
+    {
+      "label": "🐛",
+      "url": "https://github.com/thi-ng/umbrella/issues?q=author%3Ashevchenkonik"
+    },
+    {
+      "label": "💻",
+      "url": "https://github.com/thi-ng/umbrella/commits?author=shevchenkonik"
+    },
+    {
+      "label": "Matei Adriel",
+      "url": "https://github.com/Mateiadrielrafael"
+    },
+    {
+      "label": "💻",
+      "url": "https://github.com/thi-ng/umbrella/commits?author=Mateiadrielrafael"
+    },
+    {
+      "label": "🐛",
+      "url": "https://github.com/thi-ng/umbrella/issues?q=author%3AMateiadrielrafael"
+    },
+    {
+      "label": "🤔",
+      "url": "https://github.com/thi-ng/umbrella#ideas-Mateiadrielrafael"
+    },
+    {
+      "label": "Pierre Grimaud",
+      "url": "https://github.com/pgrimaud"
+    },
+    {
+      "label": "📖",
+      "url": "https://github.com/thi-ng/umbrella/commits?author=pgrimaud"
+    },
+    {
+      "label": "Matt Huebert",
+      "url": "http://matt.is"
+    },
+    {
+      "label": "💵",
+      "url": "https://github.com/thi-ng/umbrella#financial-mhuebert"
+    },
+    {
+      "label": "Raphael Saunier",
+      "url": "http://raphaelsaunier.com"
+    },
+    {
+      "label": "💵",
+      "url": "https://github.com/thi-ng/umbrella#financial-raphaelsaunier"
+    },
+    {
+      "label": "Eric Ihli",
+      "url": "http://owoga.com"
+    },
+    {
+      "label": "💵",
+      "url": "https://github.com/thi-ng/umbrella#financial-eihli"
+    },
+    {
+      "label": "David Pham",
+      "url": "https://davidpham87.github.io"
+    },
+    {
+      "label": "💵",
+      "url": "https://github.com/thi-ng/umbrella#financial-davidpham87"
+    },
+    {
+      "label": "TBD",
+      "url": "http://plugins.ro"
+    },
+    {
+      "label": "🐛",
+      "url": "https://github.com/thi-ng/umbrella/issues?q=author%3Atbd"
+    },
+    {
+      "label": "🤔",
+      "url": "https://github.com/thi-ng/umbrella#ideas-tbd"
+    },
+    {
+      "label": "Pedro Henriques dos Santos Teixeira",
+      "url": "http://twitter.com/pedroteixeira"
+    },
+    {
+      "label": "💵",
+      "url": "https://github.com/thi-ng/umbrella#financial-pedroteixeira"
+    },
+    {
+      "label": "Jamie Owen",
+      "url": "http://jamieowen.com"
+    },
+    {
+      "label": "💻",
+      "url": "https://github.com/thi-ng/umbrella/commits?author=jamieowen"
+    },
+    {
+      "label": "🐛",
+      "url": "https://github.com/thi-ng/umbrella/issues?q=author%3Ajamieowen"
+    },
+    {
+      "label": "Robert Kesteson",
+      "url": "https://github.com/rkesters"
+    },
+    {
+      "label": "🐛",
+      "url": "https://github.com/thi-ng/umbrella/issues?q=author%3Arkesters"
+    },
+    {
+      "label": "💻",
+      "url": "https://github.com/thi-ng/umbrella/commits?author=rkesters"
+    },
+    {
+      "label": "Chancy Kennedy",
+      "url": "https://github.com/chancyk"
+    },
+    {
+      "label": "💵",
+      "url": "https://github.com/thi-ng/umbrella#financial-chancyk"
+    },
+    {
+      "label": "Jarred Sumner",
+      "url": "https://jarredsumner.com"
+    },
+    {
+      "label": "🐛",
+      "url": "https://github.com/thi-ng/umbrella/issues?q=author%3AJarred-Sumner"
+    },
+    {
+      "label": "Jamie Slome",
+      "url": "https://418sec.com"
+    },
+    {
+      "label": "🐛",
+      "url": "https://github.com/thi-ng/umbrella/issues?q=author%3AJamieSlome"
+    },
+    {
+      "label": "🛡️",
+      "url": "https://github.com/thi-ng/umbrella#security-JamieSlome"
+    },
+    {
+      "label": "d3v53c",
+      "url": "https://github.com/d3v53c"
+    },
+    {
+      "label": "🐛",
+      "url": "https://github.com/thi-ng/umbrella/issues?q=author%3Ad3v53c"
+    },
+    {
+      "label": "🛡️",
+      "url": "https://github.com/thi-ng/umbrella#security-d3v53c"
+    },
+    {
+      "label": "Jannis Pohlmann",
+      "url": "https://edgeandnode.com"
+    },
+    {
+      "label": "🐛",
+      "url": "https://github.com/thi-ng/umbrella/issues?q=author%3AJannis"
+    },
+    {
+      "label": "Shakthi Prasad G S",
+      "url": "https://github.com/Shakthi"
+    },
+    {
+      "label": "🐛",
+      "url": "https://github.com/thi-ng/umbrella/issues?q=author%3AShakthi"
+    },
+    {
+      "label": "💻",
+      "url": "https://github.com/thi-ng/umbrella/commits?author=Shakthi"
+    },
+    {
+      "label": "Robin Gower",
+      "url": "http://infonomics.ltd.uk"
+    },
+    {
+      "label": "🐛",
+      "url": "https://github.com/thi-ng/umbrella/issues?q=author%3ARobsteranium"
+    },
+    {
+      "label": "Michael Latzoni",
+      "url": "https://github.com/djmike"
+    },
+    {
+      "label": "🐛",
+      "url": "https://github.com/thi-ng/umbrella/issues?q=author%3Adjmike"
+    },
+    {
+      "label": "Z Yin",
+      "url": "https://github.com/ZYinMD"
+    },
+    {
+      "label": "🐛",
+      "url": "https://github.com/thi-ng/umbrella/issues?q=author%3AZYinMD"
+    },
+    {
+      "label": "Damien Seguin",
+      "url": "https://dmnsgn.me"
+    },
+    {
+      "label": "🐛",
+      "url": "https://github.com/thi-ng/umbrella/issues?q=author%3Admnsgn"
+    },
+    {
+      "label": "💻",
+      "url": "https://github.com/thi-ng/umbrella/commits?author=dmnsgn"
+    },
+    {
+      "label": "Rui Gil",
+      "url": "https://github.com/ruigil"
+    },
+    {
+      "label": "🐛",
+      "url": "https://github.com/thi-ng/umbrella/issues?q=author%3Aruigil"
+    },
+    {
+      "label": "Ja|nz",
+      "url": "https://twitter.com/ja0nz"
+    },
+    {
+      "label": "💻",
+      "url": "https://github.com/thi-ng/umbrella/commits?author=ja0nz"
+    },
+    {
+      "label": "🚇",
+      "url": "https://github.com/thi-ng/umbrella#infra-ja0nz"
+    },
+    {
+      "label": "🚧",
+      "url": "https://github.com/thi-ng/umbrella#maintenance-ja0nz"
+    },
+    {
+      "label": "Tyler Freeman",
+      "url": "http://odbol.com"
+    },
+    {
+      "label": "🐛",
+      "url": "https://github.com/thi-ng/umbrella/issues?q=author%3Aodbol"
+    },
+    {
+      "label": "💻",
+      "url": "https://github.com/thi-ng/umbrella/commits?author=odbol"
+    },
+    {
+      "label": "blackhuman",
+      "url": "https://github.com/blackhuman"
+    },
+    {
+      "label": "🐛",
+      "url": "https://github.com/thi-ng/umbrella/issues?q=author%3Ablackhuman"
+    },
+    {
+      "label": "David Negstad",
+      "url": "https://github.com/dnegstad"
+    },
+    {
+      "label": "💻",
+      "url": "https://github.com/thi-ng/umbrella/commits?author=dnegstad"
+    },
+    {
+      "label": "Muhammad Ridho",
+      "url": "https://github.com/reedho"
+    },
+    {
+      "label": "🐛",
+      "url": "https://github.com/thi-ng/umbrella/issues?q=author%3Areedho"
+    },
+    {
+      "label": "💻",
+      "url": "https://github.com/thi-ng/umbrella/commits?author=reedho"
+    },
+    {
+      "label": "MarcusWagberg",
+      "url": "https://github.com/MarcusWagberg"
+    },
+    {
+      "label": "💻",
+      "url": "https://github.com/thi-ng/umbrella/commits?author=MarcusWagberg"
+    },
+    {
+      "label": "Masashi Yoshikawa",
+      "url": "https://logue.dev/"
+    },
+    {
+      "label": "🐛",
+      "url": "https://github.com/thi-ng/umbrella/issues?q=author%3Alogue"
+    },
+    {
+      "label": "Guido Schmidt",
+      "url": "http://www.guidoschmidt.cc"
+    },
+    {
+      "label": "🐛",
+      "url": "https://github.com/thi-ng/umbrella/issues?q=author%3Aguidoschmidt"
+    },
+    {
+      "label": "💵",
+      "url": "https://github.com/thi-ng/umbrella#financial-guidoschmidt"
+    },
+    {
+      "label": "tsukamotohideki",
+      "url": "https://github.com/tsukamotohideki"
+    },
+    {
+      "label": "💵",
+      "url": "https://github.com/thi-ng/umbrella#financial-tsukamotohideki"
+    },
+    {
+      "label": "Dave Meehan",
+      "url": "http://davemeehan.com"
+    },
+    {
+      "label": "💻",
+      "url": "https://github.com/thi-ng/umbrella/commits?author=dmeehan1968"
+    },
+    {
+      "label": "🤔",
+      "url": "https://github.com/thi-ng/umbrella#ideas-dmeehan1968"
+    },
+    {
+      "label": "Aurélien Bottazini",
+      "url": "http://aurelienbottazini.com"
+    },
+    {
+      "label": "🐛",
+      "url": "https://github.com/thi-ng/umbrella/issues?q=author%3Aaurelienbottazini"
+    },
+    {
+      "label": "Alex",
+      "url": "https://github.com/alexlurvey"
+    },
+    {
+      "label": "🐛",
+      "url": "https://github.com/thi-ng/umbrella/issues?q=author%3Aalexlurvey"
+    },
+    {
+      "label": "💵",
+      "url": "https://github.com/thi-ng/umbrella#financial-alexlurvey"
+    },
+    {
+      "label": "Ross Cairns",
+      "url": "http://rosscairns.com/"
+    },
+    {
+      "label": "💵",
+      "url": "https://github.com/thi-ng/umbrella#financial-rc1"
+    },
+    {
+      "label": "Ruslan Prakapchuk",
+      "url": "https://ul.mantike.pro/"
+    },
+    {
+      "label": "💵",
+      "url": "https://github.com/thi-ng/umbrella#financial-ul"
+    },
+    {
+      "label": "Jarrod Davis",
+      "url": "https://jarrodldavis.com"
+    },
+    {
+      "label": "💵",
+      "url": "https://github.com/thi-ng/umbrella#financial-jarrodldavis"
+    },
+    {
+      "label": "Nicolas Lebrun",
+      "url": "https://nicolas-lebrun.fr/contact/"
+    },
+    {
+      "label": "💡",
+      "url": "https://github.com/thi-ng/umbrella#example-nclslbrn"
+    },
+    {
+      "label": "Dawid Górny",
+      "url": "http://dawidgorny.com"
+    },
+    {
+      "label": "💵",
+      "url": "https://github.com/thi-ng/umbrella#financial-dawidgorny"
+    },
+    {
+      "label": "Michael Reitzenstein",
+      "url": "https://github.com/reitzensteinm"
+    },
+    {
+      "label": "💵",
+      "url": "https://github.com/thi-ng/umbrella#financial-reitzensteinm"
+    },
+    {
+      "label": "Sam Nosenzo",
+      "url": "https://www.samnosenzo.com/"
+    },
+    {
+      "label": "💵",
+      "url": "https://github.com/thi-ng/umbrella#financial-snosenzo"
+    },
+    {
+      "label": "Igor Loskutov",
+      "url": "http://loskutoff.com/"
+    },
+    {
+      "label": "💻",
+      "url": "https://github.com/thi-ng/umbrella/commits?author=Firfi"
+    },
+    {
+      "label": "🤔",
+      "url": "https://github.com/thi-ng/umbrella#ideas-Firfi"
+    },
+    {
+      "label": "Yury",
+      "url": "https://github.com/Hantsouski"
+    },
+    {
+      "label": "💻",
+      "url": "https://github.com/thi-ng/umbrella/commits?author=Hantsouski"
+    },
+    {
+      "label": "🤔",
+      "url": "https://github.com/thi-ng/umbrella#ideas-Hantsouski"
+    },
+    {
+      "label": "💵",
+      "url": "https://github.com/thi-ng/umbrella#financial-Hantsouski"
+    },
+    {
+      "label": "Jean-Frédéric Faust",
+      "url": "https://github.com/jffaust"
+    },
+    {
+      "label": "💻",
+      "url": "https://github.com/thi-ng/umbrella/commits?author=jffaust"
+    },
+    {
+      "label": "🐛",
+      "url": "https://github.com/thi-ng/umbrella/issues?q=author%3Ajffaust"
+    },
+    {
+      "label": "Brandt Ryan",
+      "url": "https://github.com/brandtryan"
+    },
+    {
+      "label": "🐛",
+      "url": "https://github.com/thi-ng/umbrella/issues?q=author%3Abrandtryan"
+    },
+    {
+      "label": "bit-app-3000",
+      "url": "https://github.com/bit-app-3000"
+    },
+    {
+      "label": "🐛",
+      "url": "https://github.com/thi-ng/umbrella/issues?q=author%3Abit-app-3000"
+    },
+    {
+      "label": "🤔",
+      "url": "https://github.com/thi-ng/umbrella#ideas-bit-app-3000"
+    },
+    {
+      "label": "all-contributors",
+      "url": "https://github.com/all-contributors/all-contributors"
+    }
+  ],
+  "root_files": [
+    ".github",
+    ".vscode",
+    ".yarn/releases",
+    "assets",
+    "deprecated/packages",
+    "examples-private",
+    "examples",
+    "packages",
+    "scripts",
+    "tools",
+    ".all-contributorsrc",
+    ".clang-format",
+    ".editorconfig",
+    ".eslintignore",
+    ".eslintrc.json",
+    ".gitattributes",
+    ".gitignore",
+    ".prettierignore",
+    ".prettierrc",
+    ".tool-versions",
+    ".yarnrc.yml",
+    ".zigversion",
+    "CODE_OF_CONDUCT.md",
+    "CONTRIBUTING.md",
+    "LICENSE",
+    "README.md",
+    "SECURITY.md",
+    "package.json",
+    "tsconfig.json",
+    "typedoc.json",
+    "yarn.lock"
+  ],
+  "release_count": null,
+  "status": "verified"
+}

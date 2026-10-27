@@ -1,0 +1,105 @@
+{
+  "url": "https://github.com/KacemMathlouthi/benday",
+  "final_url": "https://github.com/KacemMathlouthi/benday",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:47:26.679628+00:00",
+  "stars": 42,
+  "forks": 0,
+  "description": "Turn your logo into an animated thinking indicator for agent UIs and more.",
+  "homepage": "https://benday.kacemmathlouthi.dev",
+  "topics": [
+    "agent-ui",
+    "ai",
+    "ai-agents",
+    "dots",
+    "loading-indicator",
+    "react",
+    "react-components",
+    "spinner",
+    "ui",
+    "ui-components"
+  ],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2026-08-07T19:18:37.000Z",
+  "branch": "main",
+  "commit": "04e05f356f83ae36426b698fb08ca5ce2e4643d8",
+  "readme": "benday Your logo, halftoned into a thinking indicator. Docs · Playground · Registry Install bunx shadcn@latest add @benday/benday import { Benday } from \"@/components/ui/benday\"; <Benday src=\"/logo.svg\" state={isThinking ? \"thinking\" : \"done\"} />; Seven files land in your project and belong to you. Only React is required — there is no package to depend on. @benday is a namespace in shadcn's registry directory, so there is nothing to add to components.json. Presets Twenty-one presets span signature, sweep, orbit, field and transform motion: contour waves, serpentine cascades, radar beams, orbiting comets, equalizers, magnetic pulls, staged resolves and more. thinking runs the preset; idle and done show the crisp mark, and the dots spring back into it. A preset is a function of one dot and the clock, so write your own. How it works The image is rasterized once, ink separated from background by alpha or luminance, then a Euclidean distance transform gives every dot its depth inside the mark. That dot map is all the renderer animates — cached by source, paused off-screen, honouring reduced motion, resolving currentColor against the canvas. Bake at build time and pass dotMap instead of src to skip the work entirely. Repository registry/ui/ the primitive — mirrors the tree the CLI installs registry.json the source catalog apps/web/ docs site and playground apps/web/public/r/ generated payloads, committed The docs app imports registry/ through @registry/* rather than keeping a copy, so every example on the site is the code that ships. The site is prerendered: apps/web/src/lib/seo.ts lists every page, and bun run build writes one HTML file per route with its own title, description, canonical and rendered markup, plus a markdown twin, a sitemap and an llms.txt. A new route must be added to PAGES there, with prose in apps/web/content/. There is no SPA fallback, so a route missing from that list is a 404 on a direct hit. Development bun install bun run dev registry:build regenerates the payloads and must be committed with any change to registry/. check, typecheck, knip and build are what CI runs. See CONTRIBUTING. MIT",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://github.com/KacemMathlouthi/benday/blob/main/apps/web/public/favicon.svg"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/KacemMathlouthi/benday#benday"
+    },
+    {
+      "label": "Docs",
+      "url": "https://benday.kacemmathlouthi.dev/usage"
+    },
+    {
+      "label": "Playground",
+      "url": "https://benday.kacemmathlouthi.dev/playground"
+    },
+    {
+      "label": "Registry",
+      "url": "https://benday.kacemmathlouthi.dev/r/registry.json"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/KacemMathlouthi/benday/blob/main/apps/web/public/og.png"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/KacemMathlouthi/benday#install"
+    },
+    {
+      "label": "shadcn's registry directory",
+      "url": "https://github.com/shadcn-ui/ui/pull/11447"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/KacemMathlouthi/benday#presets"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/KacemMathlouthi/benday#how-it-works"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/KacemMathlouthi/benday#repository"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/KacemMathlouthi/benday#development"
+    },
+    {
+      "label": "CONTRIBUTING",
+      "url": "https://github.com/KacemMathlouthi/benday/blob/main/CONTRIBUTING.md"
+    }
+  ],
+  "root_files": [
+    ".changeset",
+    ".github/workflows",
+    "apps",
+    "registry",
+    ".bun-version",
+    ".gitignore",
+    "CLAUDE.md",
+    "CONTRIBUTING.md",
+    "LICENSE",
+    "README.md",
+    "bun.lock",
+    "knip.json",
+    "oxfmt.config.ts",
+    "oxlint.config.ts",
+    "package.json",
+    "registry.json",
+    "tsconfig.json",
+    "turbo.json",
+    "vercel.json"
+  ],
+  "release_count": 4,
+  "status": "verified"
+}

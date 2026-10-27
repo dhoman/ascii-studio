@@ -1,0 +1,298 @@
+{
+  "url": "https://github.com/FunTechInc/use-shader-fx",
+  "final_url": "https://github.com/FunTechInc/use-shader-fx",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:47:25.707305+00:00",
+  "stars": 418,
+  "forks": 18,
+  "description": "⚡️ More fx, Less GLSL",
+  "homepage": "https://use-shader-fx.vercel.app",
+  "topics": [
+    "glsl",
+    "glsl-shader",
+    "helpers",
+    "hooks",
+    "react",
+    "react-three-drei",
+    "react-three-fiber",
+    "shader",
+    "threejs",
+    "webgl"
+  ],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2023-08-26T07:48:59.000Z",
+  "branch": "main",
+  "commit": "338e63427310a6b13947f68c5863e4cf4bbb62f1",
+  "readme": "use-shader-fx is a library designed to easily implement shader effects such as fluid simulations and noise. It relies on react-three-fiber and has been designed with performance control in mind, especially when combined with drei. For details on each FX, please refer to Storybook 👉 Storybook 👈 npm install @funtech-inc/use-shader-fx Click for the demo! 🤩 Hooks Index FXs effects useMotionBlur, useSimpleBlur, useWave interactions useBrush, useFluid, useRipple misc useChromaKey, useBlank noises useColorStrata, useMarble, useNoise utils useAlphaBlending, useBlending, useBrightnessPicker, useCoverTexture, useDuoTone, useFxBlending, useFxTexture, useHSV 3D useMorphParticles, useWobble3D ※ The hook with `~~Texutre` calculates the texture resolution and canvas resolution and covers the texture. Misc misc useBeat, useFPSLimiter, usePointer, useDomSyncer Usage From each fxHooks, you can receive [updateFx, setParams, fxObject] in array format. HooksProps are objects that are different for each hook and contain values such as size, dpr ... etc. updateFx - Functions to update parameters and render. updateParams - Function to update parameters only. fxObject - An object that holds various FX components, such as scene, camera, mesh, renderTarget, and output(final rendered texture). HooksProps - size,dpr,isSizeUpdate,onBeforeInit and renderTargetOptions ※ isSizeUpdate : Whether to setSize the FBO when updating size or dpr(default : false). const [updateFx, updateParams, fxObject] = useSomeFx(HooksProps); Call updateFx on useFrame. The first argument is the RootState of useFrame and the second argument is HookParams. The third argument can be CustomParams customised by the user. Each FX has HookParams and each type is exported. useFrame((rootState) => { const texture = updateFx(rootState, HookParams, CustomParams); }); Starter template with Next.js + TypeScript 🎨 blankcanvas The simplest example This is the simplest example! import * as THREE from \"three\"; import { useRef } from \"react\"; import { useFrame, useThree } from \"@react-three/fiber\"; import { useFluid } from \"@funtech-inc/use-shader-fx\"; export const Home = () => { const { size } = useThree(); const [updateFluid, , { output }] = useFluid({ size: { width: size.width, height: size.height, }, dpr: 1, }); useFrame((rootState) => updateFluid(rootState)); return ( <mesh> <boxGeometry args={[3, 3, 3]} /> <meshStandardMaterial map={output} roughness={0.05} metalness={0.4} /> </mesh> ); }; Integrate with r3f scenes. You can use r3f/createPortal to make some mesh render off-screen. All that remains is to combine the generated textures with FX! import * as THREE from \"three\"; import { useMemo, useRef, useState } from \"react\"; import { useFrame, useThree, createPortal } from \"@react-three/fiber\"; import { useNoise, useSingleFBO } from \"@hmng8/use-shader-fx\"; function Box(props: any) { // This reference will give us direct access to the mesh const meshRef = useRef<THREE.Mesh>(); // Set up state for the hovered and active state const [hovered, setHover] = useState(false); const [active, setActive] = useState(false); // Subscribe this component to the render-loop, rotate the mesh every frame useFrame((state, delta) => { meshRef.current!.rotation.x += delta; meshRef.current!.rotation.y -= delta; }); // Return view, these are regular three.js elements expressed in JSX return ( <mesh {...props} ref={meshRef} scale={active ? 2 : 1.5} onClick={(event) => setActive(!active)} onPointerOver={(event) => setHover(true)} onPointerOut={(event) => setHover(false)}> <boxGeometry args={[1, 1, 1]} /> <meshStandardMaterial color={hovered ? \"hotpink\" : \"orange\"} /> </mesh> ); } export const Home = () => { const ref = useRef<THREE.ShaderMaterial>(null); const { size, viewport, camera } = useThree(); const [updateNoise, , { output }] = useNoise({ size, dpr: viewport.dpr, }); // This scene is rendered offscreen const offscreenScene = useMemo(() => new THREE.Scene(), []); // create FBO for offscreen rendering const [boxView, updateRenderTarget] = useSingleFBO({ scene: offscreenScene, camera, size, dpr: viewport.dpr, }); useFrame((rootState) => { updateNoise(rootState); updateRenderTarget(rootState.gl); }); return ( <> {createPortal( <mesh> <ambientLight intensity={Math.PI} /> <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} decay={0} intensity={Math.PI} /> <pointLight position={[-10, -10, -10]} decay={0} intensity={Math.PI} /> <Box position={[-1.5, 0, 0]} /> <Box position={[1.5, 0, 0]} /> </mesh>, offscreenScene )} <mesh> <planeGeometry args={[2, 2]} /> <shaderMaterial ref={ref} transparent vertexShader={` varying vec2 vUv; void main() { vUv = uv; gl_Position = vec4(position, 1.0); } `} fragmentShader={` precision highp float; varying vec2 vUv; uniform sampler2D u_fx; uniform sampler2D u_texture; void main() { vec2 uv = vUv; vec3 noiseMap = texture2D(u_fx, uv).rgb; vec3 nNoiseMap = noiseMap * 2.0 - 1.0; uv = uv * 2.0 - 1.0; uv *= mix(vec2(1.0), abs(nNoiseMap.rg), .6); uv = (uv + 1.0) / 2.0; gl_FragColor = texture2D(u_texture, uv); } `} uniforms={{ u_texture: { value: boxView.texture }, u_fx: { value: output }, }} /> </mesh> </> ); }; Performance You can control the dpr using the PerformanceMonitor from drei. For more details, please refer to the scaling-performance of r3f. export const Fx = () => { const [dpr, setDpr] = useState(1.5); return ( <Canvas dpr={dpr}> <PerformanceMonitor factor={1} onChange={({ factor }) => { console.log(`dpr:${dpr}`); setDpr(Math.round((0.5 + 1.5 * factor) * 10) / 10); }}> <Suspense fallback={null}> <Scene /> </Suspense> <Perf position={\"bottom-right\"} minimal={false} /> </PerformanceMonitor> </Canvas> ); }; By using the PerformanceMonitor, you can subscribe to performance changes with usePerformanceMonitor. For more details, refer to drei. With setParams received from fxHooks, it's possible to independently control high-load items such as iteration counts. usePerformanceMonitor({ onChange({ factor }) { setParams({ pressure_iterations: Math.round(20 * factor), }); }, }); When using some expensive FX (such as useFluid), lowering the dpr of the FBO of that FX can improve performance. const [updateFx, setParams, fxObject] = useSomeFx({ size, dpr: 0.01 }); Also, you can make more detailed adjustments by passing an object to dpr instead of number. type Dpr = | number | { /** you can set whether `dpr` affects `shader`. default : `false` */ shader?: false | number; /** you can set whether `dpr` affects `fbo`. default : `false` */ fbo?: false | number; }; Misc useDomSyncer The second argument contains the dependency array that updates the DOM. For example, you can pass a pathname when navigating pages. const [updateDomSyncer, setDomSyncer, domSyncerObj] = useDomSyncer( { size, dpr }, [state] ); useLayoutEffect(() => { if (state === 0) { domArr.current = [...document.querySelectorAll(\".item\")!]; } else { domArr.current = [...document.querySelectorAll(\".item2\")!]; } setDomSyncer({ // Because DOM rendering and React updates occur asynchronously, there may be a lag between updating dependent arrays and setting DOM arrays. That's what the Key is for. If the dependent array is updated but the Key is not, the loop will skip and return an empty texture. By updating the timing key when DOM acquisition is complete, you can perfectly synchronize DOM and Mesh updates.updateKey must be a unique value for each update, for example `performance.now() updateKey: performance.now(), dom: domArr.current, boderRadius: [...Array(domArr.current.length)].map((_, i) => i * 50.0), onIntersect: [...Array(domArr.current.length)].map((_, i) => (entry) => { if (entry.isIntersecting && !domSyncerObj.isIntersecting(i, true)) { // some callback } }), }); }, [state]); const [, copyTexture] = useCopyTexture( { scene: fxTextureObj.scene, camera: fxTextureObj.camera, size, dpr }, domArr.current.length ); useFrame((rootState) => { const syncedTexture = updateDomSyncer(rootState, { texture: [...Array(domArr.current.length)].map((_, i) => { if (domSyncerObj.isIntersecting(i, false)) { textureRef.current = updateFxTexture(rootState, { map: someFx, texture0: someTexture, }); return copyTexture(rootState.gl, i); } }), }); }); domSyncerObj contains an isIntersecting function that returns the DOM intersection test The boolean will be updated after executing the onIntersect function. type DomSyncerObject = { scene: THREE.Scene; camera: THREE.Camera; renderTarget: THREE.WebGLRenderTarget; output: THREE.Texture; /** * A function that returns a determination whether the DOM intersects or not. * The boolean will be updated after executing the onIntersect function. * @param index - Index of the dom for which you want to return an intersection decision. -1 will return the entire array. * @param once - If set to true, it will continue to return true once crossed. */ isIntersecting: IsIntersecting; /** target's DOMRect[] */ DOMRects: DOMRect[]; /** target's intersetions boolean[] */ intersections: boolean[]; /** You can set callbacks for when at least one DOM is visible and when it is completely hidden. */ useDomView: UseDomView; }; DomSyncerParams can be passed the onIntersect function. type DomSyncerParams = { /** DOM array you want to synchronize */ dom?: (HTMLElement | Element | null)[]; /** Texture array that you want to synchronize with the DOM rectangle */ texture?: THREE.Texture[]; /** default:0.0[] */ boderRadius?: number[]; /** the angle you want to rotate */ rotation?: THREE.Euler[]; /** Array of callback functions when crossed */ onIntersect?: ((entry: IntersectionObserverEntry) => void)[]; /** Because DOM rendering and React updates occur asynchronously, there may be a lag between updating dependent arrays and setting DOM arrays. That's what the Key is for. If the dependent array is updated but the Key is not, the loop will skip and return an empty texture. By updating the timing key when DOM acquisition is complete, you can perfectly synchronize DOM and Mesh updates. */ updateKey?: Key; }; updateKey : Because DOM rendering and React updates occur asynchronously, there may be a lag between updating dependent arrays and setting DOM arrays. That's what the Key is for. If the dependent array is updated but the Key is not, the loop will skip and return an empty texture. By updating the timing key when DOM acquisition is complete, you can perfectly synchronize DOM and Mesh updates. usePointer When given the pointer vector2 from r3f's RootState, it generates an update function that returns {currentPointer, prevPointer, diffPointer, isVelocityUpdate, velocity}. You can also add lerp (0~1, lerp intensity (0 to less than 1) , default: 0) const updatePointer = usePointer(lerp); const { currentPointer, prevPointer, diffPointer, isVelocityUpdate, velocity } = updatePointer(pointer); You can override the pointer process by passing pointerValues to updateFx in the useFrame. useFrame((rootState) => { const pointerValues = updatePointer(rootState.pointer); updateBrush(rootState, { pointerValues: pointerValues, }); }); useBeat Time-sensitive hooks such as useNoise and useMarble accept beat. The second argument can be easing. easing functions are referenced from https://github.com/ai/easings.net , default : \"easeOutQuart\" const beting = useBeat(bpm, \"easeOutQuad\"); useFrame((rootState) => { const { beat, hash } = beting(rootState.clock); updateMarble(rootState, { beat: beat, }); }); type BeatValues = { beat: number; floor: number; fract: number; /** unique hash specific to the beat */ hash: number; }; useFPSLimiter Allows you to skip FX that do not need to be processed at 60 FPS. const limiter = useFPSLimiter(30); useFrame((rootState) => { if (!limiter(rootState.clock)) { return; } }); useCopyTexture Generate an FBO array to copy the texture. const [renderTargets, copyTexture] = useCopyTexture(UseFboProps, length); copyTexture(gl, index); // return texture 3D The 3D series has a set of exported hooks, each with Create, like useCreateWobble3D, which can be used as a texture, but also to add object3D as a primitive to an r3f scene. It is also possible to add object3D as a primitive to an r3f scene. const [updateWobble, wobble] = useCreateWobble3D({ baseMaterial: THREE.MeshPhysicalMaterial, materialParameters: { roughness: 0.0, transmission: 1, thickness: 1, }, }); useFrame((rootState) => updateWobble(rootState)); return ( <mesh> <Environment preset=\"warehouse\" background /> <primitive object={wobble.mesh} /> </mesh> ); 👉 wobble3D demo 👈 👉 morphParticles demo 👈 useBlank / useRawBlank By default, it is a blank canvas with nothing drawn on it. You can customise the shaders using onBeforeInit. Fragment shaders have uTexture,uBackbuffer,uTime,uPointer and uResolution as default uniforms. useRawBlank is more raw, default uniforms is only uResolution. const [updateBlank, _, { output: blank, material }] = useBlank({ size, dpr: viewport.dpr, onBeforeInit: useCallback((shader: OnBeforeInitParameters) => { Object.assign(shader.uniforms, { hoge: { value: 0 }, }); shader.fragmentShader = shader.fragmentShader.replace( \"#usf <uniforms>\", \"uniform float hoge;\" ); shader.fragmentShader = shader.fragmentShader.replace( \"#usf <main>\", `usf_FragColor=vec4(vec3(1.,hoge,1.),1.);` ); }, []), }); useFrame((rootState) => { updateBlank( rootState, {}, { hoge: Math.sin(rootState.clock.getElapsedTime()), } ); }); ※ usf_FragColor overrides gl_FragColor ※ usf_Position overrides gl_Position",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://github.com/FunTechInc/use-shader-fx/blob/main/public/app-head.jpg"
+    },
+    {
+      "label": "react-three-fiber",
+      "url": "https://github.com/pmndrs/react-three-fiber"
+    },
+    {
+      "label": "drei",
+      "url": "https://github.com/pmndrs/drei"
+    },
+    {
+      "label": "Storybook",
+      "url": "https://use-shader-fx-stories.vercel.app/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/FunTechInc/use-shader-fx#click-for-the-demo-"
+    },
+    {
+      "label": "",
+      "url": "https://use-shader-fx.vercel.app/"
+    },
+    {
+      "label": "",
+      "url": "https://use-shader-fx.vercel.app/cream"
+    },
+    {
+      "label": "",
+      "url": "https://use-shader-fx.vercel.app/useMorphParticles"
+    },
+    {
+      "label": "",
+      "url": "https://use-shader-fx.vercel.app/obscurus"
+    },
+    {
+      "label": "",
+      "url": "https://particles-demo-green.vercel.app/"
+    },
+    {
+      "label": "",
+      "url": "https://use-shader-fx.vercel.app/useWobble3D"
+    },
+    {
+      "label": "",
+      "url": "https://romanticism.vercel.app/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/FunTechInc/use-shader-fx#hooks-index"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/FunTechInc/use-shader-fx#fxs"
+    },
+    {
+      "label": "useMotionBlur",
+      "url": "https://use-shader-fx-stories.vercel.app/?path=/docs/effects-usemotionblur--docs"
+    },
+    {
+      "label": "useSimpleBlur",
+      "url": "https://use-shader-fx-stories.vercel.app/?path=/docs/effects-usesimpleblur--docs"
+    },
+    {
+      "label": "useWave",
+      "url": "https://use-shader-fx-stories.vercel.app/?path=/docs/effects-usewave--docs"
+    },
+    {
+      "label": "useBrush",
+      "url": "https://use-shader-fx-stories.vercel.app/?path=/docs/interactions-usebrush--docs"
+    },
+    {
+      "label": "useFluid",
+      "url": "https://use-shader-fx-stories.vercel.app/?path=/docs/interactions-usefluid--docs"
+    },
+    {
+      "label": "useRipple",
+      "url": "https://use-shader-fx-stories.vercel.app/?path=/docs/interactions-useripple--docs"
+    },
+    {
+      "label": "useChromaKey",
+      "url": "https://use-shader-fx-stories.vercel.app/?path=/docs/misc-usechromakey--docs"
+    },
+    {
+      "label": "useBlank",
+      "url": "https://use-shader-fx-stories.vercel.app/?path=/docs/misc-useblank--docs"
+    },
+    {
+      "label": "useColorStrata",
+      "url": "https://use-shader-fx-stories.vercel.app/?path=/docs/noises-usecolorstrata--docs"
+    },
+    {
+      "label": "useMarble",
+      "url": "https://use-shader-fx-stories.vercel.app/?path=/docs/noises-usemarble--docs"
+    },
+    {
+      "label": "useNoise",
+      "url": "https://use-shader-fx-stories.vercel.app/?path=/docs/noises-usenoise--docs"
+    },
+    {
+      "label": "useAlphaBlending",
+      "url": "https://use-shader-fx-stories.vercel.app/?path=/docs/utils-usealphablending--docs"
+    },
+    {
+      "label": "useBlending",
+      "url": "https://use-shader-fx-stories.vercel.app/?path=/docs/utils-useblending--docs"
+    },
+    {
+      "label": "useBrightnessPicker",
+      "url": "https://use-shader-fx-stories.vercel.app/?path=/docs/utils-usebrightnesspicker--docs"
+    },
+    {
+      "label": "useCoverTexture",
+      "url": "https://use-shader-fx-stories.vercel.app/?path=/docs/utils-usecovertexture--docs"
+    },
+    {
+      "label": "useDuoTone",
+      "url": "https://use-shader-fx-stories.vercel.app/?path=/docs/utils-useduotone--docs"
+    },
+    {
+      "label": "useFxBlending",
+      "url": "https://use-shader-fx-stories.vercel.app/?path=/docs/utils-usefxblending--docs"
+    },
+    {
+      "label": "useFxTexture",
+      "url": "https://use-shader-fx-stories.vercel.app/?path=/docs/utils-usefxtexture--docs"
+    },
+    {
+      "label": "useHSV",
+      "url": "https://use-shader-fx-stories.vercel.app/?path=/docs/utils-usehsv--docs"
+    },
+    {
+      "label": "3D",
+      "url": "https://github.com/FunTechInc/use-shader-fx#3D"
+    },
+    {
+      "label": "useMorphParticles",
+      "url": "https://use-shader-fx-stories.vercel.app/?path=/docs/3d-usemorphparticles--docs"
+    },
+    {
+      "label": "useWobble3D",
+      "url": "https://use-shader-fx-stories.vercel.app/?path=/docs/3d-usewobble3d--docs"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/FunTechInc/use-shader-fx#misc"
+    },
+    {
+      "label": "useBeat",
+      "url": "https://github.com/FunTechInc/use-shader-fx#usebeat"
+    },
+    {
+      "label": "useFPSLimiter",
+      "url": "https://github.com/FunTechInc/use-shader-fx#usefpslimiter"
+    },
+    {
+      "label": "usePointer",
+      "url": "https://github.com/FunTechInc/use-shader-fx#usepointer"
+    },
+    {
+      "label": "useDomSyncer",
+      "url": "https://github.com/FunTechInc/use-shader-fx#usedomsyncer"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/FunTechInc/use-shader-fx#usage"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/FunTechInc/use-shader-fx#starter-template-with-nextjs--typescript-"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/FunTechInc/blankcanvas"
+    },
+    {
+      "label": "blankcanvas",
+      "url": "https://github.com/FunTechInc/blankcanvas"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/FunTechInc/use-shader-fx#the-simplest-example"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/FunTechInc/use-shader-fx#integrate-with-r3f-scenes"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/FunTechInc/use-shader-fx#performance"
+    },
+    {
+      "label": "drei",
+      "url": "https://github.com/pmndrs/drei"
+    },
+    {
+      "label": "scaling-performance",
+      "url": "https://docs.pmnd.rs/react-three-fiber/advanced/scaling-performance"
+    },
+    {
+      "label": "drei",
+      "url": "https://github.com/pmndrs/drei#performancemonitor"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/FunTechInc/use-shader-fx#misc-1"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/FunTechInc/use-shader-fx#usedomsyncer"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/FunTechInc/use-shader-fx#usepointer"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/FunTechInc/use-shader-fx#usebeat"
+    },
+    {
+      "label": "https://github.com/ai/easings.net",
+      "url": "https://github.com/ai/easings.net"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/FunTechInc/use-shader-fx#usefpslimiter"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/FunTechInc/use-shader-fx#usecopytexture"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/FunTechInc/use-shader-fx#3d"
+    },
+    {
+      "label": "wobble3D demo",
+      "url": "https://use-shader-fx.vercel.app/useWobble3D"
+    },
+    {
+      "label": "morphParticles demo",
+      "url": "https://use-shader-fx.vercel.app/useMorphParticles"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/FunTechInc/use-shader-fx#useblank--userawblank"
+    }
+  ],
+  "root_files": [
+    ".storybook",
+    "app",
+    "packages/use-shader-fx",
+    "public",
+    "src/assets/css",
+    "utils",
+    ".eslintrc.json",
+    ".gitignore",
+    "CONTRIBUTING.md",
+    "LICENSE",
+    "README.md",
+    "custom.d.ts",
+    "next.config.js",
+    "package-lock.json",
+    "package.json",
+    "tsconfig.json"
+  ],
+  "release_count": 11,
+  "status": "verified"
+}

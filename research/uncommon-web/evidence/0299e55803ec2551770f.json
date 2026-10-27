@@ -1,0 +1,206 @@
+{
+  "url": "https://github.com/Avijit07x/animateicons",
+  "final_url": "https://github.com/Avijit07x/animateicons",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:45:57.206819+00:00",
+  "stars": 1328,
+  "forks": 74,
+  "description": "1,170 animated SVG icons with hover and imperative triggers, and configurable size, color and duration. Built on motion.",
+  "homepage": "https://animateicons.in",
+  "topics": [
+    "animated-icons",
+    "animation",
+    "framer-motion",
+    "icons",
+    "lucide-icons",
+    "lucide-react",
+    "motion",
+    "nextjs",
+    "svgicon"
+  ],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2025-07-29T17:51:25.000Z",
+  "branch": "main",
+  "commit": "bfda72104431a439107e1b26090df626812ade79",
+  "readme": "Browse icons · Docs · MCP · Sponsor 1,170 animated SVG icons with hover and imperative triggers, and configurable size, color and duration. Built on motion. Quick start pnpm add @animateicons/react import { BellRingIcon } from \"@animateicons/react/lucide\"; export function Notifications() { return <BellRingIcon size={24} color=\"#f45b48\" />; } Icons animate on hover by default, and motion is bundled. Import from @animateicons/react/lucide or @animateicons/react/huge. Prefer to own the code? Copy one icon into your project with npx animateicons add bell-ring. Other frameworks The same icons and the same motion ship for more than React: Framework Package Docs Plain JS, web components, Svelte, Solid, Astro @animateicons/vanilla Plain JS Vue 3 and Nuxt @animateicons/vue Vue Angular 20, 21 and 22 @animateicons/angular Angular Props Prop Type Default size number 24 color string currentColor duration number 1 isAnimated boolean true className string - Hover, click or both TipUse useIconHover to play an icon when a user hovers or clicks the button, link or card around it. \"use client\"; import { useIconHover } from \"@animateicons/react\"; import { BellRingIcon } from \"@animateicons/react/lucide\"; export default function Bell() { const { ref, triggerProps } = useIconHover(); // hover (default) return ( <button {...triggerProps}> <BellRingIcon ref={ref} size={28} /> </button> ); } See the full docs for click, both and multiple icons. Documentation Read the documentation for the CLI, shadcn, MCP, styling and the full API. Contributing PRs adding icons are welcome. See CONTRIBUTING.md. License MIT. Icon shapes are based on Lucide and Hugeicons, see the third-party notices.",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://github.com/Avijit07x/animateicons/blob/main/public/readme-banner.svg"
+    },
+    {
+      "label": "Browse icons",
+      "url": "https://animateicons.in/icons/lucide"
+    },
+    {
+      "label": "Docs",
+      "url": "https://animateicons.in/icons/docs"
+    },
+    {
+      "label": "MCP",
+      "url": "https://animateicons.in/icons/docs/mcp"
+    },
+    {
+      "label": "Sponsor",
+      "url": "https://github.com/sponsors/Avijit07x"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@animateicons/react"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/Avijit07x/animateicons/stargazers"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/Avijit07x/animateicons/graphs/contributors"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/Avijit07x/animateicons/commits"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/Avijit07x/animateicons/blob/main/LICENSE"
+    },
+    {
+      "label": "",
+      "url": "https://vercel.com/open-source-program"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/Avijit07x/animateicons#quick-start"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/Avijit07x/animateicons#other-frameworks"
+    },
+    {
+      "label": "@animateicons/vanilla",
+      "url": "https://www.npmjs.com/package/@animateicons/vanilla"
+    },
+    {
+      "label": "Plain JS",
+      "url": "https://animateicons.in/icons/docs/vanilla"
+    },
+    {
+      "label": "@animateicons/vue",
+      "url": "https://www.npmjs.com/package/@animateicons/vue"
+    },
+    {
+      "label": "Vue",
+      "url": "https://animateicons.in/icons/docs/vue"
+    },
+    {
+      "label": "@animateicons/angular",
+      "url": "https://www.npmjs.com/package/@animateicons/angular"
+    },
+    {
+      "label": "Angular",
+      "url": "https://animateicons.in/icons/docs/angular"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/Avijit07x/animateicons#props"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/Avijit07x/animateicons#hover-click-or-both"
+    },
+    {
+      "label": "full docs",
+      "url": "https://animateicons.in/icons/docs/examples/hover-helper"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/Avijit07x/animateicons#documentation"
+    },
+    {
+      "label": "documentation",
+      "url": "https://animateicons.in/icons/docs"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/Avijit07x/animateicons#contributing"
+    },
+    {
+      "label": "CONTRIBUTING.md",
+      "url": "https://github.com/Avijit07x/animateicons/blob/main/CONTRIBUTING.md"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/Avijit07x/animateicons#license"
+    },
+    {
+      "label": "MIT",
+      "url": "https://github.com/Avijit07x/animateicons/blob/main/LICENSE"
+    },
+    {
+      "label": "Lucide",
+      "url": "https://lucide.dev"
+    },
+    {
+      "label": "Hugeicons",
+      "url": "https://hugeicons.com"
+    },
+    {
+      "label": "third-party notices",
+      "url": "https://github.com/Avijit07x/animateicons/blob/main/THIRD_PARTY_NOTICES.md"
+    }
+  ],
+  "root_files": [
+    ".githooks",
+    ".github",
+    "actions",
+    "angular",
+    "app",
+    "cli",
+    "components",
+    "core",
+    "data",
+    "docs",
+    "eslint-rules",
+    "hooks",
+    "icons",
+    "lib",
+    "mcp",
+    "npm",
+    "public",
+    "scripts",
+    "test-zone",
+    "tests",
+    "types",
+    "utils",
+    "vanilla",
+    "vue",
+    ".env.example",
+    ".gitignore",
+    ".prettierignore",
+    ".prettierrc",
+    "AGENTS.md",
+    "CLAUDE.md",
+    "CODE_OF_CONDUCT.md",
+    "CONTRIBUTING.md",
+    "LICENSE",
+    "README.md",
+    "SECURITY.md",
+    "THIRD_PARTY_NOTICES.md",
+    "commitlint.config.mjs",
+    "components.json",
+    "eslint.config.mjs",
+    "knip.json",
+    "mdx-components.tsx",
+    "next.config.ts",
+    "package.json",
+    "pnpm-lock.yaml",
+    "pnpm-workspace.yaml",
+    "postcss.config.mjs",
+    "registry.json",
+    "tsconfig.json",
+    "vitest.config.ts"
+  ],
+  "release_count": 0,
+  "status": "verified"
+}

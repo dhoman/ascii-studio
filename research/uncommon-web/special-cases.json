@@ -1,0 +1,89 @@
+[
+  {
+    "name": "dithercn",
+    "repo": null,
+    "docs": "https://dithercn.dev/docs",
+    "license": "MIT (declared by the official homepage footer and SoftwareSourceCode JSON-LD)",
+    "stars": null,
+    "notes": "No authoritative public project repository found. The official site links the author profile https://github.com/leoisadev1, not a dithercn repository; the profile's public repository listing did not include dithercn. Source is publicly distributed through the shadcn registry at https://dithercn.dev/r/registry.json and individual registry items such as https://dithercn.dev/r/dither-core.json. Documentation index: https://dithercn.dev/llms.txt. Do not substitute the author's profile or another dither project as the repository. MIT declaration supports commercial use subject to MIT terms; a repository LICENSE file was not found.",
+    "sources": ["https://dithercn.dev", "https://dithercn.dev/docs.md", "https://dithercn.dev/docs/installation.md", "https://dithercn.dev/llms.txt", "https://dithercn.dev/r/registry.json", "https://dithercn.dev/r/dither-core.json", "https://api.github.com/users/leoisadev1/repos?per_page=100"],
+    "evidence": [
+      {"source": "https://dithercn.dev", "quote": "A dither engine with an agent skill, for shadcn projects. MIT licensed."},
+      {"source": "https://dithercn.dev/docs.md", "quote": "Everything installs as files in your project. You and your agent can read and change all of it."},
+      {"source": "https://dithercn.dev/docs/installation.md", "quote": "npx shadcn@latest add https://dithercn.dev/r/dithercn-skill.json"}
+    ]
+  },
+  {
+    "name": "Heptapod Ink",
+    "repo": "https://tangled.org/mads.havmand.eu/heptapod-ink",
+    "docs": "https://tangled.org/mads.havmand.eu/heptapod-ink/blob/main/README.md",
+    "license": "MIT",
+    "stars": 0,
+    "notes": "The live demo links this exact Tangled repository. The inventory's https://tangled.org/did:plc:h7e4sqbb5nq5nnsbgib7csll is a profile URL, not the repository URL. Encodes text as Arrival-inspired circular SVG logograms and decodes those SVGs; not a translation of the film's language. Stars are Tangled stars observed during this retrieval, not GitHub stars. Commercial use allowed by MIT with notice preservation.",
+    "sources": ["https://heptapod-ink.tngl.io/", "https://tangled.org/did:plc:h7e4sqbb5nq5nnsbgib7csll", "https://tangled.org/mads.havmand.eu/heptapod-ink", "https://tangled.org/mads.havmand.eu/heptapod-ink/blob/main/README.md", "https://tangled.org/mads.havmand.eu/heptapod-ink/raw/main/LICENSE"],
+    "evidence": [
+      {"source": "https://tangled.org/mads.havmand.eu/heptapod-ink", "quote": "Write text as circular ink logograms in the style of the Heptapod B script from Arrival, and read them back."},
+      {"source": "https://tangled.org/mads.havmand.eu/heptapod-ink", "quote": "Star 0"},
+      {"source": "https://tangled.org/mads.havmand.eu/heptapod-ink/raw/main/LICENSE", "quote": "MIT License"},
+      {"source": "https://tangled.org/mads.havmand.eu/heptapod-ink/raw/main/LICENSE", "quote": "Copyright (c) 2026 Mads R. Havmand"}
+    ]
+  },
+  {
+    "name": "@thi.ng/geom-fuzz",
+    "repo": "https://codeberg.org/thi.ng/umbrella",
+    "docs": "https://docs.thi.ng/umbrella/geom-fuzz/",
+    "license": "Apache-2.0",
+    "stars": 36,
+    "notes": "Package within the official Codeberg umbrella monorepo, not an independent repository. Package source: https://codeberg.org/thi.ng/umbrella/src/branch/develop/packages/geom-fuzz. Human-readable package overview and README: https://thi.ng/geom-fuzz. Configurable fuzzy lines and polygons with composable fills/strokes and Canvas/SVG support. Stars are Codeberg stars for the entire umbrella monorepo, not package-specific or GitHub stars. API reports original_url https://github.com/thi-ng/umbrella.git, but the current official package documentation directs users to Codeberg. Apache-2.0 allows commercial use subject to its conditions.",
+    "sources": ["https://thi.ng/geom-fuzz", "https://codeberg.org/thi.ng/umbrella", "https://codeberg.org/thi.ng/umbrella/src/branch/develop/packages/geom-fuzz", "https://docs.thi.ng/umbrella/geom-fuzz/", "https://codeberg.org/api/v1/repos/thi.ng/umbrella"],
+    "evidence": [
+      {"source": "https://thi.ng/geom-fuzz", "quote": "Highly configurable, fuzzy line & polygon creation with presets and composable fill & stroke styles. Canvas & SVG support."},
+      {"source": "https://thi.ng/geom-fuzz", "quote": "© 2020 - 2026 Karsten Schmidt // Apache License 2.0"},
+      {"source": "https://codeberg.org/api/v1/repos/thi.ng/umbrella", "quote": "\"stars_count\":36"}
+    ]
+  },
+  {
+    "name": "Aceternity UI",
+    "repo": null,
+    "docs": "https://ui.aceternity.com/components",
+    "license": "Custom Aceternity License for Pro/downloadable items; free component availability does not establish a blanket MIT license",
+    "stars": null,
+    "notes": "No authoritative public repository for the full component library found. Official brand facts link https://github.com/aceternity, an account, not a repository; its public API lists nextjs-boilerplate and saasternity, which are different projects and must not be substituted. Official source distribution is copy/paste component documentation and https://ui.aceternity.com/registry/{name}.json; setup docs: https://ui.aceternity.com/installation. Free components coexist with paid blocks/pages/templates. The custom licensing page permits unlimited personal/client end products, including commercial websites, but prohibits source-file redistribution, marketplace redistribution/resale, and themes/templates/derivative products for marketplace sale; team-size licensing applies. The page is headed as Pro licensing, so do not silently label every free component proprietary or MIT: check item-specific notices. General terms reserve IP and contain broader restrictions; use the specific licence and item terms for the intended use. Official pages disagree on component counts/pricing, so no single count or price is asserted here.",
+    "sources": ["https://ui.aceternity.com", "https://ui.aceternity.com/brand-facts", "https://api.github.com/users/aceternity/repos?per_page=100", "https://ui.aceternity.com/installation", "https://ui.aceternity.com/licence", "https://ui.aceternity.com/terms"],
+    "evidence": [
+      {"source": "https://ui.aceternity.com/installation", "quote": "Every component page also shows the full source."},
+      {"source": "https://ui.aceternity.com/licence", "quote": "You can create unlimited end products for yourself or your clients."},
+      {"source": "https://ui.aceternity.com/licence", "quote": "You cannot re-distribute the Item as a stock image or its source files, regardless of modifications."},
+      {"source": "https://ui.aceternity.com/licence", "quote": "You cannot create themes, templates, or derivative products to sell on any marketplace."}
+    ]
+  },
+  {
+    "name": "Crucible",
+    "repo": null,
+    "docs": "https://crucibleui.com/components",
+    "license": "MIT for free components; paid single-seat personal license for Pro components (not open source)",
+    "stars": null,
+    "notes": "No authoritative public repository found on the official site or in targeted search. Unrelated projects named Crucible must not be substituted. Documentation and source are on individual component pages; free source also installs from https://crucibleui.com/r/<name>.json. The official license page states 114 free MIT components; the homepage/pricing describe 238 total, including 124 Pro. Free components allow commercial use with MIT notice preservation. Pro is a lifetime purchase with commercial use on unlimited projects, but under a single-seat personal license, not MIT; a free preview does not grant free access to Pro source.",
+    "sources": ["https://crucibleui.com", "https://crucibleui.com/components", "https://crucibleui.com/components/backgrounds/arc", "https://crucibleui.com/license", "https://crucibleui.com/pricing"],
+    "evidence": [
+      {"source": "https://crucibleui.com/license", "quote": "Crucible has two tiers. The free tier is open source under the MIT License; the pro tier is a paid, single-seat personal license."},
+      {"source": "https://crucibleui.com/license", "quote": "All 114 free components, as installed from `crucibleui.com/r/<name>.json`, are released under the MIT License."},
+      {"source": "https://crucibleui.com/license", "quote": "Pro components are not open source."},
+      {"source": "https://crucibleui.com/pricing", "quote": "Commercial use on unlimited projects"}
+    ]
+  },
+  {
+    "name": "Uxn5",
+    "repo": "https://git.sr.ht/~rabbits/uxn5",
+    "docs": "https://git.sr.ht/~rabbits/uxn5",
+    "license": "ISC",
+    "stars": null,
+    "notes": "Official demo explicitly links this SourceHut repository. Its rendered README contains usage and ROM-embedding documentation; raw README: https://git.sr.ht/~rabbits/uxn5/blob/main/README.md. Related architecture documentation linked by the demo: https://wiki.xxiivv.com/site/varvara.html; Uxn stack-machine reference linked by README: https://wiki.xxiivv.com/site/uxn.html. ISC license text in the repository allows use, copying, modification and distribution for any purpose with or without fee, retaining copyright/permission notices. No star count was exposed in retrieved SourceHut pages; do not substitute the demo's awesome-uxn GitHub link, which is a ROM/resource list rather than emulator source.",
+    "sources": ["https://rabbits.srht.site/uxn5/", "https://git.sr.ht/~rabbits/uxn5", "https://git.sr.ht/~rabbits/uxn5/tree", "https://git.sr.ht/~rabbits/uxn5/blob/main/LICENSE"],
+    "evidence": [
+      {"source": "https://git.sr.ht/~rabbits/uxn5", "quote": "An emulator for the Uxn stack-machine, written in Javascript."},
+      {"source": "https://git.sr.ht/~rabbits/uxn5/blob/main/LICENSE", "quote": "Copyright (c) 2020 Devine Lu Linvega"},
+      {"source": "https://git.sr.ht/~rabbits/uxn5/blob/main/LICENSE", "quote": "Permission to use, copy, modify, and distribute this software for any\npurpose with or without fee is hereby granted, provided that the above\ncopyright notice and this permission notice appear in all copies."}
+    ]
+  }
+]

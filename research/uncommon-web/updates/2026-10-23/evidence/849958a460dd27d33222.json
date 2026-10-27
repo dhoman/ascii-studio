@@ -1,0 +1,216 @@
+{
+  "url": "https://github.com/redblobgames/mapgen4",
+  "final_url": "https://github.com/redblobgames/mapgen4",
+  "http_status": 200,
+  "checked_at": "2026-10-23T17:46:56.753495+00:00",
+  "stars": 937,
+  "forks": 143,
+  "description": "Mapgen4 procedural wilderness map generator",
+  "homepage": "https://www.redblobgames.com/maps/mapgen4/",
+  "topics": [
+    "map-generation",
+    "mapgen4",
+    "procedural-generation",
+    "redblobgames",
+    "terrain-generation"
+  ],
+  "license": "Apache-2.0",
+  "archived": false,
+  "created_at": "2018-12-25T01:04:25.000Z",
+  "branch": "main",
+  "commit": "c1d8cb018a11a8b9e17d59233c36c176429d37eb",
+  "readme": "Mapgen4 Mapgen4 is a procedural wilderness map generator I wrote during 2017 and 2018, and updated in 2023. It’s written in JavaScript/TypeScript and designed to: run fast enough to regenerate in real time as you paint terrain look pretty instead of generating realistic terrain Install With npm or pnpm: npm install -g esbuild npm install ./build.sh Run python3 -m http.server 8000, then visit http://localhost:8000/embed.html in your browser. Background I have a series of blog posts about how I made these maps: History of the project Alternative to Voronoi cells Compact data structure for the Delaunay+Voronoi mesh Elevation to match the desired look instead of tweaking the look to match the elevation Distance fields for elevation Multithreading to make it run acceptably fast Fixing the appearance of rivers Revisiting distance fields, which didn’t work out like I hoped Rainfall, biomes, evaporation, wind Rendering with an oblique projection, not the standard rotate+translate+scale Rendering outlines Some bug fixes River generation and data structures It’s a continuation of ideas I developed for mapgen2 back in 2010, but at a much larger scale. The underlying code can support 1 million+ Voronoi cells (change spacing in config.js to 0.7), including a very detailed river network, but the rendering code and other parameters are designed to look prettiest around 25k cells. There’s plenty more that could be done to make it even faster and prettier. There are plenty of features that could be added, such as drawing your own rivers, sphere output, natural resources, towns, forests, names, roads, and nations, but I’m leaving those for a future project. Code The entry point is mapgen4.ts. The main data structures are in the dual-mesh/ folder. The map generation algorithms are in map.ts. The input painting is in painting.ts. The output rendering is in render.ts. Calculations are in worker.ts. Calculations shared between the worker and renderer are in geometry.ts. Although the code is TypeScript, I’m using esbuild for building, which does not check the types. Instead, I have type checking in the IDE only. License Mapgen4 and helper libraries I wrote (dual-mesh, prng) are licensed under Apache v2. You can use this code in your own project, including commercial projects. The map generator uses these libraries: Delaunator from MapBox is licensed under the ISC license. fast-2d-poisson-disk-sampling from Kevin Chapelier is licensed under the MIT license. simplex-noise from Jonas Wagner is licensed under the MIT license. flatqueue from Vladimir Agafonkin is licensed under the ISC license. The rendering code uses these libraries: gl-matrix from Brandon Jones, Colin MacKenzie IV is licensed under the MIT license. The build step uses esbuild from Evan Wallace, licensed under the MIT license",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://github.com/redblobgames/mapgen4#mapgen4"
+    },
+    {
+      "label": "",
+      "url": "http://unmaintained.tech/"
+    },
+    {
+      "label": "Mapgen4",
+      "url": "https://www.redblobgames.com/maps/mapgen4/"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/b8d69574755eb041922e08f4a5aae6e60a68da56651821868a207d4edea029de/68747470733a2f2f7777772e726564626c6f6267616d65732e636f6d2f6d6170732f6d617067656e342f626c6f672f73637265656e73686f7431352d736d616c6c2e6a7067"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/redblobgames/mapgen4#install"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/redblobgames/mapgen4#background"
+    },
+    {
+      "label": "series of blog posts",
+      "url": "http://simblob.blogspot.com/search/label/mapgen4"
+    },
+    {
+      "label": "History",
+      "url": "http://simblob.blogspot.com/2018/08/mapgen4-goals.html"
+    },
+    {
+      "label": "Alternative to Voronoi cells",
+      "url": "https://www.redblobgames.com/x/1721-voronoi-alternative/"
+    },
+    {
+      "label": "Compact data structure",
+      "url": "https://www.redblobgames.com/x/1722-b-rep-triangle-meshes/"
+    },
+    {
+      "label": "Elevation",
+      "url": "http://simblob.blogspot.com/2018/08/mapgen4-elevation.html"
+    },
+    {
+      "label": "Distance fields for elevation",
+      "url": "http://simblob.blogspot.com/2018/09/mapgen4-elevation-painting.html"
+    },
+    {
+      "label": "Multithreading",
+      "url": "http://simblob.blogspot.com/2018/09/mapgen4-threads.html"
+    },
+    {
+      "label": "appearance of rivers",
+      "url": "http://simblob.blogspot.com/2018/09/mapgen4-river-appearance.html"
+    },
+    {
+      "label": "distance fields",
+      "url": "http://simblob.blogspot.com/2018/09/mapgen4-elevation-painting-revisited.html"
+    },
+    {
+      "label": "Rainfall",
+      "url": "http://simblob.blogspot.com/2018/09/mapgen4-rainfall.html"
+    },
+    {
+      "label": "oblique projection",
+      "url": "http://simblob.blogspot.com/2018/09/mapgen4-oblique-projection.html"
+    },
+    {
+      "label": "outlines",
+      "url": "http://simblob.blogspot.com/2018/10/mapgen4-outlines.html"
+    },
+    {
+      "label": "bug fixes",
+      "url": "http://simblob.blogspot.com/2018/09/mapgen4-bug-fixes.html"
+    },
+    {
+      "label": "generation",
+      "url": "https://www.redblobgames.com/x/1723-procedural-river-growing/"
+    },
+    {
+      "label": "data structures",
+      "url": "http://simblob.blogspot.com/2018/10/mapgen4-river-representation.html"
+    },
+    {
+      "label": "mapgen2",
+      "url": "https://github.com/amitp/mapgen2/"
+    },
+    {
+      "label": "a very detailed river network",
+      "url": "https://www.redblobgames.com/maps/mapgen4/blog/3565944-triangles-600kregions.png"
+    },
+    {
+      "label": "drawing your own rivers",
+      "url": "https://www.redblobgames.com/x/1723-procedural-river-growing/#draw"
+    },
+    {
+      "label": "sphere output",
+      "url": "https://www.redblobgames.com/x/1843-planet-generation/"
+    },
+    {
+      "label": "natural resources",
+      "url": "https://www.redblobgames.com/x/1736-resource-placement/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/redblobgames/mapgen4#code"
+    },
+    {
+      "label": "mapgen4.ts",
+      "url": "https://github.com/redblobgames/mapgen4/blob/main/mapgen4.ts"
+    },
+    {
+      "label": "dual-mesh/",
+      "url": "https://github.com/redblobgames/mapgen4/blob/main/dual-mesh"
+    },
+    {
+      "label": "map.ts",
+      "url": "https://github.com/redblobgames/mapgen4/blob/main/map.ts"
+    },
+    {
+      "label": "painting.ts",
+      "url": "https://github.com/redblobgames/mapgen4/blob/main/painting.ts"
+    },
+    {
+      "label": "render.ts",
+      "url": "https://github.com/redblobgames/mapgen4/blob/main/render.ts"
+    },
+    {
+      "label": "worker.ts",
+      "url": "https://github.com/redblobgames/mapgen4/blob/main/worker.ts"
+    },
+    {
+      "label": "geometry.ts",
+      "url": "https://github.com/redblobgames/mapgen4/blob/main/geometry.ts"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/redblobgames/mapgen4#license"
+    },
+    {
+      "label": "Delaunator",
+      "url": "https://github.com/mapbox/delaunator.git"
+    },
+    {
+      "label": "fast-2d-poisson-disk-sampling",
+      "url": "https://github.com/kchapelier/fast-2d-poisson-disk-sampling"
+    },
+    {
+      "label": "simplex-noise",
+      "url": "https://github.com/jwagner/simplex-noise.js"
+    },
+    {
+      "label": "flatqueue",
+      "url": "https://github.com/mourner/flatqueue"
+    },
+    {
+      "label": "gl-matrix",
+      "url": "https://github.com/toji/gl-matrix"
+    },
+    {
+      "label": "esbuild",
+      "url": "https://esbuild.github.io/"
+    }
+  ],
+  "root_files": [
+    "dual-mesh",
+    ".gitignore",
+    "LICENSE",
+    "README.org",
+    "build.sh",
+    "colormap.ts",
+    "config.js",
+    "embed.html",
+    "generate-points-file.ts",
+    "generate-points.ts",
+    "geometry.ts",
+    "jsconfig.json",
+    "map.ts",
+    "mapgen4.ts",
+    "mesh.ts",
+    "package.json",
+    "painting.ts",
+    "pnpm-lock.yaml",
+    "render.ts",
+    "serialize-points.ts",
+    "tsconfig.json",
+    "types.d.ts",
+    "worker.ts"
+  ],
+  "release_count": null,
+  "status": "verified"
+}

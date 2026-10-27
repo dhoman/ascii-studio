@@ -1,0 +1,42 @@
+{
+  "url": "https://github.com/emilkowalski/vaul",
+  "final_url": "https://github.com/emilkowalski/vaul",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:47:46.471793+00:00",
+  "stars": 8649,
+  "forks": 372,
+  "description": "A drawer component for React.",
+  "homepage": "https://vaul.emilkowal.ski",
+  "topics": [
+    "dialog",
+    "drawer",
+    "react"
+  ],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2023-07-16T11:24:46.000Z",
+  "branch": "main",
+  "commit": "3e97aac6a38e4481bade71d7233ed6002e80f9b0",
+  "readme": "Note This repo is unmaintained. I might come back to it at some point, but not in the near future. This was and always will be a hobby project and I simply don't have the time or will to work on it right now.",
+  "readme_links": [],
+  "root_files": [
+    ".github/workflows",
+    ".vscode",
+    "src",
+    "test",
+    ".eslintrc.js",
+    ".gitignore",
+    ".prettierrc.js",
+    "FUNDING.yml",
+    "LICENSE.md",
+    "README.md",
+    "package.json",
+    "playwright.config.ts",
+    "pnpm-lock.yaml",
+    "pnpm-workspace.yaml",
+    "tsconfig.json",
+    "turbo.json"
+  ],
+  "release_count": 26,
+  "status": "verified"
+}

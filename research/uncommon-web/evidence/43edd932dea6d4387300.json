@@ -1,0 +1,38 @@
+{
+  "url": "https://github.com/evanw/glfx.js",
+  "final_url": "https://github.com/evanw/glfx.js",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:47:46.773938+00:00",
+  "stars": 3457,
+  "forks": 405,
+  "description": "An image effects library for JavaScript using WebGL",
+  "homepage": "https://evanw.github.io/glfx.js/",
+  "topics": [],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2011-05-31T01:15:31.000Z",
+  "branch": "master",
+  "commit": "86ae72acfffcd50774507eb7b69887ba2493dc35",
+  "readme": "glfx.js Adjust photos in your browser in realtime with glfx.js, an image effects library powered by WebGL. It uses your graphics card for image effects that would be impossible to apply in real-time with JavaScript alone. There are two caveats to glfx.js. First, WebGL is a new technology that is only available in the latest browsers and it will be quite a while before the majority of users have it. Second, due to the same origin policy, JavaScript is only allowed to read images that originate from the same domain as the script reading them, so you may have to host the images you modify. Live Demo",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://github.com/evanw/glfx.js#glfxjs"
+    },
+    {
+      "label": "Live Demo",
+      "url": "https://evanw.github.io/glfx.js/demo/"
+    }
+  ],
+  "root_files": [
+    "src",
+    "tests",
+    "www",
+    ".gitignore",
+    "LICENSE",
+    "README.md",
+    "build.py"
+  ],
+  "release_count": 0,
+  "status": "verified"
+}

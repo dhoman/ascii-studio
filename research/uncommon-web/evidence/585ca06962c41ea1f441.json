@@ -1,0 +1,41 @@
+{
+  "url": "https://github.com/asmatzaile/pink-trombone",
+  "final_url": "https://github.com/asmatzaile/pink-trombone",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:47:35.702531+00:00",
+  "stars": 0,
+  "forks": 0,
+  "description": "",
+  "homepage": "https://asmatzaile.github.io/pink-trombone/",
+  "topics": [],
+  "license": "",
+  "archived": false,
+  "created_at": "2025-04-17T13:51:34.000Z",
+  "branch": "main",
+  "commit": "5576316ebc4ae8c04d8d365578bc7bf35d798570",
+  "readme": "pink-trombone Headless polyphonic port of Neil Thapen's Pink Trombone. Check the package README for more information!",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://github.com/asmatzaile/pink-trombone#pink-trombone"
+    },
+    {
+      "label": "Neil Thapen's Pink Trombone",
+      "url": "https://dood.al/pinktrombone/"
+    },
+    {
+      "label": "the package README",
+      "url": "https://github.com/Asmatzaile/pink-trombone/blob/main/pink-trombone/README.md"
+    }
+  ],
+  "root_files": [
+    "demo",
+    "pink-trombone",
+    ".gitignore",
+    "README.md",
+    "package-lock.json",
+    "package.json"
+  ],
+  "release_count": 0,
+  "status": "verified"
+}

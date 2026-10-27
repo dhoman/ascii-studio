@@ -1,0 +1,138 @@
+{
+  "url": "https://github.com/react95-io/React95",
+  "final_url": "https://github.com/react95-io/React95",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:48:13.248667+00:00",
+  "stars": 7282,
+  "forks": 214,
+  "description": "🌈🕹  Windows 95 style UI component library for React",
+  "homepage": "https://react95.io",
+  "topics": [
+    "component-library",
+    "components",
+    "design-system",
+    "react",
+    "reactjs",
+    "styled-components",
+    "ui",
+    "ui-kit",
+    "vaporwave",
+    "windows95"
+  ],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2019-02-18T22:55:25.000Z",
+  "branch": "master",
+  "commit": "871d5335daebdda1469f66f81266523f4191a595",
+  "readme": "React95 Components - Demo app - React Native - Slack - PayPal donation 💰 Refreshed Windows95 UI components for your modern React apps. Built with styled-components 💅 Support Become a backer or sponsor on Patreon One-time donation via PayPal Getting Started First, install component library and styled-components in your project directory: # yarn $ yarn add react95 styled-components # npm $ npm install react95 styled-components Apply style reset, wrap your app with ThemeProvider with theme of your choice... and you are ready to go! 🚀 import React from 'react'; import { createGlobalStyle, ThemeProvider } from 'styled-components'; import { MenuList, MenuListItem, Separator, styleReset } from 'react95'; // pick a theme of your choice import original from 'react95/dist/themes/original'; // original Windows95 font (optionally) import ms_sans_serif from 'react95/dist/fonts/ms_sans_serif.woff2'; import ms_sans_serif_bold from 'react95/dist/fonts/ms_sans_serif_bold.woff2'; const GlobalStyles = createGlobalStyle` ${styleReset} @font-face { font-family: 'ms_sans_serif'; src: url('${ms_sans_serif}') format('woff2'); font-weight: 400; font-style: normal } @font-face { font-family: 'ms_sans_serif'; src: url('${ms_sans_serif_bold}') format('woff2'); font-weight: bold; font-style: normal } body { font-family: 'ms_sans_serif'; } `; const App = () => ( <div> <GlobalStyles /> <ThemeProvider theme={original}> <MenuList> <MenuListItem>🎤 Sing</MenuListItem> <MenuListItem>💃🏻 Dance</MenuListItem> <Separator /> <MenuListItem disabled>😴 Sleep</MenuListItem> </MenuList> </ThemeProvider> </div> ); export default App; Submit your project Apps built with React95 will be featured on the official React95 website 🤟🏻 Contributing Any help from UI / UX designers would be EXTREMELY appreciated. The challenge is to come up with new component designs / layouts that are broadly used in modern UIs, that weren't present back in 95. If you want to help with the project, feel free to open pull requests and submit issues or component proposals. Let's bring this UI back to life ♥️",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://github.com/react95-io/React95#react95"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/react95"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/arturbien/React95/actions/workflows/release.yml"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/react95"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/react95"
+    },
+    {
+      "label": "",
+      "url": "https://twitter.com/intent/follow?screen_name=react95_io"
+    },
+    {
+      "label": "Components",
+      "url": "https://storybook.react95.io/?path=/story/window--default"
+    },
+    {
+      "label": "Demo app",
+      "url": "https://coins95.web.app/"
+    },
+    {
+      "label": "React Native",
+      "url": "https://github.com/react95-io/react95-native"
+    },
+    {
+      "label": "Slack",
+      "url": "https://join.slack.com/t/react95/shared_invite/enQtOTA1NzEyNjAyNTc4LWYxZjU3NWRiMWJlMGJiMjhkNzE2MDA3ZmZjZDc1YmY0ODdlZjMwZDA1NWJiYWExYmY1NTJmNmE4OWVjNWFhMTE"
+    },
+    {
+      "label": "PayPal donation 💰",
+      "url": "https://www.paypal.me/react95"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/react95-io/React95#--components----demo-app----react-native----slack----paypal-donation-"
+    },
+    {
+      "label": "",
+      "url": "https://user-images.githubusercontent.com/28541613/81947711-28b05580-9601-11ea-964a-c3a6de998496.png"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/react95-io/React95#support"
+    },
+    {
+      "label": "Become a backer or sponsor on Patreon",
+      "url": "https://www.patreon.com/arturbien"
+    },
+    {
+      "label": "One-time donation via PayPal",
+      "url": "https://www.paypal.me/react95"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/react95-io/React95#getting-started"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/react95-io/React95#submit-your-project"
+    },
+    {
+      "label": "website",
+      "url": "https://react95.io"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/react95-io/React95#contributing"
+    }
+  ],
+  "root_files": [
+    ".codesandbox",
+    ".github",
+    ".storybook",
+    "docs",
+    "src",
+    "test",
+    "types",
+    ".babelrc",
+    ".editorconfig",
+    ".env",
+    ".eslintrc.js",
+    ".firebaserc",
+    ".gitignore",
+    ".prettierrc",
+    "LICENSE",
+    "README.md",
+    "firebase.json",
+    "jest.config.js",
+    "package.json",
+    "rollup.config.js",
+    "tsconfig.build.index.json",
+    "tsconfig.build.themes.json",
+    "tsconfig.json",
+    "yarn.lock"
+  ],
+  "release_count": 92,
+  "status": "verified"
+}

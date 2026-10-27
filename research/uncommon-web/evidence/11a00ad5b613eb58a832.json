@@ -1,0 +1,229 @@
+{
+  "url": "https://github.com/Alchemist0823/three.quarks",
+  "final_url": "https://github.com/Alchemist0823/three.quarks",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:45:56.485648+00:00",
+  "stars": 1114,
+  "forks": 72,
+  "description": "Three.quarks is a general purpose particle system /  VFX engine for three.js",
+  "homepage": "https://quarks.art",
+  "topics": [
+    "animation",
+    "devtools",
+    "particles",
+    "threejs",
+    "webgl"
+  ],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2019-06-16T22:37:05.000Z",
+  "branch": "master",
+  "commit": "de7c207f791c8b2260c43334a282976221688b1b",
+  "readme": "three.quarks ✨ three.quarks is a high-performance particle system and visual effects library for three.js, written in TypeScript. Create stunning real-time VFX for games, interactive experiences, and web applications with an intuitive API and powerful visual editor. 🎮 Try the Demo ▶️ Launch Live Demo - See three.quarks in action with interactive examples! 🔗 Quick Links Resource Description 📖 Documentation Official website and guides 🎨 Visual Editor WYSIWYG particle effect creator 💬 Discord Community support and discussion 🚀 Why three.quarks? ⚡ High Performance - Optimized batch rendering minimizes draw calls 🎮 Unity Compatible - Import particle systems from Unity's Shuriken system 🎨 Visual Editor - Design effects visually with three.quarks-editor 🔧 Flexible - Extensible plugin system for custom behaviors and emitters ✅ Production Ready - Used in games and interactive applications 📦 Installation npm install three.quarks ⚡ Quick Start import * as THREE from 'three'; import { BatchedRenderer, ParticleSystem, ConstantValue, IntervalValue, ConstantColor, PointEmitter, RenderMode } from 'three.quarks'; // 1. Create the batch renderer (manages all particle systems) const batchRenderer = new BatchedRenderer(); scene.add(batchRenderer); // 2. Define your particle system const particles = new ParticleSystem({ duration: 2, looping: true, startLife: new IntervalValue(1, 2), startSpeed: new ConstantValue(5), startSize: new IntervalValue(0.1, 0.3), startColor: new ConstantColor(new THREE.Vector4(1, 1, 1, 1)), maxParticle: 100, emissionOverTime: new ConstantValue(20), shape: new PointEmitter(), material: new THREE.MeshBasicMaterial({ map: yourTexture, transparent: true }), renderMode: RenderMode.BillBoard }); // 3. Add to scene and renderer scene.add(particles.emitter); batchRenderer.addSystem(particles); // 4. Update in your animation loop function animate() { const delta = clock.getDelta(); batchRenderer.update(delta); renderer.render(scene, camera); requestAnimationFrame(animate); } 📂 Loading VFX from JSON Export effects from the visual editor and load them at runtime: import { QuarksLoader, QuarksUtil, BatchedRenderer } from 'three.quarks'; const batchRenderer = new BatchedRenderer(); const loader = new QuarksLoader(); loader.load('effects/explosion.json', (effect) => { QuarksUtil.addToBatchRenderer(effect, batchRenderer); scene.add(effect); }); scene.add(batchRenderer); Playing Multiple Instances // Clone and play the effect multiple times const instance = loadedEffect.clone(); scene.add(instance); QuarksUtil.addToBatchRenderer(instance, batchRenderer); QuarksUtil.setAutoDestroy(instance, true); // Auto-cleanup when finished QuarksUtil.play(instance); ⚛️ React Three Fiber Use the quarks.r3f package for declarative React integration: npm install quarks.r3f three.quarks import { Canvas } from '@react-three/fiber' import { QuarksProvider, ParticleSystem } from 'quarks.r3f' import { ConeEmitter, SizeOverLife, PiecewiseBezier, Bezier, RenderMode } from 'three.quarks' function FireEffect() { const shape = useMemo(() => new ConeEmitter({ angle: 0.3, radius: 0.2 }), []) const behaviors = useMemo(() => [ new SizeOverLife(new PiecewiseBezier([[new Bezier(1, 0.5, 0.2, 0), 0]])) ], []) return ( <ParticleSystem duration={5} looping startLife={[1, 2]} startSpeed={[2, 4]} startSize={0.5} startColor={{ r: 1, g: 0.5, b: 0.2, a: 1 }} emissionOverTime={40} shape={shape} renderMode={RenderMode.BillBoard} behaviors={behaviors} position={[0, 0, 0]} autoPlay /> ) } function App() { return ( <Canvas> <QuarksProvider> <FireEffect /> </QuarksProvider> </Canvas> ) } See quarks.r3f documentation for full API reference. ✨ Features 🎬 Renderers Billboard - Camera-facing sprites Stretched Billboard - Velocity-aligned sprites Mesh - 3D geometry particles Trail - Ribbon trails behind particles 📐 Emitter Shapes Point, Sphere, Hemisphere, Cone, Circle Mesh Surface - Emit from 3D model surfaces Grid - Structured emission patterns 🎭 Behaviors Color over lifetime Size over lifetime Rotation over lifetime Force fields Orbital motion Texture animation Sub-emitters Custom behaviors via plugin system 🎨 Materials MeshBasicMaterial (unlit) MeshStandardMaterial (PBR) Configurable blending modes Texture atlas support 🧪 Examples Browse the examples folder or run locally: npm install npm run build npm run examples 📦 Packages This project is a monorepo with modular packages: Package Description three.quarks 🎯 Main package - Three.js particle system with batched rendering, shaders, and full VFX toolkit quarks.core 🧱 Core library - Framework-agnostic math, behaviors, emitter shapes, and functions (zero dependencies) quarks.r3f ⚛️ React Three Fiber - Declarative R3F components with hooks, Suspense support, and flexible props API quarks.nodes 🔮 Node system - Experimental node-based VFX with visual programming and WebGPU compute support quarks.examples 🎮 Examples - Interactive demos showcasing particle effects and features quarks.playground 🧪 Playground - Development sandbox for testing and experimenting with effects 🛠️ Editor three.quarks-editor - Visual editor for creating and previewing particle effects with real-time preview and JSON export 📚 Resources Change Log Contributing Guide Development Guide Code of Conduct CodeSandbox Example React Three Fiber Package - Official R3F integration 🗺️ Roadmap 🔲 WebGPU rendering support 🔲 WebAssembly particle simulation 🔲 Node-based scriptable particle systems 🔲 Cross-platform native plugins 📄 License MIT",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://github.com/Alchemist0823/three.quarks#threequarks-"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/three.quarks"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmtrends.com/three.quarks"
+    },
+    {
+      "label": "",
+      "url": "https://bundlephobia.com/result?p=three.quarks"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/Alchemist0823/three.quarks"
+    },
+    {
+      "label": "",
+      "url": "https://discord.gg/5Tv3kJCrQZ"
+    },
+    {
+      "label": "three.js",
+      "url": "https://threejs.org"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/Alchemist0823/three.quarks/blob/master/landing.png"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/Alchemist0823/three.quarks#-try-the-demo"
+    },
+    {
+      "label": "▶️ Launch Live Demo",
+      "url": "https://demo.quarks.art/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/Alchemist0823/three.quarks#-quick-links"
+    },
+    {
+      "label": "Documentation",
+      "url": "https://quarks.art/"
+    },
+    {
+      "label": "Visual Editor",
+      "url": "https://quarks.art/create"
+    },
+    {
+      "label": "Discord",
+      "url": "https://discord.gg/5Tv3kJCrQZ"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/Alchemist0823/three.quarks#-why-threequarks"
+    },
+    {
+      "label": "three.quarks-editor",
+      "url": "https://quarks.art/create"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/Alchemist0823/three.quarks#-installation"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/Alchemist0823/three.quarks#-quick-start"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/Alchemist0823/three.quarks#-loading-vfx-from-json"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/Alchemist0823/three.quarks#playing-multiple-instances"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/Alchemist0823/three.quarks#️-react-three-fiber"
+    },
+    {
+      "label": "quarks.r3f documentation",
+      "url": "https://github.com/Alchemist0823/three.quarks/blob/master/packages/quarks.r3f/README.md"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/Alchemist0823/three.quarks#-features"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/Alchemist0823/three.quarks#-renderers"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/Alchemist0823/three.quarks#-emitter-shapes"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/Alchemist0823/three.quarks#-behaviors"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/Alchemist0823/three.quarks#-materials"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/Alchemist0823/three.quarks#-examples"
+    },
+    {
+      "label": "examples folder",
+      "url": "https://github.com/Alchemist0823/three.quarks/blob/master/packages/quarks.examples"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/Alchemist0823/three.quarks#-packages"
+    },
+    {
+      "label": "three.quarks",
+      "url": "https://www.npmjs.com/package/three.quarks"
+    },
+    {
+      "label": "quarks.core",
+      "url": "https://www.npmjs.com/package/quarks.core"
+    },
+    {
+      "label": "quarks.r3f",
+      "url": "https://www.npmjs.com/package/quarks.r3f"
+    },
+    {
+      "label": "quarks.nodes",
+      "url": "https://www.npmjs.com/package/quarks.nodes"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/Alchemist0823/three.quarks#️-editor"
+    },
+    {
+      "label": "three.quarks-editor",
+      "url": "https://quarks.art/create"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/Alchemist0823/three.quarks#-resources"
+    },
+    {
+      "label": "Change Log",
+      "url": "https://github.com/Alchemist0823/three.quarks/blob/master/CHANGELOG.md"
+    },
+    {
+      "label": "Contributing Guide",
+      "url": "https://github.com/Alchemist0823/three.quarks/blob/master/CONTRIBUTING.md"
+    },
+    {
+      "label": "Development Guide",
+      "url": "https://github.com/Alchemist0823/three.quarks/blob/master/DEVELOPMENT_GUIDE.md"
+    },
+    {
+      "label": "Code of Conduct",
+      "url": "https://github.com/Alchemist0823/three.quarks/blob/master/CODE_OF_CONDUCT.md"
+    },
+    {
+      "label": "CodeSandbox Example",
+      "url": "https://codesandbox.io/s/three-quarks-atom-particle-system-xp3fvz"
+    },
+    {
+      "label": "React Three Fiber Package",
+      "url": "https://github.com/Alchemist0823/three.quarks/blob/master/packages/quarks.r3f"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/Alchemist0823/three.quarks#️-roadmap"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/Alchemist0823/three.quarks#-license"
+    }
+  ],
+  "root_files": [
+    ".github",
+    ".husky",
+    "assets",
+    "packages",
+    "scripts",
+    ".gitignore",
+    "CHANGELOG.md",
+    "CODE_OF_CONDUCT.md",
+    "CONTRIBUTING.md",
+    "DEVELOPMENT_GUIDE.md",
+    "LICENSE",
+    "README.md",
+    "landing.png",
+    "lerna.json",
+    "package-lock.json",
+    "package.json",
+    "tsconfig.json",
+    "tsconfig.package.json",
+    "typedoc.json",
+    "typedoc.package.json"
+  ],
+  "release_count": 0,
+  "status": "verified"
+}

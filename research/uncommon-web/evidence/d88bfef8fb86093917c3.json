@@ -1,0 +1,270 @@
+{
+  "url": "https://github.com/shader-effects-inc/shaders",
+  "final_url": "https://github.com/shader-effects-inc/shaders",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:48:16.037265+00:00",
+  "stars": 5332,
+  "forks": 243,
+  "description": "WebGPU components for React, Vue, Svelte, Solid, JS & Framer",
+  "homepage": "https://shaders.com",
+  "topics": [
+    "cli",
+    "javascript",
+    "mcp",
+    "react",
+    "shaders",
+    "solid",
+    "svelte",
+    "vue",
+    "webgpu-shaders"
+  ],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2026-09-29T16:36:26.000Z",
+  "branch": "main",
+  "commit": "eb3df5cedc826008be8e1037c1182e649037c74a",
+  "readme": "Shaders WebGPU effects as componentsfor React, Vue, Svelte, Solid and JavaScript npm install shaders Table of Contents Why Shaders? 🧩 Components 🎨 Design visually, export code ⌨️ CLI 🤖 Using Shaders with AI ⚡️ Shaders Pro 🧪 Build your own component 👩🏻‍⚖️ License 💎 Contribute Why Shaders? Real WebGPU, declarative API: 200+ effects you drop in as components. Gradients, noise, glass, metal, light, distortions, transitions, blurs, cursor effects. Nest them, blend them, mask them. A design editor that writes your code: design on an infinite canvas at shaders.com, then export the exact component tree for your framework. Free. Every framework, one package: first-class React, Vue, Svelte, Solid and JavaScript entries, with the same props everywhere. Production-ready: TypeScript, extensively optimized, typed props with reactive updates, SSR safe. Used on thousands of websites by 16,000+ design engineers. 🧩 Components Every effect is a component. <Shader> renders the canvas; its children are layers, evaluated top to bottom and blended on the GPU. React import { Shader, LinearGradient, CursorTrail } from 'shaders/react' <Shader className=\"w-full h-64\"> <LinearGradient colorA=\"#0f172a\" colorB=\"#7c3aed\" /> <CursorTrail /> </Shader> Get started with Shaders for React. Vue <script setup> import { Shader, LinearGradient, CursorTrail } from 'shaders/vue' </script> <template> <Shader class=\"w-full h-64\"> <LinearGradient colorA=\"#0f172a\" colorB=\"#7c3aed\" /> <CursorTrail /> </Shader> </template> Get started with Shaders for Vue. Svelte <script> import { Shader, LinearGradient, CursorTrail } from 'shaders/svelte' </script> <Shader class=\"w-full h-64\"> <LinearGradient colorA=\"#0f172a\" colorB=\"#7c3aed\" /> <CursorTrail /> </Shader> Get started with Shaders for Svelte. Solid import { Shader, LinearGradient, CursorTrail } from 'shaders/solid' <Shader class=\"w-full h-64\"> <LinearGradient colorA=\"#0f172a\" colorB=\"#7c3aed\" /> <CursorTrail /> </Shader> Get started with Shaders for Solid. JavaScript import { createShader } from 'shaders/js' await createShader(document.getElementById('my-shader'), { components: [ { type: 'LinearGradient', props: { colorA: '#0f172a', colorB: '#7c3aed' } }, { type: 'CursorTrail' }, ], }) Get started with Shaders for JavaScript. Browse all 200+ components, each with a live preview and every prop documented. 🎨 Design visually, export code Most people don't write their effects by hand. They design them. The design editor at shaders.com is an infinite canvas where you stack components, tune every prop with real controls, drive props from the cursor or a timeline, and see the result live. When it looks right, Export Code gives you the component tree in your framework, ready to paste. Design and export are free with an account. Your work is saved as projects you can come back to. Open the design editor ⌨️ CLI The CLI connects a codebase to your Shaders account, so the effects you design land in your project as real component files and stay in sync. npx shaders # guided flow: set up, find a preset, open the editor npx shaders connect # link this codebase to a Shaders project npx shaders install # pick shaders from that project; writes component files npx shaders search \"...\" # find a preset in the library by describing it npx shaders preview <name> # see it running on shaders.com before you install npx shaders update # pull in what you changed in the editor It detects your framework, writes to your components folder, and records what it installed in a lock file. Nothing to install globally. Read the CLI guide. 🤖 Using Shaders with AI Give your coding agent the same tools you have: Agent skill: npx shaders skill (or npx skills add shader-effects-inc/shaders) installs a skill that teaches your agent the component library, how layers compose, and the CLI workflow. npx shaders connect adds it for you. Skill guide. MCP server: npx shaders@latest install-mcp configures Claude Code, Cursor, Codex, Windsurf, Copilot and others. Your agent can find, install and edit the shaders you design. Works on any account, free included. MCP guide. llms.txt: shaders.com/llms.txt indexes every docs page, and shaders.com/llms-full.txt carries the full component reference with props, defaults and ranges. ⚡️ Shaders Pro Everything above is free. Pro adds the library and the workflow around it: 1,000+ production-ready presets, organised into collections 55+ website sections, complete and ready to drop in HD video and image rendering without a watermark One-click install inside Framer with the Framer plugin Unlimited version history in the editor Pro presets through the CLI and MCP Exclusive Discord role and channel, priority support, all future updates See pricing 🧪 Build your own component If you need a brand new component, you can write one. A component is a plain object passed to defineShader: a name, its props, and what to draw at each pixel. Mount it with <CustomShader> like any other component. import { defineShader, wgsl, transformColor, transformPosition } from 'shaders/std' export const Halo = defineShader({ name: 'Halo', props: { color: { default: '#ffd166', transform: transformColor }, center: { default: { x: 0.5, y: 0.5 }, transform: transformPosition }, radius: { default: 0.6 }, }, paint: wgsl` let d = length((uv - center) * vec2f(aspect, 1.0)) / radius; return vec4f(color.rgb, 1.0 - smoothstep(0.8, 1.0, d)); `, }) The guide covers both ways to write the pixel part: composing it from the std primitives (experimental) or writing WGSL directly (stable). Custom Components · Primitives reference 👩🏻‍⚖️ License The engine, every component and the framework bindings in this repository and the shaders npm package are MIT licensed. The design editor, presets, sections and other platform features at shaders.com are separate from this package and have their own terms. 💎 Contribute Issues and pull requests are welcome. View the contributing guide before starting, and for anything more than a bug fix, open an issue to discuss it before the PR. The engine lives in packages/core, with one folder per component under src/shaders/. The framework packages are generated from it. pnpm install pnpm lib:build # build every package (regenerates the registry and framework components) pnpm test # the engine's test suite Say hello on Discord. Shaders © Shader Effects, Inc.",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://github.com/shader-effects-inc/shaders#shaders"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/shader-effects-inc/shaders#--webgpu-effects-as-componentsfor-react-vue-svelte-solid-and-javascript"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/shaders"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/shaders"
+    },
+    {
+      "label": "",
+      "url": "https://www.jsdelivr.com/package/npm/shaders"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/8693bbe0548210e8f37c0b9de5c62c15c749576a8144ce7a26265b94b0f5bdea/68747470733a2f2f696d672e736869656c64732e696f2f6e706d2f6c2f736861646572733f636f6c6f723d464632423645"
+    },
+    {
+      "label": "",
+      "url": "https://shaders.com"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/shader-effects-inc/shaders#table-of-contents"
+    },
+    {
+      "label": "Why Shaders?",
+      "url": "https://github.com/shader-effects-inc/shaders#why-shaders"
+    },
+    {
+      "label": "🧩 Components",
+      "url": "https://github.com/shader-effects-inc/shaders#-components"
+    },
+    {
+      "label": "🎨 Design visually, export code",
+      "url": "https://github.com/shader-effects-inc/shaders#-design-visually-export-code"
+    },
+    {
+      "label": "⌨️ CLI",
+      "url": "https://github.com/shader-effects-inc/shaders#-cli"
+    },
+    {
+      "label": "🤖 Using Shaders with AI",
+      "url": "https://github.com/shader-effects-inc/shaders#-using-shaders-with-ai"
+    },
+    {
+      "label": "⚡️ Shaders Pro",
+      "url": "https://github.com/shader-effects-inc/shaders#-shaders-pro"
+    },
+    {
+      "label": "🧪 Build your own component",
+      "url": "https://github.com/shader-effects-inc/shaders#-build-your-own-component"
+    },
+    {
+      "label": "👩🏻‍⚖️ License",
+      "url": "https://github.com/shader-effects-inc/shaders#-license"
+    },
+    {
+      "label": "💎 Contribute",
+      "url": "https://github.com/shader-effects-inc/shaders#-contribute"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/shader-effects-inc/shaders#why-shaders"
+    },
+    {
+      "label": "shaders.com",
+      "url": "https://shaders.com"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/shader-effects-inc/shaders#-components"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/shader-effects-inc/shaders#react"
+    },
+    {
+      "label": "Shaders for React",
+      "url": "https://shaders.com/react"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/shader-effects-inc/shaders#vue"
+    },
+    {
+      "label": "Shaders for Vue",
+      "url": "https://shaders.com/vue"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/shader-effects-inc/shaders#svelte"
+    },
+    {
+      "label": "Shaders for Svelte",
+      "url": "https://shaders.com/svelte"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/shader-effects-inc/shaders#solid"
+    },
+    {
+      "label": "Shaders for Solid",
+      "url": "https://shaders.com/solid"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/shader-effects-inc/shaders#javascript"
+    },
+    {
+      "label": "Shaders for JavaScript",
+      "url": "https://shaders.com/javascript"
+    },
+    {
+      "label": "200+ components",
+      "url": "https://shaders.com/docs/components"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/shader-effects-inc/shaders#-design-visually-export-code"
+    },
+    {
+      "label": "design editor",
+      "url": "https://shaders.com/design-editor"
+    },
+    {
+      "label": "Open the design editor",
+      "url": "https://shaders.com/design-editor"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/shader-effects-inc/shaders#️-cli"
+    },
+    {
+      "label": "CLI guide",
+      "url": "https://shaders.com/docs/guide/cli"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/shader-effects-inc/shaders#-using-shaders-with-ai"
+    },
+    {
+      "label": "skill",
+      "url": "https://github.com/shader-effects-inc/shaders/blob/main/skills/shaders/SKILL.md"
+    },
+    {
+      "label": "Skill guide",
+      "url": "https://shaders.com/docs/guide/agent-skill"
+    },
+    {
+      "label": "MCP guide",
+      "url": "https://shaders.com/docs/guide/mcp"
+    },
+    {
+      "label": "shaders.com/llms.txt",
+      "url": "https://shaders.com/llms.txt"
+    },
+    {
+      "label": "shaders.com/llms-full.txt",
+      "url": "https://shaders.com/llms-full.txt"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/shader-effects-inc/shaders#️-shaders-pro"
+    },
+    {
+      "label": "Pro",
+      "url": "https://shaders.com/pricing"
+    },
+    {
+      "label": "Framer plugin",
+      "url": "https://shaders.com/framer"
+    },
+    {
+      "label": "See pricing",
+      "url": "https://shaders.com/pricing"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/shader-effects-inc/shaders#-build-your-own-component"
+    },
+    {
+      "label": "Custom Components",
+      "url": "https://shaders.com/docs/guide/custom-shaders"
+    },
+    {
+      "label": "Primitives reference",
+      "url": "https://shaders.com/docs/primitives"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/shader-effects-inc/shaders#‍️-license"
+    },
+    {
+      "label": "MIT licensed",
+      "url": "https://github.com/shader-effects-inc/shaders/blob/main/LICENSE"
+    },
+    {
+      "label": "terms",
+      "url": "https://shaders.com/license"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/shader-effects-inc/shaders#-contribute"
+    },
+    {
+      "label": "contributing guide",
+      "url": "https://github.com/shader-effects-inc/shaders/blob/main/CONTRIBUTING.md"
+    },
+    {
+      "label": "Discord",
+      "url": "https://discord.gg/Mfqmb2jCQT"
+    }
+  ],
+  "root_files": [
+    ".github",
+    "packages",
+    "scripts",
+    "skills/shaders",
+    ".gitignore",
+    "CHANGELOG.md",
+    "CODE_OF_CONDUCT.md",
+    "CONTRIBUTING.md",
+    "LICENSE",
+    "README.md",
+    "SECURITY.md",
+    "changelog.config.mjs",
+    "package.json",
+    "pnpm-lock.yaml",
+    "pnpm-workspace.yaml",
+    "tsconfig.json",
+    "turbo.json"
+  ],
+  "release_count": 6,
+  "status": "verified"
+}

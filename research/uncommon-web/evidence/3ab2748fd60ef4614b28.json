@@ -1,0 +1,65 @@
+{
+  "url": "https://github.com/riccardoscalco/textures",
+  "final_url": "https://github.com/riccardoscalco/textures",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:48:13.708231+00:00",
+  "stars": 6089,
+  "forks": 219,
+  "description": "Textures.js is a JavaScript library for creating SVG patterns",
+  "homepage": "http://riccardoscalco.github.io/textures/",
+  "topics": [
+    "d3",
+    "patterns",
+    "svg",
+    "textures"
+  ],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2015-01-28T12:24:23.000Z",
+  "branch": "master",
+  "commit": "6d39b98a2b46c4674c98033b8a6b4d7fda192b45",
+  "readme": "textures.js Textures.js is a JavaScript library for creating SVG patterns. Made on top of d3.js, it is designed for data visualization. Read more on http://riccardoscalco.github.io/textures/. Install npm install textures Usage Import textures.js from NPM with: import textures from 'textures'; You can also use textures.js in your HTML page with a <script> tag by downloading textures.js to a local folder: <script src=\"path/to/textures.js\"></script> or by using the Unpkg CDN network: <script src=\"https://unpkg.com/textures@1.2.0/dist/textures.js\"></script> Then textures.js can be used alongside d3 with: const svg = d3 .select('#example') .append(\"svg\"); const texture = textures .lines() .thicker(); svg.call(texture); svg .append('circle') .style('fill', texture.url()); License MIT",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://github.com/riccardoscalco/textures#texturesjs"
+    },
+    {
+      "label": "d3.js",
+      "url": "https://d3js.org/"
+    },
+    {
+      "label": "http://riccardoscalco.github.io/textures/",
+      "url": "http://riccardoscalco.github.io/textures/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/riccardoscalco/textures#install"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/riccardoscalco/textures#usage"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/riccardoscalco/textures#license"
+    }
+  ],
+  "root_files": [
+    ".github",
+    "dist",
+    "src",
+    "tests",
+    ".babelrc",
+    ".editorconfig",
+    ".gitignore",
+    ".travis.yml",
+    "README.md",
+    "license",
+    "package.json",
+    "rollup.config.js",
+    "yarn.lock"
+  ],
+  "release_count": 3,
+  "status": "verified"
+}

@@ -1,0 +1,123 @@
+{
+  "url": "https://github.com/nolimits4web/atropos",
+  "final_url": "https://github.com/nolimits4web/atropos",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:48:06.542496+00:00",
+  "stars": 3610,
+  "forks": 107,
+  "description": "Stunning touch-friendly 3D parallax hover effects",
+  "homepage": "https://atroposjs.com",
+  "topics": [
+    "cards",
+    "effect",
+    "gallery",
+    "hover",
+    "javascript",
+    "parallax",
+    "portfolio",
+    "react",
+    "showcase",
+    "vue"
+  ],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2021-05-11T15:40:50.000Z",
+  "branch": "master",
+  "commit": "eb4b4c5682117a53f60fccd459f64d06a99e9445",
+  "readme": "Atropos Atropos is a lightweight, free and open-source JavaScript library to create stunning touch-friendly 3D parallax hover effects. Available for JavaScript, React and as a Web Component Community The Atropos community can be found on GitHub Discussions, where you can ask questions, voice ideas, and share your projects Our Code of Conduct applies to all Atropos community channels. Dist / Build On production use files (JS and CSS) only from package/ folder, there will be the most stable versions, build/ folder is only for development purpose. Development Build Install all dependencies, in repo's root: $ npm install And build development version of Atropos: $ npm run build:dev The result is available in build/ folder. Running demos: All demos located in ./playground folder. There you will find Core (HTML, JS), React and Angular versions. To open demo, run: Core: npm run core React: npm run react Production Build $ npm run build:prod Production version will available in package/ folder. Contributing All changes should be committed to src/ files only. Before you open an issue please review the contributing guideline. Sponsors Support Atropos development by Becoming a Sponsor or via GitHub Sponsors. Your logo will be featured here, in BACKERS.md and on the Atropos website.",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/d3ca68d06a10fd69d0fbeb7ec9ae56ca51d6528e3e97a9fa023a1b9e48c44552/68747470733a2f2f6174726f706f736a732e636f6d2f696d616765732f73686172652d62616e6e65722e706e67"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/nolimits4web/atropos#atropos"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/nolimits4web/atropos#community"
+    },
+    {
+      "label": "GitHub Discussions",
+      "url": "https://github.com/nolimits4web/atropos/discussions"
+    },
+    {
+      "label": "Code of Conduct",
+      "url": "https://github.com/nolimits4web/atropos/blob/master/CODE_OF_CONDUCT.md"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/nolimits4web/atropos#dist--build"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/nolimits4web/atropos#development-build"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/nolimits4web/atropos#running-demos"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/nolimits4web/atropos#production-build"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/nolimits4web/atropos#contributing"
+    },
+    {
+      "label": "contributing",
+      "url": "https://github.com/nolimits4web/atropos/blob/master/CONTRIBUTING.md"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/nolimits4web/atropos#sponsors"
+    },
+    {
+      "label": "Becoming a Sponsor",
+      "url": "https://sponsors.nolimits4web.com/#atropos"
+    },
+    {
+      "label": "GitHub Sponsors",
+      "url": "https://github.com/sponsors/nolimits4web"
+    },
+    {
+      "label": "BACKERS.md",
+      "url": "https://github.com/nolimits4web/atropos/blob/master/BACKERS.md"
+    },
+    {
+      "label": "Atropos website",
+      "url": "https://atroposjs.com/sponsors"
+    }
+  ],
+  "root_files": [
+    ".github",
+    ".vscode",
+    "build",
+    "package",
+    "playground",
+    "scripts",
+    "src",
+    ".editorconfig",
+    ".eslintignore",
+    ".eslintrc.js",
+    ".gitignore",
+    ".prettierignore",
+    ".prettierrc",
+    "BACKERS.md",
+    "CHANGELOG.md",
+    "CODE_OF_CONDUCT.md",
+    "CONTRIBUTING.md",
+    "LICENSE",
+    "README.md",
+    "TODO.md",
+    "babel.config.js",
+    "babel.config.react.js",
+    "babel.config.vue.js",
+    "package-lock.json",
+    "package.json"
+  ],
+  "release_count": 4,
+  "status": "verified"
+}

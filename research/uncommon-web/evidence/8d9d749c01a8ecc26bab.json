@@ -1,0 +1,116 @@
+{
+  "url": "https://github.com/imskyleen/animate-ui",
+  "final_url": "https://github.com/imskyleen/animate-ui",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:47:52.517653+00:00",
+  "stars": 4583,
+  "forks": 258,
+  "description": "Fully animated, open-source component distribution built with React, TypeScript, Tailwind CSS, Motion, and Shadcn CLI. Browse a list of components you can install, modify, and use in your projects.",
+  "homepage": "https://animate-ui.com",
+  "topics": [
+    "components",
+    "framer-motion",
+    "motion",
+    "nextjs",
+    "radix",
+    "react",
+    "shadcn-ui",
+    "tailwindcss",
+    "typescript"
+  ],
+  "license": "NOASSERTION",
+  "archived": false,
+  "created_at": "2025-03-26T08:09:58.000Z",
+  "branch": "main",
+  "commit": "e6cea6b5ae5a4985d3bf3cc0ebea173555eafd72",
+  "readme": "Animate UI Animated drop-in primitives for Radix UI, Base UI and React Aria, built with Motion. Swap the import, keep your shadcn/ui components. Getting started Animate every installed shadcn/ui component in one command: npx @animate-ui/cli@latest animate all Or swap a primitive's import yourself: // Before import { Accordion as AccordionPrimitive } from 'radix-ui'; // After import { Accordion as AccordionPrimitive } from '@animate-ui/react/primitives/radix-ui'; Documentation Visit animate-ui.com to view the documentation. Contributing Visit our contributing guide to learn how to contribute. Code of Conduct This project follows a Code of Conduct to help create a welcoming community. Please read CODE_OF_CONDUCT.md before contributing. License Licensed under the MIT license with the Commons Clause: use it in any application, website or product, commercial or not, but don't sell or redistribute the components themselves.",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://github.com/imskyleen/animate-ui#animate-ui"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/imskyleen/animate-ui/stargazers"
+    },
+    {
+      "label": "",
+      "url": "https://twitter.com/animate_ui"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/imskyleen/animate-ui/blob/main/LICENSE.md"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/imskyleen/animate-ui/blob/main/apps/v2/public/og-image.png"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/imskyleen/animate-ui#getting-started"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/imskyleen/animate-ui#documentation"
+    },
+    {
+      "label": "animate-ui.com",
+      "url": "https://animate-ui.com/docs"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/imskyleen/animate-ui#contributing"
+    },
+    {
+      "label": "contributing guide",
+      "url": "https://github.com/imskyleen/animate-ui/blob/main/CONTRIBUTING.md"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/imskyleen/animate-ui#code-of-conduct"
+    },
+    {
+      "label": "CODE_OF_CONDUCT.md",
+      "url": "https://github.com/imskyleen/animate-ui/blob/main/CODE_OF_CONDUCT.md"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/imskyleen/animate-ui#license"
+    },
+    {
+      "label": "MIT license with the Commons Clause",
+      "url": "https://github.com/imskyleen/animate-ui/blob/main/LICENSE.md"
+    },
+    {
+      "label": "",
+      "url": "https://vercel.com/oss"
+    }
+  ],
+  "root_files": [
+    ".cursor",
+    ".github",
+    ".husky",
+    ".vscode",
+    "apps",
+    "e2e",
+    "packages",
+    "skills/animate-ui",
+    ".gitignore",
+    ".npmrc",
+    ".prettierignore",
+    ".prettierrc",
+    "AGENTS.md",
+    "CODE_OF_CONDUCT.md",
+    "CONTRIBUTING.md",
+    "LICENSE.md",
+    "README.md",
+    "commitlint.config.mjs",
+    "package.json",
+    "pnpm-lock.yaml",
+    "pnpm-workspace.yaml",
+    "tsconfig.json",
+    "turbo.json"
+  ],
+  "release_count": 4,
+  "status": "verified"
+}

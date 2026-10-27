@@ -1,0 +1,199 @@
+{
+  "url": "https://github.com/creativelifeform/three-nebula",
+  "final_url": "https://github.com/creativelifeform/three-nebula",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:47:41.805709+00:00",
+  "stars": 1239,
+  "forks": 94,
+  "description": "WebGL based particle system engine for three.js",
+  "homepage": "https://three-nebula.org/",
+  "topics": [
+    "javascript",
+    "particles",
+    "threejs",
+    "webgl"
+  ],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2018-11-16T23:27:56.000Z",
+  "branch": "master",
+  "commit": "1264b628eaace16365f6ccd07df174f5544b2a86",
+  "readme": "three-nebula WebGL based 3D particle system engine for three CHANGELOG Three Nebula is a WebGL based 3D particle engine that has been designed to work alongside three.js. Check out the website, examples, the quickstart sandbox and API reference documentation for more. Features Built and tested against three@0.185.1 The ability to instantiate three-nebula particle systems from JSON objects The ability to create particle systems from sprites as well as 3D meshes Many kinds of particle behaviours and initializers Optional WebGPU rendering via a batched GPURenderer at three-nebula/webgpu Installation npm npm i --save three-nebula script <script type='text/javascript' src='node_modules/three-nebula/dist/three-nebula.umd.js'></script> Usage three-nebula ships ES module, CommonJS and UMD builds and declares three as a peer dependency, so install both alongside each other: npm i --save three three-nebula It works with any bundler (Vite, webpack, Rollup) or straight from a <script> tag — see the examples below. However you build a system, the one thing to remember is to drive it from your render loop by calling system.update() once per frame; nothing animates until you do. For runnable, self-contained examples of every renderer, see the sandbox. Module import * as THREE from 'three'; import System, { SpriteRenderer, Emitter, Rate, Span, Position, Mass, Radius, Life, RadialVelocity, Vector3D, Alpha, Scale, Color, PointZone, } from 'three-nebula'; const system = new System(); const renderer = new SpriteRenderer(threeScene, THREE); const emitter = new Emitter(); // Set emitter rate (particles per second) as well as the particle initializers and behaviours emitter .setRate(new Rate(new Span(4, 16), new Span(0.01))) .setInitializers([ new Position(new PointZone(0, 0)), new Mass(1), new Radius(6, 12), new Life(3), new RadialVelocity(45, new Vector3D(0, 1, 0), 180), ]) .setBehaviours([ new Alpha(1, 0), new Scale(0.1, 1.3), new Color(new THREE.Color(0xff0000), new THREE.Color(0x0000ff)), ]) .emit(); // add the emitter and a renderer to your particle system system .addRenderer(renderer) .addEmitter(emitter) .emit({ onStart: () => {}, onUpdate: () => {}, onEnd: () => {}, }); // drive the system from your render loop const animate = () => { system.update(); requestAnimationFrame(animate); }; requestAnimationFrame(animate); You can also instantiate your system from a JSON object import System from 'three-nebula'; const json = { preParticles: 500, integrationType: 'euler', emitters: [ { rate: { particlesMin: 5, particlesMax: 7, perSecondMin: 0.01, perSecondMax: 0.02, }, position: { x: 70, y: 0, }, initializers: [ { type: 'Mass', properties: { min: 1, max: 1, }, }, { type: 'Life', properties: { min: 2, max: 2, }, }, { type: 'BodySprite', properties: { texture: './img/dot.png', }, }, { type: 'Radius', properties: { width: 80, height: 80, }, }, ], behaviours: [ { type: 'Alpha', properties: { alphaA: 1, alphaB: 0, }, }, { type: 'Color', properties: { colorA: '#4F1500', colorB: '#0029FF', }, }, { type: 'Scale', properties: { scaleA: 1, scaleB: 0.5, }, }, { type: 'Force', properties: { fx: 0, fy: 0, fz: -20, }, }, ], }, { rate: { particlesMin: 5, particlesMax: 7, perSecondMin: 0.01, perSecondMax: 0.02, }, position: { x: -70, y: 0, }, initializers: [ { type: 'Mass', properties: { min: 1, max: 1, }, }, { type: 'Life', properties: { min: 2, max: 2, }, }, { type: 'BodySprite', properties: { texture: './img/dot.png', }, }, { type: 'Radius', properties: { width: 80, height: 80, }, }, ], behaviours: [ { type: 'Alpha', properties: { alphaA: 1, alphaB: 0, }, }, { type: 'Color', properties: { colorA: '#004CFE', colorB: '#6600FF', }, }, { type: 'Scale', properties: { scaleA: 1, scaleB: 0.5, }, }, { type: 'Force', properties: { fx: 0, fy: 0, fz: -20, }, }, ], }, ], }; System.fromJSONAsync(json, THREE).then(system => { console.log(system); }); WebGPU three-nebula ships an optional batched GPURenderer for WebGPU at the three-nebula/webgpu entry point. It draws every particle as a camera-facing instanced quad in a single draw call and packs multiple textures into an atlas, and is a drop-in alternative to SpriteRenderer when your app renders with three's WebGPURenderer: import * as THREE from 'three/webgpu'; import System, { Emitter /* … initializers, behaviours … */, } from 'three-nebula'; import { GPURenderer } from 'three-nebula/webgpu'; const renderer = new THREE.WebGPURenderer(); await renderer.init(); const system = new System(); system.addRenderer(new GPURenderer(scene, THREE)); // build emitters as usual, then drive system.update() from your render loop Requires a modern three. The WebGPU entry point imports three/webgpu and three/tsl, which only exist in recent three releases (roughly r167+). This requirement applies only if you import three-nebula/webgpu — the core three-nebula package's supported three range is unchanged. Script Tag If you are adding three-nebula to your project in the script tag, the only difference to the above example is how you access the classes you need. You can do that like so const { System, Emitter, Rate, Span } = window.Nebula; const system = new System(); Determinism & seeding Every system is driven by a seeded pseudo-random generator, so a simulation can be reproduced exactly — the same seed produces the same result, on any machine. By default the seed is random, so systems still vary from run to run and you don't have to change anything. For reproducible output, set a seed: const system = new System(); system.setSeed(1234); // deterministic from here on // …add emitters, emit as usual… Which method should I use? Seeding and stepping are two independent choices — setSeed controls what randomness is drawn; update/tick control how time advances. Pick a stepping method by what you're doing: Your situation Use Why Live rendering in a browser (most apps) tick(realDeltaSeconds) Refresh-rate independent — correct speed on any display, stall-safe Reproducible/offline: tests, thumbnails, export, replays update() a fixed number of times Byte-identical output, no wall-clock involved Inside your own fixed-timestep game loop update(dt) with your own dt Particles advance in lockstep with your sim (don't nest two accumulators) The short version: reach for tick when rendering live — it's the one most apps want, and it avoids the \"runs 2× too fast on a 120Hz display\" trap. Reach for update only when you need exact, reproducible stepping (or you're driving from your own loop). Add setSeed(...) on top of either when you want the effect to look the same every time it plays — e.g. a curated preview or thumbnail. Leave the seed unset for ambient effects that can vary run to run. For a guaranteed byte-identical replay, prefer update() × N: tick is deterministic for the same total elapsed time, but a long stall can hit maxSubSteps and drop time, nudging live playback off a previous run. Reproducibility = same seed + the same number of fixed steps. Drive the sim by calling system.update() a fixed number of times — each call advances one fixed 1/60s step — and the result is byte-identical every run: system.setSeed(1234); for (let i = 0; i < 300; i++) system.update(); // identical across runs Real-time playback. For a live render loop driven by requestAnimationFrame, call system.tick(realDeltaSeconds) instead of update(). It advances the sim in fixed steps based on real elapsed time, so playback runs at the correct speed regardless of the display's refresh rate — whereas calling update() once per frame ties speed to how often it's called (≈2× too fast on a 120Hz display). Long stalls (e.g. a backgrounded tab) are clamped so the sim can't spiral (see the next section to tune this). const loop = (now, last = now) => { system.tick((now - last) / 1000); // real seconds since last frame renderer.render(scene, camera); requestAnimationFrame(next => loop(next, now)); }; requestAnimationFrame(loop); Upgrading an existing project? Two behaviour changes are worth knowing: Already calling system.update() once per frame? That's the legacy pattern that assumes a 60Hz display — it runs ~2× too fast on a 120Hz screen. Switch your requestAnimationFrame loop to system.tick(realDeltaSeconds) for refresh-rate-independent speed. (Keep update() only for deterministic/offline stepping or your own fixed loop.) Seeding Math.random globally to make particles reproducible? That no longer works — the engine now draws from its own isolated stream and doesn't touch Math.random. Use system.setSeed(...) instead, which is the supported (and much stronger) way to get reproducible output. Tuning the loop: fixedTimeStep and maxSubSteps. tick turns real elapsed time into whole fixed steps using two knobs on the system: system.fixedTimeStep (default 1/60s ≈ 0.0167) — the size of one simulation step, in seconds. tick accumulates real time and runs one update(fixedTimeStep) for each whole step that fits, carrying the leftover into the next call. It's also the step update() uses when called with no argument. Smaller steps give smoother, more accurate motion but do more work per second; larger steps are cheaper but chunkier. Reproducibility is defined relative to this value — two runs match only if they use the same fixedTimeStep and the same number of steps. system.maxSubSteps (default 6) — the most steps a single tick call will run. This caps catch-up after a long frame or stall (say a backgrounded tab that resumes with a multi-second delta). Without a cap, a huge delta would try to run hundreds of updates in one frame, and each frame would then fall further behind — the \"spiral of death\". When the cap is hit, the leftover time is dropped so the sim skips ahead instead of freezing. Together they bound the work per tick: at most maxSubSteps updates, i.e. fixedTimeStep × maxSubSteps seconds of simulation. With the defaults that's 6 × 1/60 = 0.1s — any single frame longer than 100ms of real time has its excess discarded rather than simulated. system.fixedTimeStep = 1 / 120; // finer, smoother steps (more CPU per second) system.maxSubSteps = 10; // allow more catch-up before dropping time These only affect tick. update(dt) always advances by exactly the dt you pass (or one fixedTimeStep if you pass nothing), so deterministic stepping is unaffected by maxSubSteps. Using it in a game. Call system.update(dt) from your own update loop — a game that already runs a fixed-timestep loop uses update, not tick, so the particles advance in lockstep with your game's own steps (nesting tick's accumulator inside yours would desync them). If you want the particle visuals to be part of your reproducible / replay world, seed the system from your game's own generator: system.setSeed(myGameRng.int32()); Isolation. The engine draws from its own per-system stream and does not consume from the global Math.random. If you seed Math.random globally for your own determinism, particle draws won't disturb your sequence. Scope. Determinism holds within one JavaScript engine on one platform — it is not intended for cross-machine lockstep netcode. Particles are visual state; keep them on the presentation side of a netcode boundary. Additive particles & transparent canvases Additive blending adds light to whatever is already in the WebGL framebuffer. That works perfectly on an opaque canvas — but a THREE.WebGLRenderer created with { alpha: true } (a transparent canvas over a DOM/CSS background) is a common gotcha, because WebGL can't additively blend with the page behind the canvas — the canvas is composited over the page, not added to it. Two rules keep additive particles looking right (#133): Over a transparent canvas, use textures that have an alpha channel. The alpha is the coverage the browser needs to composite correctly. A fully-opaque, no-alpha, black-background additive texture will render as opaque squares, because its corners are opaque. (The classic three.js sprite textures such as disc.png all carry alpha.) For a flat colour or gradient background, let three own it — render it in the scene (scene.background, or a backdrop mesh) on an opaque canvas, rather than a CSS background behind a transparent canvas. With the background in the framebuffer, additive blends against real pixels and works with any texture, no alpha channel required: // gradient (or flat colour, image, …) as the scene background — opaque canvas scene.background = myGradientTexture; See the Additive Blending — Scene Background sandbox experiments (CPU + GPU) for a working example, and #133 for the full rationale. Development Sandbox The sandbox in ./sandbox is a small collection of visual experiments for testing and playing with library changes — the kind of barebones examples that make it easy to dig into a rendering issue or try something new. The experiments aren't permanent; they get added and removed over time. Run it with npm run sandbox This serves the sandbox with Vite (defaults to http://localhost:5000, falling back to the next free port). Pick an experiment from the index page. Each experiment is a small ES module — there's no build config to think about. Vite resolves three, three/addons/* and three-nebula by name, and three-nebula is aliased to the library source, so editing the library hot-reloads the sandbox with no separate build step. Adding an experiment is just two files under sandbox/experiments/<name>/. index.html — the shared styles, a canvas inside an #app container (the harness mounts its FPS panel there and the styles size the canvas), and a module entry point: <!DOCTYPE html> <html> <head> <meta charset=\"UTF-8\" /> <link rel=\"stylesheet\" href=\"/style/reset.css\" /> <link rel=\"stylesheet\" href=\"/style/app.css\" /> </head> <body> <div id=\"app\"> <canvas id=\"canvas\"></canvas> </div> <script type=\"module\" src=\"./index.js\"></script> </body> </html> index.js — build a system and hand it to run: import * as THREE from 'three'; import System, { Emitter, SpriteRenderer /* … */ } from 'three-nebula'; import { run } from '/common/run.js'; const init = async ({ scene, camera, renderer }) => { const system = new System(); // … set up emitters, initializers and behaviours … return system.addRenderer(new SpriteRenderer(scene, THREE)); }; run(init); run (in sandbox/common/) sets up the scene, camera, renderer and animation loop, calls your init with { scene, camera, renderer }, and drives system.update() every frame — so an experiment only has to describe the system it wants to see. Visual regression testing The golden-master visual regression (VR) suite lives in ./vr. It renders the library's example scenes — kept in sandbox/examples/, decoupled from the docs website — through a deterministic headless harness and diffs each screenshot against a committed baseline. npm run vr # render every example, check determinism (render twice, diff) npm run vr:diff # diff the latest render against the committed baselines npm run vr:baseline # (re)write the baselines in vr/baselines/ npm run vr:montage # stitch the captures into one overview grid Determinism comes from the harness, not luck: it seeds the global RNG, pins requestAnimationFrame, and captures a fixed number of frames, so a given example renders the same pixels every run. Baselines are compared with pixelmatch, and the image files are tracked with Git LFS. Why SwiftShader. The captures run on headless Chromium with WebGL forced onto SwiftShader (Google's software rasteriser) via --use-gl=angle --use-angle=swiftshader. That's deliberate: the golden master is diffed near-pixel-exact and committed to the repo, and real GPUs don't produce identical pixels across machines. This is an OSS library — we can't pin the CI runner — so a hardware-rendered baseline would flake everywhere; SwiftShader renders bit-identical on any machine, which is what makes a committable baseline viable. The trade-off. SwiftShader does not render the GPURenderer's point sprites faithfully (they come out blocky regardless of the real output), so VR is trustworthy for the CPU-material renderers (SpriteRenderer / MeshRenderer) but blind to GPURenderer visual correctness — validate GPU changes in a real/headed browser plus unit tests. See vr/README.md for the full rationale. License MIT",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://three-nebula.org/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/creativelifeform/three-nebula#three-nebula"
+    },
+    {
+      "label": "three",
+      "url": "https://threejs.org"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/creativelifeform/three-nebula/actions?query=workflow%3Aci"
+    },
+    {
+      "label": "",
+      "url": "https://coveralls.io/github/creativelifeform/three-nebula?branch=master&kill_cache=1"
+    },
+    {
+      "label": "",
+      "url": "https://three-nebula-docs.netlify.app"
+    },
+    {
+      "label": "",
+      "url": "https://threejs.org"
+    },
+    {
+      "label": "",
+      "url": "https://www.typescriptlang.org/"
+    },
+    {
+      "label": "CHANGELOG",
+      "url": "https://github.com/creativelifeform/three-nebula/blob/master/CHANGELOG.md"
+    },
+    {
+      "label": "three.js",
+      "url": "https://github.com/mrdoob/three.js"
+    },
+    {
+      "label": "website",
+      "url": "https://three-nebula.org/"
+    },
+    {
+      "label": "examples",
+      "url": "https://three-nebula.org/examples"
+    },
+    {
+      "label": "quickstart sandbox",
+      "url": "https://codesandbox.io/s/three-nebula-quickstart-kz6uv"
+    },
+    {
+      "label": "API reference documentation",
+      "url": "https://three-nebula-docs.netlify.app/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/creativelifeform/three-nebula#features"
+    },
+    {
+      "label": "three@0.185.1",
+      "url": "https://github.com/mrdoob/three.js"
+    },
+    {
+      "label": "three-nebula/webgpu",
+      "url": "https://github.com/creativelifeform/three-nebula#webgpu"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/creativelifeform/three-nebula#installation"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/creativelifeform/three-nebula#npm"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/creativelifeform/three-nebula#script"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/creativelifeform/three-nebula#usage"
+    },
+    {
+      "label": "three",
+      "url": "https://github.com/mrdoob/three.js"
+    },
+    {
+      "label": "sandbox",
+      "url": "https://github.com/creativelifeform/three-nebula#sandbox"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/creativelifeform/three-nebula#module"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/creativelifeform/three-nebula#webgpu"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/creativelifeform/three-nebula#script-tag"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/creativelifeform/three-nebula#determinism--seeding"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/creativelifeform/three-nebula#additive-particles--transparent-canvases"
+    },
+    {
+      "label": "#133",
+      "url": "https://github.com/creativelifeform/three-nebula/issues/133"
+    },
+    {
+      "label": "#133",
+      "url": "https://github.com/creativelifeform/three-nebula/issues/133"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/creativelifeform/three-nebula#development"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/creativelifeform/three-nebula#sandbox"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/creativelifeform/three-nebula#visual-regression-testing"
+    },
+    {
+      "label": "vr/README.md",
+      "url": "https://github.com/creativelifeform/three-nebula/blob/master/vr/README.md"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/creativelifeform/three-nebula#license"
+    },
+    {
+      "label": "MIT",
+      "url": "https://github.com/creativelifeform/three-nebula/blob/master/LICENSE.md"
+    }
+  ],
+  "root_files": [
+    ".claude/rules",
+    ".github/workflows",
+    ".husky",
+    "docs",
+    "sandbox",
+    "scripts",
+    "src",
+    "test",
+    "vr",
+    ".editorconfig",
+    ".gitattributes",
+    ".gitignore",
+    ".npmignore",
+    ".oxlintrc.json",
+    ".prettierrc",
+    "CHANGELOG.md",
+    "LICENSE.md",
+    "README.md",
+    "package-lock.json",
+    "package.json",
+    "tsconfig.json",
+    "tsconfig.types.json",
+    "tsconfig.webgpu.json",
+    "vite.config.js",
+    "vite.sandbox.config.js",
+    "vite.webgpu.config.js",
+    "vitest.config.js"
+  ],
+  "release_count": 12,
+  "status": "verified"
+}

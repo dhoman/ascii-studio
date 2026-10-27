@@ -1,0 +1,100 @@
+{
+  "url": "https://github.com/g200kg/webaudio-controls",
+  "final_url": "https://github.com/g200kg/webaudio-controls",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:47:48.553895+00:00",
+  "stars": 372,
+  "forks": 63,
+  "description": "GUI parts library for Web application using WebComponents",
+  "homepage": "",
+  "topics": [],
+  "license": "Apache-2.0",
+  "archived": false,
+  "created_at": "2013-08-20T10:08:56.000Z",
+  "branch": "master",
+  "commit": "282610abc14e0ab3c6273a0b977ae5d6677f426c",
+  "readme": "webaudio-controls webaudio-controls is a Javascript library for displaying the GUI parts required to Web Music applications. webaudio-controls consists of knobs, sliders, switches, parameter displays and keyboards. By loading webaudio-controls.js to your page, custom tags for component display will be added using WebComponents. You can configure the GUI screen just by writing custom tags in HTML. Chrome / Firefox / Edge compatible iOS and Android touch devices compatible Documents and Application Notes License WebAudio-Controls is developped based on: WebAudio-Knob by Eiji Kitamura WebAudio-Slider by Ryoya KAWAI WebAudio-Switch by Keisuke Ai Integrated and enhanced by g200kg Copyright (c) 2013 Eiji Kitamura / Ryoya KAWAI / Keisuke Ai / g200kg / @micbuffa / @CellouBalde Licensed under the Apache License, Version 2.0 Knob/Switch images in samples are from Knob Gallery switch_toggle.knob by az (c) 2011 CC-BY",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://github.com/g200kg/webaudio-controls#webaudio-controls"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/g200kg/webaudio-controls/blob/master/img/demo.png"
+    },
+    {
+      "label": "Documents and Application Notes",
+      "url": "https://g200kg.github.io/webaudio-controls/docs/index.html"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/g200kg/webaudio-controls#documents-and-application-notes"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/g200kg/webaudio-controls#license"
+    },
+    {
+      "label": "WebAudio-Knob",
+      "url": "https://github.com/agektmr/webaudio-knob"
+    },
+    {
+      "label": "Eiji Kitamura",
+      "url": "http://google.com/+agektmr"
+    },
+    {
+      "label": "WebAudio-Slider",
+      "url": "https://github.com/ryoyakawai/webaudio-slider"
+    },
+    {
+      "label": "Ryoya KAWAI",
+      "url": "https://plus.google.com/108242669191458983485/posts"
+    },
+    {
+      "label": "WebAudio-Switch",
+      "url": "http://aikelab.net/switch/"
+    },
+    {
+      "label": "Keisuke Ai",
+      "url": "http://d.hatena.ne.jp/aike/"
+    },
+    {
+      "label": "g200kg",
+      "url": "http://www.g200kg.com/"
+    },
+    {
+      "label": "Knob Gallery",
+      "url": "http://www.g200kg.com/en/webknobman/gallery.php"
+    },
+    {
+      "label": "switch_toggle.knob",
+      "url": "http://www.g200kg.com/en/webknobman/gallery.php?m=p&p=58"
+    },
+    {
+      "label": "az",
+      "url": "http://bji.yukihotaru.com/"
+    },
+    {
+      "label": "CC-BY",
+      "url": "http://creativecommons.org/licenses/by/3.0/"
+    }
+  ],
+  "root_files": [
+    "docs",
+    "img",
+    "knobs",
+    ".gitignore",
+    "Gemfile",
+    "LICENSE",
+    "README.md",
+    "_config.yml",
+    "bower.json",
+    "index.md",
+    "package.json",
+    "webaudio-controls.js",
+    "webcomponents-lite.js"
+  ],
+  "release_count": 0,
+  "status": "verified"
+}

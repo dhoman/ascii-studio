@@ -1,0 +1,103 @@
+{
+  "url": "https://github.com/shikijs/shiki",
+  "final_url": "https://github.com/shikijs/shiki",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:48:16.540972+00:00",
+  "stars": 13880,
+  "forks": 612,
+  "description": "A beautiful yet powerful syntax highlighter",
+  "homepage": "http://shiki.style/",
+  "topics": [
+    "markdown",
+    "shiki",
+    "syntax-highlighting",
+    "textmate-grammar"
+  ],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2018-10-29T22:16:21.000Z",
+  "branch": "main",
+  "commit": "f7d0167873fd676fe4e190bc9b53832fba9ee01d",
+  "readme": "Shiki 式 A beautiful syntax highlighter based on TextMate grammar, accurate and powerful. 📚 Documentation Branch The main branch is currently at v4.x. Branch Description v3 v3.23 of Shiki v2 v2.5 of Shiki v1 v1.29 of Shiki v0 v0.14 of Shiki, the legacy version License MIT",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://raw.githubusercontent.com/shikijs/shiki/main/docs/public/logo.svg"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/shikijs/shiki#shiki-式"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/shiki"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/shiki"
+    },
+    {
+      "label": "",
+      "url": "https://app.codecov.io/gh/shikijs/shiki/tree"
+    },
+    {
+      "label": "📚 Documentation",
+      "url": "https://shiki.style"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/shikijs/shiki#branch"
+    },
+    {
+      "label": "v3",
+      "url": "https://github.com/shikijs/shiki/tree/v3"
+    },
+    {
+      "label": "v2",
+      "url": "https://github.com/shikijs/shiki/tree/v2"
+    },
+    {
+      "label": "v1",
+      "url": "https://github.com/shikijs/shiki/tree/v1"
+    },
+    {
+      "label": "v0",
+      "url": "https://github.com/shikijs/shiki/tree/v0"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/shikijs/shiki#license"
+    },
+    {
+      "label": "MIT",
+      "url": "https://github.com/shikijs/shiki/blob/main/LICENSE"
+    }
+  ],
+  "root_files": [
+    ".github",
+    ".vscode",
+    "bench",
+    "docs",
+    "packages",
+    "scripts",
+    "test",
+    ".gitattributes",
+    ".gitignore",
+    "CODE_OF_CONDUCT.md",
+    "CONTRIBUTING.md",
+    "LICENSE",
+    "README.md",
+    "bump.config.ts",
+    "eslint.config.js",
+    "netlify.toml",
+    "package.json",
+    "pnpm-lock.yaml",
+    "pnpm-workspace.yaml",
+    "taze.config.ts",
+    "tsconfig.json",
+    "turbo.json",
+    "vitest.config.ts"
+  ],
+  "release_count": 160,
+  "status": "verified"
+}

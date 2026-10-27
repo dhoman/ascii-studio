@@ -1,0 +1,218 @@
+{
+  "url": "https://github.com/tombcato/smart-ticker",
+  "final_url": "https://github.com/tombcato/smart-ticker",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:48:22.068855+00:00",
+  "stars": 168,
+  "forks": 9,
+  "description": "🎰 High-Performance Text Diff Motion Component. Make your text flow like water.  高性能文本 Diff 动画组件：让你的文本平滑演变，支持任意字符 (数字/中英文/Emoji)，支持 React & Vue & Svelte",
+  "homepage": "https://tombcato.github.io/smart-ticker/",
+  "topics": [
+    "animation",
+    "counter",
+    "flip-clock",
+    "levenshtein",
+    "number-animation",
+    "number-flow",
+    "odometer",
+    "price-change",
+    "react",
+    "smart",
+    "svelte",
+    "text-animation",
+    "text-diff",
+    "ticker",
+    "typescript",
+    "ui",
+    "vue"
+  ],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2025-12-28T16:04:56.000Z",
+  "branch": "main",
+  "commit": "98507876898152d1e8051bab3a4b794cbe47198f",
+  "readme": "Smart Ticker 🇨🇳 简体中文 | 🇬🇧 English High-Performance Text Diff Motion Component based on Levenshtein diff algorithm. Make your text flow like water. Live Demo > Supports any characters Supports Prefix/Suffix, Intl Formatting, Auto-Scale, Fading Edges 🌏 Multi-Charset SupportSupports CJK, Numbers, Emojis, and mixed text rolling. Auto-adjusts spacing based on Unicode width. 🧠 Smart Diff AnimationUses Levenshtein algorithm to find the shortest change path; identical characters remain static. ⚡ Smooth InterruptionSeamlessly transitions to new targets if the value changes dynamically during animation. 📈 Rich MotionBuilt-in variety of easings.Supports custom easing function. Supports charWidth fine-tuning. 🦄 Multi-FrameworkReact (Hooks), Vue 3 (Composition), and Svelte 4+ components with a unified API. 🚀 High PerformancePowered by RAF, supporting Auto-scale, Fading Edge, and Disable Animation. 📦 Installation NPM (Recommended) npm install @tombcato/smart-ticker From Source # Clone repository git clone https://github.com/tombcato/smart-ticker.git # Install dependencies cd smart-ticker npm install # Start dev server npm run dev 🚀 Usage 📦 Import Styles When using NPM, you MUST explicitly import the style file for the component to work. import '@tombcato/smart-ticker/style.css' Source Integration: If copying source code, ensure React version imports Ticker.css and Vue version uses the built-in styles. React // NPM Usage import { Ticker } from '@tombcato/smart-ticker'; import '@tombcato/smart-ticker/style.css'; // Source Usage // import { Ticker } from './components/Ticker'; function App() { const [price, setPrice] = useState(73.18); return ( <Ticker value={price.toFixed(2)} duration={800} easing=\"easeInOut\" charWidth={1} characterLists={['0123456789.,']} /> ); } Vue <script setup> // NPM Usage import { Ticker } from '@tombcato/smart-ticker/vue'; import '@tombcato/smart-ticker/style.css'; // Source Usage // import Ticker from './components/vue/Ticker.vue'; import { ref } from 'vue'; const price = ref('73.18'); </script> <template> <Ticker :value=\"price\" :duration=\"800\" easing=\"easeInOut\" :char-width=\"1\" :character-lists=\"['0123456789.,']\" /> </template> Svelte <script> // NPM Usage import { Ticker } from '@tombcato/smart-ticker/svelte'; import '@tombcato/smart-ticker/style.css'; let price = 73.18; </script> <Ticker value={price.toFixed(2)} duration={800} easing=\"easeInOut\" charWidth={1} characterLists={['0123456789.,']} /> 💅 Customization Custom Fonts The component uses the system monospace stack by default. To use a custom font (e.g., JetBrains Mono), ensure it is monospace and override via CSS: /* In global styles or component styles */ .ticker { font-family: 'JetBrains Mono', monospace !important; } Note: Must be a monospace font, otherwise alignment issues may occur during scrolling animations. ⚙️ API Props Prop Type Default Description value string|number - The text value to display (Required) duration number 500 Animation duration (ms) easing EasingName | function 'easeInOut' Easing: linear, easeIn, easeOut, easeInOut, bounce, or custom (t: number) => number direction string 'ANY' Scroll direction: UP, DOWN, ANY (shortest path) charWidth number 1 Character width multiplier (base 0.8em) characterLists string[] ['0123456789'] Allowed character sets className string '' Custom CSS class name animateOnMount boolean false Animate on initial render disableAnimation boolean false Disable animation, show final value immediately autoScale boolean false Enable auto-scaling to fit container width fadingEdge boolean false Enable top/bottom fading edge effect prefix string - Static prefix (not animated) suffix string - Static suffix (not animated) numberFormat Intl.NumberFormat - Intl formatter number value onAnimationEnd () => void - Callback when animation ends (Vue: @animation-end) 🧩 Character Configuration (characterLists) characterLists controls the core animation logic. It accepts an array of strings, where each string represents a group of characters that can scroll into each other. Presets (Common Character Lists) For convenience, we provide built-in constants for common character sets: import { Presets } from '@tombcato/smart-ticker'; Presets.NUMBER // '0123456789' Presets.ALPHABET // 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ' Presets.ALPHANUMERIC // '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ' Presets.CURRENCY // '0123456789.,' Animation Rules Scroll: If both the old and new characters belong to the same group string (e.g., 0 to 9 in Presets.NUMBER), they will scroll. Switch: If they are in different groups, or if a character is not in any list (e.g., Chinese characters), they will switch instantly (fade/flip) without scrolling. Configuration Tips Common Use Case: Simply use Presets.ALPHANUMERIC to support most alphanumeric scrolling. Case Isolation: To prevent scrolling between cases (e.g., a -> A), list them as separate groups: [Presets.NUMBER, 'abc...', 'ABC...']. Code Example: <Ticker value={val} characterLists={[ Presets.NUMBER, // Numbers 'abcdefghijklmnopqrstuvwxyz', // Lowercase Group 'ABCDEFGHIJKLMNOPQRSTUVWXYZ', // Uppercase Group '.,!@#$%^&*' // Symbols ]} /> 💻 Running Demos This project includes complete NPM-based user examples for React, Vue, and Svelte in the examples directory. Start React Demo cd examples/react-demo npm install npm run dev Start Vue Demo cd examples/vue-demo npm install npm run dev Start Svelte Demo cd examples/svelte-demo npm install npm run dev 📁 Project Structure smart-ticker/ ├── src/ │ ├── components/ │ │ ├── Ticker.tsx # React Component │ │ ├── Ticker.css # Core Styles │ │ ├── vue/ │ │ │ └── Ticker.vue # Vue Component │ │ └── svelte/ │ │ └── Ticker.svelte # Svelte Component │ ├── core/ │ │ └── TickerCore.ts # Core Logic (Levenshtein diff algo) │ └── ... ├── examples/ # Standalone Example Projects │ ├── react-demo/ # React Demo (Vite + React + TS) │ ├── vue-demo/ # Vue Demo (Vite + Vue + TS) │ └── svelte-demo/ # Svelte Demo (Vite + Svelte + TS) └── package.json 🎨 Example Scenarios Financial Data - Stock prices, crypto rates Counters - Page views, likes Scoreboards - Real-time sports scores Airport Info - Flight numbers, gates Privacy Mode - Balance hide/show toggle 🔧 Tech Stack Build Tool: Vite Language: TypeScript Frameworks: React 18 / Vue 3 / Svelte 4+ Styling: CSS Variables + Responsive Design 📝 Changelog See CHANGELOG_EN.md for version history. 📄 License MIT",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://github.com/tombcato/smart-ticker/blob/main/public/logo.svg#gh-light-mode-only"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/tombcato/smart-ticker/blob/main/public/logo-dark.svg#gh-dark-mode-only"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/tombcato/smart-ticker#smart-ticker"
+    },
+    {
+      "label": "🇨🇳 简体中文",
+      "url": "https://github.com/tombcato/smart-ticker/blob/main/README_CN.md"
+    },
+    {
+      "label": "Live Demo >",
+      "url": "https://tombcato.github.io/smart-ticker/?lang=en"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/tombcato/smart-ticker/blob/main/smartticker2.gif"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/tombcato/smart-ticker/blob/main/smartticker3.gif"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/tombcato/smart-ticker/blob/main/smartticker.gif"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/16c374a34f64835bef8b2195cb0442ee434db1ede4f34cd37b4d3b1ccef53ea6/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f52656163742d31382b2d3631444146423f6c6f676f3d7265616374"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/3b11f6f50e276032cb378cda62afb981a35d6da474dee701c40e32aae33ab87d/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f5675652d332b2d3446433038443f6c6f676f3d767565646f746a73"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/7666cf0452c86125f549608f25dcbf1a800f47e048c531146a8be8abf3181836/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f5376656c74652d342b2d4646334530303f6c6f676f3d7376656c7465"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/93c6b16a01d10eaa5abf4c20ac17fbd3c25ab83ef9184ae7f7d92d9b730788cd/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f547970655363726970742d352b2d3331373843363f6c6f676f3d74797065736372697074"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/35308a0e2b7825482358c69cd671fea2aebd7aa0bec944fb939e47c3e01d2c8f/68747470733a2f2f696d672e736869656c64732e696f2f6e706d2f762f40746f6d626361746f2f736d6172742d7469636b65723f636f6c6f723d636233383337266c6f676f3d6e706d"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/tombcato/smart-ticker#-installation"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/tombcato/smart-ticker#npm-recommended"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/tombcato/smart-ticker#from-source"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/tombcato/smart-ticker#-usage"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/tombcato/smart-ticker#-import-styles"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/tombcato/smart-ticker#react"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/tombcato/smart-ticker#vue"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/tombcato/smart-ticker#svelte"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/tombcato/smart-ticker#-customization"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/tombcato/smart-ticker#custom-fonts"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/tombcato/smart-ticker#️-api"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/tombcato/smart-ticker#props"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/tombcato/smart-ticker#-character-configuration-characterlists"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/tombcato/smart-ticker#presets-common-character-lists"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/tombcato/smart-ticker#animation-rules"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/tombcato/smart-ticker#configuration-tips"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/tombcato/smart-ticker#-running-demos"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/tombcato/smart-ticker#start-react-demo"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/tombcato/smart-ticker#start-vue-demo"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/tombcato/smart-ticker#start-svelte-demo"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/tombcato/smart-ticker#-project-structure"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/tombcato/smart-ticker#-example-scenarios"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/tombcato/smart-ticker#-tech-stack"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/tombcato/smart-ticker#-changelog"
+    },
+    {
+      "label": "CHANGELOG_EN.md",
+      "url": "https://github.com/tombcato/smart-ticker/blob/main/CHANGELOG_EN.md"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/tombcato/smart-ticker#-license"
+    }
+  ],
+  "root_files": [
+    ".github/workflows",
+    "examples",
+    "public",
+    "src",
+    ".gitignore",
+    "CHANGELOG.md",
+    "CHANGELOG_EN.md",
+    "LICENSE",
+    "README.md",
+    "README_CN.md",
+    "index.html",
+    "package-lock.json",
+    "package.json",
+    "smartticker.gif",
+    "smartticker2.gif",
+    "smartticker3.gif",
+    "svelte.config.js",
+    "tsconfig.json",
+    "tsconfig.node.json",
+    "vite.config.ts",
+    "vite.lib.config.ts"
+  ],
+  "release_count": 1,
+  "status": "verified"
+}

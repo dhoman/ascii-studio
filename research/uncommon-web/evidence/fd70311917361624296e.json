@@ -1,0 +1,90 @@
+{
+  "url": "https://github.com/dmotz/oriDomi",
+  "final_url": "https://github.com/dmotz/oriDomi",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:47:44.276979+00:00",
+  "stars": 2412,
+  "forks": 197,
+  "description": "🪭 Fold up DOM elements like paper",
+  "homepage": "https://oxism.com/oriDomi",
+  "topics": [
+    "animation",
+    "coffeescript",
+    "javascript",
+    "jquery",
+    "origami"
+  ],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2012-08-02T06:53:45.000Z",
+  "branch": "master",
+  "commit": "f90830504d6843dfdf5b72d873c01cd716538485",
+  "readme": "OriDomi Fold up DOM elements like paper Dan Motzenbecker, MIT License @dcmotz Click here for examples, documentation and notes. Read the annotated source for a detailed look. If you want to work on the source, run npm install after first cloning to install local package dependencies. Run cake watch to automatically compile as you work. cake build will update the annotated source and the minified version as well. The DOM is your oyster.",
+  "readme_links": [
+    {
+      "label": "OriDomi",
+      "url": "https://oxism.com/oriDomi"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/dmotz/oriDomi#oridomi"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/dmotz/oriDomi#fold-up-dom-elements-like-paper"
+    },
+    {
+      "label": "Dan Motzenbecker",
+      "url": "https://oxism.com"
+    },
+    {
+      "label": "@dcmotz",
+      "url": "https://twitter.com/dcmotz"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/5c9fbc059105bb7c515618516728fc6ad3e89e232d8343292e18d34e864fe11a/68747470733a2f2f6f7869736d2e636f6d2f6f7269446f6d692f64656d6f2f696d616765732f726561646d652f312e706e673f763d32"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/984fa7758283d6b92c2209edcf341a07824240393bdf46c4ae22ba42492e101c/68747470733a2f2f6f7869736d2e636f6d2f6f7269446f6d692f64656d6f2f696d616765732f726561646d652f342e6769663f763d32"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/da0bca68c7e2ae76f595b7a3c41895aedab800a0ef02c2680f0503e13e1fa86b/68747470733a2f2f6f7869736d2e636f6d2f6f7269446f6d692f64656d6f2f696d616765732f726561646d652f322e706e673f763d32"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/bd39416250b1895f1a636b1379f0a9667aede305dfaeca45cb35c2ecb5487ed1/68747470733a2f2f6f7869736d2e636f6d2f6f7269446f6d692f64656d6f2f696d616765732f726561646d652f332e6769663f763d32"
+    },
+    {
+      "label": "Click here",
+      "url": "https://oxism.com/oriDomi"
+    },
+    {
+      "label": "annotated source",
+      "url": "https://oxism.com/oriDomi/docs/oridomi.html"
+    }
+  ],
+  "root_files": [
+    "demo",
+    "docs",
+    ".gitignore",
+    ".npmignore",
+    "Cakefile",
+    "LICENSE",
+    "README.md",
+    "bower.json",
+    "component.json",
+    "favicon.png",
+    "index.html",
+    "oridomi.coffee",
+    "oridomi.jquery.json",
+    "oridomi.js",
+    "oridomi.js.map",
+    "oridomi.min.js",
+    "package.json"
+  ],
+  "release_count": 0,
+  "status": "verified"
+}

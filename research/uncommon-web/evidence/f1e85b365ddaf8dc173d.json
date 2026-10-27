@@ -1,0 +1,109 @@
+{
+  "url": "https://github.com/webtui/webtui",
+  "final_url": "https://github.com/webtui/webtui",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:48:24.607738+00:00",
+  "stars": 2470,
+  "forks": 51,
+  "description": "Modular CSS Library that brings the beauty of Terminal UIs to the browser",
+  "homepage": "https://webtui.ironclad.sh",
+  "topics": [
+    "astro",
+    "css",
+    "terminal",
+    "theme",
+    "ui",
+    "ui-library"
+  ],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2025-03-04T22:46:48.000Z",
+  "branch": "master",
+  "commit": "63ea64c1b4268d58534d318889e3d1a613c03f03",
+  "readme": "WebTUI Modular CSS Library that brings the beauty of Terminal UIs to the browser Docs: https://webtui.ironclad.sh Examples: https://webtui.ironclad.sh/showcase Chat/Support/Community (Signal): https://webtui.ironclad.sh/chat Quickstart Install the base WebTUI package with your preferred package manager bun i @webtui/css npm i @webtui/css yarn add @webtui/css pnpm install @webtui/css In your global CSS file, define the order of layers then import the library @layer base, utils, components; @import '@webtui/css'; Start using the library in your HTML <button>click</button> <button size-=\"large\">click me too</button> <div box-=\"square\"> <p>content</p> </div> For more detailed installation instructions, see the installation guide and framework-specific installations Packages All the officially-maintained packages in the monorepo @webtui/css @webtui/plugin-nf @webtui/theme-catppuccin @webtui/theme-gruvbox @webtui/theme-nord @webtui/theme-vitesse @webtui/theme-everforest Development This repository is a monorepo that contains the website and all the official WebTUI packages. Ensure Bun is installed Clone the repository git clone https://github.com/webtui/webtui Install dependencies bun i Build the project bun run build Start the dev server bun run dev",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://github.com/webtui/webtui#webtui"
+    },
+    {
+      "label": "https://webtui.ironclad.sh",
+      "url": "https://webtui.ironclad.sh"
+    },
+    {
+      "label": "https://webtui.ironclad.sh/showcase",
+      "url": "https://webtui.ironclad.sh/showcase"
+    },
+    {
+      "label": "https://webtui.ironclad.sh/chat",
+      "url": "https://webtui.ironclad.sh/chat"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/webtui/webtui#quickstart"
+    },
+    {
+      "label": "installation guide",
+      "url": "https://webtui.ironclad.sh/start/installation"
+    },
+    {
+      "label": "framework-specific installations",
+      "url": "https://webtui.ironclad.sh/start/installation"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/webtui/webtui#packages"
+    },
+    {
+      "label": "@webtui/css",
+      "url": "https://npmjs.com/package/@webtui/css"
+    },
+    {
+      "label": "@webtui/plugin-nf",
+      "url": "https://npmjs.com/package/@webtui/plugin-nf"
+    },
+    {
+      "label": "@webtui/theme-catppuccin",
+      "url": "https://npmjs.com/package/@webtui/theme-catppuccin"
+    },
+    {
+      "label": "@webtui/theme-gruvbox",
+      "url": "https://npmjs.com/package/@webtui/theme-gruvbox"
+    },
+    {
+      "label": "@webtui/theme-nord",
+      "url": "https://npmjs.com/package/@webtui/theme-nord"
+    },
+    {
+      "label": "@webtui/theme-vitesse",
+      "url": "https://npmjs.com/package/@webtui/theme-vitesse"
+    },
+    {
+      "label": "@webtui/theme-everforest",
+      "url": "https://npmjs.com/package/@webtui/theme-everforest"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/webtui/webtui#development"
+    },
+    {
+      "label": "Bun",
+      "url": "https://bun.sh/"
+    }
+  ],
+  "root_files": [
+    ".github",
+    "packages",
+    "web",
+    ".gitignore",
+    ".prettierrc.js",
+    "LICENSE",
+    "README.md",
+    "bun.lock",
+    "eslint.config.js",
+    "package.json",
+    "turbo.json"
+  ],
+  "release_count": 11,
+  "status": "verified"
+}

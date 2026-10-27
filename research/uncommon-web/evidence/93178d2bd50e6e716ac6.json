@@ -1,0 +1,81 @@
+{
+  "url": "https://github.com/barvian/number-flow",
+  "final_url": "https://github.com/barvian/number-flow",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:47:36.126204+00:00",
+  "stars": 7761,
+  "forks": 161,
+  "description": "An animated number component for React, Vue, Svelte, and TS/JS.",
+  "homepage": "https://number-flow.barvian.me",
+  "topics": [
+    "accessible",
+    "animation",
+    "odometer",
+    "react",
+    "svelte",
+    "vue"
+  ],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2024-07-15T22:04:51.000Z",
+  "branch": "main",
+  "commit": "c5906cf35c86583e756a6b91e043291c10b416e0",
+  "readme": "number-flow.mp4 NumberFlow An animated number component for React, Vue, Svelte, and TS/JS. Documentation For full documentation, visit number-flow.barvian.me. You may also like Torph - An animated text component by Lochie Axon.",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://github.com/barvian/number-flow#numberflow"
+    },
+    {
+      "label": "",
+      "url": "https://npmjs.com/package/number-flow"
+    },
+    {
+      "label": "",
+      "url": "https://x.com/mbarvian"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/barvian/number-flow#documentation"
+    },
+    {
+      "label": "number-flow.barvian.me",
+      "url": "https://number-flow.barvian.me"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/barvian/number-flow#you-may-also-like"
+    },
+    {
+      "label": "Torph",
+      "url": "https://github.com/lochie/torph"
+    },
+    {
+      "label": "Lochie Axon",
+      "url": "https://x.com/lochieaxon"
+    }
+  ],
+  "root_files": [
+    ".changeset",
+    ".github",
+    ".vscode",
+    "lib",
+    "packages",
+    "site",
+    "test-suites/wrapper",
+    ".gitattributes",
+    ".gitignore",
+    ".npmrc",
+    ".prettierignore",
+    "LICENSE.md",
+    "README.md",
+    "package.json",
+    "pnpm-lock.yaml",
+    "pnpm-workspace.yaml",
+    "prettier.config.js",
+    "tsconfig.build.json",
+    "tsconfig.json"
+  ],
+  "release_count": 120,
+  "status": "verified"
+}

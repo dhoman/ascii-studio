@@ -1,0 +1,97 @@
+{
+  "url": "https://github.com/DulanDev/frontpanel",
+  "final_url": "https://github.com/DulanDev/frontpanel",
+  "http_status": 200,
+  "checked_at": "2026-10-23T17:46:53.106309+00:00",
+  "stars": 0,
+  "forks": 0,
+  "description": "Early-2000s hardware UI kit: chrome bezels, gel buttons, LCD readouts and LEDs, in plain CSS and Vue 3.",
+  "homepage": "https://dulandev.github.io/frontpanel/",
+  "topics": [
+    "2000s",
+    "audio-ui",
+    "component-library",
+    "css",
+    "design-system",
+    "knob",
+    "nostalgia",
+    "reka-ui",
+    "retro",
+    "retro-ui",
+    "skeuomorphic",
+    "skeuomorphism",
+    "tailwindcss",
+    "tailwindcss-v4",
+    "ui-kit",
+    "vue",
+    "vue-components",
+    "vue3",
+    "y2k",
+    "y2k-aesthetic"
+  ],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2026-10-11T01:01:35.000Z",
+  "branch": "main",
+  "commit": "70fdaa7a69b3139d9994cad790706104e5465896",
+  "readme": "Frontpanel An early-2000s hardware UI kit for building device front panels in the browser: liquid-chrome bezels, glossy gel buttons, molded caps, LCD readouts and LEDs, in plain CSS with Vue 3 components on top. Two skins, Chrome Silver and Gunmetal Night, follow the system setting. The UI kit behind WhatsTheNextChord. Documentation: guides, live demos, and every component, class and token. 0.x, before 1.0: class names, tokens and props may still change between minor versions. Package What it is @frontpanel/css Tokens, .fp-* classes, optional base styles, fonts and a Tailwind 4 entry @frontpanel/vue Vue 3 components built on Reka UI @frontpanel/music Coming: chord diagram, chord matrix, chord-type caps Usage npm install @frontpanel/css # the skin, for any framework or none npm install @frontpanel/vue # Vue 3 components, which bring the css package Plain CSS, everything in @layer frontpanel: @import \"@frontpanel/css/index.css\"; /* tokens and .fp-* classes */ @import \"@frontpanel/css/fonts.css\"; /* optional: the bundled fonts */ @import \"@frontpanel/css/page.css\"; /* optional: website pieces around a device */ @import \"@frontpanel/css/base.css\"; /* optional: page defaults */ Tailwind 4, where the tokens join the theme and the classes become utilities: @import \"tailwindcss\"; @import \"@frontpanel/css/tailwind.css\"; @import \"@frontpanel/css/tailwind-page.css\"; /* optional */ @import \"@frontpanel/css/tailwind-base.css\"; /* optional, and with no layer() */ @source \"../node_modules/@frontpanel/vue/dist\"; tailwind-base.css puts the page defaults in Tailwind's base layer itself; importing base.css with layer(base) would nest them in a layer of their own, where preflight beats them. The @source line is needed with @frontpanel/vue, because Tailwind doesn't scan node_modules and would skip the classes the components use; give the path from your CSS file. The documentation covers the rest: skins, layout, fonts and preloading, motion, accessibility, browser support, and a reference for every component, class and token. Each package's README has the essentials (css, vue). Development pnpm install # Node >= 22, pnpm 10 pnpm lint / pnpm typecheck / pnpm test pnpm build # every package and the docs site pnpm --filter @frontpanel/docs dev # docs site dev server pnpm changeset # record a user-facing change Licence MIT. The bundled Michroma and VT323 fonts are under the SIL Open Font License; their licence texts ship beside them.",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://github.com/DulanDev/frontpanel#frontpanel"
+    },
+    {
+      "label": "WhatsTheNextChord",
+      "url": "https://whatsthenextchord.com"
+    },
+    {
+      "label": "Documentation",
+      "url": "https://dulandev.github.io/frontpanel/"
+    },
+    {
+      "label": "Reka UI",
+      "url": "https://reka-ui.com"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/DulanDev/frontpanel#usage"
+    },
+    {
+      "label": "documentation",
+      "url": "https://dulandev.github.io/frontpanel/"
+    },
+    {
+      "label": "css",
+      "url": "https://github.com/DulanDev/frontpanel/blob/main/packages/css/README.md"
+    },
+    {
+      "label": "vue",
+      "url": "https://github.com/DulanDev/frontpanel/blob/main/packages/vue/README.md"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/DulanDev/frontpanel#development"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/DulanDev/frontpanel#licence"
+    }
+  ],
+  "root_files": [
+    ".changeset",
+    ".github/workflows",
+    "apps/docs",
+    "packages",
+    ".gitignore",
+    "CLAUDE.md",
+    "LICENSE",
+    "README.md",
+    "eslint.config.js",
+    "package.json",
+    "pnpm-lock.yaml",
+    "pnpm-workspace.yaml",
+    "tsconfig.base.json"
+  ],
+  "release_count": 0,
+  "status": "verified"
+}

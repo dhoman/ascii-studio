@@ -1,0 +1,267 @@
+{
+  "url": "https://github.com/visgl/deck.gl",
+  "final_url": "https://github.com/visgl/deck.gl",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:48:23.783094+00:00",
+  "stars": 14695,
+  "forks": 2286,
+  "description": "WebGL2 powered visualization framework",
+  "homepage": "https://deck.gl",
+  "topics": [
+    "data-visualization",
+    "geospatial-analysis",
+    "javascript",
+    "maps",
+    "python",
+    "visualization",
+    "webgl"
+  ],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2015-12-15T08:38:29.000Z",
+  "branch": "master",
+  "commit": "36f642769cc2aad3a61cdf584ca89a38f2157079",
+  "readme": "deck.gl | Website GPU-powered, highly performant large-scale data visualization deck.gl is designed to simplify high-performance, WebGL2/WebGPU based visualization of large data sets. Users can quickly get impressive visual results with minimal effort by composing existing layers, or leverage deck.gl's extensible architecture to address custom needs. deck.gl maps data (usually an array of JSON objects) into a stack of visual layers - e.g. icons, polygons, texts; and look at them with views: e.g. map, first-person, orthographic. deck.gl handles a number of challenges out of the box: Performant rendering and updating of large data sets Interactive event handling such as picking, highlighting and filtering Cartographic projections and integration with major basemap providers A catalog of proven, well-tested layers Deck.gl is designed to be highly customizable. All layers come with flexible APIs to allow programmatic control of each aspect of the rendering. All core classes such are easily extendable by the users to address custom use cases. Flavors Script Tag <script src=\"https://unpkg.com/deck.gl@latest/dist.min.js\"></script> Get started Full examples NPM Module npm install deck.gl Pure JS Get started Full examples React Get started Full examples Python pip install pydeck Get started Examples Third-Party Goodies deckgl-typings (Typescript) mapdeck (R) vega-deck.gl (Vega) earthengine-layers (Google Earth Engine) deck.gl-native (C++) deck.gl-raster (Computation on rasters) Learning Resources API documentation for the latest release Website demos with links to source Interactive playground deck.gl Codepen demos deck.gl Observable demos vis.gl Medium blog deck.gl Slack workspace Contributing deck.gl is part of vis.gl, an OpenJS Foundation project. Read the contribution guidelines if you are interested in contributing. Attributions Data sources Data sources are listed in each example. The deck.gl project is supported by",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://npmjs.org/package/deck.gl"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/visgl/deck.gl/actions?query=workflow%3Atest+branch%3Amaster"
+    },
+    {
+      "label": "",
+      "url": "https://npmjs.org/package/deck.gl"
+    },
+    {
+      "label": "",
+      "url": "https://coveralls.io/github/visgl/deck.gl?branch=master"
+    },
+    {
+      "label": "Website",
+      "url": "https://deck.gl"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/visgl/deck.gl#deckgl--website"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/visgl/deck.gl#-gpu-powered-highly-performant-large-scale-data-visualization"
+    },
+    {
+      "label": "",
+      "url": "https://visgl.github.io/deck.gl"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/visgl/deck.gl#flavors"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/visgl/deck.gl#script-tag"
+    },
+    {
+      "label": "Get started",
+      "url": "https://github.com/visgl/deck.gl/blob/master/docs/get-started/using-standalone.md#using-the-scripting-api"
+    },
+    {
+      "label": "Full examples",
+      "url": "https://github.com/visgl/deck.gl/tree/master/examples/get-started/scripting"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/visgl/deck.gl#npm-module"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/visgl/deck.gl#pure-js"
+    },
+    {
+      "label": "Get started",
+      "url": "https://github.com/visgl/deck.gl/blob/master/docs/get-started/using-standalone.md"
+    },
+    {
+      "label": "Full examples",
+      "url": "https://github.com/visgl/deck.gl/blob/master/examples/get-started/pure-js"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/visgl/deck.gl#react"
+    },
+    {
+      "label": "Get started",
+      "url": "https://github.com/visgl/deck.gl/blob/master/docs/get-started/using-with-react.md"
+    },
+    {
+      "label": "Full examples",
+      "url": "https://github.com/visgl/deck.gl/blob/master/examples/get-started/react"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/visgl/deck.gl#python"
+    },
+    {
+      "label": "Get started",
+      "url": "https://deckgl.readthedocs.io/en/latest/installation.html"
+    },
+    {
+      "label": "Examples",
+      "url": "https://deckgl.readthedocs.io/en/latest/layer.html"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/visgl/deck.gl#third-party-goodies"
+    },
+    {
+      "label": "deckgl-typings",
+      "url": "https://github.com/danmarshall/deckgl-typings"
+    },
+    {
+      "label": "mapdeck",
+      "url": "https://symbolixau.github.io/mapdeck/articles/mapdeck.html"
+    },
+    {
+      "label": "vega-deck.gl",
+      "url": "https://github.com/microsoft/SandDance/tree/master/packages/vega-deck.gl"
+    },
+    {
+      "label": "Vega",
+      "url": "https://vega.github.io/"
+    },
+    {
+      "label": "earthengine-layers",
+      "url": "https://earthengine-layers.com/"
+    },
+    {
+      "label": "Google Earth Engine",
+      "url": "https://earthengine.google.com/"
+    },
+    {
+      "label": "deck.gl-native",
+      "url": "https://github.com/UnfoldedInc/deck.gl-native"
+    },
+    {
+      "label": "deck.gl-raster",
+      "url": "https://github.com/kylebarron/deck.gl-raster/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/visgl/deck.gl#learning-resources"
+    },
+    {
+      "label": "API documentation",
+      "url": "https://deck.gl/docs"
+    },
+    {
+      "label": "Website demos",
+      "url": "https://deck.gl/examples"
+    },
+    {
+      "label": "Interactive playground",
+      "url": "https://deck.gl/playground"
+    },
+    {
+      "label": "deck.gl Codepen demos",
+      "url": "https://codepen.io/vis-gl/"
+    },
+    {
+      "label": "deck.gl Observable demos",
+      "url": "https://beta.observablehq.com/@pessimistress"
+    },
+    {
+      "label": "vis.gl Medium blog",
+      "url": "https://medium.com/vis-gl"
+    },
+    {
+      "label": "deck.gl Slack workspace",
+      "url": "https://slack-invite.openjsf.org/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/visgl/deck.gl#contributing"
+    },
+    {
+      "label": "OpenJS Foundation",
+      "url": "https://openjsf.org/"
+    },
+    {
+      "label": "contribution guidelines",
+      "url": "https://github.com/visgl/deck.gl/blob/master/CONTRIBUTING.md"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/visgl/deck.gl#attributions"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/visgl/deck.gl#data-sources"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/visgl/deck.gl#the-deckgl-project-is-supported-by"
+    },
+    {
+      "label": "",
+      "url": "https://www.unfolded.ai"
+    },
+    {
+      "label": "",
+      "url": "https://www.foursquare.com"
+    },
+    {
+      "label": "",
+      "url": "https://www.carto.com"
+    },
+    {
+      "label": "",
+      "url": "https://www.mapbox.com"
+    },
+    {
+      "label": "",
+      "url": "https://www.uber.com"
+    },
+    {
+      "label": "",
+      "url": "https://www.browserstack.com/"
+    }
+  ],
+  "root_files": [
+    ".github",
+    "bindings",
+    "dev-docs",
+    "docs",
+    "examples",
+    "modules",
+    "scripts",
+    "showcases",
+    "test",
+    "website",
+    ".gitattributes",
+    ".gitignore",
+    ".markdownlintrc",
+    ".nvmrc",
+    ".nycrc",
+    ".ocularrc.js",
+    ".prettierignore",
+    ".prettierrc",
+    "AGENTS.md",
+    "CHANGELOG.md",
+    "CODE_OF_CONDUCT.md",
+    "CONTRIBUTING.md",
+    "Dockerfile",
+    "LICENSE",
+    "README.md",
+    "biome.jsonc",
+    "docker-compose.yml",
+    "lerna.json",
+    "package.json",
+    "tsconfig.json",
+    "vitest.config.ts",
+    "yarn.lock"
+  ],
+  "release_count": 313,
+  "status": "verified"
+}

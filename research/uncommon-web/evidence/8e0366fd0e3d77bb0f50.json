@@ -1,0 +1,55 @@
+{
+  "url": "https://github.com/dalzein/ghostdust",
+  "final_url": "https://github.com/dalzein/ghostdust",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:47:42.580115+00:00",
+  "stars": 0,
+  "forks": 0,
+  "description": "Turn text, SVGs, and images into interactive anti-gravity particles",
+  "homepage": "https://ghostdust.app",
+  "topics": [],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2026-08-23T14:10:23.000Z",
+  "branch": "main",
+  "commit": "cfef90204b14cc7663d655918ecab89d95122eec",
+  "readme": "ghostdust Turn text, SVGs, and images into interactive anti-gravity particles. Sweep your cursor through them to scatter the dust; springs pull every particle back home. Framework-agnostic WebGL core with a React wrapper. No dependencies. Install npm install ghostdust Vanilla import ghostdust from 'ghostdust'; // text, in any loaded font const gd = await ghostdust.fromText('#logo', 'ghostdust', { fontFamily: 'Google Sans', colors: ['#e8e6f0', '#a78bfa'], // one color = solid, more = gradient }); // an image: File, Blob, <img> element, or URL await ghostdust.fromImage(canvasEl, '/hero.png', { removeBackground: false, // keep opaque backgrounds as particles }); // raw SVG markup await ghostdust.fromSvg(canvasEl, '<svg>...</svg>', { intro: 'scatter' }); gd.count; // number of particles gd.engine; // the ParticleEngine, for live param tweaks gd.destroy(); // stop and release everything // swap content on a live instance without rebuilding it await gd.setText('boo', { colors: ['#22d3ee'] }); await gd.setImage(file, { removeBackground: false }); await gd.setSvg('<svg>...</svg>'); Each from* call takes a <canvas> element (or selector) plus options: Option Default targetParticles 14000 approximate particle count margin 0.72 fraction of the canvas the art may occupy intro 'scatter' ('bloom' for text) entrance: fly in from outside, or condense from a local haze (best for small canvases) physics engine defaults { radius, force, stiffness, damping, speedBoost } pointer true wire up cursor/touch tracking removeBackground true images only: drop pixels matching the estimated background color of opaque images; false keeps every visible pixel fontFamily, weight, colors system-ui, 600, white text only React import { ParticleText, ParticleImage } from 'ghostdust/react'; <ParticleText text=\"ghostdust\" fontFamily=\"Google Sans\" colors={['#e8e6f0', '#a78bfa']} physics={{ radius: 60, force: 900 }} className=\"wordmark\" // size it with CSS; any size works /> <ParticleImage src=\"/hero.png\" removeBackground={false} label=\"Hero artwork\" /> Props mirror the vanilla options. Components resize with their element (not just the window), and are accessible by default: pass label for an image description, or label={null} when a nearby heading already names the content. Components also take bleed (default 0.75): the transparent canvas overhangs the layout box by that fraction on every side, so particles pushed around by the cursor aren't clipped at the element's edges. It never affects layout or clicks — set bleed={0} for a tightly bounded canvas. Local development npm run dev # demo site npm run build:lib # build the package to dist/ npm run build # build the demo site to dist-site/",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://github.com/dalzein/ghostdust#ghostdust"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/dalzein/ghostdust#install"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/dalzein/ghostdust#vanilla"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/dalzein/ghostdust#react"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/dalzein/ghostdust#local-development"
+    }
+  ],
+  "root_files": [
+    ".github/workflows",
+    "public",
+    "src",
+    ".gitignore",
+    ".oxlintrc.json",
+    "LICENSE",
+    "README.md",
+    "index.html",
+    "package-lock.json",
+    "package.json",
+    "vite.config.js",
+    "vite.lib.config.js"
+  ],
+  "release_count": 0,
+  "status": "verified"
+}

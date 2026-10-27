@@ -1,0 +1,54 @@
+{
+  "url": "https://github.com/agoose77/svgbob-wasm",
+  "final_url": "https://github.com/agoose77/svgbob-wasm",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:47:32.047273+00:00",
+  "stars": 5,
+  "forks": 2,
+  "description": "WASM compilation target for svgbob",
+  "homepage": "",
+  "topics": [
+    "js",
+    "rust",
+    "svgbob",
+    "wasm"
+  ],
+  "license": "Apache-2.0",
+  "archived": false,
+  "created_at": "2019-03-13T20:34:58.000Z",
+  "branch": "master",
+  "commit": "47ef6a030381ce06ea9fafc92ee87743938cbb8e",
+  "readme": "svgbob-wasm A small WASM API to convert ASCII diagrams to SVG using svgbob. Building Install wasm-pack Run wasm-pack build Publish pkg Demo Build package cd to www Run npm install Run npm run start",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://github.com/agoose77/svgbob-wasm#svgbob-wasm"
+    },
+    {
+      "label": "svgbob",
+      "url": "https://github.com/ivanceras/svgbob"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/agoose77/svgbob-wasm#building"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/agoose77/svgbob-wasm#demo"
+    }
+  ],
+  "root_files": [
+    "src",
+    "www",
+    ".appveyor.yml",
+    ".cargo-ok",
+    ".gitignore",
+    ".travis.yml",
+    "Cargo.toml",
+    "LICENSE_APACHE",
+    "LICENSE_MIT",
+    "README.md"
+  ],
+  "release_count": 0,
+  "status": "verified"
+}

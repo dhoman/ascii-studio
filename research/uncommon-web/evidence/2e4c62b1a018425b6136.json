@@ -1,0 +1,74 @@
+{
+  "url": "https://github.com/ddoemonn/interior",
+  "final_url": "https://github.com/ddoemonn/interior",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:47:43.385310+00:00",
+  "stars": 1145,
+  "forks": 57,
+  "description": "micro-interactions for react, built for the half-second after a click",
+  "homepage": "https://interior.dev",
+  "topics": [
+    "animation",
+    "micro-interactions",
+    "motion",
+    "react",
+    "ui-components"
+  ],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2026-07-30T18:20:18.000Z",
+  "branch": "main",
+  "commit": "b6b272307464ba79db7183cee0515846d7eb1f9c",
+  "readme": "interior[.]dev Micro-interactions for React, built for the half-second after a click. Everybody builds these components. Almost nobody finishes them. The missing twenty percent is always the same three things: a jump, a restart, an animation that ignores the person watching it. This set ships that last twenty percent. How it works There is no package. Every component is one file in components/interior/ that you copy into your project. Each file exports two things: a headless hook (useX) that owns all the behaviour and touches zero class names a styled component (X) built on the hook, as an example you can keep or replace The behaviour lives entirely in the hook, so reskinning a component to your own design language costs nothing but classes. The only dependency is motion. The idea Trust is won in the half-second after a click, and lost in exactly the same place. A button that resizes when its label changes, a list that jumps as it loads, a drag that gets stuck because the tab lost focus: none of these are bugs anyone files, but every one of them teaches the person to stop believing the interface. So every component here is argued out to the frame. Nothing moves unless something happened; motion that models a physical process obeys that process instead of taste; every state the component can reach has its space reserved before it arrives; and every gesture knows all the ways it can be abandoned. The keyboard is not a fallback but a second complete implementation, and under prefers-reduced-motion the information still arrives; only the trip is skipped. Running the docs bun install bun run dev The design language behind every decision lives in DESIGN.md.",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://github.com/ddoemonn/interior#interiordev"
+    },
+    {
+      "label": "",
+      "url": "https://private-user-images.githubusercontent.com/109994179/629328301-73e360b2-5dd1-4e92-b806-5bf4e0c02930.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3OTI3MTMxNjIsIm5iZiI6MTc5MjcxMjg2MiwicGF0aCI6Ii8xMDk5OTQxNzkvNjI5MzI4MzAxLTczZTM2MGIyLTVkZDEtNGU5Mi1iODA2LTViZjRlMGMwMjkzMC5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjYxMDIyJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI2MTAyMlQyMzQ3NDJaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT00NTAzZWE1MzY3ODk2NTEyZDQ3YzMxY2MzZDYwNDM3MTQxZGRhYWRhNjVhMDU2ZmRmZmI5ZTZiMjQ4NGE2YWIxJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZyZXNwb25zZS1jb250ZW50LXR5cGU9aW1hZ2UlMkZwbmcifQ.dhBRxpP_J_0T9P31Li9i3ohwLf1oYnr8UGdsKJmxCfc"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/ddoemonn/interior#how-it-works"
+    },
+    {
+      "label": "components/interior/",
+      "url": "https://github.com/ddoemonn/interior/blob/main/components/interior"
+    },
+    {
+      "label": "motion",
+      "url": "https://motion.dev"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/ddoemonn/interior#the-idea"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/ddoemonn/interior#running-the-docs"
+    }
+  ],
+  "root_files": [
+    ".github",
+    "app",
+    "components",
+    "lib",
+    "public",
+    ".gitignore",
+    ".oxlintrc.json",
+    "CODE_OF_CONDUCT.md",
+    "CONTRIBUTING.md",
+    "LICENSE",
+    "README.md",
+    "bun.lock",
+    "eslint.config.mjs",
+    "next.config.ts",
+    "package.json",
+    "postcss.config.mjs",
+    "tsconfig.json"
+  ],
+  "release_count": 0,
+  "status": "verified"
+}

@@ -1,0 +1,271 @@
+{
+  "url": "https://github.com/swup/swup",
+  "final_url": "https://github.com/swup/swup",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:48:20.170183+00:00",
+  "stars": 5248,
+  "forks": 201,
+  "description": "Versatile and extensible page transition library for server-rendered websites 🎉",
+  "homepage": "https://swup.js.org",
+  "topics": [
+    "animation",
+    "javascript",
+    "page-transitions",
+    "router",
+    "transition",
+    "view-transitions"
+  ],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2017-10-09T23:19:14.000Z",
+  "branch": "main",
+  "commit": "774d0f9f1a125853afafb0413b167305067d3500",
+  "readme": "swup 4 is released 🎉 Check out the release notes and upgrade guide. Swup Versatile and extensible page transition library for server-rendered websites. Features • Demos • Plugins • Themes • Documentation • Discussions Overview Swup adds page transitions to server-rendered websites. It manages the complete page load lifecycle and smoothly animates between the current and next page. In addition, it offers many other quality-of-life improvements like caching, smart preloading, native browser history and enhanced accessibility. Make your site feel like a snappy single-page app — without any of the complexity. Features ✏️ Works out of the box with minimal markup ✨ Auto-detects CSS transitions & animations for perfect timing 🔗 Updates URLs and preserves native browser history 🏓 Manages the scroll position between pages and anchor links 🚀 Uses a cache to speed up subsequent page loads 📡 Offers hooks to customize and extend the page load lifecycle 🔌 Has a powerful plugin system and many official and third-party plugins 🎨 Provides ready-to-go themes to get started quickly Demos Explore our interactive demos to see swup in action. Documentation Visit our official documentation to learn more. Plugins Swup is small by design. Extended features can be added via plugins: Display a progress bar while loading Enable smooth scrolling between visits Update meta tags and stylesheets after page loads Add support for preloading pages in the background Improve accessibility for screen readers Perform your animations in JS instead of CSS transitions Animate form submissions Get help in debug mode Check out the list of official and third-party plugins. Themes Get started quickly with one of three official themes: fade, slide, and overlay. Examples Take a look at the interactive demos and sites using swup for more examples. Having trouble? If you're having trouble implementing swup, check out the Common Issues section of the docs, look at closed issues or create a new discussion. Want to Contribute? We're looking for maintainers! 👀 Become a sponsor on Open Collective or support development through GitHub sponsors. This project is tested with BrowserStack.",
+  "readme_links": [
+    {
+      "label": "release notes",
+      "url": "https://swup.js.org/announcements/swup-4/"
+    },
+    {
+      "label": "upgrade guide",
+      "url": "https://swup.js.org/getting-started/upgrading/"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/f528509fa00e18da4e98e877d5fe1ee9b8bf5ed8867bc415d79ef310a838684a/68747470733a2f2f737775702e6a732e6f72672f6173736574732f696d616765732f737775702d6c6f676f2e737667"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/swup"
+    },
+    {
+      "label": "",
+      "url": "https://bundlejs.com/?q=swup&treeshake=%5B%7B+default+%7D%5D"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/swup"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/swup/swup/actions/workflows/e2e-tests.yml"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/swup/swup/blob/main/LICENSE"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/swup/swup#swup"
+    },
+    {
+      "label": "Features",
+      "url": "https://github.com/swup/swup#features"
+    },
+    {
+      "label": "Demos",
+      "url": "https://github.com/swup/swup#demos"
+    },
+    {
+      "label": "Plugins",
+      "url": "https://github.com/swup/swup#plugins"
+    },
+    {
+      "label": "Themes",
+      "url": "https://github.com/swup/swup#themes"
+    },
+    {
+      "label": "Documentation",
+      "url": "https://swup.js.org/getting-started"
+    },
+    {
+      "label": "Discussions",
+      "url": "https://github.com/swup/swup/discussions"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/swup/swup#overview"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/swup/swup#features"
+    },
+    {
+      "label": "minimal markup",
+      "url": "https://swup.js.org/getting-started/example/"
+    },
+    {
+      "label": "CSS transitions",
+      "url": "https://swup.js.org/getting-started/how-it-works/"
+    },
+    {
+      "label": "browser history",
+      "url": "https://swup.js.org/options/#animatehistorybrowsing"
+    },
+    {
+      "label": "cache",
+      "url": "https://swup.js.org/api/cache/"
+    },
+    {
+      "label": "hooks",
+      "url": "https://swup.js.org/hooks/"
+    },
+    {
+      "label": "plugin system",
+      "url": "https://swup.js.org/plugins/"
+    },
+    {
+      "label": "themes",
+      "url": "https://swup.js.org/themes/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/swup/swup#demos"
+    },
+    {
+      "label": "interactive demos",
+      "url": "https://swup.js.org/getting-started/demos/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/swup/swup#documentation"
+    },
+    {
+      "label": "official documentation",
+      "url": "https://swup.js.org/getting-started"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/swup/swup#plugins"
+    },
+    {
+      "label": "plugins",
+      "url": "https://swup.js.org/plugins/"
+    },
+    {
+      "label": "progress bar",
+      "url": "https://swup.js.org/plugins/progress-plugin/"
+    },
+    {
+      "label": "smooth scrolling",
+      "url": "https://swup.js.org/plugins/scroll-plugin/"
+    },
+    {
+      "label": "meta tags and stylesheets",
+      "url": "https://swup.js.org/plugins/head-plugin/"
+    },
+    {
+      "label": "preloading pages",
+      "url": "https://swup.js.org/plugins/preload-plugin/"
+    },
+    {
+      "label": "accessibility",
+      "url": "https://swup.js.org/plugins/a11y-plugin/"
+    },
+    {
+      "label": "animations in JS",
+      "url": "https://swup.js.org/plugins/js-plugin/"
+    },
+    {
+      "label": "form submissions",
+      "url": "https://swup.js.org/plugins/forms-plugin/"
+    },
+    {
+      "label": "debug mode",
+      "url": "https://swup.js.org/plugins/debug-plugin/"
+    },
+    {
+      "label": "official",
+      "url": "https://swup.js.org/plugins/"
+    },
+    {
+      "label": "third-party",
+      "url": "https://swup.js.org/third-party-plugins/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/swup/swup#themes"
+    },
+    {
+      "label": "fade",
+      "url": "https://swup.js.org/themes/fade-theme/"
+    },
+    {
+      "label": "slide",
+      "url": "https://swup.js.org/themes/slide-theme/"
+    },
+    {
+      "label": "overlay",
+      "url": "https://swup.js.org/themes/overlay-theme/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/swup/swup#examples"
+    },
+    {
+      "label": "",
+      "url": "https://user-images.githubusercontent.com/9338324/49190360-50125480-f372-11e8-89e9-d2fb091a2240.gif"
+    },
+    {
+      "label": "interactive demos",
+      "url": "https://swup.js.org/getting-started/demos/"
+    },
+    {
+      "label": "sites using swup",
+      "url": "https://github.com/swup/swup/discussions/333"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/swup/swup#having-trouble"
+    },
+    {
+      "label": "Common Issues",
+      "url": "https://swup.js.org/getting-started/common-issues/"
+    },
+    {
+      "label": "closed issues",
+      "url": "https://github.com/swup/swup/issues?q=is%3Aissue+is%3Aclosed"
+    },
+    {
+      "label": "new discussion",
+      "url": "https://github.com/swup/swup/discussions/new"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/swup/swup#want-to-contribute"
+    },
+    {
+      "label": "We're looking for maintainers!",
+      "url": "https://github.com/swup/swup/discussions/424"
+    },
+    {
+      "label": "Open Collective",
+      "url": "https://opencollective.com/swup"
+    },
+    {
+      "label": "GitHub sponsors",
+      "url": "https://github.com/sponsors/gmrchk"
+    }
+  ],
+  "root_files": [
+    ".github/workflows",
+    ".husky",
+    "src",
+    "tests",
+    ".editorconfig",
+    ".eslintrc.compat.cjs",
+    ".gitignore",
+    ".nvmrc",
+    "AGENTS.md",
+    "CHANGELOG.md",
+    "LICENSE",
+    "README.md",
+    "eslint.config.js",
+    "package-lock.json",
+    "package.json",
+    "tsconfig.json",
+    "tsconfig.tests.json"
+  ],
+  "release_count": 51,
+  "status": "verified"
+}

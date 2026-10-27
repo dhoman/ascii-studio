@@ -1,0 +1,158 @@
+{
+  "url": "https://github.com/luv-jeri/cojeev-ui",
+  "final_url": "https://github.com/luv-jeri/cojeev-ui",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:47:59.832093+00:00",
+  "stars": 62,
+  "forks": 2,
+  "description": "Warm, expressive React components with considered motion. MIT licensed shadcn registry and Fumadocs documentation.",
+  "homepage": "https://cojeev.com/ui",
+  "topics": [
+    "animation",
+    "component-library",
+    "nextjs",
+    "open-source",
+    "react",
+    "shadcn-ui",
+    "tailwindcss",
+    "typescript",
+    "ui-components"
+  ],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2026-09-07T15:35:36.000Z",
+  "branch": "main",
+  "commit": "6f162ac9209eac6d94b4e74e7412c5e1ff2ffdb0",
+  "readme": "Artwork, not a screenshot — the seed mark, the pigment stage and a profile card drawn in the library's own tokens. The components themselves move: open the live gallery. 000h by Cojeev Expressive React components with organic shapes, purposeful motion, and source you can make your own. 173 installable components, MIT licensed and shadcn-compatible, with no dependency on the private Cojeev application. You add one entry at a time and the source lands in your project, where it is yours to change. Website · Browse components · Work with Sanjay Install one component You need React 19, TypeScript, Tailwind CSS v4 and an initialized shadcn project with an @/ alias. npx shadcn@latest add https://cojeev.com/ui/r/button.json import { Button } from \"@/components/ui/button\"; export function ContinueAction() { return <Button variant=\"accent\">Continue</Button>; } Icons install the same way, one typed component per Lucide name: npx shadcn@latest add https://cojeev.com/ui/r/icon-activity.json That adds components/icons/activity.tsx, exporting ActivityIcon on the Cojeev Icon with its motion presets, sizes and feedback. The added stylesheet carries both light and dark token values. Choose one with document.documentElement.dataset.mode = \"dark\". Installation details cover the @cojeev registry configuration, theming and the fresh-install check. Four to start with A still of the homepage gallery in this release, rendered from this repository's source. On the page itself each tile is the installed component, running. Component How it feels Slider The track answers the value. A rubber strand rests thick over a short span and stretches thin as you pull it wide. MotionDrawer Drag it shut from any non-interactive area — buttons and links never start one. Stacked panels keep half-filled fields while they wait behind. BentoGrid Rounded cards, or one continuous puzzle whose tiles share seeded edges. Change the seed and the seams redraw while every tile and label stays put. Command Type to narrow, arrow through, press to run — or open the same list over the page as a palette. Motion you can turn down Motion here is a setting, not a decoration. Nine motion characters change how a control answers a press. Motion Off and the system's reduced-motion preference are designed to leave an interface complete and still rather than broken, and decorative backgrounds and WebGL sculptures are built to stop work offscreen and fall back to a static rendering. Each component's guide records what it does and where that stops — read the guide beside the component you install. Developing this repository Node.js 22.12 or newer, as declared in engines. Continuous integration pins 22.22.0. npm ci npm run dev -- --port 4320 npm run lint && npm run typecheck && npm test && npm run build npm run check:examples # every copyable example still compiles npm run gate # the built catalogue at three widths, both themes Pull requests, and pushes to main, run lint, typecheck, the unit and worker test suites, then build a matched beta and production pair from the same commit, check each against its hosting content-security policy, run the browser gates, and verify a fresh consumer installation from each artifact. On main, beta deploys first and production promotes that same verified artifact after environment approval. CONTRIBUTING.md describes what a new component needs. Repository map: registry/cojeev/ holds the installable component source, app/ and components/ the documentation site, scripts/ and apps/gate/ the verification commands, tests/ their tests, and reference/ the supplied design system and upstream references. Additional guides cover installation, fonts, strict TypeScript integration and the design system. Licences Library code is MIT. The bundled DM Sans and Bricolage Grotesque keep their SIL Open Font Licences, and the icon geometry files keep the Lucide and Feather notices inside them — preserve those when you copy the source. The supplied design system stays in reference/cojeev-handoff-v4 for type, spacing, colour roles and shape language; production components import none of its CSS or JavaScript. Documentation is built with Fumadocs; registry tooling is shadcn. Built by Sanjay Kumar. Work with me · github.com/luv-jeri/cojeev-ui",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://github.com/luv-jeri/cojeev-ui/blob/main/docs/readme/000h-readme-banner.svg"
+    },
+    {
+      "label": "open the live gallery",
+      "url": "https://cojeev.com/ui/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/luv-jeri/cojeev-ui#000h-by-cojeev"
+    },
+    {
+      "label": "Website",
+      "url": "https://cojeev.com/ui/"
+    },
+    {
+      "label": "Browse components",
+      "url": "https://cojeev.com/ui/docs/"
+    },
+    {
+      "label": "Work with Sanjay",
+      "url": "https://cojeev.com/ui/work-with-me/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/luv-jeri/cojeev-ui#install-one-component"
+    },
+    {
+      "label": "Installation details",
+      "url": "https://github.com/luv-jeri/cojeev-ui/blob/main/docs/guides/INSTALLATION.md"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/luv-jeri/cojeev-ui#four-to-start-with"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/luv-jeri/cojeev-ui/blob/main/docs/readme/000h-readme-gallery.png"
+    },
+    {
+      "label": "Slider",
+      "url": "https://cojeev.com/ui/docs/slider/"
+    },
+    {
+      "label": "MotionDrawer",
+      "url": "https://cojeev.com/ui/docs/motion-drawer/"
+    },
+    {
+      "label": "BentoGrid",
+      "url": "https://cojeev.com/ui/docs/bento-grid/"
+    },
+    {
+      "label": "Command",
+      "url": "https://cojeev.com/ui/docs/command/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/luv-jeri/cojeev-ui#motion-you-can-turn-down"
+    },
+    {
+      "label": "CONTRIBUTING.md",
+      "url": "https://github.com/luv-jeri/cojeev-ui/blob/main/CONTRIBUTING.md"
+    },
+    {
+      "label": "Additional guides",
+      "url": "https://github.com/luv-jeri/cojeev-ui/blob/main/docs/README.md"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/luv-jeri/cojeev-ui#licences"
+    },
+    {
+      "label": "MIT",
+      "url": "https://github.com/luv-jeri/cojeev-ui/blob/main/LICENCE"
+    },
+    {
+      "label": "SIL Open Font Licences",
+      "url": "https://github.com/luv-jeri/cojeev-ui/blob/main/FONT-NOTICES.md"
+    },
+    {
+      "label": "Fumadocs",
+      "url": "https://github.com/fuma-nama/fumadocs"
+    },
+    {
+      "label": "shadcn",
+      "url": "https://github.com/shadcn-ui/ui"
+    },
+    {
+      "label": "Work with me",
+      "url": "https://cojeev.com/ui/work-with-me/"
+    },
+    {
+      "label": "github.com/luv-jeri/cojeev-ui",
+      "url": "https://github.com/luv-jeri/cojeev-ui"
+    }
+  ],
+  "root_files": [
+    ".github",
+    "app",
+    "apps",
+    "components",
+    "data",
+    "docs",
+    "lib",
+    "public",
+    "reference",
+    "registry/cojeev",
+    "scripts",
+    "tests",
+    "verification",
+    "workers",
+    ".env.example",
+    ".gitignore",
+    "CONTRIBUTING.md",
+    "FONT-NOTICES.md",
+    "INSTALLATION.md",
+    "LICENCE",
+    "README.md",
+    "components.json",
+    "eslint.config.mjs",
+    "next.config.ts",
+    "package-lock.json",
+    "package.json",
+    "postcss.config.mjs",
+    "registry.json",
+    "tsconfig.json"
+  ],
+  "release_count": 2,
+  "status": "verified"
+}

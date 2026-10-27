@@ -1,0 +1,158 @@
+{
+  "url": "https://github.com/gkurt/tegaki",
+  "final_url": "https://github.com/gkurt/tegaki",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:47:49.234515+00:00",
+  "stars": 3265,
+  "forks": 123,
+  "description": "Handwriting animation for the web. Supports any font or text.",
+  "homepage": "https://tegaki.ink",
+  "topics": [
+    "animation",
+    "calligraphy",
+    "cursive",
+    "font",
+    "handwriting",
+    "react",
+    "stroke-order",
+    "text-animation"
+  ],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2026-03-28T18:58:26.000Z",
+  "branch": "main",
+  "commit": "32654a4cfb0fa6a2873264cf693316acd59d1627",
+  "readme": "Tegaki Handwriting animation for any font Tegaki (手書き) turns any font into animated handwriting. No manual path authoring. No native dependencies. Just pick a font. Website & docs · Try it in the studio Quick Start 1. Install npm install tegaki 2. Use (React example) import { TegakiRenderer } from 'tegaki'; import caveat from 'tegaki/fonts/caveat'; function App() { return ( <TegakiRenderer font={caveat} style={{ fontSize: '48px' }}> Hello World </TegakiRenderer> ); } That's it. The text draws itself stroke by stroke with natural timing. Command Line Don't want to wire up a component? Generate an animated handwriting SVG straight from your terminal — nothing to install: npx tegaki \"Tegaki is awesome\" This writes a self-drawing, looping tegaki-is-awesome.svg — drop it into a README, a slide, or any page. Pick a font, mode, size, or color: npx tegaki \"Hello World\" --font tangerine --mode once -o hello.svg npx tegaki \"ABC\" --stagger 80% --size 140 --color \"#222\" npx tegaki \"مرحبا بالعالم\" --font amiri --stroke-easing ease-in-out-cubic npx tegaki \"Glow\" --plugins '[[\"glow\", {\"radius\": 0.12, \"color\": \"#f0a\"}], \"taper\"]' --mode is loop (repeats forever, the default), once (draws itself a single time), or static (finished artwork). The CLI shapes text with harfbuzz (bundled as WASM) the way the renderer does, so ligatures, Arabic joining, Devanagari and right-to-left text come out right, and it clips strokes to the letter outlines as the studio does. Run npx tegaki --help for every option and --list-fonts for the bundled fonts. The CLI emits SVG only — for PNG, GIF, or WebM use the interactive studio. Framework Support Tegaki works with all major frameworks: import { TegakiRenderer } from 'tegaki/react'; // React import { TegakiRenderer } from 'tegaki/svelte'; // Svelte import { TegakiRenderer } from 'tegaki/vue'; // Vue import { TegakiRenderer } from 'tegaki/solid'; // SolidJS --- import TegakiRenderer from 'tegaki/astro'; // Astro --- import { TegakiEngine } from 'tegaki/core'; // Vanilla JS import { registerTegakiElement } from 'tegaki/wc'; // Web Components Built-in Fonts Several handwriting fonts are bundled and ready to use: Caveat — tegaki/fonts/caveat (Latin) Italianno — tegaki/fonts/italianno (Latin) Tangerine — tegaki/fonts/tangerine (Latin) Parisienne — tegaki/fonts/parisienne (Latin) Suez One — tegaki/fonts/suez-one (Hebrew + Latin) Amiri — tegaki/fonts/amiri (Arabic + Latin) Tillana — tegaki/fonts/tillana (Devanagari + Latin) Klee One — tegaki/fonts/klee-one (Japanese: kana + Kyōiku grade 1–2 kanji + Latin) Nanum Pen Script — tegaki/fonts/nanum-pen-script (Korean: Hangul syllables + jamo + Latin) Atma — tegaki/fonts/atma (Bengali + Latin) LXGW WenKai — tegaki/fonts/lxgw-wenkai (Simplified Chinese: the 1000 most frequent hanzi + Latin) Hershey Script — tegaki/fonts/hershey-script (Latin, single-line: a plotter font drawn in its own pen strokes) EMS Allure — tegaki/fonts/ems-allure (Latin, single-line: Evil Mad Scientist's stroke version of Allura) For other fonts, use the interactive studio to create a custom bundle. Documentation Visit tegaki.ink for full documentation: Getting Started Framework Guides (React, Svelte, Vue, SolidJS, Astro, Web Components, Vanilla) Generating Fonts API Reference Integrations Sli.dev - Create presentations using markdown. See Tegaki integration example Remotion - Create videos programmatically with React. See Tegaki integration example License MIT",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://github.com/gkurt/tegaki#tegaki"
+    },
+    {
+      "label": "Website & docs",
+      "url": "https://tegaki.ink/"
+    },
+    {
+      "label": "Try it in the studio",
+      "url": "https://tegaki.ink/studio/"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/tegaki"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/gkurt/tegaki/blob/main/LICENSE"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/gkurt/tegaki/blob/main/media/hello-world.svg"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/gkurt/tegaki#quick-start"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/gkurt/tegaki#command-line"
+    },
+    {
+      "label": "interactive studio",
+      "url": "https://tegaki.ink/studio/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/gkurt/tegaki#framework-support"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/gkurt/tegaki#built-in-fonts"
+    },
+    {
+      "label": "interactive studio",
+      "url": "https://tegaki.ink/studio/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/gkurt/tegaki#documentation"
+    },
+    {
+      "label": "tegaki.ink",
+      "url": "https://tegaki.ink"
+    },
+    {
+      "label": "Getting Started",
+      "url": "https://tegaki.ink/getting-started/"
+    },
+    {
+      "label": "Framework Guides",
+      "url": "https://tegaki.ink/frameworks/react/"
+    },
+    {
+      "label": "Generating Fonts",
+      "url": "https://tegaki.ink/guides/generating/"
+    },
+    {
+      "label": "API Reference",
+      "url": "https://tegaki.ink/api/renderer/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/gkurt/tegaki#integrations"
+    },
+    {
+      "label": "Sli.dev",
+      "url": "https://sli.dev/"
+    },
+    {
+      "label": "See Tegaki integration example",
+      "url": "https://andreas-taranetz.github.io/slidev-addon-animated-text/"
+    },
+    {
+      "label": "Remotion",
+      "url": "https://www.remotion.dev/"
+    },
+    {
+      "label": "See Tegaki integration example",
+      "url": "https://github.com/gkurt/tegaki/blob/gokhan/support-font-features/examples/remotion/src/Root.tsx"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/gkurt/tegaki#license"
+    },
+    {
+      "label": "MIT",
+      "url": "https://github.com/gkurt/tegaki/blob/main/LICENSE"
+    }
+  ],
+  "root_files": [
+    ".agents/skills",
+    ".claude",
+    ".github",
+    ".husky",
+    ".tegami",
+    ".vscode",
+    "e2e/examples",
+    "examples",
+    "media",
+    "packages",
+    "scripts",
+    ".editorconfig",
+    ".gitignore",
+    "AGENTS.md",
+    "CHANGELOG.md",
+    "CLAUDE.md",
+    "CONTRIBUTING.md",
+    "LICENSE",
+    "README.md",
+    "biome.jsonc",
+    "bun.lock",
+    "bunfig.toml",
+    "package.json",
+    "skills-lock.json",
+    "tegaki.code-workspace",
+    "tsconfig.json"
+  ],
+  "release_count": 32,
+  "status": "verified"
+}

@@ -1,0 +1,250 @@
+{
+  "url": "https://github.com/excaliburjs/Excalibur",
+  "final_url": "https://github.com/excaliburjs/Excalibur",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:47:47.044103+00:00",
+  "stars": 2358,
+  "forks": 226,
+  "description": "🎮 Your friendly TypeScript 2D game engine for the web 🗡️",
+  "homepage": "https://excaliburjs.com",
+  "topics": [
+    "excalibur",
+    "excaliburjs",
+    "game-development",
+    "game-engine",
+    "game-framework",
+    "gamedev",
+    "games",
+    "html5-canvas",
+    "typescript"
+  ],
+  "license": "BSD-2-Clause",
+  "archived": false,
+  "created_at": "2013-01-05T17:05:56.000Z",
+  "branch": "main",
+  "commit": "004b64cf8a1b7997484be97a67edae71c33a4a8b",
+  "readme": "Excalibur is a free game engine written in TypeScript for making 2D games in HTML5 canvas. Our goal is to make it easier for you to create 2D HTML/JS games, whether you're new to game development or you're an experienced game developer. We take care of all of the boilerplate engine code, cross-platform targeting (using browserstack 😎), and more! Use as much or as little as you need! Excalibur is an open source project licensed under the 2-clause BSD license (this means you can use it in commercial projects!). It's free and always will be. We welcome any feedback or contributions! If you make something with Excalibur, please let us know! Get Started Our user documentation is at https://excaliburjs.com/docs (and you can contribute to the docs at https://github.com/excaliburjs/Excalibur/tree/main/site) Follow our Installation guide to learn how to install Excalibur. Follow our Getting Started guide if you're looking to get started. Learn what Features are available for you to leverage in your games. View the 1.0 Release roadmap to see what's coming next. ❗ Note: Excalibur is still in version 0.x, which means this project and its associated plugins may be a little rough around the edges. We try to minimize API changes, but breaking changes will occur in new released versions. Excalibur is a labor of love and the product of many hours of spare time. Thanks for checking it out! API Reference Visit the API Reference section for fully-annotated documentation of the API. Questions ❓ Ask us anything in the GitHub Discussions area. 🐛 If you find a bug, report it on the GitHub issues page (please review our guidelines for reporting bugs). 📣 You can also follow us on Twitter @excaliburjs or read the blog. Samples Compiled examples can be found in the Excalibur Samples collection. Contributing Please read our Contributing Guidelines and our Code of Conduct. Whether you've spotted a bug, have a question, or think of a new feature, we thank you for your help! Writing Documentation We love when people help improve our documentation. You can contribute to the docs in this repo under /site Environment Setup The Excalibur.js team primarily uses Visual Studio Code as a platform agnostic editor to allow the widest contributions possible. However, you can always use your own preferred editor. Dev Container Support In supported editors, you may be prompted to Open in a Dev Container. This is a great way to contribute if you don't want to install Playwright and its dependencies on your machine and keep everything isolated. Dev Containers require Docker (or Podman) to be installed and should work across all platforms. Supported Editors Visual Studio documentation Web Storm documentation Testing Excalibur is committed to supporting the latest 2 versions of popular desktop and mobile browsers. We leverage browserstack automated testing to ensure that Excalibur is automatically tested as thoroughly as possible on all our supported platforms. Prerequisites Required: Node.js LTS Version Recommended: ESLint plugin for VS Code After cloning the repository, run: npm install npx playwright install --with-deps TipIf you are using a Dev Container, this is handled for you automatically! The --with-deps flag installs system dependencies, which may be needed depending on your OS. You can then run the npm tasks for various purposes: # Run compilation, linting, and all unit & visual tests # Recommend to do this before finalizing pull requests npm run all # Run engine core compilation only # Useful for quick checks to ensure everything compiles npm run build # Run engine tests only (does not run compile task) # Useful to run tests ad-hoc npm test npm run test # Start Storybook-based sandbox # Used for creating interactive visual tests and examples for docs npm run sandbox # Build a nuget package and specify a version npm run nuget -- 1.1.1 License Excalibur is open source and operates under the 2-clause BSD license: BSD 2-Clause License Copyright (c) 2014, Erik Onarheim All rights reserved. Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met: * Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer. * Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution. THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \"AS IS\" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://github.com/excaliburjs/Excalibur/blob/main/assets/logo.png?raw=true"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/excaliburjs/Excalibur/actions/workflows/build.yml"
+    },
+    {
+      "label": "",
+      "url": "https://coveralls.io/github/excaliburjs/Excalibur?branch=main"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/excalibur"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/excalibur"
+    },
+    {
+      "label": "",
+      "url": "https://www.nuget.org/packages/Excalibur/"
+    },
+    {
+      "label": "",
+      "url": "https://discord.gg/W6zUd4tTY3"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/excaliburjs/Excalibur/blob/main/assets/homepage-xp.png"
+    },
+    {
+      "label": "browserstack",
+      "url": "http://browserstack.com/"
+    },
+    {
+      "label": "let us know",
+      "url": "https://github.com/excaliburjs/Excalibur/discussions?discussions_q=category%3A%22Show+and+tell%22"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/excaliburjs/Excalibur#get-started"
+    },
+    {
+      "label": "https://excaliburjs.com/docs",
+      "url": "https://excaliburjs.com/docs"
+    },
+    {
+      "label": "https://github.com/excaliburjs/Excalibur/tree/main/site",
+      "url": "https://github.com/excaliburjs/Excalibur/tree/main/site"
+    },
+    {
+      "label": "Installation",
+      "url": "https://excaliburjs.com/docs/installation"
+    },
+    {
+      "label": "Getting Started",
+      "url": "https://excaliburjs.com/docs/getting-started"
+    },
+    {
+      "label": "Features",
+      "url": "https://excaliburjs.com/docs"
+    },
+    {
+      "label": "1.0 Release roadmap",
+      "url": "https://github.com/excaliburjs/Excalibur/issues/1161"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/excaliburjs/Excalibur#api-reference"
+    },
+    {
+      "label": "API Reference",
+      "url": "https://excaliburjs.com/docs/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/excaliburjs/Excalibur#questions"
+    },
+    {
+      "label": "GitHub Discussions area",
+      "url": "https://github.com/excaliburjs/Excalibur/discussions"
+    },
+    {
+      "label": "GitHub issues page",
+      "url": "https://github.com/excaliburjs/Excalibur/issues"
+    },
+    {
+      "label": "guidelines for reporting bugs",
+      "url": "https://github.com/excaliburjs/Excalibur/blob/main/.github/CONTRIBUTING.md#reporting-bugs"
+    },
+    {
+      "label": "@excaliburjs",
+      "url": "http://twitter.com/excaliburjs"
+    },
+    {
+      "label": "read the blog",
+      "url": "https://excaliburjs.com/blog"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/excaliburjs/Excalibur#samples"
+    },
+    {
+      "label": "in the Excalibur Samples collection",
+      "url": "http://excaliburjs.com/samples/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/excaliburjs/Excalibur#contributing"
+    },
+    {
+      "label": "Contributing Guidelines",
+      "url": "https://github.com/excaliburjs/Excalibur/blob/main/.github/CONTRIBUTING.md"
+    },
+    {
+      "label": "Code of Conduct",
+      "url": "https://github.com/excaliburjs/Excalibur/blob/main/.github/CODE_OF_CONDUCT.md"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/excaliburjs/Excalibur#writing-documentation"
+    },
+    {
+      "label": "/site",
+      "url": "https://github.com/excaliburjs/Excalibur/tree/main/site"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/excaliburjs/Excalibur#environment-setup"
+    },
+    {
+      "label": "Visual Studio Code",
+      "url": "http://code.visualstudio.com"
+    },
+    {
+      "label": "Docker",
+      "url": "https://docs.docker.com/desktop/"
+    },
+    {
+      "label": "Podman",
+      "url": "https://podman.io/"
+    },
+    {
+      "label": "Visual Studio documentation",
+      "url": "https://code.visualstudio.com/docs/devcontainers/containers"
+    },
+    {
+      "label": "Web Storm documentation",
+      "url": "https://www.jetbrains.com/help/webstorm/connect-to-devcontainer.html"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/excaliburjs/Excalibur#testing"
+    },
+    {
+      "label": "",
+      "url": "http://browserstack.com/"
+    },
+    {
+      "label": "browserstack",
+      "url": "http://browserstack.com/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/excaliburjs/Excalibur#prerequisites"
+    },
+    {
+      "label": "Node.js",
+      "url": "https://nodejs.org/"
+    },
+    {
+      "label": "ESLint plugin for VS Code",
+      "url": "https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/excaliburjs/Excalibur#license"
+    }
+  ],
+  "root_files": [
+    ".devcontainer",
+    ".github",
+    ".husky",
+    ".storybook",
+    ".vscode",
+    "assets",
+    "playground",
+    "sandbox",
+    "scripts",
+    "site",
+    "src",
+    ".babelrc.json",
+    ".git-blame-ignore-revs",
+    ".gitattributes",
+    ".gitignore",
+    ".gitmodules",
+    ".npmignore",
+    ".npmrc",
+    ".nvmrc",
+    ".prettierignore",
+    ".prettierrc",
+    "CHANGELOG.md",
+    "Excalibur.nuspec",
+    "LICENSE.md",
+    "README.md",
+    "SECURITY.md",
+    "STYLEGUIDE.md",
+    "eslint.config.mjs",
+    "karma.conf.browsers.js",
+    "package-lock.json",
+    "package.json",
+    "renovate.json",
+    "tsconfig.json",
+    "version.js",
+    "vite.config.common.js",
+    "vite.config.ts",
+    "vitest.config.ts"
+  ],
+  "release_count": 54,
+  "status": "verified"
+}

@@ -1,0 +1,92 @@
+{
+  "url": "https://github.com/glen-cheney/Shuffle",
+  "final_url": "https://github.com/glen-cheney/Shuffle",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:47:49.479010+00:00",
+  "stars": 2374,
+  "forks": 271,
+  "description": "Categorize, sort, and filter a responsive grid of items",
+  "homepage": "https://shuffle.js.org",
+  "topics": [
+    "filter",
+    "grid",
+    "layout",
+    "masonry",
+    "responsive",
+    "sort"
+  ],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2011-12-24T18:33:07.000Z",
+  "branch": "main",
+  "commit": "ca8806cb4ab64516f12afeea171d32227ea5fe13",
+  "readme": "Shuffle Categorize, sort, and filter a responsive grid of items. npm install shufflejs Docs and Demos All found here Usage import Shuffle from 'shufflejs'; const shuffleInstance = new Shuffle(document.getElementById('grid'), { itemSelector: '.js-item', sizer: '.js-shuffle-sizer', }); Inspiration This project was inspired by Isotope and Packery.",
+  "readme_links": [
+    {
+      "label": "Shuffle",
+      "url": "https://shuffle.js.org"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/glen-cheney/Shuffle/actions/workflows/build.yml/badge.svg?branch=main"
+    },
+    {
+      "label": "",
+      "url": "https://docs.github.com/en/code-security/supply-chain-security/managing-vulnerabilities-in-your-projects-dependencies/configuring-dependabot-security-updates"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/shufflejs"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/glen-cheney/Shuffle#shuffle---"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/glen-cheney/Shuffle#docs-and-demos"
+    },
+    {
+      "label": "All found here",
+      "url": "https://shuffle.js.org"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/glen-cheney/Shuffle#usage"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/glen-cheney/Shuffle#inspiration"
+    },
+    {
+      "label": "Isotope",
+      "url": "https://isotope.metafizzy.co/"
+    },
+    {
+      "label": "Packery",
+      "url": "https://packery.metafizzy.co/"
+    }
+  ],
+  "root_files": [
+    ".github",
+    "apps/website",
+    "packages/shuffle",
+    ".browserslistrc",
+    ".gitignore",
+    ".node-version",
+    ".oxlintrc.json",
+    ".prettierignore",
+    ".yarnrc.yml",
+    "AGENTS.md",
+    "CONTRIBUTING.md",
+    "README.md",
+    "package.json",
+    "prettier.config.js",
+    "tsconfig.json",
+    "turbo.json",
+    "vitest.config.ts",
+    "yarn.lock"
+  ],
+  "release_count": 29,
+  "status": "verified"
+}

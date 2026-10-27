@@ -1,0 +1,117 @@
+{
+  "url": "https://github.com/boringdesigners/boring-avatars",
+  "final_url": "https://github.com/boringdesigners/boring-avatars",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:47:37.573351+00:00",
+  "stars": 6467,
+  "forks": 214,
+  "description": "Boring avatars is an open source React library that generates custom, SVG-based avatars from any username and color palette.",
+  "homepage": "https://boringavatars.com",
+  "topics": [
+    "avatar",
+    "avatar-component",
+    "avatar-generator",
+    "avatar-placeholder",
+    "avatar-service",
+    "avatars-constructor",
+    "beautiful-avatars",
+    "javascript",
+    "open-source",
+    "random-avatars",
+    "react",
+    "svg"
+  ],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2020-12-23T13:47:36.000Z",
+  "branch": "master",
+  "commit": "d0ff2582a8921b643a89de4a4912be28938a828b",
+  "readme": "Boring avatars Boring avatars is an open source React library and a subscription-based service that generates unique SVG-based user profile avatars from usernames, emails or any random strings. Install npm install boring-avatars Usage import Avatar from 'boring-avatars'; <Avatar name=\"Maria Mitchell\" />; Props Prop Type Default size number or string 40px square boolean false title boolean false name string Clara Barton variant oneOf: marble, beam, pixel,sunset, ring, bauhaus marble colors array ['#92A1C6', '#146A7C', '#F0AB3D', '#C271B4', '#C20D90'] Name The name prop is used to generate the avatar. It can be the username, email or any random string. <Avatar name=\"Maria Mitchell\"/> Variant The variant prop is used to change the theme of the avatar. The available variants are: marble, beam, pixel, sunset, ring and bauhaus. <Avatar name=\"Alice Paul\" variant=\"beam\"/> Size The size prop is used to change the size of the avatar. <Avatar name=\"Ada Lovelace\" size={88}/> Colors The colors prop is used to change the color palette of the avatar. <Avatar name=\"Grace Hopper\" colors={[\"#fb6900\", \"#f63700\", \"#004853\", \"#007e80\", \"#00b9bd\"]}/> Square The square prop is used to make the avatar square. <Avatar name=\"Helen Keller\" square/> API service If you need to generate avatars on a large scale or if you just want to avoid using the React library, we offer a subscription plan for our API service. Gumroad subscription. Sponsors Boring avatars is generously sponsored by TestMu AI. TestMu AI (formerly LambdaTest) is the world's first full-stack agentic AI quality engineering platform. Autonomous AI agents plan, author, execute, analyze, and optimize tests with humans in the loop, across 3,000+ browser/OS combinations and 10,000+ real devices. Trusted by 18,000+ enterprises including Microsoft, OpenAI, NVIDIA, and Vimeo. Explore the platform: https://www.testmuai.com",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://github.com/boringdesigners/boring-avatars#boring-avatars"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/boring-avatars"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/boringdesigners/boring-avatars#install"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/boringdesigners/boring-avatars#usage"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/boringdesigners/boring-avatars#props"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/boringdesigners/boring-avatars#name"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/boringdesigners/boring-avatars#variant"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/boringdesigners/boring-avatars#size"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/boringdesigners/boring-avatars#colors"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/boringdesigners/boring-avatars#square"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/boringdesigners/boring-avatars#api-service"
+    },
+    {
+      "label": "Gumroad subscription",
+      "url": "https://boringdesigners.gumroad.com/l/boring-avatars-service"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/boringdesigners/boring-avatars#sponsors"
+    },
+    {
+      "label": "",
+      "url": "https://www.testmuai.com"
+    },
+    {
+      "label": "TestMu AI",
+      "url": "https://www.testmuai.com"
+    },
+    {
+      "label": "https://www.testmuai.com",
+      "url": "https://www.testmuai.com"
+    }
+  ],
+  "root_files": [
+    ".github",
+    "assets",
+    "public",
+    "src",
+    ".gitignore",
+    ".prettierrc",
+    "LICENSE",
+    "README.md",
+    "eslint.config.js",
+    "index.html",
+    "package-lock.json",
+    "package.json",
+    "tsconfig.app.json",
+    "tsconfig.json",
+    "tsconfig.lib.json",
+    "tsconfig.node.json",
+    "vite.config.ts"
+  ],
+  "release_count": 13,
+  "status": "verified"
+}

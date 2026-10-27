@@ -1,0 +1,150 @@
+{
+  "url": "https://github.com/Birch-san/box2d-wasm",
+  "final_url": "https://github.com/Birch-san/box2d-wasm",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:45:57.257772+00:00",
+  "stars": 306,
+  "forks": 24,
+  "description": "Box2D physics engine compiled to WebAssembly. Supports TypeScript and ES modules.",
+  "homepage": "",
+  "topics": [
+    "box2d",
+    "physics",
+    "webassembly"
+  ],
+  "license": "",
+  "archived": false,
+  "created_at": "2020-10-07T10:11:41.000Z",
+  "branch": "master",
+  "commit": "826c74e652fcbdd2e320f65d650913caec554e4c",
+  "readme": "box2d-wasm Box2D v2.4 compiled to WebAssembly. For Box2D v3.0 see this repository Showcase Shapes and rope Lunar Survey Demonstrates custom gravity Fluid simulation Uses liquidfun release High-performance main loop WebGL rendering Usage Install the box2d-wasm npm package npm i box2d-wasm Then check out the documentation. Alternative distributions For additional functionality: fluid simulation particle simulation soft-body collisions You can install from the liquidfun branch like so: npm i \"box2d-wasm@npm:liquidfun-wasm@6.0.4-lf.1\" License Zlib-licensed. Links against MIT-licensed code from Erin Catto's Box2D. Compiles Zlib-licensed code from Alon Zakai's box2d.js. Project Compared to the existing box2d.js package: box2d-wasm aims to support Box2D v2.4.0+ and TypeScript. Comparison with box2d.js Project aims Developing in this monorepo See README.dev.md.",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://github.com/Birch-san/box2d-wasm#box2d-wasm"
+    },
+    {
+      "label": "",
+      "url": "https://badge.fury.io/js/box2d-wasm"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/Birch-san/box2d-wasm/blob/master/LICENSE.zlib.txt"
+    },
+    {
+      "label": "",
+      "url": "https://twitter.com/intent/follow?screen_name=Birchlabs"
+    },
+    {
+      "label": "this repository",
+      "url": "https://github.com/Birch-san/box2d3-wasm"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/6b04cd39b3c2642f92ffbdd9ab74668d8231d6426f6797a7e70f1a9047912abf/68747470733a2f2f62697263686c6162732e636f2e756b2f626f7832642d7761736d2f776562706167652d35306670732e676966"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/Birch-san/box2d-wasm#showcase"
+    },
+    {
+      "label": "Shapes and rope",
+      "url": "https://birchlabs.co.uk/box2d-wasm/demo/"
+    },
+    {
+      "label": "Lunar Survey",
+      "url": "https://birchlabs.co.uk/lunar-survey/"
+    },
+    {
+      "label": "Fluid simulation",
+      "url": "https://birchlabs.co.uk/liquidfun-wasm/"
+    },
+    {
+      "label": "liquidfun",
+      "url": "https://github.com/Birch-san/box2d-wasm/releases/tag/liquidfun-v6.0.4-lf.1"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/Birch-san/box2d-wasm#usage"
+    },
+    {
+      "label": "box2d-wasm npm package",
+      "url": "https://www.npmjs.com/package/box2d-wasm"
+    },
+    {
+      "label": "documentation",
+      "url": "https://github.com/Birch-san/box2d-wasm/blob/master/docs"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/Birch-san/box2d-wasm#alternative-distributions"
+    },
+    {
+      "label": "liquidfun",
+      "url": "https://github.com/Birch-san/box2d-wasm/releases/tag/liquidfun-v6.0.4-lf.1"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/Birch-san/box2d-wasm#license"
+    },
+    {
+      "label": "Zlib-licensed",
+      "url": "https://github.com/Birch-san/box2d-wasm/blob/master/LICENSE.zlib.txt"
+    },
+    {
+      "label": "Box2D",
+      "url": "https://github.com/erincatto/box2d"
+    },
+    {
+      "label": "box2d.js",
+      "url": "https://github.com/kripken/box2d.js"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/Birch-san/box2d-wasm#project"
+    },
+    {
+      "label": "box2d.js",
+      "url": "https://github.com/kripken/box2d.js/"
+    },
+    {
+      "label": "Comparison with box2d.js",
+      "url": "https://github.com/Birch-san/box2d-wasm/blob/master/README.comparison-with-box2d-js.md"
+    },
+    {
+      "label": "Project aims",
+      "url": "https://github.com/Birch-san/box2d-wasm/blob/master/README.project-aims.md"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/Birch-san/box2d-wasm#developing-in-this-monorepo"
+    },
+    {
+      "label": "README.dev.md",
+      "url": "https://github.com/Birch-san/box2d-wasm/blob/master/README.dev.md"
+    }
+  ],
+  "root_files": [
+    ".vscode",
+    "box2d",
+    "box2d-wasm",
+    "demo",
+    "docs",
+    "integration-test-backend",
+    "integration-test",
+    "webidl-to-ts",
+    ".gitignore",
+    ".gitmodules",
+    "CHANGELOG.md",
+    "LICENSE.zlib.txt",
+    "README.comparison-with-box2d-js.md",
+    "README.dev.md",
+    "README.md",
+    "README.project-aims.md",
+    "package.json",
+    "pnpm-lock.yaml",
+    "pnpm-workspace.yaml"
+  ],
+  "release_count": 28,
+  "status": "verified"
+}

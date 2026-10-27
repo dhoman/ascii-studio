@@ -1,0 +1,185 @@
+{
+  "url": "https://github.com/williamngan/pts",
+  "final_url": "https://github.com/williamngan/pts",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:48:25.452831+00:00",
+  "stars": 5355,
+  "forks": 183,
+  "description": "A library for visualization and creative-coding",
+  "homepage": "https://ptsjs.org",
+  "topics": [
+    "art",
+    "canvas",
+    "creative-coding",
+    "design",
+    "generative",
+    "generative-art",
+    "graphic-design",
+    "graphics",
+    "linear-algebra",
+    "pts",
+    "sound",
+    "svg",
+    "typescript",
+    "vector",
+    "visualization"
+  ],
+  "license": "Apache-2.0",
+  "archived": false,
+  "created_at": "2017-03-24T14:09:43.000Z",
+  "branch": "master",
+  "commit": "c9f3d9ba08ea1a2285e178f0d0a4d8b159b8e2c2",
+  "readme": "Pts Pts is a TypeScript and JavaScript library for visualization and creative coding. Get started at ptsjs.org. Please try it, file issues, and send feedback to @williamngan. Usage Browser script Download pts.js or pts.min.js from the dist directory, or use a CDN such as cdnjs, jsDelivr, or unpkg. <script src=\"path/to/pts.min.js\"></script> The classic script exposes the library as globalThis.Pts. Package Install the package: npm install pts Pts is ESM-first and also provides a CommonJS compatibility entry. import { CanvasSpace, Group, Line, Pt } from \"pts\"; const { CanvasSpace, Group, Line, Pt } = require(\"pts\"); Starter projects and integrations: pts-starter-kit pts-react-example react-pts-canvas Read the guides and explore the demos. Development The maintained build environment is Node 24.18 or newer in the Node 24 line. The published library is also exercised on current Node 20 and 22 releases. pnpm install --frozen-lockfile pnpm exec playwright install chromium pnpm check Useful individual commands include: pnpm build pnpm typecheck pnpm test pnpm test:browser pnpm test:integrations pnpm check:package pnpm format pnpm format:watch pnpm check validates formatting, linting, types, unit tests, deterministic documentation, documentation and bundle behavior in a real browser, reproducible artifacts, the packed package, ESM and CommonJS resolution, declarations, and tree-shaking. Its packed-package integration suite also builds and runs the maintained React, Vue, skia-canvas, and single-file vanilla fixtures in test/integrations. Prettier defines the repository's formatting rules. Run pnpm format once or keep pnpm format:watch running to reformat maintained source files as they change. The recommended VS Code extension and workspace settings also enable Prettier on save, while pnpm check rejects unformatted changes in CI. Generate documentation The documentation generator uses TypeDoc's Node API to rebuild the custom static documentation JSON from explicit source entry points. It also generates docs.md, guide.md, and llms.txt for agents and other clients that cannot navigate the documentation SPA: pnpm run docs Generated documentation is checked in. pnpm check:docs regenerates it in memory, reports stale or extra files, and exercises navigation, search, anchors, and responsive layouts in Chromium. Contributing Issues and small pull requests are welcome. For larger changes, please start a discussion with @williamngan. License Apache License 2.0. See LICENSE. Copyright © 2017-present William Ngan and contributors.",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://github.com/williamngan/pts#pts"
+    },
+    {
+      "label": "",
+      "url": "https://raw.githubusercontent.com/williamngan/pts/master/assets/pts-gif-10.gif"
+    },
+    {
+      "label": "ptsjs.org",
+      "url": "https://ptsjs.org"
+    },
+    {
+      "label": "file issues",
+      "url": "https://github.com/williamngan/pts/issues"
+    },
+    {
+      "label": "@williamngan",
+      "url": "https://twitter.com/williamngan"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/williamngan/pts#usage"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/williamngan/pts#browser-script"
+    },
+    {
+      "label": "dist directory",
+      "url": "https://github.com/williamngan/pts/tree/master/dist"
+    },
+    {
+      "label": "cdnjs",
+      "url": "https://cdnjs.com/libraries/pts"
+    },
+    {
+      "label": "jsDelivr",
+      "url": "https://cdn.jsdelivr.net/npm/pts/dist/pts.min.js"
+    },
+    {
+      "label": "unpkg",
+      "url": "https://unpkg.com/pts/dist/pts.min.js"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/williamngan/pts#package"
+    },
+    {
+      "label": "pts-starter-kit",
+      "url": "https://github.com/williamngan/pts-starter-kit"
+    },
+    {
+      "label": "pts-react-example",
+      "url": "https://github.com/williamngan/pts-react-example"
+    },
+    {
+      "label": "react-pts-canvas",
+      "url": "https://www.npmjs.com/package/react-pts-canvas"
+    },
+    {
+      "label": "guides",
+      "url": "https://ptsjs.org/guide/Get-started-0100.html"
+    },
+    {
+      "label": "demos",
+      "url": "https://ptsjs.org/demo/?name=circle.intersectCircle2D"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/williamngan/pts#development"
+    },
+    {
+      "label": "test/integrations",
+      "url": "https://github.com/williamngan/pts/blob/master/test/integrations"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/williamngan/pts#generate-documentation"
+    },
+    {
+      "label": "docs.md",
+      "url": "https://github.com/williamngan/pts/blob/master/docs.md"
+    },
+    {
+      "label": "guide.md",
+      "url": "https://github.com/williamngan/pts/blob/master/guide.md"
+    },
+    {
+      "label": "llms.txt",
+      "url": "https://github.com/williamngan/pts/blob/master/llms.txt"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/williamngan/pts#contributing"
+    },
+    {
+      "label": "@williamngan",
+      "url": "https://twitter.com/williamngan"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/williamngan/pts#license"
+    },
+    {
+      "label": "LICENSE",
+      "url": "https://github.com/williamngan/pts/blob/master/LICENSE"
+    }
+  ],
+  "root_files": [
+    ".github/workflows",
+    ".vscode",
+    "assets",
+    "bench",
+    "demo",
+    "dist",
+    "docs",
+    "guide",
+    "scripts",
+    "src",
+    "study",
+    "test",
+    ".editorconfig",
+    ".gitattributes",
+    ".gitignore",
+    ".node-version",
+    ".nojekyll",
+    ".nvmrc",
+    ".prettierignore",
+    ".prettierrc.json",
+    "CHANGELOG.md",
+    "LICENSE",
+    "README.md",
+    "SKILL.md",
+    "docs.md",
+    "eslint.config.mjs",
+    "favicon.ico",
+    "guide.md",
+    "index.html",
+    "llms.txt",
+    "package.json",
+    "pnpm-lock.yaml",
+    "pnpm-workspace.yaml",
+    "site.webmanifest",
+    "tsconfig.json",
+    "tsdown.config.mts",
+    "vite.monaco.config.mjs",
+    "vitest.config.mts"
+  ],
+  "release_count": 16,
+  "status": "verified"
+}

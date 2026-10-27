@@ -1,0 +1,126 @@
+{
+  "url": "https://github.com/nateplusplus/pushin",
+  "final_url": "https://github.com/nateplusplus/pushin",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:48:04.586242+00:00",
+  "stars": 503,
+  "forks": 22,
+  "description": "Attach a \"dolly\" or \"push in\" effect to a div element when user scrolls.",
+  "homepage": "https://pushinjs.com/",
+  "topics": [
+    "javascript",
+    "parallax",
+    "parallax-effect",
+    "parallax-scrolling",
+    "typescript"
+  ],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2015-05-28T03:27:14.000Z",
+  "branch": "main",
+  "commit": "fed79f23c44f8ed847450b135d16eac21a6029ef",
+  "readme": "pushIn.js PushIn.js is a lightweight parallax effect, built with JavaScript, that simulates an interactive dolly-in or push-in animation on a webpage. Check out the live demo for a working example. Compatibility PushIn.js supports all browsers that are ES5-compliant. Installation PushIn is available via NPM or a CDN. Follow the detailed instructions in the documentation site: https://pushinjs.com/installation. If you're using npm, you can install the package by running: npm install --save pushin Alternatively, you can use a CDN: <script src=\"https://cdn.jsdelivr.net/npm/pushin@6/dist/umd/pushin.min.js\"></script> Configuration There are several plugin configurations you can use to customize for your unique project. Refer to https://pushinjs.com/api for a detailed breakdown of all available configurations. Contributing Contributors are welcome! Please see CONTRIBUTING.md to learn more about the best ways to contribute to this project. Development Setup See DEVELOPERS.md for details on how to set up your development environment to contribute to this project.",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://github.com/nateplusplus/pushin/blob/main/docs/images/pushin-logo.svg"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/nateplusplus/pushin#pushinjs"
+    },
+    {
+      "label": "",
+      "url": "https://www.typescriptlang.org/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/nateplusplus/pushin/graphs/commit-activity"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/ebd8edc5949e327ce9065fb87064936953eae2358f6a15f94f219f79ec872310/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f6d61696e7461696e65722d6e617465706c7573706c75732d626c7565"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/nateplusplus/pushin/blob/main/LICENSE"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/nateplusplus/pushin/actions/workflows/node.js.yml"
+    },
+    {
+      "label": "live demo",
+      "url": "http://pushinjs.com/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/nateplusplus/pushin#compatibility"
+    },
+    {
+      "label": "ES5-compliant",
+      "url": "http://kangax.github.io/compat-table/es5/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/nateplusplus/pushin#installation"
+    },
+    {
+      "label": "https://pushinjs.com/installation",
+      "url": "https://pushinjs.com/installation"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/nateplusplus/pushin#configuration"
+    },
+    {
+      "label": "https://pushinjs.com/api",
+      "url": "https://pushinjs.com/api"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/nateplusplus/pushin#contributing"
+    },
+    {
+      "label": "CONTRIBUTING.md",
+      "url": "https://github.com/nateplusplus/pushin/blob/main/CONTRIBUTING.md"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/nateplusplus/pushin#development-setup"
+    },
+    {
+      "label": "DEVELOPERS.md",
+      "url": "https://github.com/nateplusplus/pushin/blob/main/DEVELOPERS.md"
+    }
+  ],
+  "root_files": [
+    ".github",
+    ".husky",
+    ".storybook",
+    "dist",
+    "docs",
+    "src",
+    "stories",
+    "test",
+    ".babelrc.json",
+    ".browserslistrc",
+    ".eslintignore",
+    ".eslintrc",
+    ".gitignore",
+    ".npmrc",
+    ".prettierignore",
+    "CONTRIBUTING.md",
+    "DEVELOPERS.md",
+    "LICENSE",
+    "README.md",
+    "jest.config.ts",
+    "package-lock.json",
+    "package.json",
+    "rollup.config.js",
+    "tsconfig.json",
+    "tsconfig.spec.json"
+  ],
+  "release_count": 41,
+  "status": "verified"
+}

@@ -1,0 +1,67 @@
+{
+  "url": "https://github.com/Masth0/ScratchCard",
+  "final_url": "https://github.com/Masth0/ScratchCard",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:47:27.707607+00:00",
+  "stars": 174,
+  "forks": 50,
+  "description": "ScratchCard is a js lib to simulated a scratchcard in browser with html5 and canvas.",
+  "homepage": "",
+  "topics": [],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2016-09-25T18:23:50.000Z",
+  "branch": "master",
+  "commit": "b73847cb7c0ec3206bc9f62e8942a91b9b77b791",
+  "readme": "Scratchcard-js ScratchCard is a js lib to simulate a scratchcard in browser with html5 and canvas. You can see the demo page. Install You can install ScratchCard with npm: npm install --save scratchcard-js or just clone this repo: git clone https://github.com/Masth0/ScratchCard.git and pick in the folder ./build the file scratchard.min.js Getting started import {ScratchCard, SCRATCH_TYPE} from 'scratchcard-js' const scContainer = document.getElementById('js--sc--container') // You also can pass HTML Element or a string for querySelector // new ScratchCard(htmlElement... const sc = new ScratchCard('#js--sc--container', { scratchType: SCRATCH_TYPE.SPRAY, containerWidth: scContainer.offsetWidth, containerHeight: 300, imageForwardSrc: '/images/scratchcard.jpg', imageBackgroundSrc: '/images/result.png', htmlBackground: '<p class=\"test\"><strong>Hello i am HTML content !</strong></p>', clearZoneRadius: 50, nPoints: 30, pointSize: 4, enabledPercentUpdate: true, // True by default percentToFinish: 50, // enabledPercentUpdate must to be true (true by default) callback: function () { alert('Now the window will reload !') window.location.reload() } }) // Init sc.init().then(() => { sc.canvas.addEventListener('scratch.move', () => { let percent = sc.getPercent().toFixed(2) console.log(percent) }) }).catch((error) => { // image not loaded alert(error.message); }); Events 'scratch.move' sc.canvas.addEventListener('scratch.move', function() { let percent = sc.getPercent(); console.log(percent); });",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://github.com/Masth0/ScratchCard#scratchcard-js"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/d892c692a3ddce388acae14b8e4d46883114b43dd9e6b95d72a1a600ff59c68b/68747470733a2f2f7472617669732d63692e6f72672f4d61737468302f53637261746368436172642e7376673f6272616e63683d7632"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/f582842741aabb6b4c313305472fcb949254655c401258ccccff7d3cb64d75b5/68747470733a2f2f696d672e736869656c64732e696f2f6e706d2f762f73637261746368636172642d6a732e737667"
+    },
+    {
+      "label": "demo page",
+      "url": "https://masth0.github.io/ScratchCard/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/Masth0/ScratchCard#install"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/Masth0/ScratchCard#getting-started"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/Masth0/ScratchCard#events"
+    }
+  ],
+  "root_files": [
+    "build",
+    "dist",
+    "docs",
+    "src",
+    "types",
+    ".babelrc",
+    ".gitignore",
+    ".npmignore",
+    "LICENSE",
+    "deploy.sh",
+    "package-lock.json",
+    "package.json",
+    "postcss.config.js",
+    "readme.md",
+    "tsconfig.json",
+    "webpack.config.js"
+  ],
+  "release_count": 4,
+  "status": "verified"
+}

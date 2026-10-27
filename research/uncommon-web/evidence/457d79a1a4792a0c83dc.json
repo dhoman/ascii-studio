@@ -1,0 +1,164 @@
+{
+  "url": "https://github.com/Mikhus/canvas-gauges",
+  "final_url": "https://github.com/Mikhus/canvas-gauges",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:47:28.327908+00:00",
+  "stars": 1602,
+  "forks": 398,
+  "description": "HTML5 Canvas Gauge. Tiny implementation of highly configurable gauge using pure JavaScript and HTML5 canvas. No dependencies. Suitable for IoT devices because of minimum code base.",
+  "homepage": "http://canvas-gauges.com/",
+  "topics": [
+    "canvas-gauge",
+    "gauge",
+    "html5-canvas",
+    "javascript",
+    "linear-gauge",
+    "radial-gauge"
+  ],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2012-05-03T08:57:44.000Z",
+  "branch": "master",
+  "commit": "6b179f83b7f03926a4d58ac09e15525d19fad3d1",
+  "readme": "HTML Canvas Gauges v2.1 Installation Documentation Add-Ons Special Thanks License This is tiny implementation of highly configurable gauge using pure JavaScript and HTML5 canvas. No dependencies. Suitable for IoT devices because of minimum code base. Installation Canvas gauges can be simply installed using npm package manager. Depending on your needs there is possibility to install whole gauge library or only that part you really need for your project. To install the whole library, run: $ npm install canvas-gauges If you only need the exact type of the gauge it can be installed using the appropriate npm tag. Currently the following gauges are supported: linear, radial. To install only linear gauge, run: $ npm install canvas-gauges@linear To install only radial gauge, run: $ npm install canvas-gauges@radial This strategy useful only if you need to minimize your code base and plan to use ONLY a specific gauge type. If you need to use various gauge types in your project it is recommended to use whole gauge package. More... Documentation You can find complete docs on the canvas gauges web-site: User Guide Developer's Docs Examples Add-Ons Here are some third-party libraries which are developed and delivered to use canvas-gauges as components for a different popular frameworks: Angular gauge components VueJs gauge components React gauge component Special Thanks For supporting development! For testing support! And to all contributors! License This code is subject to MIT license.",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://github.com/Mikhus/canvas-gauges#html-canvas-gauges-v21"
+    },
+    {
+      "label": "",
+      "url": "https://travis-ci.org/Mikhus/canvas-gauges"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/8a50d36c7b0016cbff3767d431e8a947bb36ef7dff2a25a1bab2f322352e4532/68747470733a2f2f7261776769742e636f6d2f4d696b6875732f63616e7661732d6761756765732f6d61737465722f746573742d636f7665726167652e737667"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/c0dd21683e300c8acf476799dca66c2cd1549265784ffa271e24715ec86f5f04/68747470733a2f2f7261776769742e636f6d2f4d696b6875732f63616e7661732d6761756765732f6d61737465722f646f63732d636f7665726167652e737667"
+    },
+    {
+      "label": "",
+      "url": "https://rawgit.com/Mikhus/canvas-gauges/master/LICENSE"
+    },
+    {
+      "label": "",
+      "url": "https://repl.it/github/Mikhus/canvas-gauges"
+    },
+    {
+      "label": "",
+      "url": "https://rawgit.com/Mikhus/canvas-gauges/master/examples/radial-component.html"
+    },
+    {
+      "label": "Installation",
+      "url": "https://github.com/Mikhus/canvas-gauges#installation"
+    },
+    {
+      "label": "Documentation",
+      "url": "https://github.com/Mikhus/canvas-gauges#documentation"
+    },
+    {
+      "label": "Add-Ons",
+      "url": "https://github.com/Mikhus/canvas-gauges#add-ons"
+    },
+    {
+      "label": "Special Thanks",
+      "url": "https://github.com/Mikhus/canvas-gauges#special-thanks"
+    },
+    {
+      "label": "License",
+      "url": "https://github.com/Mikhus/canvas-gauges#license"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/Mikhus/canvas-gauges#installation"
+    },
+    {
+      "label": "More...",
+      "url": "http://canvas-gauges.com/documentation/user-guide/#installing"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/Mikhus/canvas-gauges#documentation"
+    },
+    {
+      "label": "User Guide",
+      "url": "http://canvas-gauges.com/documentation/user-guide/"
+    },
+    {
+      "label": "Developer's Docs",
+      "url": "http://canvas-gauges.com/documentation/api/"
+    },
+    {
+      "label": "Examples",
+      "url": "http://canvas-gauges.com/documentation/examples/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/Mikhus/canvas-gauges#add-ons"
+    },
+    {
+      "label": "Angular gauge components",
+      "url": "https://github.com/MeetmeLeave/ng-canvas-gauges"
+    },
+    {
+      "label": "VueJs gauge components",
+      "url": "https://github.com/vue-bulma/canvas-gauges"
+    },
+    {
+      "label": "React gauge component",
+      "url": "https://github.com/1995parham/react-canvas-gauges"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/Mikhus/canvas-gauges#special-thanks"
+    },
+    {
+      "label": "",
+      "url": "http://www.lohika.com/"
+    },
+    {
+      "label": "",
+      "url": "http://saucelabs.com/"
+    },
+    {
+      "label": "contributors",
+      "url": "https://github.com/Mikhus/canvas-gauges/graphs/contributors"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/Mikhus/canvas-gauges#license"
+    },
+    {
+      "label": "MIT",
+      "url": "https://rawgit.com/Mikhus/canvas-gauges/master/LICENSE"
+    }
+  ],
+  "root_files": [
+    "assets/styles",
+    "examples",
+    "fonts",
+    "lib",
+    "test",
+    ".babelrc",
+    ".editorconfig",
+    ".eslintrc",
+    ".gitignore",
+    ".npmignore",
+    ".replit",
+    ".travis.yml",
+    "LICENSE",
+    "README.md",
+    "bower.json",
+    "docs-coverage.svg",
+    "gauge.min.js",
+    "gauge.min.js.map",
+    "gulpfile.js",
+    "karma.conf.js",
+    "package.json",
+    "test-coverage.svg"
+  ],
+  "release_count": 18,
+  "status": "verified"
+}

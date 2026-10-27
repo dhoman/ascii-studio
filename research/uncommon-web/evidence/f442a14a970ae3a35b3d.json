@@ -1,0 +1,342 @@
+{
+  "url": "https://github.com/phaserjs/phaser",
+  "final_url": "https://github.com/phaserjs/phaser",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:48:10.543791+00:00",
+  "stars": 40541,
+  "forks": 7181,
+  "description": "Phaser is a fun, free and fast 2D game framework for making HTML5 games for desktop and mobile web browsers, supporting Canvas and WebGL rendering.",
+  "homepage": "https://phaser.io",
+  "topics": [
+    "canvas",
+    "discord-activities",
+    "facebook-instant-games",
+    "game-development",
+    "game-frameworks",
+    "gamedev",
+    "html5-game-development",
+    "javascript",
+    "phaser",
+    "phaser-development",
+    "phaserjs",
+    "webgl",
+    "youtube-playables"
+  ],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2013-04-12T12:27:51.000Z",
+  "branch": "master",
+  "commit": "02d8931b626d9764c133cbb3fbf99966c03c757c",
+  "readme": "Phaser - HTML5 Game Framework Phaser is a fast, free, and fun open source HTML5 game framework that offers WebGL and Canvas rendering across desktop and mobile web browsers and has been actively developed for over 13 years. Games can be built for the web, or as YouTube Playables, Discord Activities, Reddit games, Twitch Overlays or compiled to iOS, Android, Steam and native apps using 3rd party tools. You can use JavaScript or TypeScript for development. Phaser supports over 40 different front-end frameworks including React and Vue. Phaser is commercially developed and maintained by Phaser Studio Inc along with our fantastic open source community. As a result of rapid support, and a developer friendly API, Phaser is currently one of the most starred game frameworks on GitHub. Interested in learning more? Click the image below to watch our intro video. Installing Phaser from NPM Install via npm: npm install phaser Then import it in your project: import Phaser from 'phaser'; Using Phaser from a CDN Phaser is on jsDelivr which is a \"super-fast CDN for developers\". Include either of the following in your html: <script src=\"//cdn.jsdelivr.net/npm/phaser@4.2.1/dist/phaser.js\"></script> <script src=\"//cdn.jsdelivr.net/npm/phaser@4.2.1/dist/phaser.min.js\"></script> It is also available from Cloudflare's cdnjs: <script src=\"https://cdnjs.cloudflare.com/ajax/libs/phaser/4.2.1/phaser.js\"></script> <script src=\"https://cdnjs.cloudflare.com/ajax/libs/phaser/4.2.1/phaser.min.js\"></script> Create Phaser Game App The easiest way to get started quickly with Phaser is our create-phaser-game app. This CLI tool presents an interactive selection of official project templates and demo games. Issue the command, answer some questions and the app will download and configure the right package for you. npm create @phaserjs/game@latest npx @phaserjs/create-game@latest yarn create @phaserjs/game pnpm create @phaserjs/game@latest bun create @phaserjs/game@latest We support Vue.js, React, Angular, Next.js, SolidJS, Svelte and Remix with Vite, Rollup, Parcel, Webpack, ESBuild, Import Map and Bun. Most come in both JavaScript and TypeScript versions. View the create game app tutorial. How Big is Phaser? Don't be alarmed if you look at phaser.js and see a file over 8 MB. Over 84% of that is inline documentation - JSDoc comments, type annotations, and detailed method descriptions that power the TypeScript definitions and API docs. It's there for your IDE, not for your players. The minified build, phaser.min.js, strips all of that out and comes in at 345 KB with standard gzip web server compression. This is the full version, with every feature included, but is still smaller than most texture images. You can reduce it further still by tweaking the build settings to exclude features your game doesn't need. Build Raw Size Compressed (gzip) phaser.js (with docs) 8.23 MB - phaser.min.js (full) 1.29 MB 345 KB phaser-arcade.min.js 1.18 MB 313 KB Why Phaser? Battle-tested - Over a decade of active development. Tens of thousands of games shipped. A huge community of developers who've seen it all. Truly cross-platform - One codebase runs on desktop browsers, mobile browsers, and can be wrapped for native app stores, Steam, YouTube Playables, Discord Activities, and more. Developer-friendly API - Scene-based architecture, a comprehensive loader, built-in physics (Arcade and Matter.js), animation system, input handling, cameras, tilemaps, particles, tweens, and much more - all with clear, consistent APIs. Framework agnostic - Works with React, Vue, Angular, Svelte, or plain JavaScript and TypeScript. Use whatever tools you prefer. Massive ecosystem - Over 2,000 code examples. Extensive API documentation. Active Discord and forums. First-class TypeScript definitions. AI-ready - Phaser's API is well understood by every major frontier LLM. This repository includes a comprehensive set of AI agent skills that give coding agents deep knowledge of every Phaser subsystem, making it the ideal framework for AI-assisted game development. What's New in Phaser 4 Phaser 4 is a major release built on a brand-new WebGL renderer. The entire rendering pipeline from v3 has been replaced with a modern, node-based architecture that manages WebGL state properly, handles context loss gracefully, and is significantly faster. If you've built games with Phaser 3, the public API is mostly familiar - but under the hood, everything has changed for the better. Here are the headline features. For the full picture, see the v4.0 Changelog and Migration Guide. New Render Node Architecture The v3 pipeline system has been replaced with a clean, node-based renderer. Each render node handles a single task, WebGL state is fully managed, and context restoration is built in. The result is a renderer that's faster, more reliable, and much easier to extend with custom rendering logic. Quads now use index buffers, reducing vertex upload costs by a third. Multi-texture batching is smarter, avoiding unnecessary batch breaks on mobile. And the whole system uses just-in-time rendering - nothing hits the GPU until it absolutely has to. Unified Filter System FX and Masks from v3 have been unified into a single, powerful Filter system. Filters can be applied to any game object or camera - no more restrictions on which objects support effects. Every filter takes an input image and produces an output, usually via a single shader, so they're all mutually compatible. v4 ships with a huge library of built-in filters: Blur, Glow, Shadow, Pixelate, ColorMatrix, Bloom, Vignette, Wipe, and many more. New additions include ImageLight for realistic image-based lighting, Blocky for pixel-art-friendly pixelation, GradientMap for palette-swap effects, Quantize for retro dithered palettes, Key for chroma keying, NormalTools for normal map manipulation, and Blend which brings all 27 Canvas blend modes to WebGL. Masks are now a filter too, more powerful than ever. A Container full of filtered, masked objects can itself be used as a mask source. SpriteGPULayer - Render a Million Sprites SpriteGPULayer is a new game object designed to render massive numbers of sprites. Where standard Phaser rendering handles tens of thousands of sprites comfortably, SpriteGPULayer handles a million or more, up to 100x faster. It works by storing all member data in a static GPU buffer and rendering everything in a single draw call, skipping the per-frame CPU-to-GPU upload that's normally the main bottleneck. Members aren't just static, either - each one supports GPU-driven animations on position, rotation, scale, alpha, tint, and frame, with a full set of easing functions. Per-member scroll factors enable parallax backgrounds, and non-looping mode supports one-off particle effects. It's perfect for bringing complex, animated backgrounds to life without touching your frame budget. TilemapGPULayer - Render Millions of Tiles TilemapGPULayer renders an entire tilemap layer as a single quad. The shader cost is per-pixel, not per-tile, so it can display up to 4096 x 4096 tiles with no performance penalty for tile count. It also produces perfect texture filtering across tile boundaries - no seams, no bleeding. If you need large maps on screen at once, especially on mobile, this is the way to go. Overhauled Tint System Tint has been reworked with color and mode as separate concerns. Six tint modes are available: MULTIPLY, FILL, ADD, SCREEN, OVERLAY, and HARD_LIGHT. The new setTintMode() method gives you explicit control, and BitmapText tinting finally works correctly. New Game Objects Gradient - Render linear, radial, conic, and bilinear color gradients with dithering support, powered by the new ColorBand and ColorRamp classes. Noise, NoiseCell (2D/3D/4D), NoiseSimplex (2D/3D) - Generate and animate cellular noise, simplex noise, and random static on the GPU, with normal map output for use in lighting and effects. CaptureFrame - Snapshot the current framebuffer mid-render for post-processing tricks. Stamp - Render a camera-independent quad, useful for DynamicTexture operations. Improved Lighting Lighting is now as simple as sprite.setLighting(true) - no pipeline juggling required. Objects can cast self-shadows based on their own texture, lights have an explicit z height value, and lighting works across most game objects including BitmapText, Particles, TileSprite, and both tilemap layer types. Shader and TileSprite Improvements The Shader game object has been rewritten with a cleaner config-based API (ShaderQuadConfig), and GLSL loading now uses standard #pragma directives that work with syntax checkers. TileSprite has been rebuilt with a new shader that supports texture atlas frames and tile rotation - no more whole-texture-only limitation. AI-Assisted Game Development Phaser has been part of the training data for every major frontier LLM. Models from Anthropic, OpenAI, Google, and others understand the Phaser API deeply and can generate game code, debug rendering issues, set up physics, and build scene structures out of the box. Tools like Claude Code, Cursor, Codex, Antigravity, and GitHub Copilot can scaffold entire Phaser games and implement features from natural language descriptions. AI Agent Skills This repository includes a comprehensive set of AI agent skills covering every major Phaser subsystem - scenes, physics, input, animations, tilemaps, tweens, particles, cameras, and much more. Point your AI coding agent at the skills/ folder and it will understand Phaser 4's architecture, APIs, patterns, and gotchas in depth. Tell it to create a game and it will know the right way to structure scenes, load assets, set up physics, and handle input - all using idiomatic Phaser 4 code. Phaser TypeScript Definitions Full TypeScript definitions can be found inside the types folder. They are also referenced in the types entry in package.json, meaning modern editors such as VSCode will detect them automatically. Depending on your project, you may need to add the following to your tsconfig.json file: \"lib\": [\"es6\", \"dom\", \"dom.iterable\", \"scripthost\"], \"typeRoots\": [\"./node_modules/phaser/types\"], \"types\": [\"Phaser\"] API Documentation Read our full API Documentation at https://docs.phaser.io/. Use the links at the top of the page to navigate the namespaces, classes, events and Game Objects and also to use the search box. We maintain documentation for the most recent versions of Phaser on this site. Getting Started We recommend the following to begin your journey: Getting Started with Phaser (useful if you are completely new to Phaser) Making your first Phaser Game Download our Free 500 page book Phaser by Example. Plus, there are over 700 Phaser tutorials listed on our website. New tutorials are being published every week, so check our site for more. Source Code Examples We have created hundreds of examples and they are all available with full source code and assets. Browse our Phaser Examples site. Phaser Sandbox The Phaser Sandbox is a fully-configured online editor, fully updated for Phaser 4, ready to go direct in your desktop browser. It's loaded with the latest version of Phaser and packed full of handy features. Register for a free Phaser account to create and save your own sandbox entries. Or view one just like this. Phaser Plugins Super community member RexRainbow has been publishing Phaser content for years, compiling an impressive catalogue of plugins that all Phaser developers should be aware of. You'll find Phaser Plugins that extend the framework with features such as UI controls, text input boxes, Firebase support, Finite State Machines and lots more. His set of Phaser Notes are also invaluable reading. Migrating from Phaser 3 Phaser 4 keeps most of the public API you know, but there are important breaking changes - the renderer, tint system, FX/Masks, Shader API, lighting, and several removed classes (Point, Mesh, BitmapMask) all need attention. We've written a detailed Migration Guide with a checklist to walk you through it. We've also included a dedicated v3 to v4 migration skill in this repository. Point your AI coding agent at it and tell it to migrate your Phaser 3 game - it understands every breaking change and knows the exact v4 replacements. Change Log We meticulously keep track of new features, updates and bug fixes in our change logs. Each version of Phaser has its own change log: v4.2.1 Change Log v4.2.0 Change Log v4.1.0 Change Log v4.0.0 Change Log All Phaser Change Logs Have fun! Grab the source and join the fun! Phaser wouldn't have been possible without the fantastic support of the community. Thank you to everyone who supports our work, who shares our belief in the future of HTML5 gaming, and Phaser's role in that. Happy coding everyone! Cheers, Rich and the whole team at Phaser Studio Visit the Phaser website Play some amazing games Learn By browsing our API Docs or Support Forum AI Skills Point your AI agent at our Phaser Skills for deep framework knowledge Code Examples? We've over 2000 Examples to learn from Read the weekly Phaser World Newsletter Be Social: Join us on Discord and Reddit or follow us on Twitter Powered by coffee, anime, pixels and love. The Phaser logo and characters are © 2011 - 2026 Phaser Studio Inc. All rights reserved. \"Above all, video games are meant to be just one thing: fun. Fun for everyone.\" - Satoru Iwata",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://github.com/phaserjs/phaser#phaser---html5-game-framework"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/phaserjs/phaser/blob/master/changelog/v4/assets/phaser4-logo.png"
+    },
+    {
+      "label": "",
+      "url": "https://discord.gg/phaser"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/9e8dad23626477fe873d422ec32aa29239802ae8ec44ff8d951747ac2406c062/68747470733a2f2f696d672e736869656c64732e696f2f6a7364656c6976722f6e706d2f686d2f7068617365723f7374796c653d666f722d7468652d6261646765"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/2dd75ddb9443bcc832c341f7a8f317b3dd05f77ed9604fba8d1fc20242dce8db/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f646f776e6c6f6164732f7068617365726a732f7068617365722f746f74616c3f7374796c653d666f722d7468652d6261646765"
+    },
+    {
+      "label": "most starred",
+      "url": "https://github.com/collections/javascript-game-engines"
+    },
+    {
+      "label": "",
+      "url": "https://www.youtube.com/watch?v=XLhi9IW0rxg"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/phaserjs/phaser#installing-phaser-from-npm"
+    },
+    {
+      "label": "npm",
+      "url": "https://www.npmjs.com/package/phaser"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/phaserjs/phaser#using-phaser-from-a-cdn"
+    },
+    {
+      "label": "Phaser is on jsDelivr",
+      "url": "https://www.jsdelivr.com/package/npm/phaser"
+    },
+    {
+      "label": "cdnjs",
+      "url": "https://cdnjs.com/libraries/phaser"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/phaserjs/phaser#create-phaser-game-app"
+    },
+    {
+      "label": "View the create game app tutorial",
+      "url": "https://phaser.io/tutorials/create-game-app"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/phaserjs/phaser#how-big-is-phaser"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/phaserjs/phaser#why-phaser"
+    },
+    {
+      "label": "AI agent skills",
+      "url": "https://github.com/phaserjs/phaser/blob/master/skills"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/phaserjs/phaser#whats-new-in-phaser-4"
+    },
+    {
+      "label": "v4.0 Changelog",
+      "url": "https://github.com/phaserjs/phaser/blob/master/changelog/v4/4.0/CHANGELOG-v4.0.0.md"
+    },
+    {
+      "label": "Migration Guide",
+      "url": "https://github.com/phaserjs/phaser/blob/master/changelog/v4/4.0/MIGRATION-GUIDE.md"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/phaserjs/phaser#new-render-node-architecture"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/phaserjs/phaser#unified-filter-system"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/phaserjs/phaser#spritegpulayer---render-a-million-sprites"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/phaserjs/phaser#tilemapgpulayer---render-millions-of-tiles"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/phaserjs/phaser#overhauled-tint-system"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/phaserjs/phaser#new-game-objects"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/phaserjs/phaser#improved-lighting"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/phaserjs/phaser#shader-and-tilesprite-improvements"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/phaserjs/phaser#ai-assisted-game-development"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/phaserjs/phaser#ai-agent-skills"
+    },
+    {
+      "label": "AI agent skills",
+      "url": "https://github.com/phaserjs/phaser/blob/master/skills"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/phaserjs/phaser#phaser-typescript-definitions"
+    },
+    {
+      "label": "types folder",
+      "url": "https://github.com/phaserjs/phaser/tree/master/types"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/phaserjs/phaser#api-documentation"
+    },
+    {
+      "label": "https://docs.phaser.io/",
+      "url": "https://docs.phaser.io/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/phaserjs/phaser#getting-started"
+    },
+    {
+      "label": "Getting Started with Phaser",
+      "url": "https://phaser.io/tutorials/getting-started-phaser3"
+    },
+    {
+      "label": "Making your first Phaser Game",
+      "url": "https://phaser.io/tutorials/making-your-first-phaser-3-game"
+    },
+    {
+      "label": "Phaser by Example",
+      "url": "https://phaser.io/news/2024/04/phaser-by-example-book"
+    },
+    {
+      "label": "over 700 Phaser tutorials",
+      "url": "https://phaser.io/learn"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/phaserjs/phaser#source-code-examples"
+    },
+    {
+      "label": "Phaser Examples site",
+      "url": "https://phaser.io/examples"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/phaserjs/phaser#phaser-sandbox"
+    },
+    {
+      "label": "Register for a free Phaser account",
+      "url": "https://phaser.io/register"
+    },
+    {
+      "label": "just like this",
+      "url": "https://phaser.io/sandbox/XyqPcjNr"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/phaserjs/phaser#phaser-plugins"
+    },
+    {
+      "label": "Phaser Plugins",
+      "url": "https://rexrainbow.github.io/phaser3-rex-notes/docs/site/index.html#list-of-my-plugins"
+    },
+    {
+      "label": "Phaser Notes",
+      "url": "https://rexrainbow.github.io/phaser3-rex-notes/docs/site/index.html"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/phaserjs/phaser#migrating-from-phaser-3"
+    },
+    {
+      "label": "Migration Guide",
+      "url": "https://github.com/phaserjs/phaser/blob/master/changelog/v4/4.0/MIGRATION-GUIDE.md"
+    },
+    {
+      "label": "v3 to v4 migration skill",
+      "url": "https://github.com/phaserjs/phaser/blob/master/skills/v3-to-v4-migration/SKILL.md"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/phaserjs/phaser#change-log"
+    },
+    {
+      "label": "v4.2.1 Change Log",
+      "url": "https://github.com/phaserjs/phaser/blob/master/changelog/v4/4.2.1/CHANGELOG-v4.2.1.md"
+    },
+    {
+      "label": "v4.2.0 Change Log",
+      "url": "https://github.com/phaserjs/phaser/blob/master/changelog/v4/4.2/CHANGELOG-v4.2.0.md"
+    },
+    {
+      "label": "v4.1.0 Change Log",
+      "url": "https://github.com/phaserjs/phaser/blob/master/changelog/v4/4.1/CHANGELOG-v4.1.0.md"
+    },
+    {
+      "label": "v4.0.0 Change Log",
+      "url": "https://github.com/phaserjs/phaser/blob/master/changelog/v4/4.0/CHANGELOG-v4.0.0.md"
+    },
+    {
+      "label": "All Phaser Change Logs",
+      "url": "https://github.com/phaserjs/phaser/blob/master/CHANGELOG.md"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/phaserjs/phaser#have-fun"
+    },
+    {
+      "label": "Rich",
+      "url": "mailto:rich@phaser.io"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/phaserjs/phaser/blob/master/changelog/v4/assets/space-dance.gif"
+    },
+    {
+      "label": "Phaser website",
+      "url": "https://phaser.io"
+    },
+    {
+      "label": "amazing games",
+      "url": "https://phaser.io/games"
+    },
+    {
+      "label": "API Docs",
+      "url": "https://docs.phaser.io"
+    },
+    {
+      "label": "Support Forum",
+      "url": "https://phaser.discourse.group/"
+    },
+    {
+      "label": "Phaser Skills",
+      "url": "https://github.com/phaserjs/phaser/blob/master/skills"
+    },
+    {
+      "label": "Examples",
+      "url": "https://phaser.io/examples"
+    },
+    {
+      "label": "Phaser World",
+      "url": "https://phaser.world"
+    },
+    {
+      "label": "Discord",
+      "url": "https://discord.com/invite/phaser"
+    },
+    {
+      "label": "Reddit",
+      "url": "https://www.reddit.com/r/phaser/"
+    },
+    {
+      "label": "Twitter",
+      "url": "https://twitter.com/phaser_"
+    }
+  ],
+  "root_files": [
+    ".github",
+    "changelog",
+    "config",
+    "dist",
+    "docs",
+    "scripts",
+    "skills",
+    "src",
+    "tests",
+    "types",
+    ".editorconfig",
+    ".eslintignore",
+    ".eslintrc.json",
+    ".gitattributes",
+    ".gitignore",
+    ".npmignore",
+    ".nvmrc",
+    ".travis.yml",
+    "CHANGELOG.md",
+    "CITATION.cff",
+    "LICENSE.md",
+    "README.md",
+    "package-lock.json",
+    "package.json",
+    "vitest.config.js"
+  ],
+  "release_count": 178,
+  "status": "verified"
+}

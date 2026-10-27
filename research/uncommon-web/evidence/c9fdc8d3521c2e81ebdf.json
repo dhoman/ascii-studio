@@ -1,0 +1,121 @@
+{
+  "url": "https://github.com/dnhn/blotter",
+  "final_url": "https://github.com/dnhn/blotter",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:47:44.560831+00:00",
+  "stars": 0,
+  "forks": 0,
+  "description": "A TypeScript API for drawing unconventional text effects on the web. Modern re-write of Blotter.js with Three.js and Vite.",
+  "homepage": "",
+  "topics": [
+    "animation",
+    "blotter",
+    "creative-coding",
+    "css",
+    "design",
+    "glsl",
+    "glsl-shaders",
+    "javascript",
+    "lsd",
+    "text",
+    "typography",
+    "webgl"
+  ],
+  "license": "NOASSERTION",
+  "archived": false,
+  "created_at": "2026-09-01T02:02:47.000Z",
+  "branch": "root",
+  "commit": "fd272e04a957f435f88718e52cfcac06ac766b99",
+  "readme": "blotter.ts A JavaScript API for drawing unconventional text effects on the web, GLSL-backed, batched into a single WebGL draw call, output to plain per-text canvases. This is a modern TypeScript rewrite of bradley/Blotter: ESM-first, typed, tree-shakeable, with three as a peer dependency. The rendering architecture is unchanged; the API is new (see Migrating). How it works Texts sharing a material are measured, bin-packed into a single texture atlas, and rendered together in one WebGL draw call through your material's fragment shader. Each text gets its own output <canvas> (via blotter.forText(text)), which copies its region out of the shared back buffer every frame. The render loop uses requestAnimationFrame and a single shared WebGL context regardless of how many Blotter instances exist. Rendered text is canvas output: not selectable, best for titles, headings, and graphic text, not body copy. Install npm install blotter.ts three three >= 0.152 is a peer dependency. Usage import { Blotter, Text } from \"blotter.ts\"; import { ChannelSplitMaterial } from \"blotter.ts/materials\"; const text = new Text(\"Hello\", { family: \"serif\", size: 120, fill: \"#171717\", }); const material = new ChannelSplitMaterial(); const blotter = new Blotter(material, { texts: text }); blotter.forText(text)?.appendTo(document.body); await blotter.ready; Uniforms Material uniforms are live, writing a value updates the running shader: material.uniforms.uOffset.value = 0.1; Per-text overrides go through the text's render scope: const scope = blotter.forText(text)!; scope.material.uniforms.uOffset.value = 0.2; // this text only Updating texts text.value = \"Goodbye\"; // triggers a rebuild automatically text.properties = { size: 90 }; // ditto await blotter.update(); // explicit rebuild; resolves when settled Custom materials A material is a Shadertoy-style mainImage fragment function. Use textTexture(uv) instead of texture2D to sample the text: import { Material, shaders } from \"blotter.ts\"; const wobble = new Material({ mainImage: /* glsl */ ` ${shaders.noise3d} void mainImage( out vec4 mainImage, in vec2 fragCoord ) { vec2 uv = fragCoord / uResolution; uv.y += snoise(vec3(uv * 4.0, uGlobalTime)) * uAmount; mainImage = textTexture(uv); } `, uniforms: { uAmount: { type: \"1f\", value: 0.05 }, }, }); Uniform types are \"1f\" | \"2f\" | \"3f\" | \"4f\" (float/vec2/vec3/vec4). Every material also receives uResolution, uGlobalTime, uTimeDelta, uBlendColor, and uPixelRatio. GLSL helper snippets (noise, easing, line math, …) are exported as strings from the shaders namespace. Or subclass: import { Material } from \"blotter.ts\"; export class WobbleMaterial extends Material { constructor() { super({ mainImage, uniforms: { uAmount: { type: \"1f\", value: 0.05 } } }); } } Bundled materials blotter.ts/materials ships the classic Blotter effects: ChannelSplitMaterial, FliesMaterial, LiquidDistortMaterial, RollingDistortMaterial, SlidingDoorMaterial. Migrating from Blotter.js Legacy Now <script> + window.Blotter.* globals Named ESM imports from blotter.ts Separate material <script> downloads import { ChannelSplitMaterial } from \"blotter.ts/materials\" new Blotter.Text(...), new Blotter.Material() new Text(...), new Material() thing.needsUpdate = true blotter.update() / material.update() / automatic on text.value = blotter.on(\"ready\", ...) await blotter.ready (the event still fires) Blotter.Assets.Shaders.PI import { shaders } from \"blotter.ts\" → shaders.pi Blotter._extendWithGettersSetters subclass protocol class MyMaterial extends Material Bundled underscore/EventEmitter/Three custom build Gone; three is a peer dependency Development pnpm install pnpm dev # demo page (vite) pnpm test # unit + browser (WebGL) tests pnpm typecheck pnpm lint pnpm build # tsup → dist/ Browser tests run in headless Chromium via Playwright (pnpm exec playwright install chromium once). Credits Blotter was created by Bradley Griffith. Shader helpers adapted from Reza Ali's Fragment, atlas packing from Jake Gordon's bin-packing. See the upstream project for the full original credits. License MIT",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://github.com/dnhn/blotter#blotterts"
+    },
+    {
+      "label": "bradley/Blotter",
+      "url": "https://github.com/bradley/Blotter"
+    },
+    {
+      "label": "Migrating",
+      "url": "https://github.com/dnhn/blotter#migrating-from-blotterjs"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/dnhn/blotter#how-it-works"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/dnhn/blotter#install"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/dnhn/blotter#usage"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/dnhn/blotter#uniforms"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/dnhn/blotter#updating-texts"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/dnhn/blotter#custom-materials"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/dnhn/blotter#bundled-materials"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/dnhn/blotter#migrating-from-blotterjs"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/dnhn/blotter#development"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/dnhn/blotter#credits"
+    },
+    {
+      "label": "Bradley Griffith",
+      "url": "http://bradley.computer"
+    },
+    {
+      "label": "Reza Ali's Fragment",
+      "url": "http://www.syedrezaali.com/"
+    },
+    {
+      "label": "Jake Gordon's bin-packing",
+      "url": "https://github.com/jakesgordon/bin-packing"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/dnhn/blotter#license"
+    }
+  ],
+  "root_files": [
+    ".changeset",
+    ".github/workflows",
+    "examples",
+    "src",
+    "tests",
+    ".gitignore",
+    "CHANGELOG.md",
+    "biome.json",
+    "license.txt",
+    "package.json",
+    "pnpm-lock.yaml",
+    "pnpm-workspace.yaml",
+    "readme.md",
+    "tsconfig.json",
+    "tsup.config.ts",
+    "vite.config.ts",
+    "vitest.config.ts"
+  ],
+  "release_count": 2,
+  "status": "verified"
+}

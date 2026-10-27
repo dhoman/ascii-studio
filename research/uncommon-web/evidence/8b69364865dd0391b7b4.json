@@ -1,0 +1,163 @@
+{
+  "url": "https://github.com/code-hike/codehike",
+  "final_url": "https://github.com/code-hike/codehike",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:47:40.777587+00:00",
+  "stars": 5393,
+  "forks": 168,
+  "description": "Build rich content websites with Markdown and React",
+  "homepage": "https://codehike.org",
+  "topics": [
+    "blog",
+    "code",
+    "docs",
+    "javascript",
+    "markdown",
+    "mdx",
+    "react",
+    "scrollytelling",
+    "syntax-highlighting"
+  ],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2020-04-23T03:05:45.000Z",
+  "branch": "next",
+  "commit": "cd81d8af1c503b699cbf0458d504e4578bcb9c74",
+  "readme": "Code Hike Build rich content websites with Markdown and React Code Hike is an open-source library that bridges the gap between Markdown and React to help you create technical content that takes advantage of the modern web. Docs: https://codehike.org/docs Quick Start Try it online on StackBlitz. Or clone the Code Hike starter: npx create-next-app -e https://github.com/code-hike/v1-starter Top Sponsors Powered by License MIT",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://github.com/code-hike/codehike#code-hike"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/code-hike/codehike#build-rich-content-websites-with-markdown-and-react"
+    },
+    {
+      "label": "https://codehike.org/docs",
+      "url": "https://codehike.org/docs"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/code-hike/codehike#quick-start"
+    },
+    {
+      "label": "StackBlitz",
+      "url": "https://stackblitz.com/github/code-hike/v1-starter?file=app%2Fpage.mdx"
+    },
+    {
+      "label": "",
+      "url": "https://github.blog/2023-04-12-github-accelerator-our-first-cohort-and-whats-next/#gh-dark-mode-only"
+    },
+    {
+      "label": "",
+      "url": "https://github.blog/2023-04-12-github-accelerator-our-first-cohort-and-whats-next/#gh-light-mode-only"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/code-hike/codehike#top-sponsors"
+    },
+    {
+      "label": "",
+      "url": "https://opensource.fb.com/#gh-dark-mode-only"
+    },
+    {
+      "label": "",
+      "url": "https://opensource.fb.com/#gh-light-mode-only"
+    },
+    {
+      "label": "",
+      "url": "https://user-images.githubusercontent.com/1911623/145202317-0bcfb3ed-403c-4737-a781-2eeb6b796e8b.png"
+    },
+    {
+      "label": "",
+      "url": "https://www.speakeasy.com/#gh-dark-mode-only"
+    },
+    {
+      "label": "",
+      "url": "https://www.speakeasy.com/#gh-light-mode-only"
+    },
+    {
+      "label": "",
+      "url": "https://user-images.githubusercontent.com/1911623/145202317-0bcfb3ed-403c-4737-a781-2eeb6b796e8b.png"
+    },
+    {
+      "label": "",
+      "url": "https://ui.dev/#gh-dark-mode-only"
+    },
+    {
+      "label": "",
+      "url": "https://ui.dev/#gh-light-mode-only"
+    },
+    {
+      "label": "",
+      "url": "https://user-images.githubusercontent.com/1911623/145202317-0bcfb3ed-403c-4737-a781-2eeb6b796e8b.png"
+    },
+    {
+      "label": "",
+      "url": "https://driv.ly/#gh-dark-mode-only"
+    },
+    {
+      "label": "",
+      "url": "https://driv.ly/#gh-light-mode-only"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/code-hike/codehike#powered-by"
+    },
+    {
+      "label": "",
+      "url": "https://vercel.com/?utm_source=codehike&utm_campaign=oss#gh-dark-mode-only"
+    },
+    {
+      "label": "",
+      "url": "https://vercel.com/?utm_source=codehike&utm_campaign=oss#gh-light-mode-only"
+    },
+    {
+      "label": "",
+      "url": "https://user-images.githubusercontent.com/1911623/145202317-0bcfb3ed-403c-4737-a781-2eeb6b796e8b.png"
+    },
+    {
+      "label": "",
+      "url": "https://www.browserstack.com/#gh-dark-mode-only"
+    },
+    {
+      "label": "",
+      "url": "https://www.browserstack.com/#gh-light-mode-only"
+    },
+    {
+      "label": "",
+      "url": "https://user-images.githubusercontent.com/1911623/145202317-0bcfb3ed-403c-4737-a781-2eeb6b796e8b.png"
+    },
+    {
+      "label": "",
+      "url": "https://www.gitpod.io/#gh-dark-mode-only"
+    },
+    {
+      "label": "",
+      "url": "https://www.gitpod.io//#gh-light-mode-only"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/code-hike/codehike#license"
+    }
+  ],
+  "root_files": [
+    ".changeset",
+    ".github",
+    ".vscode",
+    "apps/web",
+    "packages",
+    ".gitignore",
+    ".prettierrc",
+    "CHANGELOG.md",
+    "license",
+    "package.json",
+    "pnpm-lock.yaml",
+    "pnpm-workspace.yaml",
+    "readme.md",
+    "turbo.json"
+  ],
+  "release_count": 114,
+  "status": "verified"
+}

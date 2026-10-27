@@ -1,0 +1,97 @@
+{
+  "url": "https://github.com/micah5/PSone.css",
+  "final_url": "https://github.com/micah5/PSone.css",
+  "http_status": 200,
+  "checked_at": "2026-10-23T17:46:56.441663+00:00",
+  "stars": 795,
+  "forks": 35,
+  "description": "🎮 PS1 style CSS Framework, inspired by NES.css",
+  "homepage": "https://micah5.github.io/PSone.css/",
+  "topics": [
+    "css",
+    "css-framework",
+    "psone"
+  ],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2018-11-30T13:57:41.000Z",
+  "branch": "master",
+  "commit": "c0c302577c2e8d3bbfb82c65d5ba34c4f03b58fc",
+  "readme": "PSone.css Please feel free to submit a pull request, no matter how small. I love getting them. At the moment there's just a CSS file that you can link to: <link rel=\"stylesheet\" type=\"text/css\" href=\"https://cdn.jsdelivr.net/gh/98mprice/PSone.css@master/PSone.min.css\"> I hope to add some JS eventually to help with progressbars etc. Reference Container From FF7 <div class=\"container\"> <label class=\"title\">Default</label> <p>Kick! Punch! It's all in the mind.</p> </div> <div class=\"container dark\"> <label class=\"title\">dark</label> <p>You see, the island is the site of a secret nuclear weapons disposal facility.</p> </div> <div class=\"container light\"> <label class=\"title\">light</label> <p>Crash, Crash? Are you there Crash? ... Are you there Crash?</p> </div> Button From Tekken 3 <button type=\"button\" class=\"btn\">Normal</button> <button type=\"button\" class=\"btn primary\">Primary</button> <button type=\"button\" class=\"btn success\">Success</button> <button type=\"button\" class=\"btn warning\">Warning</button> <button type=\"button\" class=\"btn error\">Error</button> Progress bar From MGS1 <div class=\"progress\"> <div class=\"bar\" style=\"width: 80%\"></div> <div class=\"subtitle\">Default</div> </div> <div class=\"progress primary\"> <div class=\"bar\" style=\"width: 100%\"></div> <div class=\"subtitle\">primary</div> </div> <div class=\"progress success\"> <div class=\"bar\" style=\"width: 40%\"></div> <div class=\"subtitle\">success</div> </div> <div class=\"progress warning\"> <div class=\"bar\" style=\"width: 60%\"></div> <div class=\"subtitle\">warning</div> </div> <div class=\"progress error\"> <div class=\"bar\" style=\"width: 20%\"></div> <div class=\"subtitle\">error</div> </div> <div class=\"progress indeterminate\"> <div class=\"bar\"></div> <div class=\"subtitle\">indeterminate</div> </div> Radio Button From the PS1 memory card screen <label> <input type=\"radio\" name=\"test\" value=\"small\" checked> <span class=\"option\">Yes <span class=\"click\"></span> </span> </label> Input From FF7 <div class=\"field\"> <label>Default</label> <input type=\"text\" class=\"input\"> </div> <div class=\"field is-inline\"> <label>With placeholder</label> <input type=\"text\" class=\"input\" placeholder=\"Jill Valentine\"> </div> Development Fork the project and enter this commands in your terminal git clone https://github.com/YOUR_GITHUB_USERNAME/PSone.css.git cd PSone.css npm install Storybook For visual testing, this project contains storybook which you can run by doing the next command $ npm run storybook Demo The demo page is located in index.html. If you want to change something there, you can use the next command $ npm run dev",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://github.com/micah5/PSone.css#psonecss"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/0d5041884085118d1689b911ef8a19cb192bbc31fc34b064fe8dd5d4675d0e93/68747470733a2f2f692e696d6775722e636f6d2f496374583944322e706e67"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/micah5/PSone.css#reference"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/micah5/PSone.css#container"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/micah5/PSone.css#button"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/micah5/PSone.css#progress-bar"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/micah5/PSone.css#radio-button"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/micah5/PSone.css#input"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/micah5/PSone.css#development"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/micah5/PSone.css/issues"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/micah5/PSone.css#storybook"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/micah5/PSone.css#demo"
+    }
+  ],
+  "root_files": [
+    ".github/workflows",
+    "dist",
+    "fonts",
+    "meta",
+    "scripts",
+    "src",
+    ".DS_Store",
+    ".editorconfig",
+    ".gitignore",
+    ".npmignore",
+    ".nvmrc",
+    "LICENSE",
+    "PSone.css",
+    "PSone.min.css",
+    "README.md",
+    "index.html",
+    "logo.png",
+    "package-lock.json",
+    "package.json",
+    "psone.svg",
+    "robots.txt",
+    "sitemap.xml"
+  ],
+  "release_count": 0,
+  "status": "verified"
+}

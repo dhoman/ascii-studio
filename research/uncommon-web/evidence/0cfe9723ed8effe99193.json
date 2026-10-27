@@ -1,0 +1,178 @@
+{
+  "url": "https://github.com/pagedjs/pagedjs",
+  "final_url": "https://github.com/pagedjs/pagedjs",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:48:09.072489+00:00",
+  "stars": 1540,
+  "forks": 167,
+  "description": "Display paginated content in the browser and generate print books using web technology",
+  "homepage": "https://pagedjs.org",
+  "topics": [
+    "html",
+    "paged-media",
+    "pdf",
+    "polyfill",
+    "printing",
+    "typesetting"
+  ],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2018-12-21T20:03:08.000Z",
+  "branch": "main",
+  "commit": "bbdc7519b458c400ed1880d9d692c9bf0b394a45",
+  "readme": "Paged.js - Paged Media Tools Paged.js is an open-source library to display paginated content in the browser and to generate print books using web technology. It contains a set of handlers for CSS transformations and fragmented layout which polyfill the Paged Media and Generated Content CSS modules, along with hooks to create new handlers for custom properties. The currently supported properties can be found on the pagedjs website. A quick overview to getting started with Paged Media CSS and Paged.js is available on pagedjs.org/documentation. NPM Module $ npm install pagedjs import { Previewer } from 'pagedjs'; let paged = new Previewer(); let flow = paged.preview(DOMContent, [\"path/to/css/file.css\"], document.body).then((flow) => { console.log(\"Rendered\", flow.total, \"pages.\"); }) Polyfill Add the the paged.polyfill.js script to replace all @page css and render the html page with the Paged Media styles applied: <script src=\"https://unpkg.com/pagedjs/dist/paged.polyfill.js\"></script> Try the polyfill with Aurorae. By default the polyfill will run automatically as soon as the DOM is ready. However, you can add an async before function or return a Promise to delay the polyfill starting. <script> window.PagedConfig = { before: () => { return new Promise((resolve, reject) => { setTimeout(() => { resolve() }, 1000); }) }, after: (flow) => { console.log(\"after\", flow) }, }; </script> Otherwise you can disable auto running the previewer and call window.PagedPolyfill.preview(); whenever you want to start. <script> window.PagedConfig = { auto: false, after: (flow) => { console.log(\"after\", flow) }, }; setTimeout(() => { window.PagedPolyfill.preview(); }, 1000); </script> Chunker Chunks up a document into paged media flows and applies print classes. Examples: Process the first 50 pages of Moby Dick. Upload and chunk an Epub using Epub.js. Polisher Converts @page css to classes, and applies counters and content. Examples: Test styles for print. CLI Command line interface to render out PDFs of HTML files using Puppeteer: https://github.com/pagedjs/pagedjs-cli. Module Modules are groups of handlers for that apply the layout and styles of a CSS module, such as Generated Content. New handlers can be registered from import { registerHandlers } from 'pagedjs' or by calling Paged.registerHandlers on an html page. <script src=\"https://unpkg.com/pagedjs/dist/paged.polyfill.js\"></script> <script> class MyHandler extends Paged.Handler { constructor(chunker, polisher, caller) { super(chunker, polisher, caller); } afterPageLayout(pageFragment, page) { console.log(pageFragment); } } Paged.registerHandlers(MyHandler); </script> Handlers have methods that correspond to the hooks for the parsing, layout and rendering of the Chunker and Polisher. Returning a promise or async function from a method in a handler will complete that task before continuing with the other registered methods for that hook. // Previewer beforePreview(content, renderTo) afterPreview(pages) // Chunker beforeParsed(content) filter(content) afterParsed(parsed) beforePageLayout(page) onPageLayout(pageWrapper, breakToken, layout); afterPageLayout(pageElement, page, breakToken) finalizePage(pageElement, page, breakToken) afterRendered(pages) // Polisher beforeTreeParse(text, sheet) beforeTreeWalk(ast) afterTreeWalk(ast, sheet) onUrl(urlNode) onAtPage(atPageNode) onRule(ruleNode) onDeclaration(declarationNode, ruleNode) onContent(contentNode, declarationNode, ruleNode) // Layout layoutNode(node) renderNode(node, sourceNode, layout) onOverflow(overflow, rendered, bounds) onBreakToken(breakToken, overflow, rendered) afterOverflowRemoved(removed, rendered) beforeRenderResult(breakToken, pageWrapper) How Pagedjs processes content Chunker.flow() └── Chunker.render() -> Looping through all pages └──── Chunker.layout*() -> Handles overflowing pages, adding new ones └────── Page.layout() -> Creates new Layout and waits for new Breaktoken └──────── Layout.renderTo() -> Iterates through nodes └────────── Layout.findBreakToken() -> Tries to find overflow/breaktoken Setup Install dependencies $ npm install Development Run the local dev-server with livereload and autocompile on http://localhost:9090/ $ npm start Deployment Build the dist output $ npm run build Compile the lib output $ npm run compile Generate legacy builds with polyfills included $ npm run legacy Testing Testing for Paged.js uses Jest but is split into Tests and Specs. Tests Unit tests for Chunker and Polisher methods are run in node using JSDOM. npm test Specs Specs run a html file in Chrome (using puppeteer) to test against CSS specifications. They can also output a pdf and compare pages (one at a time) in that PDF with samples PDFs (saved as images). The PDF comparison tests depend on the ghostscript and the ghostscript4js package. It is recomend to run these in the Docker container below via: npm run docker-specs However if you'd like to run the specs outside of Docker, you'll need to install a local version of Ghostscript for your system according to https://www.npmjs.com/package/ghostscript4js#prerequisites For Mac you can install it with brew install ghostscript For Debian you can install it with sudo apt-get install ghostscript sudo apt-get install libgs-dev Now you can install the ghostscript4js library. For Linux you can optionally pass the location ghostscript was installed to in GS4JS_HOME. GS4JS_HOME=\"/usr/lib/$(gcc -dumpmachine)\" npm install ghostscript4js To test the pdf output of specs, you'll need to build the library locally. npm run build Then run the jest tests in puppeteer. npm run specs To debug the results of a test in a browser you can add NODE_ENV=debug NODE_ENV=debug npm run specs To update the stored pdf images you can run npm run specs -- --updateSnapshot Docker A pagedmedia/pagedjs docker image contains all the dependencies needed to run the pagedjs development server, as well as the pdf comparison tests. To build the image run docker build -t pagedmedia/pagedjs . By default the container will run the development server with npm start docker run -it -p 9090:9090 pagedmedia/pagedjs The tests and specs can be run within the container by passing a seccomp file for Chrome and running npm test docker run -it --security-opt 'seccomp=seccomp.json' pagedmedia/pagedjs npm test && npm run specs Licence MIT License (MIT), which you can read here",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://github.com/pagedjs/pagedjs/blob/main/assets/pagedjs.png"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pagedjs/pagedjs#pagedjs---paged-media-tools"
+    },
+    {
+      "label": "Paged Media",
+      "url": "https://www.w3.org/TR/css-page-3/"
+    },
+    {
+      "label": "Generated Content",
+      "url": "https://www.w3.org/TR/css-gcpm-3/"
+    },
+    {
+      "label": "the pagedjs website",
+      "url": "https://pagedjs.org/documentation/cheatsheet/"
+    },
+    {
+      "label": "pagedjs.org/documentation",
+      "url": "https://pagedjs.org/documentation/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pagedjs/pagedjs#npm-module"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pagedjs/pagedjs#polyfill"
+    },
+    {
+      "label": "polyfill with Aurorae",
+      "url": "https://s3.amazonaws.com/pagedmedia/pagedjs/examples/polyfill.html"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pagedjs/pagedjs#chunker"
+    },
+    {
+      "label": "first 50 pages of Moby Dick",
+      "url": "https://s3.amazonaws.com/pagedmedia/pagedjs/examples/index.html"
+    },
+    {
+      "label": "chunk an Epub using Epub.js",
+      "url": "https://s3.amazonaws.com/pagedmedia/pagedjs/examples/epub.html"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pagedjs/pagedjs#polisher"
+    },
+    {
+      "label": "styles for print",
+      "url": "https://s3.amazonaws.com/pagedmedia/pagedjs/examples/polisher.html"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pagedjs/pagedjs#cli"
+    },
+    {
+      "label": "https://github.com/pagedjs/pagedjs-cli",
+      "url": "https://github.com/pagedjs/pagedjs-cli"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pagedjs/pagedjs#module"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pagedjs/pagedjs#how-pagedjs-processes-content"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pagedjs/pagedjs#setup"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pagedjs/pagedjs#development"
+    },
+    {
+      "label": "http://localhost:9090/",
+      "url": "http://localhost:9090/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pagedjs/pagedjs#deployment"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pagedjs/pagedjs#testing"
+    },
+    {
+      "label": "Jest",
+      "url": "https://facebook.github.io/jest/en/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pagedjs/pagedjs#tests"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pagedjs/pagedjs#specs"
+    },
+    {
+      "label": "https://www.npmjs.com/package/ghostscript4js#prerequisites",
+      "url": "https://www.npmjs.com/package/ghostscript4js#prerequisites"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pagedjs/pagedjs#docker"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pagedjs/pagedjs#licence"
+    },
+    {
+      "label": "here",
+      "url": "https://github.com/pagedjs/pagedjs-cli?tab=MIT-1-ov-file"
+    }
+  ],
+  "root_files": [
+    ".github",
+    ".gitlab/issue_templates",
+    "assets",
+    "css",
+    "examples",
+    "specs",
+    "src",
+    ".dockerignore",
+    ".editorconfig",
+    ".eslintrc.json",
+    ".gitignore",
+    ".gitlab-ci.yml",
+    "CONTRIBUTING.md",
+    "Dockerfile",
+    "LICENSE.md",
+    "README.md",
+    "action.yml",
+    "babel-jest.config.json",
+    "babel.config.json",
+    "docker-font.conf",
+    "index.html",
+    "jest.config.js",
+    "jsdoc.json",
+    "package-lock.json",
+    "package.json",
+    "rollup.config.js",
+    "rollup.server.config.js",
+    "seccomp.json"
+  ],
+  "release_count": 0,
+  "status": "verified"
+}

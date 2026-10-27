@@ -1,0 +1,227 @@
+{
+  "url": "https://github.com/halvves/shader-doodle",
+  "final_url": "https://github.com/mmmerl/shader-doodle",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:47:51.008903+00:00",
+  "stars": 588,
+  "forks": 37,
+  "description": "A friendly web-component for writing and rendering shaders.",
+  "homepage": "https://shader-doodle-overview.glitch.me/",
+  "topics": [
+    "canvas",
+    "creative-coding",
+    "fragment-shader",
+    "glsl",
+    "glsl-sandbox",
+    "html-canvas",
+    "javascript",
+    "pixel-shader",
+    "shader-playback",
+    "shaders",
+    "shadertoy",
+    "texture",
+    "uniform",
+    "vertex-shaders",
+    "webgl"
+  ],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2019-04-11T21:12:40.000Z",
+  "branch": "main",
+  "commit": "8b7c8390932752f87b62e155564c142a5201328c",
+  "readme": "<shader-doodle /> A friendly web-component for writing and rendering shaders. NOTE: this README and branch are for the new <shader-doodle /> alpha. To view the current stable version go to the v0 branch. <shader-doodle /> is a simple web-component loosely based on the The Book of Shaders's glsl previewer and Shadertoy. It sets up a flat responsive canvas on which to draw fragment shaders, and provides several built in uniforms relating to time, resolution, mouse position, etc. Usage Script Include <script src=\"https://unpkg.com/shader-doodle@alpha\"></script> <shader-doodle> <script type=\"x-shader/x-fragment\"> void main() { vec2 st = gl_FragCoord.xy / u_resolution.xy; vec3 color = vec3(st.x, st.y, abs(sin(u_time))); gl_FragColor = vec4(color, 1.0); } </script> </shader-doodle> Import npm install shader-doodle@alpha import 'shader-doodle'; <shader-doodle> <script type=\"x-shader/x-fragment\"> void main() { vec2 st = gl_FragCoord.xy / u_resolution.xy; vec3 color = vec3(st.x, st.y, abs(sin(u_time))); gl_FragColor = vec4(color, 1.0); } </script> </shader-doodle> API Right now the api is fairly basic. The default syntax is vanilla glsl and there are several built in uniforms following the conventions seen in The Book of Shaders. If you prefer ShaderToy's syntax you can set an attribute like so: <shader-doodle shadertoy />. Pre-Defined Uniforms Default (<shader-doodle />) uniform float u_time;: shader playback time (in seconds) uniform float u_delta;: delta time between frames (in seconds) uniform int u_frame;: shader playback frame uniform vec4 u_date;: year, month, day and seconds uniform vec2 u_resolution;: viewport resolution (in pixels) uniform vec2 u_mouse;: mouse pixel coords (x & y) uniform vec4 u_mousedrag: xy: last click or current drag position, zw: starting drag position (flipped negative when not mousedown) uniform vec3 u_orientation;: device orientation api values: alpha, beta, gamma Shadertoy (<shader-doodle shadertoy />) uniform float iTime;: shader playback time (in seconds) uniform float iDelta;: delta time between frames (in seconds) uniform int iFrame;: shader playback frame uniform vec4 iDate;: year, month, day and seconds uniform vec2 iResolution;: viewport resolution (in pixels) uniform vec2 iCurrentMouse;: mouse pixel coords (x & y) uniform vec4 iMouse: xy: last click or current drag position, zw: starting drag position (flipped negative when not mousedown) uniform vec3 iOrientation;: device orientation api values: alpha, beta, gamma NOTE: the slight difference in mouse uniform naming Textures Textures can be used as a sampler2D in a shader by using the <sd-texture /> component. This will pass in two uniforms: uniform sampler2D {texture_name} uniform vec2 {texture_name}_resolution Attributes src: source of an image/video or selector for a canvas name: specify a name for the texture uniform (will default to u_texture{index}) webcam: overrides src and tries to use webrtc webcam as texture source force-update: forces a texture to always update (useful when using a canvas animation or animated gif as a texture) Examples Image: <shader-doodle> <sd-texture src=\"image.jpg\"></sd-texture> <script type=\"x-shader/x-fragment\"> uniform sampler2D u_texture0; void main() { vec2 uv = gl_FragCoord.xy / u_resolution.xy; vec4 texture = texture2D(u_texture0, uv); gl_FragColor = texture; } </script> </shader-doodle> Video: <shader-doodle> <sd-texture src=\"video.mp4\" name=\"video\"></sd-texture> <script type=\"x-shader/x-fragment\"> uniform sampler2D video; void main() { vec2 uv = gl_FragCoord.xy / u_resolution.xy; vec4 texture = texture2D(video, uv); gl_FragColor = texture; } </script> </shader-doodle> Canvas: <canvas id=\"canvas\"></canvas> <shader-doodle> <sd-texture src=\"#canvas\" name=\"u_canvas\"></sd-texture> <script type=\"x-shader/x-fragment\"> uniform sampler2D u_canvas; void main() { vec2 uv = gl_FragCoord.xy / u_resolution.xy; vec4 texture = texture2D(u_canvas, uv); gl_FragColor = texture; } </script> </shader-doodle> <script> const text = 'L O R E M I P S U M'; const canvas = document.getElementById(\"canvas\"); canvas.height = 1024; canvas.width = 1024; const ctx = canvas.getContext(\"2d\"); ctx.font = \"Bold \" + canvas.width / 12 + \"px 'Helvetica'\"; ctx.textAlign = \"center\"; ctx.textBaseline = \"top\"; ctx.fillStyle = '#000'; ctx.fillRect(0, 0, canvas.width, canvas.height); ctx.fillStyle = '#fff'; ctx.translate(canvas.width / 2, 0); for (var i = -1; i < 6; i++) { ctx.fillText(text, 0, i * canvas.height / 6); } </script> Camera: <shader-doodle> <sd-texture webcam name=\"cam\"></sd-texture> <script type=\"x-shader/x-fragment\"> uniform sampler2D cam; uniform vec2 cam_resolution; vec2 coverScreen(vec2 fragCoord, vec2 resolution, float aspect) { vec2 uv = 0.5 * (2.0 * fragCoord - resolution); if (resolution.x / resolution.y > aspect) { uv = 0.5 - uv / vec2(resolution.x, -resolution.x / aspect); } else { uv = 0.5 - uv / vec2(resolution.y * aspect, -resolution.y); } return uv; } void main() { float aspect = cam_resolution.x / cam_resolution.y; vec2 uv = coverScreen(gl_FragCoord.xy, u_resolution, aspect); vec4 texture = texture2D(cam, uv); gl_FragColor = texture; } </script> </shader-doodle> Audio Data The frequency and waveform data from an audio source can be used in a shader as a sampler2D by using the <sd-audio /> component. This will pass in one uniform: uniform sampler2D {audio_name} The audio data is setup as two rows of texels. The first row is frequency data. The x/u axis corresponds to frequency (scaled to 0..1), and the value of a texel at a given x/u is the amplitude of the corresponding frequency. The second row is wave data. The x/u axis corresponds to the x axis of the waveform. (scaled to 0..1), and the value of a texel at a given x/u is the y axis of the waveform. Attributes src: a url to an audio file or an id selector for an <audio /> element. name: specify a name for the texture uniform (will default to u_audio{index}) loop: (temporarily disabled as part of an ios13 fix) loop the audio file (doesn't work on an existing audio tag) autoplay: (temporarily disabled as part of an ios13 fix) autoplay the audio file (doesn't work on an existing audio tag) crossorigin: (temporarily disabled as part of an ios13 fix) specify cors (doesn't work on an existing audio tag) Not yet implemented is a mic attribute that will allow using audio from a webrtc source. Examples File: <shader-doodle> <sd-audio src=\"./audio.mp3\" autoplay loop></sd-audio> <script type=\"x-shader/x-fragment\"> uniform sampler2D u_audio0; float amplitude(sampler2D audio, float f) { return texture2D(audio, vec2(f, .25)).x; } float wave(sampler2D audio, float t) { return texture2D(audio, vec2(t, .75)).x; } void main() { vec2 uv = gl_FragCoord.xy / u_resolution.xy; float w = wave(u_audio0, uv.x); float a = amplitude(u_audio0, abs(.5 - uv.y) / w); vec3 color = vec3(a * .5, (1. - a), 5. * a * (1. - a)) * a; color.rb += (1. - smoothstep(.0, .1, abs(w - uv.y))) * a; gl_FragColor = vec4(color, 1.); } </script> </shader-doodle> Audio Tag: <audio src=\"./audio.mp3\" autoplay loop id=\"audio\"></audio> <shader-doodle> <sd-audio src=\"#audio\"></sd-audio> <script type=\"x-shader/x-fragment\"> uniform sampler2D u_audio0; float amplitude(sampler2D audio, float f) { return texture2D(audio, vec2(f, .25)).x; } float wave(sampler2D audio, float t) { return texture2D(audio, vec2(t, .75)).x; } void main() { vec2 uv = gl_FragCoord.xy / u_resolution.xy; float w = wave(u_audio0, uv.x); float a = amplitude(u_audio0, abs(.5 - uv.y) / w); vec3 color = vec3(a * .5, (1. - a), 5. * a * (1. - a)) * a; color.rb += (1. - smoothstep(.0, .1, abs(w - uv.y))) * a; gl_FragColor = vec4(color, 1.); } </script> </shader-doodle> Next steps (ordered by priority) shader precision attribute clearColor attribute mouseover 0-1 uniform LinearCopy/NearestCopy helpers lerp attribute for mouse, mouseover, and deviceorientation custom uniforms webgl2 improvements to buffers (shared buffers etc...) See Also shaderpen - This library's predecessor. css-doodle - The inspiration behind rewriting shaderpen as a web-component. The Book of Shaders - A gentle step-by-step guide through the world Fragment Shaders. Shadertoy - Shader playground.",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://github.com/mmmerl/shader-doodle#shader-doodle-"
+    },
+    {
+      "label": "",
+      "url": "https://hello-shader-doodle.glitch.me"
+    },
+    {
+      "label": "",
+      "url": "https://codepen.io/pjkarlik/pen/abOVwaB"
+    },
+    {
+      "label": "",
+      "url": "https://codepen.io/halvves/pen/xxGXdRv"
+    },
+    {
+      "label": "",
+      "url": "https://codepen.io/halvves/pen/abOwJbR"
+    },
+    {
+      "label": "",
+      "url": "https://codepen.io/halvves/pen/WNbgvNx"
+    },
+    {
+      "label": "",
+      "url": "https://codepen.io/pjkarlik/pen/yLNEoBK"
+    },
+    {
+      "label": "",
+      "url": "https://codepen.io/mhazani/pen/VwwQYvE"
+    },
+    {
+      "label": "",
+      "url": "https://codepen.io/pjkarlik/pen/JjdVmqv"
+    },
+    {
+      "label": "",
+      "url": "https://codepen.io/pjkarlik/pen/poJYLea"
+    },
+    {
+      "label": "",
+      "url": "https://codepen.io/halvves/pen/dyyvrxN"
+    },
+    {
+      "label": "",
+      "url": "https://codepen.io/halvves/pen/VwwdQEN"
+    },
+    {
+      "label": "",
+      "url": "https://codepen.io/halvves/pen/PoqGvVG"
+    },
+    {
+      "label": "v0 branch",
+      "url": "https://github.com/shader-doodle/shader-doodle/tree/v0"
+    },
+    {
+      "label": "The Book of Shaders",
+      "url": "https://thebookofshaders.com/"
+    },
+    {
+      "label": "Shadertoy",
+      "url": "https://www.shadertoy.com/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/mmmerl/shader-doodle#usage"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/mmmerl/shader-doodle#script-include"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/mmmerl/shader-doodle#import"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/mmmerl/shader-doodle#api"
+    },
+    {
+      "label": "The Book of Shaders",
+      "url": "https://thebookofshaders.com/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/mmmerl/shader-doodle#pre-defined-uniforms"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/mmmerl/shader-doodle#default-shader-doodle-"
+    },
+    {
+      "label": "device orientation api",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/API/Detecting_device_orientation"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/mmmerl/shader-doodle#shadertoy-shader-doodle-shadertoy-"
+    },
+    {
+      "label": "device orientation api",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/API/Detecting_device_orientation"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/mmmerl/shader-doodle#textures"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/mmmerl/shader-doodle#attributes"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/mmmerl/shader-doodle#examples"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/mmmerl/shader-doodle#image"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/mmmerl/shader-doodle#video"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/mmmerl/shader-doodle#canvas"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/mmmerl/shader-doodle#camera"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/mmmerl/shader-doodle#audio-data"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/mmmerl/shader-doodle#attributes-1"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/mmmerl/shader-doodle#examples-1"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/mmmerl/shader-doodle#file"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/mmmerl/shader-doodle#audio-tag"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/mmmerl/shader-doodle#next-steps-ordered-by-priority"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/mmmerl/shader-doodle#see-also"
+    },
+    {
+      "label": "shaderpen",
+      "url": "https://github.com/shader-doodle/shaderpen/"
+    },
+    {
+      "label": "css-doodle",
+      "url": "https://github.com/css-doodle/css-doodle"
+    },
+    {
+      "label": "The Book of Shaders",
+      "url": "https://thebookofshaders.com/"
+    },
+    {
+      "label": "Shadertoy",
+      "url": "https://www.shadertoy.com/"
+    }
+  ],
+  "root_files": [
+    ".github/ISSUE_TEMPLATE",
+    "demo",
+    "screenshot",
+    "src",
+    ".editorconfig",
+    ".gitignore",
+    "CODE_OF_CONDUCT.md",
+    "LICENSE",
+    "README.md",
+    "package-lock.json",
+    "package.json",
+    "rollup.config.js"
+  ],
+  "release_count": 0,
+  "status": "verified"
+}

@@ -1,0 +1,194 @@
+{
+  "url": "https://github.com/Tresjs/tres",
+  "final_url": "https://github.com/Tresjs/tres",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:47:30.769635+00:00",
+  "stars": 3772,
+  "forks": 202,
+  "description": "Declarative ThreeJS using Vue Components",
+  "homepage": "https://tresjs.org",
+  "topics": [
+    "composable",
+    "custom-renderer",
+    "declarative",
+    "threejs",
+    "vite",
+    "vue",
+    "webgl"
+  ],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2022-11-27T20:36:37.000Z",
+  "branch": "main",
+  "commit": "023924963d2eaa7a6137bbb636d54ffb309fc94c",
+  "readme": "TresJS Ecosystem Declarative ThreeJS using Vue Components 💡 Build 3D scene as they were Vue components 🥰 It brings all the updated features of ThreeJS right away regardless the version 🦾 Fully Typed Tres (Spanish word for \"three\", pronounced /tres/ ) is a way of creating ThreeJS scenes with Vue components in a declarative fashion. It's build on-top of a Vue Custom Renderer and it's powered by Vite. The goal is to provide the Vue's community an easy way of building 3D scenes with Vue, always up to date with the latest ThreeJS features and with 0-to-none maintenance. Start by Checking out the docs Consulting the installation guide Looking at some demos Ecosystem Package Version Downloads Tres Cientos Post-processing Nuxt TresLeches 🍰 Sponsors Contribution We are open to contributions, please make sure to read the contributing guide before making a pull request. License MIT",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://github.com/Tresjs/.github/raw/main/.github/tres-banner.png"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@tresjs/core"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@tresjs/core"
+    },
+    {
+      "label": "",
+      "url": "https://tresjs.org/discord"
+    },
+    {
+      "label": "",
+      "url": "https://app.netlify.com/sites/tresjs-docs/deploys"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/Tresjs/tres#tresjs-ecosystem"
+    },
+    {
+      "label": "Vue Custom Renderer",
+      "url": "https://vuejs.org/api/custom-renderer.html#createrenderer"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/Tresjs/tres#start-by"
+    },
+    {
+      "label": "docs",
+      "url": "https://docs.tresjs.org"
+    },
+    {
+      "label": "installation guide",
+      "url": "https://docs.tresjs.org/getting-started/installation"
+    },
+    {
+      "label": "demos",
+      "url": "https://stackblitz.com/@alvarosabu/collections/tresjs"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/Tresjs/tres#ecosystem"
+    },
+    {
+      "label": "Tres",
+      "url": "https://github.com/Tresjs/tres/tree/main/packages/core"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/36dc0dd7a51ca3c1b16d718e570c377af4a7363a3c7bdbeca477ffebb50af2bc/68747470733a2f2f696d672e736869656c64732e696f2f6e706d2f762f40747265736a732f636f72652f6c61746573742e7376673f6c6162656c3d25323026636f6c6f723d253233383244424341"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/a3b7a32990e1fba98547bc981edbc4c57b33351f26e607287fd6e9fccb624c20/68747470733a2f2f696d672e736869656c64732e696f2f6e706d2f646d2f40747265736a732f636f72653f636f6c6f723d253233383244424341"
+    },
+    {
+      "label": "Cientos",
+      "url": "https://github.com/Tresjs/tres/tree/main/packages/cientos"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/2ca4d684218ea85f94ae7da9f9000221d7ba8e1776ecb425f104b00d17e563c8/68747470733a2f2f696d672e736869656c64732e696f2f6e706d2f762f40747265736a732f6369656e746f732f6c61746573742e7376673f6c6162656c3d25323026636f6c6f723d253233663139623030"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/070828b26c46acfdab2072c2087b89f06adb0858d7c269c920eadf9a0f46fa63/68747470733a2f2f696d672e736869656c64732e696f2f6e706d2f646d2f40747265736a732f6369656e746f733f636f6c6f723d253233663139623030"
+    },
+    {
+      "label": "Post-processing",
+      "url": "https://github.com/Tresjs/tres/tree/main/packages/postprocessing"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/d0634673a77ca64dde71f1210f85568f81875c6ccd4f5d33acc6e4aa7cd24c64/68747470733a2f2f696d672e736869656c64732e696f2f6e706d2f762f40747265736a732f706f73742d70726f63657373696e672f6c61746573742e7376673f6c6162656c3d25323026636f6c6f723d666637626163"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/faef666c972a27f06c1f34fde43d4c7577cb1ba9172719ad4de26d67029d5816/68747470733a2f2f696d672e736869656c64732e696f2f6e706d2f646d2f40747265736a732f706f73742d70726f63657373696e673f636f6c6f723d666637626163"
+    },
+    {
+      "label": "Nuxt",
+      "url": "https://github.com/Tresjs/tres/tree/main/packages/nuxt"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/b3a548d88789c29f02905b20002ccd5f4dc6b91e3bd7bb7fc912dc9b81451b63/68747470733a2f2f696d672e736869656c64732e696f2f6e706d2f762f40747265736a732f6e7578742f6c61746573742e7376673f6c6162656c3d25323026636f6c6f723d346634663466266c6f676f3d6e7578742e6a73"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/12bbbc4b3a570ebaacee4ceb998d0455eeeb9bf5b2052142e310796ab6f2b00a/68747470733a2f2f696d672e736869656c64732e696f2f6e706d2f646d2f40747265736a732f6e7578743f636f6c6f723d346634663466266c6f676f3d6e7578742e6a73"
+    },
+    {
+      "label": "TresLeches 🍰",
+      "url": "https://github.com/Tresjs/tres/tree/main/packages/leches"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/9bb75d431f948b55fc12d4019869a5da8f9fda247a894aab3d7725924a51e211/68747470733a2f2f696d672e736869656c64732e696f2f6e706d2f762f40747265736a732f6c65636865732f6c61746573742e7376673f6c6162656c3d25323026636f6c6f723d666666666666"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/bc0197d9bcb8d55a8f276ecb49770c37b752049fd8f8d658629b3b582d60a101/68747470733a2f2f696d672e736869656c64732e696f2f6e706d2f646d2f40747265736a732f6c65636865733f636f6c6f723d666666666666"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/Tresjs/tres#sponsors"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/sponsors/tresjs"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/Tresjs/tres#contribution"
+    },
+    {
+      "label": "contributing guide",
+      "url": "https://github.com/Tresjs/tres/blob/main/CONTRIBUTING.md"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/Tresjs/tres#license"
+    },
+    {
+      "label": "MIT",
+      "url": "https://github.com/Tresjs/tres/blob/main/LICENSE"
+    }
+  ],
+  "root_files": [
+    ".agents",
+    ".claude",
+    ".codex",
+    ".cursor",
+    ".github",
+    ".vscode",
+    "apps",
+    "packages",
+    "sponsorkit",
+    "tools",
+    ".gitattributes",
+    ".gitignore",
+    ".npmrc",
+    ".nvmrc",
+    ".nxignore",
+    "AGENTS.md",
+    "CHANGELOG.md",
+    "CLAUDE.md",
+    "CODE_OF_CONDUCT.md",
+    "CONTEXT-MAP.md",
+    "CONTRIBUTING.md",
+    "LICENSE",
+    "README.md",
+    "RELEASING.md",
+    "nx.json",
+    "package.json",
+    "pnpm-lock.yaml",
+    "pnpm-workspace.yaml",
+    "renovate.json",
+    "repo-manifest.json",
+    "sponsorkit.config.ts"
+  ],
+  "release_count": 260,
+  "status": "verified"
+}

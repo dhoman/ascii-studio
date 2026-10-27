@@ -1,0 +1,191 @@
+{
+  "url": "https://github.com/elemaudio/elementary",
+  "final_url": "https://github.com/elemaudio/elementary",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:47:46.119862+00:00",
+  "stars": 517,
+  "forks": 47,
+  "description": "Elementary is a JavaScript library for digital audio signal processing.",
+  "homepage": "https://www.elementary.audio/",
+  "topics": [
+    "audio",
+    "dsp",
+    "functional",
+    "javascript"
+  ],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2023-01-09T14:11:28.000Z",
+  "branch": "main",
+  "commit": "60e72342d92d18d174d9e20421f0d8070ab05b2a",
+  "readme": "Elementary is a JavaScript library for digital audio signal processing. Declarative: Elementary makes it simple to create interactive audio processes through functional, declarative programming. Describe your audio process as a function of your application state, and Elementary will efficiently update the underlying audio engine as necessary. Dynamic: Most audio processing frameworks and tools facilitate building static processes. But what happens as your audio requirements change throughout the user journey? Elementary is designed to facilitate and adapt to the dynamic nature of modern audio applications. Portable: By decoupling the JavaScript API from the underlying audio engine (the \"what\" from the \"how\"), Elementary enables writing portable applications. Whether the underlying engine is running in the browser, an audio plugin, or an embedded device, your JavaScript layer remains the same. Getting Started Every Elementary application starts with the @elemaudio/core package (npm, source), which provides the framework for defining your audio processes and a generic set of utilities for performing the graph rendering and reconciling steps. Next, because Elementary is designed to be used in a number of different environments, there are several different ways to integrate. If you're new to the project, we recommend studying the following workflows to get the feel of working in Elementary: Use the @elemaudio/web-renderer package (npm, source) with your favorite frontend UI library to make an audio web application Use the @elemaudio/offline-renderer package (npm, source) with Node.js for static file processing Once you're ready to dive in, we suggest starting with one of these ideas: Jump into the online playground for the quickest way of experimenting with sound Make an audio effects plugin following the SRVB plugin template Try the small command line tool here in this repository to explore an example native integration Check out the Native Integrations guide for embedding Elementary's C++ engine in your own native code Read the Custom Native Nodes guide for extending Elementary's built-in DSP library with your own low-level processors Documentation You can find the Elementary documentation on the website, or if you like, you can jump straight into: Guides Tutorials Project Showcase If you need help, join the community on the Elementary Audio Discord and ask any questions you have! Releases Releases are made both here in GitHub and deployed to npm following npm's semver conventions. Because your project may need to coordinate both the native C++ library and the corresponding JavaScript dependencies, it may be helpful to understand our release conventions. Canary releases are always made first on the develop branch using git tags Corresponding JavaScript packages are deployed to npm tagged next to indicate their status After a brief validation period, canary releases are promoted to main via git merge The corresponding JavaScript packages are then tagged latest, making them the default install candidates on npm At this time a new GitHub Release is written to mark the update and document the changelog As a general rule of thumb, we recommend integrating Elementary via the main branch of this repo and the corresponding latest packages on npm. If you want to target the more bleeding edge, you can integrate via the git tags on the develop branch and the corresponding next packages on npm. Contributing We'd love to get you involved! Right now, the primary focus is to promote and grow the Elementary community. So if you want to help, consider: Making an open source project with Elementary, like this one or this one Writing your own higher-level modules and sharing them on npm, like this Writing your own custom native nodes to extend the engine and sharing them on GitHub If you're more interested in digging in under the hood, check out the open issues to see where we need help right now. Note that while we're focusing on the community around Elementary, the immediate goals in this repository are ease of use, extensibility, and performance. We will likely be careful and slow to add new features, so if there's a particular feature you want to see here, please open an issue to start a conversation around your proposal first. If you wish to become involved in the project beyond development, you could become a sponsor. This form of assistance is deeply valued and instrumental in propelling the project forward. We are genuinely grateful for any support you choose to provide. License Elementary is MIT licensed.",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/6850ba40078f45c9844e481ec292a405dd734c02253786d912fe4eb9cba3e05e/68747470733a2f2f7777772e656c656d656e746172792e617564696f2f4c6f636b75702e737667"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/elemaudio/elementary/actions"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/elemaudio/elementary/blob/main/LICENSE.md"
+    },
+    {
+      "label": "",
+      "url": "https://discord.gg/xSu9JjHwYc"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@elemaudio/core"
+    },
+    {
+      "label": "Elementary",
+      "url": "https://elementary.audio"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/elemaudio/elementary#getting-started"
+    },
+    {
+      "label": "@elemaudio/core",
+      "url": "https://www.elementary.audio/docs/packages/core"
+    },
+    {
+      "label": "npm",
+      "url": "https://www.npmjs.com/package/@elemaudio/core"
+    },
+    {
+      "label": "source",
+      "url": "https://github.com/elemaudio/elementary/blob/main/js/packages/core"
+    },
+    {
+      "label": "@elemaudio/web-renderer",
+      "url": "https://www.elementary.audio/docs/packages/web-renderer"
+    },
+    {
+      "label": "npm",
+      "url": "https://www.npmjs.com/package/@elemaudio/web-renderer"
+    },
+    {
+      "label": "source",
+      "url": "https://github.com/elemaudio/elementary/blob/main/js/packages/web-renderer"
+    },
+    {
+      "label": "@elemaudio/offline-renderer",
+      "url": "https://www.elementary.audio/docs/packages/offline-renderer"
+    },
+    {
+      "label": "npm",
+      "url": "https://www.npmjs.com/package/@elemaudio/offline-renderer"
+    },
+    {
+      "label": "source",
+      "url": "https://github.com/elemaudio/elementary/blob/main/js/packages/offline-renderer"
+    },
+    {
+      "label": "online playground",
+      "url": "https://www.elementary.audio/playground"
+    },
+    {
+      "label": "SRVB plugin template",
+      "url": "https://github.com/elemaudio/srvb"
+    },
+    {
+      "label": "command line tool",
+      "url": "https://github.com/elemaudio/elementary/tree/main/cli"
+    },
+    {
+      "label": "Native Integrations",
+      "url": "https://www.elementary.audio/docs/guides/Native_Integrations"
+    },
+    {
+      "label": "Custom Native Nodes",
+      "url": "https://www.elementary.audio/docs/guides/Custom_Native_Nodes"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/elemaudio/elementary#documentation"
+    },
+    {
+      "label": "on the website",
+      "url": "https://elementary.audio/"
+    },
+    {
+      "label": "Guides",
+      "url": "https://elementary.audio/docs/guides/Making_Sound/"
+    },
+    {
+      "label": "Tutorials",
+      "url": "https://www.elementary.audio/docs/tutorials/distortion-saturation-wave-shaping"
+    },
+    {
+      "label": "Project Showcase",
+      "url": "https://www.elementary.audio/showcase"
+    },
+    {
+      "label": "Elementary Audio Discord",
+      "url": "https://discord.gg/xSu9JjHwYc"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/elemaudio/elementary#releases"
+    },
+    {
+      "label": "npm",
+      "url": "https://www.npmjs.com"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/elemaudio/elementary#contributing"
+    },
+    {
+      "label": "this one",
+      "url": "https://github.com/bgins/coincident-spectra"
+    },
+    {
+      "label": "this one",
+      "url": "https://github.com/teetow/elementary_grid"
+    },
+    {
+      "label": "like this",
+      "url": "https://github.com/nick-thompson/drumsynth/"
+    },
+    {
+      "label": "open issues",
+      "url": "https://github.com/elemaudio/elementary/issues"
+    },
+    {
+      "label": "open an issue",
+      "url": "https://github.com/elemaudio/elementary/issues/new"
+    },
+    {
+      "label": "become a sponsor",
+      "url": "https://github.com/sponsors/nick-thompson"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/elemaudio/elementary#license"
+    },
+    {
+      "label": "MIT licensed",
+      "url": "https://github.com/elemaudio/elementary/blob/main/LICENSE.md"
+    }
+  ],
+  "root_files": [
+    ".github/workflows",
+    "cli",
+    "js",
+    "runtime",
+    "scripts",
+    "wasm",
+    ".gitignore",
+    ".gitmodules",
+    "CMakeLists.txt",
+    "LICENSE.md",
+    "README.md"
+  ],
+  "release_count": 7,
+  "status": "verified"
+}

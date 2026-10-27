@@ -1,0 +1,197 @@
+{
+  "url": "https://github.com/robin-dela/hover-effect",
+  "final_url": "https://github.com/robin-dela/hover-effect",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:48:13.969433+00:00",
+  "stars": 1885,
+  "forks": 307,
+  "description": "Javascript library to draw and animate images on hover",
+  "homepage": "",
+  "topics": [],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2018-03-27T14:10:15.000Z",
+  "branch": "master",
+  "commit": "1938cbff22a0379c5c5f17355550961374e7754c",
+  "readme": "Hover effect Javascript library to draw and animate images on hover. DEMO ARTICLE Example Use locally To load the images you'll need to view the demo via a web server, simply go to the demo's folder location and type python -m SimpleHTTPServer 8000 in your terminal. Then access the demo in your browser by typing: localhost:8000 Basic usage This helper needs Three.js and gsap to do the transition, so you need to include it before this little helper. Then you only need a div element in HTML to start animating things with a piece of code like this: <!-- Div to draw the effect --> <div class=\"my-div\"></div> <!-- library needed --> <script src=\"three.min.js\"></script> <script src=\"gsap.min.js\"></script> <script src=\"dist/hover.umd.js\"></script> <script> var myAnimation = new hoverEffect({ parent: document.querySelector('.my-div'), intensity: 0.3, image1: 'images/myImage1.jpg', image2: 'images/myImage2.jpg', displacementImage: 'images/myDistorsionImage.png' }); </script> Node JS usage This helper can also be used in node js environments. Three.js and TweenMax scripts are included as dependencies in the package so you don't need to manually include them. Install npm install hover-effect Import import hoverEffect from 'hover-effect' Init Initialize just as you would in the basic usage example above. Options Mandatory parameters Name Type Default Description parent Dom element null The DOM element where the animation will be injected. The images of the animation will take the parent's size. image1 Image null The first Image of the animation. image2 Image null The second Image of the animation. displacementImage Image null The Image used to do the transition between the 2 main images. Optional parameters Name Type Default Description intensity Float 1 Used to determine the intensity of the distortion effect. 0 is no effect and 1 is full distortion. intensity1 Float intensity Overrides the distortion intensity of the first image. intensity2 Float intensity Overrides the distortion intensity of the second image. angle Float Math.PI / 4 Angle of the distortion effect in Radians. Defaults to Pi / 4 (45 degrees). angle1 Float angle Overrides the distortion angle for the first image. angle2 Float -angle * 3 Overrides the distortion angle for the second image. speedIn Float 1.6 Speed of the inbound animation (in seconds). speedOut Float 1.2 Speed of the outbound animation (in seconds). hover Boolean true if set to false the animation will not be triggered on hover (see next and previous function to interact) easing String Expo.easeOut Easing of the transition, see greensock easing video Boolean false Defines if you want to use videos instead of images (note: you need 2 videos, it doesn't work with one image and one video.) imagesRatio Float 1 Specify a value if you want a background: cover type of behaviour, otherwise it will apply a square aspect ratio. usage: image height / image width example: 1080 / 1920 Methods Name Description next Transition to the second image. previous Transition to the first image. Credits Thanks to : Codrops for the creation of the example Aarni Koskela for the improvements Celso White for the multiple module formats Made with it Codepen demo and Medium article by Alex Brown https://stimmt.digital/en/ https://www.fabiofantolino.com/en Youtube tutorial https://www.youtube.com/watch?v=9kcOQdJHyIo https://www.estudionk.com/en https://github.com/AlbanCrepel/vue-displacement-slideshow https://digitalpresent.io/about https://www.couleecreative.com/ https://two.zero.nyc/ https://www.danilodemarco.com/ https://lsce.com/ http://vadimtyurin.com/",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://github.com/robin-dela/hover-effect#hover-effect"
+    },
+    {
+      "label": "",
+      "url": "https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=ZGDNS5D28SFWQ"
+    },
+    {
+      "label": "DEMO",
+      "url": "https://tympanus.net/Development/DistortionHoverEffect/"
+    },
+    {
+      "label": "ARTICLE",
+      "url": "https://tympanus.net/codrops/2018/04/10/webgl-distortion-hover-effects/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/robin-dela/hover-effect#example"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/robin-dela/hover-effect/blob/master/gifs/1.gif?raw=true"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/robin-dela/hover-effect/blob/master/gifs/2.gif?raw=true"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/robin-dela/hover-effect#use-locally"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/robin-dela/hover-effect#basic-usage"
+    },
+    {
+      "label": "Three.js",
+      "url": "https://threejs.org"
+    },
+    {
+      "label": "gsap",
+      "url": "https://greensock.com/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/robin-dela/hover-effect#node-js-usage"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/robin-dela/hover-effect#install"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/robin-dela/hover-effect#import"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/robin-dela/hover-effect#init"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/robin-dela/hover-effect#options"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/robin-dela/hover-effect#mandatory-parameters"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/robin-dela/hover-effect#optional-parameters"
+    },
+    {
+      "label": "greensock easing",
+      "url": "https://greensock.com/ease-visualizer"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/robin-dela/hover-effect#methods"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/robin-dela/hover-effect#credits"
+    },
+    {
+      "label": "Codrops",
+      "url": "https://twitter.com/crnacura"
+    },
+    {
+      "label": "Aarni Koskela",
+      "url": "https://github.com/akx/"
+    },
+    {
+      "label": "Celso White",
+      "url": "https://github.com/celsowhite"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/robin-dela/hover-effect#made-with-it"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/robin-dela/hover-effect/blob/master/gifs/alex_brown.gif?raw=true"
+    },
+    {
+      "label": "Codepen demo",
+      "url": "https://codepen.io/alxrbrown/pen/GxVQLr"
+    },
+    {
+      "label": "Medium article",
+      "url": "https://medium.com/@alxrbrown/create-a-distortion-hover-effect-using-webgl-32fc1ab50d24"
+    },
+    {
+      "label": "https://stimmt.digital/en/",
+      "url": "https://stimmt.digital/en/"
+    },
+    {
+      "label": "https://www.fabiofantolino.com/en",
+      "url": "https://www.fabiofantolino.com/en"
+    },
+    {
+      "label": "Youtube tutorial",
+      "url": "https://www.youtube.com/watch?v=o0zlX1E7l0A"
+    },
+    {
+      "label": "https://www.youtube.com/watch?v=9kcOQdJHyIo",
+      "url": "https://www.youtube.com/watch?v=9kcOQdJHyIo"
+    },
+    {
+      "label": "https://www.estudionk.com/en",
+      "url": "https://www.estudionk.com/en"
+    },
+    {
+      "label": "https://github.com/AlbanCrepel/vue-displacement-slideshow",
+      "url": "https://github.com/AlbanCrepel/vue-displacement-slideshow"
+    },
+    {
+      "label": "https://digitalpresent.io/about",
+      "url": "https://digitalpresent.io/about"
+    },
+    {
+      "label": "https://www.couleecreative.com/",
+      "url": "https://www.couleecreative.com/"
+    },
+    {
+      "label": "https://two.zero.nyc/",
+      "url": "https://two.zero.nyc/"
+    },
+    {
+      "label": "https://www.danilodemarco.com/",
+      "url": "https://www.danilodemarco.com/"
+    },
+    {
+      "label": "https://lsce.com/",
+      "url": "https://lsce.com/"
+    },
+    {
+      "label": "http://vadimtyurin.com/",
+      "url": "http://vadimtyurin.com/"
+    }
+  ],
+  "root_files": [
+    ".github",
+    "dist",
+    "example",
+    "gifs",
+    "images",
+    "src",
+    "videos",
+    ".DS_Store",
+    ".gitignore",
+    "LICENSE",
+    "index.html",
+    "package-lock.json",
+    "package.json",
+    "readme.md"
+  ],
+  "release_count": 0,
+  "status": "verified"
+}

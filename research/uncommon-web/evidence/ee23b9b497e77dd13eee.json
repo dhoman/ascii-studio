@@ -1,0 +1,114 @@
+{
+  "url": "https://github.com/mikhailmogilnikov/mesh-gradient",
+  "final_url": "https://github.com/mikhailmogilnikov/mesh-gradient",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:48:02.997777+00:00",
+  "stars": 60,
+  "forks": 2,
+  "description": "Apple-inspired animated mesh gradient for the web.",
+  "homepage": "https://meshgradientweb.vercel.app",
+  "topics": [
+    "mesh-gradient",
+    "typescript"
+  ],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2025-08-18T18:53:26.000Z",
+  "branch": "main",
+  "commit": "83ff215c5836ed6622549db2a3a789f5cab1261f",
+  "readme": "Mesh Gradient Apple-inspired animated mesh gradient for the web. Written fully on TypeScript and packaged for vanilla JS, React, and Vue. Documentation Documentation site: meshgradientweb.vercel.app Current npm line: 2.x. Major rewrite of the WebGL pipeline, sizing/HiDPI correctness, ResizeObserver-based layout, pacing & accessibility options, richer MeshGradientOptions, and refreshed React/Vue integrations. Upgrade core + react/vue together — see CHANGELOG. Packages Package Description @mesh-gradient/core Vanilla MeshGradient class (WebGL) @mesh-gradient/react React component & hooks @mesh-gradient/vue Vue 3 component & composable Credits @jordienr @kevinhufnagl @stripe Contributing Please read the contributing guide. License Licensed under the MIT license.",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://github.com/mikhailmogilnikov/mesh-gradient#mesh-gradient"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/mikhailmogilnikov/mesh-gradient/blob/main/apps/docs/public/mesh.png"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/mikhailmogilnikov/mesh-gradient#documentation"
+    },
+    {
+      "label": "meshgradientweb.vercel.app",
+      "url": "https://meshgradientweb.vercel.app"
+    },
+    {
+      "label": "CHANGELOG",
+      "url": "https://github.com/mikhailmogilnikov/mesh-gradient/blob/main/packages/core/CHANGELOG.md"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/mikhailmogilnikov/mesh-gradient#packages"
+    },
+    {
+      "label": "@mesh-gradient/core",
+      "url": "https://github.com/mikhailmogilnikov/mesh-gradient/blob/main/packages/core"
+    },
+    {
+      "label": "@mesh-gradient/react",
+      "url": "https://github.com/mikhailmogilnikov/mesh-gradient/blob/main/packages/react"
+    },
+    {
+      "label": "@mesh-gradient/vue",
+      "url": "https://github.com/mikhailmogilnikov/mesh-gradient/blob/main/packages/vue"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/mikhailmogilnikov/mesh-gradient#credits"
+    },
+    {
+      "label": "@jordienr",
+      "url": "https://github.com/jordienr"
+    },
+    {
+      "label": "@kevinhufnagl",
+      "url": "https://kevinhufnagl.com/"
+    },
+    {
+      "label": "@stripe",
+      "url": "https://stripe.com"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/mikhailmogilnikov/mesh-gradient#contributing"
+    },
+    {
+      "label": "contributing guide",
+      "url": "https://github.com/mikhailmogilnikov/mesh-gradient/blob/main/CONTRIBUTING.md"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/mikhailmogilnikov/mesh-gradient#license"
+    },
+    {
+      "label": "MIT license",
+      "url": "https://github.com/mikhailmogilnikov/mesh-gradient/blob/main/LICENSE.md"
+    }
+  ],
+  "root_files": [
+    ".changeset",
+    ".github/workflows",
+    ".husky",
+    ".vscode",
+    "apps/docs-fuma",
+    "configs",
+    "packages",
+    ".gitignore",
+    ".npmrc",
+    ".prettierignore",
+    ".prettierrc",
+    "CONTRIBUTING.md",
+    "LICENSE.md",
+    "README.md",
+    "commitlint.config.js",
+    "eslint.config.mjs",
+    "package.json",
+    "pnpm-lock.yaml",
+    "pnpm-workspace.yaml",
+    "turbo.json"
+  ],
+  "release_count": 1,
+  "status": "verified"
+}

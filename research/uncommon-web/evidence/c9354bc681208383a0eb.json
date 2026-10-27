@@ -1,0 +1,61 @@
+{
+  "url": "https://github.com/sgwilym/windups",
+  "final_url": "https://github.com/sgwilym/windups",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:48:15.811869+00:00",
+  "stars": 861,
+  "forks": 18,
+  "description": "A unique typewriter effect library for React.",
+  "homepage": "https://windups.gwil.co",
+  "topics": [
+    "animation",
+    "javascript",
+    "react",
+    "reactjs",
+    "typewriter",
+    "typewriter-effect",
+    "windups"
+  ],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2019-08-22T15:45:28.000Z",
+  "branch": "master",
+  "commit": "1477cd9d171cd0153c0012359aee7aca33798634",
+  "readme": "windups 🐸 Examples, guides, API docs, and more! Much of it presented by a talking frog! A unique typewriter (or, ahem, \"windup\") effect library for React. This effect can be applied to strings or pretty anything you can put in React's children prop. What's it look like? For strings: import { useWindup } from \"windups\"; function MyWindup() { const [text] = useWindup( \"This string will be rendered character by character!\" ); return <div>{text}</div>; } For pretty much everything else: import { WindupChildren } from \"windups\"; function MyWindup() { return ( <WindupChildren> {\"It's fun to do\"} <em>{\"wild\"}</em> {\"stuff with text!\"} </WindupChildren> ); } There are additional APIs for: Controlling the pacing of the text! Adding pauses! Firing effects (e.g. when each character is typed, or at arbitrary points)! Ahead of render-time line-breaking! Want to see a codebase that makes extensive, real-word use of this package? Source for the docs site is at https://github.com/sgwilym/windups-docs",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://github.com/sgwilym/windups#windups"
+    },
+    {
+      "label": "Examples, guides, API docs, and more! Much of it presented by a talking frog!",
+      "url": "https://windups.gwil.co"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/sgwilym/windups#whats-it-look-like"
+    },
+    {
+      "label": "https://github.com/sgwilym/windups-docs",
+      "url": "https://github.com/sgwilym/windups-docs"
+    }
+  ],
+  "root_files": [
+    ".github",
+    ".nova",
+    ".vscode",
+    "example",
+    "src",
+    ".eslintrc.js",
+    ".gitignore",
+    "CHANGELOG.md",
+    "LICENSE",
+    "README.md",
+    "jest.config.js",
+    "package.json",
+    "tsconfig.json",
+    "yarn.lock"
+  ],
+  "release_count": 0,
+  "status": "verified"
+}

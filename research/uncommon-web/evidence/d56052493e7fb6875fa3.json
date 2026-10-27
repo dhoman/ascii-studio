@@ -1,0 +1,134 @@
+{
+  "url": "https://github.com/raphaelsalaja/audio",
+  "final_url": "https://github.com/raphaelsalaja/audio",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:48:13.013429+00:00",
+  "stars": 589,
+  "forks": 20,
+  "description": "Declarative audio synthesis for the web",
+  "homepage": "https://audio.raphaelsalaja.com",
+  "topics": [
+    "audio",
+    "declarative",
+    "nextjs",
+    "react",
+    "sound-design",
+    "synthesizer",
+    "typescript",
+    "ui-sounds",
+    "web-audio",
+    "web-audio-api"
+  ],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2026-04-04T13:49:52.000Z",
+  "branch": "main",
+  "commit": "d8c04c77eff93e4ff8355b96dfa806f9a8c79b69",
+  "readme": "@web-kits/audio Declarative audio synthesis for the web. Describe sounds as plain objects, play them with one function call. ~11 kB gzipped, tree-shakeable, works with vanilla JS or React. Install npm install @web-kits/audio Quick start import { defineSound, ensureReady } from \"@web-kits/audio\"; const click = defineSound({ source: { type: \"sine\", frequency: { start: 1200, end: 300 } }, envelope: { attack: 0.001, decay: 0.06, sustain: 0, release: 0.03 }, gain: 0.3, }); await ensureReady(); click(); React import { usePatch } from \"@web-kits/audio/react\"; function App() { const patch = usePatch(\"/patches/core.json\"); return ( <button onClick={() => patch.play(\"click\")} disabled={!patch.ready}> Click me </button> ); } CLI Browse and install community sound patches directly from GitHub repos: # Browse the registry npx @web-kits/audio add # Install from a GitHub repo npx @web-kits/audio add user/repo # Create a new patch npx @web-kits/audio init # List installed patches npx @web-kits/audio list Monorepo structure packages/audio Core library + CLI (published to npm) apps/web Documentation, registry, and homepage ui/ Shared UI components .web-kits/ First-party sound patches & generated code Documentation Full docs at audio.raphaelsalaja.com. References Built on the Web Audio API Patch discovery and CLI inspired by skills.sh by Vercel Contributing See CONTRIBUTING.md for setup instructions and guidelines. License MIT",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://github.com/raphaelsalaja/audio#web-kitsaudio"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@web-kits/audio"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/raphaelsalaja/audio/blob/main/LICENSE"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/raphaelsalaja/audio/actions/workflows/ci.yml"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/raphaelsalaja/audio#install"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/raphaelsalaja/audio#quick-start"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/raphaelsalaja/audio#react"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/raphaelsalaja/audio#cli"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/raphaelsalaja/audio#monorepo-structure"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/raphaelsalaja/audio#documentation"
+    },
+    {
+      "label": "audio.raphaelsalaja.com",
+      "url": "https://audio.raphaelsalaja.com"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/raphaelsalaja/audio#references"
+    },
+    {
+      "label": "Web Audio API",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API"
+    },
+    {
+      "label": "skills.sh",
+      "url": "https://skills.sh"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/raphaelsalaja/audio#contributing"
+    },
+    {
+      "label": "CONTRIBUTING.md",
+      "url": "https://github.com/raphaelsalaja/audio/blob/main/CONTRIBUTING.md"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/raphaelsalaja/audio#license"
+    },
+    {
+      "label": "MIT",
+      "url": "https://github.com/raphaelsalaja/audio/blob/main/LICENSE"
+    }
+  ],
+  "root_files": [
+    ".changeset",
+    ".github",
+    ".husky",
+    ".vscode",
+    ".web-kits",
+    "apps",
+    "assets",
+    "icons",
+    "packages/audio",
+    "scripts",
+    "skills/create-sound",
+    "ui",
+    ".gitignore",
+    ".prettierignore",
+    ".prettierrc",
+    "CODE_OF_CONDUCT.md",
+    "CONTRIBUTING.md",
+    "LICENSE",
+    "README.md",
+    "SECURITY.md",
+    "biome.json",
+    "commitlint.config.js",
+    "package.json",
+    "pnpm-lock.yaml",
+    "pnpm-workspace.yaml",
+    "skills-lock.json",
+    "tsconfig.json",
+    "turbo.json"
+  ],
+  "release_count": null,
+  "status": "verified"
+}

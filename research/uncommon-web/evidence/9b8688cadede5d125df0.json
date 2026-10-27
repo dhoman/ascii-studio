@@ -1,0 +1,242 @@
+{
+  "url": "https://github.com/codse/animata",
+  "final_url": "https://github.com/codse/animata",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:47:40.829713+00:00",
+  "stars": 2978,
+  "forks": 243,
+  "description": "Bring your site to life with easy to use animation & interaction code. Copy. Paste. Animate. ",
+  "homepage": "https://animata.design",
+  "topics": [
+    "animation",
+    "css-animations",
+    "hacktober",
+    "hacktoberfest",
+    "hacktoberfest-accepted",
+    "interaction",
+    "nextjs",
+    "react",
+    "tailwindcss"
+  ],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2024-06-10T03:46:56.000Z",
+  "branch": "main",
+  "commit": "e7478b835a3b5c4153e71f60666634e91bb38813",
+  "readme": "Handcrafted ✍️ interaction animations and visual effects sourced from across the internet 🛜, ready for you to copy and paste into your project seamlessly. Built with Table of Contents Introduction What is Animata? What is not Animata? Getting Started Requirements Setup Instructions Folder Structure (Recommended) Install Dependencies Create Utility Functions Contributing Authors License Introduction What is Animata? Welcome to Animata, a free and open-source collection of hand-crafted animations, effects, and interactions that you can seamlessly integrate into your project with a simple copy and paste. The animations are built using TailwindCSS and React.js, so they can be easily customized to fit your project's design. What is not Animata? Animata is not a full-fledged UI library like Material-UI or Chakra-UI. It is a collection of animations and effects that you can use to enhance your project's design. You can also use Animata alongside other UI libraries or design systems (you will need to set up TailwindCSS for this). Getting Started You don't need to install it as a dependency instead you can simply copy and paste the code, as shadcn/ui, into your project. However, you still need to install the other dependency that the code needs. Requirements TailwindCSS: For styling. Framer Motion (Optional): For complex animations. Lucide Icons or Radix Icons (Optional): Use for icons, or replace with any other icon library or SVGs. Setup Instructions Folder Structure (Recommended) / /components /ui where / is the root of your project, /components is where you keep your components and the project has been set up using paths in the tsconfig.json file. { \"compilerOptions\": { \"baseUrl\": \".\", \"paths\": { \"@/*\": [\"./*\"] } } } Install Dependencies Install the required dependencies, if you haven't already: npm install tailwind-merge clsx lucide-react tailwindcss-animate Add tailwindcss-animate to plugins in tailwind.config.js file: module.exports = { plugins: [require(\"tailwindcss-animate\")], }; Create Utility Functions Create utils.ts file in the libs folder and paste the following code: import { type ClassValue, clsx } from \"clsx\"; import { twMerge } from \"tailwind-merge\"; export function cn(...inputs: ClassValue[]) { return twMerge(clsx(inputs)); } NOTE If you see something that has been imported but not mentioned in the documentation, then it is a dependency you need to install. If it starts with @/ then it is Animata's component else it is an external dependency. In such a case, you can submit a PR to update the documentation. If something is not working, the docs probably miss the tailwind.config.js updates. You can look for the entries that have been added to the tailwind.config.js in Animata's source code. You can create an issue or submit a PR to update the documentation. Contributing Contributions to Animata are always welcome! 📥 Pull requests and 🌟 Stars are always welcome. Read our contributing guide to get started, or find us on Discord, we will take the time to guide you. Authors Heartfelt gratitude goes to each of you for your amazing contributions to this project. Your hard work, creativity, and dedication have been nothing short of incredible. Whether it was coding, debugging, testing, or sharing ideas, every effort made a significant difference. License This project is licensed under the MIT License. see the LICENSE file for details.",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://animata.design/"
+    },
+    {
+      "label": "",
+      "url": "https://discord.gg/STYEh3UW"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/codse/animata#built-with"
+    },
+    {
+      "label": "",
+      "url": "https://nextjs.org/?ref=animata.design"
+    },
+    {
+      "label": "",
+      "url": "https://reactjs.org/?ref=animata.design"
+    },
+    {
+      "label": "",
+      "url": "https://tailwindcss.com/?ref=animata.design"
+    },
+    {
+      "label": "",
+      "url": "https://www.framer.com/motion/?ref=animata.design"
+    },
+    {
+      "label": "",
+      "url": "https://www.typescriptlang.org/?ref=animata.design"
+    },
+    {
+      "label": "",
+      "url": "https://vercel.com/?ref=animata.design"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/codse/animata#table-of-contents"
+    },
+    {
+      "label": "Introduction",
+      "url": "https://github.com/codse/animata#introduction"
+    },
+    {
+      "label": "What is Animata?",
+      "url": "https://github.com/codse/animata#what-is-animata"
+    },
+    {
+      "label": "What is not Animata?",
+      "url": "https://github.com/codse/animata#what-is-not-animata"
+    },
+    {
+      "label": "Getting Started",
+      "url": "https://github.com/codse/animata#getting-started"
+    },
+    {
+      "label": "Requirements",
+      "url": "https://github.com/codse/animata#requirements"
+    },
+    {
+      "label": "Setup Instructions",
+      "url": "https://github.com/codse/animata#setup-instructions"
+    },
+    {
+      "label": "Folder Structure (Recommended)",
+      "url": "https://github.com/codse/animata#folder-structure-recommended"
+    },
+    {
+      "label": "Install Dependencies",
+      "url": "https://github.com/codse/animata#install-dependencies"
+    },
+    {
+      "label": "Create Utility Functions",
+      "url": "https://github.com/codse/animata#create-utility-functions"
+    },
+    {
+      "label": "Contributing",
+      "url": "https://github.com/codse/animata#contributing"
+    },
+    {
+      "label": "Authors",
+      "url": "https://github.com/codse/animata#authors"
+    },
+    {
+      "label": "License",
+      "url": "https://github.com/codse/animata#license"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/codse/animata#introduction"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/codse/animata#what-is-animata"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/codse/animata#what-is-not-animata"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/codse/animata#getting-started"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/codse/animata#requirements"
+    },
+    {
+      "label": "TailwindCSS",
+      "url": "https://tailwindcss.com/docs/installation"
+    },
+    {
+      "label": "Framer Motion",
+      "url": "https://www.framer.com/motion/"
+    },
+    {
+      "label": "Lucide Icons",
+      "url": "https://lucide.dev/"
+    },
+    {
+      "label": "Radix Icons",
+      "url": "https://www.radix-ui.com/icons"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/codse/animata#setup-instructions"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/codse/animata#folder-structure-recommended"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/codse/animata#install-dependencies"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/codse/animata#create-utility-functions"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/codse/animata#note"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/codse/animata#contributing"
+    },
+    {
+      "label": "contributing guide",
+      "url": "https://animata.design/docs/contributing"
+    },
+    {
+      "label": "Discord",
+      "url": "https://discord.gg/STYEh3UW"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/codse/animata#authors"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/9c7757c12109a4505b94e599816323f0149b1dffef138d9901ccbabf6a5bd45e/68747470733a2f2f636f6e747269622e726f636b732f696d6167653f7265706f3d636f6473652f616e696d617461266d61783d313030"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/codse/animata#license"
+    },
+    {
+      "label": "LICENSE",
+      "url": "https://github.com/codse/animata/blob/main/LICENSE.md"
+    }
+  ],
+  "root_files": [
+    ".github",
+    ".husky",
+    ".storybook",
+    ".vscode",
+    "animata",
+    "app",
+    "components",
+    "config",
+    "content",
+    "hooks",
+    "lib",
+    "public",
+    "scripts",
+    "styles",
+    "templates",
+    "types",
+    ".env.development",
+    ".env.production",
+    ".gitignore",
+    ".node-version",
+    ".prettierrc.cjs",
+    "CLAUDE.md",
+    "CODE_OF_CONDUCT.md",
+    "LICENSE.md",
+    "README.md",
+    "biome.json",
+    "commitlint.config.cjs",
+    "components.json",
+    "doctor.config.ts",
+    "global.d.ts",
+    "next.config.mjs",
+    "package.json",
+    "pnpm-lock.yaml",
+    "pnpm-workspace.yaml",
+    "postcss.config.mjs",
+    "tsconfig.json",
+    "velite.config.ts"
+  ],
+  "release_count": 14,
+  "status": "verified"
+}

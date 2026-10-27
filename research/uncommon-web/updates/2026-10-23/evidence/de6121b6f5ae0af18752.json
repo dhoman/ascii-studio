@@ -1,0 +1,67 @@
+{
+  "url": "https://github.com/metakirby5/yorha",
+  "final_url": "https://github.com/metakirby5/yorha",
+  "http_status": 200,
+  "checked_at": "2026-10-23T17:46:56.313646+00:00",
+  "stars": 330,
+  "forks": 24,
+  "description": ":robot: CSS based on Nier Automata's interface design language.",
+  "homepage": "https://metakirby5.github.io/yorha/",
+  "topics": [],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2017-01-08T07:12:29.000Z",
+  "branch": "master",
+  "commit": "b575933c8a8d037bbdf04aec1cd197ce9e729843",
+  "readme": "YoRHa CSS based on Nier Automata's interface design language, written in Stylus. Preview available here. Check it out on NPM. What's Included CSS: dist/yorha.css Minified CSS: dist/yorha.min.css Source Stylus: src/*.styl",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://github.com/metakirby5/yorha#yorha"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/metakirby5/yorha/blob/master/assets/yorha.gif"
+    },
+    {
+      "label": "Preview available here.",
+      "url": "https://metakirby5.github.io/yorha/"
+    },
+    {
+      "label": "Check it out on NPM.",
+      "url": "https://www.npmjs.com/package/yorha"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/metakirby5/yorha#whats-included"
+    },
+    {
+      "label": "dist/yorha.css",
+      "url": "https://github.com/metakirby5/yorha/blob/master/dist/yorha.css"
+    },
+    {
+      "label": "dist/yorha.min.css",
+      "url": "https://github.com/metakirby5/yorha/blob/master/dist/yorha.min.css"
+    },
+    {
+      "label": "src/*.styl",
+      "url": "https://github.com/metakirby5/yorha/blob/master/src"
+    }
+  ],
+  "root_files": [
+    "assets",
+    "dist",
+    "src",
+    ".gitattributes",
+    ".gitignore",
+    "LICENSE",
+    "README.md",
+    "index.html",
+    "package.json",
+    "stylint.json",
+    "webpack.config.coffee",
+    "yarn.lock"
+  ],
+  "release_count": 0,
+  "status": "verified"
+}

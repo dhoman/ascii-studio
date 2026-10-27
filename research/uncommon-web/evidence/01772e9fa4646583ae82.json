@@ -1,0 +1,68 @@
+{
+  "url": "https://github.com/owickstrom/the-monospace-web",
+  "final_url": "https://github.com/owickstrom/the-monospace-web",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:48:09.050893+00:00",
+  "stars": 3202,
+  "forks": 209,
+  "description": "A minimalist design exploration",
+  "homepage": "https://owickstrom.github.io/the-monospace-web/",
+  "topics": [
+    "css",
+    "design",
+    "minimalist",
+    "monospace",
+    "web"
+  ],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2024-08-25T18:35:57.000Z",
+  "branch": "main",
+  "commit": "6992b7c1a9051bbf969fc491c1af775a36d59449",
+  "readme": "The Monospace Web Monospace fonts are dear to many of us. Some find them more readable, consistent, and beautiful, than their proportional alternatives. Maybe we’re just brainwashed from spending years in terminals? Or are we hopelessly nostalgic? I’m not sure. But I like them, and that’s why I started experimenting with all-monospace Web. https://owickstrom.github.io/the-monospace-web/ Install npm install @owickstrom/the-monospace-web Usage <link rel=\"stylesheet\" href=\"node_modules/@owickstrom/the-monospace-web/dist/reset.css\"> <link rel=\"stylesheet\" href=\"node_modules/@owickstrom/the-monospace-web/dist/index.css\"> Build nix develop # or `direnv allow .` make License MIT",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://github.com/owickstrom/the-monospace-web#the-monospace-web"
+    },
+    {
+      "label": "https://owickstrom.github.io/the-monospace-web/",
+      "url": "https://owickstrom.github.io/the-monospace-web/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/owickstrom/the-monospace-web#install"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/owickstrom/the-monospace-web#usage"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/owickstrom/the-monospace-web#build"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/owickstrom/the-monospace-web#license"
+    },
+    {
+      "label": "MIT",
+      "url": "https://github.com/owickstrom/the-monospace-web/blob/main/LICENSE.md"
+    }
+  ],
+  "root_files": [
+    "demo",
+    "src",
+    ".envrc",
+    ".gitignore",
+    "LICENSE.md",
+    "Makefile",
+    "README.md",
+    "flake.lock",
+    "flake.nix",
+    "index.html",
+    "package.json"
+  ],
+  "release_count": null,
+  "status": "verified"
+}

@@ -1,0 +1,88 @@
+{
+  "url": "https://github.com/MaxBittker/sandspiel",
+  "final_url": "https://github.com/MaxBittker/sandspiel",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:47:28.036021+00:00",
+  "stars": 3211,
+  "forks": 237,
+  "description": "Creative cellular automata browser game ",
+  "homepage": "https://sandspiel.club",
+  "topics": [
+    "game",
+    "rust",
+    "wasm",
+    "webassembly",
+    "webgl"
+  ],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2018-10-20T18:48:17.000Z",
+  "branch": "master",
+  "commit": "9936e06b07a583aedfba9589c0cead2917f405fb",
+  "readme": "sandspiel \"Imagine the cool phenomenon when the wind blows the falling leaves. This game simulates the phenomenon with powder (dots)!\" -DAN-BALL This is a falling sand game built in rust (via wasm), webgl, and some JS glueing things together. You can play online or read a longer post on the project The goal was to produce an cellular automata environment that's interesting to play with and supports the sharing and forking of fun creations with other players. Ultimately, I want the platform to support editing and uploading of your own elements via a programmable cellular automata API. 🛠️ Build: # build the wasm once: cd crate && wasm-pack build && cd ..; npm install; npm run start; # then in a separate terminal: cargo watch -s 'wasm-pack build' a successor to my previous efforts in javascript and lua Fluid simulation code adopted from https://github.com/PavelDoGreat/WebGL-Fluid-Simulation",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://github.com/MaxBittker/sandspiel#sandspiel"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/MaxBittker/sandspiel/blob/master/Screenshot.png"
+    },
+    {
+      "label": "falling sand",
+      "url": "https://en.wikipedia.org/wiki/Falling-sand_game"
+    },
+    {
+      "label": "play online",
+      "url": "https://sandspiel.club"
+    },
+    {
+      "label": "a longer post on the project",
+      "url": "https://maxbittker.com/making-sandspiel"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/MaxBittker/sandspiel#️-build"
+    },
+    {
+      "label": "javascript",
+      "url": "https://github.com/MaxBittker/dust"
+    },
+    {
+      "label": "lua",
+      "url": "https://github.com/MaxBittker/sand-toy"
+    },
+    {
+      "label": "https://github.com/PavelDoGreat/WebGL-Fluid-Simulation",
+      "url": "https://github.com/PavelDoGreat/WebGL-Fluid-Simulation"
+    }
+  ],
+  "root_files": [
+    "assets",
+    "crate",
+    "functions",
+    "js",
+    ".babelrc",
+    ".firebaserc",
+    ".gitattributes",
+    ".gitignore",
+    "LICENSE",
+    "README.md",
+    "Screenshot.png",
+    "firebase.json",
+    "firestore.indexes.json",
+    "firestore.rules",
+    "index.html",
+    "manifest.json",
+    "package.json",
+    "plan.md",
+    "pnpm-lock.yaml",
+    "sandspiel.postgres",
+    "storage.rules",
+    "webpack.config.js",
+    "yarn.lock"
+  ],
+  "release_count": 0,
+  "status": "verified"
+}

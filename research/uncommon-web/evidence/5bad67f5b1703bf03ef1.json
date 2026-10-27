@@ -1,0 +1,215 @@
+{
+  "url": "https://github.com/jacomyal/sigma.js",
+  "final_url": "https://github.com/jacomyal/sigma.js",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:47:53.439533+00:00",
+  "stars": 12201,
+  "forks": 1619,
+  "description": "A JavaScript library aimed at visualizing graphs of thousands of nodes and edges",
+  "homepage": "https://www.sigmajs.org/",
+  "topics": [
+    "data-visualization",
+    "graph",
+    "graph-drawing",
+    "graph-drawing-framework",
+    "graphs",
+    "javascript",
+    "webgl"
+  ],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2012-03-11T15:17:40.000Z",
+  "branch": "main",
+  "commit": "1904b48c103d960962f2d401f44839eaa9ede0ac",
+  "readme": "Website | Documentation | Mastodon Sigma.js is an open-source JavaScript library aimed at visualizing graphs of thousands of nodes and edges using WebGL, and built on top of graphology. Usage To integrate sigma into your project, follow these simple steps: Installation: Add sigma and graphology to your project by running the following command: npm install sigma graphology Usage: Import sigma into your JavaScript or TypeScript file: import Graph from \"graphology\"; import Sigma from \"sigma\"; Then, create a new Sigma instance with your graph data and target container: const graph = new Graph(); graph.addNode(\"1\", { label: \"Node 1\", x: 0, y: 0, size: 10, color: \"blue\" }); graph.addNode(\"2\", { label: \"Node 2\", x: 1, y: 1, size: 20, color: \"red\" }); graph.addEdge(\"1\", \"2\", { size: 5, color: \"purple\" }); const sigmaInstance = new Sigma(graph, document.getElementById(\"container\")); Companion packages Sigma ships as a family of packages living in this monorepo. Install only what you need: @sigma/node-image: node program that renders images @sigma/node-border: node program that renders concentric discs @sigma/node-piechart: node program that renders nodes as piecharts @sigma/layer-leaflet: plugin to set a Leaflet map in background @sigma/layer-maplibre: plugin to set a MapLibre map in background @sigma/layer-webgl: helpers to draw custom WebGL layers @sigma/export-image: captures snapshots of sigma instances as images @sigma/utils: utility functions to ease sigma usage Resources GitHub Project: The source code and collaborative development efforts for Sigma.js are hosted on GitHub. Website: The official website, sigmajs.org, showcases the library's capabilities. Documentation: A detailed documentation is available at sigmajs.org/docs. It provides extensive guides, interactive examples, and API references for users. Local development To run the website locally: git clone https://github.com/jacomyal/sigma.js.git cd sigma.js npm install npm run start This will open the website in your web browser (including all its live examples), which live reloads when you modify the examples or the package sources. Contributing You can contribute by submitting issues tickets and proposing pull requests. Make sure that tests and linting pass before submitting any pull request. You can also browse the related CONTRIBUTING.md guide. Team and sponsors Sigma is developed by Alexis Jacomy and Benoît Simard at OuestWare, together with Guillaume Plique from the Sciences Po médialab, who also maintains graphology. The project was initially supported by Sciences Po médialab through the v1 and v2 development. OuestWare has provided continuous support since, and gdotv actively sponsored the v3 and v4 development. The current website was designed by Robin de Mourat. Since v4, sigma's development also includes help from LLMs. They are used to draft mechanical code, while the architecture, API design, and core logic remain human-authored. Notably, they have been used for the following features: GLSL handling in programs generations Styles and primitives engines Label attachments rendering Professional support OuestWare offers professional support, custom development, and consulting around sigma. Reach out at contact@ouestware.com.",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://github.com/jacomyal/sigma.js/actions"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/jacomyal/sigma.js/blob/main/packages/website/public/img/logo-sigma-text.svg"
+    },
+    {
+      "label": "Website",
+      "url": "https://www.sigmajs.org/"
+    },
+    {
+      "label": "Documentation",
+      "url": "https://www.sigmajs.org/docs"
+    },
+    {
+      "label": "Mastodon",
+      "url": "https://vis.social/@sigmajs"
+    },
+    {
+      "label": "Sigma.js",
+      "url": "https://www.sigmajs.org"
+    },
+    {
+      "label": "graphology",
+      "url": "https://graphology.github.io/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/jacomyal/sigma.js#usage"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/jacomyal/sigma.js#companion-packages"
+    },
+    {
+      "label": "@sigma/node-image",
+      "url": "https://github.com/jacomyal/sigma.js/blob/main/packages/node-image"
+    },
+    {
+      "label": "@sigma/node-border",
+      "url": "https://github.com/jacomyal/sigma.js/blob/main/packages/node-border"
+    },
+    {
+      "label": "@sigma/node-piechart",
+      "url": "https://github.com/jacomyal/sigma.js/blob/main/packages/node-piechart"
+    },
+    {
+      "label": "@sigma/layer-leaflet",
+      "url": "https://github.com/jacomyal/sigma.js/blob/main/packages/layer-leaflet"
+    },
+    {
+      "label": "@sigma/layer-maplibre",
+      "url": "https://github.com/jacomyal/sigma.js/blob/main/packages/layer-maplibre"
+    },
+    {
+      "label": "@sigma/layer-webgl",
+      "url": "https://github.com/jacomyal/sigma.js/blob/main/packages/layer-webgl"
+    },
+    {
+      "label": "@sigma/export-image",
+      "url": "https://github.com/jacomyal/sigma.js/blob/main/packages/export-image"
+    },
+    {
+      "label": "@sigma/utils",
+      "url": "https://github.com/jacomyal/sigma.js/blob/main/packages/utils"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/jacomyal/sigma.js#resources"
+    },
+    {
+      "label": "GitHub",
+      "url": "https://github.com/jacomyal/sigma.js"
+    },
+    {
+      "label": "sigmajs.org",
+      "url": "https://www.sigmajs.org"
+    },
+    {
+      "label": "sigmajs.org/docs",
+      "url": "https://www.sigmajs.org/docs"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/jacomyal/sigma.js#local-development"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/jacomyal/sigma.js#contributing"
+    },
+    {
+      "label": "issues tickets",
+      "url": "https://github.com/jacomyal/sigma.js/issues"
+    },
+    {
+      "label": "pull requests",
+      "url": "https://github.com/jacomyal/sigma.js/pulls"
+    },
+    {
+      "label": "CONTRIBUTING.md",
+      "url": "https://github.com/jacomyal/sigma.js/blob/main/CONTRIBUTING.md"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/jacomyal/sigma.js#team-and-sponsors"
+    },
+    {
+      "label": "Alexis Jacomy",
+      "url": "https://github.com/jacomyal"
+    },
+    {
+      "label": "Benoît Simard",
+      "url": "https://github.com/sim51"
+    },
+    {
+      "label": "OuestWare",
+      "url": "https://www.ouestware.com/en/"
+    },
+    {
+      "label": "Guillaume Plique",
+      "url": "https://github.com/Yomguithereal"
+    },
+    {
+      "label": "Sciences Po médialab",
+      "url": "https://medialab.sciencespo.fr/en/"
+    },
+    {
+      "label": "graphology",
+      "url": "https://graphology.github.io/"
+    },
+    {
+      "label": "gdotv",
+      "url": "https://gdotv.com/"
+    },
+    {
+      "label": "Robin de Mourat",
+      "url": "https://github.com/robindemourat/"
+    },
+    {
+      "label": "GLSL",
+      "url": "https://en.wikipedia.org/wiki/OpenGL_Shading_Language"
+    },
+    {
+      "label": "Styles and primitives",
+      "url": "https://www.sigmajs.org/concepts/styles-and-primitives/"
+    },
+    {
+      "label": "Label attachments",
+      "url": "https://www.sigmajs.org/how-to/labels/attachments/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/jacomyal/sigma.js#professional-support"
+    },
+    {
+      "label": "OuestWare",
+      "url": "https://www.ouestware.com/en/"
+    },
+    {
+      "label": "contact@ouestware.com",
+      "url": "mailto:contact@ouestware.com"
+    }
+  ],
+  "root_files": [
+    ".github",
+    "bin",
+    "packages",
+    ".gitignore",
+    ".prettierignore",
+    ".prettierrc.json",
+    "CHANGELOG.md",
+    "CITATION.cff",
+    "CODE_OF_CONDUCT.md",
+    "CONTRIBUTING.md",
+    "LICENSE.txt",
+    "README.md",
+    "babel.config.js",
+    "eslint.config.mjs",
+    "lerna.json",
+    "package-lock.json",
+    "package.json",
+    "tsconfig.base.json",
+    "tsconfig.json",
+    "vitest.config.mts"
+  ],
+  "release_count": null,
+  "status": "verified"
+}

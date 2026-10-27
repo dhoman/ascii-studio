@@ -1,0 +1,218 @@
+{
+  "url": "https://github.com/spessasus/spessasynth_lib",
+  "final_url": "https://github.com/spessasus/spessasynth_lib",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:48:18.961723+00:00",
+  "stars": 53,
+  "forks": 13,
+  "description": "SoundFont/DLS MIDI Library for web browsers",
+  "homepage": "https://spessasus.github.io/spessasynth_lib/",
+  "topics": [
+    "dls",
+    "midi",
+    "midi-files",
+    "midi-parser",
+    "midi-player",
+    "midi-sequencer",
+    "midi-synth",
+    "midi-synthesizer",
+    "sf2",
+    "sf3",
+    "sound-synthesis",
+    "soundfont",
+    "soundfont-player",
+    "soundfont-synthesizers",
+    "soundfont2",
+    "soundfont2-synthesizer-library",
+    "soundfonts",
+    "web-midi",
+    "web-midi-api",
+    "web-midi-synths"
+  ],
+  "license": "Apache-2.0",
+  "archived": false,
+  "created_at": "2025-04-14T17:13:31.000Z",
+  "branch": "master",
+  "commit": "40f9be2014a0312bc2fec14f215cb90510876a4e",
+  "readme": "A powerful multipurpose SF2/DLS/MIDI TypeScript/JavaScript library for the browsers, based on spessasynth_core. This is a WebAudioAPI wrapper for the spessasynth_core library. It allows you to: Play MIDI files using SF2/SF3/DLS files! Read and write MIDI files! Write SF2/SF3 files! Convert DLS to SF2! (and back!) and more! TIP: Looking for a bare JS version that works without WebAudioAPI? Try spessasynth_core! v4.3.0 The General Update is here! Featuring robust MIDI analysis and editing, broadened MIDI exclusive support, and reworked, more powerful API! Project site (consider giving it a star!) Made with spessasynth_lib SpessaSynth - Online SF2/DLS MIDI Player signal - Online MIDI Editor Documentation SpessaSynth Project index spessasynth_core - SF2/DLS/MIDI library spessasynth_lib (you are here) - spessasynth_core wrapper optimized for browsers and WebAudioAPI SpessaSynth - online/local MIDI player/editor application SpessaFont - online SF2/DLS editor Current Features All the features of spessasynth_core! On top of that... Fully typed: Faster development and IDE auto-completion! Modular design: Easy integration into other projects (load what you need) Detailed documentation: With examples! Easy to Use: Basic setup is just two lines of code! No external dependencies: Just spessasynth_core! Export audio files using OfflineAudioContext! AudioWorklet synthesizer: Runs in a separate thread for maximum performance! Does not stop playing even when the main thread is frozen! Supported by all modern browsers! Web Worker synthesizer: Synthesize directly in the Web Worker! Direct audio engine access! Export audio automatically in the worker! Avoids Chromium Audio Bugs! High-performance mode: Play Rush E! note: may kill your browser ;) Special Thanks FluidSynth - for the source code that helped implement functionality and fixes Polyphone - for the sound bank testing and editing tool Meltysynth - for the initial low-pass filter implementation RecordingBlogs - for detailed explanations on MIDI messages stbvorbis.js - for the Vorbis decoder fflate - for the MIT DEFLATE implementation tsup - for the TypeScript bundler foo_midi - for useful resources on XMF file format Falcosoft - for help with the RMIDI format Christian Collins - for various bug reports regarding the synthesizer And You! - for checking out this project. I hope you like it :) Basic example: play a single note import { WorkletSynthesizer } from \"spessasynth_lib\"; // SF2, SF3, SFOGG and DLS files are all supported! const sfont = await (await fetch(\"soundfont.sf3\")).arrayBuffer(); const ctx = new AudioContext(); // make sure you copied the worklet processor! await ctx.audioWorklet.addModule(\"./spessasynth_processor.min.js\"); const synth = new WorkletSynthesizer(ctx); await synth.soundBankManager.addSoundBank(sfont, \"main\"); await synth.isReady; document.getElementById(\"button\").onclick = async () => { await ctx.resume(); synth.programChange(0, 48); // strings ensemble synth.noteOn(0, 52, 127); }; License Copyright © 2026 Spessasus Licensed under the Apache-2.0 License. Legal This project is in no way endorsed or otherwise affiliated with the MIDI Manufacturers Association, Roland Corporation, Yamaha Corporation, Creative Technology Ltd. or E-mu Systems, Inc., or any other organization mentioned. SoundFont® is a registered trademark of Creative Technology Ltd. All other trademarks are the property of their respective owners.",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://raw.githubusercontent.com/spessasus/SpessaSynth/refs/heads/master/src/website/spessasynth_logo_rounded.png"
+    },
+    {
+      "label": "spessasynth_core",
+      "url": "https://github.com/spessasus/spessasynth_core"
+    },
+    {
+      "label": "and more!",
+      "url": "https://github.com/spessasus/spessasynth_lib#current-features"
+    },
+    {
+      "label": "spessasynth_core",
+      "url": "https://github.com/spessasus/spessasynth_core"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/spessasus/spessasynth_lib#v430-the-general-update-is-here"
+    },
+    {
+      "label": "Project site (consider giving it a star!)",
+      "url": "https://github.com/spessasus/spessasynth_lib"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/spessasus/spessasynth_lib#project-site-consider-giving-it-a-star"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/spessasus/spessasynth_lib#made-with-spessasynth_lib"
+    },
+    {
+      "label": "SpessaSynth - Online SF2/DLS MIDI Player",
+      "url": "https://spessasus.github.io/SpessaSynth"
+    },
+    {
+      "label": "signal - Online MIDI Editor",
+      "url": "https://signalmidi.app/"
+    },
+    {
+      "label": "Documentation",
+      "url": "https://spessasus.github.io/spessasynth_lib"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/spessasus/spessasynth_lib#documentation"
+    },
+    {
+      "label": "spessasynth_core",
+      "url": "https://github.com/spessasus/spessasynth_core"
+    },
+    {
+      "label": "spessasynth_lib",
+      "url": "https://github.com/spessasus/spessasynth_lib"
+    },
+    {
+      "label": "SpessaSynth",
+      "url": "https://github.com/spessasus/SpessaSynth"
+    },
+    {
+      "label": "SpessaFont",
+      "url": "https://github.com/spessasus/SpessaFont"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/spessasus/spessasynth_lib#current-features"
+    },
+    {
+      "label": "All the features of spessasynth_core!",
+      "url": "https://github.com/spessasus/spessasynth_core#current-features"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/spessasus/spessasynth_lib#all-the-features-of-spessasynth_core"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/spessasus/spessasynth_lib#on-top-of-that"
+    },
+    {
+      "label": "Detailed documentation:",
+      "url": "https://spessasus.github.io/spessasynth_lib/"
+    },
+    {
+      "label": "examples!",
+      "url": "https://spessasus.github.io/spessasynth_lib/getting-started/#examples"
+    },
+    {
+      "label": "two lines of code!",
+      "url": "https://spessasus.github.io/spessasynth_lib/getting-started/#minimal-setup"
+    },
+    {
+      "label": "OfflineAudioContext",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/API/OfflineAudioContext"
+    },
+    {
+      "label": "Chromium Audio Bugs",
+      "url": "https://issues.chromium.org/issues/367304685"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/spessasus/spessasynth_lib#special-thanks"
+    },
+    {
+      "label": "FluidSynth",
+      "url": "https://github.com/FluidSynth/fluidsynth"
+    },
+    {
+      "label": "Polyphone",
+      "url": "https://www.polyphone-soundfonts.com/"
+    },
+    {
+      "label": "Meltysynth",
+      "url": "https://github.com/sinshu/meltysynth"
+    },
+    {
+      "label": "RecordingBlogs",
+      "url": "https://www.recordingblogs.com/"
+    },
+    {
+      "label": "stbvorbis.js",
+      "url": "https://github.com/hajimehoshi/stbvorbis.js"
+    },
+    {
+      "label": "fflate",
+      "url": "https://github.com/101arrowz/fflate"
+    },
+    {
+      "label": "tsup",
+      "url": "https://github.com/egoist/tsup"
+    },
+    {
+      "label": "foo_midi",
+      "url": "https://github.com/stuerp/foo_midi"
+    },
+    {
+      "label": "Falcosoft",
+      "url": "https://falcosoft.hu"
+    },
+    {
+      "label": "Christian Collins",
+      "url": "https://schristiancollins.com"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/spessasus/spessasynth_lib#basic-example-play-a-single-note"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/spessasus/spessasynth_lib#license"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/spessasus/spessasynth_lib#legal"
+    }
+  ],
+  "root_files": [
+    ".github",
+    ".husky",
+    ".idea",
+    "build_scripts",
+    "docs",
+    "examples",
+    "src",
+    ".gitattributes",
+    ".gitignore",
+    ".prettierignore",
+    ".prettierrc",
+    "LICENSE",
+    "README.md",
+    "eslint.config.js",
+    "package-lock.json",
+    "package.json",
+    "tsconfig.json",
+    "zensical.toml"
+  ],
+  "release_count": 9,
+  "status": "verified"
+}

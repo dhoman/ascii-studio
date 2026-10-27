@@ -1,0 +1,428 @@
+{
+  "url": "https://github.com/drnachio/postext",
+  "final_url": "https://github.com/drnachio/postext",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:47:45.534711+00:00",
+  "stars": 8,
+  "forks": 0,
+  "description": "A programmable typesetter for the web",
+  "homepage": "https://postext.dev",
+  "topics": [
+    "agent-skills",
+    "browser",
+    "claude-code",
+    "claude-code-plugin",
+    "claude-skills",
+    "codex",
+    "cursor-plugin",
+    "layouter",
+    "markdown",
+    "pdf",
+    "pretext",
+    "typescript",
+    "typesetter",
+    "typesetting"
+  ],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2026-04-06T05:44:20.000Z",
+  "branch": "main",
+  "commit": "5927b7a8a1ded4821ac552ebcf9ba54bdca48eef",
+  "readme": "Postext A programmable typesetter for the web. 🌐 Website: postext.dev · 📖 Documentation: postext.dev/en/docs Postext is a layout engine that bridges the centuries-old craft of print typesetting and the modern web. It takes semantic content — enriched markdown with referenced resources — and applies professional editorial layout rules to produce publication-grade output for HTML, PDF and EPUB. Built on top of @chenglou/pretext for DOM-free text measurement. How It Works Enriched Markdown Postext engine Output ───────────────── ───────────────────────── ───────────── ┌────────────────────────┐ # Heading │ │ HTML + CSS Paragraph text... │ 1. Parse & structure │ ┌─► (web rendering) More text with a ───► │ 2. Measure (pretext) │ ───┤ :ref{id=\"fig\"} and │ 3. Apply layout rules │ └─► PDF a $formula$. │ 4. Compute geometry │ (print rendering) │ │ └────────────────────────┘ ▲ Configuration files (columns, rules, spacing) Input. Enriched markdown with referenced resources: images, tables, figures, formulas, pull quotes. The content is semantic, not visual — it describes what to present, not how. Engine. postext parses the content structure, calls pretext for pixel-perfect text measurement without touching the DOM, then runs the layout algorithm: column balancing, resource placement, typographic quality rules, reference systems. All driven by configuration files. Output. Format-agnostic layout geometry — precise coordinates and dimensions for every element. Renderers translate this geometry to the target format: canvas for page images, HTML/CSS for the web, PDF for print, EPUB 3 for e-book readers, and a 3D book in the browser (Folio). Why postext? The gap between print and web A professional typesetter — the person who lays out a magazine, a newspaper, or a book — applies dozens of rules that have been refined over centuries: No orphans (a single line of a paragraph stranded at the top of a column). No widows (a single line of a paragraph left behind at the bottom). Balanced columns (roughly equal height across columns on a spread). Text flowing around figures, pull quotes, and inset images. Proper placement of footnotes at the bottom of the column where they are referenced. Margin notes aligned with the paragraph that cites them. Consistent and deliberate spacing around headings, block quotes, and figures. Hyphenation that avoids rivers and excessive rag. CSS gives you almost none of this. column-count exists but is fragile — there is no control over resource placement within columns, no overflow awareness, and no cross-column orphan/widow prevention. There is no native concept of \"flow text around an arbitrarily positioned obstacle.\" Multi-column editorial layouts on the web remain essentially hand-crafted, usually as static designs that break on different screen sizes. The web has had responsive layout (flexbox, grid) for over a decade. What it has never had is responsive editorial layout — the kind where content reflows intelligently through columns, around images, past footnotes, obeying the rules that make text pleasant to read. A decade of trying This problem is not new. The Content First project, started around 2014, was an early attempt to bring editorial layout quality to the web. I built column-based layouts, experimented with text flow algorithms, and ran into the same wall repeatedly: you cannot make good layout decisions without knowing exactly how much space text will occupy. DOM-based measurement is expensive. Every time you ask the browser \"how tall is this paragraph at this width?\", you trigger a layout reflow. Do this hundreds of times for a complex layout and the page becomes unusable. I needed a way to measure text that was fast enough to run speculatively — trying different layouts, different column widths, different break points — without blocking the main thread. The missing piece In 2025, Cheng Lou released pretext: a DOM-free text measurement library that is 300-600x faster than DOM measurement and pixel-perfect across Chrome, Safari, and Firefox. It uses canvas font metrics and pure arithmetic to compute text height and line breaks without ever touching the DOM. With pretext, the core bottleneck disappears. You can measure thousands of text blocks in milliseconds. You can try ten different column configurations and pick the best one. You can run the full layout algorithm on every resize. postext is what happens next. pretext + postext The naming is intentional. pretext is what happens before text is placed: measuring how much space it will need. DOM-free, canvas-based, operating on pure numbers. postext is what happens after measurement: the editorial decisions. Given exact dimensions for every text block at any width, the engine decides where each element goes — which column, at what position, flowing around which resources, obeying which typographic rules. import { prepare, layout } from '@chenglou/pretext'; import { buildDocument } from 'postext'; // pretext: measure (the \"pre\" work) const prepared = prepare(paragraphText, '16px/1.5 Inter'); const { height } = layout(prepared, columnWidth, 24); // => \"This paragraph is 144px tall at this column width.\" // postext: decide (the \"post\" work) const doc = buildDocument(content, config); // => \"Put this paragraph in column 2, starting at y=320. // Move the image to the top of column 3. // Float the table to the top of page 3. // Break here to avoid a widow.\" pretext gives you the measurements. postext gives you the layout. pretext was created by Cheng Lou. postext builds on top of it. Features Everything below ships today in postext and its companion packages (postext-pdf, postext-epub, postext-folio, postext-citeproc) and in the postext command line. A fuller list, with a link to the page that explains each part, is on the wiki's Features page. Column-based layouts Single, double, and column-and-a-half layouts (layoutType: 'single' | 'double' | 'oneAndHalf') with configurable gutter width, an optional column rule, mirrored margins, a page-wide baseline grid, and crop marks with bleed for print production. The column-and-a-half layout can turn its side column into a channel for figures, tables and callouts (sideColumnRole: 'floats'), placed at the outer edge of every page — the marginal column of a textbook — with side captions set level with their figure. :::columns switches the column count mid-page, :::pagebreak forces a break with parity control, :::space adds explicit vertical space, and :::paper changes the paper stock for a run of pages. Left- and right-bound books (page.binding), with the PDF asking viewers for right-to-left spreads, and vertical writing (layout.writingMode: 'vertical-rl') for Chinese and Japanese books. Headings span a column or the full page, with parity-aware page breaks ('odd', 'even', 'always-odd', …) for chapter openings. Column balancing Columns on a page end level: the engine closes each column's gap with the least visible lever — grid lines above headings, space after lists, room under top floats, and finally loosened or tightened paragraphs within word-spacing and tracking limits. Closing pages of a chapter balance too: the trailing band before a page-span box is levelled, short final columns are evened out, and a syllable is never stranded just to fill a column. Balancing converges chapter by chapter, so a chapter laid out alone and inside the whole book produce the same pages. Optimal justification Knuth-Plass optimal line breaking — whole paragraphs are broken globally, not greedily line by line. A Rust build of the breaker, compiled to WebAssembly, answers where WebAssembly is available, with the same breaks as the TypeScript one. TeX-pattern hyphenation in 8 locales (English, Spanish, French, German, Italian, Portuguese, Catalan with the IEC rule for l·l, Dutch); overlong words are divided by syllable, then by character. Orphan, widow, and runt control, plus keep-together rules (a heading with its first lines, a colon with the list it introduces). Resources as first-class citizens Bitmaps, SVGs, tables and videos are declared once alongside the content and incorporated by inline :ref{id=\"…\"} references — the first reference floats the resource into the first free top or bottom band after it, spanning the column, the page, or the side channel. Floats of one numbering sequence never overtake each other; figures can be fitted to the page, and an explicit ::resource{id=\"…\"} embeds a resource inline. A picture may carry a safe area, the region that must stay in view: the engine crops it down to that area or lets it grow back to the whole picture, so a photo fills a short column or keeps an inline embed inside its column. Videos (YouTube, Vimeo or your own MP4/WebM file) are placed, captioned and numbered like pictures (Video 1.1). Print shows the poster frame with a play mark and a QR code that opens the video, and the PDF links the poster; the HTML viewer and EPUB play the video with the book's player options (no download button, loop, muted…). Typed first-reference numbering: Figure and Table built-ins (localized per document language) plus custom resource types, with configurable reference styles and caption prefixes. Tables taller than the page split between rows across as many pages as needed, repeating their header rows and a (cont.) caption; rowspans and group-head rows are never cut. Rotated tables (placement.rotate), cell fills, cell images (bitmap or SVG, aligned within the cell), in-cell lists, and inline colour swatches for legends. diagramStyle.singleInk recolors SVG diagrams to luminance-mapped tints of a single ink, so diagrams survive single-spot-colour printing. Callouts, pull quotes and marginal material :::callout boxes with named calloutStyles: fill, frame, radius, title, icon marker column, and their own paragraph typography — sidebars, key concepts, activities, pull quotes. Callouts can nest, float to the top or bottom of the page (placement), sit in the side channel, and split across columns and pages when they cannot be kept together, with a continuation that drops the title and icon. Named paragraphStyles applied with :::paragraphs{style=\"…\"} for bibliographies, glossaries, notes and hanging-indent entries; tables and figures carry their own notes and source lines. :::verse blocks for poetry, including Arabic verse set as two hemistichs. Inline chips, :chip[text]{style=\"…\"}: boxed words (word banks, keys, tags) that wrap as one unit, painted as real text in every backend. Composed pages Fixed pages (a textbook spread, a workbook page, a magazine feature) set from page templates (pageTemplates): named frames, groups that share their space, a decoration and spreads, defined once in the configuration. In the Markdown a ::::page{template=\"…\"} fence sends each piece of content to a frame by name; positions and sizes never appear in the text, so a page is edited and translated as Markdown. A longer translation grows its box and pushes the boxes under it. Repeating layouts are declared once: a grid lays one card per item and goes on by whole rows, and :::module blocks stack bands of frames down the page, side by side or in rows, nested to any depth. Named frame looks (frameLooks) change a card's colours without a new style, and decoration can be drawn only on pages whose fence asks for it (when / unless). Connectors join frames with vector lines that follow them (straight, elbow, tree), leaders run from a label to a point of the picture and end in a ring or a bar, and path elements draw bars, ribbons and chevrons as vector shapes in every output. A frame that overflows tries, in order, its free space, its group, smaller pictures and smaller text, then continues on another page; what still does not fit is reported with proposals. Words on a map or a diagram are labels written in the Markdown and placed at anchor points of the picture. The Sandbox edits templates and frame styles, checks every edition, and moves text typed into an older configuration back into the Markdown (moveTextToMarkdown). Comics :::page cuts a page into panels with a split expression (slanted gutters, bleeds, spreads); each panel takes a picture without lettering and its lines of script. The engine letters the balloons, thoughts, captions and sound effects from that script in the book's language, so one set of pictures serves every edition. Strips (:::strip) for newspapers, right-to-left manga and Arabic editions, and Kindle Panel View in the fixed-layout EPUB. Notes, citations and indexes Footnotes ([^id]) set at the foot of the column that cites them, or gathered at the end of the chapter; numbered per chapter, through the book, per page or per column, in decimal, roman or circled numbers (①). Cross-references to headings, figures, tables and anchors ({#id}), clickable in the PDF. Citations in Pandoc syntax ([@garcia2020, p. 33]) formatted in a CSL style (APA, Chicago, MLA, IEEE, Vancouver, ISO 690, GB/T 7714, OSCOLA, …) with a generated bibliography, from BibTeX, CSL-JSON or CSL-YAML. With a note style each citation becomes a footnote. The styles are applied by postext-citeproc. A back-of-book index built from :index[…] marks and printed with :::index: sub-entries, sort keys, principal pages in bold and several indexes per book. The page numbers are found after layout, so they follow the text. Languages and scripts A document language (locale) drives hyphenation, built-in strings, numerals, text direction and the language tagged in the PDF. Chinese (Simplified, Traditional, Hong Kong), horizontal or vertical: line breaking, punctuation widths and hanging punctuation, Han–Latin spacing, the character grid, emphasis dots, proper-name and book-title marks, ruby (pinyin, zhuyin) and warichu. See Chinese layout. Arabic (Modern Standard and Classical): the bidirectional algorithm, right-bound books with right-to-left spreads, words shaped whole through HarfBuzz in the PDF, kashida justification instead of letter-spacing, vowel marks, Arabic-Indic digits and number words, and classical verse. See Arabic layout. Japanese, vertical or horizontal, by JLReq and JIS X 4051: kinsoku, yakumono spacing and paragraph-start brackets, vertical forms and tate-chū-yoko, furigana (jukugo ruby, 1:2:1), sesame emphasis marks and side lines, kanbun kunten, Japanese counters (第一章), 行取り headings and 字下げ blocks, notes, a gojūon index with readings, SIST 02 citations and Aozora Bunko sources. See Japanese layout. Books, parts and front matter Books laid out one chapter at a time with an engine continuation: page numbers, parity, heading and figure counters and open parts carry across chapters, or the whole book is built as one document. :::part divider pages with their own design, and part palettes that recolour the design and flow of every chapter in the part. Named headingStyles that govern a whole section — running heads, page geometry, body typography, palette — so front matter can live beside decimal-numbered chapters in one configuration. :::toc prints a table of contents fed by the book's outline, with leaders, numbers and page labels. Styling configuration tableStyle / tableStyles — table typography independent of body text, named variants picked with table.styleId, and a rounded outer frame. captionStyle, chipStyles, calloutStyles, paragraphStyles, headingStyles — every style is a named, reusable object. Color palettes let a whole document re-ink from one place. Design text and chips can be set as dotted letters for a child to trace, and repeated along a line — the tracing copies of a handwriting workbook stay live text. Math LaTeX math, inline ($…$) and display ($$…$$), rendered to crisp SVG via MathJax in every backend, loaded on demand (await initMathEngine()). MathJax ships pre-bundled, so it loads the same from a bundler, Node or a CDN. Music notation Music is written as text in the chapter, in a ```abc, ```musicxml, ```mei or ```humdrum fence, and engraved by Verovio at the width of its column. A long score is cut into systems that run on over columns and pages like lines of text, and scoreStyle.minSystemsAtBreak never leaves a system alone at a break. Music examples the text cites are score resources, numbered, captioned, floated and referenced like figures (Example 3.2), from inline notation or a MusicXML file exported from Dorico, Sibelius, Finale or MuseScore. scoreStyle and named scoreStyles set the staff size, the music font (Bravura, Leland, Petaluma, Leipzig, Gootville), the lyrics font, spacing, bar numbers and ink. Scores are vector paths in the Canvas, HTML and PDF (a tagged Figure with its alt text), inline SVG in a reflowable EPUB, and their notation fence in Word. The engraver loads only for books that have music. See Music notation. Headers & footers Design slots composed of text, rule, box, and image elements with precise placement, painted in array order and bounded to the trim box. Placeholders resolve page numbers, chapter numbers and titles, part titles, and document metadata at layout time. Page numbers in arabic, roman, letters, Chinese, Arabic-Indic and other styles, restarted with :::numbering, with PDF page labels that match the printed folios. Page-parity control — different designs for odd and even pages. Multi-format output Canvas renderer. Rasterize any page for previews and thumbnails (renderPage, renderPageToCanvas). HTML renderer. Precise absolutely-positioned markup; renderToHtmlIndexed returns a per-block index so viewers can patch only the DOM nodes that changed between builds. PDF renderer (postext-pdf). Print-ready output with document outlines, clickable cross-reference links, embedded custom fonts (woff2/woff/ttf/otf) with GPOS kerning, HarfBuzz shaping for Arabic, page labels, vector SVG figures (with optional PDF print masters), RGB, CMYK, or grayscale color spaces, and tagged, accessible PDF/UA-1 output validated with veraPDF. postext-pdf/worker writes long books off the main thread. EPUB 3 writer (postext-epub). The whole book as an EPUB 3.3 file, written in the browser or in Node: a fixed layout (pre-paginated) that keeps every printed page with real, selectable text, or a reflowable book in semantic XHTML (paragraphs rebuilt from the lines, notes, figures and tables in reading order, print page markers) styled from the same configuration. Fonts embedded, with navigation, print page numbers, right-to-left books and accessibility metadata; validated with W3C EPUBCheck. Print production. PDF/X-1a and PDF/X-4 files (print.standard) with an ICC output profile (FOGRA, GRACoL, SWOP and IFRA profiles are bundled, or your own), every colour and RGB picture separated through it, black overprint and rich black, an ink limit, and a preflight that reports low-resolution pictures, thin rules, small text in several inks and text near the trim before the file is written. The Sandbox shows a print preview of the separated pages. Word files (postext/word). A .docx is read into chapters of Markdown, with its styles mapped to Postext styles and a quality report (readDocx, analyzeDocx, wordToPostext), and a book is written back as .docx with an embedded template (postextToDocx). The Sandbox and the command line both import and export Word. 3D book viewer (postext-folio). Spreads whose leaves curl in three.js, with real shadows, turned by hand or by key; a right-bound book lies mirrored. Pages are painted on demand, at the size they are shown, around the open spread only. Web Worker. postext/worker runs the pipeline off the main thread with last-wins cancellation, also loaded straight from esm.sh. React. postext/react shows a document's pages in a component; the main entry never loads React. Format-agnostic core. The engine computes geometry; renderers translate it. Sandbox A hosted editor at postext.dev: books of chapters, a Design panel that browses every setting in editorial terms (accessible, keyboard-first), a Resources panel, live Canvas / PDF / Folio (3D) / HTML previews with source ↔ preview sync, an EPUB 3 tab that writes, shows and downloads the book as an e-book, Word import and export, editors for page templates and comic pages, a Checks panel, permalinks to any page, and a phone layout. The Design panel edits every engine setting; scripts/config-coverage.mjs --check compares the configuration schema with the panel, the docs and the agent skill. A book holds an edition per language, each with its own title and pagination: the editions rail switches between them, and the side-by-side view shows two editions of the whole book, kept on the same passage of text. Books travel as .postext bundles that carry their pagination, so an imported book opens already paginated. The same .postext files are created and opened from code with the postext package (createBundle, openBundle, buildBundle), so a book moves between the Sandbox, the agent skill and your own program. Showcase bundles — a magazine, literary editions (Don Quijote, an annotated Paradise Lost), an atlas, an exhibition catalogue, a physics textbook, a column-and-a-half biochemistry manual, the classic Chinese novel Dream of the Red Chamber (红楼梦), Natsume Sōseki's Kokoro (こころ) set vertically and One Thousand and One Nights in Arabic — plus a built-in guide to Postext, itself set as a book in every language of the site: Chinese and Japanese vertical, Arabic right to left. Cookbook More than 160 complete, copy-ready examples at postext.dev/en/cookbook (Recetario in Spanish): each recipe is a real publication set with Postext — an opener, a book page with running heads, a data table, a songbook page, a print-ready PDF — grouped in chapters and searchable by feature, genre, level and output. Every recipe page shows the captured pages and the whole pen, with Copy, Open in CodePen, an .html download and, where it applies, the PDF; a write-up explains the method step by step, with excerpts of the real code, and the pitfalls. The same content is available as Markdown for agents (/en/cookbook/<slug>.md, and in llms.txt). Recipes live in cookbook/, one folder each (metadata, bilingual write-ups, the pen and its sample text); pnpm cookbook new | dev | lint | capture scaffolds, previews, checks and captures them against the released engine, and pnpm cookbook sandbox and pnpm cookbook bench check the captured books in the Sandbox's own layout and the composed pages under longer text. Website postext.dev in English, Spanish, Catalan, French, German, Italian, Brazilian Portuguese, Simplified Chinese, Japanese and Arabic, built to WCAG 2.2 AAA, with a Markdown version of every page for agents (<page>.md, llms.txt) and WebMCP tools for an agent in the browser: on every page to search, read and open pages, and in the Sandbox to edit the book, change any setting, do anything the Settings panel does (rename or remove a style with everything that names it, apply a language's defaults, upload an ICC profile, save a laid page as a template), get any laid-out page as a JPEG and change again. Configuration-driven Every behavior above is driven by a single configuration object with sensible defaults — an empty config produces a well-typeset document, and each section (page, layout, body text, headings, lists, math, resource types, styles, parts, TOC, …) can be overridden independently. Agent skill: port existing publications postext-port teaches a coding agent (Claude Code, Codex, Cursor, Gemini CLI, Copilot, …) to turn an existing publication — a PDF, Word, PowerPoint, EPUB, HTML, InDesign (IDML), LaTeX or scanned source — into a Postext project that follows the original layout: measured config manifest, curated chapters, resources and fonts. Music textbooks, methods and songbooks bring their examples as MusicXML scores. It bundles verified references (document format, configuration, project format, per-source playbooks, the unusual cases solved in every preset) and scripts: type-role PDF extraction, figure and table cutting, pandoc/IDML converters, font and image tools, a linter, a headless renderer and page-by-page comparison. Install it with npx skills add drnachio/postext --skill postext-port, or in Claude Code with /plugin marketplace add drnachio/postext + /plugin install postext@postext. See the Skill docs. Command line postext is one self-contained executable per system (macOS arm64 and x64, Linux x64, arm64 and musl, Windows x64): no installation, no runtime, no libraries. The engine, the PDF, EPUB, HTML and Word writers, the page painter (Skia), the default fonts and the ICC print profiles are inside. Every release attaches them to its GitHub Release; readme.txt lists them, and npx postext-cli fetches the right one. It reads a .postext bundle, an unpacked book folder or loose Markdown files, and writes a PDF (PDF/X and ICC profiles included), HTML, EPUB, one page or every page as PNG, JPEG or WebP, and Word; it also packs and unpacks bundles, imports .docx, describes a book and checks it. postext build --watch keeps the engine warm and rebuilds on every save. Made for scripts and agents: --json prints one report (outputs, pages, warnings with file and line, timings), exit codes are stable, -o - writes to stdout, and fonts a book does not carry are fetched once from Google Fonts and cached (--offline never fetches). Run postext with no arguments for the help. Project Structure postext/ ├── apps/ │ └── web/ # Next.js site: landing, docs, sandbox, cookbook ├── packages/ │ ├── postext/ # Core layout engine library │ ├── postext-pdf/ # PDF rendering backend │ ├── postext-folio/ # 3D book viewer (three.js) │ ├── postext-epub/ # EPUB 3 writer (fixed layout and reflowable) │ ├── postext-citeproc/ # CSL citations and bibliographies (citeproc-js) │ ├── postext-cli/ # Command line: self-contained executables (Bun) │ ├── postext-sandbox/ # Interactive sandbox UI (controls + viewports) │ └── typescript-config/ # Shared TypeScript configurations ├── docs/ # MDX documentation, <topic>-<locale>.mdx in ten locales ├── cookbook/ # Cookbook recipes (one folder each), registries and pen kit ├── plugins/postext/ # Agent skill `postext-port` (Claude Code plugin + skills.sh) ├── rust/ # Knuth-Plass line breaker in Rust, compiled to WebAssembly ├── .claude-plugin/ # Claude Code plugin marketplace manifest ├── turbo.json # Turborepo task pipeline ├── pnpm-workspace.yaml # pnpm workspace definition └── package.json # Root scripts (delegate to turbo) Package Purpose packages/postext The core library. Semantic content in, layout geometry out. Zero DOM dependencies. Published to npm as postext. packages/postext-pdf The PDF backend: renders the layout geometry to print-ready, tagged PDF (outlines, links, font embedding, color spaces). Published to npm as postext-pdf. packages/postext-folio The 3D book viewer: a laid-out document (or any page images) as spreads whose leaves turn in three.js. Published to npm as postext-folio. packages/postext-epub The EPUB 3 writer: a laid-out book as a fixed-layout or reflowable EPUB, plus readEpub for viewers. Published to npm as postext-epub. packages/postext-citeproc The citation engine: formats Pandoc-syntax citations with citeproc-js and builds the bibliography, with 20 bundled CSL styles and 14 CSL locales. Published to npm as postext-citeproc. packages/postext-cli The command line: postext pdf, html, epub, image(s), docx, import-docx, pack, unpack, info, check and build --watch, compiled with Bun into a self-contained executable for each system (pnpm --filter postext-cli build:bin writes them to bin/). Released as GitHub Release assets and on npm as postext-cli. packages/postext-sandbox The interactive sandbox UI — configuration controls and live Canvas/PDF/Folio/HTML/EPUB viewports — embedded by the web app. apps/web Next.js 16 + Tailwind CSS 4 application: the documentation site, landing page, hosted sandbox and cookbook at postext.dev, in ten languages. packages/typescript-config Shared strict TypeScript configuration across all packages. Documentation lives in the top-level docs/ folder as one MDX file per topic and locale (<topic>-<locale>.mdx, in en, es, ca, fr, de, it, pt, zh, ja and ar), rendered by apps/web. The doc pages of the GitHub wiki are generated from the English files (pnpm wiki in apps/web). Tech stack: pnpm workspaces, Turborepo 2, TypeScript 6, ESM-only, Node.js 20+, Next.js 16, Tailwind CSS 4, Bun for the command line, Rust for the WebAssembly line breaker. Getting Started Prerequisites Node.js >= 20 pnpm 12 (the version in packageManager; corepack enable installs it) Installation git clone https://github.com/drnachio/postext.git cd postext pnpm install Development # Start all packages in dev mode (library watch + Next.js dev server) pnpm dev # Build all packages pnpm build # Lint all packages pnpm lint # Type-check all packages pnpm check-types # Run every package's tests (`pnpm test:changed` for only what you touched) pnpm test Turborepo handles the dependency graph: packages/postext builds first, then apps/web picks up the changes. In dev mode, the library recompiles on save and the Next.js app hot-reloads. Using postext in your project npm install postext # or pnpm add postext buildDocument takes content plus a configuration object and returns the laid-out document — plain layout geometry, not framework components — which any backend can then render. The quickest path is the HTML string renderer: import { buildDocument, renderToHtml } from 'postext'; const doc = buildDocument( { markdown: '# Hello\\n\\nThis is postext.' }, { page: { sizePreset: '17x24' }, layout: { layoutType: 'double', gutterWidth: { value: 0.75, unit: 'cm' } }, bodyText: { fontFamily: 'EB Garamond', fontSize: { value: 8, unit: 'pt' } }, // ...see docs/configuration for the full reference }, ); // Render to an HTML string (in-browser viewer) const html = renderToHtml(doc); // …or rasterize to canvas — see renderPage / renderPageToCanvas. To leaf through the result as a book in 3D, hand the same document to postext-folio (npm install postext-folio three): import { createFolioFromDocument } from 'postext-folio'; createFolioFromDocument(document.getElementById('book')!, doc); To publish it as an e-book, hand the book's chapters to postext-epub (npm install postext-epub): import { renderToEpub } from 'postext-epub'; const epub = await renderToEpub([doc], { layout: 'reflowable', // or 'fixed': every printed page as it is metadata: { title: 'Hello', language: 'en' }, }); Documents that cite ([@key]) need the citation engine from postext-citeproc (npm install postext-citeproc). Register it once before laying out: import 'postext-citeproc/register'; Asynchronous layout in a Web Worker (recommended for UIs) For interactive integrations — live previews, editors, anything that rebuilds the document on every keystroke or resize — run the pipeline off the main thread via the dedicated worker entry point. This keeps the UI responsive, gives you last-wins cancellation via AbortSignal, and ships fonts into the worker as transferable ArrayBuffers so measurement stays pixel-identical to the main-thread build: import { createLayoutWorker } from 'postext/worker'; const layout = createLayoutWorker(); // Register fonts once per family (woff2/ttf ArrayBuffers are transferred). await layout.registerFonts(fontPayloads); const controller = new AbortController(); const vdt = await layout.build(content, config, { signal: controller.signal }); // Call controller.abort() to supersede an in-flight build — the worker stops // the current pipeline and the pending promise rejects with AbortError. layout.dispose(); The full async integration pattern (font shipping, cancellation, measurement cache reuse) is documented under Running layout in a Web Worker. For an end-to-end HTML-viewer integration (multi-column, resize-aware, Shadow DOM), see Integrating the HTML viewer. Roadmap Every milestone of the original roadmap is closed. Postext now typesets full books — textbooks, magazines, literary editions and catalogues — end to end, from enriched markdown to accessible, print-ready PDF, EPUB 3 and a 3D book. Work continues in programmes tracked as GitHub issues; the wiki's Roadmap page follows them. Phase 1: Foundation ✅ Core layout data structures (columns, blocks, inline resources, break points) Integration with @chenglou/pretext for text measurement Enriched markdown input format definition and parser Basic single-column layout with paragraph placement Configuration file schema (first draft) Phase 2: Editorial Layout ✅ Multi-column layout engine Column balancing algorithm (level columns and closing pages, chapter-wise convergence) Resource placement within columns (images, figures, tables — floats with column, page or side-channel span) Text flow around obstacles (floats, callout boxes, side channel and side captions) Orphan and widow prevention Keep-together rules (headings + first paragraph, colons + lists) Phase 3: Professional Typography ✅ Hyphenation dictionary integration (TeX patterns, 8 locales) Typed resource numbering and cross-references (figures, tables, custom types) LaTeX math rendering (inline and display, MathJax SVG) Custom font loading and embedding (woff2/woff/ttf/otf) Notes (footnotes, resource and table notes, note paragraph styles, marginal glosses in the side channel) Pull quotes and margin notes (callout styles, side-channel boxes) Fine-grained spacing rules (configurable spacing scale) Rag optimization Configuration file format finalization Phase 4: Output Targets ✅ Web renderer (HTML/CSS with precise positioning) PDF renderer (outlines, clickable cross-reference links, RGB/CMYK/grayscale) Interactive playground in apps/web Visual configuration editor (stretch goal) Asynchronous layout worker (off-main-thread buildDocument with last-wins cancellation) Beyond the original plan ✅ Books, chapters and parts with cross-chapter continuation Front matter, heading styles and a table of contents built from the outline Tables split across pages, rotated tables, cell images and fills Nested, floated and splittable callouts; inline chips Tagged, accessible PDF/UA-1 output and vector figures in PDF .postext book bundles and bilingual showcase presets EPUB 3 output, fixed layout and reflowable, checked with W3C EPUBCheck Folio, the 3D book viewer Footnotes (#162), CSL citations and bibliographies (postext-citeproc), a back-of-book index (#165) Chinese typesetting, horizontal and vertical (#203) Arabic typesetting, Modern Standard and Classical Japanese typesetting, vertical and horizontal (#440) Pictures with a safe area (#442) and video resources: poster, play mark and QR code in print, players in HTML and EPUB (#460) The Cookbook, the showcase books and the built-in guide in every language of the site The postext-port agent skill The website in ten languages, at WCAG 2.2 AAA Composed pages: page templates with frames filled from the Markdown (#846), then modules, repeating grids, connectors and vector shapes (#1051, #1086) Comics, manga and newspaper strips lettered by the engine (#553) Print production: ICC profiles, PDF/X and preflight (#609) Word import and export (#599) The postext command line (#617) and WebMCP tools for agents in the browser The Rust line breaker in WebAssembly and a faster whole-book layout (#779) Music notation engraved by Verovio: scores in the text and numbered music examples (#1178) What comes next is driven by the community: open an issue that describes the publication you are trying to set and where Postext falls short. Contributing Postext is a community-driven open-source project. An active community of contributors is growing around it, and new collaborators are always welcome. The goal is to build a shared standard that any editorial development team worldwide can adopt — a common foundation for professional web typography. If you want to contribute code, please open an issue first to discuss the approach. This helps avoid duplicate work and ensures alignment with the project direction. Follow existing code style and TypeScript strict mode. The project especially welcomes people with experience in: Typographic layout algorithms (Knuth-Plass, column balancing, optimal paragraph breaking) PDF generation (low-level PDF construction, font embedding) Editorial design (magazine/newspaper layout, book typesetting) Text rendering (canvas, SVG, font metrics) Documentation, translations, and testing For the full community vision and all the ways to get involved, see the Contributing guide. Acknowledgments pretext by Cheng Lou. The foundational text measurement library that makes postext possible. Without DOM-free, pixel-perfect text measurement at sub-millisecond speed, none of this would be practical. Content First (~2014). The original exploration into high-quality editorial layout on the web. A decade of running into walls, learning what doesn't work, and accumulating the conviction that this problem is worth solving properly. postext stands on centuries of typographic tradition. The rules it implements are not invented — they are inherited from the work of typesetters, typographers, and designers who refined the art of making text readable long before screens existed. From Gutenberg's movable type to Tschichold's asymmetric typography to Bringhurst's Elements of Typographic Style — postext aims to bring that accumulated craft to the web, where it has been conspicuously absent. License MIT",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://github.com/drnachio/postext#postext"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/postext"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/drnachio/postext/actions/workflows/ci.yml?query=branch%3Amain"
+    },
+    {
+      "label": "postext.dev",
+      "url": "https://postext.dev/"
+    },
+    {
+      "label": "postext.dev/en/docs",
+      "url": "https://postext.dev/en/docs"
+    },
+    {
+      "label": "@chenglou/pretext",
+      "url": "https://github.com/chenglou/pretext"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/drnachio/postext#how-it-works"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/drnachio/postext#why-postext"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/drnachio/postext#the-gap-between-print-and-web"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/drnachio/postext#a-decade-of-trying"
+    },
+    {
+      "label": "Content First",
+      "url": "https://medium.com/binpar/el-arte-de-maquetar-para-ser-le%C3%ADdo-933be57cb293"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/drnachio/postext#the-missing-piece"
+    },
+    {
+      "label": "pretext",
+      "url": "https://github.com/chenglou/pretext"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/drnachio/postext#pretext--postext"
+    },
+    {
+      "label": "Cheng Lou",
+      "url": "https://github.com/chenglou"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/drnachio/postext#features"
+    },
+    {
+      "label": "Features",
+      "url": "https://github.com/drnachio/postext/wiki/Features"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/drnachio/postext#column-based-layouts"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/drnachio/postext#column-balancing"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/drnachio/postext#optimal-justification"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/drnachio/postext#resources-as-first-class-citizens"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/drnachio/postext#callouts-pull-quotes-and-marginal-material"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/drnachio/postext#composed-pages"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/drnachio/postext#comics"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/drnachio/postext#notes-citations-and-indexes"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/drnachio/postext#languages-and-scripts"
+    },
+    {
+      "label": "Chinese layout",
+      "url": "https://postext.dev/en/docs/chinese-layout"
+    },
+    {
+      "label": "Arabic layout",
+      "url": "https://postext.dev/en/docs/arabic-layout"
+    },
+    {
+      "label": "Japanese layout",
+      "url": "https://postext.dev/en/docs/japanese-layout"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/drnachio/postext#books-parts-and-front-matter"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/drnachio/postext#styling-configuration"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/drnachio/postext#math"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/drnachio/postext#music-notation"
+    },
+    {
+      "label": "Verovio",
+      "url": "https://www.verovio.org"
+    },
+    {
+      "label": "Music notation",
+      "url": "https://postext.dev/en/docs/music"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/drnachio/postext#headers--footers"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/drnachio/postext#multi-format-output"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/drnachio/postext#sandbox"
+    },
+    {
+      "label": "postext.dev",
+      "url": "https://postext.dev/en/sandbox"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/drnachio/postext#cookbook"
+    },
+    {
+      "label": "postext.dev/en/cookbook",
+      "url": "https://postext.dev/en/cookbook"
+    },
+    {
+      "label": "cookbook/",
+      "url": "https://github.com/drnachio/postext/blob/main/cookbook/README.md"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/drnachio/postext#website"
+    },
+    {
+      "label": "postext.dev",
+      "url": "https://postext.dev/"
+    },
+    {
+      "label": "WebMCP",
+      "url": "https://webmachinelearning.github.io/webmcp/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/drnachio/postext#configuration-driven"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/drnachio/postext#agent-skill-port-existing-publications"
+    },
+    {
+      "label": "the Skill docs",
+      "url": "https://postext.dev/en/docs/skill"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/drnachio/postext#command-line"
+    },
+    {
+      "label": "GitHub Release",
+      "url": "https://github.com/drnachio/postext/releases/latest"
+    },
+    {
+      "label": "readme.txt",
+      "url": "https://github.com/drnachio/postext/blob/main/packages/postext-cli/bin/readme.txt"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/drnachio/postext#project-structure"
+    },
+    {
+      "label": "postext.dev",
+      "url": "https://postext.dev"
+    },
+    {
+      "label": "GitHub wiki",
+      "url": "https://github.com/drnachio/postext/wiki"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/drnachio/postext#getting-started"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/drnachio/postext#prerequisites"
+    },
+    {
+      "label": "Node.js",
+      "url": "https://nodejs.org/"
+    },
+    {
+      "label": "pnpm",
+      "url": "https://pnpm.io/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/drnachio/postext#installation"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/drnachio/postext#development"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/drnachio/postext#using-postext-in-your-project"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/drnachio/postext#asynchronous-layout-in-a-web-worker-recommended-for-uis"
+    },
+    {
+      "label": "Running layout in a Web Worker",
+      "url": "https://postext.dev/en/docs/configuration-programmatic-usage#running-layout-in-a-web-worker"
+    },
+    {
+      "label": "Integrating the HTML viewer",
+      "url": "https://postext.dev/en/docs/configuration-html-folio-epub#integrating-the-html-viewer"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/drnachio/postext#roadmap"
+    },
+    {
+      "label": "Roadmap",
+      "url": "https://github.com/drnachio/postext/wiki/Roadmap"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/drnachio/postext#phase-1-foundation-"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/drnachio/postext#phase-2-editorial-layout-"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/drnachio/postext#phase-3-professional-typography-"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/drnachio/postext#phase-4-output-targets-"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/drnachio/postext#beyond-the-original-plan-"
+    },
+    {
+      "label": "#162",
+      "url": "https://github.com/drnachio/postext/issues/162"
+    },
+    {
+      "label": "#165",
+      "url": "https://github.com/drnachio/postext/issues/165"
+    },
+    {
+      "label": "#203",
+      "url": "https://github.com/drnachio/postext/issues/203"
+    },
+    {
+      "label": "#440",
+      "url": "https://github.com/drnachio/postext/issues/440"
+    },
+    {
+      "label": "#442",
+      "url": "https://github.com/drnachio/postext/issues/442"
+    },
+    {
+      "label": "#460",
+      "url": "https://github.com/drnachio/postext/issues/460"
+    },
+    {
+      "label": "#846",
+      "url": "https://github.com/drnachio/postext/issues/846"
+    },
+    {
+      "label": "#1051",
+      "url": "https://github.com/drnachio/postext/issues/1051"
+    },
+    {
+      "label": "#1086",
+      "url": "https://github.com/drnachio/postext/issues/1086"
+    },
+    {
+      "label": "#553",
+      "url": "https://github.com/drnachio/postext/issues/553"
+    },
+    {
+      "label": "#609",
+      "url": "https://github.com/drnachio/postext/issues/609"
+    },
+    {
+      "label": "#599",
+      "url": "https://github.com/drnachio/postext/issues/599"
+    },
+    {
+      "label": "#617",
+      "url": "https://github.com/drnachio/postext/issues/617"
+    },
+    {
+      "label": "#779",
+      "url": "https://github.com/drnachio/postext/issues/779"
+    },
+    {
+      "label": "#1178",
+      "url": "https://github.com/drnachio/postext/issues/1178"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/drnachio/postext#contributing"
+    },
+    {
+      "label": "Contributing guide",
+      "url": "https://postext.dev/en/docs/contributing"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/drnachio/postext#acknowledgments"
+    },
+    {
+      "label": "pretext",
+      "url": "https://github.com/chenglou/pretext"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/drnachio/postext#license"
+    }
+  ],
+  "root_files": [
+    ".claude-plugin",
+    ".claude",
+    ".cursor-plugin",
+    ".github",
+    ".vscode",
+    "apps/web",
+    "cookbook",
+    "docs",
+    "packages",
+    "patches",
+    "plugins/postext",
+    "rust",
+    "scripts",
+    ".gitattributes",
+    ".gitignore",
+    ".nvmrc",
+    "CODE_OF_CONDUCT.md",
+    "CONTRIBUTING.md",
+    "LICENSE",
+    "README.md",
+    "SECURITY.md",
+    "package.json",
+    "pnpm-lock.yaml",
+    "pnpm-workspace.yaml",
+    "skills-lock.json",
+    "turbo.json"
+  ],
+  "release_count": 81,
+  "status": "verified"
+}

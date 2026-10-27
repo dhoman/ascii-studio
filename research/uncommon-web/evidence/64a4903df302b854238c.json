@@ -1,0 +1,139 @@
+{
+  "url": "https://github.com/basmilius/weather-icons",
+  "final_url": "https://github.com/basmilius/meteocons",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:47:36.854260+00:00",
+  "stars": 1677,
+  "forks": 175,
+  "description": "Beautiful, hand-crafted animated weather icons that feel alive.",
+  "homepage": "https://meteocons.com",
+  "topics": [
+    "animations",
+    "figma",
+    "icon",
+    "icon-pack",
+    "icons",
+    "lottie",
+    "lottie-animation",
+    "meteocons",
+    "simple-icons",
+    "svg",
+    "svg-files",
+    "weather",
+    "weather-icons"
+  ],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2019-02-19T17:43:22.000Z",
+  "branch": "main",
+  "commit": "70dfb1d6e30dc9e791cfb0e4c5b5e5e60e972aa0",
+  "readme": "Meteocons Animated weather icons for the modern web. 475+ hand-crafted icons in 4 styles, available as SVG and Lottie. Packages Package Description @meteocons/svg Animated SVG weather icons @meteocons/svg-static Static SVG weather icons @meteocons/lottie Lottie JSON weather animations Installation # Animated SVG icons bun add @meteocons/svg # Static SVG icons (no SMIL animations) bun add @meteocons/svg-static # Lottie animations bun add @meteocons/lottie Styles Each icon is available in 4 styles: Fill — Solid filled icons with rich colors Flat — Flat design without gradients Line — Clean outline style Monochrome — Single color icons Usage <!-- SVG --> <img src=\"@meteocons/svg/fill/clear-day.svg\" alt=\"Clear day\"/> <!-- Lottie (with lottie-web) --> <script> import lottie from 'lottie-web'; import clearDay from '@meteocons/lottie/fill/clear-day.json'; lottie.loadAnimation({ container: document.getElementById('icon'), animationData: clearDay, loop: true, autoplay: true, }); </script> CDN All icons are also available via CDN at cdn.meteocons.com: https://cdn.meteocons.com/{version}/svg/{style}/{icon}.svg https://cdn.meteocons.com/{version}/svg-static/{style}/{icon}.svg https://cdn.meteocons.com/{version}/lottie/{style}/{icon}.json See the CDN documentation for details. Development This is the monorepo for the Meteocons export pipeline, icon packages and documentation. Prerequisites Bun >= 1.0 A Figma Personal Access Token (see below) Setup git clone ... cd meteocons bun install cp .env.example .env # Fill in FIGMA_TOKEN and FIGMA_FILE_KEY Commands bun run fetch # Fetch SVGs from Figma (uses cache) bun run fetch --force # Force re-download bun run export # Export all icons (SVG + Lottie) bun run export --frame X # Export a single icon bun run validate # Validate layer names and coverage bun run publish-icons # Copy output to @meteocons/svg, @meteocons/svg-static and @meteocons/lottie bun run docs:dev # Start documentation website Figma Personal Access Token Open Figma and click your avatar (top-left) Go to Settings > Security Scroll to Personal access tokens and click Generate new token Select the file_content:read scope Animation configs Animations are defined as JSON files in animations/configs/. Each config specifies which icons (targets) to animate and which layers to animate (layers). Reusable building blocks live in animations/partials/ and are merged via includes. Category configuration Icon categories are configured in packages/exporter/categories.json. The order of categories and icons in this file determines the display order on the website and in the manifest. License MIT - Bas Milius",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://github.com/basmilius/meteocons/blob/main/assets/header.png"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/basmilius/meteocons#meteocons"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/basmilius/meteocons#packages"
+    },
+    {
+      "label": "@meteocons/svg",
+      "url": "https://github.com/basmilius/meteocons/blob/main/packages/svg"
+    },
+    {
+      "label": "@meteocons/svg-static",
+      "url": "https://github.com/basmilius/meteocons/blob/main/packages/svg-static"
+    },
+    {
+      "label": "@meteocons/lottie",
+      "url": "https://github.com/basmilius/meteocons/blob/main/packages/lottie"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/basmilius/meteocons#installation"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/basmilius/meteocons#styles"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/basmilius/meteocons#usage"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/basmilius/meteocons#cdn"
+    },
+    {
+      "label": "CDN documentation",
+      "url": "https://meteocons.com/docs/cdn"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/basmilius/meteocons#development"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/basmilius/meteocons#prerequisites"
+    },
+    {
+      "label": "Bun",
+      "url": "https://bun.sh"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/basmilius/meteocons#setup"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/basmilius/meteocons#commands"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/basmilius/meteocons#figma-personal-access-token"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/basmilius/meteocons#animation-configs"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/basmilius/meteocons#category-configuration"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/basmilius/meteocons#license"
+    },
+    {
+      "label": "MIT",
+      "url": "https://github.com/basmilius/meteocons/blob/main/LICENSE"
+    },
+    {
+      "label": "",
+      "url": "https://bas.dev"
+    }
+  ],
+  "root_files": [
+    ".github",
+    ".idea",
+    "animations",
+    "assets",
+    "packages",
+    ".editorconfig",
+    ".gitignore",
+    "CLAUDE.md",
+    "LICENSE",
+    "README.md",
+    "bun.lock",
+    "package.json",
+    "tsconfig.base.json",
+    "wrangler.toml"
+  ],
+  "release_count": 13,
+  "status": "verified"
+}

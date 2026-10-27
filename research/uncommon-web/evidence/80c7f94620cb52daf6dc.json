@@ -1,0 +1,116 @@
+{
+  "url": "https://github.com/ouestlabs/audio-ui",
+  "final_url": "https://github.com/ouestlabs/audio-ui",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:48:08.251220+00:00",
+  "stars": 194,
+  "forks": 9,
+  "description": "Audio controls for React: knobs, faders, meters, waveforms, timelines, sequencers and piano rolls, as headless primitives on npm or shadcn/ui components.",
+  "homepage": "https://www.audio-ui.dev",
+  "topics": [
+    "audio-ui",
+    "components",
+    "nextjs",
+    "react",
+    "registry",
+    "shadcn",
+    "tailwindcss"
+  ],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2024-09-07T21:38:16.000Z",
+  "branch": "main",
+  "commit": "f7d3b77a4883746bf2e311dc6b00c419f1ecc8fd",
+  "readme": "audio/ui Accessible, composable Audio UI components for React: knobs, faders, meters, pads, waveforms, timelines, piano rolls and the synths, mixers and players made from them. Primitives on npm. Headless, accessible parts with the behavior built in and the styling left to you: @audio-ui/react, on the framework-agnostic @audio-ui/core. Components you own. A shadcn registry of styled components, blocks and hooks built on the primitives, copied into your project with the CLI. Web Audio API first. Meters, spectrum analyzers and tuners read real signals from AnalyserNodes, and live values move without re-rendering React. Docs, demos and the catalog: https://www.audio-ui.dev Use it # the primitives npm install @audio-ui/react # a styled component, and what it needs, from the registry npx shadcn@latest add @audio-ui/knob See Get started for the registry setup. For coding agents, four skills (audio-ui, web-audio, design, core) install as one Claude Code plugin, or with the open skills CLI: /plugin install audio-ui --marketplace ouestlabs/audio-ui npx skills add ouestlabs/audio-ui Develop Bun workspaces and Turborepo; use bun and bunx, not npm or npx. bun install bun run dev # the docs site on http://localhost:4000 Path What it is apps/www The docs site and the registry (TanStack Start, Fumadocs) apps/video Remotion videos of the real components packages/core @audio-ui/core, framework-agnostic logic packages/ui @audio-ui/react, the headless primitives skills/ The agent skills we ship to people using the library: audio-ui, web-audio, design, core Before opening a pull request: bun run lint:fix bun run build:pkg The full list of checks, and how to add a component to the registry, are in CONTRIBUTING.md. The words the code uses (Parameter, Commit, Primitive, Element) are in CONTEXT.md. Coding agents read AGENTS.md. Resources shadcn/ui registry Fumadocs License MIT",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://github.com/ouestlabs/audio-ui/blob/main/apps/www/public/illustration.svg"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/ouestlabs/audio-ui#audioui"
+    },
+    {
+      "label": "@audio-ui/react",
+      "url": "https://github.com/ouestlabs/audio-ui/blob/main/packages/ui"
+    },
+    {
+      "label": "@audio-ui/core",
+      "url": "https://github.com/ouestlabs/audio-ui/blob/main/packages/core"
+    },
+    {
+      "label": "https://www.audio-ui.dev",
+      "url": "https://www.audio-ui.dev"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/ouestlabs/audio-ui#use-it"
+    },
+    {
+      "label": "Get started",
+      "url": "https://www.audio-ui.dev/docs/get-started"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/ouestlabs/audio-ui#develop"
+    },
+    {
+      "label": "CONTRIBUTING.md",
+      "url": "https://github.com/ouestlabs/audio-ui/blob/main/CONTRIBUTING.md"
+    },
+    {
+      "label": "CONTEXT.md",
+      "url": "https://github.com/ouestlabs/audio-ui/blob/main/CONTEXT.md"
+    },
+    {
+      "label": "AGENTS.md",
+      "url": "https://github.com/ouestlabs/audio-ui/blob/main/AGENTS.md"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/ouestlabs/audio-ui#resources"
+    },
+    {
+      "label": "shadcn/ui registry",
+      "url": "https://ui.shadcn.com/docs/registry"
+    },
+    {
+      "label": "Fumadocs",
+      "url": "https://fumadocs.dev/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/ouestlabs/audio-ui#license"
+    },
+    {
+      "label": "MIT",
+      "url": "https://github.com/ouestlabs/audio-ui/blob/main/LICENSE"
+    }
+  ],
+  "root_files": [
+    ".agents",
+    ".changeset",
+    ".claude-plugin",
+    ".claude",
+    ".github",
+    ".vscode",
+    "apps",
+    "packages",
+    "skills",
+    ".editorconfig",
+    ".gitignore",
+    "AGENTS.md",
+    "CONTEXT.md",
+    "CONTRIBUTING.md",
+    "LICENSE",
+    "README.md",
+    "biome.json",
+    "bun.lock",
+    "bunfig.toml",
+    "package.json",
+    "turbo.json"
+  ],
+  "release_count": 53,
+  "status": "verified"
+}

@@ -1,0 +1,436 @@
+{
+  "url": "https://github.com/arwes/arwes",
+  "final_url": "https://github.com/arwes/arwes",
+  "http_status": 200,
+  "checked_at": "2026-10-23T17:46:54.017880+00:00",
+  "stars": 7569,
+  "forks": 337,
+  "description": "Futuristic Sci-Fi UI Web Framework.",
+  "homepage": "",
+  "topics": [
+    "arwes",
+    "cyberprep",
+    "framework",
+    "gui",
+    "react",
+    "retrowave",
+    "sci-fi",
+    "science-fiction",
+    "scifi",
+    "solarpunk",
+    "synthwave",
+    "ui"
+  ],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2015-01-08T02:10:24.000Z",
+  "branch": "next",
+  "commit": "bdbaa0324900ee978d42036d1304a053c1fe54b5",
+  "readme": "Futuristic Sci-Fi UI Web Framework ARWES is a web framework to build user interfaces based on futuristic science fiction designs, animations, and sound effects. The concepts behind are opinionated with influences from Cyberprep and productions like Star Citizen, Halo, NIKKE, and Mecha Break. It tries to inspire advanced science and technology. The ARWES project is no longer maintained and currently outdated but it is still functional and operational. Feel free to fork it for your own personal use. Packages Vanilla Core of the framework. Vanilla packages do not have major external dependencies but most tools are low level APIs and sometimes require elaborated setups. Other implementation packages simplify its use. React ARWES offers React v18 specific packages with SSR support. ARWES does not work with React strict mode nor React Server Components. Community Apps ZKN SoulExtract.com RomelPerez.dev Archive RPG Cyber Movie Database Primary Buffer Panel Universe Dawn Badgeth Dark Galaxies inCyberPunk Stream Overlay StarWards Lady of the Shalott Assembly RTS paingthet.com glitchy.website Contributors Romel Pérez📆 💻 ⚠️ 📖 Nick West📖 🤔 🔬 🚇 Joshua Pratt💻 👀 Zoey🤔 👀 Amir Arad🐛 💻 Stephen Bennett🐛 💻 Zixuan Wang🐛 💻 Frityet💵 AthelesE💵 Ram💵 This project follows the all-contributors specification. Workflow Using Node.js v20. Setup Install and build all packages: npm install npm run build Applications Open an app in development mode: npx turbo dev -F apps-docs npx turbo dev -F apps-play npx turbo dev -F apps-perf Packages Build and watch a package in development mode: npx turbo dev -F @arwes/animated # ... Production Build production website at the ./www folder and open it: npm run www npm run serve open http://localhost:3000",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://github.com/arwes/arwes/blob/next/static/arwes.jpg"
+    },
+    {
+      "label": "",
+      "url": "https://npmjs.org/package/arwes"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/arwes/arwes"
+    },
+    {
+      "label": "",
+      "url": "https://npmjs.org/package/arwes"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/arwes/arwes/blob/main/LICENSE"
+    },
+    {
+      "label": "ARWES",
+      "url": "https://arwes.dev"
+    },
+    {
+      "label": "Cyberprep",
+      "url": "https://aesthetics.fandom.com/wiki/Cyberprep"
+    },
+    {
+      "label": "Star Citizen",
+      "url": "http://robertsspaceindustries.com"
+    },
+    {
+      "label": "Halo",
+      "url": "https://www.halowaypoint.com/en-us/games"
+    },
+    {
+      "label": "NIKKE",
+      "url": "https://nikke-en.com"
+    },
+    {
+      "label": "Mecha Break",
+      "url": "https://www.mechabreak.com/index"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/arwes/arwes#packages"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/arwes/arwes#vanilla"
+    },
+    {
+      "label": "",
+      "url": "https://bundlephobia.com/package/arwes"
+    },
+    {
+      "label": "",
+      "url": "https://bundlephobia.com/package/arwes"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/arwes/arwes#react"
+    },
+    {
+      "label": "",
+      "url": "https://bundlephobia.com/package/@arwes/react"
+    },
+    {
+      "label": "",
+      "url": "https://bundlephobia.com/package/@arwes/react"
+    },
+    {
+      "label": "React",
+      "url": "https://react.dev"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/arwes/arwes#community"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/arwes/arwes#apps"
+    },
+    {
+      "label": "",
+      "url": "https://zknet.io"
+    },
+    {
+      "label": "ZKN",
+      "url": "https://zknet.io"
+    },
+    {
+      "label": "",
+      "url": "https://soulextract.com"
+    },
+    {
+      "label": "SoulExtract.com",
+      "url": "https://soulextract.com"
+    },
+    {
+      "label": "",
+      "url": "https://romelperez.dev"
+    },
+    {
+      "label": "RomelPerez.dev",
+      "url": "https://romelperez.dev"
+    },
+    {
+      "label": "",
+      "url": "https://archiverpg.com"
+    },
+    {
+      "label": "Archive RPG",
+      "url": "https://archiverpg.com"
+    },
+    {
+      "label": "",
+      "url": "https://cmdb.wrick17.com"
+    },
+    {
+      "label": "Cyber Movie Database",
+      "url": "https://cmdb.wrick17.com"
+    },
+    {
+      "label": "",
+      "url": "https://beko.famkos.net/category/simpit"
+    },
+    {
+      "label": "Primary Buffer Panel",
+      "url": "https://beko.famkos.net/category/simpit"
+    },
+    {
+      "label": "",
+      "url": "https://universe-dawn.com"
+    },
+    {
+      "label": "Universe Dawn",
+      "url": "https://universe-dawn.com"
+    },
+    {
+      "label": "",
+      "url": "https://www.reddit.com/r/reactjs/comments/p6x6j7/show_rreactjs_badgeth_a_scifi_dapp_built_with/"
+    },
+    {
+      "label": "Badgeth",
+      "url": "https://www.reddit.com/r/reactjs/comments/p6x6j7/show_rreactjs_badgeth_a_scifi_dapp_built_with/"
+    },
+    {
+      "label": "",
+      "url": "https://darkgalaxies.io"
+    },
+    {
+      "label": "Dark Galaxies",
+      "url": "https://darkgalaxies.io"
+    },
+    {
+      "label": "",
+      "url": "https://cybersocial.herokuapp.com"
+    },
+    {
+      "label": "inCyberPunk",
+      "url": "https://cybersocial.herokuapp.com"
+    },
+    {
+      "label": "",
+      "url": "https://beko.famkos.net/tag/streamoverlay"
+    },
+    {
+      "label": "Stream Overlay",
+      "url": "https://beko.famkos.net/tag/streamoverlay"
+    },
+    {
+      "label": "",
+      "url": "https://blog.starwards.space"
+    },
+    {
+      "label": "StarWards",
+      "url": "https://blog.starwards.space"
+    },
+    {
+      "label": "",
+      "url": "https://www.myxouz.com/2021/12/lady-of-shalott-first-version-of-our-home-dashboard/"
+    },
+    {
+      "label": "Lady of the Shalott",
+      "url": "https://www.myxouz.com/2021/12/lady-of-shalott-first-version-of-our-home-dashboard/"
+    },
+    {
+      "label": "",
+      "url": "https://www.indiedb.com/games/assembly-rts"
+    },
+    {
+      "label": "Assembly RTS",
+      "url": "https://www.indiedb.com/games/assembly-rts"
+    },
+    {
+      "label": "",
+      "url": "https://paingthet.com"
+    },
+    {
+      "label": "paingthet.com",
+      "url": "https://paingthet.com"
+    },
+    {
+      "label": "",
+      "url": "https://glitchy.website"
+    },
+    {
+      "label": "glitchy.website",
+      "url": "https://glitchy.website"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/arwes/arwes#contributors"
+    },
+    {
+      "label": "Romel Pérez",
+      "url": "https://RomelPerez.dev"
+    },
+    {
+      "label": "📆",
+      "url": "https://github.com/arwes/arwes#projectManagement-romelperez"
+    },
+    {
+      "label": "💻",
+      "url": "https://github.com/arwes/arwes/commits?author=romelperez"
+    },
+    {
+      "label": "⚠️",
+      "url": "https://github.com/arwes/arwes/commits?author=romelperez"
+    },
+    {
+      "label": "📖",
+      "url": "https://github.com/arwes/arwes/commits?author=romelperez"
+    },
+    {
+      "label": "Nick West",
+      "url": "https://nickwe.st"
+    },
+    {
+      "label": "📖",
+      "url": "https://github.com/arwes/arwes/commits?author=njwest"
+    },
+    {
+      "label": "🤔",
+      "url": "https://github.com/arwes/arwes#ideas-njwest"
+    },
+    {
+      "label": "🔬",
+      "url": "https://github.com/arwes/arwes#research-njwest"
+    },
+    {
+      "label": "🚇",
+      "url": "https://github.com/arwes/arwes#infra-njwest"
+    },
+    {
+      "label": "Joshua Pratt",
+      "url": "https://github.com/jdpnielsen"
+    },
+    {
+      "label": "💻",
+      "url": "https://github.com/arwes/arwes/commits?author=jdpnielsen"
+    },
+    {
+      "label": "👀",
+      "url": "https://github.com/arwes/arwes/pulls?q=is%3Apr+reviewed-by%3Ajdpnielsen"
+    },
+    {
+      "label": "Zoey",
+      "url": "https://github.com/Dessix"
+    },
+    {
+      "label": "🤔",
+      "url": "https://github.com/arwes/arwes#ideas-Dessix"
+    },
+    {
+      "label": "👀",
+      "url": "https://github.com/arwes/arwes/pulls?q=is%3Apr+reviewed-by%3ADessix"
+    },
+    {
+      "label": "Amir Arad",
+      "url": "https://github.com/amir-arad"
+    },
+    {
+      "label": "🐛",
+      "url": "https://github.com/arwes/arwes/issues?q=author%3Aamir-arad"
+    },
+    {
+      "label": "💻",
+      "url": "https://github.com/arwes/arwes/commits?author=amir-arad"
+    },
+    {
+      "label": "Stephen Bennett",
+      "url": "https://github.com/StephenCodesThings"
+    },
+    {
+      "label": "🐛",
+      "url": "https://github.com/arwes/arwes/issues?q=author%3AStephenCodesThings"
+    },
+    {
+      "label": "💻",
+      "url": "https://github.com/arwes/arwes/commits?author=StephenCodesThings"
+    },
+    {
+      "label": "Zixuan Wang",
+      "url": "https://github.com/TheNetAdmin"
+    },
+    {
+      "label": "🐛",
+      "url": "https://github.com/arwes/arwes/issues?q=author%3ATheNetAdmin"
+    },
+    {
+      "label": "💻",
+      "url": "https://github.com/arwes/arwes/commits?author=TheNetAdmin"
+    },
+    {
+      "label": "Frityet",
+      "url": "https://www.frityet.net/"
+    },
+    {
+      "label": "💵",
+      "url": "https://github.com/arwes/arwes#financial-Frityet"
+    },
+    {
+      "label": "AthelesE",
+      "url": "https://github.com/AthelesE"
+    },
+    {
+      "label": "💵",
+      "url": "https://github.com/arwes/arwes#financial-AthelesE"
+    },
+    {
+      "label": "Ram",
+      "url": "https://github.com/r4mbhardwaj"
+    },
+    {
+      "label": "💵",
+      "url": "https://github.com/arwes/arwes#financial-r4mbhardwaj"
+    },
+    {
+      "label": "all-contributors",
+      "url": "https://github.com/kentcdodds/all-contributors"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/arwes/arwes#workflow"
+    },
+    {
+      "label": "Node.js",
+      "url": "http://nodejs.org"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/arwes/arwes#setup"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/arwes/arwes#applications"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/arwes/arwes#packages-1"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/arwes/arwes#production"
+    }
+  ],
+  "root_files": [
+    ".github",
+    ".husky",
+    ".vscode",
+    "apps",
+    "packages",
+    "scripts",
+    "static",
+    ".all-contributorsrc",
+    ".editorconfig",
+    ".eslintrc",
+    ".gitattributes",
+    ".gitignore",
+    ".markdownlint.json",
+    ".markdownlintignore",
+    ".npmrc",
+    ".nvmrc",
+    ".prettierignore",
+    ".prettierrc.json",
+    "LICENSE",
+    "README.md",
+    "commitlint.config.js",
+    "lerna.json",
+    "package-lock.json",
+    "package.json",
+    "tsconfig.base.json",
+    "tsconfig.build.cjs.json",
+    "tsconfig.build.esm.json",
+    "tsconfig.build.json",
+    "tsconfig.json",
+    "turbo.json",
+    "vite.config.mts",
+    "vite.setup.mts"
+  ],
+  "release_count": 13,
+  "status": "verified"
+}

@@ -1,0 +1,186 @@
+{
+  "url": "https://github.com/meursyphus/ssgoi",
+  "final_url": "https://github.com/meursyphus/ssgoi",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:48:02.619857+00:00",
+  "stars": 1012,
+  "forks": 50,
+  "description": "animated page transition for major ssr frameworks and browsers, including Safari",
+  "homepage": "https://ssgoi.dev",
+  "topics": [
+    "animation",
+    "nextjs",
+    "page-animation",
+    "react",
+    "svelte",
+    "sveltekit",
+    "view-transitions"
+  ],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2023-11-17T05:33:18.000Z",
+  "branch": "latest",
+  "commit": "aac91abedb35cb82d8087607e5a2d9f5ab6f22f5",
+  "readme": "SSGOI Native app-like page transitions for mobile web apps, PWAs, and WebView apps. Router agnostic · Cross-browser · SSR ready · Web Animations API powered Live showcase · Documentation Drill Sheet Navigate through a mobile app with spatial depth Present focused tasks above the current page Why SSGOI? Router agnostic Keep your existing router and let it own navigation. Cross-browser Use the same transitions across Chrome, Safari, Firefox, and Edge. Optimized motion Spring physics are precomputed into Web Animations API keyframes. Beyond the View Transition API Build transitions that need live DOM, runtime layers, and precise geometry. Easy to adopt Add SSGOI by changing only two files. Set it up with one link Give this URL to Claude, Codex, Cursor, or another coding agent: https://ssgoi.dev/llms.txt It contains the full setup for React and Next.js, Svelte and SvelteKit, Vue and Nuxt, Solid and SolidStart, Angular, and Qwik. Or install the agent plugin The same mobile-web-app skill works in Codex and Claude Code. Codex: codex plugin marketplace add meursyphus/ssgoi codex plugin add ssgoi@ssgoi Claude Code: claude plugin marketplace add meursyphus/ssgoi claude plugin install ssgoi@ssgoi Then ask the agent to apply SSGOI to the current mobile web app. The skill reads the canonical llms.txt, selects the matching framework guide, and follows the app's existing router and layout structure. Or add it in just two files The Next.js setup is one config, one provider, and one simple ready-made route boundary. npm install @ssgoi/react // app/ssgoi-provider.tsx \"use client\"; import { type ReactNode } from \"react\"; import { Ssgoi } from \"@ssgoi/react\"; import { drill } from \"@ssgoi/react/view-transitions\"; const config = { transitions: [{ on: \"/**\", except: \"/\", transition: drill() }], }; export function SsgoiProvider({ children }: { children: ReactNode }) { return <Ssgoi config={config}>{children}</Ssgoi>; } Import the route boundary directly; it reads the pathname and handles URL-hook Suspense: import { SsgoiRouteBoundary } from \"@ssgoi/react/nextjs\"; <SsgoiRouteBoundary>{children}</SsgoiRouteBoundary>; // app/layout.tsx import { type ReactNode } from \"react\"; import { SsgoiProvider } from \"./ssgoi-provider\"; import { SsgoiRouteBoundary } from \"@ssgoi/react/nextjs\"; export default function RootLayout({ children }: { children: ReactNode }) { return ( <html lang=\"en\"> <body> <main className=\"relative z-0 min-h-dvh overflow-x-clip\"> <SsgoiProvider> <SsgoiRouteBoundary>{children}</SsgoiRouteBoundary> </SsgoiProvider> </main> </body> </html> ); } The class string above is Tailwind shorthand. Without Tailwind, apply position: relative; z-index: 0; min-height: 100dvh; overflow-x: clip to the shell. Use 100vh only where dvh is unsupported. That is enough for a simple app. Router subpaths use optional peers, so importing @ssgoi/react does not install or load Next.js. Other frameworks use the same small boundary model with their own router state. For complete files, persistent layouts, nested boundaries, and framework-specific setup, see the documentation. Compatibility SSGOI depends on the broadly available Web Animations API instead of requiring the View Transition API. Chrome 84+ Safari 13.1+ Firefox 75+ Edge 84+ These are core Web Animations API runtime targets. The blur types in Sheet and Zoom also use backdrop-filter (Firefox 103+); earlier Firefox keeps the transition, scale, and dimming but omits the backdrop blur. The same build runs inside WebView shells — Capacitor, Ionic, Tauri, React Native WebView — and as an installed PWA, with no native plugin. iOS and Android back swipes are left to the OS. Make a web app feel native → It observes the DOM lifecycle your framework already owns, so routing and SSR stay with your existing stack. Next.js React Router TanStack Router SvelteKit Nuxt React · Svelte · Vue · Solid · Angular · Qwik · framework-agnostic core An experimental React Native / Expo Router integration adds native fade/slide transitions with the same SsgoiRouteBoundary naming. Try the Expo template for the current implementation and device checks. See complete compatibility and framework guides → Need the app screens too? Comwit UI is a mobile app component kit built on SSGOI: app shell, app bar, bottom nav, bottom sheet, pull to refresh, and page transitions. Why SSGOI doesn't use the View Transition API SSGOI owns the geometry, temporary visual layers, live outgoing DOM, and navigation policy needed to turn complex motion into reusable presets. Zoom Film Sheet The whole detail page unfolds from its image Runtime scene, live video, and multiple springs A live backdrop sits between the two pages Read why SSGOI doesn't use the View Transition API → License MIT Licensed © MeurSyphus",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://github.com/meursyphus/ssgoi#ssgoi"
+    },
+    {
+      "label": "Live showcase",
+      "url": "https://ssgoi.dev"
+    },
+    {
+      "label": "Documentation",
+      "url": "https://ssgoi.dev/docs"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/meursyphus/ssgoi/blob/latest/apps/docs/public/readme-drill.gif"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/meursyphus/ssgoi/blob/latest/apps/docs/public/blog/view-transition-api-limitations/sheet-blur-full.gif"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/meursyphus/ssgoi#why-ssgoi"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/meursyphus/ssgoi#set-it-up-with-one-link"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/meursyphus/ssgoi#or-install-the-agent-plugin"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/meursyphus/ssgoi#or-add-it-in-just-two-files"
+    },
+    {
+      "label": "documentation",
+      "url": "https://ssgoi.dev/docs/install"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/meursyphus/ssgoi#compatibility"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/meursyphus/ssgoi/blob/latest/apps/docs/public/logos/chrome.svg"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/meursyphus/ssgoi/blob/latest/apps/docs/public/logos/safari.svg"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/meursyphus/ssgoi/blob/latest/apps/docs/public/logos/firefox.svg"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/meursyphus/ssgoi/blob/latest/apps/docs/public/logos/edge.svg"
+    },
+    {
+      "label": "Make a web app feel native →",
+      "url": "https://ssgoi.dev/docs/native-app-feel"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/meursyphus/ssgoi/blob/latest/apps/docs/public/logos/nextjs.svg"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/meursyphus/ssgoi/blob/latest/apps/docs/public/logos/react-router.svg"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/meursyphus/ssgoi/blob/latest/apps/docs/public/logos/tanstack.svg"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/meursyphus/ssgoi/blob/latest/apps/docs/public/logos/svelte.svg"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/meursyphus/ssgoi/blob/latest/apps/docs/public/logos/nuxt.svg"
+    },
+    {
+      "label": "React Native / Expo Router integration",
+      "url": "https://github.com/meursyphus/ssgoi/blob/latest/packages/react-native/README.md"
+    },
+    {
+      "label": "Expo template",
+      "url": "https://github.com/meursyphus/ssgoi/blob/latest/templates/expo"
+    },
+    {
+      "label": "See complete compatibility and framework guides →",
+      "url": "https://ssgoi.dev/docs/compatibility"
+    },
+    {
+      "label": "Comwit UI",
+      "url": "https://library.comwit.io/ui"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/meursyphus/ssgoi#why-ssgoi-doesnt-use-the-view-transition-api"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/meursyphus/ssgoi/blob/latest/apps/docs/public/blog/view-transition-api-limitations/zoom-blur.gif"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/meursyphus/ssgoi/blob/latest/apps/docs/public/blog/view-transition-api-limitations/film.gif"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/meursyphus/ssgoi/blob/latest/apps/docs/public/blog/view-transition-api-limitations/sheet-blur-full.gif"
+    },
+    {
+      "label": "Read why SSGOI doesn't use the View Transition API →",
+      "url": "https://ssgoi.dev/blog/view-transition-api-limitations"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/meursyphus/ssgoi#license"
+    },
+    {
+      "label": "MIT Licensed",
+      "url": "https://github.com/meursyphus/ssgoi/blob/latest/LICENSE"
+    },
+    {
+      "label": "MeurSyphus",
+      "url": "https://github.com/meursyphus"
+    }
+  ],
+  "root_files": [
+    ".agents",
+    ".claude-plugin",
+    ".claude",
+    ".husky",
+    "apps",
+    "packages",
+    "plans",
+    "plugins/ssgoi",
+    "research/transition-interruption",
+    "scripts",
+    "templates",
+    ".gitignore",
+    ".npmrc",
+    ".prettierrc",
+    "AGENTS.md",
+    "CLAUDE.md",
+    "LICENSE",
+    "README.md",
+    "package.json",
+    "pnpm-lock.yaml",
+    "pnpm-workspace.yaml",
+    "ssgoi.gif",
+    "wrangler.jsonc"
+  ],
+  "release_count": 36,
+  "status": "verified"
+}

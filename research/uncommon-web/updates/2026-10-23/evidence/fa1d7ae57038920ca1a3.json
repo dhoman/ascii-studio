@@ -1,0 +1,86 @@
+{
+  "url": "https://github.com/chr15m/DoodleCSS",
+  "final_url": "https://github.com/chr15m/DoodleCSS",
+  "http_status": 200,
+  "checked_at": "2026-10-23T17:46:54.766599+00:00",
+  "stars": 1211,
+  "forks": 41,
+  "description": "A simple hand drawn HTML/CSS theme",
+  "homepage": "https://chr15m.github.io/DoodleCSS",
+  "topics": [
+    "css",
+    "hand-drawn",
+    "html",
+    "stylesheet",
+    "theme"
+  ],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2021-12-14T13:36:42.000Z",
+  "branch": "main",
+  "commit": "b49ca7604aa2deb71fd9f9458ced277001d51b10",
+  "readme": "Doodle CSS is a simple hand drawn HTML/CSS theme. Demo and more HTML elements. How to use it The main stylesheet is doodle.css. <link rel=\"stylesheet\" href=\"doodle.css\"> Then add the class doodle to the top level element you want to apply the theme to: <body class=\"doodle\">...</body> Load the Short Stack web font: <style> @import url('https://fonts.googleapis.com/css2?family=Short+Stack&display=swap'); body { font-family: 'Short Stack', cursive; } </style> There's also an npm installable version: npm install doodle.css The npm package can be imported with: import 'doodle.css/doodle.css' There are are bunch of other vectors you can use in doodles.svg. You can also put a doodle box around anything using the class .doodle .border or .doodle-border. Who By Chris McCormick (@mccrmx). See the demo for thanks and resources used.",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://chr15m.github.io/DoodleCSS"
+    },
+    {
+      "label": "Demo and more HTML elements",
+      "url": "https://chr15m.github.io/DoodleCSS"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/chr15m/DoodleCSS#how-to-use-it"
+    },
+    {
+      "label": "doodle.css",
+      "url": "https://github.com/chr15m/DoodleCSS/blob/main/doodle.css"
+    },
+    {
+      "label": "doodles.svg",
+      "url": "https://github.com/chr15m/DoodleCSS/blob/main/doodles.svg"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/chr15m/DoodleCSS#who"
+    },
+    {
+      "label": "Chris McCormick",
+      "url": "https://mccormick.cx/"
+    },
+    {
+      "label": "@mccrmx",
+      "url": "https://twitter.com/mccrmx"
+    },
+    {
+      "label": "the demo",
+      "url": "https://chr15m.github.io/DoodleCSS"
+    }
+  ],
+  "root_files": [
+    ".github",
+    ".gitignore",
+    "LICENSE",
+    "README.md",
+    "border.svg",
+    "bq.svg",
+    "button.svg",
+    "caret.svg",
+    "checkbox.svg",
+    "css-scan.png",
+    "doodle.css",
+    "doodles.svg",
+    "figure.svg",
+    "hr.svg",
+    "icon.png",
+    "icon.svg",
+    "index.html",
+    "package.json",
+    "radio.svg",
+    "screenshot.png",
+    "star.svg"
+  ],
+  "release_count": null,
+  "status": "verified"
+}

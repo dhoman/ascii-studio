@@ -1,0 +1,109 @@
+{
+  "url": "https://github.com/7PH/powerglitch",
+  "final_url": "https://github.com/7PH/powerglitch",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:45:55.689616+00:00",
+  "stars": 1498,
+  "forks": 17,
+  "description": "Tiny JS library to glitch anything on the web",
+  "homepage": "https://7ph.github.io/powerglitch/",
+  "topics": [
+    "css",
+    "css-animations",
+    "gifs",
+    "glitch-art",
+    "glitch-effect",
+    "glitched-images",
+    "glitchify-images",
+    "glitching",
+    "javascript",
+    "library",
+    "mosh"
+  ],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2022-07-19T16:07:14.000Z",
+  "branch": "master",
+  "commit": "d82fc318057a0644a55a06aa9a20c2f23ddffcb2",
+  "readme": "PowerGlitch is a standalone library with no external dependencies. It leverages CSS animations to glitch anything on the web, without using a canvas. It weights less than 2kb minified and gzipped. Want to try it out? Check out the demo 😊 Like this project? Give a star 🌟 Getting started Install PowerGlitch using a package manager npm i --save powerglitch # or yarn add powerglitch or by importing the web bundle in a script tag (or save it locally) <script src=\"https://unpkg.com/powerglitch@latest/dist/powerglitch.min.js\"></script> Find an element to glitch <!-- Image --> <img src='https://.../image.png' class='glitch' /> <!-- Button --> <button class='glitch'> click me 🤷‍♂️ </button> <!-- Any DOM element --> <div class='glitch'> <p>Hello <b>World</b></p> </div> Import PowerGlitch using ES6 import import { PowerGlitch } from 'powerglitch' or using ES5 require const PowerGlitch = require('powerglitch').PowerGlitch if you are importing PowerGlitch using a script tag, the PowerGlitch global variable is automatically available. Glitch the element PowerGlitch.glitch('.glitch') That's it, your element is glitched! Check-out the usage guide for optimization and usage tips. Useful links Documentation Visually try out effects using the demo. Lookup PowerGlitch home page. For customization and optimization tips, check the usage guide. Check out the api documentation for reference. Integrations React: react-powerglitch Vue: vue-powerglitch Contributing Having trouble? Found a bug? Want to contribute? Any kind of contribution is welcome. If you have any questions, please open an issue or create a pull request.",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://github.com/7PH/powerglitch/blob/master/assets/intro.gif"
+    },
+    {
+      "label": "demo",
+      "url": "https://7ph.github.io/powerglitch/#/playground"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/7PH/powerglitch#getting-started"
+    },
+    {
+      "label": "importing the web bundle",
+      "url": "https://unpkg.com/powerglitch@latest/dist/powerglitch.min.js"
+    },
+    {
+      "label": "usage guide",
+      "url": "https://7ph.github.io/powerglitch/#/usage"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/7PH/powerglitch#useful-links"
+    },
+    {
+      "label": "demo",
+      "url": "https://7ph.github.io/powerglitch/#/playground"
+    },
+    {
+      "label": "home page",
+      "url": "https://7ph.github.io/powerglitch/"
+    },
+    {
+      "label": "usage guide",
+      "url": "https://7ph.github.io/powerglitch/#/usage"
+    },
+    {
+      "label": "api documentation",
+      "url": "https://7ph.github.io/powerglitch/api-docs/variables/PowerGlitch.html"
+    },
+    {
+      "label": "react-powerglitch",
+      "url": "https://github.com/7PH/react-powerglitch"
+    },
+    {
+      "label": "vue-powerglitch",
+      "url": "https://github.com/7PH/vue-powerglitch"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/7PH/powerglitch#contributing"
+    }
+  ],
+  "root_files": [
+    ".github/workflows",
+    "assets",
+    "dist",
+    "docs-src",
+    "docs",
+    "src",
+    "test",
+    ".eslintrc.yml",
+    ".gitattributes",
+    ".gitignore",
+    "LICENSE",
+    "README.md",
+    "babel.config.cjs",
+    "jest.config.cjs",
+    "package-lock.json",
+    "package.json",
+    "postcss.config.cjs",
+    "rollup.config.js",
+    "tailwind.config.cjs",
+    "tsconfig.json",
+    "typedoc.json",
+    "vite.config.js"
+  ],
+  "release_count": 12,
+  "status": "verified"
+}

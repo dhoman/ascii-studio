@@ -1,0 +1,155 @@
+{
+  "url": "https://github.com/ayangabryl/asciify-engine",
+  "final_url": "https://github.com/ayangabryl/asciify-engine",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:47:35.899768+00:00",
+  "stars": 53,
+  "forks": 2,
+  "description": "ASCII for the web: 31 GPU-drawn interface components, backgrounds, and image, GIF and video conversion.",
+  "homepage": "https://asciify.org",
+  "topics": [
+    "agent-skills",
+    "animated-background",
+    "ascii",
+    "ascii-art",
+    "canvas",
+    "creative-coding",
+    "framework-agnostic",
+    "image-to-ascii",
+    "typescript",
+    "ui-components",
+    "video-to-ascii",
+    "webgl2"
+  ],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2026-02-21T14:29:37.000Z",
+  "branch": "main",
+  "commit": "d95aa1cf37f877155c2a615b67fb8297b6bcca33",
+  "readme": "ASCII components, backgrounds and media for the web, drawn in real characters on the GPU. Website · Docs · Components · Studio Asciify is a framework-agnostic engine for ASCII on the web. Use it for interface components (loading buttons, toasts, tabs, AI states, charts, page transitions), for backgrounds behind your content, and for turning images, GIFs, video and text into characters. Components take their ink from your CSS tokens in light and dark, follow their element's size and radius, honour reduced motion and pause off screen. Install npm i asciify-engine Building with a coding agent? Add the skill, then describe what you want: npx skills add ayangabryl/asciify-engine Quick start import { buttonLoading } from 'asciify-engine/kit'; import { asciify } from 'asciify-engine'; const save = buttonLoading(document.querySelector('#save')!); save.start('Saving'); await saveDraft(); save.succeed('Saved'); const stop = await asciify('/photo.jpg', document.querySelector('canvas')!, { fontSize: 8, options: { colorMode: 'fullcolor' }, }); // On unmount: save.destroy(); stop(); Features Kit (/kit): 31 interface components and the curated asciify.org backgrounds, one call each. Media (asciify-engine, /core): images, GIFs, video, webcam and text to ASCII on a canvas, with scroll-scrubbed video, chroma key and source crop. GPU fields (/field): full-bleed WebGL2 character fields with trail, fluid and lantern cursor responses, in any font and charset. Hover and motion (/hover): 19 pointer effects and 10 still-image motions for media on your page. Studio (/studio): 24 render styles, tonal curves, source warps, layered projects and PNG, JPEG, GIF, MP4 and WebM export. Agent skill: the house design, every component's prompt and snippet, and the full API, for Claude Code, Cursor, Codex and other agents. Built for host pages: no work at import, safe under SSR, tree-shaken per component, TypeScript types, ESM and CommonJS. Docs Everything else lives at asciify.org/docs: the API reference, options, framework guides, chroma key, layering, Studio and GPU fields. The agent skill's references cover the same ground for agents. Performance Each optional entry loads only when imported, and a route that uses one kit component downloads that component, not the whole kit. What the engine promises a host page, and how it is measured, is in performance.md. Contributing Issues and pull requests are welcome. To work on the engine: npm ci npm test npm run build npm run test:browser serves the browser regression page. Changes are listed in CHANGELOG.md. Sponsors Asciify is free and open source. Sponsor its development on GitHub Sponsors. Your logo here License MIT © ayangabryl",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://asciify.org"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/asciify-engine"
+    },
+    {
+      "label": "",
+      "url": "https://bundlejs.com/?q=asciify-engine"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/asciify-engine"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/ayangabryl/asciify-engine/blob/main/LICENSE"
+    },
+    {
+      "label": "Website",
+      "url": "https://asciify.org"
+    },
+    {
+      "label": "Docs",
+      "url": "https://asciify.org/docs"
+    },
+    {
+      "label": "Components",
+      "url": "https://asciify.org/components"
+    },
+    {
+      "label": "Studio",
+      "url": "https://asciify.org/editor"
+    },
+    {
+      "label": "",
+      "url": "https://asciify.org"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/ayangabryl/asciify-engine#install"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/ayangabryl/asciify-engine#quick-start"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/ayangabryl/asciify-engine#features"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/ayangabryl/asciify-engine#docs"
+    },
+    {
+      "label": "asciify.org/docs",
+      "url": "https://asciify.org/docs"
+    },
+    {
+      "label": "references",
+      "url": "https://github.com/ayangabryl/asciify-engine/blob/main/skills/asciify-engine/references"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/ayangabryl/asciify-engine#performance"
+    },
+    {
+      "label": "performance.md",
+      "url": "https://github.com/ayangabryl/asciify-engine/blob/main/skills/asciify-engine/references/performance.md"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/ayangabryl/asciify-engine#contributing"
+    },
+    {
+      "label": "CHANGELOG.md",
+      "url": "https://github.com/ayangabryl/asciify-engine/blob/main/CHANGELOG.md"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/ayangabryl/asciify-engine#sponsors"
+    },
+    {
+      "label": "Sponsor its development",
+      "url": "https://asciify.org/sponsor"
+    },
+    {
+      "label": "Your logo here",
+      "url": "https://asciify.org/sponsor"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/ayangabryl/asciify-engine#license"
+    },
+    {
+      "label": "MIT",
+      "url": "https://github.com/ayangabryl/asciify-engine/blob/main/LICENSE"
+    }
+  ],
+  "root_files": [
+    ".github",
+    "docs",
+    "examples",
+    "licenses",
+    "scripts",
+    "skills/asciify-engine",
+    "src",
+    "tests",
+    ".gitignore",
+    "CHANGELOG.md",
+    "LICENSE",
+    "README.md",
+    "RELEASE.md",
+    "THIRD_PARTY.md",
+    "package-lock.json",
+    "package.json",
+    "tsconfig.json",
+    "tsup.config.ts",
+    "vitest.config.ts"
+  ],
+  "release_count": 4,
+  "status": "verified"
+}

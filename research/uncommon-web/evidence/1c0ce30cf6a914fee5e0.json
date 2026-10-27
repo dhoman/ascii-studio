@@ -1,0 +1,186 @@
+{
+  "url": "https://github.com/0xdhrv/oneko",
+  "final_url": "https://github.com/0xdhrv/oneko",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:45:54.940223+00:00",
+  "stars": 25,
+  "forks": 0,
+  "description": "A tiny pixel cat for React, installable as a shadcn registry component",
+  "homepage": "https://oneko.dhrv.pw",
+  "topics": [
+    "oneko",
+    "pixel-art",
+    "react",
+    "shadcn"
+  ],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2026-04-20T16:18:18.000Z",
+  "branch": "main",
+  "commit": "cafc8882a5f3ce4494ce503e9dfb226551a9d34c",
+  "readme": "Oneko A tiny pixel cat for your website. React, Svelte, Vue, Solid, one script tag, or every site in Chrome. Playground · Studio · Documentation Oneko follows the pointer, naps when things are quiet, and shares cat-themed thoughts. It comes with 24 pixel-art coats, optional sounds, keep-out zones, and a studio for designing your own cat. A parade of cats: mount several and set chase=\"cat\" so each follows the one before it. Page reactions: napWhileTyping, followFocus, and perchOnHover. Visitor controls: a remembered hide toggle (setCatsHidden or data-oneko-toggle) and a keyboard-reachable pettable cat. Play: grabbable cats can be tossed, treats turns a double-click into a fish, and data-oneko-knockable and data-oneko-box give resting cats something to knock over or sit in. Tour cat: goTo, say, sit, and follow from a React ref, createOneko, or <oneko-cat>, plus data-oneko-say comments and onPet, onCatchCursor, onSleep, onToss, and onTreat events. Seasons and moods: a holiday hat around Halloween, the winter holidays, and New Year (seasonal={false} to opt out), cat hours with timeOfDay, and greetings for returning visitors with affection. Hosted coats: wear any 256 × 128 sprite sheet by URL, and share it with /studio?sprite=https://…. React Install the shadcn registry item. You get the source, so the code is yours to change. npx shadcn@latest add https://oneko.dhrv.pw/r/oneko.json Render one Oneko from a client component. It mounts itself on document.body. \"use client\"; import Oneko from \"@/components/oneko\"; export function CatLayer() { return <Oneko skin=\"calico\" bubbleText=\"treat inspection in progress\" />; } In Next.js App Router, load it with dynamic(..., { ssr: false }) from a client wrapper. See the installation guide. Named skins load in one chunk the first time one is used. For the classic coat only (plus custom sprites), install https://oneko.dhrv.pw/r/oneko-classic.json instead. Svelte, Vue, and Solid Download the component into your project. It takes the same props as the React component. curl -o src/lib/Oneko.svelte https://oneko.dhrv.pw/frameworks/Oneko.svelte <script> import Oneko from \"$lib/Oneko.svelte\"; </script> <Oneko skin=\"calico\" meow /> curl -o src/components/Oneko.vue https://oneko.dhrv.pw/frameworks/Oneko.vue <script setup> import Oneko from \"./components/Oneko.vue\"; </script> <template> <Oneko skin=\"calico\" :speed=\"12\" meow @state-change=\"console.log\" /> </template> curl -o src/components/Oneko.tsx https://oneko.dhrv.pw/frameworks/Oneko.solid.tsx import Oneko from \"./components/Oneko\"; export default function App() { return <Oneko skin=\"calico\" meow onStateChange={console.log} />; } Each loads the engine from the hosted build in the browser, so SvelteKit, Nuxt, and SolidStart can render them during SSR. See the framework guide. npm To bundle the engine and coats instead of loading them from oneko.dhrv.pw, install the package. npm install oneko import Oneko from \"oneko\"; // React import Oneko from \"oneko/vue\"; import Oneko from \"oneko/svelte\"; import Oneko from \"oneko/solid\"; import { createOneko } from \"oneko/vanilla\"; See the package README for sounds and SSR notes. Any other site Astro, Hugo, WordPress, or plain HTML can use one script tag. Options are data- attributes named after the props. <script type=\"module\" src=\"https://oneko.dhrv.pw/oneko.js\" data-skin=\"calico\" data-meow></script> You can also use a <oneko-cat> element, which fires statechange events and works in Angular, Lit, and other frameworks, or the createOneko() API. See Without React. Chrome extension The extension puts the cat on every site you visit, with a toolbar popup for the coat, size, sounds, and a per-site switch. Documentation The documentation covers every prop, skins, zones, sounds, events, and the studio. Agents can read the Markdown version or llms.txt. Development pnpm install pnpm dev pnpm lint pnpm fmt:check pnpm test pnpm test:browser pnpm build pnpm build regenerates the registry and public/oneko.js before building the site. pnpm build:package builds the npm package in packages/oneko/dist, and pnpm build:extension builds the Chrome extension and its Web Store zip in dist/. To deploy to Cloudflare Workers, run pnpm preview locally, then pnpm deploy. See the development notes for details. Path Purpose components/oneko.tsx Installable React component. hooks/ and lib/oneko/ Animation hook and engine. lib/oneko/vanilla*.ts Framework-free build served as /oneko.js. public/frameworks/ Svelte and Vue components. packages/oneko/ npm package and its framework entries. extension/ Chrome extension. registry.json Source manifest for the shadcn registry. app/ Playground, studio, and documentation. Credits Oneko is inspired by adryd325/oneko.js and the skin gallery in oneko-swift. The sprite artwork belongs to its original creators; see skin credits. Code is available under the MIT License.",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://github.com/0xdhrv/oneko/blob/main/public/oneko-loop.svg"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/0xdhrv/oneko#oneko"
+    },
+    {
+      "label": "Playground",
+      "url": "https://oneko.dhrv.pw"
+    },
+    {
+      "label": "Studio",
+      "url": "https://oneko.dhrv.pw/studio"
+    },
+    {
+      "label": "Documentation",
+      "url": "https://oneko.dhrv.pw/docs"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/0xdhrv/oneko/stargazers"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/0xdhrv/oneko/blob/main/LICENSE"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/0xdhrv/oneko/commits"
+    },
+    {
+      "label": "",
+      "url": "https://buymeacoffee.com/0xdhrv"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/0xdhrv/oneko#react"
+    },
+    {
+      "label": "shadcn registry",
+      "url": "https://ui.shadcn.com/docs/registry"
+    },
+    {
+      "label": "installation guide",
+      "url": "https://oneko.dhrv.pw/docs#installation"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/0xdhrv/oneko#svelte-vue-and-solid"
+    },
+    {
+      "label": "framework guide",
+      "url": "https://oneko.dhrv.pw/docs#frameworks"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/0xdhrv/oneko#npm"
+    },
+    {
+      "label": "package README",
+      "url": "https://github.com/0xdhrv/oneko/blob/main/packages/oneko/README.md"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/0xdhrv/oneko#any-other-site"
+    },
+    {
+      "label": "Without React",
+      "url": "https://oneko.dhrv.pw/docs#html"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/0xdhrv/oneko#chrome-extension"
+    },
+    {
+      "label": "extension",
+      "url": "https://github.com/0xdhrv/oneko/blob/main/extension/README.md"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/0xdhrv/oneko#documentation"
+    },
+    {
+      "label": "documentation",
+      "url": "https://oneko.dhrv.pw/docs"
+    },
+    {
+      "label": "Markdown version",
+      "url": "https://oneko.dhrv.pw/docs.md"
+    },
+    {
+      "label": "llms.txt",
+      "url": "https://oneko.dhrv.pw/llms.txt"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/0xdhrv/oneko#development"
+    },
+    {
+      "label": "development notes",
+      "url": "https://github.com/0xdhrv/oneko/blob/main/docs/development.md"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/0xdhrv/oneko#credits"
+    },
+    {
+      "label": "adryd325/oneko.js",
+      "url": "https://github.com/adryd325/oneko.js"
+    },
+    {
+      "label": "oneko-swift",
+      "url": "https://github.com/oneko-swift/oneko-swift"
+    },
+    {
+      "label": "skin credits",
+      "url": "https://github.com/0xdhrv/oneko/blob/main/docs/skins.md"
+    },
+    {
+      "label": "MIT License",
+      "url": "https://github.com/0xdhrv/oneko/blob/main/LICENSE"
+    }
+  ],
+  "root_files": [
+    ".github",
+    "app",
+    "components",
+    "docs",
+    "extension",
+    "hooks",
+    "lib",
+    "output/skins",
+    "packages/oneko",
+    "public",
+    "scripts",
+    "tests/browser",
+    "types",
+    ".fallowrc.json",
+    ".gitignore",
+    ".oxfmtrc.json",
+    "AGENTS.md",
+    "CONTRIBUTING.md",
+    "LICENSE",
+    "README.md",
+    "components.json",
+    "next-env.d.ts",
+    "next.config.mjs",
+    "open-next.config.ts",
+    "package.json",
+    "playwright.config.ts",
+    "pnpm-lock.yaml",
+    "pnpm-workspace.yaml",
+    "postcss.config.mjs",
+    "proxy.ts",
+    "registry.json",
+    "tsconfig.json",
+    "vitest.config.ts",
+    "wrangler.jsonc"
+  ],
+  "release_count": 6,
+  "status": "verified"
+}

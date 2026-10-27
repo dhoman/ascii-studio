@@ -1,0 +1,113 @@
+{
+  "url": "https://github.com/vinibiavatti1/TuiCss",
+  "final_url": "https://github.com/vinibiavatti1/TuiCss",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:48:23.726168+00:00",
+  "stars": 1981,
+  "forks": 78,
+  "description": "Text-based user interface CSS library",
+  "homepage": "",
+  "topics": [
+    "ascii",
+    "css",
+    "curses",
+    "framework",
+    "framework-css",
+    "html5",
+    "layout",
+    "msdos",
+    "ncurses",
+    "terminal",
+    "text-based",
+    "tui",
+    "turbo-vision",
+    "window"
+  ],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2018-09-12T11:12:38.000Z",
+  "branch": "master",
+  "commit": "6a021ecc2abb1fbe6da62bd370d1f2a764da1195",
+  "readme": "TuiCss Text-based user interface CSS library -- Documentation -- -- Showcase -- About TuiCss is a library focused to create web applications using an interface based on ASCII table, like the old MS-DOS applications. This kind of interface is very legible because the ultra-contrast colors used and because the reduced effects used on the components in the view. The base of this project is Turbo Vision Framework, but some other frameworks were also checked to introduce some features to TuiCss, like curses, ncurses, Newt, etc. Check the examples page in the wiki to stay on top of some creations, or check the getting started page to start using this library! Getting Started To start to use TuiCss in your project, you can just download the repository content and import the files that are in the dist folder with the html directives. Alternatively, you can install the package with NPM using the following command: $ npm install tuicss For more details, visit the Getting Started Page in the repository wiki. Documentation Check the repository wiki to access the documentation, components index, examples, styles, or to know how to contribute to this project.",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://github.com/vinibiavatti1/TuiCss"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/vinibiavatti1/TuiCss#tuicss"
+    },
+    {
+      "label": "-- Documentation --",
+      "url": "https://github.com/vinibiavatti1/TuiCss/wiki"
+    },
+    {
+      "label": "-- Showcase --",
+      "url": "https://github.com/vinibiavatti1/TuiCss/wiki/Showcase"
+    },
+    {
+      "label": "",
+      "url": "https://badge.fury.io/js/tuicss"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/vinibiavatti1/TuiCss#about"
+    },
+    {
+      "label": "Turbo Vision Framework",
+      "url": "https://en.wikipedia.org/wiki/Turbo_Vision"
+    },
+    {
+      "label": "curses",
+      "url": "https://en.wikipedia.org/wiki/Curses_(programming_library)"
+    },
+    {
+      "label": "ncurses",
+      "url": "https://en.wikipedia.org/wiki/Ncurses"
+    },
+    {
+      "label": "Newt",
+      "url": "https://en.wikipedia.org/wiki/Newt_(programming_library)"
+    },
+    {
+      "label": "",
+      "url": "https://raw.githubusercontent.com/vinibiavatti1/TuiCss/develop/resources/TUICSS%20Demo.png"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/vinibiavatti1/TuiCss#getting-started"
+    },
+    {
+      "label": "Getting Started Page",
+      "url": "https://github.com/vinibiavatti1/TuiCss/wiki/Getting-Started"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/vinibiavatti1/TuiCss#documentation"
+    },
+    {
+      "label": "repository wiki",
+      "url": "https://github.com/vinibiavatti1/TuiCss/wiki"
+    }
+  ],
+  "root_files": [
+    ".github/ISSUE_TEMPLATE",
+    "dist",
+    "examples",
+    "resources",
+    "src",
+    ".gitattributes",
+    ".gitignore",
+    "CHANGELOG.md",
+    "CONTRIBUTING.md",
+    "LICENSE.md",
+    "README.md",
+    "_config.yml",
+    "gulpfile.js",
+    "package-lock.json",
+    "package.json"
+  ],
+  "release_count": 6,
+  "status": "verified"
+}

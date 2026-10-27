@@ -1,0 +1,66 @@
+{
+  "url": "https://github.com/5t3ph/houdini-cosmic-starfield",
+  "final_url": "https://github.com/5t3ph/houdini-cosmic-starfield",
+  "http_status": 200,
+  "checked_at": "2026-10-23T17:46:53.194533+00:00",
+  "stars": 0,
+  "forks": 1,
+  "description": "Generate a dynamic cosmic starfield with optional cosmic clouds and customizable gradient.",
+  "homepage": "https://codepen.io/5t3ph/pen/RwgqVZO",
+  "topics": [
+    "css",
+    "css-houdini",
+    "houdini-css-paint"
+  ],
+  "license": "",
+  "archived": false,
+  "created_at": "2021-09-26T15:47:51.000Z",
+  "branch": "main",
+  "commit": "8f79f380a13ad65202d8754a6a265de974e3a0f3",
+  "readme": "CSS Houdini Cosmic Starfield From Stephanie Eckles @5t3ph - author of ModernCSS.dev. Generate a dynamic cosmic starfield with optional cosmic clouds and customizable gradient. Preview on CodePen How to Use While Houdini paint worklets have the best support out of available Houdini features, they still currently require a polyfill to ensure they are applied cross browser. So, first include the following once in your project. <script src=\"https://unpkg.com/css-paint-polyfill\"></script> Note: The polyfill will not work if the worklet is applied to pseudo elements, and may have issues with customization when applied to the body element. Then, include the paint worklet script after the polyfill is loaded: <script> CSS.paintWorklet.addModule(\"https://unpkg.com/houdini-cosmic-starfield\"); // Trickery to get the polyfill to draw the worklet in Firefox and Safari setTimeout(() => { document.querySelector(\"ANCESTOR_ELEMENT\").style.width = \"100.01%\"; document.querySelector(\"ANCESTOR_ELEMENT\").style.width = \"100%\"; }, 500); </script> Finally, use it in your styles! For best results, assign as the background-image to a dedicated element. .cosmic-starfield-element { /* Number of stars */ --cosmic-starfield-stars: 4280; /* 'true' or do not include to hide the clouds */ --cosmic-starfield-clouds: true; /* String array of at least two hex codes */ --cosmic-starfield-gradient-colors: #471f60, #231b6e; /* Use the worklet! */ background-image: paint(cosmic-starfield); } !important - provided gradient colors must be in hex format. What is CSS Houdini? Check out other Houdini paint worklets and more info at Houdini.How.",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://github.com/5t3ph/houdini-cosmic-starfield/blob/main/preview.png"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/5t3ph/houdini-cosmic-starfield#css-houdini-cosmic-starfield"
+    },
+    {
+      "label": "@5t3ph",
+      "url": "https://twitter.com/5t3ph"
+    },
+    {
+      "label": "ModernCSS.dev",
+      "url": "https://moderncss.dev"
+    },
+    {
+      "label": "Preview on CodePen",
+      "url": "https://codepen.io/5t3ph/pen/RwgqVZO"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/5t3ph/houdini-cosmic-starfield#how-to-use"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/5t3ph/houdini-cosmic-starfield#what-is-css-houdini"
+    },
+    {
+      "label": "Houdini.How",
+      "url": "https://houdini.how"
+    }
+  ],
+  "root_files": [
+    "src",
+    ".eleventy.js",
+    ".gitignore",
+    "README.md",
+    "package-lock.json",
+    "package.json",
+    "preview.png"
+  ],
+  "release_count": null,
+  "status": "verified"
+}

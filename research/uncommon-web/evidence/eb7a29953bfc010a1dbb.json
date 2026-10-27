@@ -1,0 +1,112 @@
+{
+  "url": "https://github.com/botoxparty/XP.css",
+  "final_url": "https://github.com/botoxparty/XP.css",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:47:37.697076+00:00",
+  "stars": 3124,
+  "forks": 142,
+  "description": "A CSS framework for building faithful recreations of operating system GUIs.",
+  "homepage": "https://botoxparty.github.io/XP.css/",
+  "topics": [],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2020-05-14T12:41:40.000Z",
+  "branch": "main",
+  "commit": "376f42eb274361939eaad3b0943204c053ad26c4",
+  "readme": "XP.css A design system for building faithful recreations of old UIs. XP.css is an extension of 98.css. A CSS file that takes semantic HTML and makes it look pretty. It does not ship with any JavaScript, so it is compatible with your frontend framework of choice. Installation / Usage The easiest way to use XP.css is to import it from unpkg. <!DOCTYPE html> <html lang=\"en\"> <head> <title>XP.css example</title> <meta charset=\"UTF-8\" /> <!-- Windows XP Theme (include only one theme at a time) --> <link rel=\"stylesheet\" href=\"https://unpkg.com/xp.css\" /> <!-- Windows 98 Theme (include only one theme at a time) --> <link rel=\"stylesheet\" href=\"https://unpkg.com/xp.css@0.2.3/dist/98.css\" /> </head> <body> <div class=\"window\" style=\"margin: 32px; width: 250px\"> <div class=\"title-bar\"> <div class=\"title-bar-text\"> My First Program </div> </div> <div class=\"window-body\"> <p>Hello, world!</p> </div> </div> </body> </html> Alternatively, you can grab XP.css from npm. npm install xp.css Usage: // For XP import \"xp.css/dist/XP.css\"; // For 98 import \"xp.css/dist/98.css\"; Here is an example of XP.css being used with React, and an example with vanilla JavaScript. Refer to the documentation page for specific instructions on this library's components. Developing Clone the repo and run npm install. The core styles are managed in gui. To create your own theme for the GUI you can extend the core styles. See the XP and 98 themes You can use npm start to start a development environment that will watch for file changes and rebuild the files, reloading your browser in the process. You can run a build manually with npm run build. This will write to the dist/ directory. Issues, Contributing, etc. I would love to see other people's work on gui.css, if anyone else if up for creating a theme for another OS using this framework. Also new components and bugs/issues are also welcome! Feel free to contribute in whatever way you like! Also please refer to the GitHub issues page for jdan's 98.css. License MIT",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://github.com/botoxparty/XP.css#xpcss"
+    },
+    {
+      "label": "",
+      "url": "http://npm.im/xp.css"
+    },
+    {
+      "label": "",
+      "url": "https://unpkg.com/xp.css"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/botoxparty/XP.css/blob/main/docs/window.png?raw=true"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/jdan/98.css/blob/main/docs/window.png?raw=true"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/botoxparty/XP.css#installation--usage"
+    },
+    {
+      "label": "unpkg",
+      "url": "https://unpkg.com/"
+    },
+    {
+      "label": "npm",
+      "url": "https://www.npmjs.com/package/xp.css"
+    },
+    {
+      "label": "XP.css being used with React",
+      "url": "https://codesandbox.io/s/silly-bas-dln9t?file=/src/index.js"
+    },
+    {
+      "label": "an example with vanilla JavaScript",
+      "url": "https://codesandbox.io/s/vigilant-night-2jkz3?file=/index.html"
+    },
+    {
+      "label": "documentation page",
+      "url": "https://botoxparty.github.io/XP.css/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/botoxparty/XP.css#developing"
+    },
+    {
+      "label": "gui",
+      "url": "https://github.com/botoxparty/XP.css/tree/main/gui"
+    },
+    {
+      "label": "themes",
+      "url": "https://github.com/botoxparty/XP.css/tree/main/themes"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/botoxparty/XP.css#issues-contributing-etc"
+    },
+    {
+      "label": "the GitHub issues page",
+      "url": "https://github.com/jdan/98.css/issues"
+    },
+    {
+      "label": "jdan's",
+      "url": "https://twitter.com/jdan"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/botoxparty/XP.css#license"
+    },
+    {
+      "label": "MIT",
+      "url": "https://github.com/botoxparty/XP.css/blob/main/LICENSE"
+    }
+  ],
+  "root_files": [
+    "docs",
+    "gui",
+    "themes",
+    ".editorconfig",
+    ".gitignore",
+    ".npmignore",
+    "LICENSE",
+    "README.md",
+    "build.js",
+    "now.json",
+    "package-lock.json",
+    "package.json",
+    "server.js"
+  ],
+  "release_count": 4,
+  "status": "verified"
+}

@@ -1,0 +1,102 @@
+{
+  "url": "https://github.com/animotionjs/animotion",
+  "final_url": "https://github.com/animotionjs/animotion",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:47:34.271538+00:00",
+  "stars": 1760,
+  "forks": 47,
+  "description": "🪄 Create beautiful presentations with Svelte",
+  "homepage": "https://animotion.pages.dev",
+  "topics": [
+    "animotion",
+    "presentation",
+    "reveal",
+    "slides",
+    "svelte",
+    "tailwindcss"
+  ],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2023-06-21T15:38:13.000Z",
+  "branch": "main",
+  "commit": "53100ef031db1251f0f2f10fa718959984e285c2",
+  "readme": "animotion.mp4 Animotion Animotion is a presentational framework for creating beautiful slides and visualizing ideas with code using Svelte, Reveal.js and Tailwind CSS. Setup The quickest way to get started with Animotion: npm create @animotion@latest Windows If the Animotion CLI doesn't work on Windows try: npx @animotion/create Docs To learn how to use Animotion read the Animotion documentation. Examples You can look at the examples repository if you want to understand how I use Animotion to visualize ideas with code. You can try the examples in the browser thanks to SvelteLab. Contributing If you want to contribute to the project you can read the contributing guide.",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://github.com/animotionjs/animotion/blob/main/static/logo.png"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/animotionjs/animotion#animotion"
+    },
+    {
+      "label": "Svelte",
+      "url": "https://svelte.dev/"
+    },
+    {
+      "label": "Reveal.js",
+      "url": "https://revealjs.com/"
+    },
+    {
+      "label": "Tailwind CSS",
+      "url": "https://tailwindcss.com/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/animotionjs/animotion#setup"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/animotionjs/animotion#windows"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/animotionjs/animotion#docs"
+    },
+    {
+      "label": "Animotion documentation",
+      "url": "https://animotion.pages.dev"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/animotionjs/animotion#examples"
+    },
+    {
+      "label": "examples repository",
+      "url": "https://github.com/animotionjs/examples"
+    },
+    {
+      "label": "SvelteLab",
+      "url": "https://www.sveltelab.dev/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/animotionjs/animotion#contributing"
+    },
+    {
+      "label": "contributing guide",
+      "url": "https://github.com/animotionjs/animotion/blob/main/CONTRIBUTING.md"
+    }
+  ],
+  "root_files": [
+    "src",
+    "static",
+    ".gitignore",
+    ".npmrc",
+    ".prettierignore",
+    ".prettierrc",
+    "CODE_OF_CONDUCT.md",
+    "CONTRIBUTING.md",
+    "FUNDING.yml",
+    "LICENSE",
+    "README.md",
+    "eslint.config.js",
+    "package.json",
+    "pnpm-lock.yaml",
+    "tsconfig.json",
+    "vite.config.ts"
+  ],
+  "release_count": 8,
+  "status": "verified"
+}

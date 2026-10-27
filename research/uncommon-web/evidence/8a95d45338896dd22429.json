@@ -1,0 +1,59 @@
+{
+  "url": "https://github.com/HubSpot/odometer",
+  "final_url": "https://github.com/HubSpot/odometer",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:47:25.734016+00:00",
+  "stars": 7287,
+  "forks": 694,
+  "description": "Smoothly transitions numbers with ease. #hubspot-open-source",
+  "homepage": "http://github.hubspot.com/odometer/docs/welcome",
+  "topics": [],
+  "license": "MIT",
+  "archived": true,
+  "created_at": "2013-10-08T21:32:22.000Z",
+  "branch": "master",
+  "commit": "0bc5470eeb822f828d6ac8cca8b87a02413f6260",
+  "readme": "Odometer Odometer is a Javascript and CSS library for smoothly transitioning numbers. Overview Docs and Demo",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://github.com/HubSpot/odometer#odometer"
+    },
+    {
+      "label": "Overview",
+      "url": "http://github.hubspot.com/odometer/docs/welcome"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/HubSpot/odometer#overview"
+    },
+    {
+      "label": "Docs and Demo",
+      "url": "http://github.hubspot.com/odometer"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/HubSpot/odometer#docs-and-demo"
+    }
+  ],
+  "root_files": [
+    "docs",
+    "sass",
+    "test",
+    "themes",
+    ".gitignore",
+    ".hsdoc",
+    "Gruntfile.coffee",
+    "LICENSE",
+    "README.md",
+    "bower.json",
+    "component.json",
+    "config.rb",
+    "odometer.coffee",
+    "odometer.js",
+    "odometer.min.js",
+    "package.json"
+  ],
+  "release_count": 6,
+  "status": "verified"
+}

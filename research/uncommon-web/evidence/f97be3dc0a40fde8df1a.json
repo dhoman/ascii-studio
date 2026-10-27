@@ -1,0 +1,155 @@
+{
+  "url": "https://github.com/taye/interact.js",
+  "final_url": "https://github.com/taye/interact.js",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:48:20.370666+00:00",
+  "stars": 12939,
+  "forks": 805,
+  "description": "JavaScript drag and drop, resizing and multi-touch gestures with inertia and snapping for modern browsers (and also IE9+)",
+  "homepage": "http://interactjs.io/",
+  "topics": [
+    "drag-and-drop",
+    "drop",
+    "inertia",
+    "javascript",
+    "javascript-drag",
+    "mobile",
+    "modern-browsers",
+    "multi-touch",
+    "snap",
+    "touch",
+    "typescript",
+    "vanilla"
+  ],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2012-10-21T10:05:19.000Z",
+  "branch": "main",
+  "commit": "a993eb8cd5cbc65f3a19e45ee24b7fedc026174f",
+  "readme": "JavaScript drag and drop, resizing and multi-touch gestures with inertia and snapping for modern browsers (and also IE9+). Features include: inertia and snapping multi-touch, simultaneous interactions cross browser and device, supporting the desktop and mobile versions of Chrome, Firefox and Opera as well as Internet Explorer 9+ interaction with SVG elements being standalone and customizable not modifying the DOM except to change the cursor (but you can disable that) Installation npm: npm install interactjs jsDelivr CDN: <script src=\"https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js\"></script> unpkg CDN: <script src=\"https://unpkg.com/interactjs/dist/interact.min.js\"></script> Rails 5.1+: yarn add interactjs //= require interactjs/interact Webjars SBT/Play 2: libraryDependencies ++= Seq(\"org.webjars.npm\" % \"interactjs\" % version) Typescript definitions The project is written in Typescript and the npm package includes the type definitions, but if you need the typings alone, you can install them with: npm install --save-dev @interactjs/types Documentation http://interactjs.io/docs Example var pixelSize = 16; interact('.rainbow-pixel-canvas') .origin('self') .draggable({ modifiers: [ interact.modifiers.snap({ // snap to the corners of a grid targets: [ interact.snappers.grid({ x: pixelSize, y: pixelSize }), ], }) ], listeners: { // draw colored squares on move move: function (event) { var context = event.target.getContext('2d'), // calculate the angle of the drag direction dragAngle = 180 * Math.atan2(event.dx, event.dy) / Math.PI; // set color based on drag angle and speed context.fillStyle = 'hsl(' + dragAngle + ', 86%, ' + (30 + Math.min(event.speed / 1000, 1) * 50) + '%)'; // draw squares context.fillRect(event.pageX - pixelSize / 2, event.pageY - pixelSize / 2, pixelSize, pixelSize); } } }) // clear the canvas on doubletap .on('doubletap', function (event) { var context = event.target.getContext('2d'); context.clearRect(0, 0, context.canvas.width, context.canvas.height); }); function resizeCanvases () { [].forEach.call(document.querySelectorAll('.rainbow-pixel-canvas'), function (canvas) { canvas.width = document.body.clientWidth; canvas.height = window.innerHeight * 0.7; }); } // interact.js can also add DOM event listeners interact(document).on('DOMContentLoaded', resizeCanvases); interact(window).on('resize', resizeCanvases); See the above code in action at https://codepen.io/taye/pen/tCKAm License interact.js is released under the MIT License.",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "http://interactjs.io"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/taye/interact.js#--javascript-drag-and-drop-resizing-and-multi-touch-gestures-with-inertia-and-snapping-for-modern-browsers-and-also-ie9"
+    },
+    {
+      "label": "",
+      "url": "https://gitter.im/taye/interact.js"
+    },
+    {
+      "label": "",
+      "url": "https://www.jsdelivr.com/package/npm/interactjs"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/taye/interact.js/actions/workflows/workflow.yml"
+    },
+    {
+      "label": "",
+      "url": "https://codeclimate.com/github/taye/interact.js/test_coverage"
+    },
+    {
+      "label": "SVG",
+      "url": "http://interactjs.io/#use_in_svg_files"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/taye/interact.js#installation"
+    },
+    {
+      "label": "npm",
+      "url": "https://www.npmjs.org/"
+    },
+    {
+      "label": "jsDelivr CDN",
+      "url": "https://cdn.jsdelivr.net/npm/interactjs/"
+    },
+    {
+      "label": "unpkg CDN",
+      "url": "https://unpkg.com/interactjs/"
+    },
+    {
+      "label": "Rails 5.1+",
+      "url": "https://rubyonrails.org/"
+    },
+    {
+      "label": "Webjars SBT/Play 2",
+      "url": "https://www.webjars.org/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/taye/interact.js#typescript-definitions"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/taye/interact.js#documentation"
+    },
+    {
+      "label": "http://interactjs.io/docs",
+      "url": "http://interactjs.io/docs"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/taye/interact.js#example"
+    },
+    {
+      "label": "https://codepen.io/taye/pen/tCKAm",
+      "url": "https://codepen.io/taye/pen/tCKAm"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/taye/interact.js#license"
+    },
+    {
+      "label": "MIT License",
+      "url": "http://taye.mit-license.org"
+    }
+  ],
+  "root_files": [
+    ".github",
+    ".husky",
+    "bin",
+    "docs",
+    "examples",
+    "img",
+    "packages",
+    "scripts",
+    "test",
+    ".browserslistrc",
+    ".codeclimate.yml",
+    ".eslintignore",
+    ".eslintrc.cjs",
+    ".gitignore",
+    ".npmignore",
+    ".npmrc",
+    ".nvmrc",
+    ".prettierignore",
+    ".prettierrc.json",
+    ".stylelintrc.cjs",
+    ".yarnrc",
+    "CHANGELOG.md",
+    "ISSUE_TEMPLATE.md",
+    "LICENSE",
+    "PULL_REQUEST_TEMPLATE.md",
+    "README.md",
+    "babel.config.cjs",
+    "bundle.rollup.config.cjs",
+    "esnext.rollup.config.cjs",
+    "jest.config.ts",
+    "lerna.json",
+    "package.json",
+    "shims.d.ts",
+    "tsconfig.json",
+    "typedoc.config.cjs",
+    "types.tsconfig.json",
+    "vijest.config.js",
+    "vite.config.ts",
+    "yarn.lock"
+  ],
+  "release_count": 0,
+  "status": "verified"
+}

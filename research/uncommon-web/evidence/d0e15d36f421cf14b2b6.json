@@ -1,0 +1,134 @@
+{
+  "url": "https://github.com/edwardtufte/tufte-css",
+  "final_url": "https://github.com/edwardtufte/tufte-css",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:47:45.694380+00:00",
+  "stars": 6580,
+  "forks": 482,
+  "description": "Style your webpage like Edward Tufte’s handouts.",
+  "homepage": "https://edwardtufte.github.io/tufte-css/",
+  "topics": [
+    "css",
+    "tufte-css"
+  ],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2014-10-15T12:16:44.000Z",
+  "branch": "gh-pages",
+  "commit": "b5d7b7bbe5ce9c4c50fcfad4f19ee3646cfd7ae1",
+  "readme": "Tufte CSS Edward Tufte uses a distinctive style in his handouts: simple, with well-set typography, extensive sidenotes, and tight integration of graphics and charts. tufte-css brings that style to HTML documents. This project is directly inspired by and based on Tufte-LaTeX and the R Markdown Tufte Handout. Getting Started The file index.html is a self-describing demonstration document that walks through the features of Tufte CSS. The live version at https://edwardtufte.github.io/tufte-css/ is the best overview of the project. To use Tufte CSS, just copy tufte.css and the et-book font directory to your project and add the following to your HTML doc's head block: <link rel=\"stylesheet\" href=\"tufte.css\"/> All other files in the repository can be ignored, as they are merely used by the demonstration document. Project Scope and Status Tufte CSS is specifically a CSS-only solution for styling HTML for the web. That means that JavaScript solutions, although often superior to pure CSS, are out of scope for this project and will not be used. Also out of scope are handling printed versions of web pages and integration with static site generators or other formats. Thankfully, all these useful applications can be well served by separate work that builds on top of Tufte CSS. This project is maintained but not under active development. It is considered essentially feature-complete. Refactoring and new functionality are a very low priority. However, contributions are still welcome to fix bugs or add functionality. Testing Tests use Playwright to assert computed CSS properties. npm install to set up, npm test to run. Fixtures in tests/ are plain HTML files — open one directly in a browser to inspect a feature in isolation. Deploying Make changes From shell: npm run build Bump version in package.json From shell: npm publish Contributing If you notice something wrong or broken, let us know by opening an issue, or better yet, a pull request with how you think it should be fixed. Please document your issues and fixes thoroughly. This means a clear description of the concern, steps on how to reproduce it, and (if possible) before and after screenshots and links to prior discussions or commits. Please keep pull requests to one change at a time. Fixes and new functionality should be tested against index.html on screens as small as an iPhone 4 and as big as, well, as big as you use normally. (If you don't have a mobile device handy, fake different devices with your browser's developer tools.) See the Issues page, especially Help Wanted, for opportunities to contribute. Contributors Dave Liepmann (creator, project maintainer, design) Edward Tufte (editing, direction, design) Adam Schwartz (ET Book font) Clay Harmon (media queries, rem units) Linjie Ding (italic typeface) Stephen A Thomas (automagically numbered sidenotes) Ben Newman (sidenote numbering style) Kevin Godby (booktabs tables) James Kolce (sidenote fixes) Chris MacKay (sidenote toggling on small screens) Paul Rodriguez (sidenote style tweaks) Claudiu-Vlad Ursache (HTML5 conformity) License Released under the MIT license. See LICENSE.",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://github.com/edwardtufte/tufte-css#tufte-css"
+    },
+    {
+      "label": "Tufte-LaTeX",
+      "url": "https://tufte-latex.github.io/tufte-latex/"
+    },
+    {
+      "label": "R Markdown Tufte Handout",
+      "url": "http://rmarkdown.rstudio.com/examples/tufte-handout.pdf"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/edwardtufte/tufte-css#getting-started"
+    },
+    {
+      "label": "https://edwardtufte.github.io/tufte-css/",
+      "url": "https://edwardtufte.github.io/tufte-css/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/edwardtufte/tufte-css#project-scope-and-status"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/edwardtufte/tufte-css#testing"
+    },
+    {
+      "label": "Playwright",
+      "url": "https://playwright.dev/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/edwardtufte/tufte-css#deploying"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/edwardtufte/tufte-css#contributing"
+    },
+    {
+      "label": "Help Wanted",
+      "url": "https://github.com/edwardtufte/tufte-css/labels/help%20wanted"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/edwardtufte/tufte-css#contributors"
+    },
+    {
+      "label": "Adam Schwartz",
+      "url": "https://github.com/adamschwartz"
+    },
+    {
+      "label": "Clay Harmon",
+      "url": "https://github.com/edwardtufte/tufte-css/commits/master?author=clayh53"
+    },
+    {
+      "label": "Linjie Ding",
+      "url": "https://github.com/edwardtufte/tufte-css/commits/master?author=pyrocat101"
+    },
+    {
+      "label": "Stephen A Thomas",
+      "url": "https://github.com/edwardtufte/tufte-css/commits/master?author=sathomas"
+    },
+    {
+      "label": "Ben Newman",
+      "url": "https://github.com/edwardtufte/tufte-css/pull/9"
+    },
+    {
+      "label": "Kevin Godby",
+      "url": "https://github.com/edwardtufte/tufte-css/commits/master?author=godbyk"
+    },
+    {
+      "label": "James Kolce",
+      "url": "https://github.com/edwardtufte/tufte-css/commits/master?author=jameskolce"
+    },
+    {
+      "label": "Chris MacKay",
+      "url": "https://github.com/crmackay"
+    },
+    {
+      "label": "Paul Rodriguez",
+      "url": "https://github.com/edwardtufte/tufte-css/commits/master?author=ruricolist"
+    },
+    {
+      "label": "Claudiu-Vlad Ursache",
+      "url": "https://github.com/edwardtufte/tufte-css/commits/master?author=ursachec"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/edwardtufte/tufte-css#license"
+    },
+    {
+      "label": "LICENSE",
+      "url": "https://github.com/edwardtufte/tufte-css/blob/gh-pages/LICENSE"
+    }
+  ],
+  "root_files": [
+    "et-book",
+    "img",
+    "tests",
+    ".gitignore",
+    ".nvmrc",
+    "LICENSE",
+    "README.md",
+    "index.html",
+    "package.json",
+    "playwright.config.js",
+    "tufte.css",
+    "tufte.min.css"
+  ],
+  "release_count": 0,
+  "status": "verified"
+}

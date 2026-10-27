@@ -1,0 +1,114 @@
+{
+  "url": "https://github.com/chanind/hanzi-writer",
+  "final_url": "https://github.com/chanind/hanzi-writer",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:47:39.164116+00:00",
+  "stars": 5027,
+  "forks": 734,
+  "description": "Chinese character stroke order animations and practice quizzes",
+  "homepage": "https://hanziwriter.org",
+  "topics": [],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2014-09-14T06:58:55.000Z",
+  "branch": "master",
+  "commit": "83a762374e2344f2fb8cceca4a2ac5dfeca386f5",
+  "readme": "Hanzi Writer https://chanind.github.io/hanzi-writer Hanzi Writer is a free and open-source javascript library for Chinese character stroke order animations and stroke order practice quizzes. Works with both simplified and traditional characters. Live demo Getting Started and Documentation For more info and instructions on getting started check out https://chanind.github.io/hanzi-writer Data source The chinese character svg and stroke order data used by Hanzi Writer is derived from the Make me a Hanzi project with some slight tweaks. The data can be found in the Hanzi Writer Data repo. There's a visualizer for this data here. Contributing Pull requests are welcome! If you would like to contribute code, you'll need to be able to build the project locally. After cloning the Hanzi Writer repo, you can get it set up by running: yarn install You can run tests with yarn test and you can build the project with yarn build. License Hanzi Writer is released under an MIT license. The Hanzi Writer data comes from the Make Me A Hanzi project, which extracted the data from fonts by Arphic Technology, a Taiwanese font forge that released their work under a permissive license in 1999. You can redistribute and/or modify this data under the terms of the Arphic Public License as published by Arphic Technology Co., Ltd. A copy of this license can be found in ARPHICPL.TXT.",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://github.com/chanind/hanzi-writer#hanzi-writer"
+    },
+    {
+      "label": "",
+      "url": "https://circleci.com/gh/chanind/hanzi-writer/tree/master"
+    },
+    {
+      "label": "",
+      "url": "https://codecov.io/gh/chanind/hanzi-writer"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/hanzi-writer"
+    },
+    {
+      "label": "https://chanind.github.io/hanzi-writer",
+      "url": "https://chanind.github.io/hanzi-writer"
+    },
+    {
+      "label": "Live demo",
+      "url": "https://chanind.github.io/hanzi-writer/demo.html"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/chanind/hanzi-writer#getting-started-and-documentation"
+    },
+    {
+      "label": "https://chanind.github.io/hanzi-writer",
+      "url": "https://chanind.github.io/hanzi-writer"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/chanind/hanzi-writer#data-source"
+    },
+    {
+      "label": "Make me a Hanzi",
+      "url": "https://github.com/skishore/makemeahanzi"
+    },
+    {
+      "label": "Hanzi Writer Data",
+      "url": "https://github.com/chanind/hanzi-writer-data"
+    },
+    {
+      "label": "here",
+      "url": "https://chanind.github.io/hanzi-writer-data"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/chanind/hanzi-writer#contributing"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/chanind/hanzi-writer#license"
+    },
+    {
+      "label": "MIT",
+      "url": "https://raw.githubusercontent.com/chanind/hanzi-writer/master/LICENSE"
+    },
+    {
+      "label": "Make Me A Hanzi",
+      "url": "https://github.com/skishore/makemeahanzi"
+    },
+    {
+      "label": "Arphic Technology",
+      "url": "http://www.arphic.com/"
+    },
+    {
+      "label": "ARPHICPL.TXT",
+      "url": "https://raw.githubusercontent.com/chanind/hanzi-writer-data/master/ARPHICPL.TXT"
+    }
+  ],
+  "root_files": [
+    ".circleci",
+    "demo",
+    "src",
+    ".codecov.yml",
+    ".eslintrc",
+    ".gitignore",
+    ".npmignore",
+    ".prettierrc.json",
+    "CITATION.cff",
+    "COPYING.md",
+    "LICENSE",
+    "README.md",
+    "babel.config.js",
+    "jest-jsdom-env.js",
+    "jest-setup.js",
+    "package.json",
+    "rollup.config.js",
+    "tsconfig.json",
+    "yarn.lock"
+  ],
+  "release_count": 58,
+  "status": "verified"
+}

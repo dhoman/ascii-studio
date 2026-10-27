@@ -1,0 +1,123 @@
+{
+  "url": "https://github.com/pqina/flip",
+  "final_url": "https://github.com/pqina/flip",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:48:12.240397+00:00",
+  "stars": 1024,
+  "forks": 94,
+  "description": "⏳ The online version of the classic flip clock",
+  "homepage": "https://pqina.nl/flip/",
+  "topics": [
+    "countdown",
+    "counter",
+    "flip",
+    "flip-animation",
+    "flipclock"
+  ],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2020-03-06T07:48:41.000Z",
+  "branch": "master",
+  "commit": "5ba01ae23451fb15c9e07a30eca69d6126f67628",
+  "readme": "Flip Countdown Flip is an advanced and beautiful flip counter plugin. Easy to use and highly flexible, you can set up a custom counter on your website in minutes. Display visitor counts, countdown to a special date or celebrate progress. Whatever you’re planning, the options are endless. Learn more about Flip / Learn more about Tick the engine that powers Flip Buy me a Coffee / Dev updates on Twitter Quick Start If you just want to get on your way, copy the example directory and use it as a starting point. This example will automatically initialize Flip counters on the website and can be used with the presets on the demo site. Or you can use one of the javascript framework codesandboxes below: React Vue Setup For the code snippets below we'll assume it's the flip.min.css and flip.min.js version and the folder we are uploading to is named flip. Copy the following HTML snippet in the <head> of your web page. <link href=\"/flip/flip.min.css\" rel=\"stylesheet\"> Then copy the following snippet and place it just before the closing </body> tag. <script src=\"/flip/flip.min.js\"></script> Make sure the paths in the above code snippets match the location of the CSS and JS files. You can now copy past the presets to your website and everything should function correctly. You can also load the files from a CDN like unpkg using the links below: <link href=\"https://unpkg.com/@pqina/flip/dist/flip.min.css\" rel=\"stylesheet\"> <script src=\"https://unpkg.com/@pqina/flip/dist/flip.min.js\"></script> Install from NPM npm i @pqina/flip --save import Tick from '@pqina/flip'; console.log(Tick); // logs {supported: true, options: {…}, helper: {…}, data: {…}, DOM: {…}, …} Module usage example project on Stackblitz: https://stackblitz.com/edit/flip-counter-module Docs Information on how to customize Tick and use the Tick API can be found on the product website. Accessibility For better compatibility with screenreaders, we need to hide the flip view using aria-hidden, this prevents the contents from being read out loud. We can then use an aria-label attribute to provide a formatted label instead. <div class=\"tick\" data-value=\"1234\" data-did-init=\"setupFlip\"> <!-- Hide visual content from screenreaders with `aria-hidden` --> <div data-repeat=\"true\" aria-hidden=\"true\"> <span data-view=\"flip\"></span> </div> </div> <script> function setupFlip(tick) { Tick.helper.interval(function() { tick.value++; // Set `aria-label` attribute which screenreaders will read instead of HTML content tick.root.setAttribute('aria-label', tick.value); }, 1000); } </script> License MIT License, Enjoy!",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://github.com/pqina/flip#flip-countdown"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pqina/flip/blob/master/flip.gif"
+    },
+    {
+      "label": "Learn more about Flip",
+      "url": "https://pqina.nl/flip/"
+    },
+    {
+      "label": "Learn more about Tick the engine that powers Flip",
+      "url": "https://github.com/pqina/tick/"
+    },
+    {
+      "label": "",
+      "url": "https://www.buymeacoffee.com/rikschennink/"
+    },
+    {
+      "label": "Buy me a Coffee",
+      "url": "https://www.buymeacoffee.com/rikschennink/"
+    },
+    {
+      "label": "Dev updates on Twitter",
+      "url": "https://twitter.com/rikschennink/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pqina/flip#quick-start"
+    },
+    {
+      "label": "presets on the demo site",
+      "url": "https://pqina.nl/flip/#presets"
+    },
+    {
+      "label": "React",
+      "url": "https://codesandbox.io/s/react-flip-demo-txoux"
+    },
+    {
+      "label": "Vue",
+      "url": "https://codesandbox.io/s/vue-flip-demo-xhtfk"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pqina/flip#setup"
+    },
+    {
+      "label": "presets",
+      "url": "https://pqina.nl/flip/#presets"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pqina/flip#install-from-npm"
+    },
+    {
+      "label": "https://stackblitz.com/edit/flip-counter-module",
+      "url": "https://stackblitz.com/edit/flip-counter-module"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pqina/flip#docs"
+    },
+    {
+      "label": "product website",
+      "url": "https://pqina.nl/tick/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pqina/flip#accessibility"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pqina/flip#license"
+    }
+  ],
+  "root_files": [
+    ".github",
+    "dist",
+    "example",
+    "src",
+    "tick",
+    ".babelrc",
+    ".gitignore",
+    ".nvmrc",
+    ".prettierignore",
+    ".prettierrc",
+    "CHANGELOG.md",
+    "LICENSE",
+    "README.md",
+    "flip.gif",
+    "gulpfile.babel.js",
+    "header.svg",
+    "package-lock.json",
+    "package.json"
+  ],
+  "release_count": 0,
+  "status": "verified"
+}

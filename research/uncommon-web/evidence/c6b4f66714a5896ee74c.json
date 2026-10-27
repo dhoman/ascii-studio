@@ -1,0 +1,78 @@
+{
+  "url": "https://github.com/snettah/react-ztext",
+  "final_url": "https://github.com/snettah/react-ztext",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:48:18.123553+00:00",
+  "stars": 51,
+  "forks": 2,
+  "description": "Ztextjs implementation in React",
+  "homepage": "",
+  "topics": [],
+  "license": "",
+  "archived": false,
+  "created_at": "2020-08-27T14:55:49.000Z",
+  "branch": "main",
+  "commit": "d591b7fb8f9f63f2214fd5ecca3a7760ab1d06cd",
+  "readme": "react-ztext Ztext.js implementation in React Demo CodeSandbox Install npm install --save react-ztext yarn add react-ztext Usage import React from 'react' import Ztext from 'react-ztext' const Example = () => ( <Ztext depth='1rem' direction='both' event='pointer' eventRotation='30deg' eventDirection='default' fade={false} layers={10} perspective='500px' style={{ fontSize: '4rem' }} > <span role='img' aria-label='emoji'> 😂🔥🍔 </span> </Ztext> ) ZText.js Documentation License MIT © snettah",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://github.com/snettah/react-ztext#react-ztext"
+    },
+    {
+      "label": "Ztext.js",
+      "url": "https://github.com/bennettfeely/ztext"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/react-ztext"
+    },
+    {
+      "label": "",
+      "url": "https://standardjs.com"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/snettah/react-ztext#demo"
+    },
+    {
+      "label": "CodeSandbox",
+      "url": "https://codesandbox.io/s/react-ztext-fjmzz?file=/src/App.js"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/snettah/react-ztext#install"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/snettah/react-ztext#usage"
+    },
+    {
+      "label": "ZText.js Documentation",
+      "url": "https://bennettfeely.com/ztext/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/snettah/react-ztext#license"
+    },
+    {
+      "label": "snettah",
+      "url": "https://github.com/snettah"
+    }
+  ],
+  "root_files": [
+    "docs/superpowers",
+    "src",
+    ".editorconfig",
+    ".gitignore",
+    ".prettierrc",
+    "README.md",
+    "eslint.config.js",
+    "package-lock.json",
+    "package.json",
+    "tsconfig.json",
+    "vite.config.ts"
+  ],
+  "release_count": 0,
+  "status": "verified"
+}

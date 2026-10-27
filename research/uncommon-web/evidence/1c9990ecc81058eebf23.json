@@ -1,0 +1,156 @@
+{
+  "url": "https://github.com/playcanvas/web-components",
+  "final_url": "https://github.com/playcanvas/web-components",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:48:10.761448+00:00",
+  "stars": 110,
+  "forks": 35,
+  "description": "Web Components for building declarative, graphical web apps",
+  "homepage": "https://developer.playcanvas.com/user-manual/web-components/",
+  "topics": [
+    "custom-elements",
+    "declarative",
+    "dom",
+    "gltf",
+    "html",
+    "playcanvas",
+    "typescript",
+    "web-components",
+    "webgl",
+    "webgl2",
+    "webgpu",
+    "webxr"
+  ],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2023-09-17T22:14:37.000Z",
+  "branch": "main",
+  "commit": "aa183bb5c14740d9e2fe7ba94da81fac5f19a8d7",
+  "readme": "PlayCanvas Web Components | User Manual | API Reference | Examples | Blog | Forum | PlayCanvas Web Components are a set of custom HTML elements for building 3D interactive web apps. Using the declarative nature of HTML makes it both easy and fun to incorporate 3D into your website. Check out this simple example: <!-- A lit sphere --> <pc-app> <pc-scene> <pc-entity name=\"camera\" position=\"0 0 3\"> <pc-camera></pc-camera> </pc-entity> <pc-entity name=\"light\" rotation=\"45 45 0\"> <pc-light></pc-light> </pc-entity> <pc-entity name=\"ball\"> <pc-render type=\"sphere\"></pc-render> </pc-entity> </pc-scene> </pc-app> Examples Explore the PlayCanvas Web Components examples gallery. Getting Started The PlayCanvas Engine is a peer dependency, so your page needs an import map that tells the browser where to find both packages. CDN (no install, no build step) — load both from jsDelivr: <script type=\"importmap\"> { \"imports\": { \"playcanvas\": \"https://cdn.jsdelivr.net/npm/playcanvas@latest/build/playcanvas.mjs\", \"@playcanvas/web-components\": \"https://cdn.jsdelivr.net/npm/@playcanvas/web-components@latest/dist/pwc.min.mjs\" } } </script> <script type=\"module\" src=\"https://cdn.jsdelivr.net/npm/@playcanvas/web-components@latest/dist/pwc.min.mjs\"></script> npm — for projects with a package.json, dev server or bundler: npm install playcanvas @playcanvas/web-components Then point the import map at the installed packages: <script type=\"importmap\"> { \"imports\": { \"playcanvas\": \"/node_modules/playcanvas/build/playcanvas.mjs\", \"@playcanvas/web-components\": \"/node_modules/@playcanvas/web-components/dist/pwc.mjs\" } } </script> <script type=\"module\" src=\"/node_modules/@playcanvas/web-components/dist/pwc.mjs\"></script> New project — scaffold a Vite and TypeScript app with one of 12 runnable starters: npm create playcanvas@latest my-app -- -f web-components The Getting Started Guide walks through a complete first page, version pinning and bundler setups. Editor Support The package ships a Custom Elements Manifest, which editors use to offer tag and attribute completions, valid attribute values and hover documentation when authoring HTML. VS Code — add the following to your workspace .vscode/settings.json: { \"html.customData\": [ \"./node_modules/@playcanvas/web-components/dist/vscode.html-custom-data.json\" ] } JetBrains IDEs (WebStorm, IntelliJ IDEA) — no setup required. The IDE discovers the bundled web-types.json automatically. Other tooling — the manifest itself is at @playcanvas/web-components/dist/custom-elements.json and is declared in the package's customElements field, which is how tools such as lit-analyzer and Storybook locate it. Development Setting Up Local Development Clone the repository: git clone https://github.com/playcanvas/web-components.git cd web-components Install dependencies: npm install Build the library in watch mode and start the development server: npm run dev Open http://localhost:3000/examples/ in your browser to see the examples. Building To build the library: npm run build The built files will be available in the dist directory. API Documentation To generate API documentation: npm run docs The documentation will be generated in the docs directory.",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://github.com/playcanvas/web-components#playcanvas-web-components"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@playcanvas/web-components"
+    },
+    {
+      "label": "",
+      "url": "https://npmtrends.com/@playcanvas/web-components"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/playcanvas/web-components/blob/main/LICENSE"
+    },
+    {
+      "label": "",
+      "url": "https://discord.gg/RSaMRzg"
+    },
+    {
+      "label": "",
+      "url": "https://www.reddit.com/r/PlayCanvas"
+    },
+    {
+      "label": "",
+      "url": "https://x.com/intent/follow?screen_name=playcanvas"
+    },
+    {
+      "label": "User Manual",
+      "url": "https://developer.playcanvas.com/user-manual/web-components"
+    },
+    {
+      "label": "API Reference",
+      "url": "https://api.playcanvas.com/web-components"
+    },
+    {
+      "label": "Examples",
+      "url": "https://playcanvas.github.io/web-components/examples"
+    },
+    {
+      "label": "Blog",
+      "url": "https://blog.playcanvas.com"
+    },
+    {
+      "label": "Forum",
+      "url": "https://forum.playcanvas.com"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/playcanvas/web-components#examples"
+    },
+    {
+      "label": "",
+      "url": "https://playcanvas.github.io/web-components/examples"
+    },
+    {
+      "label": "PlayCanvas Web Components examples gallery",
+      "url": "https://playcanvas.github.io/web-components/examples"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/playcanvas/web-components#getting-started"
+    },
+    {
+      "label": "import map",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script/type/importmap"
+    },
+    {
+      "label": "Getting Started Guide",
+      "url": "https://developer.playcanvas.com/user-manual/web-components/getting-started/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/playcanvas/web-components#editor-support"
+    },
+    {
+      "label": "Custom Elements Manifest",
+      "url": "https://github.com/webcomponents/custom-elements-manifest"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/playcanvas/web-components#development"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/playcanvas/web-components#setting-up-local-development"
+    },
+    {
+      "label": "http://localhost:3000/examples/",
+      "url": "http://localhost:3000/examples/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/playcanvas/web-components#building"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/playcanvas/web-components#api-documentation"
+    }
+  ],
+  "root_files": [
+    ".github",
+    "examples",
+    "lib",
+    "src",
+    "test",
+    "utils",
+    ".gitignore",
+    "LICENSE",
+    "README.md",
+    "context7.json",
+    "custom-elements-manifest.config.mjs",
+    "eslint.config.mjs",
+    "package-lock.json",
+    "package.json",
+    "prettier.config.mjs",
+    "rollup.config.mjs",
+    "tsconfig.json",
+    "tsconfig.test.json",
+    "typedoc.json",
+    "vitest.config.ts"
+  ],
+  "release_count": 58,
+  "status": "verified"
+}

@@ -1,0 +1,173 @@
+{
+  "url": "https://github.com/SriSomanaath/crafterui",
+  "final_url": "https://github.com/SriSomanaath/crafterui",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:47:30.291029+00:00",
+  "stars": 4,
+  "forks": 1,
+  "description": "",
+  "homepage": "https://crafterui.com",
+  "topics": [
+    "library",
+    "shadcn",
+    "ui",
+    "ui-components",
+    "ui-library",
+    "uiux"
+  ],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2026-08-17T05:38:27.000Z",
+  "branch": "main",
+  "commit": "b6e942a0e5a104bf5812fa31489ac9e23efbc992",
+  "readme": "crafterui Less is more. Open Source motion and interaction components you can customize, extend, and build on. React + Tailwind, on the shadcn registry. Browse · Report a bug · Feature request Features Motion & interaction components — scroll reveals, kinetic type, tooltips, toggles, AI composers; each built to do one thing well Open, then install — browse at crafterui.com/components; open any for the live demo and its source shadcn registry — install with the shadcn CLI; you own the code, no runtime package Fully Tailwind — no CSS files to import; components carry their own scoped <style> only where a third-party widget needs it Motion-first — animations with motion/react; interruptible, layout-aware, reduced-motion aware Install a component npx shadcn@latest add \"https://crafterui.com/r/letter-reveal.json\" npx shadcn@latest add \"https://crafterui.com/r/all.json\" # everything at once pnpm, yarn and bun run the same CLI: pnpm dlx, yarn dlx, bunx --bun. Short names Register the namespace once in your components.json: { \"registries\": { \"@crafterui\": \"https://crafterui.com/r/{name}.json\" } } Then the URL is implied, and search lists the whole registry: npx shadcn@latest add @crafterui/letter-reveal npx shadcn@latest search @crafterui Either way the component is copied into your project, with its registry dependencies resolved. Requirements React 19 Tailwind CSS v4 shadcn/ui initialized (npx shadcn@latest init) Node.js 18+ Turbo Monorepo Managed with Turborepo and pnpm workspaces Run tasks via turbo run <script> (e.g. pnpm --filter web dev for the showcase) Node.js 20+ is required for the monorepo tooling apps/web Showcase site (Next.js App Router + React 19 + Tailwind v4) app/ Routes: / (landing), /components, /components/[slug] registry/crafterui/ui/* Installable component sources (one file each) registry/crafterui/examples/* The demo beside each component - shipped AND rendered registry.json Registry source of truth (metadata + files) src/catalog.ts Browse-page grouping + the full-bleed flag src/components/CrafterShowcase slug → demo map for the component pages Tech Stack Turborepo + pnpm Workspaces Next.js 15 React 19 TypeScript Tailwind CSS v4 motion shadcn/ui registry format Geist (site typography) Getting Started Install dependencies: pnpm install Run the development server: pnpm dev Open http://localhost:3001 in your browser (web app port). Useful scripts: pnpm build # build everything pnpm check # one-stylesheet + registry invariants pnpm typecheck # TypeScript across the monorepo Usage Browse components at crafterui.com/components, open any for the live demo, then install it into your app: npx shadcn@latest add \"https://crafterui.com/r/letter-reveal.json\" \"https://crafterui.com/r/arrow-tooltip.json\" Component pages are statically generated from registry.json. Registry payloads at /r/*.json are built on every deploy — the same file the site shows (highlighted) and the CLI installs. Add a component Drop the source at apps/web/registry/crafterui/ui/<name>.tsx Drop its demo at apps/web/registry/crafterui/examples/<name>-demo.tsx Add the item to apps/web/registry.json Add the slug to apps/web/src/catalog.ts under a category Add the dynamic() line to apps/web/src/components/CrafterShowcase.tsx pnpm check fails on any of those being missed. Contributing Contributions are welcome! Please read our Contributing Guide and Code of Conduct before submitting pull requests. License MIT © CrafterUI. Site scaffold adapted from moumen-soliman/lab (MIT).",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://crafterui.com"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/SriSomanaath/crafterui#crafterui"
+    },
+    {
+      "label": "Browse",
+      "url": "https://crafterui.com/components"
+    },
+    {
+      "label": "Report a bug",
+      "url": "https://github.com/SriSomanaath/crafterui/issues/new"
+    },
+    {
+      "label": "Feature request",
+      "url": "https://github.com/SriSomanaath/crafterui/issues/new"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/SriSomanaath/crafterui#features"
+    },
+    {
+      "label": "crafterui.com/components",
+      "url": "https://crafterui.com/components"
+    },
+    {
+      "label": "motion",
+      "url": "https://motion.dev"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/SriSomanaath/crafterui#install-a-component"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/SriSomanaath/crafterui#short-names"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/SriSomanaath/crafterui#requirements"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/SriSomanaath/crafterui#turbo-monorepo"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/SriSomanaath/crafterui#tech-stack"
+    },
+    {
+      "label": "Turborepo",
+      "url": "https://turbo.build/repo"
+    },
+    {
+      "label": "Next.js",
+      "url": "https://nextjs.org"
+    },
+    {
+      "label": "React",
+      "url": "https://react.dev"
+    },
+    {
+      "label": "TypeScript",
+      "url": "https://www.typescriptlang.org"
+    },
+    {
+      "label": "Tailwind CSS",
+      "url": "https://tailwindcss.com"
+    },
+    {
+      "label": "motion",
+      "url": "https://motion.dev"
+    },
+    {
+      "label": "shadcn/ui",
+      "url": "https://ui.shadcn.com"
+    },
+    {
+      "label": "Geist",
+      "url": "https://vercel.com/font"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/SriSomanaath/crafterui#getting-started"
+    },
+    {
+      "label": "http://localhost:3001",
+      "url": "http://localhost:3001"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/SriSomanaath/crafterui#usage"
+    },
+    {
+      "label": "crafterui.com/components",
+      "url": "https://crafterui.com/components"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/SriSomanaath/crafterui#add-a-component"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/SriSomanaath/crafterui#contributing"
+    },
+    {
+      "label": "Contributing Guide",
+      "url": "https://github.com/SriSomanaath/crafterui/blob/main/CONTRIBUTING.md"
+    },
+    {
+      "label": "Code of Conduct",
+      "url": "https://github.com/SriSomanaath/crafterui/blob/main/CODE_OF_CONDUCT.md"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/SriSomanaath/crafterui#license"
+    },
+    {
+      "label": "MIT",
+      "url": "https://github.com/SriSomanaath/crafterui/blob/main/LICENSE"
+    },
+    {
+      "label": "moumen-soliman/lab",
+      "url": "https://github.com/moumen-soliman/lab"
+    }
+  ],
+  "root_files": [
+    ".claude/skills/component-quality",
+    ".github/workflows",
+    "apps/web",
+    "scripts",
+    ".gitignore",
+    ".vercelignore",
+    "CODE_OF_CONDUCT.md",
+    "CONTRIBUTING.md",
+    "LICENSE",
+    "README.md",
+    "package.json",
+    "pnpm-lock.yaml",
+    "pnpm-workspace.yaml",
+    "tsconfig.base.json",
+    "turbo.json"
+  ],
+  "release_count": 0,
+  "status": "verified"
+}

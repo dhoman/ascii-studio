@@ -1,0 +1,91 @@
+{
+  "url": "https://github.com/kokonut-labs/kokonutui",
+  "final_url": "https://github.com/kokonut-labs/kokonutui",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:47:57.792651+00:00",
+  "stars": 2192,
+  "forks": 143,
+  "description": "Open-source collection of stunning Components built with Tailwind CSS, shadcn/ui and Motion to use on your websites",
+  "homepage": "https://kokonutui.com",
+  "topics": [
+    "components",
+    "framer-motion",
+    "library",
+    "nextjs",
+    "react",
+    "shadcn-ui",
+    "tailwindcss",
+    "vercel"
+  ],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2024-11-01T15:37:10.000Z",
+  "branch": "main",
+  "commit": "0f2922790424a68ea00153295a3a8836f916ab87",
+  "readme": "Kokonut UI Open-source collection of stunning Components built with Tailwind CSS, shadcn/ui and Motion to use on your websites Getting Started Visit https://kokonutui.com/docs for the documentation. Contributing Feel free to create any pull requests or issues. Sponsor Thank to @Vercel for sponsoring this project as part of the OSS 2025 Program. License This project is licensed under the MIT License.",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://kokonutui.com"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/kokonut-labs/kokonutui#kokonut-ui"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/kokonut-labs/kokonutui#getting-started"
+    },
+    {
+      "label": "https://kokonutui.com/docs",
+      "url": "https://kokonutui.com/docs"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/kokonut-labs/kokonutui#contributing"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/kokonut-labs/kokonutui#sponsor"
+    },
+    {
+      "label": "",
+      "url": "https://vercel.com/oss"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/kokonut-labs/kokonutui#license"
+    }
+  ],
+  "root_files": [
+    ".agents/skills",
+    ".github",
+    ".vscode",
+    "app",
+    "components",
+    "config",
+    "content/docs",
+    "hooks",
+    "lib",
+    "public",
+    "registry",
+    "scripts",
+    ".gitignore",
+    "CLAUDE.md",
+    "LICENSE",
+    "README.md",
+    "biome.jsonc",
+    "bun.lock",
+    "components.json",
+    "next.config.mjs",
+    "package.json",
+    "postcss.config.mjs",
+    "proxy.ts",
+    "registry.json",
+    "source.config.ts",
+    "tsconfig.json",
+    "vercel.json"
+  ],
+  "release_count": 0,
+  "status": "verified"
+}

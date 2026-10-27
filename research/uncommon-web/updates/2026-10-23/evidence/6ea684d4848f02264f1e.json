@@ -1,0 +1,111 @@
+{
+  "url": "https://github.com/bramus/css-houdini-ringparticles",
+  "final_url": "https://github.com/bramus/css-houdini-ringparticles",
+  "http_status": 200,
+  "checked_at": "2026-10-23T17:46:54.231587+00:00",
+  "stars": 15,
+  "forks": 0,
+  "description": "A CSS Houdini Paint Worklet to draw particles on a ring geometry",
+  "homepage": "",
+  "topics": [],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2025-11-30T21:59:04.000Z",
+  "branch": "main",
+  "commit": "8492e8f1fc05ddb8e495c47ac18599a871bea55e",
+  "readme": "CSS Houdini Ring Particles A CSS Houdini Paint Worklet to draw particles on a ring geometry. Usage 1. Getting css-houdini-ringparticles Using a pre-built hosted version The easiest way to get css-houdini-ringparticles is to use the prebuilt version through UNPKG. Just skip ahead to step 2 in that case. Installing it Locally You can install the css-houdini-ringparticles locally using NPM. npm install css-houdini-ringparticles Alternatively you can clone the css-houdini-ringparticles repo and after manually build the project: cd css-houdini-ringparticles npm install npm run build You'll find the built file in the ./dist folder. 2. Loading css-houdini-ringparticles To include it you must loads the module in the given JavaScript file and add it to the Paint Worklet. If you want to use the UNPKG hosted version of css-houdini-ringparticles, use https://unpkg.com/css-houdini-ringparticles/dist/ringparticles.js as the moduleURL. if ('paintWorklet' in CSS) { CSS.paintWorklet.addModule( 'https://unpkg.com/css-houdini-ringparticles/dist/ringparticles.js' ); } If you've installed css-houdini-ringparticles using NPM or have manually built it, refer to its local url: if ('paintWorklet' in CSS) { CSS.paintWorklet.addModule('url/to/ringparticles.js'); } A note on older browsers To add support for browsers that don't speak Houdini, you can include the css-paint-polyfill before loading the Worklet. <script> (async function () { if (CSS['paintWorklet'] === undefined) { await import('https://unpkg.com/css-paint-polyfill'); } CSS.paintWorklet.addModule( 'https://unpkg.com/css-houdini-ringparticles/dist/ringparticles.js' ); })(); </script> 3. Applying css-houdini-ringparticles To use Ring Particles Paint Worklet you need to set the background-image property to paint(ringparticles) .element { background-image: paint(ring-particles); } Configuration You can tweak the appearance of the Ring Particles Paint Worklet by setting some CSS Custom Properties /* TODO */ Example .element { /* Ring Particles Base Config */ --ring-radius: 120; --ring-thickness: 120; --particle-count: 90; --particle-rows: 35; --particle-size: 2; --particle-color: #00d2ff; /* Slight visibility in troughs */ --particle-min-alpha: 0.1; --particle-max-alpha: 1.0; /* Easing: Controls how fast it fades from the edge to the center */ /* 'ease-out' makes the edges soft but quickly visible. */ /* 'ease-in' makes the edges stay invisible longer (sharper center). */ --fade-easing: 'ease-in'; /* Position of the ring, in percent (0-100) */ --ring-x: 50; --ring-y: 50; /* Seed for the \"predictable random\" generator */ /* See https://jakearchibald.com/2020/css-paint-predictably-random/ for details */ --seed: 42; background-image: paint(ring-geometry); } If you want to animate the ring, animate an --animation-tick custom property: @property --animation-tick { syntax: '<number>'; inherits: false; initial-value: 0; } @keyframes ripple { 0% { --animation-tick: 0; } 100% { --animation-tick: 1; } } .element { animation: ripple 6s linear infinite; } Registering the Custom Properties To properly animate the Custom Properties and to make use of the built-in syntax validation you need to register the Custom Properties. Include this CSS Snippet to do so: @property --ring-radius { syntax: '<number> | random'; inherits: false; initial-value: random; } @property --ring-thickness { syntax: '<number> | random'; inherits: false; initial-value: random; } @property --ring-x { syntax: '<number>'; inherits: false; initial-value: 50; } @property --ring-y { syntax: '<number>'; inherits: false; initial-value: 50; } @property --particle-count { syntax: '<number> | random'; inherits: false; initial-value: random; } @property --particle-rows { syntax: '<number> | random'; inherits: false; initial-value: random; } @property --particle-size { syntax: '<number> | random'; inherits: false; initial-value: random; } @property --particle-color { syntax: '<color> | random'; inherits: false; initial-value: random; } @property --particle-min-alpha { syntax: '<number>'; inherits: false; initial-value: 0; } @property --particle-max-alpha { syntax: '<number>'; inherits: false; initial-value: 1; } @property --fade-easing { syntax: '<string>'; inherits: false; initial-value: \"ease-in\"; } @property --seed { syntax: '<number>'; inherits: false; initial-value: 0; } @property --animation-tick { syntax: '<number>'; inherits: false; initial-value: 0; } 💡 Inclusion of this code snippet is not required, but recommended. The only properties you really would want to animate/transition are: @property --ring-x { syntax: '<number>'; inherits: false; initial-value: 50; } @property --ring-y { syntax: '<number>'; inherits: false; initial-value: 50; } @property --particle-color { syntax: '<color> | random'; inherits: false; initial-value: random; } @property --animation-tick { syntax: '<number>'; inherits: false; initial-value: 0; } Demo / Development You can play with a small demo on CodePen over at https://codepen.io/bramus/pen/RNaJXEB If you've cloned the repo you can run npm run demo to launch the included demo. License css-houdini-ringparticles is released under the MIT public license. See the enclosed LICENSE for details.",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://github.com/bramus/css-houdini-ringparticles#css-houdini-ring-particles"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/bramus/css-houdini-ringparticles/blob/main/assets/css-houdini-ringparticles.png?raw=true"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/bramus/css-houdini-ringparticles#usage"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/bramus/css-houdini-ringparticles#1-getting-css-houdini-ringparticles"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/bramus/css-houdini-ringparticles#using-a-pre-built-hosted-version"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/bramus/css-houdini-ringparticles#installing-it-locally"
+    },
+    {
+      "label": "the css-houdini-ringparticles repo",
+      "url": "https://github.com/bramus/css-houdini-ringparticles/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/bramus/css-houdini-ringparticles#2-loading-css-houdini-ringparticles"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/bramus/css-houdini-ringparticles#a-note-on-older-browsers"
+    },
+    {
+      "label": "browsers that don't speak Houdini",
+      "url": "https://ishoudinireadyyet.com/"
+    },
+    {
+      "label": "css-paint-polyfill",
+      "url": "https://github.com/GoogleChromeLabs/css-paint-polyfill"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/bramus/css-houdini-ringparticles#3-applying-css-houdini-ringparticles"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/bramus/css-houdini-ringparticles#configuration"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/bramus/css-houdini-ringparticles#example"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/bramus/css-houdini-ringparticles#registering-the-custom-properties"
+    },
+    {
+      "label": "need to register the Custom Properties",
+      "url": "https://web.dev/at-property/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/bramus/css-houdini-ringparticles#demo--development"
+    },
+    {
+      "label": "https://codepen.io/bramus/pen/RNaJXEB",
+      "url": "https://codepen.io/bramus/pen/RNaJXEB"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/bramus/css-houdini-ringparticles#license"
+    }
+  ],
+  "root_files": [
+    "assets",
+    "demo",
+    "src",
+    ".editorconfig",
+    ".gitignore",
+    ".npmignore",
+    ".prettierrc",
+    "LICENSE",
+    "README.md",
+    "package-lock.json",
+    "package.json",
+    "server.js"
+  ],
+  "release_count": 0,
+  "status": "verified"
+}

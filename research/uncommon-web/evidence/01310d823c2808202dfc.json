@@ -1,0 +1,143 @@
+{
+  "url": "https://github.com/dy/linefont",
+  "final_url": "https://github.com/dy/linefont",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:49:50.207234+00:00",
+  "stars": 441,
+  "forks": 5,
+  "description": "Font for rendering line chart data",
+  "homepage": "https://dy.github.io/linefont/scripts",
+  "topics": [
+    "datavis",
+    "line-chart",
+    "opentype",
+    "truetype",
+    "waveform"
+  ],
+  "license": "OFL-1.1",
+  "archived": false,
+  "created_at": "2021-03-01T13:28:18.000Z",
+  "branch": "main",
+  "commit": "7c461111865af696d09d009c2ccab30992c3d024",
+  "readme": "linefont Typeface for rendering small/medium-scale line charts (eg. time series). Demo • Google fonts • V-fonts • Test Usage Put Linefont[wdth,wght].woff2 into your project directory and use this code: <style> @font-face { font-family: linefont; font-display: block; src: url(./Linefont[wdth,wght].woff2) format('woff2'); } .linefont { --wght: 200; --wdth: 50; font-family: linefont; font-variation-settings: 'wght' var(--wght), 'wdth' var(--wdth); line-height: 1.4; /* match selection, optional */ } </style> <!-- Set values manually --> <textarea id=\"linefont\" class=\"linefont\" cols=\"100\"> abcdefghijklmnopqrstuvwwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ </textarea> <script> // Set values programmatically (more precise) linefont.textContent = Array.from({length: 127}, (_,i) => String.fromCharCode(0x100 + i)).join('') </script> Ranges Linefont values span from 0 to 100, assigned to different characters: 0-9 chars for simplified manual input with step 10 (height = number×10). a-zA-Z for manual input with step 2, softened at edges a and Z (height = number of letter). U+0100-017F for 0-127 values with step 1 (extra 27 values). U+0180 renders as max (off-by-one clamp guard), higher codepoints render blank. Variable Axes Tag Range Meaning wght 4-1000 Line thickness (quarter upms, linear), default 100. wdth 25-200 Width of the font (ie. zoom of the signal), default 100. Features Ranges, values and weight is compatible with wavefont, so fonts can be swapped at wdth=100, preserving visual coherency. Visible charcodes fall under marking characters unicode category, ie. recognized as word by regexp and can be selected with Ctrl + → or double click. Eg. segments separated by or - are selectable by double click. Characters outside of visible ranges (but within Core Latin) are clipped to 0, eg. , \\t etc. Caret span is -30..130 (covers full ink incl. value 127), so line-height = 1.6 is minimal non-overlapping selection. npm package Linefont npm package contains the font and a js function that produces font string from values. import lf, { char } from 'linefont' // characters for values from 0..127 range (clamped & rounded) lf(0, 1, 50, 99, 127) // 'ĀāĲţſ' // arrays or typed arrays of any length lf(new Float32Array([0, 64, 127])) // 'Āŀſ' Types included. Building make build Tests Glyphs Text Waterfall Troubleshooting The font requires ligatures (rlig) enabled for it to be properly rendered. Some environments (eg. MS Word) may not have it enabled by default, in this case enable \"All Ligatures\" in advance font parameters. See also wavefont − font-face for rendering waveforms. 🕉",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://github.com/dy/linefont/actions/workflows/build.yaml"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/dy/linefont#linefont-"
+    },
+    {
+      "label": "",
+      "url": "https://private-user-images.githubusercontent.com/300067/248886912-32827572-d01b-489e-b949-e1454640c3c9.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3OTI3MTMyODksIm5iZiI6MTc5MjcxMjk4OSwicGF0aCI6Ii8zMDAwNjcvMjQ4ODg2OTEyLTMyODI3NTcyLWQwMWItNDg5ZS1iOTQ5LWUxNDU0NjQwYzNjOS5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjYxMDIyJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI2MTAyMlQyMzQ5NDlaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1kMjBjNjlhYmRlMmI2N2ExZGU2ZTdmYmE4ZWFiYWRlMjViNDU1ODg2YWExNTA2ZGEwMzliZjc2NjFlY2UyZWJkJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZyZXNwb25zZS1jb250ZW50LXR5cGU9aW1hZ2UlMkZwbmcifQ.5I4TEeBgvWyWb5cr9B1LVxeSROoQ_JTvODFH52zdpRU"
+    },
+    {
+      "label": "Demo",
+      "url": "https://dy.github.io/linefont/scripts"
+    },
+    {
+      "label": "Google fonts",
+      "url": "https://fonts.google.com/specimen/Linefont/"
+    },
+    {
+      "label": "V-fonts",
+      "url": "https://v-fonts.com/fonts/linefont"
+    },
+    {
+      "label": "Test",
+      "url": "https://dy.github.io/linefont/out/fontbakery/fontbakery-report"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/dy/linefont#usage"
+    },
+    {
+      "label": "Linefont[wdth,wght].woff2",
+      "url": "https://github.com/dy/linefont/blob/main/fonts/variable/Linefont%5Bwdth,wght%5D.woff2"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/dy/linefont#ranges"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/dy/linefont#variable-axes"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/dy/linefont#features"
+    },
+    {
+      "label": "wavefont",
+      "url": "https://github.com/dy/wavefont"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/dy/linefont#npm-package"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/dy/linefont#building"
+    },
+    {
+      "label": "Tests",
+      "url": "https://dy.github.io/linefont/out/fontbakery/fontbakery-report"
+    },
+    {
+      "label": "Glyphs",
+      "url": "https://dy.github.io/linefont/out/proof/glyphs"
+    },
+    {
+      "label": "Text",
+      "url": "https://dy.github.io/linefont/out/proof/text"
+    },
+    {
+      "label": "Waterfall",
+      "url": "https://dy.github.io/linefont/out/proof/waterfall"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/dy/linefont#troubleshooting"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/dy/linefont#see-also"
+    },
+    {
+      "label": "wavefont",
+      "url": "https://github.com/dy/wavefont"
+    },
+    {
+      "label": "🕉",
+      "url": "https://github.com/krishnized/license/"
+    }
+  ],
+  "root_files": [
+    ".github/workflows",
+    "_sources",
+    "fonts",
+    "scripts",
+    "sources",
+    ".gitattributes",
+    ".gitignore",
+    ".ninja_log",
+    "AUTHORS.txt",
+    "CONTRIBUTORS.txt",
+    "Makefile",
+    "OFL.txt",
+    "build.ninja",
+    "index.d.ts",
+    "index.js",
+    "package-lock.json",
+    "package.json",
+    "plopfile.cjs",
+    "readme.md",
+    "requirements.txt",
+    "tea.yaml",
+    "test.js"
+  ],
+  "release_count": 4,
+  "status": "verified"
+}

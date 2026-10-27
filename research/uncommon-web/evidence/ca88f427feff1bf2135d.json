@@ -1,0 +1,229 @@
+{
+  "url": "https://github.com/orta/plants",
+  "final_url": "https://github.com/orta/plants",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:48:08.163687+00:00",
+  "stars": 3,
+  "forks": 0,
+  "description": "Procedurally drawn house plants as SVG — fineliner ink and loose watercolour",
+  "homepage": "https://orta.io/plants",
+  "topics": [
+    "generative-art",
+    "illustration",
+    "procedural-generation",
+    "svg"
+  ],
+  "license": "",
+  "archived": false,
+  "created_at": "2025-06-08T13:27:58.000Z",
+  "branch": "main",
+  "commit": "c8798ea340471dbab817e5a18b27fb09112ba738",
+  "readme": "@orta/sketchy-plants House plants drawn procedurally as SVG — fineliner ink, loose watercolour, one seed each. import { drawPlant } from '@orta/sketchy-plants' const svg = drawPlant({ seed: 108 }) No dependencies, no DOM, no build tooling required at runtime. It returns a string, so it works the same in Node, in a bundler, in a worker, or at build time. yarn sketchy-plants --seed 108 --out plant.svg yarn sketchy-plants --seed 108 --age 12 --relative yarn sketchy-plants --species snake-plant --width 400 yarn sketchy-plants --species ficus --strain rubra # a colour cultivar yarn sketchy-plants --list # 52 species, grouped by arrangement yarn sketchy-plants --sheet 12 --out garden # garden-1.svg … garden-12.svg Working on it Try it → — the playground, the plant lab and a page per species. yarn # install yarn dev # playground at localhost:5173 yarn dev is a Vite server, and demo/main.ts imports straight from src/ rather than from a build. That means HMR reaches all the way into the geometry: change a lobe count in leaves/monstera.ts and the plant redraws before your hand is off the keyboard. There is a seed box, a reroll button, and species / palette pickers, and clicking one of the neighbouring seeds promotes it. command does yarn dev playground, with HMR yarn build the library: Rolldown via Vite, plus tsc for declarations yarn typecheck tsc --noEmit over src and demo yarn demo:build static build of the playground into demo-dist/ yarn server the app as it is deployed, with preview images The build is Vite's library mode, which bundles with Rolldown — the same toolchain the dev server uses, so there is no second bundler config to keep in sync. Types come from tsc --emitDeclarationOnly. The package itself has no runtime dependencies — see Size for what that costs a web bundle. Publishing is a version bump on main; RELEASING.md has the details. Sharing a plant A plant is not stored anywhere. Every seed, age, cross and clamped number lives in the URL, so a link is the plant — which is a good property right up to the moment somebody pastes one somewhere and it previews as a blank page. server/ is a small Express app that fixes that: it hands out the same static bundle Vite builds, and draws an Open Graph image of whatever plant the URL opens, on demand. Nothing is pre-rendered, because the set of plants is not a list — it is every URL anyone might type. yarn demo:build && yarn server # localhost:3000 Two things follow from it. Routes are real paths rather than a hash, because everything after a # is stripped before the request leaves the browser and a crawler would see / for every plant in the collection. And the URL format lives in demo/state.ts, imported by both the workspace and the server, so a preview is drawn by the same composeRecipe that draws the page — a card cannot describe a plant the image does not show. The server is not part of the published package. It deploys to Railway from railway.json; server/README.md covers the rest, including why the rasteriser is resvg. Age drawPlant({ seed: 42, age: 12 }) // a seedling drawPlant({ seed: 42, age: 95 }) // the same individual, years on age runs 1 to 100 and defaults to 70. It is not a scale factor. Holding the seed and moving the age gives you the same plant at different points in its life, and several things change at different rates and in different directions: age 1 age 100 leaves 3 11 blade shape entire deeply split, holed crown spread 56°, tight upright 126°, sprawling and leaning petioles short, thin, alike long, thick, widely varied plant ÷ pot small in its pot straining at it pot clean hatched, mineral crust oldest leaf — often yellowing off The one that matters is shape, not size. A monstera's leaves are entire when the plant is young and fenestrate progressively, so the interesting part of the range is the middle: transitional blades with two or three shallow notches and no holes at all. Age drives slit frequency, slit depth and hole count off one number, which reproduces that whole sequence rather than flipping between two leaf types. And fenestration follows the plant's maturity when a leaf emerged, not the leaf's own age — on an old plant new leaves unfurl already split, and on a young one they stay entire however long you wait. So a young plant is uniformly entire, an old one uniformly split, and only the middle of a plant's life shows both on the same crown. Nothing here is linear in age. A house plant puts on most of its size early (growth = t^0.7) and its leaves change shape later (adult lags growth), so a plant is a decent size well before it starts splitting. See maturity.ts. A species describes its own response with an optional ageing block — every field is a [at age 1, at age 100] pair, and every one has a default: ageing: { leaves: [3, 14], // a pothos carries more than a monstera spread: [80, 165], // and trails rather than standing up } Relative size By default every drawing is cropped to its own content, so a seedling and a mature plant both fill their frame and look the same size once you scale them into a column. Set relativeSize and the frame is instead sized for this plant fully grown, with the plant sitting on its floor: for (const age of [5, 25, 45, 70, 95]) { drawPlant({ seed: 108, age, relativeSize: true }) // all 550 × 707 } Every age comes out at one canvas size, on one baseline, with the pot in the same place — so a row of them is directly comparable and the young ones are genuinely small. Without it the same row is 276×371 … 550×707, five plants all apparently the same size. It costs a second pass over the geometry, since working out the frame means growing the same seed at age 100 and measuring it. Leave it off for a single drawing; turn it on for a sequence. How a plant is put together recipe ──▶ pot ──▶ soil ──▶ stem layout ──▶ petioles ──▶ blades ──▶ Scene ──▶ SVG │ geometry ends here ─────────┘ rendering begins here The line through the middle is the important one. Pots, leaves and stems produce plain polylines in drawing space — no path strings, no colours, no decisions about how wobbly a line is. The render layer takes that geometry and decides how it is drawn. That split is what lets you add a new leaf in thirty lines and get pen fragmentation, occlusion, off-register washes and shadow halves for free. Growing vs drawing drawPlant is the two steps glued together. Split them if you want to inspect or adjust the geometry in between: import { growPlant, renderScene, monsteraPlant } from '@orta/sketchy-plants' const scene = growPlant({ seed: 42, recipe: monsteraPlant }) // scene.parts is an ordered, back-to-front list of geometry const svg = renderScene(scene, { margin: 12 }) Recipes A recipe is a plant's parts list, and is meant to be readable at a glance: import { usePot, useLeaf, useStem, terracotta, egg, footed, bowl, monstera, heartLeaf, crown, sketchbook, } from '@orta/sketchy-plants' export const monsteraPlant = { // A shelf: the seed picks, filtered by what suits the plant's size. pot: [usePot(terracotta), usePot(egg), usePot(footed), usePot(bowl)], potWidth: 212, // nominal size at full maturity stem: useStem(crown), // leaf count and spread come from age reach: 1.15, // longest petiole ÷ pot width foliage: { mature: useLeaf(monstera), juvenile: useLeaf(heartLeaf), // the form before it fenestrates share: 0.455, // blade length ÷ plant height juvenileRatio: [1.0, 1.4], droopChance: 0.25, }, palette: sketchbook, } The use* helpers exist so options are type-checked against the specific part you named — usePot(terracotta, { bands: 3 }) is a compile error, because bands belongs to cylinder — while the recipe stays a uniform shape the assembler can walk. Blade size is derived, not tuned share is the only size number a species names, and it is a fact about the blade alone: nearly half of a monstera is leaf (0.455), a fifth of a ficus is (0.223). What the assembler actually needs is blade length ÷ petiole length, and that is a fact about the blade and the arrangement jointly — a monstera's big leaf hangs off a long stalk at 0.81, while a ficus leaf sits on a twig three forks down the tree and has to be 2.0. There is no number you can carry from one to the other, which is why it used to be hand-tuned per species and why nothing could be shared between them. It factors. An arrangement reports stemShare — its leaf-bearing segment as a fraction of the stem structure's height — and the ratio falls out: matureRatio = share / (stemShare × (1 − share)) Measured across 4 species × 6 ages × 120 seeds, stemShare is a constant of the arrangement, not of the plant: 0.985–0.998 for every species using crown, 0.143 for branching. Feeding the measured share back through the formula reproduces all four hand-tuned values to within 0.6–3.4%, comfortably inside the ±10–18% seed-to-seed noise. The subtlety, and the reason a first attempt at this fails: stemShare has to be measured against the stem structure's height with the blade's own contribution removed. Include it and the crown species scatter across 0.50–0.63, because the \"arrangement\" number is then contaminated by the blade — and it does not factor at all. Deriving it also fixes a real defect. branching changes its fork depth partway through a plant's life, so a fixed ratio left an entire age band of leaves ~30% undersized — blade ÷ plant height wobbled 1.45× across a ficus's lifespan. Because stemShare moves with the fork depth, that is now flat to 1.01×. One sharp edge, worth knowing before you author a share near 1. The formula divides by 1 − share, so it is gentle in the range most species live in and steep above about 0.85. That range is not hypothetical: a spiral rosette's leaves are sessile — there is no petiole to spend height on — so an echeveria is 0.86 and comes out at a ratio of 5.5–6.8, against a monstera's 0.74–0.93. Which is correct, and is why those recipes name a reach around 0.15: in that arrangement reach is the stub a leaf sits on, not the plant's radius. Push share past 0.92 and small edits to it start moving the blade a lot; that is the point to reach for matureRatio instead. matureRatio remains as an escape hatch and wins when given. juvenileRatio follows share too, via juvenileScale — above 1, because a new shoot carries a proportionally large leaf on a stalk that has not extended yet. How far above is a property of the arrangement: ~1.4 for a rosette putting shoots up from the middle, ~0.8 for a shrub whose newest twig matches its neighbours. Extension points A new leaf Return polylines in local coordinates: the blade attaches at the origin and its tip points along -y. import type { LeafType } from '@orta/sketchy-plants' export const spearLeaf: LeafType = { name: 'spear', aspect: 0.22, // natural width ÷ length // `maturity` is also passed, 0–1. Read it if the blade should change shape as the // plant ages — see how `monstera` drives its slits and holes off it — or ignore it. generate(rng, { length, width }) { const side = (s: number) => [ { x: s * width * 0.9, y: -length * 0.3 }, { x: s * width * 0.7, y: -length * 0.72 }, ] return { blades: [ { outline: [ { x: 0, y: 4 }, ...side(1), { x: rng.jitter(3), y: -length }, ...side(-1).reverse(), ], midrib: [{ x: 0, y: 2 }, { x: 0, y: -length * 0.95 }], }, ], halves: { right: side(1), left: side(-1) }, } }, } halves is used for the deeper wash down one side of the blade; return the same points you built the outline from. Omit it on a compound leaf. Compound leaves return many blades — one per leaflet. frond emits thirty-odd for a fern, and it matters that they are separate: the pen breaks each outline into hand-length strokes, so one enormous zigzag outline would be inked as a single continuous scribble instead of as thirty leaflets. Variegation goes in patches: closed regions that are reserved rather than painted. Watercolour cannot go lighter than the paper, so a pale patch is somewhere the brush was kept off — the wash punches them out, which is both how it is really done and the only thing that works under a multiply blend. See heartLeaf's variegation option. A new pot Pots are surfaces of revolution seen slightly from above, so the whole shape falls out of one function — half-width at depth t, running 0 at the rim to 1 at the foot. The helpers in pots/profile.ts turn that into a silhouette, a mouth ellipse, bands around the belly, hatching that follows the wall, and the shaded side. import { outlineFromProfile, mouthEllipse, crossSection, EYE_LEVEL } from '@orta/sketchy-plants' const profile = (t: number) => radiusX * (1 - 0.36 * t) // a plain cone const profile = (t: number) => radiusX * Math.sqrt(1 - 0.72 * t * t) // a bowl The profile does not have to be monotonic. footed narrows to a stem and flares out again into a pedestal, and egg is widest a third of the way down, so its rim is not its widest point — which is why the mouth, the widest point and the foot are three separate facts in PotGeometry. Shoots emerge from the mouth, the cast shadow follows the foot, and spatter scatters around the widest point. Beyond the shape, a pot type declares how it wants to be used: export const bowl: PotType = { name: 'bowl', aspect: 0.52, // height ÷ width — a bowl is shallow girth: 1.22, // ...and wide, for the same amount of soil suits: [0, 0.5], // only ever under a small plant glazed: true, // takes a glaze from the palette, not terracotta generate(rng, { width, height, wear }) { ... }, } Five ship in the box: terracotta (unglazed, any size), cylinder (banded), bowl (small plants only), egg (bellied), footed (an urn, established plants only). A new arrangement A StemType decides where stems go and what they carry. It emits a tree of segments, which is what lets one interface cover a rosette and a branching shrub: interface StemSegment { origin?: Vec // roots only: where it leaves the soil at?: number // children only: how far along the parent it emerges, 0 → 1 angle: number // degrees from vertical, clockwise length: number width: number relax?: number // 0 a stiff woody limb, 1 a petiole sagging under a big leaf trunk?: boolean // draw as a filled tapered silhouette, not a stroked centreline depth: number // paint order, from the structure rather than guessed from geometry children?: StemSegment[] leaf?: { vigour: number; juvenile: boolean; depth?: number } flower?: { vigour: number; depth?: number } } A segment does not know where it starts. Children say how far along their parent they emerge, and the assembler resolves that once the parent has been grown — because where a curved stem ends up depends on how it curved, which the arrangement cannot know in advance. Leaves attach at segment tips only, so a vine carrying twelve leaves is a chain of twelve one-internode children rather than one segment with twelve attachments. Six ship. crown is one level deep with no children: a monstera, a peace lily. spiral packs leaves round a single growing point at the golden angle and projects them onto the page: an echeveria, an agave. branching forks three or four times and puts blades only on the outermost twigs: a ficus, a jade. cane raises bare trunks of staggered height each topped with a tuft — the stagger is the whole read, since three equal canes are a candelabra rather than a plant. trailing leaves the rim and hangs below it. whorl stacks rings of branches up a leader, and has to work at breaking its own regularity or it reads as a Christmas-tree icon. whorl is the one that turned out to be more general than the plant it was written for. It was a Norfolk pine and nothing else, until cone — how much each ring shortens as it climbs — became a dial rather than a constant. At 1 the arms shorten and the plant is a conifer; near 0 they do not and the same rings are a column, which with the droop run negative and the leader left herbaceous is a horsetail. Two options apart, a tree and a plant with no wood in it share every line of the file. crown and spiral are worth contrasting, because the second exists entirely because the first could not be stretched to cover it. A crown fans stalks across a plane and sorts them by angle, which is right when every leaf is thrown clear of its neighbours. A rosette is forty leaves out of one apex, all overlapping, and what you read is the packing — so spiral turns the leaf in three dimensions and flattens it onto the page, which is where its foreshortening comes from, and orders paint from the outermost leaf inward rather than by angle. Sorting by angle puts the apex bud behind the old outer leaves it sits on top of, and the rosette collapses into a heap of blades. Each also returns stemShare, which is what lets blade size be derived rather than tuned — see Blade size. A crown returns a structural 1, because in a rosette the petiole is the whole stem structure; the others measure the tree they just built, which stays honest as the geometry changes with age. An arrangement also decides where a plant could flower, and offers those places; the recipe decides whether this species takes them up. A layout proposing flower spikes costs a non-flowering species nothing. Swapping the arrangement changes the plant's whole posture without touching a leaf or a pot. A new flower FlowerType is the same contract as LeafType — polylines in local coordinates, attaching at the origin with the tip along -y — so everything downstream (depth sorting, occlusion, off-register washes, wet blooms) applies to a bloom exactly as it does to a blade. A recipe names one in a bloom block: bloom: { flower: useFlower(spathe), stalks: [0, 3], // carried at age 1 → age 100; a seedling has no business flowering reach: 1.3, // stalk length ÷ foliage reach } reach defaults above 1 for a drawing reason rather than a botanical one. Occlusion is ink-only while washes cover everything, so a bloom sitting over a leaf takes that leaf's wash and goes muddy; a stalk that clears the canopy keeps it on clean paper. Species whose flowers genuinely sit in the foliage — a hoya at a node, a crown of thorns at a twig tip — author it well under 1 and accept the tint. What ships kind ships leaves monstera (fenestrating), heartLeaf, frond, strap, succulent, disc (peltate), blade (6 presets, cross bands, lengthwise stripes), palmate, needle, antler, chain (11 in all) flowers spathe, rosette, umbel, spike, orchid pots terracotta, cylinder, bowl, egg, footed, mount (driftwood, for plants that have no pot) arrangements crown (fanned rosette), spiral (packed rosette), branching (woody shrub), cane (bare trunks), trailing (vine), whorl (rings up a leader) species 52; --list groups them by arrangement palettes sketchbook, cyanotype, terracottaDusk strains albo, aurea, rubra, rosea, argentea, nigra, neon, glauca — colour cultivars, any of them applicable to any species Compound leaves return one Blade per leaflet rather than one lobed outline, and it matters that they are separate: the pen breaks each outline into hand-length strokes, so a thirty-leaflet frond traced as a single outline would be inked as one continuous scribble. antler is the exception that proves it — a staghorn frond is one blade, because separate blades would put a drawn edge and an occlusion boundary across every fork and the arms would read as detached fingers rather than continuous flesh. Size Nothing is installed alongside it: zero runtime dependencies, zero peer dependencies, and nothing imported from node: on the library path — so the same build runs in a browser, a worker, an edge runtime, or Node. The three devDependencies (TypeScript, Vite, @types/node) never reach your bundle. Put a plant on a page and this is the bill, measured through a bundler with minification on — the numbers a website actually pays: what you call from the package minified gzip brotli drawPlant() 49.2 kB 15.3 kB 13.6 kB growPlant() alone, no SVG 40.4 kB 12.5 kB 11.1 kB renderScene() alone, no growth 10.5 kB 3.8 kB 3.4 kB growPlant + renderScene 49.2 kB 15.3 kB 13.5 kB drawPlant + pothos 51.0 kB 15.8 kB 13.9 kB drawPlant + strains 50.6 kB 15.7 kB 13.9 kB drawPlant + species (all 52) 122.2 kB 34.3 kB 28.9 kB the entire public API, nothing shaken 126.1 kB 35.7 kB 30.1 kB 15.3 kB gzipped is the floor, and drawPlant is the whole of it: growing costs 12.5 kB, drawing costs 3.8 kB, and calling them separately costs exactly what calling drawPlant does, because it is those two functions and nothing else. Splitting the API buys you control, not bytes. Strains are +1.6 kB of that floor and are not optional, because growPlant resolves one on every call whether or not a recipe carries it. The eight named colourings are separate and are optional — +0.4 kB on top, less than a single species, because a strain is a few numbers rather than any geometry. That floor includes one plant whether you want it or not. growPlant falls back to monsteraPlant when you pass no recipe, so a monstera is reachable from every call and no bundler can drop it. Pothos is the one other species re-exported by name, which is why it is nearly free — +0.5 kB. Every other species costs 34.3 kB, not 15.8 kB. The package's entry point re-exports species — the record of all 52 — but not the species individually, and exports maps only \".\", so there is no subpath to reach past it. Asking for a snake plant means species.snakePlant, and touching the record retains all 52 recipes and all six arrangements. The recipes themselves are small; the arrangements they pull in are not. None of that is a tree-shaking failure. Leaves, pots, arrangements and species are separate modules, no species imports another, and the package is marked sideEffects: false — a bundler drops what it can prove you never reach. It is an export surface that makes almost everything reachable at once. npm will report a much larger package than any row here — around 1.4 MB unpacked, most of it sourcemaps and the src/ that the declaration maps point back at. None of that reaches a browser. dist/ ships unminified on purpose: minifying a library twice only degrades the sourcemaps your bundler is about to regenerate anyway. To check the table yourself, bundle an entry point that imports exactly what you would import, minified, and measure that. yarn build prints unminified figures, which are not comparable. Notes on the drawing A few things that turned out to matter more than expected: Leaves are never mirrored. Both sides of a monstera blade are generated independently. A mirrored leaf reads as clip art instantly however good the line quality is — the eye finds the axis of symmetry before it finds the plant. The line is broken, not wobbled. A single path with a displacement filter gives you a shaky line. A person gives you a sequence of short confident strokes that start and stop in slightly the wrong places. inkContour fragments each outline into hand-length pieces with gaps, overshoots and occasional correction passes; the filter on top is only there to take off the last of the vector crispness. Petioles arrive at a shallower angle than they leave. A leaf stalk leaves the crown steeply and relaxes outward under the weight of the blade — measured off the reference drawing, departing at about a third of its overall angle and arriving at about one and a half times it. Because the blade follows the arrival tangent rather than the straight line back to the soil, this one fact is most of why the plant looks like it is holding itself up. Petioles vary far more on an old plant. Its leaves were made over several growth cycles, and the early ones were made when the plant was smaller, so they sit on markedly shorter stalks — while a seedling's three leaves are all the same age and all the same length. Without that, an old crown reads as a fan of equal-length spokes. Stalk length is tied to how long ago a leaf emerged rather than being random, which also puts the oldest leaf lowest and shortest, exactly where a yellowing one belongs. Reach falls off as the cosine of the angle. A crown is roughly hemispherical, so a leaf thrown out sideways has less stalk between it and the soil than one going straight up. Getting that relationship right is most of why the silhouette reads as a plant rather than a fan of sticks. Washes go over the ink, not under it. Ink is drawn first, each part knocking out its own silhouette in the paper colour so nearer leaves occlude further ones. The watercolour then multiplies down over the whole drawing, a few pixels off-register. Pots A recipe can name one pot or a shelf of them, and the seed picks — but not blindly. Each shape declares the range of plant it suits, so a seedling gets the little bowl and never the footed urn, and a six-foot monstera gets the reverse. Size is not one number either. The recipe's potWidth is the nominal size for a fully grown plant; the actual width is that times the shape's girth (a bowl is a quarter wider than a nursery pot for the same root ball) times the age curve. Across a lifetime that runs a pot from about 80 units wide to 212 — a smaller plant really does get a smaller pot, and the ratio between plant and pot climbs as well, so an old one looks like it is straining at its container. Colour follows the finish rather than the shape: unglazed terracotta keeps the palette's earthenware, and glazed shapes take one of palette.glazes — chalk, sage, slate, sand. Seeds The same seed always produces the same drawing. Each stage of the pipeline draws from its own forked stream, so adding a leaf does not reshuffle the pot, and re-inking is independent of how the plant grew. Seeds may be numbers or strings — drawPlant({ seed: 'ficus-in-the-hallway' }). Rendering options A drawing has no background: the SVG is transparent wherever the plant is not, so paper is whatever you put it on — a background in CSS, a rect of your own, the page. The library has no opinion about it, which is the only way one drawing can be a sheet on a table and the next a thumbnail in a grid. option default notes margin 30 blank space around the drawing, in drawing units width auto rendered px width; height follows the aspect ratio relativeSize false fixed frame at true scale rather than cropped to content idPrefix seed prefix for generated ids, so two plants can share a page ink — override the pen: fragment length, gaps, wobble, overshoot Palettes sketchbook (default), cyanotype, terracottaDusk. A palette is a flat bag of named colours; swap one value without understanding the rest. Strains A strain is a colour cultivar — the thing a nursery puts in quotes on the label. It can be laid over any species, and it is colour and nothing else: import { drawPlant, species, strains, withStrain } from '@orta/sketchy-plants' drawPlant({ seed: 42, recipe: withStrain(species.monstera, strains.albo) }) yarn sketchy-plants --species ficus --strain rubra A strain never moves a point of geometry. Same seed, same age, same individual — the plant you were looking at, recoloured rather than regrown. That is checkable and it is checked: ink and occlusion come out identical across all 52 species × 8 strains. Nearly all of it falls out of a mechanism that was already there. A shoot picks one colour for its whole wash from foliage.greens, so a bag holding both dusty pinks and greens gives a plant with pink leaves and green ones — which is how Tradescantia 'Nanouk' has always been drawn here, with no per-leaf machinery anywhere. A strain rewrites the bag and inherits all of it, including penetrance: a colouring that only half takes leaves the unshifted colours in the bag alongside the shifted ones, and the draw that was already choosing this leaf's green now also decides whether it carries the strain. No extra randomness is involved, which is exactly why the geometry holds still. Relative, so it travels A strain is a direction, not a colour. aurea on a blue-grey agave and on an olive croton give two different golds, both recognisably that plant: { name: 'rubra', foliage: { toward: '#7a3340', by: 0.62 } } // blend { name: 'neon', foliage: { hue: -12, sat: 1.3, light: 1.24 } } // or move in HSL { name: 'mine', foliage: ['#8f7bb8', '#7a68a6'] } // or say it outright The list is the escape hatch, as matureRatio is for blade sizing. The other two are what let one strain apply to fifty-two species and three palettes. Saturation and lightness are multipliers rather than offsets, which preserves the spacing of a bag — a croton's four colours stay four distinguishable colours, and that spread is the plant's leaf-to-leaf variety. Variegation is bold, and works on every leaf variegation carves sectors out of the blade itself, and it is deliberately unsubtle. Real sectoral variegation runs the length of a leaf, so it comes in wedges and half-blades — half a Monstera 'Albo' leaf is genuinely white. Drawn timidly it reads as a stain rather than as a cultivar, and a saturated colour makes that worse, not better, because the eye has something definite to disbelieve. { name: 'azure', variegation: { color: '#4a6fa8', extent: 0.55, reach: 0.6 } } Two things make a strong colour land as itself: The sector is cut back out of every wash beneath it. A blue painted over the base green, the shadow half and a deep blob is four multiplied layers and arrives as a bruise however saturated the blue was. Knocked through to paper first, it arrives as blue. The knockout and the paint are the same brush loop, so they register exactly — one patch of paper the brush was kept off, filled with a different pigment, which is how it would actually be done. Omit color and the sector is simply left as paper: cream-and-white variegation, and the only way to get one, since watercolour cannot go lighter than the page. It is carved from the blade's own outline rather than asked of the leaf, by pulling a contiguous run of the margin in toward the midrib. So it works on all eleven leaf types with no opt-in — a monstera, a fern frond and a palmate hand emit no markings of their own and can all be variegated, per leaflet on the compound ones. Picking your own The eight are a shelf, not a limit. The playground's plant lab has a colouring editor — a colour well, how far to blend toward it, how many leaves carry it, and a variegation block with its own colour — and everything it writes goes into the link: /lab?s=monstera&st=~to=4a6fa8,by=0.7,pen=0.6,var=e0d9c0,ext=0.55 Tagged rather than positional, so every field is optional and one can be added without changing what an existing link means. to/by blends the plant's own greens toward a colour — what a person means by \"make it blue\" — while hue/sat/light move them in HSL instead, which preserves the spacing of the bag and is what the remix uses when it is generating variety rather than aiming at a target. var=paper is the reserved, cream-and-white case. The lab's remix panel draws a dozen crosses at a time and can mix colourings no shelf has. Each of its five tracks — habit, blade, bloom, colouring, figures — can be held still, and the draws can be kept nearby instead of ranging anywhere, which is what makes \"keep one, remix around that\" actually work: without holds, the only way to see a cross's neighbours is a draw that also replaces it. What a strain cannot always reach Some of it depends on what the parts offer, and that is reported rather than dropped: markings recolours a croton's gold ribs but has nothing to grab on a monstera, and a stem tint has nowhere to go on an arrangement that is all trunk. scene.derived .strainUnreached says which, and the lab prints it — \"it looks the same\" otherwise has no answer, and the honest one is a fact about the leaf, not about the strain. Licence MIT",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://github.com/orta/plants#ortasketchy-plants"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/orta/plants#working-on-it"
+    },
+    {
+      "label": "Try it →",
+      "url": "https://orta.io/plants/"
+    },
+    {
+      "label": "demo/main.ts",
+      "url": "https://github.com/orta/plants/blob/main/demo/main.ts"
+    },
+    {
+      "label": "Size",
+      "url": "https://github.com/orta/plants#size"
+    },
+    {
+      "label": "RELEASING.md",
+      "url": "https://github.com/orta/plants/blob/main/RELEASING.md"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/orta/plants#sharing-a-plant"
+    },
+    {
+      "label": "server/",
+      "url": "https://github.com/orta/plants/blob/main/server"
+    },
+    {
+      "label": "demo/state.ts",
+      "url": "https://github.com/orta/plants/blob/main/demo/state.ts"
+    },
+    {
+      "label": "railway.json",
+      "url": "https://github.com/orta/plants/blob/main/railway.json"
+    },
+    {
+      "label": "server/README.md",
+      "url": "https://github.com/orta/plants/blob/main/server/README.md"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/orta/plants#age"
+    },
+    {
+      "label": "maturity.ts",
+      "url": "https://github.com/orta/plants/blob/main/src/maturity.ts"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/orta/plants#relative-size"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/orta/plants#how-a-plant-is-put-together"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/orta/plants#growing-vs-drawing"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/orta/plants#recipes"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/orta/plants#blade-size-is-derived-not-tuned"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/orta/plants#extension-points"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/orta/plants#a-new-leaf"
+    },
+    {
+      "label": "frond",
+      "url": "https://github.com/orta/plants/blob/main/src/leaves/frond.ts"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/orta/plants#a-new-pot"
+    },
+    {
+      "label": "footed",
+      "url": "https://github.com/orta/plants/blob/main/src/pots/footed.ts"
+    },
+    {
+      "label": "egg",
+      "url": "https://github.com/orta/plants/blob/main/src/pots/egg.ts"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/orta/plants#a-new-arrangement"
+    },
+    {
+      "label": "crown",
+      "url": "https://github.com/orta/plants/blob/main/src/stems/crown.ts"
+    },
+    {
+      "label": "spiral",
+      "url": "https://github.com/orta/plants/blob/main/src/stems/spiral.ts"
+    },
+    {
+      "label": "branching",
+      "url": "https://github.com/orta/plants/blob/main/src/stems/branching.ts"
+    },
+    {
+      "label": "cane",
+      "url": "https://github.com/orta/plants/blob/main/src/stems/cane.ts"
+    },
+    {
+      "label": "trailing",
+      "url": "https://github.com/orta/plants/blob/main/src/stems/trailing.ts"
+    },
+    {
+      "label": "whorl",
+      "url": "https://github.com/orta/plants/blob/main/src/stems/whorl.ts"
+    },
+    {
+      "label": "Blade size",
+      "url": "https://github.com/orta/plants#blade-size-is-derived-not-tuned"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/orta/plants#a-new-flower"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/orta/plants#what-ships"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/orta/plants#size"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/orta/plants#notes-on-the-drawing"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/orta/plants#pots"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/orta/plants#seeds"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/orta/plants#rendering-options"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/orta/plants#palettes"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/orta/plants#strains"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/orta/plants#relative-so-it-travels"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/orta/plants#variegation-is-bold-and-works-on-every-leaf"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/orta/plants#picking-your-own"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/orta/plants#what-a-strain-cannot-always-reach"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/orta/plants#licence"
+    }
+  ],
+  "root_files": [
+    ".github/workflows",
+    "demo",
+    "server",
+    "src",
+    ".gitignore",
+    ".npmignore",
+    ".nvmrc",
+    "README.md",
+    "RELEASING.md",
+    "index.html",
+    "package.json",
+    "railway.json",
+    "tsconfig.build.json",
+    "tsconfig.json",
+    "vite.config.ts",
+    "vite.lib.config.ts",
+    "yarn.lock"
+  ],
+  "release_count": null,
+  "status": "verified"
+}

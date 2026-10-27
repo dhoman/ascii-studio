@@ -1,0 +1,129 @@
+{
+  "url": "https://github.com/nielssp/classic-stylesheets",
+  "final_url": "https://github.com/nielssp/classic-stylesheets",
+  "http_status": 200,
+  "checked_at": "2026-10-23T17:46:56.403224+00:00",
+  "stars": 314,
+  "forks": 13,
+  "description": "Classic stylesheets for web applications.",
+  "homepage": "https://nielssp.github.io/classic-stylesheets/",
+  "topics": [
+    "cde",
+    "css",
+    "macos9",
+    "stylesheet",
+    "windows2000",
+    "windows31",
+    "windows95",
+    "windows98",
+    "windowsxp"
+  ],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2020-06-14T09:22:09.000Z",
+  "branch": "master",
+  "commit": "9ebd2d84664095345097a71e1a137f985d03d4f2",
+  "readme": "Classic stylesheets for web applications. 5 themes and a combined 205 skins from Common Desktop Environment, Windows 3.x, Windows 9x/Me/2000, Windows XP, and Mac OS 9. Demo: Windows 3.1 / Windows 3.11 Windows 95 Windows 98 Windows 2000 CDE (default) CDE (Solaris default) Windows XP Default blue (aka Luna) Windows XP Olive green Windows XP Silver Mac OS 9 Packages Minified CSS files and assets can be downloaded from the release page. Each theme package consists of the following: theme.css – The theme stylesheet theme.min.css – Minified version of the above file layout.css – Optional common layout utilities shared by all themes layout.min.css – Minified version of above file combined.min.css – Combination of layout.min.css and theme.min.css skins/*.css – Theme variations Install using NPM npm install --save classic-stylesheets When using a bundler like Vite you can include a theme and skin into your CSS or SCSS file like this: @import 'classic-stylesheets/layout.css'; @import 'classic-stylesheets/themes/win9x/theme.css'; @import 'classic-stylesheets/themes/win9x/skins/95.css'; Modules Most of the functionality works without JavaScript. Additional functionality can be enabled with the following minimal JavaScript modules found in the modules directory: tabs.js: Enables the use of tabs. lists.js: Enables the use of list boxes. wm.js: Experimental window manager, see this demo.",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://github.com/nielssp/classic-stylesheets#classic-stylesheets-for-web-applications"
+    },
+    {
+      "label": "Windows 3.1 / Windows 3.11",
+      "url": "https://nielssp.github.io/classic-stylesheets/?theme=win3x&skin=3.1"
+    },
+    {
+      "label": "Windows 95",
+      "url": "https://nielssp.github.io/classic-stylesheets/?theme=win9x&skin=95"
+    },
+    {
+      "label": "Windows 98",
+      "url": "https://nielssp.github.io/classic-stylesheets/?theme=win9x&skin=98"
+    },
+    {
+      "label": "Windows 2000",
+      "url": "https://nielssp.github.io/classic-stylesheets/?theme=win9x&skin=2000"
+    },
+    {
+      "label": "CDE (default)",
+      "url": "https://nielssp.github.io/classic-stylesheets/?theme=cde&skin=default"
+    },
+    {
+      "label": "CDE (Solaris default)",
+      "url": "https://nielssp.github.io/classic-stylesheets/?theme=cde&skin=crimson-4"
+    },
+    {
+      "label": "Windows XP Default blue (aka Luna)",
+      "url": "https://nielssp.github.io/classic-stylesheets/?theme=winxp&skin=default"
+    },
+    {
+      "label": "Windows XP Olive green",
+      "url": "https://nielssp.github.io/classic-stylesheets/?theme=winxp&skin=olive-green"
+    },
+    {
+      "label": "Windows XP Silver",
+      "url": "https://nielssp.github.io/classic-stylesheets/?theme=winxp&skin=silver"
+    },
+    {
+      "label": "Mac OS 9",
+      "url": "https://nielssp.github.io/classic-stylesheets/?theme=macos9&skin=default"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/nielssp/classic-stylesheets/blob/master/screenshots/classic-stylesheets-2.png"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/nielssp/classic-stylesheets#packages"
+    },
+    {
+      "label": "the release page",
+      "url": "https://github.com/nielssp/classic-stylesheets/releases/tag/v2.0"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/nielssp/classic-stylesheets#install-using-npm"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/nielssp/classic-stylesheets#modules"
+    },
+    {
+      "label": "tabs.js",
+      "url": "https://github.com/nielssp/classic-stylesheets/blob/master/modules/tabs.js"
+    },
+    {
+      "label": "lists.js",
+      "url": "https://github.com/nielssp/classic-stylesheets/blob/master/modules/lists.js"
+    },
+    {
+      "label": "wm.js",
+      "url": "https://github.com/nielssp/classic-stylesheets/blob/master/modules/wm.js"
+    },
+    {
+      "label": "this demo",
+      "url": "https://nielssp.github.io/classic-stylesheets/notepad.html"
+    }
+  ],
+  "root_files": [
+    "icons",
+    "modules",
+    "screenshots",
+    "themes",
+    "util",
+    ".gitignore",
+    "LICENSE",
+    "Makefile",
+    "README.md",
+    "demo.css",
+    "demo.js",
+    "empty-skin.css",
+    "index.html",
+    "layout.css",
+    "notepad.html",
+    "package.json"
+  ],
+  "release_count": 2,
+  "status": "verified"
+}

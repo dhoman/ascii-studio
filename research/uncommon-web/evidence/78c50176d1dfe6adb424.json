@@ -1,0 +1,123 @@
+{
+  "url": "https://github.com/lochie/torph",
+  "final_url": "https://github.com/lochie/torph",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:47:59.592007+00:00",
+  "stars": 1493,
+  "forks": 30,
+  "description": "Dependency-free animated text component.",
+  "homepage": "https://torph.lochie.me",
+  "topics": [],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2025-09-20T15:56:05.000Z",
+  "branch": "main",
+  "commit": "d79a5aa63226acf97d49c3e34fafb2e85c07b026",
+  "readme": "Torph Dependency-free animated text morphing component for React, Vue, Svelte, and vanilla JavaScript. Installation pnpm i torph Usage import { TextMorph } from \"torph/react\"; <TextMorph>Hello world</TextMorph>; Numbers Numeric words morph by place value: digits slide along the block axis and the symbols around them travel with the places they belong to. It is on by default, so any value containing a number already animates this way. import { TextMorph } from \"torph/react\"; // 1,204 → 1,318 rolls the hundreds and tens, leaves the thousands alone <TextMorph>{`$${total.toLocaleString(\"en\")}`}</TextMorph>; For a field somebody is typing in, pass the caret position so the update matches by position rather than by place value: <TextMorph cursorIndex={caret}>{value}</TextMorph>; Spring Animations Use physics-based spring easing by passing spring parameters to ease: import { TextMorph } from \"torph/react\"; <TextMorph ease={{ stiffness: 200, damping: 20 }}>Hello world</TextMorph>; See the package README for full API documentation. Contributing Install dependencies pnpm install:all Dev/Watch Library and Example pnpm dev Build Library pnpm build Found this useful? Follow me on Twitter. Other projects You might also like: number-flow - Animated number component by Maxwell Barvian. easing.dev - Easily create custom easing graphs. Acknowledgements Thanks to Alex for assistance with the site design. Thanks to Pugson for putting up with my bullshit. Thanks to Benji for coining the Torph name and outlining the method in Family Values.",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://github.com/lochie/torph#torph"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/lochie/torph#installation"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/lochie/torph#usage"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/lochie/torph#numbers"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/lochie/torph#spring-animations"
+    },
+    {
+      "label": "package README",
+      "url": "https://github.com/lochie/torph/blob/main/packages/torph/README.md"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/lochie/torph#contributing"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/lochie/torph#install-dependencies"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/lochie/torph#devwatch-library-and-example"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/lochie/torph#build-library"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/lochie/torph#found-this-useful"
+    },
+    {
+      "label": "Twitter",
+      "url": "https://twitter.com/lochieaxon"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/lochie/torph#other-projects"
+    },
+    {
+      "label": "number-flow",
+      "url": "https://number-flow.barvian.me/"
+    },
+    {
+      "label": "Maxwell Barvian",
+      "url": "https://x.com/mbarvian"
+    },
+    {
+      "label": "easing.dev",
+      "url": "https://easing.dev"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/lochie/torph#acknowledgements"
+    },
+    {
+      "label": "Alex",
+      "url": "https://x.com/alexvanderzon"
+    },
+    {
+      "label": "Pugson",
+      "url": "https://x.com/pugson"
+    },
+    {
+      "label": "Benji",
+      "url": "https://x.com/benjitaylor"
+    },
+    {
+      "label": "Family Values",
+      "url": "https://benji.org/family-values#:~:text=This%20effect%20is,0.5x"
+    }
+  ],
+  "root_files": [
+    ".changeset",
+    ".github",
+    "apps",
+    "packages",
+    "scripts",
+    "site",
+    ".gitattributes",
+    ".gitignore",
+    "AGENTS.md",
+    "CLAUDE.md",
+    "LICENSE",
+    "README.md",
+    "commitlint.config.cjs",
+    "package.json",
+    "pnpm-lock.yaml",
+    "pnpm-workspace.yaml"
+  ],
+  "release_count": 0,
+  "status": "verified"
+}

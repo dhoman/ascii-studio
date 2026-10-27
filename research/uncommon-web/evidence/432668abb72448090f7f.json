@@ -1,0 +1,120 @@
+{
+  "url": "https://github.com/neurofuzzy/three-plotter-renderer",
+  "final_url": "https://github.com/neurofuzzy/three-plotter-renderer",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:48:05.533629+00:00",
+  "stars": 49,
+  "forks": 10,
+  "description": "An SVG renderer with occlusion for plotters and SVG editors",
+  "homepage": "",
+  "topics": [
+    "plotter",
+    "plotter-art",
+    "threejs"
+  ],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2020-09-06T21:42:26.000Z",
+  "branch": "develop",
+  "commit": "9b746c0d20304fbc62dd0c43ef50f5d77ada4b50",
+  "readme": "three-plotter-renderer An SVG renderer for Three.js with hidden line removal - designed for pen plotters and laser cutters. Quick Start npm install github:neurofuzzy/three-plotter-renderer three import * as THREE from 'three'; import { PlotterRenderer } from 'three-plotter-renderer'; const glRenderer = new THREE.WebGLRenderer(); const plotterRenderer = new PlotterRenderer(); plotterRenderer.setSize(800, 600); plotterRenderer.setGLRenderer(glRenderer); // Render your scene to SVG (async to avoid blocking on complex models) plotterRenderer.clear(); await plotterRenderer.renderGPULayers(scene, camera); // Export const svg = plotterRenderer.domElement.outerHTML; Features 🎨 Hidden line removal - Edge-based occlusion testing produces clean, plottable output 📐 Multi-layer SVG output - Separate layers for silhouettes, edges, and hatching 🖊️ Perspective hatching - GPU-accelerated, depth-aware hatching that converges toward vanishing points 🔧 Configurable styling - Control stroke colors, widths, and hatch spacing per-axis 📦 Inkscape compatible - Exports with proper namespace and layer structure 📝 TypeScript support - Full type definitions included Installation npm install three-plotter-renderer three # or from GitHub: npm install github:neurofuzzy/three-plotter-renderer three Development git clone https://github.com/neurofuzzy/three-plotter-renderer.git cd three-plotter-renderer npm install npm run dev # Start dev server npm run build # Build for production npm run test # Run tests Open http://localhost:5173/ to see the primitives demo. How It Works The hidden line algorithm uses a multi-pass approach for efficient edge classification and occlusion testing: Edge Extraction - Extracts all edges from mesh geometry, tracking which faces share each edge and their normals Backface Filtering - Removes edges where both adjacent faces are facing away from the camera Profile Detection - Marks edges as silhouettes when they border a front-facing and back-facing face (guaranteed to be visible profile edges) Smooth Edge Filtering - Removes edges between faces with similar normals (within configurable threshold), eliminating internal tessellation edges Intersection Splitting - Uses spatial hashing to efficiently find edge intersections; subdivides edges at crossing points so each resulting segment has a single occlusion state Occlusion Testing - Ray-casts from the midpoint of each edge to determine visibility; edges are hidden if the midpoint depth doesn't match the parent face GPU Hatching - Renders normal buffer to extract regions by facing direction; generates perspective-aware hatch lines that converge toward vanishing points API PlotterRenderer The main renderer class that generates SVG output from Three.js scenes. const plotterRenderer = new PlotterRenderer(); // Required setup plotterRenderer.setSize(width, height); plotterRenderer.setGLRenderer(glRenderer); // WebGLRenderer instance // Layer toggles plotterRenderer.showSilhouettes = true; // Region fills based on normal plotterRenderer.showEdges = true; // Hidden line edges plotterRenderer.showHatches = true; // Perspective hatching // Edge styling plotterRenderer.edgeOptions = { stroke: 'white', strokeWidth: '1px' }; // Hatch styling plotterRenderer.hatchOptions = { stroke: 'black', strokeWidth: '1px', baseSpacing: 8, insetPixels: 2, // Erode hatch boundaries frameBudgetMs: 16, // Yield to browser every ~16ms (60fps) progressCallback: (p) => console.log(`${Math.round(p*100)}%`), axisSettings: { x: { rotation: 0, spacing: 8 }, y: { rotation: 0, spacing: 8 }, z: { rotation: 0, spacing: 8 } } }; // Render (async - returns Promise) plotterRenderer.clear(); await plotterRenderer.renderGPULayers(scene, camera); Additional Exports // Hidden line computation import { computeHiddenLinesMultiple } from 'three-plotter-renderer'; const result = computeHiddenLinesMultiple(meshes, camera, scene, options); // GPU silhouette extraction import { extractNormalRegions } from 'three-plotter-renderer'; const regions = extractNormalRegions(glRenderer, scene, camera, options); // Perspective hatching import { generatePerspectiveHatches } from 'three-plotter-renderer'; const hatches = generatePerspectiveHatches(region, camera, options); // Path optimization import { Optimize } from 'three-plotter-renderer'; const optimized = Optimize.optimize(segments); SVG Layers The exported SVG contains these layers (Inkscape-compatible): Layer Description silhouettes_layer Region fills based on normal direction shading_layer Perspective hatch lines edges_layer Visible edge lines (rendered on top) Model Guidelines For best results: ✅ Use flatShading: true on materials for distinct faces ✅ Use CSG (Constructive Solid Geometry) models ✅ Keep faces as square as possible ❌ Avoid intersecting geometry ❌ Avoid extremely stretched faces Contributing Contributions are welcome! Please see CONTRIBUTING.md for guidelines. License MIT © Geoff Gaudreault",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://github.com/neurofuzzy/three-plotter-renderer#three-plotter-renderer"
+    },
+    {
+      "label": "",
+      "url": "https://opensource.org/licenses/MIT"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/neurofuzzy/three-plotter-renderer/blob/develop/public/hero.png"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/neurofuzzy/three-plotter-renderer/blob/develop/examples/output/complex.svg"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/neurofuzzy/three-plotter-renderer#quick-start"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/neurofuzzy/three-plotter-renderer#features"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/neurofuzzy/three-plotter-renderer#installation"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/neurofuzzy/three-plotter-renderer#development"
+    },
+    {
+      "label": "http://localhost:5173/",
+      "url": "http://localhost:5173/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/neurofuzzy/three-plotter-renderer#how-it-works"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/neurofuzzy/three-plotter-renderer#api"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/neurofuzzy/three-plotter-renderer#plotterrenderer"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/neurofuzzy/three-plotter-renderer#additional-exports"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/neurofuzzy/three-plotter-renderer#svg-layers"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/neurofuzzy/three-plotter-renderer#model-guidelines"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/neurofuzzy/three-plotter-renderer#contributing"
+    },
+    {
+      "label": "CONTRIBUTING.md",
+      "url": "https://github.com/neurofuzzy/three-plotter-renderer/blob/develop/CONTRIBUTING.md"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/neurofuzzy/three-plotter-renderer#license"
+    },
+    {
+      "label": "Geoff Gaudreault",
+      "url": "https://github.com/neurofuzzy"
+    }
+  ],
+  "root_files": [
+    ".github/workflows",
+    "dist",
+    "examples",
+    "public",
+    "src",
+    "tests",
+    ".gitignore",
+    ".nvmrc",
+    "CHANGELOG.md",
+    "CONTRIBUTING.md",
+    "LICENSE",
+    "README.md",
+    "index.html",
+    "package-lock.json",
+    "package.json",
+    "vite.config.js",
+    "vitest.config.js"
+  ],
+  "release_count": 3,
+  "status": "verified"
+}

@@ -1,0 +1,238 @@
+{
+  "url": "https://github.com/kikkupico/ambientcss",
+  "final_url": "https://github.com/kikkupico/ambientcss",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:47:57.345641+00:00",
+  "stars": 586,
+  "forks": 25,
+  "description": "A physics-based lighting system for CSS. Define a light source, and every shadow, highlight and surface gradient follows from it — calibrated against Blender raytraces.",
+  "homepage": "https://ambientcss.vercel.app",
+  "topics": [
+    "blender",
+    "box-shadow",
+    "css",
+    "css-framework",
+    "design-system",
+    "react",
+    "skeuomorphism",
+    "ui-components"
+  ],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2022-01-01T13:21:46.000Z",
+  "branch": "master",
+  "commit": "f829df728ca34a1addecb475ca62b6493733b898",
+  "readme": "Ambient CSS A physics-based lighting system for CSS. Define a light source, and every shadow, highlight, and surface gradient follows from it — no more hand-tuned shadow-sm / shadow-md / shadow-lg. Live Demo • Documentation • npm (@ambientcss/css) • npm (@ambientcss/components) The same device, twice: raytraced in Blender (ambient3d) on one side of the wipe, live DOM under @ambientcss/css on the other — same geometry, same light vector, box-shadow instead of Cycles. The faceplate is a plain .ambient .amb-surface .amb-chamfer-2 box, and every control sits on the spacing scale — tight 12 / normal 20 / loose 32 mm, including the panel's own edge margin. Built by tools/hero-gif; the full clip is ambientcss.mp4. Why? Traditional CSS shadow scales are decorative — a card with shadow-lg next to a button with shadow-sm doesn't imply a shared physical scene. They're just two unrelated blur values coexisting on the same page. Ambient CSS starts from physical lighting principles. You describe a lighting environment — light direction, key/fill intensity, hue, and elevation — and all shadows, edge highlights, and surface gradients follow deterministically. Change the light vector on a container, and every child element updates consistently. How It Works The engine models UI surfaces as physical materials under a two-light system (key light + fill light). Every element reads shared CSS custom properties and generates a 5-layer composite box-shadow: Drop shadow — directional umbra & penumbra scaled by physical elevation Fillet highlight — specular inner edge highlight facing the light source Fillet shadow — soft inner shadow on the opposite edge Chamfer highlight — wide, beveled inner glow along lit facets Chamfer shadow — dark bevel shadow on shadowed edges Each element combines five core material concerns: Structure ─── ambient (enables lighting calculations) Surface ───── flat / concave / convex (background lighting gradient) Edge ──────── chamfer / fillet / groove (beveled & rounded edge cuts) Material ──── matte / shiny / glass (specular reflection & translucency) Depth ──────── elevation 0–3 (drop shadow height) Lighting behavior is physically grounded and calibrated against raytraced 3D reference models built with Blender (ambient3d). Quick Start Pure CSS npm install @ambientcss/css <link rel=\"stylesheet\" href=\"node_modules/@ambientcss/css/dist/ambient.css\" /> <!-- Set up light environment on any parent --> <div class=\"amb-light-tl\"> <button class=\"ambient amb-surface amb-chamfer amb-elevation-1 amb-rounded\"> Click me </button> </div> React Components npm install @ambientcss/components @ambientcss/css import { AmbientProvider, AmbientButton, AmbientKnob, AmbientPanel } from \"@ambientcss/components\"; import \"@ambientcss/css/ambient.css\"; import \"@ambientcss/components/styles.css\"; function App() { return ( <AmbientProvider theme={{ lightX: -1, lightY: -1, keyLight: 0.9, fillLight: 0.7 }}> <AmbientPanel> <AmbientButton>Press</AmbientButton> <AmbientKnob label=\"Gain\" defaultValue={50} /> </AmbientPanel> </AmbientProvider> ); } Each component is a preset: a mechanism that owns the kinematics, the value and the ARIA, paired with a set of parts that own the paint. Reach past the preset and the mechanism will wear whatever you draw: <AmbientRotary value={gain} onChange={setGain} travel={240} input=\"drag\" parts={{ base: <KnobBody flush />, actuator: <MyPointer /> }} /> The control publishes --ambx-percent, --ambx-angle and --ambx-size on its own root, so a part can be pure CSS. See Composing controls. Monorepo Packages & Modules Package Path Description @ambientcss/css packages/ambient-css Pure CSS lighting framework — zero dependencies, works with any framework or plain HTML @ambientcss/components packages/ambient-components Tactile React component library — composable control mechanisms plus grounded hardware presets ambient3d ambient3d Parametric Blender 3D component kit & ground-truth raytracing calibration engine docs apps/docs Interactive Docusaurus documentation website & live code playground demo apps/demo Hardware synthesizer & audio gear live demo application CSS API Overview Light Direction & Environment Set on any ancestor element, inherited by all descendants: .amb-light-tl .amb-light-tr .amb-light-bl .amb-light-br .amb-light-top .amb-light-bottom .amb-light-left .amb-light-right Custom CSS variables for granular light manipulation: .my-scene { --amb-light-x: -0.7; /* Horizontal (-1 left, 1 right) */ --amb-light-y: -0.8; /* Vertical (-1 top, 1 bottom) */ --amb-key-light-intensity: 0.9; /* Primary directional light (0..1) */ --amb-fill-light-intensity: 0.6; /* Ambient fill light (0..1) */ --amb-light-hue: 234; /* Light hue (0..360) */ --amb-light-saturation: 15%; /* Light saturation */ } Surfaces & Gradients .amb-surface .amb-surface-concave .amb-surface-concave-h .amb-surface-convex A surface is its material under the scene's light, not a fixed colour, so one class covers every hue and shade: .my-panel { --amb-albedo: crimson; /* the colour under full illumination */ --amb-shade: 1; /* multiplier on that reflectance */ } --amb-albedo takes any CSS colour and both variables inherit, so a panel colours everything inside it — grooves, dishes and the components package's knobs and keys all read the same lit tone. Dim the key light and a crimson panel darkens like crimson; give the lamp a hue and it takes the cast. The former .amb-surface-darker, -darkest, -lighter and -lightest classes were five fixed albedos of this one law; the equivalent shades are 0.38, 0.07, 1.11 and 1.16. Edge Cuts & Treatments .amb-chamfer .amb-chamfer-2 .amb-fillet .amb-fillet-2 .amb-groove Materials & Finishes .amb-mat-matte .amb-mat-shiny .amb-mat-glass .amb-mat-brushed .amb-mat-brushed-round .amb-mat-blasted .amb-mat-brushed, .amb-mat-brushed-round and .amb-mat-blasted carry a fitted micro-relief rather than a gloss: the tile holds a raw height field and its inverse, and only the offset between them tracks the light, so the bumps stay put and the shading crosses over them. Scale it with --amb-grain-amount (default 1). .amb-mat-brushed-round is the same aluminium spun about the element's centre instead of run across it — the lathe finish on a knob cap — so put it on round faces. Its grain is a conic gradient rather than a repeating tile, and the two bright arcs that swing with the lamp fall out of the same offset the linear grain uses, because a fixed offset is tangent to a circular groove in only two places. Both brushed finishes also carry a broad specular sheen, painted on the host's own background like .amb-mat-shiny's. It is anisotropic in the grain's own direction: a band across the grain on the linear metal (so --amb-light-y moves it and --amb-light-x does not), and a pair of opposed lobes on the lamp's axis, plus a converged hotspot, on the spun one. Physical Depth & Elevation Elevation (drop shadow scale): .amb-elevation-0 .amb-elevation-1 .amb-elevation-2 .amb-elevation-3 Material Thickness: .amb-thickness-0 .amb-thickness-1 .amb-thickness-2 Emissive Lights & Glow Emissive Indicators: .amb-emit-red .amb-emit-green .amb-emit-amber .amb-emit-cyan .amb-emit-blue .amb-emit-white Bloom / Glow Effect: .amb-glow Shape Utilities .amb-rounded .amb-rounded-md .amb-rounded-lg .amb-rounded-xl .amb-rounded-full Starter Examples Check out the examples/ directory for ready-to-run starters: CSS & HTML: css-basic, css-purecss, css-tailwind React: react-ambientcss, react-basic, react-bootstrap, react-tailwind Development & Contributing # Clone repository git clone https://github.com/kikkupico/ambientcss.git cd ambientcss # Install workspace dependencies pnpm install # Build all packages pnpm build # Typecheck workspace pnpm typecheck # Start demo app pnpm --filter demo dev # Start documentation site pnpm docs:dev # Run release checks pnpm release:check See RELEASING.md for publishing workflows and changeset instructions. License MIT",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://github.com/kikkupico/ambientcss#ambient-css"
+    },
+    {
+      "label": "Live Demo",
+      "url": "https://ambientcss.com/"
+    },
+    {
+      "label": "Documentation",
+      "url": "https://kikkupico.github.io/ambientcss/"
+    },
+    {
+      "label": "npm (@ambientcss/css)",
+      "url": "https://www.npmjs.com/package/@ambientcss/css"
+    },
+    {
+      "label": "npm (@ambientcss/components)",
+      "url": "https://www.npmjs.com/package/@ambientcss/components"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/kikkupico/ambientcss/blob/master/ambientcss.gif"
+    },
+    {
+      "label": "ambient3d",
+      "url": "https://github.com/kikkupico/ambientcss/blob/master/ambient3d"
+    },
+    {
+      "label": "spacing scale",
+      "url": "https://kikkupico.github.io/ambientcss/ambient-components/design-tokens"
+    },
+    {
+      "label": "tools/hero-gif",
+      "url": "https://github.com/kikkupico/ambientcss/blob/master/tools/hero-gif"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/kikkupico/ambientcss#why"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/kikkupico/ambientcss#how-it-works"
+    },
+    {
+      "label": "ambient3d",
+      "url": "https://github.com/kikkupico/ambientcss/blob/master/ambient3d"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/kikkupico/ambientcss#quick-start"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/kikkupico/ambientcss#pure-css"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/kikkupico/ambientcss#react-components"
+    },
+    {
+      "label": "Composing controls",
+      "url": "https://kikkupico.github.io/ambientcss/ambient-components/composing"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/kikkupico/ambientcss#monorepo-packages--modules"
+    },
+    {
+      "label": "@ambientcss/css",
+      "url": "https://github.com/kikkupico/ambientcss/blob/master/packages/ambient-css"
+    },
+    {
+      "label": "packages/ambient-css",
+      "url": "https://github.com/kikkupico/ambientcss/blob/master/packages/ambient-css"
+    },
+    {
+      "label": "@ambientcss/components",
+      "url": "https://github.com/kikkupico/ambientcss/blob/master/packages/ambient-components"
+    },
+    {
+      "label": "packages/ambient-components",
+      "url": "https://github.com/kikkupico/ambientcss/blob/master/packages/ambient-components"
+    },
+    {
+      "label": "ambient3d",
+      "url": "https://github.com/kikkupico/ambientcss/blob/master/ambient3d"
+    },
+    {
+      "label": "ambient3d",
+      "url": "https://github.com/kikkupico/ambientcss/blob/master/ambient3d"
+    },
+    {
+      "label": "apps/docs",
+      "url": "https://github.com/kikkupico/ambientcss/blob/master/apps/docs"
+    },
+    {
+      "label": "apps/demo",
+      "url": "https://github.com/kikkupico/ambientcss/blob/master/apps/demo"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/kikkupico/ambientcss#css-api-overview"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/kikkupico/ambientcss#light-direction--environment"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/kikkupico/ambientcss#surfaces--gradients"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/kikkupico/ambientcss#edge-cuts--treatments"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/kikkupico/ambientcss#materials--finishes"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/kikkupico/ambientcss#physical-depth--elevation"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/kikkupico/ambientcss#emissive-lights--glow"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/kikkupico/ambientcss#shape-utilities"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/kikkupico/ambientcss#starter-examples"
+    },
+    {
+      "label": "examples/",
+      "url": "https://github.com/kikkupico/ambientcss/blob/master/examples"
+    },
+    {
+      "label": "css-basic",
+      "url": "https://github.com/kikkupico/ambientcss/blob/master/examples/css-basic"
+    },
+    {
+      "label": "css-purecss",
+      "url": "https://github.com/kikkupico/ambientcss/blob/master/examples/css-purecss"
+    },
+    {
+      "label": "css-tailwind",
+      "url": "https://github.com/kikkupico/ambientcss/blob/master/examples/css-tailwind"
+    },
+    {
+      "label": "react-ambientcss",
+      "url": "https://github.com/kikkupico/ambientcss/blob/master/examples/react-ambientcss"
+    },
+    {
+      "label": "react-basic",
+      "url": "https://github.com/kikkupico/ambientcss/blob/master/examples/react-basic"
+    },
+    {
+      "label": "react-bootstrap",
+      "url": "https://github.com/kikkupico/ambientcss/blob/master/examples/react-bootstrap"
+    },
+    {
+      "label": "react-tailwind",
+      "url": "https://github.com/kikkupico/ambientcss/blob/master/examples/react-tailwind"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/kikkupico/ambientcss#development--contributing"
+    },
+    {
+      "label": "RELEASING.md",
+      "url": "https://github.com/kikkupico/ambientcss/blob/master/RELEASING.md"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/kikkupico/ambientcss#license"
+    },
+    {
+      "label": "MIT",
+      "url": "https://github.com/kikkupico/ambientcss/blob/master/LICENSE"
+    }
+  ],
+  "root_files": [
+    ".changeset",
+    ".github/workflows",
+    ".plans",
+    "ambient3d",
+    "apps",
+    "examples",
+    "packages",
+    "scripts",
+    "tools",
+    "vercel-redirect",
+    ".gitignore",
+    "CONTRIBUTING.md",
+    "LICENSE",
+    "README.md",
+    "RELEASING.md",
+    "ambientcss.gif",
+    "ambientcss.mp4",
+    "package.json",
+    "pnpm-lock.yaml",
+    "pnpm-workspace.yaml",
+    "tsconfig.base.json",
+    "vercel.json"
+  ],
+  "release_count": 0,
+  "status": "verified"
+}

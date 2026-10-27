@@ -1,0 +1,1227 @@
+{
+  "url": "https://github.com/pmndrs/drei",
+  "final_url": "https://github.com/pmndrs/drei",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:48:11.450631+00:00",
+  "stars": 10045,
+  "forks": 859,
+  "description": "🥉 useful helpers for react-three-fiber",
+  "homepage": "https://docs.pmnd.rs/drei",
+  "topics": [
+    "helpers",
+    "hooks",
+    "react",
+    "react-three-fiber",
+    "threejs"
+  ],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2020-04-26T19:38:41.000Z",
+  "branch": "master",
+  "commit": "bf6f4addf47467d3885de272d94ca5127f6ef68f",
+  "readme": "A growing collection of useful helpers and fully functional, ready-made abstractions for @react-three/fiber. If you make a component that is generic enough to be useful to others, think about CONTRIBUTING! npm install @react-three/drei Importantthis package is using the stand-alone three-stdlib instead of three/examples/jsm. Basic usage import { PerspectiveCamera, PositionalAudio, ... } from '@react-three/drei' React-native import { PerspectiveCamera, PositionalAudio, ... } from '@react-three/drei/native' The native route of the library does not export Html or Loader. The default export of the library is web which does export Html and Loader. Documentation https://pmndrs.github.io/drei Old doc [!WARNING] Below is an archive of the anchors links with their new respective locations to the documentation website. Do not update the links below, they are for reference only. Cameras PerspectiveCamera Documentation has moved here OrthographicCamera Documentation has moved here CubeCamera Documentation has moved here Controls CameraControls Documentation has moved here ScrollControls Documentation has moved here PresentationControls Documentation has moved here KeyboardControls Documentation has moved here FaceControls Documentation has moved here MotionPathControls Documentation has moved here Gizmos GizmoHelper Documentation has moved here PivotControls Documentation has moved here DragControls Documentation has moved here TransformControls Documentation has moved here Grid Documentation has moved here Helper / useHelper Documentation has moved here Shapes Plane, Box, Sphere, Circle, Cone, Cylinder, Tube, Torus, TorusKnot, Ring, Tetrahedron, Polyhedron, Icosahedron, Octahedron, Dodecahedron, Extrude, Lathe, Shape Documentation has moved here RoundedBox Documentation has moved here ScreenQuad Documentation has moved here Line Documentation has moved here QuadraticBezierLine Documentation has moved here CubicBezierLine Documentation has moved here CatmullRomLine Documentation has moved here Facemesh Documentation has moved here Abstractions Image Documentation has moved here Text Documentation has moved here Text3D Documentation has moved here Effects Documentation has moved here PositionalAudio Documentation has moved here Billboard Documentation has moved here ScreenSpace Documentation has moved here ScreenSizer Documentation has moved here GradientTexture Documentation has moved here Edges Documentation has moved here Outlines Documentation has moved here Trail Documentation has moved here Sampler Documentation has moved here ComputedAttribute Documentation has moved here Clone Documentation has moved here useAnimations Documentation has moved here MarchingCubes Documentation has moved here Decal Documentation has moved here Svg Documentation has moved here AsciiRenderer Documentation has moved here Splat Documentation has moved here Shaders MeshReflectorMaterial Documentation has moved here MeshWobbleMaterial Documentation has moved here MeshDistortMaterial Documentation has moved here MeshRefractionMaterial Documentation has moved here MeshTransmissionMaterial Documentation has moved here MeshDiscardMaterial Documentation has moved here PointMaterial Documentation has moved here SoftShadows Documentation has moved here shaderMaterial Documentation has moved here Modifiers CurveModifier Documentation has moved here Misc useContextBridge Documentation has moved here Example Documentation has moved here Html Documentation has moved here CycleRaycast Documentation has moved here Select Documentation has moved here Sprite Animator Documentation has moved here Stats Documentation has moved here StatsGl Documentation has moved here Wireframe Documentation has moved here useDepthBuffer Documentation has moved here Fbo / useFBO Documentation has moved here useCamera Documentation has moved here CubeCamera / useCubeCamera Documentation has moved here DetectGPU / useDetectGPU Documentation has moved here useAspect Documentation has moved here useCursor Documentation has moved here useIntersect Documentation has moved here useBoxProjectedEnv Documentation has moved here Trail / useTrail Documentation has moved here useSurfaceSampler Documentation has moved here FaceLandmarker Documentation has moved here Loading Loader Documentation has moved here Progress / useProgress Documentation has moved here Gltf / useGLTF Documentation has moved here Fbx / useFBX Documentation has moved here Texture / useTexture Documentation has moved here Ktx2 / useKTX2 Documentation has moved here CubeTexture / useCubeTexture Documentation has moved here VideoTexture / useVideoTexture Documentation has moved here TrailTexture / useTrailTexture Documentation has moved here useFont Documentation has moved here useSpriteLoader Documentation has moved here Performance Instances Documentation has moved here Merged Documentation has moved here Points Documentation has moved here Segments Documentation has moved here Detailed Documentation has moved here Preload Documentation has moved here BakeShadows Documentation has moved here meshBounds Documentation has moved here AdaptiveDpr Documentation has moved here AdaptiveEvents Documentation has moved here Bvh Documentation has moved here PerformanceMonitor Documentation has moved here Portals Hud Documentation has moved here View Documentation has moved here RenderTexture Documentation has moved here RenderCubeTexture Documentation has moved here Fisheye Documentation has moved here Mask Documentation has moved here MeshPortalMaterial Documentation has moved here Staging Center Documentation has moved here Resize Documentation has moved here BBAnchor Documentation has moved here Bounds Documentation has moved here CameraShake Documentation has moved here Float Documentation has moved here Stage Documentation has moved here Backdrop Documentation has moved here Shadow Documentation has moved here Caustics Documentation has moved here ContactShadows Documentation has moved here RandomizedLight Documentation has moved here AccumulativeShadows Documentation has moved here SpotLight Documentation has moved here SpotLightShadow Documentation has moved here Environment Documentation has moved here Lightformer Documentation has moved here Sky Documentation has moved here Stars Documentation has moved here Sparkles Documentation has moved here Cloud Documentation has moved here useEnvironment Documentation has moved here MatcapTexture / useMatcapTexture Documentation has moved here NormalTexture / useNormalTexture Documentation has moved here ShadowAlpha Documentation has moved here Dev INSTALL Pre-requisites: Install nvm, then: $ nvm install $ nvm use $ node -v # make sure your version satisfies package.json#engines.node nb: if you want this node version to be your default nvm's one: nvm alias default node Install yarn, with: $ corepack enable $ corepack prepare --activate # it reads \"packageManager\" $ yarn -v # make sure your version satisfies package.json#engines.yarn $ yarn install Test Local Pre-requisites: $ npx playwright install To run visual tests locally: $ yarn build $ yarn test To update a snapshot: $ PLAYWRIGHT_UPDATE_SNAPSHOTS=1 yarn test Docker ImportantSnapshots are system-dependent, so to run playwright in the same environment as the CI: $ docker run --init --rm \\ -v $(pwd):/app -w /app \\ ghcr.io/pmndrs/playwright:drei \\ sh -c \"corepack enable && yarn install && yarn build && yarn test\" To update a snapshot: $ docker run --init --rm \\ -v $(pwd):/app -w /app \\ -e PLAYWRIGHT_UPDATE_SNAPSHOTS=1 \\ ghcr.io/pmndrs/playwright:drei \\ sh -c \"corepack enable && yarn install && yarn build && yarn test\"",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://drei.pmnd.rs/"
+    },
+    {
+      "label": "",
+      "url": "https://www.chromatic.com/library?appId=64a019f36ecd3751d0ada612&branch=master"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@react-three/drei"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@react-three/drei"
+    },
+    {
+      "label": "",
+      "url": "https://discord.com/channels/740090768164651008/741751532592038022"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/codespaces/new?template_repository=pmndrs%2Fdrei"
+    },
+    {
+      "label": "",
+      "url": "https://codesandbox.io/s/bfplr"
+    },
+    {
+      "label": "@react-three/fiber",
+      "url": "https://github.com/pmndrs/react-three-fiber"
+    },
+    {
+      "label": "CONTRIBUTING",
+      "url": "https://github.com/pmndrs/drei/blob/master/CONTRIBUTING.md"
+    },
+    {
+      "label": "three-stdlib",
+      "url": "https://github.com/pmndrs/three-stdlib"
+    },
+    {
+      "label": "three/examples/jsm",
+      "url": "https://github.com/mrdoob/three.js/tree/master/examples/jsm"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/drei#basic-usage"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/drei#react-native"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/drei#documentation"
+    },
+    {
+      "label": "https://pmndrs.github.io/drei",
+      "url": "https://pmndrs.github.io/drei"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/drei#cameras"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/drei#perspectivecamera"
+    },
+    {
+      "label": "Documentation has moved here",
+      "url": "https://pmndrs.github.io/drei/cameras/perspective-camera"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/drei#orthographiccamera"
+    },
+    {
+      "label": "Documentation has moved here",
+      "url": "https://pmndrs.github.io/drei/cameras/orthographic-camera"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/drei#cubecamera"
+    },
+    {
+      "label": "Documentation has moved here",
+      "url": "https://pmndrs.github.io/drei/cameras/cube-camera"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/drei#controls"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/drei#cameracontrols"
+    },
+    {
+      "label": "Documentation has moved here",
+      "url": "https://pmndrs.github.io/drei/controls/camera-controls"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/drei#scrollcontrols"
+    },
+    {
+      "label": "Documentation has moved here",
+      "url": "https://pmndrs.github.io/drei/controls/scroll-controls"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/drei#presentationcontrols"
+    },
+    {
+      "label": "Documentation has moved here",
+      "url": "https://pmndrs.github.io/drei/controls/presentation-controls"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/drei#keyboardcontrols"
+    },
+    {
+      "label": "Documentation has moved here",
+      "url": "https://pmndrs.github.io/drei/controls/keyboard-controls"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/drei#facecontrols"
+    },
+    {
+      "label": "Documentation has moved here",
+      "url": "https://pmndrs.github.io/drei/controls/face-controls"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/drei#motionpathcontrols"
+    },
+    {
+      "label": "Documentation has moved here",
+      "url": "https://pmndrs.github.io/drei/controls/motion-path-controls"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/drei#gizmos"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/drei#gizmohelper"
+    },
+    {
+      "label": "Documentation has moved here",
+      "url": "https://pmndrs.github.io/drei/gizmos/gizmo-helper"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/drei#pivotcontrols"
+    },
+    {
+      "label": "Documentation has moved here",
+      "url": "https://pmndrs.github.io/drei/gizmos/pivot-controls"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/drei#dragcontrols"
+    },
+    {
+      "label": "Documentation has moved here",
+      "url": "https://pmndrs.github.io/drei/gizmos/drag-controls"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/drei#transformcontrols"
+    },
+    {
+      "label": "Documentation has moved here",
+      "url": "https://pmndrs.github.io/drei/gizmos/transform-controls"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/drei#grid"
+    },
+    {
+      "label": "Documentation has moved here",
+      "url": "https://pmndrs.github.io/drei/gizmos/grid"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/drei#helper--usehelper"
+    },
+    {
+      "label": "Documentation has moved here",
+      "url": "https://pmndrs.github.io/drei/gizmos/helper-use-helper"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/drei#shapes"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/drei#plane-box-sphere-circle-cone-cylinder-tube-torus-torusknot-ring-tetrahedron-polyhedron-icosahedron-octahedron-dodecahedron-extrude-lathe-shape"
+    },
+    {
+      "label": "Documentation has moved here",
+      "url": "https://pmndrs.github.io/drei/shapes/mesh"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/drei#roundedbox"
+    },
+    {
+      "label": "Documentation has moved here",
+      "url": "https://pmndrs.github.io/drei/shapes/rounded-box"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/drei#screenquad"
+    },
+    {
+      "label": "Documentation has moved here",
+      "url": "https://pmndrs.github.io/drei/shapes/screen-quad"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/drei#line"
+    },
+    {
+      "label": "Documentation has moved here",
+      "url": "https://pmndrs.github.io/drei/shapes/line"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/drei#quadraticbezierline"
+    },
+    {
+      "label": "Documentation has moved here",
+      "url": "https://pmndrs.github.io/drei/shapes/quadratic-bezier-line"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/drei#cubicbezierline"
+    },
+    {
+      "label": "Documentation has moved here",
+      "url": "https://pmndrs.github.io/drei/shapes/cubic-bezier-line"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/drei#catmullromline"
+    },
+    {
+      "label": "Documentation has moved here",
+      "url": "https://pmndrs.github.io/drei/shapes/catmull-rom-line"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/drei#facemesh"
+    },
+    {
+      "label": "Documentation has moved here",
+      "url": "https://pmndrs.github.io/drei/shapes/facemesh"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/drei#abstractions"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/drei#image"
+    },
+    {
+      "label": "Documentation has moved here",
+      "url": "https://pmndrs.github.io/drei/abstractions/image"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/drei#text"
+    },
+    {
+      "label": "Documentation has moved here",
+      "url": "https://pmndrs.github.io/drei/abstractions/text"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/drei#text3d"
+    },
+    {
+      "label": "Documentation has moved here",
+      "url": "https://pmndrs.github.io/drei/abstractions/text3d"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/drei#effects"
+    },
+    {
+      "label": "Documentation has moved here",
+      "url": "https://pmndrs.github.io/drei/abstractions/effects"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/drei#positionalaudio"
+    },
+    {
+      "label": "Documentation has moved here",
+      "url": "https://pmndrs.github.io/drei/abstractions/positional-audio"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/drei#billboard"
+    },
+    {
+      "label": "Documentation has moved here",
+      "url": "https://pmndrs.github.io/drei/abstractions/billboard"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/drei#screenspace"
+    },
+    {
+      "label": "Documentation has moved here",
+      "url": "https://pmndrs.github.io/drei/abstractions/screen-space"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/drei#screensizer"
+    },
+    {
+      "label": "Documentation has moved here",
+      "url": "https://pmndrs.github.io/drei/abstractions/screen-sizer"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/drei#gradienttexture"
+    },
+    {
+      "label": "Documentation has moved here",
+      "url": "https://pmndrs.github.io/drei/abstractions/gradient-texture"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/drei#edges"
+    },
+    {
+      "label": "Documentation has moved here",
+      "url": "https://pmndrs.github.io/drei/abstractions/edges"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/drei#outlines"
+    },
+    {
+      "label": "Documentation has moved here",
+      "url": "https://pmndrs.github.io/drei/abstractions/outlines"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/drei#trail"
+    },
+    {
+      "label": "Documentation has moved here",
+      "url": "https://pmndrs.github.io/drei/abstractions/trail"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/drei#sampler"
+    },
+    {
+      "label": "Documentation has moved here",
+      "url": "https://pmndrs.github.io/drei/abstractions/sampler"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/drei#computedattribute"
+    },
+    {
+      "label": "Documentation has moved here",
+      "url": "https://pmndrs.github.io/drei/abstractions/computed-attribute"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/drei#clone"
+    },
+    {
+      "label": "Documentation has moved here",
+      "url": "https://pmndrs.github.io/drei/abstractions/clone"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/drei#useanimations"
+    },
+    {
+      "label": "Documentation has moved here",
+      "url": "https://pmndrs.github.io/drei/abstractions/use-animations"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/drei#marchingcubes"
+    },
+    {
+      "label": "Documentation has moved here",
+      "url": "https://pmndrs.github.io/drei/abstractions/marching-cubes"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/drei#decal"
+    },
+    {
+      "label": "Documentation has moved here",
+      "url": "https://pmndrs.github.io/drei/abstractions/decal"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/drei#svg"
+    },
+    {
+      "label": "Documentation has moved here",
+      "url": "https://pmndrs.github.io/drei/abstractions/svg"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/drei#asciirenderer"
+    },
+    {
+      "label": "Documentation has moved here",
+      "url": "https://pmndrs.github.io/drei/abstractions/ascii-renderer"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/drei#splat"
+    },
+    {
+      "label": "Documentation has moved here",
+      "url": "https://pmndrs.github.io/drei/abstractions/splat"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/drei#shaders"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/drei#meshreflectormaterial"
+    },
+    {
+      "label": "Documentation has moved here",
+      "url": "https://pmndrs.github.io/drei/shaders/mesh-reflector-material"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/drei#meshwobblematerial"
+    },
+    {
+      "label": "Documentation has moved here",
+      "url": "https://pmndrs.github.io/drei/shaders/mesh-wobble-material"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/drei#meshdistortmaterial"
+    },
+    {
+      "label": "Documentation has moved here",
+      "url": "https://pmndrs.github.io/drei/shaders/mesh-distort-material"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/drei#meshrefractionmaterial"
+    },
+    {
+      "label": "Documentation has moved here",
+      "url": "https://pmndrs.github.io/drei/shaders/mesh-refraction-material"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/drei#meshtransmissionmaterial"
+    },
+    {
+      "label": "Documentation has moved here",
+      "url": "https://pmndrs.github.io/drei/shaders/mesh-transmission-material"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/drei#meshdiscardmaterial"
+    },
+    {
+      "label": "Documentation has moved here",
+      "url": "https://pmndrs.github.io/drei/shaders/mesh-discard-material"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/drei#pointmaterial"
+    },
+    {
+      "label": "Documentation has moved here",
+      "url": "https://pmndrs.github.io/drei/shaders/point-material"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/drei#softshadows"
+    },
+    {
+      "label": "Documentation has moved here",
+      "url": "https://pmndrs.github.io/drei/shaders/soft-shadows"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/drei#shadermaterial"
+    },
+    {
+      "label": "Documentation has moved here",
+      "url": "https://pmndrs.github.io/drei/shaders/shader-material"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/drei#modifiers"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/drei#curvemodifier"
+    },
+    {
+      "label": "Documentation has moved here",
+      "url": "https://pmndrs.github.io/drei/modifiers/curve-modifier"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/drei#misc"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/drei#usecontextbridge"
+    },
+    {
+      "label": "Documentation has moved here",
+      "url": "https://pmndrs.github.io/drei/misc/use-context-bridge"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/drei#example"
+    },
+    {
+      "label": "Documentation has moved here",
+      "url": "https://pmndrs.github.io/drei/misc/example"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/drei#html"
+    },
+    {
+      "label": "Documentation has moved here",
+      "url": "https://pmndrs.github.io/drei/misc/html"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/drei#cycleraycast"
+    },
+    {
+      "label": "Documentation has moved here",
+      "url": "https://pmndrs.github.io/drei/misc/cycle-raycast"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/drei#select"
+    },
+    {
+      "label": "Documentation has moved here",
+      "url": "https://pmndrs.github.io/drei/misc/select"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/drei#sprite-animator"
+    },
+    {
+      "label": "Documentation has moved here",
+      "url": "https://pmndrs.github.io/drei/misc/sprite-animator"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/drei#stats"
+    },
+    {
+      "label": "Documentation has moved here",
+      "url": "https://pmndrs.github.io/drei/misc/stats"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/drei#statsgl"
+    },
+    {
+      "label": "Documentation has moved here",
+      "url": "https://pmndrs.github.io/drei/misc/stats-gl"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/drei#wireframe"
+    },
+    {
+      "label": "Documentation has moved here",
+      "url": "https://pmndrs.github.io/drei/misc/wireframe"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/drei#usedepthbuffer"
+    },
+    {
+      "label": "Documentation has moved here",
+      "url": "https://pmndrs.github.io/drei/misc/use-depth-buffer"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/drei#fbo--usefbo"
+    },
+    {
+      "label": "Documentation has moved here",
+      "url": "https://pmndrs.github.io/drei/misc/fbo-use-fbo"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/drei#usecamera"
+    },
+    {
+      "label": "Documentation has moved here",
+      "url": "https://pmndrs.github.io/drei/misc/use-camera"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/drei#cubecamera--usecubecamera"
+    },
+    {
+      "label": "Documentation has moved here",
+      "url": "https://pmndrs.github.io/drei/misc/cube-camera-use-cube-camera"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/drei#detectgpu--usedetectgpu"
+    },
+    {
+      "label": "Documentation has moved here",
+      "url": "https://pmndrs.github.io/drei/misc/detect-gpu-use-detect-gpu"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/drei#useaspect"
+    },
+    {
+      "label": "Documentation has moved here",
+      "url": "https://pmndrs.github.io/drei/misc/use-aspect"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/drei#usecursor"
+    },
+    {
+      "label": "Documentation has moved here",
+      "url": "https://pmndrs.github.io/drei/misc/use-cursor"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/drei#useintersect"
+    },
+    {
+      "label": "Documentation has moved here",
+      "url": "https://pmndrs.github.io/drei/misc/use-intersect"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/drei#useboxprojectedenv"
+    },
+    {
+      "label": "Documentation has moved here",
+      "url": "https://pmndrs.github.io/drei/misc/use-box-projected-env"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/drei#trail--usetrail"
+    },
+    {
+      "label": "Documentation has moved here",
+      "url": "https://pmndrs.github.io/drei/misc/trail-use-trail"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/drei#usesurfacesampler"
+    },
+    {
+      "label": "Documentation has moved here",
+      "url": "https://pmndrs.github.io/drei/misc/use-surface-sampler"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/drei#facelandmarker"
+    },
+    {
+      "label": "Documentation has moved here",
+      "url": "https://pmndrs.github.io/drei/misc/face-landmarker"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/drei#loading"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/drei#loader"
+    },
+    {
+      "label": "Documentation has moved here",
+      "url": "https://pmndrs.github.io/drei/loaders/loader"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/drei#progress--useprogress"
+    },
+    {
+      "label": "Documentation has moved here",
+      "url": "https://pmndrs.github.io/drei/loaders/progress-use-progress"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/drei#gltf--usegltf"
+    },
+    {
+      "label": "Documentation has moved here",
+      "url": "https://pmndrs.github.io/drei/loaders/gltf-use-gltf"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/drei#fbx--usefbx"
+    },
+    {
+      "label": "Documentation has moved here",
+      "url": "https://pmndrs.github.io/drei/loaders/fbx-use-fbx"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/drei#texture--usetexture"
+    },
+    {
+      "label": "Documentation has moved here",
+      "url": "https://pmndrs.github.io/drei/loaders/texture-use-texture"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/drei#ktx2--usektx2"
+    },
+    {
+      "label": "Documentation has moved here",
+      "url": "https://pmndrs.github.io/drei/loaders/ktx2-use-ktx2"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/drei#cubetexture--usecubetexture"
+    },
+    {
+      "label": "Documentation has moved here",
+      "url": "https://pmndrs.github.io/drei/loaders/cube-texture-use-cube-texture"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/drei#videotexture--usevideotexture"
+    },
+    {
+      "label": "Documentation has moved here",
+      "url": "https://pmndrs.github.io/drei/loaders/video-texture-use-video-texture"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/drei#trailtexture--usetrailtexture"
+    },
+    {
+      "label": "Documentation has moved here",
+      "url": "https://pmndrs.github.io/drei/loaders/trail-texture-use-trail-texture"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/drei#usefont"
+    },
+    {
+      "label": "Documentation has moved here",
+      "url": "https://pmndrs.github.io/drei/loaders/use-font"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/drei#usespriteloader"
+    },
+    {
+      "label": "Documentation has moved here",
+      "url": "https://pmndrs.github.io/drei/loaders/use-sprite-loader"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/drei#performance"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/drei#instances"
+    },
+    {
+      "label": "Documentation has moved here",
+      "url": "https://pmndrs.github.io/drei/performances/instances"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/drei#merged"
+    },
+    {
+      "label": "Documentation has moved here",
+      "url": "https://pmndrs.github.io/drei/performances/merged"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/drei#points"
+    },
+    {
+      "label": "Documentation has moved here",
+      "url": "https://pmndrs.github.io/drei/performances/points"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/drei#segments"
+    },
+    {
+      "label": "Documentation has moved here",
+      "url": "https://pmndrs.github.io/drei/performances/segments"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/drei#detailed"
+    },
+    {
+      "label": "Documentation has moved here",
+      "url": "https://pmndrs.github.io/drei/performances/detailed"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/drei#preload"
+    },
+    {
+      "label": "Documentation has moved here",
+      "url": "https://pmndrs.github.io/drei/performances/preload"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/drei#bakeshadows"
+    },
+    {
+      "label": "Documentation has moved here",
+      "url": "https://pmndrs.github.io/drei/performances/bake-shadows"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/drei#meshbounds"
+    },
+    {
+      "label": "Documentation has moved here",
+      "url": "https://pmndrs.github.io/drei/performances/mesh-bounds"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/drei#adaptivedpr"
+    },
+    {
+      "label": "Documentation has moved here",
+      "url": "https://pmndrs.github.io/drei/performances/adaptive-dpr"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/drei#adaptiveevents"
+    },
+    {
+      "label": "Documentation has moved here",
+      "url": "https://pmndrs.github.io/drei/performances/adaptive-events"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/drei#bvh"
+    },
+    {
+      "label": "Documentation has moved here",
+      "url": "https://pmndrs.github.io/drei/performances/bvh"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/drei#performancemonitor"
+    },
+    {
+      "label": "Documentation has moved here",
+      "url": "https://pmndrs.github.io/drei/performances/performance-monitor"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/drei#portals"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/drei#hud"
+    },
+    {
+      "label": "Documentation has moved here",
+      "url": "https://pmndrs.github.io/drei/portals/hud"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/drei#view"
+    },
+    {
+      "label": "Documentation has moved here",
+      "url": "https://pmndrs.github.io/drei/portals/view"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/drei#rendertexture"
+    },
+    {
+      "label": "Documentation has moved here",
+      "url": "https://pmndrs.github.io/drei/portals/render-texture"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/drei#rendercubetexture"
+    },
+    {
+      "label": "Documentation has moved here",
+      "url": "https://pmndrs.github.io/drei/portals/render-cube-texture"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/drei#fisheye"
+    },
+    {
+      "label": "Documentation has moved here",
+      "url": "https://pmndrs.github.io/drei/portals/fisheye"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/drei#mask"
+    },
+    {
+      "label": "Documentation has moved here",
+      "url": "https://pmndrs.github.io/drei/portals/mask"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/drei#meshportalmaterial"
+    },
+    {
+      "label": "Documentation has moved here",
+      "url": "https://pmndrs.github.io/drei/portals/mesh-portal-material"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/drei#staging"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/drei#center"
+    },
+    {
+      "label": "Documentation has moved here",
+      "url": "https://pmndrs.github.io/drei/staging/center"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/drei#resize"
+    },
+    {
+      "label": "Documentation has moved here",
+      "url": "https://pmndrs.github.io/drei/staging/resize"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/drei#bbanchor"
+    },
+    {
+      "label": "Documentation has moved here",
+      "url": "https://pmndrs.github.io/drei/staging/bb-anchor"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/drei#bounds"
+    },
+    {
+      "label": "Documentation has moved here",
+      "url": "https://pmndrs.github.io/drei/staging/bounds"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/drei#camerashake"
+    },
+    {
+      "label": "Documentation has moved here",
+      "url": "https://pmndrs.github.io/drei/staging/camera-shake"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/drei#float"
+    },
+    {
+      "label": "Documentation has moved here",
+      "url": "https://pmndrs.github.io/drei/staging/float"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/drei#stage"
+    },
+    {
+      "label": "Documentation has moved here",
+      "url": "https://pmndrs.github.io/drei/staging/stage"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/drei#backdrop"
+    },
+    {
+      "label": "Documentation has moved here",
+      "url": "https://pmndrs.github.io/drei/staging/backdrop"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/drei#shadow"
+    },
+    {
+      "label": "Documentation has moved here",
+      "url": "https://pmndrs.github.io/drei/staging/shadow"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/drei#caustics"
+    },
+    {
+      "label": "Documentation has moved here",
+      "url": "https://pmndrs.github.io/drei/staging/caustics"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/drei#contactshadows"
+    },
+    {
+      "label": "Documentation has moved here",
+      "url": "https://pmndrs.github.io/drei/staging/contact-shadows"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/drei#randomizedlight"
+    },
+    {
+      "label": "Documentation has moved here",
+      "url": "https://pmndrs.github.io/drei/staging/randomized-light"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/drei#accumulativeshadows"
+    },
+    {
+      "label": "Documentation has moved here",
+      "url": "https://pmndrs.github.io/drei/staging/accumulative-shadows"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/drei#spotlight"
+    },
+    {
+      "label": "Documentation has moved here",
+      "url": "https://pmndrs.github.io/drei/staging/spot-light"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/drei#spotlightshadow"
+    },
+    {
+      "label": "Documentation has moved here",
+      "url": "https://pmndrs.github.io/drei/staging/spot-light-shadow"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/drei#environment"
+    },
+    {
+      "label": "Documentation has moved here",
+      "url": "https://pmndrs.github.io/drei/staging/environment"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/drei#lightformer"
+    },
+    {
+      "label": "Documentation has moved here",
+      "url": "https://pmndrs.github.io/drei/staging/lightformer"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/drei#sky"
+    },
+    {
+      "label": "Documentation has moved here",
+      "url": "https://pmndrs.github.io/drei/staging/sky"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/drei#stars"
+    },
+    {
+      "label": "Documentation has moved here",
+      "url": "https://pmndrs.github.io/drei/staging/stars"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/drei#sparkles"
+    },
+    {
+      "label": "Documentation has moved here",
+      "url": "https://pmndrs.github.io/drei/staging/sparkles"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/drei#cloud"
+    },
+    {
+      "label": "Documentation has moved here",
+      "url": "https://pmndrs.github.io/drei/staging/cloud"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/drei#useenvironment"
+    },
+    {
+      "label": "Documentation has moved here",
+      "url": "https://pmndrs.github.io/drei/staging/use-environment"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/drei#matcaptexture--usematcaptexture"
+    },
+    {
+      "label": "Documentation has moved here",
+      "url": "https://pmndrs.github.io/drei/staging/matcap-texture-use-matcap-texture"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/drei#normaltexture--usenormaltexture"
+    },
+    {
+      "label": "Documentation has moved here",
+      "url": "https://pmndrs.github.io/drei/staging/normal-texture-use-normal-texture"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/drei#shadowalpha"
+    },
+    {
+      "label": "Documentation has moved here",
+      "url": "https://pmndrs.github.io/drei/staging/shadow-alpha"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/drei#dev"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/drei#install"
+    },
+    {
+      "label": "nvm",
+      "url": "https://github.com/nvm-sh/nvm"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/drei#test"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/drei#local"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/drei#docker"
+    }
+  ],
+  "root_files": [
+    ".devcontainer",
+    ".github",
+    ".husky",
+    ".storybook",
+    "docs",
+    "sandboxes/bug-report-template-starter",
+    "src",
+    "test/e2e",
+    ".gitignore",
+    ".npmignore",
+    ".nvmrc",
+    ".prettierignore",
+    ".prettierrc",
+    ".yarnrc.yml",
+    "CODE_OF_CONDUCT.md",
+    "CONTRIBUTING.md",
+    "LICENSE",
+    "README.md",
+    "chromatic.config.json",
+    "eslint.config.mjs",
+    "package.json",
+    "release.config.js",
+    "rollup.config.js",
+    "tsconfig.json",
+    "vite.config.ts",
+    "yarn.lock"
+  ],
+  "release_count": 901,
+  "status": "verified"
+}

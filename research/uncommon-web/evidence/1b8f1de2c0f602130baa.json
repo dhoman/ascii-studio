@@ -1,0 +1,89 @@
+{
+  "url": "https://github.com/boytchev/tsl-textures",
+  "final_url": "https://github.com/boytchev/tsl-textures",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:47:37.626360+00:00",
+  "stars": 271,
+  "forks": 17,
+  "description": "A collection of Three.js Shading Language (TSL) textures",
+  "homepage": "https://boytchev.github.io/tsl-textures/",
+  "topics": [],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2024-06-10T20:30:28.000Z",
+  "branch": "main",
+  "commit": "a7d5da1bb69a27df1f0d9f47cbe428e79d13a1c6",
+  "readme": "tsl-textures A collection of Three.js Shading Language (TSL) textures – these are online real-time procedural generators of 3D textures. Pick a texture from the Project home page. Usage Use with NPM Install npm install three tsl-textures Use in a javascript file // Important: Use `webgpu` version of Three.js import * as THREE from 'three/webgpu'; // Import your desired texture import { polkaDots } from 'tsl-textures/polka-dots'; // Create the renderer. Important: Use `WebGPURenderer` renderer = new THREE.WebGPURenderer({antialias: true}); // ... Create your Three.js scene, camera, lights, etc. // Create geometry const objectGeometry = new THREE.IcosahedronGeometry(1, 12) // Create material: Important: Use `Node` Material objectMaterial = new THREE.MeshStandardNodeMaterial({ color: 0xCCCCCC, roughness: 0.5, metalness: 0.0, }); // Apply texture to the material's `colorNode` property objectMaterial.colorNode = polkaDots ( { count: 2, size: 0.6, blur: 0.22, color: new THREE.Color(0), background: new THREE.Color(16777215) } ); // Assign Geometry and Material to a Mesh object = new THREE.Mesh(objectGeometry, objectMaterial); // Render renderer.render( scene, camera );",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://github.com/boytchev/tsl-textures#tsl-textures"
+    },
+    {
+      "label": "Project home page",
+      "url": "https://boytchev.github.io/tsl-textures/"
+    },
+    {
+      "label": "",
+      "url": "https://boytchev.github.io/tsl-textures/examples/planet/index.html"
+    },
+    {
+      "label": "",
+      "url": "https://boytchev.github.io/tsl-textures/examples/normal-map/index.html"
+    },
+    {
+      "label": "",
+      "url": "https://boytchev.github.io/tsl-textures/examples/wooden-toys/index.html"
+    },
+    {
+      "label": "",
+      "url": "https://boytchev.github.io/tsl-textures/examples/protozoa/index.html"
+    },
+    {
+      "label": "",
+      "url": "https://boytchev.github.io/tsl-textures/examples/neck-massage/index.html"
+    },
+    {
+      "label": "",
+      "url": "https://boytchev.github.io/tsl-textures/examples/watermelon/index.html"
+    },
+    {
+      "label": "",
+      "url": "https://boytchev.github.io/tsl-textures/examples/texture-in-motion/index.html"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/boytchev/tsl-textures#usage"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/boytchev/tsl-textures#use-with-npm"
+    }
+  ],
+  "root_files": [
+    "_includes",
+    "assets",
+    "dist",
+    "docs",
+    "examples",
+    "media",
+    "online",
+    "src",
+    ".gitignore",
+    "CHANGELOG.md",
+    "LICENSE",
+    "LOCALHOST.bat",
+    "README.md",
+    "REBUILD.bat",
+    "RECHECK.bat",
+    "RECLEAR.bat",
+    "_config.yml",
+    "eslint.config.mjs",
+    "index.html",
+    "package-lock.json",
+    "package.json",
+    "rollup.config.mjs"
+  ],
+  "release_count": 45,
+  "status": "verified"
+}

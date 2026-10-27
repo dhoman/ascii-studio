@@ -1,0 +1,242 @@
+{
+  "url": "https://github.com/kaplayjs/kaplay",
+  "final_url": "https://github.com/kaplayjs/kaplay",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:47:56.358680+00:00",
+  "stars": 1813,
+  "forks": 125,
+  "description": "🦖 A JavaScript/TypeScript Game Library that feels like a game.",
+  "homepage": "https://kaplayjs.com",
+  "topics": [
+    "game-dev",
+    "game-development",
+    "game-engine",
+    "game-library",
+    "javascript",
+    "kaboom-js",
+    "kaboomjs",
+    "typescript"
+  ],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2024-05-21T15:14:33.000Z",
+  "branch": "master",
+  "commit": "974a222c4552afd5b36318b82459f923910d3fc8",
+  "readme": "🎮 KAPLAY.js — A JavaScript & TypeScript Game Library KAPLAY is the fun-first, 2D game library for JavaScript and TypeScript. It’s made to feel like a game while you're making games. Simple. Fast. Powerful. ✨ Whether you’re a beginner or an experienced dev, KAPLAY comes with its own web-based editor — the KAPLAYGROUND — so you can try code instantly, and learn with more than 90 examples! 🎲 Quick Overview // Start a game kaplay({ background: \"#6d80fa\", }); // Load an image loadSprite(\"bean\", \"https://play.kaplayjs.com/bean.png\"); // Add a sprite to the scene add([ sprite(\"bean\"), // it renders as a sprite ]); Game objects are composed from simple, powerful components: // Add a Game Obj to the scene from a list of components const player = add([ rect(40, 40), // it renders as a rectangle pos(100, 200), // it has a position (coordinates) area(), // it has a collider body(), // it is a physical body which will respond to physics health(8), // it has 8 health points // Give it tags for easier group behaviors \"friendly\", // Give plain objects fields for associated data { dir: vec2(-1, 0), dead: false, speed: 240, }, ]); Blocky imperative syntax for describing behaviors // .onCollide() comes from \"area\" component player.onCollide(\"enemy\", () => { // .hp comes from \"health\" component player.hp--; }); // check fall death player.onUpdate(() => { if (player.pos.y >= height()) { destroy(player); } }); // All objects with tag \"enemy\" will move to the left onUpdate(\"enemy\", (enemy) => { enemy.move(-400, 0); }); // move up 100 pixels per second every frame when \"w\" key is held down onKeyDown(\"w\", () => { player.move(0, 100); }); 🖥️ Installation 🚀 Using create-kaplay The fastest way to get started: npx create-kaplay my-game Then open http://localhost:5173 and edit src/game.js. 📦 Install with package manager npm install kaplay yarn add kaplay pnpm add kaplay bun add kaplay You will need a bundler like Vite or ESBuild to use KAPLAY in your project. Learn how to setup ESbuild here. 🌐 Use in Browser Include via CDN: <script src=\"https://unpkg.com/kaplay@3001.0.12/dist/kaplay.js\"></script> 📜 TypeScript Global Types If you're using TypeScript, you used create-kaplay or installed with a package manager and you want global types, you can load them using the following directive: import \"kaplay/global\"; vec2(10, 10); // typed! But it's recommended to use tsconfig.json to include the types: { \"compilerOptions\": { \"types\": [\"./node_modules/kaplay/dist/declaration/global.d.ts\"] } } WarningIf you are publishing a game (and not testing/learning) maybe you don't want to use globals, see why. You can also use all KAPLAY source types importing them: import type { TextCompOpt } from \"kaplay\" import type * as KA from \"kaplay\" // if you prefer a namespace-like import interface MyTextCompOpt extends KA.TextCompOpt { fallback: string; } 📚 Resources 📖 Docs KAPLAY Official Docs KAPLAYGROUND 📺 Tutorials 🎥 KAPLAY Library Crash Course by JSLegend ⚔️ 📖 Learn JavaScript basics and KAPLAY to make games quickly 💬 Community Discord Server GitHub Discussions Twitter/X BlueSky Mastodon 🎮 Games Collections of games made with KAPLAY, selected by KAPLAY: Itch.io Newgrounds.com 🙌 Credits KAPLAY is an open-source project, maintained by the KAPLAY Team and core contributors and with the support of many other amazing contributors. 🏆 Recognitions Thanks to mulfok for the awesome mulfok32 color palette, used in KAPLAY sprites and art Thanks to Pixabay for the great burp sound, used in burp() function Thanks to Kenney for all used assets for examples Impact Sound Pack 1-Bit Platformer Pack Thanks to abrudz for the amazing APL386 font Thanks to Polyducks for the amazing kitchen sink font font Thanks to 0x72 for the amazing Dungeon Tileset Thanks to @Minamotion for the tiny character sprite used in some of the tests",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://github.com/kaplayjs/kaplay#-kaplayjs--a-javascript--typescript-game-library"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/kaplayjs/kaplay/blob/master/kaplay.webp"
+    },
+    {
+      "label": "KAPLAYGROUND",
+      "url": "https://play.kaplayjs.com"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/kaplayjs/kaplay#-quick-overview"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/kaplayjs/kaplay#️-installation"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/kaplayjs/kaplay#-using-create-kaplay"
+    },
+    {
+      "label": "http://localhost:5173",
+      "url": "http://localhost:5173"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/kaplayjs/kaplay#-install-with-package-manager"
+    },
+    {
+      "label": "Vite",
+      "url": "https://vitejs.dev/"
+    },
+    {
+      "label": "ESBuild",
+      "url": "https://esbuild.github.io/"
+    },
+    {
+      "label": "here",
+      "url": "https://kaplayjs.com/guides/install/#setup-your-own-nodejs-environment"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/kaplayjs/kaplay#-use-in-browser"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/kaplayjs/kaplay#-typescript-global-types"
+    },
+    {
+      "label": "see why",
+      "url": "https://kaplayjs.com/guides/optimization/#avoid-global-namespace"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/kaplayjs/kaplay#-resources"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/kaplayjs/kaplay#-docs"
+    },
+    {
+      "label": "KAPLAY Official Docs",
+      "url": "https://kaplayjs.com/docs/"
+    },
+    {
+      "label": "KAPLAYGROUND",
+      "url": "https://play.kaplayjs.com"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/kaplayjs/kaplay#-tutorials"
+    },
+    {
+      "label": "KAPLAY Library Crash Course by JSLegend ⚔️",
+      "url": "https://www.youtube.com/watch?v=FdEYxGoy5_c"
+    },
+    {
+      "label": "Learn JavaScript basics and KAPLAY to make games quickly",
+      "url": "https://jslegenddev.substack.com/p/learn-the-basics-of-javascript-and"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/kaplayjs/kaplay#-community"
+    },
+    {
+      "label": "Discord Server",
+      "url": "https://discord.gg/aQ6RuQm3TF"
+    },
+    {
+      "label": "GitHub Discussions",
+      "url": "https://github.com/kaplayjs/kaplay/discussions"
+    },
+    {
+      "label": "Twitter/X",
+      "url": "https://twitter.com/kaplayjs"
+    },
+    {
+      "label": "BlueSky",
+      "url": "https://bsky.app/profile/kaplayjs.com"
+    },
+    {
+      "label": "Mastodon",
+      "url": "https://mastodon.gamedev.place/@kaplay"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/kaplayjs/kaplay#-games"
+    },
+    {
+      "label": "Itch.io",
+      "url": "https://itch.io/c/4494863/kag-collection"
+    },
+    {
+      "label": "Newgrounds.com",
+      "url": "https://www.newgrounds.com/playlist/379920/kaplay-games"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/kaplayjs/kaplay#-credits"
+    },
+    {
+      "label": "KAPLAY Team and core contributors",
+      "url": "https://github.com/kaplayjs/kaplay/wiki/Development-Team"
+    },
+    {
+      "label": "other amazing contributors",
+      "url": "https://github.com/kaplayjs/kaplay/graphs/contributors"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/kaplayjs/kaplay#-recognitions"
+    },
+    {
+      "label": "mulfok",
+      "url": "https://twitter.com/MulfoK"
+    },
+    {
+      "label": "mulfok32",
+      "url": "https://lospec.com/palette-list/mulfok32"
+    },
+    {
+      "label": "Pixabay",
+      "url": "https://pixabay.com/users/pixabay-1/"
+    },
+    {
+      "label": "burp",
+      "url": "https://pixabay.com/sound-effects/burp-104984/"
+    },
+    {
+      "label": "Kenney",
+      "url": "https://kenney.nl/"
+    },
+    {
+      "label": "Impact Sound Pack",
+      "url": "https://kenney.nl/assets/impact-sounds"
+    },
+    {
+      "label": "1-Bit Platformer Pack",
+      "url": "https://kenney.nl/assets/1-bit-platformer-pack"
+    },
+    {
+      "label": "abrudz",
+      "url": "https://github.com/abrudz"
+    },
+    {
+      "label": "APL386 font",
+      "url": "https://abrudz.github.io/APL386/"
+    },
+    {
+      "label": "Polyducks",
+      "url": "http://polyducks.co.uk/"
+    },
+    {
+      "label": "kitchen sink font",
+      "url": "https://polyducks.itch.io/kitchen-sink-textmode-font"
+    },
+    {
+      "label": "0x72",
+      "url": "https://0x72.itch.io/"
+    },
+    {
+      "label": "Dungeon Tileset",
+      "url": "https://0x72.itch.io/dungeontileset-ii"
+    }
+  ],
+  "root_files": [
+    ".github",
+    ".vscode",
+    "data",
+    "examples",
+    "scripts",
+    "src",
+    "tests",
+    ".gitattributes",
+    ".gitignore",
+    "CHANGELOG.md",
+    "CODE_OF_CONDUCT.md",
+    "CONTRIBUTING.md",
+    "LICENSE",
+    "README.md",
+    "dprint.json",
+    "eslint.config.mjs",
+    "kaplay.webp",
+    "package-lock.json",
+    "package.json",
+    "playwright.config.ts",
+    "tsconfig.build.json",
+    "tsconfig.json"
+  ],
+  "release_count": 61,
+  "status": "verified"
+}

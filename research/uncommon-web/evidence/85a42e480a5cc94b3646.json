@@ -1,0 +1,455 @@
+{
+  "url": "https://github.com/n3r4zzurr0/svg-spinners",
+  "final_url": "https://github.com/n3r4zzurr0/svg-spinners",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:48:04.757814+00:00",
+  "stars": 7020,
+  "forks": 841,
+  "description": "A collection of 24 x 24 dp SVG spinners! (CSS & SMIL)",
+  "homepage": "",
+  "topics": [
+    "svg-animated-icons"
+  ],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2022-06-11T18:18:16.000Z",
+  "branch": "main",
+  "commit": "abfa05c49acf005b8b1e0ef8eb25a67a7057eb20",
+  "readme": "SVG Spinners (CSS & SMIL) All spinners are displayed inside a 24 x 24 dp view box. The main content rests inside the live area of 22 dp with a padding of 1dp. Few points to consider: SMIL animations (both inline and referenced via an img tag) won't start playing until the page has completely loaded whereas CSS animations will start playing while the page is loading. In webkit based browsers, both SMIL and CSS animations, when referenced via an img tag, produce an unusual behavior on page zoom levels other than 100%. Using them inline seems completely fine and consistent across browsers. Preview RingsPreviewCSS (Size in bytes)SMIL (Size in bytes)CSS (428)SMIL (384)CSS (531)SMIL (487)CSS (434)SMIL (390)CSS (537)SMIL (493)CSS (483)SMIL (439)CSS (586)SMIL (542)CSS (620)SMIL (739)DotsPreviewCSS (Size in bytes)SMIL (Size in bytes)CSS (635)SMIL (686)CSS (482)SMIL (599)CSS (631)SMIL (2973)CSS (409)SMIL (375)CSS (471)SMIL (503)CSS (422)SMIL (459)CSS (948)SMIL (692)CSS (1494)SMIL (2875)CSS (1504)SMIL (2587)CSS (535)SMIL (484)CSS (1693)SMIL (2714)CSS (399)SMIL (357)BarsPreviewCSS (Size in bytes)SMIL (Size in bytes)CSS (514)SMIL (625)CSS (895)SMIL (1891)CSS (548)SMIL (1244)CSS (825)SMIL (1891)CSS (1150)SMIL (894)BlocksPreviewCSS (Size in bytes)SMIL (Size in bytes)CSS (1182)SMIL (2133)CSS (524)SMIL (1082)CSS (646)SMIL (1579)CSS (2457)SMIL (4106)PulsesPreviewCSS (Size in bytes)SMIL (Size in bytes)CSS (301)SMIL (381)CSS (400)SMIL (797)CSS (499)SMIL (1149)CSS (503)SMIL (1135)CSS (461)SMIL (683)CSS (657)SMIL (1361)CSS (853)SMIL (1994)CSS (856)SMIL (1973)OtherPreviewCSS (Size in bytes)SMIL (Size in bytes)CSS (453)SMIL (870)CSS (565)SMIL (530)CSS (377)SMIL (333)CSS (385)SMIL (341)CSS (774)SMIL (1028)CSS (1064)SMIL (853)CSS (398)SMIL (354)CSS (999)SMIL (1238)CSS (989)SMIL (1172)CSS (1321)SMIL (1276) Adaptation React Component Library by dephraiim License MIT © Utkarsh Verma",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://raw.githubusercontent.com/n3r4zzurr0/svg-spinners/main/preview/icon-48.gif"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/n3r4zzurr0/svg-spinners#svg-spinners-css--smil"
+    },
+    {
+      "label": "unusual behavior",
+      "url": "https://github.com/n3r4zzurr0/svg-spinners/issues/2"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/n3r4zzurr0/svg-spinners#preview"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/n3r4zzurr0/svg-spinners#rings"
+    },
+    {
+      "label": "CSS",
+      "url": "https://github.com/n3r4zzurr0/svg-spinners/blob/main/svg-css/90-ring.svg"
+    },
+    {
+      "label": "SMIL",
+      "url": "https://github.com/n3r4zzurr0/svg-spinners/blob/main/svg-smil/90-ring.svg"
+    },
+    {
+      "label": "CSS",
+      "url": "https://github.com/n3r4zzurr0/svg-spinners/blob/main/svg-css/90-ring-with-bg.svg"
+    },
+    {
+      "label": "SMIL",
+      "url": "https://github.com/n3r4zzurr0/svg-spinners/blob/main/svg-smil/90-ring-with-bg.svg"
+    },
+    {
+      "label": "CSS",
+      "url": "https://github.com/n3r4zzurr0/svg-spinners/blob/main/svg-css/180-ring.svg"
+    },
+    {
+      "label": "SMIL",
+      "url": "https://github.com/n3r4zzurr0/svg-spinners/blob/main/svg-smil/180-ring.svg"
+    },
+    {
+      "label": "CSS",
+      "url": "https://github.com/n3r4zzurr0/svg-spinners/blob/main/svg-css/180-ring-with-bg.svg"
+    },
+    {
+      "label": "SMIL",
+      "url": "https://github.com/n3r4zzurr0/svg-spinners/blob/main/svg-smil/180-ring-with-bg.svg"
+    },
+    {
+      "label": "CSS",
+      "url": "https://github.com/n3r4zzurr0/svg-spinners/blob/main/svg-css/270-ring.svg"
+    },
+    {
+      "label": "SMIL",
+      "url": "https://github.com/n3r4zzurr0/svg-spinners/blob/main/svg-smil/270-ring.svg"
+    },
+    {
+      "label": "CSS",
+      "url": "https://github.com/n3r4zzurr0/svg-spinners/blob/main/svg-css/270-ring-with-bg.svg"
+    },
+    {
+      "label": "SMIL",
+      "url": "https://github.com/n3r4zzurr0/svg-spinners/blob/main/svg-smil/270-ring-with-bg.svg"
+    },
+    {
+      "label": "CSS",
+      "url": "https://github.com/n3r4zzurr0/svg-spinners/blob/main/svg-css/ring-resize.svg"
+    },
+    {
+      "label": "SMIL",
+      "url": "https://github.com/n3r4zzurr0/svg-spinners/blob/main/svg-smil/ring-resize.svg"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/n3r4zzurr0/svg-spinners#dots"
+    },
+    {
+      "label": "CSS",
+      "url": "https://github.com/n3r4zzurr0/svg-spinners/blob/main/svg-css/3-dots-bounce.svg"
+    },
+    {
+      "label": "SMIL",
+      "url": "https://github.com/n3r4zzurr0/svg-spinners/blob/main/svg-smil/3-dots-bounce.svg"
+    },
+    {
+      "label": "CSS",
+      "url": "https://github.com/n3r4zzurr0/svg-spinners/blob/main/svg-css/3-dots-fade.svg"
+    },
+    {
+      "label": "SMIL",
+      "url": "https://github.com/n3r4zzurr0/svg-spinners/blob/main/svg-smil/3-dots-fade.svg"
+    },
+    {
+      "label": "CSS",
+      "url": "https://github.com/n3r4zzurr0/svg-spinners/blob/main/svg-css/3-dots-move.svg"
+    },
+    {
+      "label": "SMIL",
+      "url": "https://github.com/n3r4zzurr0/svg-spinners/blob/main/svg-smil/3-dots-move.svg"
+    },
+    {
+      "label": "CSS",
+      "url": "https://github.com/n3r4zzurr0/svg-spinners/blob/main/svg-css/3-dots-rotate.svg"
+    },
+    {
+      "label": "SMIL",
+      "url": "https://github.com/n3r4zzurr0/svg-spinners/blob/main/svg-smil/3-dots-rotate.svg"
+    },
+    {
+      "label": "CSS",
+      "url": "https://github.com/n3r4zzurr0/svg-spinners/blob/main/svg-css/3-dots-scale.svg"
+    },
+    {
+      "label": "SMIL",
+      "url": "https://github.com/n3r4zzurr0/svg-spinners/blob/main/svg-smil/3-dots-scale.svg"
+    },
+    {
+      "label": "CSS",
+      "url": "https://github.com/n3r4zzurr0/svg-spinners/blob/main/svg-css/3-dots-scale-middle.svg"
+    },
+    {
+      "label": "SMIL",
+      "url": "https://github.com/n3r4zzurr0/svg-spinners/blob/main/svg-smil/3-dots-scale-middle.svg"
+    },
+    {
+      "label": "CSS",
+      "url": "https://github.com/n3r4zzurr0/svg-spinners/blob/main/svg-css/6-dots-rotate.svg"
+    },
+    {
+      "label": "SMIL",
+      "url": "https://github.com/n3r4zzurr0/svg-spinners/blob/main/svg-smil/6-dots-rotate.svg"
+    },
+    {
+      "label": "CSS",
+      "url": "https://github.com/n3r4zzurr0/svg-spinners/blob/main/svg-css/6-dots-scale.svg"
+    },
+    {
+      "label": "SMIL",
+      "url": "https://github.com/n3r4zzurr0/svg-spinners/blob/main/svg-smil/6-dots-scale.svg"
+    },
+    {
+      "label": "CSS",
+      "url": "https://github.com/n3r4zzurr0/svg-spinners/blob/main/svg-css/6-dots-scale-middle.svg"
+    },
+    {
+      "label": "SMIL",
+      "url": "https://github.com/n3r4zzurr0/svg-spinners/blob/main/svg-smil/6-dots-scale-middle.svg"
+    },
+    {
+      "label": "CSS",
+      "url": "https://github.com/n3r4zzurr0/svg-spinners/blob/main/svg-css/8-dots-rotate.svg"
+    },
+    {
+      "label": "SMIL",
+      "url": "https://github.com/n3r4zzurr0/svg-spinners/blob/main/svg-smil/8-dots-rotate.svg"
+    },
+    {
+      "label": "CSS",
+      "url": "https://github.com/n3r4zzurr0/svg-spinners/blob/main/svg-css/12-dots-scale-rotate.svg"
+    },
+    {
+      "label": "SMIL",
+      "url": "https://github.com/n3r4zzurr0/svg-spinners/blob/main/svg-smil/12-dots-scale-rotate.svg"
+    },
+    {
+      "label": "CSS",
+      "url": "https://github.com/n3r4zzurr0/svg-spinners/blob/main/svg-css/dot-revolve.svg"
+    },
+    {
+      "label": "SMIL",
+      "url": "https://github.com/n3r4zzurr0/svg-spinners/blob/main/svg-smil/dot-revolve.svg"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/n3r4zzurr0/svg-spinners#bars"
+    },
+    {
+      "label": "CSS",
+      "url": "https://github.com/n3r4zzurr0/svg-spinners/blob/main/svg-css/bars-fade.svg"
+    },
+    {
+      "label": "SMIL",
+      "url": "https://github.com/n3r4zzurr0/svg-spinners/blob/main/svg-smil/bars-fade.svg"
+    },
+    {
+      "label": "CSS",
+      "url": "https://github.com/n3r4zzurr0/svg-spinners/blob/main/svg-css/bars-scale.svg"
+    },
+    {
+      "label": "SMIL",
+      "url": "https://github.com/n3r4zzurr0/svg-spinners/blob/main/svg-smil/bars-scale.svg"
+    },
+    {
+      "label": "CSS",
+      "url": "https://github.com/n3r4zzurr0/svg-spinners/blob/main/svg-css/bars-scale-fade.svg"
+    },
+    {
+      "label": "SMIL",
+      "url": "https://github.com/n3r4zzurr0/svg-spinners/blob/main/svg-smil/bars-scale-fade.svg"
+    },
+    {
+      "label": "CSS",
+      "url": "https://github.com/n3r4zzurr0/svg-spinners/blob/main/svg-css/bars-scale-middle.svg"
+    },
+    {
+      "label": "SMIL",
+      "url": "https://github.com/n3r4zzurr0/svg-spinners/blob/main/svg-smil/bars-scale-middle.svg"
+    },
+    {
+      "label": "CSS",
+      "url": "https://github.com/n3r4zzurr0/svg-spinners/blob/main/svg-css/bars-rotate-fade.svg"
+    },
+    {
+      "label": "SMIL",
+      "url": "https://github.com/n3r4zzurr0/svg-spinners/blob/main/svg-smil/bars-rotate-fade.svg"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/n3r4zzurr0/svg-spinners#blocks"
+    },
+    {
+      "label": "CSS",
+      "url": "https://github.com/n3r4zzurr0/svg-spinners/blob/main/svg-css/blocks-scale.svg"
+    },
+    {
+      "label": "SMIL",
+      "url": "https://github.com/n3r4zzurr0/svg-spinners/blob/main/svg-smil/blocks-scale.svg"
+    },
+    {
+      "label": "CSS",
+      "url": "https://github.com/n3r4zzurr0/svg-spinners/blob/main/svg-css/blocks-shuffle-2.svg"
+    },
+    {
+      "label": "SMIL",
+      "url": "https://github.com/n3r4zzurr0/svg-spinners/blob/main/svg-smil/blocks-shuffle-2.svg"
+    },
+    {
+      "label": "CSS",
+      "url": "https://github.com/n3r4zzurr0/svg-spinners/blob/main/svg-css/blocks-shuffle-3.svg"
+    },
+    {
+      "label": "SMIL",
+      "url": "https://github.com/n3r4zzurr0/svg-spinners/blob/main/svg-smil/blocks-shuffle-3.svg"
+    },
+    {
+      "label": "CSS",
+      "url": "https://github.com/n3r4zzurr0/svg-spinners/blob/main/svg-css/blocks-wave.svg"
+    },
+    {
+      "label": "SMIL",
+      "url": "https://github.com/n3r4zzurr0/svg-spinners/blob/main/svg-smil/blocks-wave.svg"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/n3r4zzurr0/svg-spinners#pulses"
+    },
+    {
+      "label": "CSS",
+      "url": "https://github.com/n3r4zzurr0/svg-spinners/blob/main/svg-css/pulse.svg"
+    },
+    {
+      "label": "SMIL",
+      "url": "https://github.com/n3r4zzurr0/svg-spinners/blob/main/svg-smil/pulse.svg"
+    },
+    {
+      "label": "CSS",
+      "url": "https://github.com/n3r4zzurr0/svg-spinners/blob/main/svg-css/pulse-2.svg"
+    },
+    {
+      "label": "SMIL",
+      "url": "https://github.com/n3r4zzurr0/svg-spinners/blob/main/svg-smil/pulse-2.svg"
+    },
+    {
+      "label": "CSS",
+      "url": "https://github.com/n3r4zzurr0/svg-spinners/blob/main/svg-css/pulse-3.svg"
+    },
+    {
+      "label": "SMIL",
+      "url": "https://github.com/n3r4zzurr0/svg-spinners/blob/main/svg-smil/pulse-3.svg"
+    },
+    {
+      "label": "CSS",
+      "url": "https://github.com/n3r4zzurr0/svg-spinners/blob/main/svg-css/pulse-multiple.svg"
+    },
+    {
+      "label": "SMIL",
+      "url": "https://github.com/n3r4zzurr0/svg-spinners/blob/main/svg-smil/pulse-multiple.svg"
+    },
+    {
+      "label": "CSS",
+      "url": "https://github.com/n3r4zzurr0/svg-spinners/blob/main/svg-css/pulse-ring.svg"
+    },
+    {
+      "label": "SMIL",
+      "url": "https://github.com/n3r4zzurr0/svg-spinners/blob/main/svg-smil/pulse-ring.svg"
+    },
+    {
+      "label": "CSS",
+      "url": "https://github.com/n3r4zzurr0/svg-spinners/blob/main/svg-css/pulse-rings-2.svg"
+    },
+    {
+      "label": "SMIL",
+      "url": "https://github.com/n3r4zzurr0/svg-spinners/blob/main/svg-smil/pulse-rings-2.svg"
+    },
+    {
+      "label": "CSS",
+      "url": "https://github.com/n3r4zzurr0/svg-spinners/blob/main/svg-css/pulse-rings-3.svg"
+    },
+    {
+      "label": "SMIL",
+      "url": "https://github.com/n3r4zzurr0/svg-spinners/blob/main/svg-smil/pulse-rings-3.svg"
+    },
+    {
+      "label": "CSS",
+      "url": "https://github.com/n3r4zzurr0/svg-spinners/blob/main/svg-css/pulse-rings-multiple.svg"
+    },
+    {
+      "label": "SMIL",
+      "url": "https://github.com/n3r4zzurr0/svg-spinners/blob/main/svg-smil/pulse-rings-multiple.svg"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/n3r4zzurr0/svg-spinners#other"
+    },
+    {
+      "label": "CSS",
+      "url": "https://github.com/n3r4zzurr0/svg-spinners/blob/main/svg-css/bouncing-ball.svg"
+    },
+    {
+      "label": "SMIL",
+      "url": "https://github.com/n3r4zzurr0/svg-spinners/blob/main/svg-smil/bouncing-ball.svg"
+    },
+    {
+      "label": "CSS",
+      "url": "https://github.com/n3r4zzurr0/svg-spinners/blob/main/svg-css/clock.svg"
+    },
+    {
+      "label": "SMIL",
+      "url": "https://github.com/n3r4zzurr0/svg-spinners/blob/main/svg-smil/clock.svg"
+    },
+    {
+      "label": "CSS",
+      "url": "https://github.com/n3r4zzurr0/svg-spinners/blob/main/svg-css/eclipse.svg"
+    },
+    {
+      "label": "SMIL",
+      "url": "https://github.com/n3r4zzurr0/svg-spinners/blob/main/svg-smil/eclipse.svg"
+    },
+    {
+      "label": "CSS",
+      "url": "https://github.com/n3r4zzurr0/svg-spinners/blob/main/svg-css/eclipse-half.svg"
+    },
+    {
+      "label": "SMIL",
+      "url": "https://github.com/n3r4zzurr0/svg-spinners/blob/main/svg-smil/eclipse-half.svg"
+    },
+    {
+      "label": "CSS",
+      "url": "https://github.com/n3r4zzurr0/svg-spinners/blob/main/svg-css/gooey-balls-1.svg"
+    },
+    {
+      "label": "SMIL",
+      "url": "https://github.com/n3r4zzurr0/svg-spinners/blob/main/svg-smil/gooey-balls-1.svg"
+    },
+    {
+      "label": "CSS",
+      "url": "https://github.com/n3r4zzurr0/svg-spinners/blob/main/svg-css/gooey-balls-2.svg"
+    },
+    {
+      "label": "SMIL",
+      "url": "https://github.com/n3r4zzurr0/svg-spinners/blob/main/svg-smil/gooey-balls-2.svg"
+    },
+    {
+      "label": "CSS",
+      "url": "https://github.com/n3r4zzurr0/svg-spinners/blob/main/svg-css/tadpole.svg"
+    },
+    {
+      "label": "SMIL",
+      "url": "https://github.com/n3r4zzurr0/svg-spinners/blob/main/svg-smil/tadpole.svg"
+    },
+    {
+      "label": "CSS",
+      "url": "https://github.com/n3r4zzurr0/svg-spinners/blob/main/svg-css/wifi.svg"
+    },
+    {
+      "label": "SMIL",
+      "url": "https://github.com/n3r4zzurr0/svg-spinners/blob/main/svg-smil/wifi.svg"
+    },
+    {
+      "label": "CSS",
+      "url": "https://github.com/n3r4zzurr0/svg-spinners/blob/main/svg-css/wifi-fade.svg"
+    },
+    {
+      "label": "SMIL",
+      "url": "https://github.com/n3r4zzurr0/svg-spinners/blob/main/svg-smil/wifi-fade.svg"
+    },
+    {
+      "label": "CSS",
+      "url": "https://github.com/n3r4zzurr0/svg-spinners/blob/main/svg-css/wind-toy.svg"
+    },
+    {
+      "label": "SMIL",
+      "url": "https://github.com/n3r4zzurr0/svg-spinners/blob/main/svg-smil/wind-toy.svg"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/n3r4zzurr0/svg-spinners#adaptation"
+    },
+    {
+      "label": "React Component Library by dephraiim",
+      "url": "https://github.com/dephraiim/react-svg-spinners"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/n3r4zzurr0/svg-spinners#license"
+    },
+    {
+      "label": "Utkarsh Verma",
+      "url": "https://github.com/n3r4zzurr0"
+    }
+  ],
+  "root_files": [
+    "preview",
+    "svg-css",
+    "svg-smil",
+    ".gitattributes",
+    "LICENSE",
+    "README.md"
+  ],
+  "release_count": 0,
+  "status": "verified"
+}

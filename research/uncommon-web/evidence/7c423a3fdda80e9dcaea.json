@@ -1,0 +1,436 @@
+{
+  "url": "https://github.com/processing/p5.js",
+  "final_url": "https://github.com/processing/p5.js",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:48:12.204516+00:00",
+  "stars": 24159,
+  "forks": 3877,
+  "description": "p5.js is a client-side JS platform that empowers artists, designers, students, and anyone to learn to code and express themselves creatively on the web. It is based on the core principles of Processing. Looking for p5.js 2.0? http://beta.p5js.org",
+  "homepage": "http://p5js.org/",
+  "topics": [
+    "art",
+    "creative-coding",
+    "design",
+    "education",
+    "graphics",
+    "html",
+    "javascript",
+    "learning",
+    "p5js",
+    "processing",
+    "sound"
+  ],
+  "license": "LGPL-2.1",
+  "archived": false,
+  "created_at": "2013-02-26T03:14:47.000Z",
+  "branch": "main",
+  "commit": "656b415a17e8c72c347ed48111c37719f2963498",
+  "readme": "p5.js Welcome! 👋👋🏿👋🏽👋🏻👋🏾👋🏼 p5.js is a free and open-source JavaScript library for accessible creative coding. It is a nurturing community, an approachable language, an exploratory tool, an accessible environment, an inclusive platform, welcoming and playful for artists, designers, educators, beginners, and anyone else! function setup() { createCanvas(400, 400); background(255); } function draw() { circle(mouseX, mouseY, 80); } Get Started — Reference — Tutorials — Examples — Libraries — Forum — Discord About p5.js is built and organized to prioritize accessibility, inclusivity, community, and joy. Similar to sketching, p5.js has a full set of tools to draw. It also supports creating audio-visual, interactive, experimental, and generative works for the web. p5.js enables thinking of a web page as your sketch. p5.js is accessible in multiple languages and has an expansive documentation with visual examples. You can find tutorials on the p5.js website and start coding right now in the p5.js web editor. You can extend p5.js with many community-created libraries that bring different capabilities. Its community provides endless inspiration and support for creators. p5.js encourages iterative and exploratory code for creative expression. Its friendly, diverse community shares art, code, and learning resources to help elevate all voices. We share our values in open source and access for all, to learn, create, imagine, design, share and code freely. Community The p5.js community shares an interest in exploring the creation of art and design with technology. We are a community of, and in solidarity with, people from every gender identity and expression, sexual orientation, race, ethnicity, language, neuro-type, size, disability, class, caste, religion, culture, subculture, immigration status, age, skill level, occupation, and background. We stand in solidarity with justice and liberation movements. We work to acknowledge, dismantle, and prevent barriers to access p5.js code and the p5.js community. Learn more about our community and read our community statement and code of conduct. You can directly support our work with p5.js by donating to the Processing Foundation. Issues If you have found a bug in the p5.js library or want to request new features, feel free to file an issue! See our contributor guidelines for a full reference of our contribution process. A set of templates for reporting issues and requesting features are provided to assist you (and us!). Different parts of p5.js are in different repositories. You can open an issue on each of them through these links: p5.js — p5.js website —- p5.js web editor p5.js is maintained mostly by volunteers, so we thank you for your patience as we try to address your issues as soon as we can. Get Started for Contributors p5.js is a collaborative project with many contributors, mostly volunteers, and you are invited to help. All types of involvement are welcome. See the contribute for more in-depth details about contributing to different areas of the project, including code, bug fixes, documentation, discussion, and more. A quick Getting Started with the Build and setting up the repository could be found here. AI Usage Policy This project does not accept fully AI-generated contributions. AI tools may be used assistively only. As a contributor, you should be able to understand and take responsibility for changes you make to the codebase. More details can be found in our AI Usage Policy and AGENTS.md. Stewards Stewards are contributors who are particularly involved, familiar, or responsive to certain areas of the project. Their role is to help provide context and guidance to others working on p5.js. If you have a question about contributing to a particular area, you can tag the listed steward in an issue or pull request. They may also weigh in on feature requests and guide the overall direction of their area, with the input of the community. You can read more about the organization of the project in our p5.js Contributor Guidelines and p5.js Steward Guidelines. Anyone interested can volunteer to be a steward! There are no specific requirements for expertise, just an interest in actively learning and participating. If you’re familiar with or interested in actively learning and participating in some of the p5.js areas below, please reply to this issue mentioning which area(s) you are interested in volunteering as a steward! 👋👋👋 p5.js was created by Lauren Lee McCarthy in 2013 as a new interpretation of Processing for the context of the web. Since then we have allowed ourselves space to deviate and grow, while drawing inspiration from Processing and our shared community. p5.js is sustained by a community of contributors, with support from the Processing Foundation. p5.js follows a rotating leadership model started in 2020. Learn more about the people behind p5.js. Current Lead/Mentor @ksen0 - p5.js Lead，2024-present @limzykenneth - p5.js Mentor，2023-present Lead/Mentor Alumni @lmccart - p5.js Creator @qianqianye - p5.js Lead，2021-2025 @outofambit - p5.js Co-Lead 2021-22, Mentor 2022-2023 @mcturner1995 - p5.js Lead 2020 Area Steward(s) Maintainers @clairep94, @davepagurek, @doradocodes, @khanniie, @ksen0, @limzykenneth, @perminder-17 Accessibility @calebfoss Accessibility (p5.js-website) @coseeian Color @limzykenneth Core @davepagurek DevOps @Vaivaswat2244, @limzykenneth, @lirenjie95 Documentation @limzykenneth, @perminder-17 Graphics (WebGL) @RandomGamingDev, @davepagurek, @perminder-17 Graphics (WebGPU) @aashu2006, @davepagurek, @perminder-17 i18n (es) @marioguzzzman i18n (hi) @Divyansh013 i18n (ko) @JiwonHaam, @eupthere i18n (zh) @limzykenneth, @lirenjie95 p5.js-web-editor @clairep94, @doradocodes, @khanniie, @kitlord p5.js-website @Nwakaego-Ego, @clairep94, @doradocodes, @ksen0 p5.sound.js @ogbabydiesal Typography @dhowe Contributors We recognize all types of contributions. This project follows the all-contributors specification and the Emoji Key ✨ for contribution types. Instructions to add yourself or add contribution emojis to your name are here. You can also post an issue or comment on a pull request with the text: @all-contributors please add @YOUR-USERNAME for THINGS (where THINGS is a comma-separated list of entries from the list of possible contribution types) and our nice bot will add you to CONTRIBUTORS.md automatically! Thanks to all the wonderful contributors! 💓",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/p5"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/processing/p5.js#contributors"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/p5"
+    },
+    {
+      "label": "p5.js",
+      "url": "https://p5js.org"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/processing/p5.js#p5js"
+    },
+    {
+      "label": "accessible",
+      "url": "https://p5js.org/contribute/access"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/processing/p5.js/blob/main/contributor_docs/images/p5-readme-sketch.png"
+    },
+    {
+      "label": "Get Started",
+      "url": "https://p5js.org/tutorials/get-started/"
+    },
+    {
+      "label": "Reference",
+      "url": "https://p5js.org/reference"
+    },
+    {
+      "label": "Tutorials",
+      "url": "https://p5js.org/tutorials"
+    },
+    {
+      "label": "Examples",
+      "url": "https://p5js.org/examples/"
+    },
+    {
+      "label": "Libraries",
+      "url": "https://p5js.org/libraries"
+    },
+    {
+      "label": "Forum",
+      "url": "https://discourse.processing.org/c/p5js"
+    },
+    {
+      "label": "Discord",
+      "url": "https://discord.p5js.org"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/processing/p5.js#about"
+    },
+    {
+      "label": "accessibility, inclusivity, community, and joy",
+      "url": "https://p5js.org/community"
+    },
+    {
+      "label": "documentation",
+      "url": "https://p5js.org/reference/"
+    },
+    {
+      "label": "tutorials",
+      "url": "https://p5js.org/tutorials/"
+    },
+    {
+      "label": "p5.js web editor",
+      "url": "https://editor.p5js.org/"
+    },
+    {
+      "label": "libraries",
+      "url": "https://p5js.org/libraries/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/processing/p5.js#community"
+    },
+    {
+      "label": "our community",
+      "url": "https://p5js.org/community/"
+    },
+    {
+      "label": "code of conduct",
+      "url": "https://github.com/processing/p5.js/blob/main/CODE_OF_CONDUCT.md"
+    },
+    {
+      "label": "the Processing Foundation",
+      "url": "https://processingfoundation.org/support"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/processing/p5.js#issues"
+    },
+    {
+      "label": "contributor guidelines",
+      "url": "https://p5js.org/contribute/contributor_guidelines"
+    },
+    {
+      "label": "p5.js",
+      "url": "https://github.com/processing/p5.js/issues"
+    },
+    {
+      "label": "p5.js website",
+      "url": "https://github.com/processing/p5.js-website/issues"
+    },
+    {
+      "label": "p5.js web editor",
+      "url": "https://github.com/processing/p5.js-web-editor/issues"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/processing/p5.js#get-started-for-contributors"
+    },
+    {
+      "label": "contribute",
+      "url": "https://p5js.org/contribute"
+    },
+    {
+      "label": "here",
+      "url": "https://p5js.org/contribute/contributor_guidelines/#quick-get-started-for-developers"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/processing/p5.js#ai-usage-policy"
+    },
+    {
+      "label": "AI Usage Policy",
+      "url": "https://github.com/processing/p5.js/blob/main/AI_USAGE_POLICY.md"
+    },
+    {
+      "label": "AGENTS.md",
+      "url": "https://github.com/processing/p5.js/blob/main/AGENTS.md"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/processing/p5.js#stewards"
+    },
+    {
+      "label": "Contributor Guidelines",
+      "url": "https://p5js.org/contribute/contributor_guidelines"
+    },
+    {
+      "label": "Steward Guidelines",
+      "url": "https://p5js.org/contribute/steward_guidelines"
+    },
+    {
+      "label": "this issue",
+      "url": "https://github.com/processing/p5.js/issues/5719"
+    },
+    {
+      "label": "Lauren Lee McCarthy",
+      "url": "https://github.com/lmccart"
+    },
+    {
+      "label": "people",
+      "url": "https://p5js.org/people/"
+    },
+    {
+      "label": "@ksen0",
+      "url": "https://github.com/ksen0"
+    },
+    {
+      "label": "@limzykenneth",
+      "url": "https://github.com/limzykenneth"
+    },
+    {
+      "label": "@lmccart",
+      "url": "https://github.com/lmccart"
+    },
+    {
+      "label": "@qianqianye",
+      "url": "https://github.com/qianqianye"
+    },
+    {
+      "label": "@outofambit",
+      "url": "https://github.com/outofambit"
+    },
+    {
+      "label": "@mcturner1995",
+      "url": "https://github.com/mcturner1995"
+    },
+    {
+      "label": "@clairep94",
+      "url": "https://github.com/clairep94"
+    },
+    {
+      "label": "@davepagurek",
+      "url": "https://github.com/davepagurek"
+    },
+    {
+      "label": "@doradocodes",
+      "url": "https://github.com/doradocodes"
+    },
+    {
+      "label": "@khanniie",
+      "url": "https://github.com/khanniie"
+    },
+    {
+      "label": "@ksen0",
+      "url": "https://github.com/ksen0"
+    },
+    {
+      "label": "@limzykenneth",
+      "url": "https://github.com/limzykenneth"
+    },
+    {
+      "label": "@perminder-17",
+      "url": "https://github.com/perminder-17"
+    },
+    {
+      "label": "@calebfoss",
+      "url": "https://github.com/calebfoss"
+    },
+    {
+      "label": "@coseeian",
+      "url": "https://github.com/coseeian"
+    },
+    {
+      "label": "@limzykenneth",
+      "url": "https://github.com/limzykenneth"
+    },
+    {
+      "label": "@davepagurek",
+      "url": "https://github.com/davepagurek"
+    },
+    {
+      "label": "@Vaivaswat2244",
+      "url": "https://github.com/Vaivaswat2244"
+    },
+    {
+      "label": "@limzykenneth",
+      "url": "https://github.com/limzykenneth"
+    },
+    {
+      "label": "@lirenjie95",
+      "url": "https://github.com/lirenjie95"
+    },
+    {
+      "label": "@limzykenneth",
+      "url": "https://github.com/limzykenneth"
+    },
+    {
+      "label": "@perminder-17",
+      "url": "https://github.com/perminder-17"
+    },
+    {
+      "label": "@RandomGamingDev",
+      "url": "https://github.com/RandomGamingDev"
+    },
+    {
+      "label": "@davepagurek",
+      "url": "https://github.com/davepagurek"
+    },
+    {
+      "label": "@perminder-17",
+      "url": "https://github.com/perminder-17"
+    },
+    {
+      "label": "@aashu2006",
+      "url": "https://github.com/aashu2006"
+    },
+    {
+      "label": "@davepagurek",
+      "url": "https://github.com/davepagurek"
+    },
+    {
+      "label": "@perminder-17",
+      "url": "https://github.com/perminder-17"
+    },
+    {
+      "label": "@marioguzzzman",
+      "url": "https://github.com/marioguzzzman"
+    },
+    {
+      "label": "@Divyansh013",
+      "url": "https://github.com/Divyansh013"
+    },
+    {
+      "label": "@JiwonHaam",
+      "url": "https://github.com/JiwonHaam"
+    },
+    {
+      "label": "@eupthere",
+      "url": "https://github.com/eupthere"
+    },
+    {
+      "label": "@limzykenneth",
+      "url": "https://github.com/limzykenneth"
+    },
+    {
+      "label": "@lirenjie95",
+      "url": "https://github.com/lirenjie95"
+    },
+    {
+      "label": "@clairep94",
+      "url": "https://github.com/clairep94"
+    },
+    {
+      "label": "@doradocodes",
+      "url": "https://github.com/doradocodes"
+    },
+    {
+      "label": "@khanniie",
+      "url": "https://github.com/khanniie"
+    },
+    {
+      "label": "@kitlord",
+      "url": "https://github.com/kitlord"
+    },
+    {
+      "label": "@Nwakaego-Ego",
+      "url": "https://github.com/Nwakaego-Ego"
+    },
+    {
+      "label": "@clairep94",
+      "url": "https://github.com/clairep94"
+    },
+    {
+      "label": "@doradocodes",
+      "url": "https://github.com/doradocodes"
+    },
+    {
+      "label": "@ksen0",
+      "url": "https://github.com/ksen0"
+    },
+    {
+      "label": "@ogbabydiesal",
+      "url": "https://github.com/ogbabydiesal"
+    },
+    {
+      "label": "@dhowe",
+      "url": "https://github.com/dhowe"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/processing/p5.js#contributors"
+    },
+    {
+      "label": "all-contributors specification",
+      "url": "https://github.com/all-contributors/all-contributors"
+    },
+    {
+      "label": "Emoji Key",
+      "url": "https://allcontributors.org/en/reference/emoji-key/"
+    },
+    {
+      "label": "here",
+      "url": "https://github.com/processing/p5.js/issues/2309"
+    },
+    {
+      "label": "list of possible contribution types",
+      "url": "https://allcontributors.org/en/reference/emoji-key/"
+    },
+    {
+      "label": "CONTRIBUTORS.md",
+      "url": "https://github.com/processing/p5.js/blob/main/CONTRIBUTORS.md"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/processing/p5.js/blob/main/contributors.png"
+    }
+  ],
+  "root_files": [
+    ".github",
+    ".vscode",
+    "contributor_docs",
+    "docs",
+    "lib",
+    "preview",
+    "src",
+    "test",
+    "translations",
+    "utils",
+    ".all-contributorsrc",
+    ".editorconfig",
+    ".gitattributes",
+    ".gitignore",
+    ".oxfmtrc.json",
+    ".oxlintrc.json",
+    "AGENTS.md",
+    "AI_USAGE_POLICY.md",
+    "CODE_OF_CONDUCT.md",
+    "CONTRIBUTING.md",
+    "CONTRIBUTORS.md",
+    "README.md",
+    "SECURITY.md",
+    "contributors.png",
+    "eslint.config.mjs",
+    "license.txt",
+    "package-lock.json",
+    "package.json",
+    "rfc_p5js_2.md",
+    "rolldown.config.js",
+    "stewards.yml",
+    "visual-report.js",
+    "vitest.config.js"
+  ],
+  "release_count": 170,
+  "status": "verified"
+}

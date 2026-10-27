@@ -1,0 +1,139 @@
+{
+  "url": "https://github.com/fand/vedajs",
+  "final_url": "https://github.com/fand/vedajs",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:47:47.746907+00:00",
+  "stars": 162,
+  "forks": 15,
+  "description": "Framework for Shader Arts",
+  "homepage": "",
+  "topics": [],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2017-10-12T04:04:23.000Z",
+  "branch": "main",
+  "commit": "d77df2492adea312481011063e05cf8828e14207",
+  "readme": "VEDA.js Shader Art Framework Install npm install vedajs Usage import Veda from 'vedajs'; const veda = new Veda(); veda.setCanvas(canvas); veda.loadFragmentShader(code); veda.play(); Advanced Usage Fragment shader veda.loadFragmentShader(code); This is equivalent to veda.loadShader({ fs: code }); Vertex shader veda.loadVertexShader(code); This is equivalent to veda.loadShader({ vs: code }); Using both Pass a shader object to loadShader. veda.loadShader({ vs: vertexShaderCode, fs: fragmentShaderCode, }); Multipath rendering Pass an array of shaders to loadShader. veda.loadShader([ { vs: vertexShaderFor1stPass, fs: fragmentShaderFor1stPass, }, { fs: fragmentShaderFor2ndPass, }, ]); Audio input veda.toggleAudio(true); veda.loadShader(shader); MIDI input veda.toggleMidi(true); veda.loadShader(shader); WebCam input veda.toggleCamera(true); veda.loadShader(shader); Keyboard input veda.toggleKeyboard(true); veda.loadShader(shader); Gamepad input veda.toggleGamepad(true); veda.loadShader(shader); Sound shader veda.loadSoundShader(shader); veda.playSound(); Author Takayosi Amagi Website: gmork.in Twitter: @amagitakayosi GitHub: fand LICENSE MIT",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://user-images.githubusercontent.com/1403842/28923702-d8155d46-7899-11e7-817b-1193d138e5b8.png"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/fand/vedajs#vedajs"
+    },
+    {
+      "label": "",
+      "url": "https://user-images.githubusercontent.com/1403842/28673275-1d42b062-731d-11e7-92b0-bde5ca1f1cae.gif"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/12e79feb148e90d042b24ccf43cdb4dcbc64d5b84629ae78539d1796fd72404f/68747470733a2f2f696d672e736869656c64732e696f2f6e706d2f762f766564616a732e737667"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/9fef255357b385ebde5195ffbba907b5d81681a1ec82aa8cc3e3017a2a42ab83/68747470733a2f2f696d672e736869656c64732e696f2f6e706d2f6c2f766564616a732e737667"
+    },
+    {
+      "label": "",
+      "url": "https://greenkeeper.io/"
+    },
+    {
+      "label": "",
+      "url": "https://twitter.com/search?f=tweets&q=%23vedajs&src=typd"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/fand/vedajs#install"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/fand/vedajs#usage"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/fand/vedajs#advanced-usage"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/fand/vedajs#fragment-shader"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/fand/vedajs#vertex-shader"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/fand/vedajs#using-both"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/fand/vedajs#multipath-rendering"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/fand/vedajs#audio-input"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/fand/vedajs#midi-input"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/fand/vedajs#webcam-input"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/fand/vedajs#keyboard-input"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/fand/vedajs#gamepad-input"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/fand/vedajs#sound-shader"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/fand/vedajs#author"
+    },
+    {
+      "label": "gmork.in",
+      "url": "https://gmork.in"
+    },
+    {
+      "label": "@amagitakayosi",
+      "url": "https://twitter.com/amagitakayosi"
+    },
+    {
+      "label": "fand",
+      "url": "https://github.com/fand"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/fand/vedajs#license"
+    }
+  ],
+  "root_files": [
+    ".husky",
+    "examples",
+    "src",
+    ".eslintignore",
+    ".eslintrc.js",
+    ".gitignore",
+    ".prettierrc",
+    ".travis.yml",
+    "CHANGELOG.md",
+    "LICENSE.md",
+    "README.md",
+    "package.json",
+    "renovate.json",
+    "rollup.config.js",
+    "tsconfig.json",
+    "yarn.lock"
+  ],
+  "release_count": 10,
+  "status": "verified"
+}

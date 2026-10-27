@@ -1,0 +1,300 @@
+{
+  "url": "https://github.com/peterhry/CircleType",
+  "final_url": "https://github.com/peterhry/CircleType",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:48:10.020319+00:00",
+  "stars": 697,
+  "forks": 217,
+  "description": "A JavaScript library that lets you curve type on the web.",
+  "homepage": "https://circletype.labwire.ca",
+  "topics": [
+    "javascript",
+    "text-radius",
+    "typography"
+  ],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2013-02-17T22:54:39.000Z",
+  "branch": "master",
+  "commit": "7628917f834eec58bc095b60daace0ea15dea9e1",
+  "readme": "CircleType A JavaScript library that lets you curve type on the web. Demo: https://circletype.labwire.ca Installation In a browser: <script src=\"circletype.min.js\"></script> Using CDN: <script src=\"https://cdn.jsdelivr.net/gh/peterhry/CircleType@2.3.1/dist/circletype.min.js\"></script> Using npm: $ npm i circletype --save Load ES module: import CircleType from `circletype`; API CircleType A CircleType instance creates a circular text element. Kind: global class CircleType new CircleType(elem, [splitter]) .radius() ⇒ number .radius(value) ⇒ CircleType .fullCircle() ⇒ CircleType .dir() ⇒ number .dir(value) ⇒ CircleType .forceWidth() ⇒ boolean .forceWidth(value) ⇒ CircleType .forceHeight() ⇒ boolean .forceHeight(value) ⇒ CircleType .refresh() ⇒ CircleType .destroy() ⇒ CircleType new CircleType(elem, [splitter]) Param Type Description elem HTMLElement A target HTML element. [splitter] function An optional function used to split the element's text content into individual characters Example // Instantiate `CircleType` with an HTML element. const circleType = new CircleType(document.getElementById('myElement')); // Set the text radius and direction. Note: setter methods are chainable. circleType.radius(200).dir(-1); // Provide your own splitter function to handle emojis // @see https://github.com/orling/grapheme-splitter const splitter = new GraphemeSplitter() new CircleType( document.getElementById('myElement'), splitter.splitGraphemes.bind(splitter) ); circleType.radius() ⇒ number Gets the text radius in pixels. The default radius is the radius required for the text to form a complete circle. Kind: instance method of CircleType Returns: number - The current text radius. Example const circleType = new CircleType(document.getElementById('myElement')); circleType.radius(); //=> 150 circleType.radius(value) ⇒ CircleType Sets the desired text radius. The minimum radius is the radius required for the text to form a complete circle. If value is less than the minimum radius, the minimum radius is used. Kind: instance method of CircleType Returns: CircleType - The current instance. Param Type Description value number A new text radius in pixels. Example const circleType = new CircleType(document.getElementById('myElement')); // Set the radius to 150 pixels. circleType.radius(150); circleType.fullCircle() ⇒ CircleType Adds equal spacing between letters to make a complete circle regardless of the radius. Kind: instance method of CircleType Returns: CircleType - The current instance. Example const circleType = new CircleType(document.getElementById('myElement')); circleType.radius(200); // Adds spacing between letters to make a full rotation circleType.fullCircle(); circleType.dir() ⇒ number Gets the text direction. 1 is clockwise, -1 is counter-clockwise. Kind: instance method of CircleType Returns: number - The current text radius. Example const circleType = new CircleType(document.getElementById('myElement')); circleType.dir(); //=> 1 (clockwise) circleType.dir(value) ⇒ CircleType Sets the text direction. 1 is clockwise, -1 is counter-clockwise. Kind: instance method of CircleType Returns: CircleType - The current instance. Param Type Description value number A new text direction. Example const circleType = new CircleType(document.getElementById('myElement')); // Set the direction to counter-clockwise. circleType.dir(-1); // Set the direction to clockwise. circleType.dir(1); circleType.forceWidth() ⇒ boolean Gets the forceWidth option. If true the width of the arc is calculated and applied to the element as an inline style. Defaults to false. Kind: instance method of CircleType Returns: boolean - The current forceWidth value Example const circleType = new CircleType(document.getElementById('myElement')); circleType.forceWidth(); //=> false circleType.forceWidth(value) ⇒ CircleType Sets the forceWidth option. If true the width of the arc is calculated and applied to the element as an inline style. Kind: instance method of CircleType Returns: CircleType - The current instance. Param Type Description value boolean true if the width should be set Example const circleType = new CircleType(document.getElementById('myElement')); circleType.radius(384); console.log(circleType.container); //=> <div style=\"position: relative; height: 3.18275em;\">...</div> // Enable the force width option circleType.forceWidth(true); console.log(circleType.container); //=> <div style=\"position: relative; height: 3.18275em; width: 12.7473em;\">...</div> circleType.forceHeight() ⇒ boolean Gets the forceHeight option. If true the height of the arc is calculated and applied to the element as an inline style. Defaults to true. Kind: instance method of CircleType Returns: boolean - The current forceHeight value Example const circleType = new CircleType(document.getElementById('myElement')); circleType.forceHeight(); //=> true circleType.forceHeight(value) ⇒ CircleType Sets the forceHeight option. If true the height of the arc is calculated and applied to the element as an inline style. Kind: instance method of CircleType Returns: CircleType - The current instance. Param Type Description value boolean true if the height should be set Example const circleType = new CircleType(document.getElementById('myElement')); circleType.radius(384); console.log(circleType.container); //=> <div style=\"position: relative; height: 3.18275em;\">...</div> // Disable the force height option circleType.forceHeight(false); console.log(circleType.container); //=> <div style=\"position: relative;\">...</div> circleType.refresh() ⇒ CircleType Schedules a task to recalculate the height of the element. This should be called if the font size is ever changed. Kind: instance method of CircleType Returns: CircleType - The current instance. Example const circleType = new CircleType(document.getElementById('myElement')); circleType.refresh(); circleType.destroy() ⇒ CircleType Removes the CircleType effect from the element, restoring it to its original state. Kind: instance method of CircleType Returns: CircleType - This instance. Example const circleType = new CircleType(document.getElementById('myElement')); // Restore `myElement` to its original state. circleType.destroy(); Development Commands Command Description npm run dev Start dev server npm start Build for release npm test Run unit and screenshot tests npm run docs Generate documentation npm run reference Generate reference screenshots",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://github.com/peterhry/CircleType#circletype"
+    },
+    {
+      "label": "",
+      "url": "https://travis-ci.org/peterhry/CircleType"
+    },
+    {
+      "label": "https://circletype.labwire.ca",
+      "url": "https://circletype.labwire.ca"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/peterhry/CircleType#installation"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/peterhry/CircleType#api"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/peterhry/CircleType#circletype-1"
+    },
+    {
+      "label": "CircleType",
+      "url": "https://github.com/peterhry/CircleType#CircleType"
+    },
+    {
+      "label": "new CircleType(elem, [splitter])",
+      "url": "https://github.com/peterhry/CircleType#new_CircleType_new"
+    },
+    {
+      "label": ".radius()",
+      "url": "https://github.com/peterhry/CircleType#CircleType+radius"
+    },
+    {
+      "label": ".radius(value)",
+      "url": "https://github.com/peterhry/CircleType#CircleType+radius"
+    },
+    {
+      "label": "CircleType",
+      "url": "https://github.com/peterhry/CircleType#CircleType"
+    },
+    {
+      "label": ".fullCircle()",
+      "url": "https://github.com/peterhry/CircleType#CircleType+fullCircle"
+    },
+    {
+      "label": "CircleType",
+      "url": "https://github.com/peterhry/CircleType#CircleType"
+    },
+    {
+      "label": ".dir()",
+      "url": "https://github.com/peterhry/CircleType#CircleType+dir"
+    },
+    {
+      "label": ".dir(value)",
+      "url": "https://github.com/peterhry/CircleType#CircleType+dir"
+    },
+    {
+      "label": "CircleType",
+      "url": "https://github.com/peterhry/CircleType#CircleType"
+    },
+    {
+      "label": ".forceWidth()",
+      "url": "https://github.com/peterhry/CircleType#CircleType+forceWidth"
+    },
+    {
+      "label": ".forceWidth(value)",
+      "url": "https://github.com/peterhry/CircleType#CircleType+forceWidth"
+    },
+    {
+      "label": "CircleType",
+      "url": "https://github.com/peterhry/CircleType#CircleType"
+    },
+    {
+      "label": ".forceHeight()",
+      "url": "https://github.com/peterhry/CircleType#CircleType+forceHeight"
+    },
+    {
+      "label": ".forceHeight(value)",
+      "url": "https://github.com/peterhry/CircleType#CircleType+forceHeight"
+    },
+    {
+      "label": "CircleType",
+      "url": "https://github.com/peterhry/CircleType#CircleType"
+    },
+    {
+      "label": ".refresh()",
+      "url": "https://github.com/peterhry/CircleType#CircleType+refresh"
+    },
+    {
+      "label": "CircleType",
+      "url": "https://github.com/peterhry/CircleType#CircleType"
+    },
+    {
+      "label": ".destroy()",
+      "url": "https://github.com/peterhry/CircleType#CircleType+destroy"
+    },
+    {
+      "label": "CircleType",
+      "url": "https://github.com/peterhry/CircleType#CircleType"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/peterhry/CircleType#new-circletypeelem-splitter"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/peterhry/CircleType#circletyperadius--number"
+    },
+    {
+      "label": "CircleType",
+      "url": "https://github.com/peterhry/CircleType#CircleType"
+    },
+    {
+      "label": "CircleType",
+      "url": "https://github.com/peterhry/CircleType#CircleType"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/peterhry/CircleType#circletyperadiusvalue--circletype"
+    },
+    {
+      "label": "CircleType",
+      "url": "https://github.com/peterhry/CircleType#CircleType"
+    },
+    {
+      "label": "CircleType",
+      "url": "https://github.com/peterhry/CircleType#CircleType"
+    },
+    {
+      "label": "CircleType",
+      "url": "https://github.com/peterhry/CircleType#CircleType"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/peterhry/CircleType#circletypefullcircle--circletype"
+    },
+    {
+      "label": "CircleType",
+      "url": "https://github.com/peterhry/CircleType#CircleType"
+    },
+    {
+      "label": "CircleType",
+      "url": "https://github.com/peterhry/CircleType#CircleType"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/peterhry/CircleType#circletypedir--number"
+    },
+    {
+      "label": "CircleType",
+      "url": "https://github.com/peterhry/CircleType#CircleType"
+    },
+    {
+      "label": "CircleType",
+      "url": "https://github.com/peterhry/CircleType#CircleType"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/peterhry/CircleType#circletypedirvalue--circletype"
+    },
+    {
+      "label": "CircleType",
+      "url": "https://github.com/peterhry/CircleType#CircleType"
+    },
+    {
+      "label": "CircleType",
+      "url": "https://github.com/peterhry/CircleType#CircleType"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/peterhry/CircleType#circletypeforcewidth--boolean"
+    },
+    {
+      "label": "CircleType",
+      "url": "https://github.com/peterhry/CircleType#CircleType"
+    },
+    {
+      "label": "CircleType",
+      "url": "https://github.com/peterhry/CircleType#CircleType"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/peterhry/CircleType#circletypeforcewidthvalue--circletype"
+    },
+    {
+      "label": "CircleType",
+      "url": "https://github.com/peterhry/CircleType#CircleType"
+    },
+    {
+      "label": "CircleType",
+      "url": "https://github.com/peterhry/CircleType#CircleType"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/peterhry/CircleType#circletypeforceheight--boolean"
+    },
+    {
+      "label": "CircleType",
+      "url": "https://github.com/peterhry/CircleType#CircleType"
+    },
+    {
+      "label": "CircleType",
+      "url": "https://github.com/peterhry/CircleType#CircleType"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/peterhry/CircleType#circletypeforceheightvalue--circletype"
+    },
+    {
+      "label": "CircleType",
+      "url": "https://github.com/peterhry/CircleType#CircleType"
+    },
+    {
+      "label": "CircleType",
+      "url": "https://github.com/peterhry/CircleType#CircleType"
+    },
+    {
+      "label": "CircleType",
+      "url": "https://github.com/peterhry/CircleType#CircleType"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/peterhry/CircleType#circletyperefresh--circletype"
+    },
+    {
+      "label": "CircleType",
+      "url": "https://github.com/peterhry/CircleType#CircleType"
+    },
+    {
+      "label": "CircleType",
+      "url": "https://github.com/peterhry/CircleType#CircleType"
+    },
+    {
+      "label": "CircleType",
+      "url": "https://github.com/peterhry/CircleType#CircleType"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/peterhry/CircleType#circletypedestroy--circletype"
+    },
+    {
+      "label": "CircleType",
+      "url": "https://github.com/peterhry/CircleType#CircleType"
+    },
+    {
+      "label": "CircleType",
+      "url": "https://github.com/peterhry/CircleType#CircleType"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/peterhry/CircleType#development-commands"
+    }
+  ],
+  "root_files": [
+    "assets",
+    "backstop_data/bitmaps_reference",
+    "dist",
+    "src",
+    ".babelrc",
+    ".eslintrc.js",
+    ".gitignore",
+    ".travis.yml",
+    "CODE_OF_CONDUCT.md",
+    "LICENSE",
+    "README.hbs",
+    "README.md",
+    "backstop.json",
+    "index.html",
+    "package-lock.json",
+    "package.json",
+    "webpack.config.js"
+  ],
+  "release_count": 19,
+  "status": "verified"
+}

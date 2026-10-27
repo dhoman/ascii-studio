@@ -1,0 +1,320 @@
+{
+  "url": "https://github.com/torch2424/aesthetic-css",
+  "final_url": "https://github.com/torch2424/aesthetic-css",
+  "http_status": 200,
+  "checked_at": "2026-10-23T17:46:57.162552+00:00",
+  "stars": 219,
+  "forks": 18,
+  "description": "A vaporwave CSS framework 🌴🐬",
+  "homepage": "https://torch2424.github.io/aesthetic-css/",
+  "topics": [
+    "css",
+    "css-framework",
+    "framework",
+    "html",
+    "vaporwave"
+  ],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2018-05-04T06:20:20.000Z",
+  "branch": "master",
+  "commit": "4ed3fb8f5a3ae8d1d856a9adac7983febe76b3e4",
+  "readme": "A E S T H E T I C C S S A vaporwave css framework Demo / Documentation Table Of Contents Features Example Elements Installation npm html link Importing Modules Suggested Fonts Google Fonts Contributing Installation Npm Scripts & CLI Commands Reference Material Authors License Features Includes Elements, Colors, and Effects ✨ Framework fits in ~40KB (as of 9/17/18) 👌 Written with SASS, only import what you need 😍 Compatible with AMPHTML ⚡ Example Elements Installation npm npm install --save aesthetic-css html link Feel free to download the latest aesthetic.css from the master branch, or one of our releases. <link rel=\"stylesheet\" type=\"text/css\" href=\"aesthetic.css\"> Importing Modules Similar to Bulma's Modularity, you can import specific sass files from the src directory. For example: @import \"../node_modules/aesthetic-css/src/variables\"; Suggested Fonts Google Fonts Cinzel PlayFair Monoton VT323 Press Start 2P Limelight Share Tech Mono Six Caps Cutive Mono Spectral SC Matte SC Im Fell French Cannon SC Contributing Feel free to fork and submit PRs! Any help is much appreciated, and would be a ton of fun! I would appreciate opening an issue, or replying to an already open issue to express intent of trying to solve the issue, and we discuss. Installation Just your standard node app. Install Node with nvm, git clone the project, and npm install, and you should be good to go! Npm Scripts & CLI Commands # Watch for changes and serve the project. You want to use this for development/contributing. npm run dev # Build the demo, and the Sass to css npm run build # Runs npm run build, but includes the livereload script. Used in npm run dev npm run build:dev # Only builds the Sass to css npm run style:build # Run the http server for development npm run serve # Run the livereload server to livereload the http server npm run livereload # Watch the files for changes, and build npm run watch Reference Material felixrieseberg/windows95 httpsters r/VaporwaveAesthetics/ HTML Nostalgia: 10 Things From the 90s 5 ESSENTIAL VAPORWAVE FONTS windows_98.css seapunk vaporwave colourlovers Text Glitch Effect Windows 95 In your Browser Authors Aaron Turner and Daniel Gomez License Licensed under Apache 2.0. 🐦",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://github.com/torch2424/aesthetic-css#a-e-s-t-h-e-t-i-c---c-s-s"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/52d0c367c71c309471cdf2d30f8fd5ceb60da000efdbdbce1fb6832ea12bc1a7/68747470733a2f2f696d672e736869656c64732e696f2f6e706d2f64742f6165737468657469632d6373732e737667"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/9cba96a9faadbee52250fe9c8fe828e50f963922739b4a90772c3bd48028d6bd/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f6c6963656e73652f746f726368323432342f6165737468657469632d6373732e737667"
+    },
+    {
+      "label": "Demo / Documentation",
+      "url": "https://torch2424.github.io/aesthetic-css/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/torch2424/aesthetic-css/blob/master/readme/aestheticLoop.gif"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/torch2424/aesthetic-css#table-of-contents"
+    },
+    {
+      "label": "Features",
+      "url": "https://github.com/torch2424/aesthetic-css#features"
+    },
+    {
+      "label": "Example Elements",
+      "url": "https://github.com/torch2424/aesthetic-css#example-elements"
+    },
+    {
+      "label": "Installation",
+      "url": "https://github.com/torch2424/aesthetic-css#installation"
+    },
+    {
+      "label": "npm",
+      "url": "https://github.com/torch2424/aesthetic-css#npm"
+    },
+    {
+      "label": "html link",
+      "url": "https://github.com/torch2424/aesthetic-css#html-link"
+    },
+    {
+      "label": "Importing Modules",
+      "url": "https://github.com/torch2424/aesthetic-css#importing-modules"
+    },
+    {
+      "label": "Suggested Fonts",
+      "url": "https://github.com/torch2424/aesthetic-css#suggested-fonts"
+    },
+    {
+      "label": "Google Fonts",
+      "url": "https://github.com/torch2424/aesthetic-css#google-fonts"
+    },
+    {
+      "label": "Contributing",
+      "url": "https://github.com/torch2424/aesthetic-css#contributing"
+    },
+    {
+      "label": "Installation",
+      "url": "https://github.com/torch2424/aesthetic-css#installation-1"
+    },
+    {
+      "label": "Npm Scripts & CLI Commands",
+      "url": "https://github.com/torch2424/aesthetic-css#npm-scripts--cli-commands"
+    },
+    {
+      "label": "Reference Material",
+      "url": "https://github.com/torch2424/aesthetic-css#reference-material"
+    },
+    {
+      "label": "Authors",
+      "url": "https://github.com/torch2424/aesthetic-css#authors"
+    },
+    {
+      "label": "License",
+      "url": "https://github.com/torch2424/aesthetic-css#license"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/torch2424/aesthetic-css#features"
+    },
+    {
+      "label": "SASS",
+      "url": "https://sass-lang.com/"
+    },
+    {
+      "label": "AMPHTML",
+      "url": "https://github.com/ampproject/amphtml"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/torch2424/aesthetic-css#example-elements"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/torch2424/aesthetic-css/blob/master/readme/buttonExample.png"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/torch2424/aesthetic-css/blob/master/readme/textInputExample.png"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/torch2424/aesthetic-css/blob/master/readme/crtExample.png"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/torch2424/aesthetic-css/blob/master/readme/windows95Example.png"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/torch2424/aesthetic-css/blob/master/readme/windowsXpExample.png"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/torch2424/aesthetic-css#installation"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/torch2424/aesthetic-css#npm"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/torch2424/aesthetic-css#html-link"
+    },
+    {
+      "label": "releases",
+      "url": "https://github.com/torch2424/aesthetic-css/releases"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/torch2424/aesthetic-css#importing-modules"
+    },
+    {
+      "label": "Bulma's Modularity",
+      "url": "https://bulma.io/documentation/overview/modular/"
+    },
+    {
+      "label": "sass",
+      "url": "https://sass-lang.com/"
+    },
+    {
+      "label": "src directory",
+      "url": "https://github.com/torch2424/aesthetic-css/blob/master/src"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/torch2424/aesthetic-css#suggested-fonts"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/torch2424/aesthetic-css#google-fonts"
+    },
+    {
+      "label": "Cinzel",
+      "url": "https://fonts.google.com/specimen/Cinzel"
+    },
+    {
+      "label": "PlayFair",
+      "url": "https://fonts.google.com/specimen/Playfair+Display+SC"
+    },
+    {
+      "label": "Monoton",
+      "url": "https://fonts.google.com/specimen/Monoton"
+    },
+    {
+      "label": "VT323",
+      "url": "https://fonts.google.com/specimen/VT323"
+    },
+    {
+      "label": "Press Start 2P",
+      "url": "https://fonts.google.com/specimen/Press+Start+2P"
+    },
+    {
+      "label": "Limelight",
+      "url": "https://fonts.google.com/specimen/Limelight"
+    },
+    {
+      "label": "Share Tech Mono",
+      "url": "https://fonts.google.com/specimen/Share+Tech+Mono"
+    },
+    {
+      "label": "Six Caps",
+      "url": "https://fonts.google.com/specimen/Six+Caps"
+    },
+    {
+      "label": "Cutive Mono",
+      "url": "https://fonts.google.com/specimen/Cutive+Mono"
+    },
+    {
+      "label": "Spectral SC",
+      "url": "https://fonts.google.com/specimen/Spectral+SC"
+    },
+    {
+      "label": "Matte SC",
+      "url": "https://fonts.google.com/specimen/Mate+SC"
+    },
+    {
+      "label": "Im Fell French Cannon SC",
+      "url": "https://fonts.google.com/specimen/IM+Fell+French+Canon+SC"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/torch2424/aesthetic-css#contributing"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/torch2424/aesthetic-css#installation-1"
+    },
+    {
+      "label": "nvm",
+      "url": "https://github.com/creationix/nvm"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/torch2424/aesthetic-css#npm-scripts--cli-commands"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/torch2424/aesthetic-css#reference-material"
+    },
+    {
+      "label": "felixrieseberg/windows95",
+      "url": "https://github.com/felixrieseberg/windows95"
+    },
+    {
+      "label": "httpsters",
+      "url": "http://httpsters.me"
+    },
+    {
+      "label": "r/VaporwaveAesthetics/",
+      "url": "https://www.reddit.com/r/VaporwaveAesthetics/"
+    },
+    {
+      "label": "HTML Nostalgia: 10 Things From the 90s",
+      "url": "https://icons8.com/articles/html-nostalgia-10-things-from-the-90s/"
+    },
+    {
+      "label": "5 ESSENTIAL VAPORWAVE FONTS",
+      "url": "https://www.hipsthetic.com/5-essential-vaporwave-fonts/"
+    },
+    {
+      "label": "windows_98.css",
+      "url": "https://github.com/contra/windows_98.css"
+    },
+    {
+      "label": "seapunk vaporwave colourlovers",
+      "url": "http://www.colourlovers.com/palette/3636765/seapunk_vaporwave"
+    },
+    {
+      "label": "Text Glitch Effect",
+      "url": "https://css-tricks.com/glitch-effect-text-images-svg/"
+    },
+    {
+      "label": "Windows 95 In your Browser",
+      "url": "https://win95.ajf.me/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/torch2424/aesthetic-css#authors"
+    },
+    {
+      "label": "Aaron Turner",
+      "url": "https://github.com/torch2424"
+    },
+    {
+      "label": "Daniel Gomez",
+      "url": "https://github.com/echo-exe"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/torch2424/aesthetic-css#license"
+    },
+    {
+      "label": "Apache 2.0",
+      "url": "https://choosealicense.com/licenses/apache-2.0/"
+    }
+  ],
+  "root_files": [
+    "demo",
+    "readme",
+    "src",
+    ".DS_Store",
+    ".gitignore",
+    "LICENSE",
+    "README.md",
+    "aesthetic.css",
+    "build.js",
+    "package-lock.json",
+    "package.json"
+  ],
+  "release_count": 0,
+  "status": "verified"
+}

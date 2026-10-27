@@ -1,0 +1,69 @@
+{
+  "url": "https://github.com/moonwave99/fretboard.js",
+  "final_url": "https://github.com/moonwave99/fretboard.js",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:48:03.573390+00:00",
+  "stars": 107,
+  "forks": 27,
+  "description": "Fretboard diagram generator",
+  "homepage": "https://moonwave99.github.io/fretboard.js/",
+  "topics": [],
+  "license": "",
+  "archived": false,
+  "created_at": "2019-10-30T10:50:05.000Z",
+  "branch": "master",
+  "commit": "d0afe2d7bc8e8beb397d3269d78567dcf3546523",
+  "readme": "Fretboard.js Fretboard.js is: a guitar/bass fretboard SVG visualisation; a set of music oriented tools - as scale boxes, arpeggios and chord shapes; an API for user interaction. Usage and installation See online documentation ISC License Copyright (c) 2020, Diego Caponera hello@diegocaponera.com Permission to use, copy, modify, and/or distribute this software for any purpose with or without fee is hereby granted, provided that the above copyright notice and this permission notice appear in all copies. THE SOFTWARE IS PROVIDED \"AS IS\" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://github.com/moonwave99/fretboard.js#fretboardjs"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/b153916fd103f1dc6df999d4de89a9bc3b260ee10137af220005ac658cc984d1/68747470733a2f2f6d6f6f6e7761766539392e6769746875622e696f2f66726574626f6172642e6a732f6173736574732f69636f6e2e737667"
+    },
+    {
+      "label": "Fretboard.js",
+      "url": "https://moonwave99.github.io/fretboard.js/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/moonwave99/fretboard.js#usage-and-installation"
+    },
+    {
+      "label": "See online documentation",
+      "url": "https://moonwave99.github.io/fretboard.js/documentation-fretboard.html"
+    },
+    {
+      "label": "ISC License",
+      "url": "https://spdx.org/licenses/ISC"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/moonwave99/fretboard.js#isc-license"
+    },
+    {
+      "label": "hello@diegocaponera.com",
+      "url": "mailto:hello@diegocaponera.com"
+    }
+  ],
+  "root_files": [
+    ".github/workflows",
+    "site",
+    "src",
+    ".eslintignore",
+    ".eslintrc.cjs",
+    ".gitignore",
+    ".prettierignore",
+    "README.md",
+    "package-lock.json",
+    "package.json",
+    "rollup.config.js",
+    "tsconfig.json",
+    "typings.d.ts",
+    "webpack.config.js"
+  ],
+  "release_count": 1,
+  "status": "verified"
+}

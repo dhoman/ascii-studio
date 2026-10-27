@@ -1,0 +1,321 @@
+{
+  "url": "https://github.com/motiondivision/motion",
+  "final_url": "https://github.com/motiondivision/motion",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:48:03.808854+00:00",
+  "stars": 34447,
+  "forks": 1455,
+  "description": "A modern animation library for React and JavaScript",
+  "homepage": "https://motion.dev",
+  "topics": [
+    "animation",
+    "animation-js",
+    "motion",
+    "react",
+    "reactanimations",
+    "spring"
+  ],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2018-11-16T09:48:38.000Z",
+  "branch": "main",
+  "commit": "99e7f5aa31e5f55e024b6553cbb3906248eac8de",
+  "readme": "Motion An open source animation libraryfor JavaScript, React and Vue # React / JavaScript npm install motion # Vue npm install motion-v Table of Contents Why Motion? 🍦 Platforms 🎓 Examples 🎨 Motion Studio 🤖 Using Motion with AI ⚡️ Motion+ 👩🏻‍⚖️ License 💎 Contribute ✨ Sponsors Why Motion? Simple API: First-class React, JavaScript, and Vue packages. Hybrid engine: Power of JavaScript combined with native browser APIs for 120fps, GPU-accelerated animations. Production-ready: TypeScript, extensive test suite, tree-shakable, tiny footprint. Batteries included: Gestures, springs, layout transitions, scroll-linked effects, timelines. 🍦 Platforms Motion is available for React, JavaScript and Vue. React import { motion } from \"motion/react\" function Component() { return <motion.div animate={{ x: 100 }} /> } Get started with Motion for React. Note: Framer Motion is now Motion. Import from motion/react instead of framer-motion. JS import { animate } from \"motion\" animate(\"#box\", { x: 100 }) Get started with JavaScript. Vue <script> import { motion } from \"motion-v\" </script> <template> <motion.div :animate={{ x: 100 }} /> </template> Get started with Motion for Vue. 🎓 Examples & tutorials Browse 450+ official examples, with copy-paste code that'll level-up your animations whether you're a beginner or an expert. Over 110 examples come with a full step-by-step tutorial on their example page. 🤖 Using Motion with AI Give your coding agent current Motion docs: Agent skill: npx motion-ai installs the free, MIT-licensed /motion skill and sets up Motion's MCP servers for Claude Code, Cursor, Amp, OpenCode, Gemini CLI and Copilot. Source on GitHub. MCP server: https://mcp.motion.dev searches the Motion docs and example metadata. It is free and needs no account. llms.txt: motion.dev/llms.txt indexes every docs page. Motion+ pages are labelled as paid, with their install and import. Motion+ adds example and Motion UI source, MotionScore performance audits and CSS spring generation for your agent. 🎨 Motion Studio A visual animation editor for your website. Edit keyframes, easing curves and springs on a live timeline, or describe changes to the Ultramotion agent, then apply the result straight to your code with Cursor, Codex or Claude. Explore Motion Studio ⚡️ Motion+ A one-time Personal licence with lifetime updates, or an annual per-seat Business plan for teams: 450+ examples 110+ tutorials Premium APIs like Cursor and Ticker Transition editor for Cursor and VS Code AI Kit: example and Motion UI source, MotionScore audits and CSS springs for your agent Private Discord Early access content Get Motion+ 👩🏻‍⚖️ License Motion is MIT licensed. 💎 Contribute Want to contribute to Motion? Our contributing guide has you covered. ✨ Sponsors Motion is sustainable thanks to the kind support of its sponsors. Become a sponsor Partners Motion powers the animations for all websites built with Framer, the web builder for creative pros. The Motion website itself is built on Framer, for its delightful canvas-based editing and powerful CMS features. Motion drives the animations on the Cursor homepage, and is working with Cursor to bring powerful AI workflows to the Motion examples and docs. Platinum Gold Silver Personal sponsors OlegWock Lambert Weller Jake LeBoeuf",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://private-user-images.githubusercontent.com/7850794/444000081-00d6d1c3-72c4-4c2f-a664-69da13182ffc.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3OTI3MTMxODMsIm5iZiI6MTc5MjcxMjg4MywicGF0aCI6Ii83ODUwNzk0LzQ0NDAwMDA4MS0wMGQ2ZDFjMy03MmM0LTRjMmYtYTY2NC02OWRhMTMxODJmZmMucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI2MTAyMiUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNjEwMjJUMjM0ODAzWiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9YWI2ZDhmNjlhM2M1OGQ4ODdhNjdhZTQ5MzA5YjRlM2E3YjI5YTAxOGVmMjE1YjVkZGIwZjI2NWFjNTFjMTZkNiZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QmcmVzcG9uc2UtY29udGVudC10eXBlPWltYWdlJTJGcG5nIn0.LcsJZksAeWwZyVAcENxWUy2YF6VLfBEFn76AgnAo8Q4"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/motiondivision/motion#-motion"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/motiondivision/motion#--an-open-source-animation-libraryfor-javascript-react-and-vue"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/motion"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/motion"
+    },
+    {
+      "label": "",
+      "url": "https://www.jsdelivr.com/package/npm/motion"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/82b1e0e64b6cedb70d9d2556126639f25ebcc676e5deec5e3d4383905d9ea734/68747470733a2f2f696d672e736869656c64732e696f2f6e706d2f6c2f6d6f74696f6e3f636f6c6f723d464632423645"
+    },
+    {
+      "label": "",
+      "url": "https://score.motion.dev/site/motion.dev?utm_source=github&utm_medium=readme-badge"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/motiondivision/motion#table-of-contents"
+    },
+    {
+      "label": "Why Motion?",
+      "url": "https://github.com/motiondivision/motion#why-motion"
+    },
+    {
+      "label": "🍦 Platforms",
+      "url": "https://github.com/motiondivision/motion#-platforms"
+    },
+    {
+      "label": "🎓 Examples",
+      "url": "https://github.com/motiondivision/motion#-examples"
+    },
+    {
+      "label": "🎨 Motion Studio",
+      "url": "https://github.com/motiondivision/motion#-motion-studio"
+    },
+    {
+      "label": "🤖 Using Motion with AI",
+      "url": "https://github.com/motiondivision/motion#-using-motion-with-ai"
+    },
+    {
+      "label": "⚡️ Motion+",
+      "url": "https://github.com/motiondivision/motion#-motion"
+    },
+    {
+      "label": "👩🏻‍⚖️ License",
+      "url": "https://github.com/motiondivision/motion#-license"
+    },
+    {
+      "label": "💎 Contribute",
+      "url": "https://github.com/motiondivision/motion#-contribute"
+    },
+    {
+      "label": "✨ Sponsors",
+      "url": "https://github.com/motiondivision/motion#-sponsors"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/motiondivision/motion#why-motion"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/motiondivision/motion#-platforms"
+    },
+    {
+      "label": "React",
+      "url": "https://motion.dev/docs/react"
+    },
+    {
+      "label": "JavaScript",
+      "url": "https://motion.dev/docs/quick-start"
+    },
+    {
+      "label": "Vue",
+      "url": "https://motion.dev/docs/vue"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/motiondivision/motion#react"
+    },
+    {
+      "label": "Motion for React",
+      "url": "https://motion.dev/docs/react"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/motiondivision/motion#js"
+    },
+    {
+      "label": "JavaScript",
+      "url": "https://motion.dev/docs/quick-start"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/motiondivision/motion#vue"
+    },
+    {
+      "label": "Motion for Vue",
+      "url": "https://motion.dev/docs/vue"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/motiondivision/motion#-examples--tutorials"
+    },
+    {
+      "label": "official examples",
+      "url": "https://motion.dev/examples"
+    },
+    {
+      "label": "their example page",
+      "url": "https://motion.dev/examples"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/motiondivision/motion#-using-motion-with-ai"
+    },
+    {
+      "label": "Source on GitHub",
+      "url": "https://github.com/motiondivision/ai-kit"
+    },
+    {
+      "label": "motion.dev/llms.txt",
+      "url": "https://motion.dev/llms.txt?utm_source=github-readme"
+    },
+    {
+      "label": "Motion+",
+      "url": "https://motion.dev/plus?utm_source=github-readme"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/motiondivision/motion#-motion-studio"
+    },
+    {
+      "label": "Explore Motion Studio",
+      "url": "https://motion.dev/studio"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/motiondivision/motion#️-motion"
+    },
+    {
+      "label": "Cursor",
+      "url": "https://motion.dev/docs/cursor"
+    },
+    {
+      "label": "Ticker",
+      "url": "https://motion.dev/docs/react-ticker"
+    },
+    {
+      "label": "Get Motion+",
+      "url": "https://motion.dev/plus"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/motiondivision/motion#‍️-license"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/motiondivision/motion#-contribute"
+    },
+    {
+      "label": "contributing guide",
+      "url": "https://github.com/motiondivision/motion/blob/master/CONTRIBUTING.md"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/motiondivision/motion#-sponsors"
+    },
+    {
+      "label": "Become a sponsor",
+      "url": "https://motion.dev/sponsor"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/motiondivision/motion#partners"
+    },
+    {
+      "label": "",
+      "url": "https://framer.link/FlnUbQY"
+    },
+    {
+      "label": "",
+      "url": "https://cursor.com"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/motiondivision/motion#platinum"
+    },
+    {
+      "label": "",
+      "url": "https://linear.app"
+    },
+    {
+      "label": "",
+      "url": "https://figma.com"
+    },
+    {
+      "label": "",
+      "url": "https://sanity.io"
+    },
+    {
+      "label": "",
+      "url": "https://clerk.com?utm_campaign=motion"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/motiondivision/motion#gold"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/motiondivision/motion#silver"
+    },
+    {
+      "label": "",
+      "url": "https://liveblocks.io"
+    },
+    {
+      "label": "",
+      "url": "https://www.frontend.fyi/?utm_source=motion"
+    },
+    {
+      "label": "",
+      "url": "https://firecrawl.dev"
+    },
+    {
+      "label": "",
+      "url": "https://bolt.new"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/motiondivision/motion#personal-sponsors"
+    },
+    {
+      "label": "OlegWock",
+      "url": "https://sinja.io"
+    },
+    {
+      "label": "Lambert Weller",
+      "url": "https://github.com/l-mbert"
+    },
+    {
+      "label": "Jake LeBoeuf",
+      "url": "https://jklb.wf"
+    }
+  ],
+  "root_files": [
+    ".agents/skills",
+    ".circleci",
+    ".claude",
+    ".devcontainer",
+    ".github",
+    ".vscode",
+    ".yarn",
+    "dev",
+    "packages",
+    "plans",
+    "scripts",
+    "tests",
+    ".cursorrules",
+    ".gitignore",
+    ".nvmrc",
+    ".prettierrc.json",
+    ".yarnrc.yml",
+    "AGENTS.md",
+    "CHANGELOG.md",
+    "CLAUDE.md",
+    "CONTRIBUTING.md",
+    "FUNDING.json",
+    "LICENSE.md",
+    "Makefile",
+    "README.md",
+    "lerna.json",
+    "package.json",
+    "playwright.config.ts",
+    "skills-lock.json",
+    "turbo.json",
+    "yarn.lock"
+  ],
+  "release_count": 0,
+  "status": "verified"
+}

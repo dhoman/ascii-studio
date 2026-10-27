@@ -1,0 +1,92 @@
+{
+  "url": "https://github.com/ianprime0509/pitchy",
+  "final_url": "https://github.com/ianprime0509/pitchy",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:47:51.863193+00:00",
+  "stars": 138,
+  "forks": 16,
+  "description": "A simple pitch detection module for Node.js and the browser.",
+  "homepage": "",
+  "topics": [],
+  "license": "0BSD",
+  "archived": false,
+  "created_at": "2018-02-10T21:25:20.000Z",
+  "branch": "main",
+  "commit": "d41851e038d05be4352245a4de414997b507cc53",
+  "readme": "pitchy pitchy is a simple pitch-detection library written entirely in JavaScript that aims to be fast and accurate enough to be used in real-time applications such as tuners. To do this, it uses the McLeod Pitch Method, described in the paper A Smarter Way to Find Pitch by Philip McLeod and Geoff Wyvill. A playground page is available to allow experimentation with the library and how different configurations may impact the quality of the results. Note for v4 users: as of v4, Pitchy is distributed as a pure ES module. There are several implications of this for using various build and test tools: a Gist by sindresorhus gives a more detailed overview (including suggestions for various tools) than what can be covered in this README. The short version is that you may want to consider migrating your own project to ES modules. If all else fails, you can continue to use v3, as v4 contains only minor functional changes. Installation Pitchy can be installed using NPM (or similar tools such as Yarn): npm install pitchy After installing, it can be used via an ES module import: import { PitchDetector } from \"pitchy\"; It is also possible to use a CDN, such as esm.sh, directly from a browser or Deno: import { PitchDetector } from \"https://esm.sh/pitchy@4\"; Note that this package is ESM-only, meaning it can't be used with require. However, it can still be used from CommonJS code, albeit only in async contexts, using dynamic import: const { PitchDetector } = await import(\"pitchy\"); Usage The main functionality of this module is exposed by the PitchDetector class. Instances of PitchDetector are generally created using one of the three static helper methods corresponding to the desired output buffer type: PitchDetector.forFloat32Array(inputLength) PitchDetector.forFloat64Array(inputLength) PitchDetector.forNumberArray(inputLength) Once a PitchDetector instance is created, the findPitch(input, sampleRate) method can be used to find the pitch of the time-domain data in input, returning an array consisting of the detected pitch (in Hz) and a \"clarity\" measure from 0 to 1 that indicates how \"clear\" the pitch is (low values indicate noise rather than a true pitch). For efficiency reasons, the input to the findPitch method must always have the length indicated by the inputLength that was passed when constructing the PitchDetector. An Autocorrelator class with a similar interface to PitchDetector is exposed for those who want to use the autocorrelation function for other things. A simple usage example is available on GitHub Pages. License zig-xml is free software, released under the Zero Clause BSD License, as found in the LICENSE file of this repository. This license places no restrictions on your use, modification, or redistribution of the library: providing attribution is appreciated, but not required.",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://github.com/ianprime0509/pitchy#pitchy"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/pitchy"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/e89910ff56cee27108f47971152ff64749dafb8b834c45c5394b018fd709fd21/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f616374696f6e732f776f726b666c6f772f7374617475732f69616e7072696d65303530392f7069746368792f63692e796d6c3f6272616e63683d6d61696e"
+    },
+    {
+      "label": "A Smarter Way to Find Pitch",
+      "url": "http://www.cs.otago.ac.nz/tartini/papers/A_Smarter_Way_to_Find_Pitch.pdf"
+    },
+    {
+      "label": "playground page",
+      "url": "https://ianjohnson.dev/pitchy/playground.html"
+    },
+    {
+      "label": "Gist by sindresorhus",
+      "url": "https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/ianprime0509/pitchy#installation"
+    },
+    {
+      "label": "esm.sh",
+      "url": "https://esm.sh"
+    },
+    {
+      "label": "ESM-only",
+      "url": "https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/ianprime0509/pitchy#usage"
+    },
+    {
+      "label": "GitHub Pages",
+      "url": "https://ianjohnson.dev/pitchy"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/ianprime0509/pitchy#license"
+    },
+    {
+      "label": "Zero Clause BSD License",
+      "url": "https://spdx.org/licenses/0BSD.html"
+    }
+  ],
+  "root_files": [
+    ".github/workflows",
+    "docs",
+    "test",
+    ".editorconfig",
+    ".eslintignore",
+    ".eslintrc.json",
+    ".gitignore",
+    ".prettierignore",
+    ".prettierrc.json",
+    ".releaserc.json",
+    "LICENSE",
+    "README.md",
+    "index.js",
+    "package-lock.json",
+    "package.json",
+    "tsconfig.declaration.json",
+    "tsconfig.json"
+  ],
+  "release_count": 12,
+  "status": "verified"
+}

@@ -1,0 +1,181 @@
+{
+  "url": "https://github.com/nostalgic-css/NES.css",
+  "final_url": "https://github.com/nostalgic-css/NES.css",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:48:06.948116+00:00",
+  "stars": 21848,
+  "forks": 1682,
+  "description": "NES-style CSS Framework | ファミコン風CSSフレームワーク",
+  "homepage": "https://nostalgic-css.github.io/NES.css/",
+  "topics": [
+    "8bit",
+    "css",
+    "css-framework",
+    "nes",
+    "scss"
+  ],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2018-09-24T01:49:11.000Z",
+  "branch": "develop",
+  "commit": "b1cc9944aae3274461c747d7ad1cab31df45e78c",
+  "readme": "日本語 / 简体中文 / Español / Português / Русский / Français NES.css is a NES-style(8bit-like) CSS Framework. Installation Styles NES.css is available via either npm (preferred), Yarn, or a CDN. via package manager npm install nes.css # or yarn add nes.css Our package.json contains some additional metadata under the following keys: sass - path to our main Sass source file style - path to our non-minified CSS AltCSS(sass, scss...) // style.scss @import \"./node_modules/nes.css/css/nes.css\" JavaScript // script.js import \"nes.css/css/nes.min.css\"; You need to install css-loader. HTML <!-- index.html --> <html> <head> <link rel=\"stylesheet\" href=\"./node_modules/nes.css/css/nes.min.css\"> </head> <body></body> </html> via CDN Import the CSS via a <link /> element: <!-- minify --> <link href=\"https://unpkg.com/nes.css@2.3.0/css/nes.min.css\" rel=\"stylesheet\" /> <!-- latest --> <link href=\"https://unpkg.com/nes.css@latest/css/nes.min.css\" rel=\"stylesheet\" /> <!-- core style only --> <link href=\"https://unpkg.com/nes.css/css/nes-core.min.css\" rel=\"stylesheet\" /> Fonts NES.css doesn't provide any fonts, but we do maintain the following list of fonts that we recommend for usage alongside the library. Language Font (Default) Press Start 2P English Kongtext Japanese 美咲フォント Japanese Nu もち Korean 둥근모꼴 Chinese Zpix (最像素) Usage NES.css only provides components. You will need to define your own layout. The recommended font for NES.css is Press Start 2P. However, Press Start 2P only supports English characters. When you're using this framework with any language other than English, please use another font. Follow the Google Fonts instructions about how to include them, or simply include it as below: <head> <link href=\"https://fonts.googleapis.com/css?family=Press+Start+2P\" rel=\"stylesheet\"> <link href=\"https://unpkg.com/nes.css/css/nes.css\" rel=\"stylesheet\" /> <style> html, body, pre, code, kbd, samp { font-family: \"font-family you want to use\"; } </style> </head> CSS Only NES.css only requires CSS and doesn't depend on any JavaScript. Browser Support NES.css is compatible with the newest version of the following browsers: Chrome Firefox Safari Untested IE/Edge Copyright and license Code and documentation copyright 2018 B.C.Rikko. Code released under the MIT License. Docs released under Creative Commons. Development If you'd like to help us out with the project, we welcome contributions of all types! Check out our CONTRIBUTING.md for more details on how you can help make NES.css amazing!",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://nostalgic-css.github.io/NES.css/"
+    },
+    {
+      "label": "日本語",
+      "url": "https://github.com/nostalgic-css/NES.css/blob/develop/.github/README-jp.md"
+    },
+    {
+      "label": "简体中文",
+      "url": "https://github.com/nostalgic-css/NES.css/blob/develop/.github/README-zh-CN.md"
+    },
+    {
+      "label": "Español",
+      "url": "https://github.com/nostalgic-css/NES.css/blob/develop/.github/README-es.md"
+    },
+    {
+      "label": "Português",
+      "url": "https://github.com/nostalgic-css/NES.css/blob/develop/.github/README-pt-BR.md"
+    },
+    {
+      "label": "Русский",
+      "url": "https://github.com/nostalgic-css/NES.css/blob/develop/.github/README-ru.md"
+    },
+    {
+      "label": "Français",
+      "url": "https://github.com/nostalgic-css/NES.css/blob/develop/.github/README-fr.md"
+    },
+    {
+      "label": "",
+      "url": "https://gitter.im/nostalgic-css/Lobby"
+    },
+    {
+      "label": "",
+      "url": "http://commitizen.github.io/cz-cli/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/nostalgic-css/NES.css#installation"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/nostalgic-css/NES.css#styles"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/nostalgic-css/NES.css#via-package-manager"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/nostalgic-css/NES.css#altcsssass-scss"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/nostalgic-css/NES.css#javascript"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/nostalgic-css/NES.css#html"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/nostalgic-css/NES.css#via-cdn"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/nostalgic-css/NES.css#fonts"
+    },
+    {
+      "label": "Press Start 2P",
+      "url": "https://fonts.google.com/specimen/Press+Start+2P"
+    },
+    {
+      "label": "Kongtext",
+      "url": "https://www.dafont.com/kongtext.font"
+    },
+    {
+      "label": "美咲フォント",
+      "url": "http://littlelimit.net/misaki.htm"
+    },
+    {
+      "label": "Nu もち",
+      "url": "http://kokagem.sakura.ne.jp/font/mochi/"
+    },
+    {
+      "label": "둥근모꼴",
+      "url": "http://cactus.tistory.com/193"
+    },
+    {
+      "label": "Zpix (最像素)",
+      "url": "https://github.com/SolidZORO/zpix-pixel-font"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/nostalgic-css/NES.css#usage"
+    },
+    {
+      "label": "Press Start 2P",
+      "url": "https://fonts.google.com/specimen/Press+Start+2P?selection.family=Press+Start+2P"
+    },
+    {
+      "label": "Press Start 2P",
+      "url": "https://fonts.google.com/specimen/Press+Start+2P?selection.family=Press+Start+2P"
+    },
+    {
+      "label": "instructions",
+      "url": "https://developers.google.com/fonts/docs/getting_started"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/nostalgic-css/NES.css#css-only"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/nostalgic-css/NES.css#browser-support"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/nostalgic-css/NES.css#copyright-and-license"
+    },
+    {
+      "label": "B.C.Rikko",
+      "url": "https://github.com/BcRikko"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/nostalgic-css/NES.css#development"
+    },
+    {
+      "label": "CONTRIBUTING.md",
+      "url": "https://github.com/nostalgic-css/NES.css/blob/develop/CONTRIBUTING.md"
+    }
+  ],
+  "root_files": [
+    ".circleci",
+    ".github",
+    ".storybook",
+    "assets",
+    "docs",
+    "scripts",
+    "scss",
+    "sketch",
+    "story",
+    ".editorconfig",
+    ".gitignore",
+    ".npmignore",
+    ".prettierignore",
+    "CODE_OF_CONDUCT.md",
+    "CONTRIBUTING.md",
+    "LICENSE",
+    "README.md",
+    "commitlint.config.js",
+    "package-lock.json",
+    "package.json"
+  ],
+  "release_count": 7,
+  "status": "verified"
+}

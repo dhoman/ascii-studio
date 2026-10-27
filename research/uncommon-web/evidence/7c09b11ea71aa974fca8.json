@@ -1,0 +1,493 @@
+{
+  "url": "https://github.com/pixijs/filters",
+  "final_url": "https://github.com/pixijs/filters",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:48:10.731691+00:00",
+  "stars": 1139,
+  "forks": 184,
+  "description": "Collection of community-authored custom display filters for PixiJS",
+  "homepage": "https://pixijs.io/filters/docs/",
+  "topics": [
+    "filters-pixijs",
+    "glsl-shaders",
+    "pixijs",
+    "webgl"
+  ],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2016-02-28T17:46:21.000Z",
+  "branch": "main",
+  "commit": "e9d1ca987864f121680bb0d7e9612c05b37748de",
+  "readme": "PixiJS Filters Compatibility Depending on your version of PixiJS, you'll need to figure out which major version of PixiJS Filters to use. PixiJS PixiJS Filters v5.x v3.x v6.x v4.x v7.x v5.x v8.x v6.x Installation Installation is available using NPM: npm install pixi-filters Alternatively, you can use a CDN such as JSDelivr: <script src=\"https://cdn.jsdelivr.net/npm/pixi-filters@latest/dist/browser/pixi-filters.min.js\"></script> If all else failes, you can manually download the bundled file from the releases section and include it in your project. Demo View the PixiJS Filters Demo to interactively play with filters to see how they work. Filters Filter Preview AdjustmentFilterpixi-filters/adjustmentView demo AdvancedBloomFilterpixi-filters/advanced-bloomView demo AsciiFilterpixi-filters/asciiView demo BackdropBlurFilterpixi-filters/backdrop-blurView demo BevelFilterpixi-filters/bevelView demo BloomFilterpixi-filters/bloomView demo BulgePinchFilterpixi-filters/bulge-pinchView demo ColorGradientFilterpixi-filters/color-gradientView demo ColorMapFilterpixi-filters/color-mapView demo ColorOverlayFilterpixi-filters/color-overlayView demo ColorReplaceFilterpixi-filters/color-replaceView demo ConvolutionFilterpixi-filters/convolutionView demo CrossHatchFilterpixi-filters/cross-hatchView demo CRTFilterpixi-filters/crtView demo DotFilterpixi-filters/dotView demo DropShadowFilterpixi-filters/drop-shadowView demo EmbossFilterpixi-filters/embossView demo GlitchFilterpixi-filters/glitchView demo GlowFilterpixi-filters/glowView demo GodrayFilterpixi-filters/godrayView demo GrayscaleFilterpixi-filters/grayscaleView demo HslAdjustmentFilterpixi-filters/hsl-adjustmentView demo KawaseBlurFilterpixi-filters/kawase-blurView demo MotionBlurFilterpixi-filters/motion-blurView demo MultiColorReplaceFilterpixi-filters/multi-color-replaceView demo OldFilmFilterpixi-filters/old-filmView demo OutlineFilterpixi-filters/outlineView demo PixelateFilterpixi-filters/pixelateView demo RadialBlurFilterpixi-filters/radial-blurView demo ReflectionFilterpixi-filters/reflectionView demo RGBSplitFilterpixi-filters/rgb-splitView demo ShockwaveFilterpixi-filters/shockwaveView demo SimpleLightmapFilterpixi-filters/simple-lightmapView demo SimplexNoiseFilterpixi-filters/simplex-noiseView demo TiltShiftFilterpixi-filters/tilt-shiftView demo TwistFilterpixi-filters/twistView demo ZoomBlurFilterpixi-filters/zoom-blurView demo Built-In Filters PixiJS has a handful of core filters that are built-in to the PixiJS library. Filter Preview AlphaFilterView demo BlurFilterView demo ColorMatrixFilter (contrast)View demo ColorMatrixFilter (desaturate)View demo ColorMatrixFilter (kodachrome)View demo ColorMatrixFilter (lsd)View demo ColorMatrixFilter (negative)View demo ColorMatrixFilter (polaroid)View demo ColorMatrixFilter (predator)View demo ColorMatrixFilter (saturate)View demo ColorMatrixFilter (sepia)View demo DisplacementFilterView demo NoiseFilterView demo Building Install all dependencies by simply running the following. npm install Build all filters, demo and screenshots by running the following: npm run build Watch all filters and demo (auto-rebuild upon src changes): npm run watch Documentation API documention can be found here.",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://github.com/pixijs/filters#pixijs-filters"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pixijs/filters/actions/workflows/nodejs.yml?query=branch%3Amain"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/pixi-filters"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pixijs/filters#compatibility"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pixijs/filters#installation"
+    },
+    {
+      "label": "releases",
+      "url": "https://github.com/pixijs/filters/releases"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pixijs/filters#demo"
+    },
+    {
+      "label": "View the PixiJS Filters Demo",
+      "url": "https://pixijs.io/filters/examples/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pixijs/filters#filters"
+    },
+    {
+      "label": "View demo",
+      "url": "https://filters.pixijs.download/main/examples/index.html?enabled=AdjustmentFilter"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/1035e63695c5601f16833fb2b9982cb4ab1b2652798b37cab34eac6b04d5b0c5/68747470733a2f2f66696c746572732e706978696a732e646f776e6c6f61642f6d61696e2f73637265656e73686f74732f61646a7573746d656e742e706e673f763d33"
+    },
+    {
+      "label": "View demo",
+      "url": "https://filters.pixijs.download/main/examples/index.html?enabled=AdvancedBloomFilter"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/2ff33836077b9af46189e59e5c209e977864a68b730f5138dd416c264cd70de1/68747470733a2f2f66696c746572732e706978696a732e646f776e6c6f61642f6d61696e2f73637265656e73686f74732f616476616e6365642d626c6f6f6d2e706e673f763d33"
+    },
+    {
+      "label": "View demo",
+      "url": "https://filters.pixijs.download/main/examples/index.html?enabled=AsciiFilter"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/b097f9067cb94c539cccc7e065d55c303d1e6b7c3eb91b6082ff55cc4ed02279/68747470733a2f2f66696c746572732e706978696a732e646f776e6c6f61642f6d61696e2f73637265656e73686f74732f61736369692e706e673f763d33"
+    },
+    {
+      "label": "View demo",
+      "url": "https://filters.pixijs.download/main/examples/index.html?enabled=BackdropBlurFilter"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/40a602ac289c3aefa85d21bba8aeacb1ad6f906f7d41a16614ded2d8f0088179/68747470733a2f2f66696c746572732e706978696a732e646f776e6c6f61642f6d61696e2f73637265656e73686f74732f6261636b64726f702d626c75722e706e673f763d33"
+    },
+    {
+      "label": "View demo",
+      "url": "https://filters.pixijs.download/main/examples/index.html?enabled=BevelFilter"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/e361470bfd341e9991fd23f6ddd5df74770108a44e8188894f70e6fb85a38360/68747470733a2f2f66696c746572732e706978696a732e646f776e6c6f61642f6d61696e2f73637265656e73686f74732f626576656c2e706e673f763d33"
+    },
+    {
+      "label": "View demo",
+      "url": "https://filters.pixijs.download/main/examples/index.html?enabled=BloomFilter"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/da9fccacb91eedbfd972badcb939870d065a669f139dbdd0e8a4fd39649bd504/68747470733a2f2f66696c746572732e706978696a732e646f776e6c6f61642f6d61696e2f73637265656e73686f74732f626c6f6f6d2e706e673f763d33"
+    },
+    {
+      "label": "View demo",
+      "url": "https://filters.pixijs.download/main/examples/index.html?enabled=BulgePinchFilter"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/e4f45a6764a27b93395a5e2661bba99aa53dab4cf4f4ca7d75997420183511bf/68747470733a2f2f66696c746572732e706978696a732e646f776e6c6f61642f6d61696e2f73637265656e73686f74732f62756c67652d70696e63682e6769663f763d33"
+    },
+    {
+      "label": "View demo",
+      "url": "https://filters.pixijs.download/main/examples/index.html?enabled=ColorGradientFilter"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/ea1fee051d9135aa06358dd1e8812f83ac89e134aff8f79b09aa6885cc3565dc/68747470733a2f2f66696c746572732e706978696a732e646f776e6c6f61642f6d61696e2f73637265656e73686f74732f636f6c6f722d6772616469656e742e706e673f763d33"
+    },
+    {
+      "label": "View demo",
+      "url": "https://filters.pixijs.download/main/examples/index.html?enabled=ColorMapFilter"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/60d6ee46c46491ace4298f4a35f68923ed3d361440931654ba77bb0f365b1fb7/68747470733a2f2f66696c746572732e706978696a732e646f776e6c6f61642f6d61696e2f73637265656e73686f74732f636f6c6f722d6d61702e706e673f763d33"
+    },
+    {
+      "label": "View demo",
+      "url": "https://filters.pixijs.download/main/examples/index.html?enabled=ColorOverlayFilter"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/a9e879a4416accb62803ea9e4667a7233d64f52870d8353ac6f98b1cb3e2f351/68747470733a2f2f66696c746572732e706978696a732e646f776e6c6f61642f6d61696e2f73637265656e73686f74732f636f6c6f722d6f7665726c61792e706e673f763d33"
+    },
+    {
+      "label": "View demo",
+      "url": "https://filters.pixijs.download/main/examples/index.html?enabled=ColorReplaceFilter"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/84e73861e3c36ae48b782aa45fec6deb184aca93db9452194439b2a404f6072d/68747470733a2f2f66696c746572732e706978696a732e646f776e6c6f61642f6d61696e2f73637265656e73686f74732f636f6c6f722d7265706c6163652e706e673f763d33"
+    },
+    {
+      "label": "View demo",
+      "url": "https://filters.pixijs.download/main/examples/index.html?enabled=ConvolutionFilter"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/dcec6dd389e1123305da29edcc46610dc3bffc5f384cfba2ed6699ffa2442077/68747470733a2f2f66696c746572732e706978696a732e646f776e6c6f61642f6d61696e2f73637265656e73686f74732f636f6e766f6c7574696f6e2e706e673f763d33"
+    },
+    {
+      "label": "View demo",
+      "url": "https://filters.pixijs.download/main/examples/index.html?enabled=CrossHatchFilter"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/8e1816a8b84ff71197375c425f10765f39465edfd0fe3ea6e79563f8428cfa47/68747470733a2f2f66696c746572732e706978696a732e646f776e6c6f61642f6d61696e2f73637265656e73686f74732f63726f73732d68617463682e706e673f763d33"
+    },
+    {
+      "label": "View demo",
+      "url": "https://filters.pixijs.download/main/examples/index.html?enabled=CRTFilter"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/1d4aaa1286ca582af930b58ba9fdcd59a36dd139e2280fd93421db346938146d/68747470733a2f2f66696c746572732e706978696a732e646f776e6c6f61642f6d61696e2f73637265656e73686f74732f6372742e706e673f763d33"
+    },
+    {
+      "label": "View demo",
+      "url": "https://filters.pixijs.download/main/examples/index.html?enabled=DotFilter"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/ed9467453872eb9574f4b6b619645f6953428c35d7ef5a0620d5afbdf73b678a/68747470733a2f2f66696c746572732e706978696a732e646f776e6c6f61642f6d61696e2f73637265656e73686f74732f646f742e706e673f763d33"
+    },
+    {
+      "label": "View demo",
+      "url": "https://filters.pixijs.download/main/examples/index.html?enabled=DropShadowFilter"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/f8a550d625eb01c7d2188aa26d5ded1e3e208110ab87fc75b91ed38dbdf2ece7/68747470733a2f2f66696c746572732e706978696a732e646f776e6c6f61642f6d61696e2f73637265656e73686f74732f64726f702d736861646f772e706e673f763d33"
+    },
+    {
+      "label": "View demo",
+      "url": "https://filters.pixijs.download/main/examples/index.html?enabled=EmbossFilter"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/675d9b83d63c27e46d5eb22ad68669664f1213a05c289325ae2893ce887cfac4/68747470733a2f2f66696c746572732e706978696a732e646f776e6c6f61642f6d61696e2f73637265656e73686f74732f656d626f73732e706e673f763d33"
+    },
+    {
+      "label": "View demo",
+      "url": "https://filters.pixijs.download/main/examples/index.html?enabled=GlitchFilter"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/ecbe7061e921149b9704ba863ca808c45e5c86993177acbc6abe952f1ea6e217/68747470733a2f2f66696c746572732e706978696a732e646f776e6c6f61642f6d61696e2f73637265656e73686f74732f676c697463682e706e673f763d31"
+    },
+    {
+      "label": "View demo",
+      "url": "https://filters.pixijs.download/main/examples/index.html?enabled=GlowFilter"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/e4b9a9fd3cea40e584f7eb03c8ae60afd008e01dd694aba94a51e9f4327e3781/68747470733a2f2f66696c746572732e706978696a732e646f776e6c6f61642f6d61696e2f73637265656e73686f74732f676c6f772e706e673f763d33"
+    },
+    {
+      "label": "View demo",
+      "url": "https://filters.pixijs.download/main/examples/index.html?enabled=GodrayFilter"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/7c135160cef6c62befc029ca43f8991b9aaf61fea0385573130f23af587528c3/68747470733a2f2f66696c746572732e706978696a732e646f776e6c6f61642f6d61696e2f73637265656e73686f74732f676f647261792e6769663f763d33"
+    },
+    {
+      "label": "View demo",
+      "url": "https://filters.pixijs.download/main/examples/index.html?enabled=GrayscaleFilter"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/d948834235678318849601fec07c6bbae9d97015aceea2cefeb22d7bb230e16c/68747470733a2f2f66696c746572732e706978696a732e646f776e6c6f61642f6d61696e2f73637265656e73686f74732f677261797363616c652e706e673f763d31"
+    },
+    {
+      "label": "View demo",
+      "url": "https://filters.pixijs.download/main/examples/index.html?enabled=HslAdjustmentFilter"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/33fee5ccc345f6b55ad3743c7634469affe51567ac4e5f4e575d61758a0fcb80/68747470733a2f2f66696c746572732e706978696a732e646f776e6c6f61642f6d61696e2f73637265656e73686f74732f68736c2d61646a7573746d656e742e706e673f763d31"
+    },
+    {
+      "label": "View demo",
+      "url": "https://filters.pixijs.download/main/examples/index.html?enabled=KawaseBlurFilter"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/bbcfb0f06036f162d91f8c100d64c6cb730f2e25d76c44ea696645c40264afd6/68747470733a2f2f66696c746572732e706978696a732e646f776e6c6f61642f6d61696e2f73637265656e73686f74732f6b61776173652d626c75722e706e673f763d31"
+    },
+    {
+      "label": "View demo",
+      "url": "https://filters.pixijs.download/main/examples/index.html?enabled=MotionBlurFilter"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/9a3aeaa914130e35f9c074a09f2e09ffa3a7aff049ce4f5f07482bc8519398fb/68747470733a2f2f66696c746572732e706978696a732e646f776e6c6f61642f6d61696e2f73637265656e73686f74732f6d6f74696f6e2d626c75722e706e673f763d31"
+    },
+    {
+      "label": "View demo",
+      "url": "https://filters.pixijs.download/main/examples/index.html?enabled=MultiColorReplaceFilter"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/03f5a51321d7cc0a57361ecfa3f0ee653a55529e5ea191e3946fd9d749cb6d20/68747470733a2f2f66696c746572732e706978696a732e646f776e6c6f61642f6d61696e2f73637265656e73686f74732f6d756c74692d636f6c6f722d7265706c6163652e706e673f763d31"
+    },
+    {
+      "label": "View demo",
+      "url": "https://filters.pixijs.download/main/examples/index.html?enabled=OldFilmFilter"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/31969aaf76d6a53e3e87c54972fe11f47b84e0cae2e265f47ec18818e7e42ebd/68747470733a2f2f66696c746572732e706978696a732e646f776e6c6f61642f6d61696e2f73637265656e73686f74732f6f6c642d66696c6d2e6769663f763d33"
+    },
+    {
+      "label": "View demo",
+      "url": "https://filters.pixijs.download/main/examples/index.html?enabled=OutlineFilter"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/b83596d138904fa06b7fce23efd15ec783bb4ce00d7df5ec4dd1f72c5084f95e/68747470733a2f2f66696c746572732e706978696a732e646f776e6c6f61642f6d61696e2f73637265656e73686f74732f6f75746c696e652e706e673f763d33"
+    },
+    {
+      "label": "View demo",
+      "url": "https://filters.pixijs.download/main/examples/index.html?enabled=PixelateFilter"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/0d3dc468da59e02b2b2ac14bdd80c0bfeab66b0e37e2db5f39bfca2447792e48/68747470733a2f2f66696c746572732e706978696a732e646f776e6c6f61642f6d61696e2f73637265656e73686f74732f706978656c6174652e706e673f763d33"
+    },
+    {
+      "label": "View demo",
+      "url": "https://filters.pixijs.download/main/examples/index.html?enabled=RadialBlurFilter"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/00374bdd43a492816768ed493866432fead6ed07ef470fec3ac4e6c04749ca50/68747470733a2f2f66696c746572732e706978696a732e646f776e6c6f61642f6d61696e2f73637265656e73686f74732f72616469616c2d626c75722e706e673f763d33"
+    },
+    {
+      "label": "View demo",
+      "url": "https://filters.pixijs.download/main/examples/index.html?enabled=ReflectionFilter"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/a02e4a7b17f074f88c295bea08e54d7e0448cda9fcd5ff4bd14c01e3065c5bf8/68747470733a2f2f66696c746572732e706978696a732e646f776e6c6f61642f6d61696e2f73637265656e73686f74732f7265666c656374696f6e2e706e673f763d33"
+    },
+    {
+      "label": "View demo",
+      "url": "https://filters.pixijs.download/main/examples/index.html?enabled=RGBSplitFilter"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/01e0ce9593e83b60cde101fbbe435d89f561fe696248c3ab39dcd66b349e890a/68747470733a2f2f66696c746572732e706978696a732e646f776e6c6f61642f6d61696e2f73637265656e73686f74732f7267622e706e673f763d33"
+    },
+    {
+      "label": "View demo",
+      "url": "https://filters.pixijs.download/main/examples/index.html?enabled=ShockwaveFilter"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/a262f3b76ecfd34e57e5c95c3de652de8fc8afe44d28f707f7482c2d07fd0551/68747470733a2f2f66696c746572732e706978696a732e646f776e6c6f61642f6d61696e2f73637265656e73686f74732f73686f636b776176652e6769663f763d33"
+    },
+    {
+      "label": "View demo",
+      "url": "https://filters.pixijs.download/main/examples/index.html?enabled=SimpleLightmapFilter"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/d0a306a86f39080d35a46fa88f28f9eab423f45e1c7fa5fabb4fc005cd50abfb/68747470733a2f2f66696c746572732e706978696a732e646f776e6c6f61642f6d61696e2f73637265656e73686f74732f73696d706c652d6c696768746d61702e706e673f763d33"
+    },
+    {
+      "label": "View demo",
+      "url": "https://filters.pixijs.download/main/examples/index.html?enabled=SimplexNoiseFilter"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/6a9b476e8727e76fa9c7ef9c366f19da34ede24398b59d2f08a8de5820fbeb4d/68747470733a2f2f66696c746572732e706978696a732e646f776e6c6f61642f6d61696e2f73637265656e73686f74732f73696d706c65782d6e6f6973652e706e673f763d33"
+    },
+    {
+      "label": "View demo",
+      "url": "https://filters.pixijs.download/main/examples/index.html?enabled=TiltShiftFilter"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/7b76db8af86e111719d35ba75f6ecbc64e92f92361890721597ae8526d215d96/68747470733a2f2f66696c746572732e706978696a732e646f776e6c6f61642f6d61696e2f73637265656e73686f74732f74696c742d73686966742e706e673f763d33"
+    },
+    {
+      "label": "View demo",
+      "url": "https://filters.pixijs.download/main/examples/index.html?enabled=TwistFilter"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/44690f830339effeb35db027632d7d697fa08eef12aa1e13c4e1a4b917587c20/68747470733a2f2f66696c746572732e706978696a732e646f776e6c6f61642f6d61696e2f73637265656e73686f74732f74776973742e706e673f763d33"
+    },
+    {
+      "label": "View demo",
+      "url": "https://filters.pixijs.download/main/examples/index.html?enabled=ZoomBlurFilter"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/eb9c38f54905f677a66b1bf425ee942a44b5597380f19f1bb6a426675103206e/68747470733a2f2f66696c746572732e706978696a732e646f776e6c6f61642f6d61696e2f73637265656e73686f74732f7a6f6f6d2d626c75722e706e673f763d34"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pixijs/filters#built-in-filters"
+    },
+    {
+      "label": "View demo",
+      "url": "https://filters.pixijs.download/main/examples/index.html?enabled=AlphaFilter"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/dbd42b3717a7ad48a7bf562c9a9e7697034b49b0ca0d4c5455a97c8fa1caf5a7/68747470733a2f2f66696c746572732e706978696a732e646f776e6c6f61642f6d61696e2f73637265656e73686f74732f616c7068612e706e673f763d33"
+    },
+    {
+      "label": "View demo",
+      "url": "https://filters.pixijs.download/main/examples/index.html?enabled=BlurFilter"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/360d64e95ec3b6500fc968a0cce3e6bf4668833c35bc7180e6bb657bf24c1a6d/68747470733a2f2f66696c746572732e706978696a732e646f776e6c6f61642f6d61696e2f73637265656e73686f74732f626c75722e706e673f763d33"
+    },
+    {
+      "label": "View demo",
+      "url": "https://filters.pixijs.download/main/examples/index.html?enabled=ColorMatrixFilter"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/02af89d415122182d03237a7792ae7f219257022e075d4bbdc914476b8d3d0a7/68747470733a2f2f66696c746572732e706978696a732e646f776e6c6f61642f6d61696e2f73637265656e73686f74732f636f6c6f722d6d61747269782d636f6e74726173742e706e673f763d33"
+    },
+    {
+      "label": "View demo",
+      "url": "https://filters.pixijs.download/main/examples/index.html?enabled=ColorMatrixFilter"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/5b1664fdd341570afacf144a9e7a1efa0ac2631bffd1f16bd68d74d46d68a45c/68747470733a2f2f66696c746572732e706978696a732e646f776e6c6f61642f6d61696e2f73637265656e73686f74732f636f6c6f722d6d61747269782d646573617475726174652e706e673f763d33"
+    },
+    {
+      "label": "View demo",
+      "url": "https://filters.pixijs.download/main/examples/index.html?enabled=ColorMatrixFilter"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/1fc1314b03bedead812d32d9e18d5c206fc1c2ab2da56b991121731e59e899cb/68747470733a2f2f66696c746572732e706978696a732e646f776e6c6f61642f6d61696e2f73637265656e73686f74732f636f6c6f722d6d61747269782d6b6f64616368726f6d652e706e673f763d33"
+    },
+    {
+      "label": "View demo",
+      "url": "https://filters.pixijs.download/main/examples/index.html?enabled=ColorMatrixFilter"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/afe1b0b0af1147a496406ed5ada8fb2407a3def0eb647de08144a348a23fc825/68747470733a2f2f66696c746572732e706978696a732e646f776e6c6f61642f6d61696e2f73637265656e73686f74732f636f6c6f722d6d61747269782d6c73642e706e673f763d33"
+    },
+    {
+      "label": "View demo",
+      "url": "https://filters.pixijs.download/main/examples/index.html?enabled=ColorMatrixFilter"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/609a792c9225df51bf1302c696b07cc68bfdbc028c1b81dff53fd96d03504a1e/68747470733a2f2f66696c746572732e706978696a732e646f776e6c6f61642f6d61696e2f73637265656e73686f74732f636f6c6f722d6d61747269782d6e656761746976652e706e673f763d33"
+    },
+    {
+      "label": "View demo",
+      "url": "https://filters.pixijs.download/main/examples/index.html?enabled=ColorMatrixFilter"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/0fe26978642bf79e2f415d4b609320106c14d802ec885c0439bebc8b57d47b64/68747470733a2f2f66696c746572732e706978696a732e646f776e6c6f61642f6d61696e2f73637265656e73686f74732f636f6c6f722d6d61747269782d706f6c61726f69642e706e673f763d33"
+    },
+    {
+      "label": "View demo",
+      "url": "https://filters.pixijs.download/main/examples/index.html?enabled=ColorMatrixFilter"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/7d54e922f1ebd8d761cc4eb930f61677e1a799a70b0a22235ebc77e23db41e48/68747470733a2f2f66696c746572732e706978696a732e646f776e6c6f61642f6d61696e2f73637265656e73686f74732f636f6c6f722d6d61747269782d7072656461746f722e706e673f763d33"
+    },
+    {
+      "label": "View demo",
+      "url": "https://filters.pixijs.download/main/examples/index.html?enabled=ColorMatrixFilter"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/073c021266d1e8d9a60fbbfca3a69e5d561f0db2a8782387a29fdd249a6875f5/68747470733a2f2f66696c746572732e706978696a732e646f776e6c6f61642f6d61696e2f73637265656e73686f74732f636f6c6f722d6d61747269782d73617475726174652e706e673f763d33"
+    },
+    {
+      "label": "View demo",
+      "url": "https://filters.pixijs.download/main/examples/index.html?enabled=ColorMatrixFilter"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/765e4f6dddd69d58ab31784e1ced1101bff31bb59fac5787e52dfc15a8f09e36/68747470733a2f2f66696c746572732e706978696a732e646f776e6c6f61642f6d61696e2f73637265656e73686f74732f636f6c6f722d6d61747269782d73657069612e706e673f763d33"
+    },
+    {
+      "label": "View demo",
+      "url": "https://filters.pixijs.download/main/examples/index.html?enabled=DisplacementFilter"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/3b5a1fb7a6f10b377a1dbbf1d2fd6de073db81472b73bbd63ccdbc4769a9245b/68747470733a2f2f66696c746572732e706978696a732e646f776e6c6f61642f6d61696e2f73637265656e73686f74732f646973706c6163656d656e742e706e673f763d33"
+    },
+    {
+      "label": "View demo",
+      "url": "https://filters.pixijs.download/main/examples/index.html?enabled=NoiseFilter"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/548fb34ae5832c4a2396ede2aa704a464543098650d8d67b0d4c9b257520f804/68747470733a2f2f66696c746572732e706978696a732e646f776e6c6f61642f6d61696e2f73637265656e73686f74732f6e6f6973652e706e673f763d33"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pixijs/filters#building"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pixijs/filters#documentation"
+    },
+    {
+      "label": "here",
+      "url": "http://pixijs.io/filters/docs/"
+    }
+  ],
+  "root_files": [
+    ".github",
+    "demo",
+    "examples",
+    "scripts",
+    "src",
+    ".gitattributes",
+    ".gitignore",
+    ".nvmrc",
+    "LICENSE",
+    "README.md",
+    "package-lock.json",
+    "package.json",
+    "tsconfig.json"
+  ],
+  "release_count": 63,
+  "status": "verified"
+}

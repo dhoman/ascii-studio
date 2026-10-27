@@ -1,0 +1,73 @@
+{
+  "url": "https://github.com/inbn/TheSims.css",
+  "final_url": "https://github.com/inbn/TheSims.css",
+  "http_status": 200,
+  "checked_at": "2026-10-23T17:46:55.167341+00:00",
+  "stars": 64,
+  "forks": 2,
+  "description": "A “Design System” based on the 2000 life simulation game, The Sims.",
+  "homepage": "https://thesimscss.inbn.dev/",
+  "topics": [],
+  "license": "",
+  "archived": false,
+  "created_at": "2020-09-05T17:29:15.000Z",
+  "branch": "main",
+  "commit": "834258189df915d5c4f8e2c41fbb45973740706e",
+  "readme": "TheSims.css A “Design System” inspired by the 2000 life simulation game, The Sims. View the demo page here: thesimscss.inbn.dev. Installation / usage You can load it directly from unpkg: <link rel=\"stylesheet\" href=\"https://unpkg.com/thesims.css\"> or install it via npm: npm install thesims.css Acknowledgements The code is adapted from 98.css by Jordan Scales. This library uses ComicNeue as a fallback for devices which do not ship with Comic Sans. The monospace font is Comic Mono by Shannon Miwa and dtinth.",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://github.com/inbn/TheSims.css#thesimscss"
+    },
+    {
+      "label": "thesimscss.inbn.dev",
+      "url": "https://github.com/inbn/thesimscss.inbn.dev"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/inbn/TheSims.css#installation--usage"
+    },
+    {
+      "label": "unpkg",
+      "url": "https://unpkg.com/"
+    },
+    {
+      "label": "npm",
+      "url": "https://www.npmjs.com/package/thesims.css"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/inbn/TheSims.css#acknowledgements"
+    },
+    {
+      "label": "98.css",
+      "url": "https://jdan.github.io/98.css/"
+    },
+    {
+      "label": "ComicNeue",
+      "url": "http://comicneue.com/"
+    },
+    {
+      "label": "Comic Mono",
+      "url": "https://github.com/dtinth/comic-mono-font"
+    }
+  ],
+  "root_files": [
+    "docs",
+    "fonts",
+    "svg",
+    ".editorconfig",
+    ".gitignore",
+    ".npmignore",
+    ".postcssrc.js",
+    ".prettierrc",
+    "README.md",
+    "build.js",
+    "package-lock.json",
+    "package.json",
+    "server.js",
+    "thesims.css"
+  ],
+  "release_count": 2,
+  "status": "verified"
+}

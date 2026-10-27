@@ -1,0 +1,38 @@
+{
+  "url": "https://github.com/andrewplummer/peel-js",
+  "final_url": "https://github.com/andrewplummer/peel-js",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:47:34.191456+00:00",
+  "stars": 81,
+  "forks": 17,
+  "description": "Peel.js is a Javascript micro-library to create realistic peeling effects. No dependencies.",
+  "homepage": "https://andrewplummer.github.io/peel-js/",
+  "topics": [],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2014-12-24T06:45:53.000Z",
+  "branch": "master",
+  "commit": "f6848d22043ffbbaa48d9ae69cc518ee0ef3a369",
+  "readme": "About Peel.js is a Javascript micro library for creating peeling effects using just HTML5. It is supported in browsers that support clip paths and transforms (most evergreen browsers, but generally excluding IE). Docs and examples https://andrewplummer.github.io/peel-js/",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://github.com/andrewplummer/peel-js#about"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/andrewplummer/peel-js#docs-and-examples"
+    },
+    {
+      "label": "https://andrewplummer.github.io/peel-js/",
+      "url": "https://andrewplummer.github.io/peel-js/"
+    }
+  ],
+  "root_files": [
+    "src",
+    "LICENSE",
+    "README.md"
+  ],
+  "release_count": 0,
+  "status": "verified"
+}

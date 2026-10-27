@@ -1,0 +1,205 @@
+{
+  "url": "https://github.com/dy/wavefont",
+  "final_url": "https://github.com/dy/wavefont",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:47:45.118229+00:00",
+  "stars": 470,
+  "forks": 7,
+  "description": "Typeface for rendering waveform/data",
+  "homepage": "https://dy.github.io/wavefont/",
+  "topics": [
+    "afdko",
+    "barchart",
+    "chart",
+    "datavis",
+    "font",
+    "opentype",
+    "spectrum",
+    "typeface",
+    "unicode-table",
+    "variable-fonts",
+    "waveform"
+  ],
+  "license": "OFL-1.1",
+  "archived": false,
+  "created_at": "2016-08-23T03:06:00.000Z",
+  "branch": "master",
+  "commit": "6f0034429d7c63d94c155f8372780c1878880590",
+  "readme": "wavefont A typeface for rendering vertical bars data: waveforms, spectrums, diagrams, histograms, columns etc. Site • Google fonts • V-fonts • Wavearea Usage Place Wavefont[ROND,YELA,wght].woff2 into your project directory and use this code: <style> @font-face { font-family: wavefont; font-display: block; src: url(./Wavefont[ROND,YELA,wght].woff2) format('woff2'); } .wavefont { --wght: 400; font-family: wavefont; font-variation-settings: 'wght' var(--wght), 'ROND' 30, 'YELA' 0; } </style> <!-- Set values manually --> <textarea id=\"waveform\" class=\"wavefont\" cols=\"100\"> abcdefghijklmnopqrstuvwwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ </textarea> <script> // Set values programmatically (more precise) waveform.textContent = Array.from({length: 100}, (_,i) => String.fromCharCode(0x100 + i)).join('') </script> Ranges Wavefont bars correspond to values from 0 to 100, assigned to different characters: 0-9 chars are for simplified manual input with step 10 (bar height = number). a-zA-Z for manual input with step 2, softened at edges a and Z (bar height = number of letter). U+0100-017F for 0..127 values with step 1 (char = String.fromCharCode(0x100 + value)). U+0180 renders as max bar (off-by-one clamp guard), higher codepoints render blank — clamp values to 127. Variable axes Tag Range Default Meaning wght 4-1000 100 Bar width, or boldness. Advance width scales with it: 100 ≙ 0.025em, 400 ≙ 0.1em, 1000 ≙ 0.25em. ROND 0-100 100 Border radius, or roundness (percent). YELA -100-100 -100 Alignment: bottom (-100), center (0) or top (100). To adjust axes via CSS: .wavefont { font-variation-settings: 'wght' var(--wght, 40), 'ROND' var(--rond, 0), 'YELA' var(--align, 0); letter-spacing: 1ch; /* 1ch unit === 1 bar width */ } Features Ranges, values and width is compatible with linefont, so fonts can be switched preserving visual coherency. Visible charcodes fall under marking characters unicode category, ie. recognized as word by regexp and can be selected with Ctrl + → or double click. Eg. waveform segments separated by or - are selectable by double click. Characters outside of visible ranges are clipped to 0, eg. , \\t etc. -–._* map to 1 value, | maps to max value, ▁▂▃▄▅▆▇█ map to corresponding bars. Accent acute ́ (U+0301) shifts bar 1-step up, circumflex accent ̂ (U+0302) 10-steps up. Eg. \\u0101\\u0302\\u0302\\u0301\\u0301\\u0301 shifts 23 steps up. Accent grave ̀ (U+0300) shifts bar 1-step down, caron ̌ (U+030C) shifts 10 steps down, eg. \\u0101\\u030c\\u0300\\u0300\\u0300 shifts 13 steps down. Mark order is canonical: 10-step marks first, then up to nine 1-step marks, ±100 steps max. Runs of 11+ same 1-step marks are recognized only up to the 10th — use shift() from the JS package to encode correctly. Caret span is -30..130 (covers full ink incl. value 127 bars), so line-height = 1.6 is minimal non-overlapping selection. JS package Optional wavefont package exposes a function that calculates string from values for your convenience. Types included. import wf, { char, shift } from 'wavefont' // characters for values from 0..127 range (clamped & rounded) wf(0, 1, 50, 99, 127) // 'ĀāĲţſ' // arrays or typed arrays of any length wf(new Float32Array([0, 64, 127])) // 'Āŀſ' // single value char + canonical shift marks (10-step first, then 1-step) char(64) + shift(23) // bar 64 shifted 23 steps up char(64) + shift(-13) // bar 64 shifted 13 steps down Building make build Tests Glyphs Text Waterfall See also linefont − font-face for rendering linear data. References Google Fonts guide. Unified font object spec − unified human-readable format for storing font data. Feature file spec − defining opentype font features. Adobe-variable-font-prototype − example variable font. Designspace XML spec − human-readable format for describing variable fonts. Adobe Blank − blank characters variable font. Sparks – alternative font with similar purpose. Alternatives Linefont — Closest companion to Wavefont. Uses the same 0–127 character encoding but renders connected line charts instead of bars. Datatype — Inline bar, line and pie charts with readable syntax such as {b:30,70}. Supports up to 20 values. Sparks — Compact inline sparklines using normalized 0–100 values. Includes bars, dots and connected-dot styles. FF Chartwell — Commercial chart-font family for pie, bar, line, area, ring, radar, scatter and other chart types. Unicode block elements — Characters such as ▁▂▃▄▅▆▇█. Dependency-free and widely supported, but limited to eight height levels. 🕉",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://github.com/dy/wavefont/actions/workflows/build.yaml"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/dy/wavefont#wavefont-"
+    },
+    {
+      "label": "",
+      "url": "https://dy.github.io/wavefont"
+    },
+    {
+      "label": "Site",
+      "url": "https://dy.github.io/wavefont"
+    },
+    {
+      "label": "Google fonts",
+      "url": "https://fonts.google.com/specimen/Wavefont"
+    },
+    {
+      "label": "V-fonts",
+      "url": "https://v-fonts.com/fonts/wavefont"
+    },
+    {
+      "label": "Wavearea",
+      "url": "https://dy.github.io/wavearea?src=https://cdn.freesound.org/previews/147/147582_1728127-lq.mp3"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/dy/wavefont#usage"
+    },
+    {
+      "label": "Wavefont[ROND,YELA,wght].woff2",
+      "url": "https://github.com/dy/wavefont/blob/master/fonts/variable/Wavefont%5BROND,YELA,wght%5D.woff2"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/dy/wavefont#ranges"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/dy/wavefont#variable-axes"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/dy/wavefont#features"
+    },
+    {
+      "label": "linefont",
+      "url": "https://github.com/dy/linefont"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/dy/wavefont#js-package"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/dy/wavefont#building"
+    },
+    {
+      "label": "Tests",
+      "url": "https://dy.github.io/wavefont/out/fontbakery/fontbakery-report"
+    },
+    {
+      "label": "Glyphs",
+      "url": "https://dy.github.io/wavefont/out/proof/Regular-diffbrowsers_glyphs"
+    },
+    {
+      "label": "Text",
+      "url": "https://dy.github.io/wavefont/out/proof/Regular-diffbrowsers_text"
+    },
+    {
+      "label": "Waterfall",
+      "url": "https://dy.github.io/wavefont/out/proof/Regular-diffbrowsers_waterfall"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/dy/wavefont#see-also"
+    },
+    {
+      "label": "linefont",
+      "url": "https://github.com/dy/linefont"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/dy/wavefont#references"
+    },
+    {
+      "label": "Google Fonts guide",
+      "url": "https://googlefonts.github.io/gf-guide/variable.html#most-common-axes"
+    },
+    {
+      "label": "Unified font object spec",
+      "url": "https://unifiedfontobject.org/versions/ufo3"
+    },
+    {
+      "label": "Feature file spec",
+      "url": "https://adobe-type-tools.github.io/afdko/OpenTypeFeatureFileSpecification.html#6.h"
+    },
+    {
+      "label": "Adobe-variable-font-prototype",
+      "url": "https://github.com/adobe-fonts/adobe-variable-font-prototype"
+    },
+    {
+      "label": "Designspace XML spec",
+      "url": "https://github.com/fonttools/fonttools/tree/main/Doc/source/designspaceLib#document-xml-structure"
+    },
+    {
+      "label": "Adobe Blank",
+      "url": "https://github.com/adobe-fonts/adobe-blank-vf"
+    },
+    {
+      "label": "Sparks",
+      "url": "https://github.com/aftertheflood/sparks"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/dy/wavefont#alternatives"
+    },
+    {
+      "label": "Linefont",
+      "url": "https://github.com/dy/linefont"
+    },
+    {
+      "label": "Datatype",
+      "url": "https://github.com/franktisellano/datatype"
+    },
+    {
+      "label": "Sparks",
+      "url": "https://github.com/aftertheflood/sparks"
+    },
+    {
+      "label": "FF Chartwell",
+      "url": "https://www.typeface.com/fonts/chartwell"
+    },
+    {
+      "label": "🕉",
+      "url": "https://github.com/krishnized/license/"
+    }
+  ],
+  "root_files": [
+    ".github/workflows",
+    "_sources",
+    "fonts",
+    "scripts",
+    "site",
+    "sources",
+    ".DS_Store",
+    ".gitattributes",
+    ".gitignore",
+    "AUTHORS.txt",
+    "CONTRIBUTORS.txt",
+    "Makefile",
+    "OFL.txt",
+    "article-wavefont_1x1-1.png",
+    "article-wavefont_1x1-2.png",
+    "article-wavefont_1x1-3.png",
+    "article-wavefont_1x1-4.png",
+    "article-wavefont_1x1-5.png",
+    "article-wavefont_1x1-6.png",
+    "index.d.ts",
+    "index.html",
+    "index.js",
+    "package-lock.json",
+    "package.json",
+    "plopfile.cjs",
+    "r&d.md",
+    "readme.md",
+    "requirements.txt",
+    "tea.yaml",
+    "test.js"
+  ],
+  "release_count": 6,
+  "status": "verified"
+}

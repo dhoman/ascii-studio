@@ -1,0 +1,206 @@
+{
+  "url": "https://github.com/harshjdhv/componentry",
+  "final_url": "https://github.com/harshjdhv/componentry",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:47:51.199422+00:00",
+  "stars": 615,
+  "forks": 41,
+  "description": "Animated, production-ready UI components. Built the way real products need them.",
+  "homepage": "https://componentry.dev",
+  "topics": [
+    "components",
+    "components-library",
+    "ui"
+  ],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2025-12-24T15:12:23.000Z",
+  "branch": "main",
+  "commit": "b602c2872fea85c9f2464016ce3bbe0af17b51b4",
+  "readme": "Componentry Beautiful, interactive UI components you can copy and paste into your apps. Crafted with React, Tailwind CSS, and Framer Motion. Open source. Free forever. Documentation · Components · Report Bug · Request Feature Introduction Componentry is a collection of beautifully designed, interactive UI components built with React and Tailwind CSS. Just run the CLI command, add the component to your project, and start building. Why Componentry? Copy & Paste - Not a dependency. You own the code. Interactive - Cursor-following effects, 3D transforms, and smooth animations. Customizable - Built with Tailwind CSS. Easy to modify. Accessible foundations - Native controls and component-specific keyboard and motion support. Validate accessibility in your application. Dark Mode - All components support light and dark modes. TypeScript - Fully typed for the best developer experience. Quick Start Installation via CLI The fastest way to add components is using the shadcn CLI: npx shadcn@latest add @componentry/magnetic-dock Development This project uses Turborepo for monorepo management. Prerequisites Node.js 20+ pnpm 10+ Setup # Clone the repository git clone https://github.com/harshjdhv/componentry.git cd componentry # Install dependencies pnpm install # Start development server pnpm dev Project Structure componentry/ ├── apps/ │ └── web/ # Documentation site (Next.js) ├── packages/ │ ├── ui/ # Component library │ ├── eslint-config/ # Shared ESLint configuration │ └── typescript-config/ # Shared TypeScript configuration └── turbo.json # Turborepo configuration Available Scripts Command Description pnpm dev Start development server pnpm build Build all packages pnpm lint Run linting pnpm format Format code with Prettier pnpm registry:generate Regenerate component and block payloads pnpm registry:check Check registry freshness, dependencies and docs coverage pnpm test Run distribution regression tests pnpm typecheck Typecheck the web and UI workspaces pnpm test:registry:install Install and typecheck representative payloads in a fresh app Contributing We welcome contributions! Whether it's: Reporting a bug Submitting a fix Proposing new features Creating new components See the component creation guide for source, registry and documentation steps, and the maintenance guide for validation commands. How to Contribute Fork the repository Create your feature branch (git checkout -b feature/amazing-component) Commit your changes (git commit -m 'Add amazing component') Push to the branch (git push origin feature/amazing-component) Open a Pull Request Component Guidelines When creating new components: Use TypeScript with proper type definitions Support both light and dark modes Include comprehensive props with sensible defaults Add smooth transitions and animations Write clear documentation with examples Follow existing code style and patterns Tech Stack Framework: Next.js 16 Styling: Tailwind CSS 4 Components: React 19 Build: Turborepo Package Manager: pnpm License MIT License - feel free to use these components in personal and commercial projects. Third-Party Licenses Some components use third-party dependencies with separate license terms. image-trail and layered-stack require gsap (GSAP). If you use or redistribute those components, you are responsible for complying with GSAP's license terms. GSAP license: https://gsap.com/licensing/ See LICENSE for more information. Acknowledgments Inspired by shadcn/ui Built with Tailwind CSS Powered by Vercel Made with care by Harsh Jadhav",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://componentry.dev"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/harshjdhv/componentry#componentry"
+    },
+    {
+      "label": "Documentation",
+      "url": "https://componentry.dev"
+    },
+    {
+      "label": "Components",
+      "url": "https://componentry.dev/docs/components"
+    },
+    {
+      "label": "Report Bug",
+      "url": "https://github.com/harshjdhv/componentry/issues"
+    },
+    {
+      "label": "Request Feature",
+      "url": "https://github.com/harshjdhv/componentry/issues"
+    },
+    {
+      "label": "",
+      "url": "https://vercel.com/open-source-program"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/harshjdhv/componentry/blob/main/LICENSE"
+    },
+    {
+      "label": "",
+      "url": "https://twitter.com/harshjdhv"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/harshjdhv/componentry#introduction"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/harshjdhv/componentry#why-componentry"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/harshjdhv/componentry#quick-start"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/harshjdhv/componentry#installation-via-cli"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/harshjdhv/componentry#development"
+    },
+    {
+      "label": "Turborepo",
+      "url": "https://turbo.build/repo"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/harshjdhv/componentry#prerequisites"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/harshjdhv/componentry#setup"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/harshjdhv/componentry#project-structure"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/harshjdhv/componentry#available-scripts"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/harshjdhv/componentry#contributing"
+    },
+    {
+      "label": "the component creation guide",
+      "url": "https://github.com/harshjdhv/componentry/blob/main/docs/COMPONENT_CREATION_GUIDE.md"
+    },
+    {
+      "label": "the maintenance guide",
+      "url": "https://github.com/harshjdhv/componentry/blob/main/docs/README.md"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/harshjdhv/componentry#how-to-contribute"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/harshjdhv/componentry#component-guidelines"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/harshjdhv/componentry#tech-stack"
+    },
+    {
+      "label": "Next.js 16",
+      "url": "https://nextjs.org/"
+    },
+    {
+      "label": "Tailwind CSS 4",
+      "url": "https://tailwindcss.com/"
+    },
+    {
+      "label": "React 19",
+      "url": "https://react.dev/"
+    },
+    {
+      "label": "Turborepo",
+      "url": "https://turbo.build/repo"
+    },
+    {
+      "label": "pnpm",
+      "url": "https://pnpm.io/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/harshjdhv/componentry#license"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/harshjdhv/componentry#third-party-licenses"
+    },
+    {
+      "label": "https://gsap.com/licensing/",
+      "url": "https://gsap.com/licensing/"
+    },
+    {
+      "label": "LICENSE",
+      "url": "https://github.com/harshjdhv/componentry/blob/main/LICENSE"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/harshjdhv/componentry#acknowledgments"
+    },
+    {
+      "label": "shadcn/ui",
+      "url": "https://ui.shadcn.com/"
+    },
+    {
+      "label": "Tailwind CSS",
+      "url": "https://tailwindcss.com/"
+    },
+    {
+      "label": "Vercel",
+      "url": "https://vercel.com/"
+    },
+    {
+      "label": "",
+      "url": "https://star-history.dera.page/#harshjdhv/componentry&Date"
+    },
+    {
+      "label": "Harsh Jadhav",
+      "url": "https://twitter.com/harshjdhv"
+    }
+  ],
+  "root_files": [
+    ".github/workflows",
+    ".vscode",
+    "agents",
+    "apps/web",
+    "docs",
+    "packages",
+    "scripts",
+    "temporary",
+    "tests",
+    ".eslintrc.js",
+    ".gitignore",
+    ".npmrc",
+    "LICENSE",
+    "README.md",
+    "package.json",
+    "pnpm-lock.yaml",
+    "pnpm-workspace.yaml",
+    "tsconfig.json",
+    "turbo.json"
+  ],
+  "release_count": 0,
+  "status": "verified"
+}

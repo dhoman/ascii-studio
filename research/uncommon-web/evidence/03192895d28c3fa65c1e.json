@@ -1,0 +1,221 @@
+{
+  "url": "https://github.com/threlte/threlte",
+  "final_url": "https://github.com/threlte/threlte",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:48:21.266906+00:00",
+  "stars": 3356,
+  "forks": 173,
+  "description": "3D framework for Svelte",
+  "homepage": "https://threlte.xyz",
+  "topics": [
+    "3d",
+    "hacktoberfest",
+    "rapier",
+    "svelte",
+    "theatrejs",
+    "threejs"
+  ],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2022-01-15T16:30:32.000Z",
+  "branch": "main",
+  "commit": "d5f097ac28053dfb8d9dc3905b361acc423c5a1c",
+  "readme": "Rapidly Build Interactive 3D Apps for the Web Threlte is a Svelte library that simplifies creating 3D apps for the web. It provides a declarative, type-safe, reactive and interactive API out-of-the-box. Threlte's 3D rendering is powered by Three.js, and it also provides a physics engine through Rapier and an animation studio via Theatre.js; see packages for details. Check out our documentation and our Discord community. Quickstart Installation Check out the installation instructions. Tutorial To get a hang of the basics, we recommend following our introductory tutorial. Support Have questions? Feel free to ask in our Discord support forum. Features Clean API transparently exposing all Three.js objects through declarative API. Hooks providing easy access to low-level contexts like animation frames and the rendering engine. Plugins making it easy to extend Threlte with custom code and logic. Events enabling robust and Svelte-native access to state transformations in your scenes. Interactivity makes it easy to react to user inputs on 3D objects. Packages Threlte is comprised of six distinct packages to allow you to import only what you need: @threlte/core provides declarative and transparent Svelte binding to Three.js. @threlte/extras boosts productivity with assorted enhancements that extend Threlte's functionality. @threlte/gltf gives you a CLI to that turn GLTF assets into declarative and reusable Threlte components. @threlte/rapier enables performant physics in your Threlte app through the Rapier engine @threlte/theatre lets you animate in your Threlte app through the Theatre.js studio @threlte/xr** - components and hooks for VR and AR environments @threlte/flex** - components to easily use the flex engine yoga-layout with Threlte. Contributing Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are greatly appreciated. Filing Issues - if you have feature requestions or you think you spotted a bug, submit an issue. Contributing Code - if you would like to drop us a PR, read the contribution guide first. License The MIT License (MIT). Please see the License File for more information.",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://github.com/threlte/threlte/blob/main/LICENSE.md"
+    },
+    {
+      "label": "",
+      "url": "https://discord.com/channels/985983540804091964"
+    },
+    {
+      "label": "",
+      "url": "https://threlte.xyz"
+    },
+    {
+      "label": "",
+      "url": "https://threlte.xyz"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/threlte/threlte#rapidly-build-interactive-3d-apps-for-the-web"
+    },
+    {
+      "label": "Svelte",
+      "url": "https://svelte.dev/"
+    },
+    {
+      "label": "Three.js",
+      "url": "https://threejs.org/"
+    },
+    {
+      "label": "Rapier",
+      "url": "https://rapier.rs/"
+    },
+    {
+      "label": "Theatre.js",
+      "url": "https://www.theatrejs.com/"
+    },
+    {
+      "label": "packages",
+      "url": "https://github.com/threlte/threlte#packages"
+    },
+    {
+      "label": "documentation",
+      "url": "https://threlte.xyz"
+    },
+    {
+      "label": "Discord community",
+      "url": "https://discord.gg/EqUBCfCaGm"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/threlte/threlte#quickstart"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/threlte/threlte#installation"
+    },
+    {
+      "label": "installation instructions",
+      "url": "https://threlte.xyz/docs/learn/getting-started/installation"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/threlte/threlte#tutorial"
+    },
+    {
+      "label": "introductory tutorial",
+      "url": "https://threlte.xyz/docs/learn/getting-started/your-first-scene"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/threlte/threlte#support"
+    },
+    {
+      "label": "Discord support forum",
+      "url": "https://discord.com/channels/985983540804091964/1031843197963477002"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/threlte/threlte#features"
+    },
+    {
+      "label": "Clean API",
+      "url": "https://threlte.xyz/docs/reference/core/t"
+    },
+    {
+      "label": "Hooks",
+      "url": "https://threlte.xyz/docs/learn/basics/hooks"
+    },
+    {
+      "label": "Plugins",
+      "url": "https://threlte.xyz/docs/learn/advanced/plugins"
+    },
+    {
+      "label": "Events",
+      "url": "https://threlte.xyz/docs/learn/basics/events"
+    },
+    {
+      "label": "Interactivity",
+      "url": "https://threlte.xyz/docs/reference/extras/interactivity"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/threlte/threlte#packages"
+    },
+    {
+      "label": "@threlte/core",
+      "url": "https://threlte.xyz/docs/reference/core/getting-started"
+    },
+    {
+      "label": "Three.js",
+      "url": "https://threejs.org/"
+    },
+    {
+      "label": "@threlte/extras",
+      "url": "https://threlte.xyz/docs/reference/extras/getting-started"
+    },
+    {
+      "label": "@threlte/gltf",
+      "url": "https://threlte.xyz/docs/reference/gltf/getting-started"
+    },
+    {
+      "label": "@threlte/rapier",
+      "url": "https://threlte.xyz/docs/reference/rapier/getting-started"
+    },
+    {
+      "label": "Rapier engine",
+      "url": "https://rapier.rs/"
+    },
+    {
+      "label": "@threlte/theatre",
+      "url": "https://threlte.xyz/docs/reference/theatre/getting-started"
+    },
+    {
+      "label": "Theatre.js studio",
+      "url": "https://www.theatrejs.com/"
+    },
+    {
+      "label": "@threlte/xr",
+      "url": "https://github.com/threlte/threlte/tree/main/packages/xr"
+    },
+    {
+      "label": "@threlte/flex",
+      "url": "https://github.com/threlte/threlte/tree/main/packages/flex"
+    },
+    {
+      "label": "yoga-layout",
+      "url": "https://yogalayout.com/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/threlte/threlte#contributing"
+    },
+    {
+      "label": "submit an issue",
+      "url": "https://github.com/threlte/threlte/issues/new"
+    },
+    {
+      "label": "contribution guide",
+      "url": "https://github.com/threlte/threlte/blob/main/CONTRIBUTING.md"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/threlte/threlte#license"
+    },
+    {
+      "label": "License File",
+      "url": "https://github.com/threlte/threlte/blob/main/LICENSE.md"
+    }
+  ],
+  "root_files": [
+    ".changeset",
+    ".github",
+    ".vscode",
+    "apps/docs",
+    "assets",
+    "packages",
+    "patches",
+    ".editorconfig",
+    ".gitignore",
+    ".npmrc",
+    ".prettierignore",
+    ".prettierrc",
+    ".stackblitzrc",
+    "CODE_OF_CONDUCT.md",
+    "CONTRIBUTING.md",
+    "LICENSE.md",
+    "README.md",
+    "knip.json",
+    "package.json",
+    "pnpm-lock.yaml",
+    "pnpm-workspace.yaml",
+    "turbo.json",
+    "vercel.json"
+  ],
+  "release_count": 770,
+  "status": "verified"
+}

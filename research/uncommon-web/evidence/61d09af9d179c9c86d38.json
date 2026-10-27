@@ -1,0 +1,52 @@
+{
+  "url": "https://github.com/ertdfgcvb/play.core",
+  "final_url": "https://github.com/ertdfgcvb/play.core",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:47:46.776415+00:00",
+  "stars": 542,
+  "forks": 56,
+  "description": "ASCII Playground ",
+  "homepage": "https://play.ertdfgcvb.xyz",
+  "topics": [],
+  "license": "Apache-2.0",
+  "archived": false,
+  "created_at": "2020-08-26T08:35:57.000Z",
+  "branch": "master",
+  "commit": "b2d30ac618db573c228a4fa287ddedf48e642e79",
+  "readme": "play.core Core files, example and demos of the live-code ASCII playground: play.ertdfgcvb.xyz Examples and demos: play.ertdfgcvb.xyz/abc.html#source:examples Embedding examples: single multi Playground manual, API and resources: play.ertdfgcvb.xyz/abc.html",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://github.com/ertdfgcvb/play.core#playcore"
+    },
+    {
+      "label": "play.ertdfgcvb.xyz",
+      "url": "https://play.ertdfgcvb.xyz"
+    },
+    {
+      "label": "play.ertdfgcvb.xyz/abc.html#source:examples",
+      "url": "https://play.ertdfgcvb.xyz/abc.html#source:examples"
+    },
+    {
+      "label": "single",
+      "url": "https://play.ertdfgcvb.xyz/tests/single.html"
+    },
+    {
+      "label": "multi",
+      "url": "https://play.ertdfgcvb.xyz/tests/multi.html"
+    },
+    {
+      "label": "play.ertdfgcvb.xyz/abc.html",
+      "url": "https://play.ertdfgcvb.xyz/abc.html"
+    }
+  ],
+  "root_files": [
+    "src",
+    "tests",
+    ".gitignore",
+    "LICENSE",
+    "README.md"
+  ],
+  "release_count": 1,
+  "status": "verified"
+}

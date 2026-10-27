@@ -1,0 +1,158 @@
+{
+  "url": "https://github.com/shader-park/shader-park-core",
+  "final_url": "https://github.com/shader-park/shader-park-core",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:48:16.244872+00:00",
+  "stars": 828,
+  "forks": 29,
+  "description": "A JavaScript library for creating real-time 2D and 3D shaders. JS -> Shader. https://shaderpark.com/  https://twitter.com/shaderpark",
+  "homepage": "https://shaderpark.com/",
+  "topics": [
+    "computer-graphics",
+    "creative-coding",
+    "glsl",
+    "gpu",
+    "graphics-programming",
+    "live-coding",
+    "p5js",
+    "processing",
+    "raymarching",
+    "raymarching-distance-fields",
+    "real-time",
+    "rendering",
+    "sdf",
+    "shader",
+    "shader-park",
+    "shaders",
+    "shadertoy",
+    "signed-distance-field",
+    "web",
+    "webgl"
+  ],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2019-06-17T18:01:01.000Z",
+  "branch": "main",
+  "commit": "dd5e26c39963b63a7280c5b6bc20463c75258d62",
+  "readme": "Shader Park simplifies creating procedural graphics using javascript. With just a few lines of code, create shaders which are: Animated Interactive 2D or 3D Try the live editor ✍️ Browse the Interactive Documentation 📖 Build from working Template/Example Projects 🛠️ Join the community on Discord 💬 Easily integrated with: webpages threejs touchdesigner unity (under development) Explore hundreds of examples Install npm install shader-park-core Usage See examples on glitch CLI usage: npm run toThreeJS my-sculpture.js npm run toOffline my-sculpture.js npm run toRawSDF4Meshing my-sculpture.js For development with SP website: In shader-park-core repo run npm link or yarn link In shader-park-website repo run npm link shader-park-core or yarn link shader-park-core API usage: The simple cli tools in the converters directory are simple examples of how the API can be used. (TODO, put more examples in readme, and examples folder) For now, explore the available functions in index.js, and see their implementations in the targets directory. To add new targets: Implement a class in targets that converts sculpt to the format your target requires (see existing targets for example of available tools for this) Expose the functions externally in index.js Implement a basic cli converter, (for now this means just copy-pasting an existing converter and swapping out the single converter function. The boilerplate could be factored out and the cli converters could be automatically generated) and use as a cli tool, or use API directly.",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://shaderpark.com"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/shader-park/shader-park-core/actions/workflows/build_test.yml/badge.svg"
+    },
+    {
+      "label": "",
+      "url": "https://npmjs.org/package/shader-park-core"
+    },
+    {
+      "label": "",
+      "url": "https://npmjs.org/package/shader-park-core"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/b0e1e81a5f75fe85926b4573022fb3f9baa7c71976429ab4a6838fec5c13cd95/68747470733a2f2f692e696d6775722e636f6d2f6f6b564f4e4f752e676966"
+    },
+    {
+      "label": "live editor ✍️",
+      "url": "https://shaderpark.com/new"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/shader-park/shader-park-core#try-the-live-editor-️"
+    },
+    {
+      "label": "Interactive Documentation 📖",
+      "url": "https://shader-park-docs.netlify.app/references-js/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/shader-park/shader-park-core#browse-the-interactive-documentation-"
+    },
+    {
+      "label": "Template/Example Projects 🛠️",
+      "url": "https://github.com/shader-park/shader-park-examples"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/shader-park/shader-park-core#build-from-working-templateexample-projects-️"
+    },
+    {
+      "label": "Discord 💬",
+      "url": "https://discord.gg/vuBnVuBvvK"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/shader-park/shader-park-core#join-the-community-on-discord-"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/shader-park/shader-park-core#easily-integrated-with"
+    },
+    {
+      "label": "hundreds of examples",
+      "url": "https://shaderpark.com/explore"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/shader-park/shader-park-core#explore-hundreds-of-examples"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/2f9c7c65a50e9fc01489764e504e71f711276e99c5303ac17f884d156a86d3a8/68747470733a2f2f692e696d6775722e636f6d2f644649396731322e676966"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/shader-park/shader-park-core#install"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/shader-park/shader-park-core#usage"
+    },
+    {
+      "label": "glitch",
+      "url": "https://glitch.com/@torinmb/shader-park-examples"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/shader-park/shader-park-core#cli-usage"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/shader-park/shader-park-core#for-development-with-sp-website"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/shader-park/shader-park-core#api-usage"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/shader-park/shader-park-core#to-add-new-targets"
+    }
+  ],
+  "root_files": [
+    ".github/workflows",
+    "converters",
+    "examples",
+    "generators",
+    "glsl",
+    "out",
+    "targets",
+    "test",
+    ".babelrc",
+    ".gitignore",
+    ".prettierignore",
+    "LICENSE",
+    "README.md",
+    "index.js",
+    "package-lock.json",
+    "package.json",
+    "rollup.config.js",
+    "shader-park-syntax.txt"
+  ],
+  "release_count": 7,
+  "status": "verified"
+}

@@ -1,0 +1,123 @@
+{
+  "url": "https://github.com/elevenlabs/ui",
+  "final_url": "https://github.com/elevenlabs/ui",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:47:46.082559+00:00",
+  "stars": 2427,
+  "forks": 178,
+  "description": "ElevenLabs UI is a component library and custom registry built on top of shadcn/ui to help you build multimodal agents faster.",
+  "homepage": "https://ui.elevenlabs.io",
+  "topics": [
+    "agents",
+    "ai",
+    "audio",
+    "components",
+    "elevenlabs",
+    "shadcn-ui"
+  ],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2025-09-03T16:29:41.000Z",
+  "branch": "main",
+  "commit": "3a28ebab197f8cfa599934f52db12ad1396e54f4",
+  "readme": "II ElevenLabs UI ElevenLabs UI is a component library built on top of shadcn/ui to help you build audio & agentic applications faster. Overview ElevenLabs UI provides pre-built, customizable React components specifically designed for agent & audio applications, including orbs, waveforms, voice agents, audio players, and more. The CLI makes it easy to add these components to your Next.js project. Installation You can use the ElevenLabs Agents CLI directly with npx, or install it globally: # Use directly (recommended) npx @elevenlabs/cli@latest components add <component-name> # Or using shadcn cli npx shadcn@latest add https://ui.elevenlabs.io/r/all.json Prerequisites Before using ElevenLabs UI, ensure your Next.js project meets these requirements: Node.js 18 or later shadcn/ui initialized in your project (npx shadcn@latest init) Tailwind CSS configured Usage Install All Components Install all available ElevenLabs UI components at once: npx @elevenlabs/cli@latest components add all This command will: Set up shadcn/ui if not already configured Install all ElevenLabs UI components to your configured components directory Add necessary dependencies to your project Install Specific Components Install individual components using the components add command: npx @elevenlabs/cli@latest components add <component-name> Examples: # Install the orb component npx @elevenlabs/cli@latest components add orb Alternative: Use with shadcn/ui CLI You can also install components using the standard shadcn/ui CLI: # Install all components npx shadcn@latest add https://ui.elevenlabs.io/r/all.json # Install a specific component npx shadcn@latest add https://ui.elevenlabs.io/r/orb.json All available components can be found here or explore a list of example components here. Contributing If you'd like to contribute to ElevenLabs UI, please follow these steps: Fork the repository Create a new branch Make your changes to the components in the registry. Open a PR to the main branch. Please read the contributing guide. License Licensed under the MIT license. Engineered by ElevenLabs.",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://private-user-images.githubusercontent.com/132601011/497914920-a5b73bfc-b0a3-4b4e-8915-f90a086c5723.jpg?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3OTI3MTMxNjUsIm5iZiI6MTc5MjcxMjg2NSwicGF0aCI6Ii8xMzI2MDEwMTEvNDk3OTE0OTIwLWE1YjczYmZjLWIwYTMtNGI0ZS04OTE1LWY5MGEwODZjNTcyMy5qcGc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjYxMDIyJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI2MTAyMlQyMzQ3NDVaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1lMGMwODY0YjI1YjA0MmI1MTJkZWMxNmY3ODQ4NDZmYTVmYjhkZTcwZWM4YjgwYmYyNWZlYTQ3YTUzZmQ1NmZjJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZyZXNwb25zZS1jb250ZW50LXR5cGU9aW1hZ2UlMkZqcGVnIn0.7HpzkFbIIiqC-6PAxpQyAMEsLbkSKrEa5mIN2xDI4RI"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/elevenlabs/ui#ii-elevenlabs-ui"
+    },
+    {
+      "label": "ElevenLabs UI",
+      "url": "https://ui.elevenlabs.io"
+    },
+    {
+      "label": "shadcn/ui",
+      "url": "https://ui.shadcn.com/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/elevenlabs/ui#overview"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/elevenlabs/ui#installation"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/elevenlabs/ui#prerequisites"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/elevenlabs/ui#usage"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/elevenlabs/ui#install-all-components"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/elevenlabs/ui#install-specific-components"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/elevenlabs/ui#alternative-use-with-shadcnui-cli"
+    },
+    {
+      "label": "here",
+      "url": "https://ui.elevenlabs.io/docs/components"
+    },
+    {
+      "label": "here",
+      "url": "https://ui.elevenlabs.io/blocks"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/elevenlabs/ui#contributing"
+    },
+    {
+      "label": "contributing guide",
+      "url": "https://github.com/elevenlabs/ui/blob/main/CONTRIBUTING.md"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/elevenlabs/ui#license"
+    },
+    {
+      "label": "MIT license",
+      "url": "https://github.com/elevenlabs/ui/blob/main/LICENSE.md"
+    },
+    {
+      "label": "ElevenLabs",
+      "url": "https://elevenlabs.io"
+    }
+  ],
+  "root_files": [
+    ".github/workflows",
+    "apps/www",
+    ".commitlintrc.json",
+    ".editorconfig",
+    ".eslintignore",
+    ".eslintrc.json",
+    ".gitignore",
+    ".kodiak.toml",
+    ".prettierignore",
+    "CONTRIBUTING.md",
+    "LICENSE.md",
+    "README.md",
+    "package.json",
+    "pnpm-lock.yaml",
+    "pnpm-workspace.yaml",
+    "postcss.config.cjs",
+    "prettier.config.cjs",
+    "tsconfig.json",
+    "turbo.json",
+    "vitest.config.ts",
+    "vitest.workspace.ts"
+  ],
+  "release_count": 1,
+  "status": "verified"
+}

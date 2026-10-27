@@ -1,0 +1,115 @@
+{
+  "url": "https://github.com/propjockey/augmented-ui",
+  "final_url": "https://github.com/propjockey/augmented-ui",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:48:12.522504+00:00",
+  "stars": 1412,
+  "forks": 71,
+  "description": "Cyberpunk-inspired web UI made easy. Get augmented.",
+  "homepage": "http://augmented-ui.com/",
+  "topics": [
+    "cyberpunk",
+    "sci-fi-gui",
+    "stylesheets",
+    "web-design"
+  ],
+  "license": "BSD-2-Clause",
+  "archived": false,
+  "created_at": "2019-08-20T13:21:19.000Z",
+  "branch": "main",
+  "commit": "c39f40a4c68f2836d12e4cb73e34a1c9173381db",
+  "readme": "augmented-ui from PropJockey Resources: Home: http://augmented-ui.com/ Docs: http://augmented-ui.com/docs/ WYSIWYG Mixin Mixer: http://augmented-ui.com/mixinmixer/ NPM: https://www.npmjs.com/package/augmented-ui GitHub: https://github.com/propjockey/augmented-ui Twitter: https://twitter.com/Jane0ri Old v1 Links: Home: http://augmented-ui.com/v1/ Docs: http://augmented-ui.com/v1/docs/ Test: http://augmented-ui.com/v1/test.html unpkg: https://unpkg.com/augmented-ui@1/augmented.css Install: $ npm install augmented-ui Then include the /node_modules/augmented-ui/augmented-ui.min.css file before any stylesheets that use it. OR Use your favorite NPM CDN and include it on your page before other stylesheets for small projects. Like so: <link rel=\"stylesheet\" type=\"text/css\" href=\"https://unpkg.com/augmented-ui@2/augmented-ui.min.css\"> Files augmented-ui.css - Everything, not minified (core, border and inlay mixins, individual-region mixins, all-region shape mixins) augmented-ui.min.css - Everything, minified (core, border and inlay mixins, individual-region mixins, all-region shape mixins) aug-core.min.css - core only, minified border-inlay-mixins.min.css - border and inlay mixins (and their delegate options) only, minified. Requires aug-core.min.css region-mixins.min.css - individual-region mixins only, minified. Requires aug-core.min.css shape-mixins.min.css - all-region mixins only, minified. Requires aug-core.min.css Support http://augmented-ui.com/docs/#supporting-augmented-ui CHANGELOG: v2.0.0 - August 30, 2020: Complete rewrite Over 200 aug mixins built on top of a new core feature set Mixin Mixer: http://augmented-ui.com/mixinmixer Properties that enable clip augs at any angle, not just 45deg Optionally equip augs dynamically from CSS using core, without DOM attribute mixins and without JavaScript (no more aug-attr-spliced.js!) Border size and Inlay (previously \"Inset\") distance gained individual top/right/bottom/left options Full support global user reach at 92.96% Automatic elliptical border-radius fallbacks removed to simplify adding augmented-ui to projects with legacy browser support v1.1.2 - March 5th, 2020: Added data-augmented.css option for data- prefixed augmented-ui attribute. Added compatibility notes for specific frameworks/libraries at the bottom of this README v1.1.0 - September 9th, 2019: Increased full support global user reach from ~70% to ~91% with -webkit-clip-path Bought an old iPhone to isolate and feature detect the iOS issue found before launch, enabling -webkit-clip-path to be used everywhere else Better docs: http://augmented-ui.com/docs/ v1.0.0 - August 31st, 2019: Initial release -webkit-clip-path support removed before release due to breaking issues on older iOS versions used by ~2% of global users",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "http://jane.propjockey.io/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/propjockey/augmented-ui#augmented-ui-from-propjockey"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/e1b8227a815108d87afcdb768c79de6f45e857ab730645499a79d5ae906b247b/68747470733a2f2f6175676d656e7465642d75692e636f6d2f696d672f7632696e74726f2e676966"
+    },
+    {
+      "label": "http://augmented-ui.com/",
+      "url": "http://augmented-ui.com/"
+    },
+    {
+      "label": "http://augmented-ui.com/docs/",
+      "url": "http://augmented-ui.com/docs/"
+    },
+    {
+      "label": "http://augmented-ui.com/mixinmixer/",
+      "url": "http://augmented-ui.com/mixinmixer/"
+    },
+    {
+      "label": "https://www.npmjs.com/package/augmented-ui",
+      "url": "https://www.npmjs.com/package/augmented-ui"
+    },
+    {
+      "label": "https://github.com/propjockey/augmented-ui",
+      "url": "https://github.com/propjockey/augmented-ui"
+    },
+    {
+      "label": "https://twitter.com/Jane0ri",
+      "url": "https://twitter.com/Jane0ri"
+    },
+    {
+      "label": "http://augmented-ui.com/v1/",
+      "url": "http://augmented-ui.com/v1/"
+    },
+    {
+      "label": "http://augmented-ui.com/v1/docs/",
+      "url": "http://augmented-ui.com/v1/docs/"
+    },
+    {
+      "label": "http://augmented-ui.com/v1/test.html",
+      "url": "http://augmented-ui.com/v1/test.html"
+    },
+    {
+      "label": "https://unpkg.com/augmented-ui@1/augmented.css",
+      "url": "https://unpkg.com/augmented-ui@1/augmented.css"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/propjockey/augmented-ui#files"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/propjockey/augmented-ui#support"
+    },
+    {
+      "label": "http://augmented-ui.com/docs/#supporting-augmented-ui",
+      "url": "http://augmented-ui.com/docs/#supporting-augmented-ui"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/propjockey/augmented-ui#changelog"
+    },
+    {
+      "label": "http://augmented-ui.com/mixinmixer",
+      "url": "http://augmented-ui.com/mixinmixer"
+    },
+    {
+      "label": "http://augmented-ui.com/docs/",
+      "url": "http://augmented-ui.com/docs/"
+    }
+  ],
+  "root_files": [
+    ".github",
+    ".npmignore",
+    "LICENSE",
+    "README.md",
+    "aug-core.min.css",
+    "augmented-ui.css",
+    "augmented-ui.min.css",
+    "border-inlay-mixins.min.css",
+    "package.json",
+    "region-mixins.min.css",
+    "shape-mixins.min.css"
+  ],
+  "release_count": 4,
+  "status": "verified"
+}

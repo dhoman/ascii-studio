@@ -1,0 +1,194 @@
+{
+  "url": "https://github.com/humanbydefinition/textmode.js",
+  "final_url": "https://github.com/humanbydefinition/textmode.js",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:47:51.548719+00:00",
+  "stars": 174,
+  "forks": 3,
+  "description": "textmode.js is a lightweight creative coding library for creating real-time ASCII art on the web.",
+  "homepage": "https://code.textmode.art",
+  "topics": [
+    "art",
+    "ascii",
+    "canvas",
+    "creative-coding",
+    "design",
+    "graphics",
+    "petscii",
+    "textmode",
+    "webgl"
+  ],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2025-07-14T16:48:48.000Z",
+  "branch": "main",
+  "commit": "319eda27cbabd98f8e333026c00a1eb95e2d18d1",
+  "readme": "textmode.js textmode.js is a free, lightweight, and framework-agnostic creative-coding library for real‑time ASCII and textmode graphics in the browser. It combines a grid‑based API with a modern WebGL2 pipeline, multiple render targets, and aggressive instanced rendering to deliver smooth, high‑performance rendering. The library is designed to be easy to use and accessible to developers of all skill levels. Whether you're a seasoned developer or just starting out, textmode.js provides a simple and intuitive API that makes it easy to create stunning textmode art and animations. Features Real-time creative drawing - Grid-based WebGL2 rendering for characters, colors, text, glyph ramps, and 2D/3D primitives Fonts and tilesets - Runtime TTF/OTF/WOFF loading, bitmap tilesets, dynamic sizing, and reusable glyph atlases Layers and compositing - Independent grids, fonts, transforms, visibility, opacity, and blend modes per layer Media conversion - Images, videos, and live textures converted into configurable glyph and color data Programmable GLSL rendering - Push beyond the drawing API with custom GLSL ES 3.00 materials, user-defined uniforms, textures, and offscreen framebuffers Animation and generative tools - Loop and timing controls, deterministic randomness, noise, vectors, math, and easing Interaction and responsive rendering - Built-in mouse, keyboard, touch, gamepad, resize, and HiDPI support Plugins and framework integration - Typed lifecycle hooks and layer/source extension points Note*Performance depends on the complexity of your scene and device capabilities. Try it online first Open editor.textmode.art, a browser-based live-coding environment for the complete official textmode.js ecosystem. Sketches run as you edit, with no local toolchain required. The editor includes textmode.js and all four official add-ons: textmode.export.js, textmode.filters.js, textmode.figlet.js, and textmode.synth.js. Write with Monaco-powered completions, hover documentation, and diagnostics. Start with a blank sketch, an included example, or a community gallery sketch. Keep code and preferences saved in the browser, then share sketches through URL-based links. Use microphone or line-input analysis for audio-reactive work, and create on desktop or mobile. Use it to create and iterate on core sketches, then combine add-ons as your project grows. Installation Follow the official installation guide to install textmode.js with npm or a browser-ready UMD bundle and to add official plugins. Next steps Read the documentation for core concepts, guides, and installation details. Browse the API reference for the complete typed API. Explore the examples to see common drawing, animation, media, and plugin patterns. Try the live editor to sketch interactively in the browser. Contributing Thank you for considering contributing to this project! (✿◠‿◠) Please read the Contributing Guide to get started. Contributors Thanks to the people who contribute code, documentation, design, examples, ideas, infrastructure, and care across the textmode.js ecosystem. humanbydefinition 💻 📖 🎨 💡 🤔 🚧 🚇 🔧 🔌 👀 trintlermint 🎨 💡 Contribution details and profile links are maintained on the textmode.js contributors page. License textmode.js is licensed under the MIT License for the published distribution. The TypeScript development source and build tooling are kept in a private repository and are not publicly available. Acknowledgements Typr.js Custom-made TypeScript rewrite and minified subset by Photopea, used for font loading and parsing. License: MIT License. UrsaFont Default bundled font created by UrsaFrank. License: CC0 (Creative Commons Zero).",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://github.com/humanbydefinition/textmode.js#textmodejs"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/humanbydefinition/textmode.js/blob/main/.github/assets/readme-og.png"
+    },
+    {
+      "label": "",
+      "url": "https://www.typescriptlang.org/"
+    },
+    {
+      "label": "",
+      "url": "https://vitejs.dev/"
+    },
+    {
+      "label": "",
+      "url": "https://www.khronos.org/webgl/"
+    },
+    {
+      "label": "",
+      "url": "https://code.textmode.art/api/textmode.js/"
+    },
+    {
+      "label": "",
+      "url": "https://code.textmode.art/"
+    },
+    {
+      "label": "",
+      "url": "https://discord.gg/sjrw8QXNks"
+    },
+    {
+      "label": "",
+      "url": "https://ko-fi.com/V7V8JG2FY"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/sponsors/humanbydefinition"
+    },
+    {
+      "label": "WebGL2",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/API/WebGL2RenderingContext"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/humanbydefinition/textmode.js#features"
+    },
+    {
+      "label": "GLSL ES 3.00",
+      "url": "https://registry.khronos.org/OpenGL/specs/es/3.0/GLSL_ES_Specification_3.00.pdf"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/humanbydefinition/textmode.js#try-it-online-first"
+    },
+    {
+      "label": "editor.textmode.art",
+      "url": "https://editor.textmode.art/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/humanbydefinition/textmode.js#installation"
+    },
+    {
+      "label": "official installation guide",
+      "url": "https://code.textmode.art/docs/installation"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/humanbydefinition/textmode.js#next-steps"
+    },
+    {
+      "label": "Read the documentation",
+      "url": "https://code.textmode.art/"
+    },
+    {
+      "label": "Browse the API reference",
+      "url": "https://code.textmode.art/api/textmode.js/"
+    },
+    {
+      "label": "Explore the examples",
+      "url": "https://github.com/humanbydefinition/textmode.js/blob/main/examples"
+    },
+    {
+      "label": "Try the live editor",
+      "url": "https://editor.textmode.art/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/humanbydefinition/textmode.js#contributing"
+    },
+    {
+      "label": "Contributing Guide",
+      "url": "https://github.com/humanbydefinition/textmode.js/blob/main/CONTRIBUTING.md"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/humanbydefinition/textmode.js#contributors"
+    },
+    {
+      "label": "humanbydefinition",
+      "url": "https://github.com/humanbydefinition"
+    },
+    {
+      "label": "trintlermint",
+      "url": "https://github.com/trintlermint"
+    },
+    {
+      "label": "textmode.js contributors page",
+      "url": "https://code.textmode.art/docs/contributors"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/humanbydefinition/textmode.js#license"
+    },
+    {
+      "label": "MIT License",
+      "url": "https://github.com/humanbydefinition/textmode.js/blob/main/LICENSE"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/humanbydefinition/textmode.js#acknowledgements"
+    },
+    {
+      "label": "Typr.js",
+      "url": "https://github.com/photopea/Typr.js"
+    },
+    {
+      "label": "Photopea",
+      "url": "https://github.com/photopea"
+    },
+    {
+      "label": "MIT License",
+      "url": "https://github.com/photopea/Typr.js/blob/gh-pages/LICENSE"
+    },
+    {
+      "label": "UrsaFont",
+      "url": "https://ursafrank.itch.io/ursafont"
+    },
+    {
+      "label": "UrsaFrank",
+      "url": "https://ursafrank.itch.io/"
+    },
+    {
+      "label": "CC0 (Creative Commons Zero)",
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/"
+    }
+  ],
+  "root_files": [
+    ".github",
+    "dist",
+    "examples",
+    ".gitignore",
+    ".nvmrc",
+    "CODE_OF_CONDUCT.md",
+    "CONTRIBUTING.md",
+    "LICENSE",
+    "README.md",
+    "SECURITY.md",
+    "package-lock.json",
+    "package.json",
+    "vite.config.ts"
+  ],
+  "release_count": 21,
+  "status": "verified"
+}

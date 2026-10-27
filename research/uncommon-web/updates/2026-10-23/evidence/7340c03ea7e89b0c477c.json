@@ -1,0 +1,226 @@
+{
+  "url": "https://github.com/retrostrap/retrostrap",
+  "final_url": "https://github.com/retrostrap/retrostrap",
+  "http_status": 200,
+  "checked_at": "2026-10-23T17:46:57.158324+00:00",
+  "stars": 2,
+  "forks": 3,
+  "description": "Build like it's 2026, look like it's 1999. A CSS+JS framework for the era-authentic web: responsive, accessible, zero dependencies.",
+  "homepage": "https://retrostrap.dev",
+  "topics": [
+    "90s",
+    "accessibility",
+    "css",
+    "css-framework",
+    "geocities",
+    "retro",
+    "web1",
+    "zero-dependency"
+  ],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2026-07-16T13:56:20.000Z",
+  "branch": "main",
+  "commit": "bf65d2b7cdc5b09af83bd85933a3ea5ca3abad14",
+  "readme": "retrostrap ╔═════════════════════════════════════════════════════════════════════════╗ ║ * : . : ' ~ ' : . : * r e t r o s t r a p * : . : ' ~ ' : . : * ║ ║ Build like it's 2026, look like it's 1999. ║ ╚═════════════════════════════════════════════════════════════════════════╝ [ under construction, and proud of it ] retrostrap is a CSS + JavaScript framework for building websites that look like the web of 1996-2003, GeoCities homepages, system-gray desktops, glitter shrines, green terminals, while behaving like the modern web: responsive on every screen size, accessible, fast, zero dependencies, installable from a CDN in two tags (four with a theme and the Toybox, as below). It ships in two parts: The styling framework: sixty-plus components (bevel buttons, window chrome, marquees, hit-counter shells, webring bars, folder tabs, \"You are here:\" breadcrumbs…), ten themes, and layout recipes that quietly collapse to phones. The Toybox: twenty-two optional widgets: a pixel cat that chases your cursor, falling snow, cursor trails, shiny spheres that trail your mouse in a rainbow, a little pet you feed, hit counters, a jukebox that never autoplays, and a konami code that starts a 30-second party. Around the framework: thirty-four demo sites you can view-source, among them a drag-and-drop page builder and Retrospace, a curated directory for the community; plus an MCP server so coding assistants build era-correct pages on the first try. The trick that holds it together: the era's constraints are enforced as design law, only the 216 web-safe colors (+16 named), nine period font stacks, border-radius: 0, linear/steps() easing only. Stay inside the framework and you cannot accidentally look modern. Meanwhile everything underneath is current-year engineering: semantic HTML, real focus order, prefers-reduced-motion, performance budgets, progressive enhancement. Status It's all built, tested, and live: the CSS (63 components, ~7KB gzipped), the widget engine with a live Retrostrap.audit(), the ten themes and twenty-two widgets, the demos, the builder, and Retrospace, on npm as retrostrap, on the CDN, and running at retrostrap.dev. The full blueprint lives in docs/ (design laws, catalogs). Quick start <!DOCTYPE html> <html lang=\"en\" data-rs-theme=\"midnight\"> <head> <meta charset=\"utf-8\"> <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"> <link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/retrostrap@0.1.1/dist/retrostrap.min.css\" integrity=\"sha384-SC+ga2p8hbUPXaRsOxH+EYGbYEdIO7hxwrSdKAXVPtaYJraon45yPLut6JNkyBV+\" crossorigin=\"anonymous\"> <link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/retrostrap@0.1.1/dist/themes/midnight.css\" integrity=\"sha384-ndHiSg65WpOKFmgpnWUYxGV9kwI3ZVmiec39s9owo9lkJicGisiYMsPJqbb792IM\" crossorigin=\"anonymous\"> <script defer src=\"https://cdn.jsdelivr.net/npm/retrostrap@0.1.1/dist/retrostrap.min.js\" integrity=\"sha384-Ryw9HBQdLuRoSeAz0+JpBQI5qtev8vV49NofDfGt7MC/HV3hYb32RQPKnaI9AOwO\" crossorigin=\"anonymous\"></script> <script defer src=\"https://cdn.jsdelivr.net/npm/retrostrap@0.1.1/dist/retrostrap-toybox.min.js\" integrity=\"sha384-HnsgaZJwyzLxPLXpeqZx90ib3BHEG4u63m65le2m2c/2YaRbW7r3G3V3dDYPX9tI\" crossorigin=\"anonymous\"></script> </head> <body data-rs-widgets=\"snowfall neko\" data-rs-neko-behavior=\"patrol\"> <div class=\"rs-page rs-container\"> <h1 class=\"rs-rainbow rs-text-center\">Welcome to my Homepage!</h1> <p class=\"rs-text-center\"><span class=\"rs-badge rs-badge--new rs-blink\">NEW!</span> You are visitor <span class=\"rs-counter\" data-rs-widgets=\"hit-counter\">001337</span></p> </div> </body> </html> New here? The Get started guide is the short path: the two-tag install, npm, dropping into React/Vue/Svelte, a full page skeleton, themes, and verifying with Retrostrap.audit(). The documentation Get started is the quickest path onto the air. For the whole picture, start with the vision, then wander: The full documentation index Get started install, frameworks, first page, themes, audit 00 · Vision what, why, principles, non-goals 01 · The Museum how the old web really looked, researched 02 · Design language the five laws, tokens, guardrails 03 · Architecture repo, build, catalog system, asset pipeline 04 · Components the full catalog 05 · The Toybox widget catalog + the ten-rule contract 06 · JavaScript API the whole surface 07 · Theming ten themes, token matrix 08 · A11y & performance the modern conscience 09 · AI integration llms.txt, manifest, MCP server 10 · Demo sites 34 demos + the docs site 11 · The Boards forum spec, Netiquette (EN + DE) 12 · Retrospace the curated directory See it running Live on retrostrap.dev: the docs (built with retrostrap, of course), the kitchen sink with every component on one page, and thirty-four demo sites, among them the drag-and-drop page builder and Retrospace, our curated directory of the living retro web. The same pages live in this repo, view-source-able and offline-friendly: demos/ holds the gallery, a personal homepage, a pizzeria, an ISP's NOC, a webcomic, a band shrine, an online store, and more. Screenshots at three viewports are in site/assets/shots/. Community Issues and pull requests are the front door: bugs, ideas, and showcase entries each have a template waiting. Anything that fits none of them goes to hello@retrostrap.dev, in English or in German. Be kind; greet the newbies; remember the human. Built something? Wear the badge: For robots Machine-readable everything: llms.txt, a one-page cheatsheet, manifest.json, guardrails.json, a prompt pack, and an MCP server (services/mcp/) that hands assistants the catalog as tools, so they build era-correct pages on the first try. See docs/09. Who makes this retrostrap is built and maintained by Stefan Gündhör: a business informatics degree (JKU Linz, 2012) and hands-on web and backend engineering since long before generative AI went public. It is published under his Austrian one-person company, vorausgedacht.at e.U. Modern tools, generative AI among them, are part of the workshop here; nothing ships without human technical judgment and a manual review. The retro is the look, not the engineering standard. License MIT (the LICENSE file). This page is best viewed with any browser, at any size. That's the whole point.",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://github.com/retrostrap/retrostrap#retrostrap"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/retrostrap/retrostrap/blob/main/site/assets/og.png"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/retrostrap/retrostrap#status"
+    },
+    {
+      "label": "retrostrap.dev",
+      "url": "https://retrostrap.dev"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/retrostrap/retrostrap#quick-start"
+    },
+    {
+      "label": "Get started guide",
+      "url": "https://github.com/retrostrap/retrostrap/blob/main/docs/99-get-started.md"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/retrostrap/retrostrap#the-documentation"
+    },
+    {
+      "label": "Get started",
+      "url": "https://github.com/retrostrap/retrostrap/blob/main/docs/99-get-started.md"
+    },
+    {
+      "label": "vision",
+      "url": "https://github.com/retrostrap/retrostrap/blob/main/docs/00-vision.md"
+    },
+    {
+      "label": "Get started",
+      "url": "https://github.com/retrostrap/retrostrap/blob/main/docs/99-get-started.md"
+    },
+    {
+      "label": "00 · Vision",
+      "url": "https://github.com/retrostrap/retrostrap/blob/main/docs/00-vision.md"
+    },
+    {
+      "label": "01 · The Museum",
+      "url": "https://github.com/retrostrap/retrostrap/blob/main/docs/01-history-research.md"
+    },
+    {
+      "label": "02 · Design language",
+      "url": "https://github.com/retrostrap/retrostrap/blob/main/docs/02-design-language.md"
+    },
+    {
+      "label": "03 · Architecture",
+      "url": "https://github.com/retrostrap/retrostrap/blob/main/docs/03-architecture.md"
+    },
+    {
+      "label": "04 · Components",
+      "url": "https://github.com/retrostrap/retrostrap/blob/main/docs/04-components.md"
+    },
+    {
+      "label": "05 · The Toybox",
+      "url": "https://github.com/retrostrap/retrostrap/blob/main/docs/05-widgets.md"
+    },
+    {
+      "label": "06 · JavaScript API",
+      "url": "https://github.com/retrostrap/retrostrap/blob/main/docs/06-javascript-api.md"
+    },
+    {
+      "label": "07 · Theming",
+      "url": "https://github.com/retrostrap/retrostrap/blob/main/docs/07-theming.md"
+    },
+    {
+      "label": "08 · A11y & performance",
+      "url": "https://github.com/retrostrap/retrostrap/blob/main/docs/08-accessibility-performance.md"
+    },
+    {
+      "label": "09 · AI integration",
+      "url": "https://github.com/retrostrap/retrostrap/blob/main/docs/09-ai-integration.md"
+    },
+    {
+      "label": "10 · Demo sites",
+      "url": "https://github.com/retrostrap/retrostrap/blob/main/docs/10-demo-sites.md"
+    },
+    {
+      "label": "11 · The Boards",
+      "url": "https://github.com/retrostrap/retrostrap/blob/main/docs/11-community-forum.md"
+    },
+    {
+      "label": "12 · Retrospace",
+      "url": "https://github.com/retrostrap/retrostrap/blob/main/docs/12-retrospace.md"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/retrostrap/retrostrap#see-it-running"
+    },
+    {
+      "label": "retrostrap.dev",
+      "url": "https://retrostrap.dev"
+    },
+    {
+      "label": "the kitchen sink",
+      "url": "https://retrostrap.dev/kitchen-sink/"
+    },
+    {
+      "label": "thirty-four demo sites",
+      "url": "https://retrostrap.dev/demos/"
+    },
+    {
+      "label": "page builder",
+      "url": "https://retrostrap.dev/demos/builder/"
+    },
+    {
+      "label": "Retrospace",
+      "url": "https://retrostrap.dev/demos/retrospace/"
+    },
+    {
+      "label": "demos/",
+      "url": "https://github.com/retrostrap/retrostrap/blob/main/demos/index.html"
+    },
+    {
+      "label": "site/assets/shots/",
+      "url": "https://github.com/retrostrap/retrostrap/blob/main/site/assets/shots"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/retrostrap/retrostrap#community"
+    },
+    {
+      "label": "hello@retrostrap.dev",
+      "url": "mailto:hello@retrostrap.dev"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/retrostrap/retrostrap/blob/main/.github/badges/made-with-retrostrap.png"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/retrostrap/retrostrap#for-robots"
+    },
+    {
+      "label": "services/mcp/",
+      "url": "https://github.com/retrostrap/retrostrap/blob/main/services/mcp"
+    },
+    {
+      "label": "docs/09",
+      "url": "https://github.com/retrostrap/retrostrap/blob/main/docs/09-ai-integration.md"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/retrostrap/retrostrap#who-makes-this"
+    },
+    {
+      "label": "Stefan Gündhör",
+      "url": "https://stg.social"
+    },
+    {
+      "label": "vorausgedacht.at e.U.",
+      "url": "https://vorausgedacht.at"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/retrostrap/retrostrap#license"
+    },
+    {
+      "label": "LICENSE",
+      "url": "https://github.com/retrostrap/retrostrap/blob/main/LICENSE"
+    }
+  ],
+  "root_files": [
+    ".github",
+    "catalog",
+    "demos",
+    "docs",
+    "infra",
+    "scripts",
+    "services",
+    "site",
+    "src",
+    "templates",
+    "tests",
+    "tools/stylelint-retrostrap",
+    ".gitignore",
+    "CHANGELOG.md",
+    "CODE_OF_CONDUCT.md",
+    "CONTRIBUTING.md",
+    "GOVERNANCE.md",
+    "LICENSE",
+    "MIGRATIONS.md",
+    "README.md",
+    "SECURITY.md",
+    "THIRD_PARTY.md",
+    "package-lock.json",
+    "package.json",
+    "playwright.config.js",
+    "playwright.visual.config.js"
+  ],
+  "release_count": 2,
+  "status": "verified"
+}

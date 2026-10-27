@@ -1,0 +1,322 @@
+{
+  "url": "https://github.com/software-mansion/TypeGPU",
+  "final_url": "https://github.com/software-mansion/TypeGPU",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:48:18.558402+00:00",
+  "stars": 3284,
+  "forks": 140,
+  "description": "A modular and open-ended toolkit for WebGPU, with advanced type inference and the ability to write shaders in TypeScript",
+  "homepage": "http://typegpu.com",
+  "topics": [
+    "gpgpu",
+    "gpu",
+    "gpu-computing",
+    "gpu-programming",
+    "graphics",
+    "javascript",
+    "typesafe",
+    "typescript",
+    "webgpu",
+    "webgpu-api",
+    "wgsl",
+    "wgsl-shader"
+  ],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2024-02-17T13:29:14.000Z",
+  "branch": "main",
+  "commit": "7c853fa3a20b46050f59dd0360e21237f0debf53",
+  "readme": "Website — Documentation TypeGPU is a modular and open-ended toolkit for WebGPU, with advanced type inference and the ability to write shaders in TypeScript. const neighborhood = (a: number, r: number) => { 'use gpu'; return d.vec2f(a - r, a + r); }; // // #1) Can be called in JS // const range = neighborhood(1.1, 0.5); // ^? d.v2f // // #2) Used to generate WGSL // const main = () => { 'use gpu'; return neighborhood(1.1, 0.5); }; const wgsl = tgpu.resolve([main]); // ^? string // // #3) Executed on the GPU (generates WGSL underneath) // root.createGuardedComputePipeline(main).dispatchThreads(); Table of contents: ⚙️ TypeGPU as a foundation 🧩 TypeGPU as a piece of the puzzle 📖 TypeGPU for libraries Documentation What's next? Projects using TypeGPU Repository structure ⚙️ TypeGPU as a foundation We provide an abstraction that solves the most common WebGPU hurdles, yet does not restrict you in capability. You can granularly eject into vanilla WebGPU at any point. This means that, when building your app with TypeGPU, lock-in is not a concern! The low-level nature of TypeGPU and it's mirroring of WGSL (WebGPU Shading Language) syntax in TypeScript means that learning TypeGPU helps to learn WebGPU itself, with fewer frustrations. The Getting Started and Fundamentals guides are a great starting point for new projects! 🧩 TypeGPU as a piece of the puzzle Our type-safe APIs can be used together, or in isolation. This makes partial application into existing apps just a few lines of code away, no matter the complexity of your app! We wrote a comprehensive resource on ways TypeGPU can improve your existing codebase. Pick and choose which parts of TypeGPU you'd like to incorporate into your existing app! 📖 TypeGPU for libraries When creating a type-safe WebGPU library, one can expect to encounter at least one of the following problems: Serializing/deserializing data. Dynamically generating parts of the WGSL shader. Complex type inference. If implemented from scratch, interoperability with other libraries (ones that have a different focus, solve different problems) can be near impossible without going down to untyped WebGPU land, or copying data back to JS. Moreover, to keep up with demand from users, they can be tempted to go out of scope of their initial use-case, even though another library already solves that problem. TypeGPU can be used as an interoperability layer between use-case specific libraries! Let's imagine @xyz/gen is a library for procedural generation using WebGPU compute shaders, and @abc/plot is a library for plots and visualization using WebGPU. import { tgpu } from 'typegpu'; import gen from '@xyz/gen'; import plot from '@abc/plot'; // common root for allocating resources const root = await tgpu.init(); const terrainBuffer = await gen.generateHeightMap(root, { ... }); // ^? TgpuBuffer<WgslArray<WgslArray<F32>>> & StorageFlag // ERROR: Argument of type 'TgpuBuffer<WgslArray<WgslArray<F32>>>' is // not assignable to parameter of type 'TgpuBuffer<WgslArray<F32>>>' plot.array1d(root, terrainBuffer); // SUCCESS! plot.array2d(root, terrainBuffer); We can pass typed values around without the need to copy anything back to CPU-accessible memory! Let's see an example of how we can construct a type-safe API: import type { StorageFlag, TgpuBuffer, TgpuRoot } from 'typegpu'; import { d } from 'typegpu'; // We can define schemas, or functions that return schemas... const HeightMap = (width: number, height: number) => d.arrayOf(d.arrayOf(d.f32, height), width); // ...then infer types from them type HeightMap = ReturnType<typeof HeightMap>; export async function generateHeightMap( root: TgpuRoot, opts: { width: number; height: number }, ): Promise<TgpuBuffer<HeightMap> & StorageFlag> { const buffer = root .createBuffer(HeightMap(opts.width, opts.height)) .$usage('storage'); const rawBuffer = root.unwrap(buffer); // => GPUBuffer // Here we can do anything we would usually do with a // WebGPU buffer, like populating it in a compute shader. // `rawBuffer` is the WebGPU resource that is backing the // typed `buffer` object, meaning any changes to it will // be visible in both. return buffer; } Planning to create a WebGPU library? Reach out to us! We'd love to work with you to enrich the ecosystem with type-safe WebGPU utilities! Documentation We created a set of guides and tutorials to get you up and running fast. Check out our Official Docs! What's next? Join the Software Mansion Community Discord to chat about TypeGPU or other Software Mansion libraries. Projects using TypeGPU Libraries: Redraw - a 2D graphics library built on top of WebGPU, with support for vector feathering and advanced vector-based effects. Vivarium - Modern, intuitive, WebGPU-powered toolkit for creating your own cellular automata wayfare - A modular game engine built on top of TypeGPU & Koota typegpu-shader-canvas - a high-level library that sets up a canvas for you, so you can focus on delivering pixels with TypeScript functions lilgpu - Lil wrapper to toy with WebGPU, powered by TypeGPU fisheye.js - A JavaScript library for correcting fisheye, or barrel distortion, in images in the browser @pmndrs/glyph - A typography engine for web graphics, with font baking, Unicode shaping, paragraph layout and batched text rendering Apps: Screen Studio - macOS screen recorder with automatic zoom and smooth animations for product demos, tutorials, and social media videos. Shaders v3 - A visual design platform for creating production-ready WebGPU effects ComfyUI - An open-source tool for creating generative AI Lumen Apeiron by deluksic & Komediruzecki Bone Tide (Web) (App Store) (Google Play) - A horde survival game by Konrad Reczko GFX Computer - A WebMCP-enabled video editor, powered by TypeGPU Demos: Apollonian Circles by deluksic Strange Forms by Logan Zartman WebGPU Stable Fluids by Logan Zartman Plasma Garden by Alex Wayne Glowout by Alex Wayne MeloSkia - A music-game demo to highlight RN-Skia capabilities by Kim Chouard Repository structure Packages: packages/typegpu - The core library. packages/typegpu-color - A set of color helper functions for use in WebGPU/TypeGPU apps. packages/typegpu-noise - A set of noise/pseudo-random functions for use in WebGPU/TypeGPU apps. Tooling: packages/unplugin-typegpu - Plugin for your favorite bundler, enabling TypeGPU shader functions to be written in JS. packages/tgpu-gen - CLI tool for automatic TypeGPU code generation. Internals: packages/tinyest - Type definitions for a JS embeddable syntax tree. packages/tinyest-for-wgsl - Transforms JavaScript into its tinyest form, to be used in generating equivalent (or close to) WGSL code. packages/tgpu-wgsl-parser - WGSL code parser. packages/tgpu-dev-cli - Development tools for packages in the monorepo. Apps: apps/typegpu-docs - The documentation, examples and benchmarks webpage. apps/infra-benchmarks - Headless benchmarks. TypeGPU is created by Software Mansion Since 2012 Software Mansion is a software agency with experience in building web and mobile apps. We are Core React Native Contributors and experts in dealing with all kinds of React Native issues. We can help you build your next dream product – Hire us. Made by @software-mansion and community 💛",
+  "readme_links": [
+    {
+      "label": "Website",
+      "url": "https://docs.swmansion.com/TypeGPU"
+    },
+    {
+      "label": "Documentation",
+      "url": "https://docs.swmansion.com/TypeGPU/getting-started"
+    },
+    {
+      "label": "",
+      "url": "https://swm-delivery.com/www/delivery/ck-slug.php?zoneid=zone-gh-typeGPU-1&n=1"
+    },
+    {
+      "label": "",
+      "url": "https://swm-delivery.com/www/delivery/ck-slug.php?zoneid=zone-gh-typeGPU-2&n=1"
+    },
+    {
+      "label": "",
+      "url": "https://swm-delivery.com/www/delivery/ck-slug.php?zoneid=zone-gh-typeGPU-3&n=1"
+    },
+    {
+      "label": "",
+      "url": "https://npmjs.com/package/typegpu"
+    },
+    {
+      "label": "",
+      "url": "https://bundlephobia.com/package/typegpu"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/software-mansion/TypeGPU/blob/main/LICENSE"
+    },
+    {
+      "label": "⚙️ TypeGPU as a foundation",
+      "url": "https://github.com/software-mansion/TypeGPU#gear-typegpu-as-a-foundation"
+    },
+    {
+      "label": "🧩 TypeGPU as a piece of the puzzle",
+      "url": "https://github.com/software-mansion/TypeGPU#jigsaw-typegpu-as-a-piece-of-the-puzzle"
+    },
+    {
+      "label": "📖 TypeGPU for libraries",
+      "url": "https://github.com/software-mansion/TypeGPU#book-typegpu-for-libraries"
+    },
+    {
+      "label": "Documentation",
+      "url": "https://github.com/software-mansion/TypeGPU#documentation"
+    },
+    {
+      "label": "What's next?",
+      "url": "https://github.com/software-mansion/TypeGPU#whats-next"
+    },
+    {
+      "label": "Projects using TypeGPU",
+      "url": "https://github.com/software-mansion/TypeGPU#projects-using-typegpu"
+    },
+    {
+      "label": "Repository structure",
+      "url": "https://github.com/software-mansion/TypeGPU#repository-structure"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/software-mansion/TypeGPU#gear-typegpu-as-a-foundation"
+    },
+    {
+      "label": "The Getting Started and Fundamentals guides are a great starting point for new projects!",
+      "url": "https://docs.swmansion.com/TypeGPU/getting-started/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/software-mansion/TypeGPU#jigsaw-typegpu-as-a-piece-of-the-puzzle"
+    },
+    {
+      "label": "We wrote a comprehensive resource on ways TypeGPU can improve your existing codebase.",
+      "url": "https://docs.swmansion.com/TypeGPU/integration/webgpu-interoperability/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/software-mansion/TypeGPU#book-typegpu-for-libraries"
+    },
+    {
+      "label": "Planning to create a WebGPU library? Reach out to us!",
+      "url": "https://discord.gg/8jpfgDqPcM"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/software-mansion/TypeGPU#documentation"
+    },
+    {
+      "label": "Official Docs",
+      "url": "https://docs.swmansion.com/TypeGPU/getting-started"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/software-mansion/TypeGPU#whats-next"
+    },
+    {
+      "label": "Join the Software Mansion Community Discord",
+      "url": "https://discord.gg/8jpfgDqPcM"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/software-mansion/TypeGPU#projects-using-typegpu"
+    },
+    {
+      "label": "Redraw",
+      "url": "https://wcandillon.github.io/redraw/"
+    },
+    {
+      "label": "Vivarium",
+      "url": "https://github.com/WonderYard/vivarium"
+    },
+    {
+      "label": "wayfare",
+      "url": "https://github.com/iwoplaza/wayfare"
+    },
+    {
+      "label": "typegpu-shader-canvas",
+      "url": "https://github.com/AlexJWayne/typegpu-shader-canvas"
+    },
+    {
+      "label": "lilgpu",
+      "url": "https://github.com/gnlow/lilgpu"
+    },
+    {
+      "label": "fisheye.js",
+      "url": "https://github.com/GyeongHoKim/fisheye.js/tree/main"
+    },
+    {
+      "label": "@pmndrs/glyph",
+      "url": "https://github.com/pmndrs/glyph"
+    },
+    {
+      "label": "Screen Studio",
+      "url": "https://screen.studio/"
+    },
+    {
+      "label": "Shaders v3",
+      "url": "https://shaders.com/updates/introducing-shaders-v3"
+    },
+    {
+      "label": "ComfyUI",
+      "url": "https://www.comfy.org/"
+    },
+    {
+      "label": "Lumen Apeiron",
+      "url": "https://lumenapeiron.com/"
+    },
+    {
+      "label": "Web",
+      "url": "https://reczkok.github.io/typegpu-adventure/"
+    },
+    {
+      "label": "App Store",
+      "url": "https://apps.apple.com/pl/app/bone-tide-horde-survival/id6791994827"
+    },
+    {
+      "label": "Google Play",
+      "url": "https://play.google.com/store/apps/details?id=com.swmansion.bonetide"
+    },
+    {
+      "label": "GFX Computer",
+      "url": "https://gfx.computer/"
+    },
+    {
+      "label": "Apollonian Circles",
+      "url": "https://deluksic.github.io/apollonian-circles/"
+    },
+    {
+      "label": "Strange Forms",
+      "url": "https://github.com/loganzartman/strangeforms"
+    },
+    {
+      "label": "WebGPU Stable Fluids",
+      "url": "https://github.com/loganzartman/webgpu-stable-fluids"
+    },
+    {
+      "label": "Plasma Garden",
+      "url": "https://alexwayne.codes/2026-01-11-plasma-garden/"
+    },
+    {
+      "label": "Glowout",
+      "url": "https://alexwayne.codes/2025-12-04-glowout/"
+    },
+    {
+      "label": "MeloSkia",
+      "url": "https://github.com/kimchouard/meloskia"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/software-mansion/TypeGPU#repository-structure"
+    },
+    {
+      "label": "packages/typegpu",
+      "url": "https://github.com/software-mansion/TypeGPU/blob/main/packages/typegpu"
+    },
+    {
+      "label": "packages/typegpu-color",
+      "url": "https://github.com/software-mansion/TypeGPU/blob/main/packages/typegpu-color"
+    },
+    {
+      "label": "packages/typegpu-noise",
+      "url": "https://github.com/software-mansion/TypeGPU/blob/main/packages/typegpu-noise"
+    },
+    {
+      "label": "packages/unplugin-typegpu",
+      "url": "https://github.com/software-mansion/TypeGPU/blob/main/packages/unplugin-typegpu"
+    },
+    {
+      "label": "packages/tgpu-gen",
+      "url": "https://github.com/software-mansion/TypeGPU/blob/main/packages/tgpu-gen"
+    },
+    {
+      "label": "packages/tinyest",
+      "url": "https://github.com/software-mansion/TypeGPU/blob/main/packages/tinyest"
+    },
+    {
+      "label": "packages/tinyest-for-wgsl",
+      "url": "https://github.com/software-mansion/TypeGPU/blob/main/packages/tinyest-for-wgsl"
+    },
+    {
+      "label": "packages/tgpu-wgsl-parser",
+      "url": "https://github.com/software-mansion/TypeGPU/blob/main/packages/tgpu-wgsl-parser"
+    },
+    {
+      "label": "packages/tgpu-dev-cli",
+      "url": "https://github.com/software-mansion/TypeGPU/blob/main/packages/tgpu-dev-cli"
+    },
+    {
+      "label": "apps/typegpu-docs",
+      "url": "https://github.com/software-mansion/TypeGPU/blob/main/apps/typegpu-docs"
+    },
+    {
+      "label": "apps/infra-benchmarks",
+      "url": "https://github.com/software-mansion/TypeGPU/blob/main/apps/infra-benchmarks"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/software-mansion/TypeGPU#typegpu-is-created-by-software-mansion"
+    },
+    {
+      "label": "",
+      "url": "https://swmansion.com"
+    },
+    {
+      "label": "Software Mansion",
+      "url": "https://swmansion.com"
+    },
+    {
+      "label": "Hire us",
+      "url": "https://swmansion.com/contact/projects?utm_source=typegpu&utm_medium=readme"
+    },
+    {
+      "label": "@software-mansion",
+      "url": "https://github.com/software-mansion"
+    },
+    {
+      "label": "community",
+      "url": "https://github.com/software-mansion/TypeGPU/graphs/contributors"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/software-mansion/TypeGPU/graphs/contributors"
+    }
+  ],
+  "root_files": [
+    ".github",
+    ".vscode",
+    "apps",
+    "packages",
+    "patches",
+    "scripts",
+    ".gitattributes",
+    ".gitignore",
+    ".nvmrc",
+    ".oxfmtrc.json",
+    ".prettierrc",
+    "CONTRIBUTING.md",
+    "LICENSE",
+    "README.md",
+    "oxlint.config.ts",
+    "package.json",
+    "pnpm-lock.yaml",
+    "pnpm-workspace.yaml",
+    "projects-using-typegpu.md",
+    "tsconfig.base.json",
+    "tsconfig.json",
+    "vitest.config.mts"
+  ],
+  "release_count": 56,
+  "status": "verified"
+}

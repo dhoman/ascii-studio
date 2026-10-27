@@ -1,0 +1,67 @@
+{
+  "url": "https://github.com/jh3y/houdini-tesla",
+  "final_url": "https://github.com/jh3y/houdini-tesla",
+  "http_status": 200,
+  "checked_at": "2026-10-23T17:46:55.683593+00:00",
+  "stars": 5,
+  "forks": 0,
+  "description": "A CSS Houdini PaintWorklet for Tesla Coils",
+  "homepage": "",
+  "topics": [],
+  "license": "",
+  "archived": false,
+  "created_at": "2020-12-14T23:14:33.000Z",
+  "branch": "main",
+  "commit": "e1d2aff4f128a5f311a8516d45b912c03980e9b9",
+  "readme": "houdini-tesla A CSS Houdini Worklet to paint Tesla coils. Getting started 1. Load the worklet Using CDN is the easiest way to add the library: if ('paintWorklet' in CSS) { CSS.paintWorklet.addModule('https://unpkg.com/houdini-tesla/dist/worklet.js'); } You can use the polyfill To add support for all moder browsers, you can load the worklet with css-paint-polyfill fallback. <script> ;(async function() { if (CSS['paintWorklet'] === undefined) await import('https://unpkg.com/css-paint-polyfill') CSS.paintWorklet.addModule('https://unpkg.com/houdini-tesla/dist/worklet.js'); })() </script> 2. Ready to use it in your CSS! To use the Tesla worklet you need to define some custom properties with values and add the value paint(tesla) on the background property. .element { --tesla: 0; /* Entry point to animate coil and trigger repaint */ --tesla-hue: 0; --tesla-saturation: 50; --tesla-lightness: 50; --tesla-blur: 10; --tesla-width: 10; --tesla-angle: 45; --tesla-segments: 2; background: paint(tesla-coil); } Property Description Default --tesla Hack, use this property to animate coil. Animating the property triggers a repaint. 0 --tesla-hue Hue, use this to define the hue of the coil 0 --tesla-saturation Saturation, use this to define the saturation of the coil 0 --tesla-lightness Lightness, use this to define the lightness of the coil 0 --tesla-blur Blur, use this to define a stroke blur for the coil 0 --tesla-width Width, use this to adjust the stroke width of the coil 0 --tesla-angle Angle, use this to adjust the permitted angles in the coil 0 --tesla-segments Segments, use this to adjust the number of segments in the coil 0 Development Run it locally! npm i make develop License MIT License Copyright (c) 2020 jh3y",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://github.com/jh3y/houdini-tesla#houdini-tesla"
+    },
+    {
+      "label": "",
+      "url": "https://user-images.githubusercontent.com/842246/102147058-0403b100-3e62-11eb-83a6-a69cf6db3bd2.png"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/jh3y/houdini-tesla#getting-started"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/jh3y/houdini-tesla#1-load-the-worklet"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/jh3y/houdini-tesla#you-can-use-the-polyfill"
+    },
+    {
+      "label": "css-paint-polyfill",
+      "url": "https://github.com/GoogleChromeLabs/css-paint-polyfill"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/jh3y/houdini-tesla#2-ready-to-use-it-in-your-css"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/jh3y/houdini-tesla#development"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/jh3y/houdini-tesla#license"
+    }
+  ],
+  "root_files": [
+    "src",
+    ".babelrc",
+    ".browserslistrc",
+    ".gitignore",
+    "Makefile",
+    "README.md",
+    "package.json",
+    "yarn.lock"
+  ],
+  "release_count": 0,
+  "status": "verified"
+}

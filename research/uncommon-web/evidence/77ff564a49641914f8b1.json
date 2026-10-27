@@ -1,0 +1,236 @@
+{
+  "url": "https://github.com/vpalos/Krbn",
+  "final_url": "https://github.com/vpalos/Krbn",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:48:24.539164+00:00",
+  "stars": 240,
+  "forks": 10,
+  "description": "A web engine for pencil-style rendering of 3D scenes to SVG — exact silhouettes, hidden-line ghosting, hatching. Great for abstract and technical scenes.",
+  "homepage": "",
+  "topics": [
+    "generative-art",
+    "non-photorealistic-rendering",
+    "npr",
+    "pen-plotter",
+    "rendering",
+    "sketch",
+    "svg",
+    "typescript"
+  ],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2026-07-05T14:39:30.000Z",
+  "branch": "main",
+  "commit": "09d96d3d74b50c45c6454c94f5650f56680e0716",
+  "readme": "ImportantA personal note (July 2026): I'm currently going through a rather long medical treatment, so my response times will be slower than usual for a while. Please bear with me on issues and/or questions, I'll get to them. I'm hopeful things will be sorted out in a few weeks, and I'll be able to resume my normal schedule. Thank you for your patience and understanding. Krbn I call it \"Carbon\", with the vowels sketched out. A web engine for non-photorealistic, pencil-style rendering of abstract and technical scenes — math and physics constructions today, medical/organic illustration on the roadmap. Building something? See API.md — a short guide to using Krbn to build scenes and animations. See the full example gallery → — multiple annotated renders, real STL/OBJ imports, and an animated camera orbit that stays calm (the hand-drawn lines don't boil). Why a pencil is a rendering problem Most graphics code answers one question: what color is this pixel? A pencil drawing answers a different one: which lines would an artist draw — and which would they leave out? Krbn is built around that second question. So it does not render surfaces. It derives, classifies, and styles strokes from geometry. The silhouette of a sphere, a cylinder, a cone is not a mesh edge found by sampling — it is an exact conic, computed in closed form; a torus yields its true quartic. Hidden lines are not z-buffered away but split analytically into visible and ghosted runs, the way a draftsman keeps the far edge of a box alive as a faint line. Even transparency works the way paper does. There is no alpha channel: cross-hatching is inherently see-through, and the gaps between strokes reveal what lies behind. Shading is hatch density; form is hatch direction, flowing along each surface's own curvature — parallels and meridians on a sphere, poloidal loops on a torus, traced streamlines on an arbitrary mesh. Exactness is a project value, not an optimization. Intersections are roots of low-degree polynomials; degenerate cases — tangent lines, coincident conics, grazing cusps — are the spec, not edge cases. The payoff is output you can trust: on a given platform, the same scene always emits the same, byte-identical, diffable SVG. (Why \"on a given platform\".) One more inversion: the author supplies semantics, the engine supplies mechanics. You mark what matters — importance, focus, role — and Krbn decides what to draw, what to ghost, and what to abstract away, like an illustrator deciding what the figure is actually about. It moves, too — and this is the part stills can't show: wobble is seeded on stable stroke identity, so the hand-drawn lines don't boil between frames. An orbiting camera slides the silhouettes; nothing shimmers, jumps, or re-deals its jitter: Krbn began as a research prototype and grew into a full pipeline: an analytic primitive catalog and triangle meshes rendering through the same five-stage pass, with hidden-line visibility, suggestive contours, hand-drawn wobble, and variable-width strokes. It is MIT-licensed and written in TypeScript — see the full example gallery, and open a discussion if this problem space interests you. Genesis imperfecta This project is a childhood dream, finally built. I always wanted to make something like this, and never had the time to research and learn everything it needed — until a recent medical issue suspended my normal work and, unexpectedly, handed me a few months to invest in the old idea. What fascinated me from the start is going against photorealism. A human being can convey far more meaning in a drawing than any machine-like photorealistic render — precisely by being willing to go the other way: to renounce detail, to drop precision, even to deliberately introduce impurities and imperfections. Ah — but which detail to drop? Which imperfections to introduce? That is the fascinating part, and it is the question this engine is really trying to answer. As a kid I wanted to call it genesis imperfecta, for exactly these reasons. What can I say — I was a kid. The name matured into Krbn; the fascination didn't. Disclaimer — built with AI, unapologetically Krbn was developed with heavy AI assistance, and there is no reason to hide it. It started as an experiment: how far could a carefully directed human–AI collaboration get on a hard rendering problem? The answer turned out to be — far. The direction, the architecture, and the standards (exactness as a value, degenerate cases as the spec) are human; much of the code was written in collaboration with AI, then reviewed and tested like any other code. The results above speak for themselves. Status & roadmap live in one place, not here: docs/ROADMAP.md holds the annotated build status and polish backlog, and docs/DESIGN.md holds the design, the implementation-status breakdown, and the hard-parts registry. This README stays high-level. Features Each links to a demo in the gallery. Analytic primitives — sphere, ellipsoid, cylinder, cone, plane, polygon, line, points, and a torus, each with an exact silhouette (conics; the torus a quartic). (solids, torus) Free-form curves — helices, Bézier curves (carried exactly as control points), and function plots, sampled adaptively and occludable like anything else. (curves) Triangle meshes — arbitrary organic geometry renders through the same pipeline as the primitives, no fork: silhouette, shading, hidden-line, all shared. Sharp creases on faceted solids are permanent view-independent edges. (knots, creases) Exact hidden lines — every contour is split into visible and hidden runs, the hidden parts either ghosted (x-ray) or dropped (opaque) so depth reads at a glance. Even points are occludable. (hidden lines, ghost vs drop) Intersection curves — where two surfaces meet (a ball through a plane, two quadrics), the seam is drawn as its own contour. (waterline, quartic) Suggestive contours — the extra \"form lines\" an artist adds where a surface almost turns away, read from mesh curvature (DeCarlo et al.). (suggestive) Hatching & tone — single / cross / triple cross-hatch, shaded light→dark on curved surfaces and left flat on flat faces. (hatching) Curvature-following hatch — hatch that flows along a surface's own direction field: exact iso-curves on primitives, traced streamlines on meshes. (fields, gravity well) Hand-drawn wobble — one per-object knob turns ruler-clean lines sketchy; it bends outlines and hatch together and stays deterministic. (wobble) Variable stroke width — solid lines are pencil-like ribbons: bolder when near or important, tapering and swelling with pressure toward the ends. (torus) Abstraction — detail too small to matter is dropped, tone is quantized, and coincident lines merge into one clean stroke. (consolidation) Highlight — x-ray emphasis: a bold outline inside a soft halo, dashed where something hides it. (highlight) Deterministic SVG — pure, seeded vector output; on a given platform, the same scene always yields the same, diffable file. (the platform caveat) Pen-plotter output — svg: { centerline: true } emits every stroke as a single-line <path> centreline (no <polyline>, no filled ribbons), so the render goes straight to an SVG→G-code converter. (API.md) Performance Meshes are raycast-heavy: hidden lines and tonal hatch are both resolved by casting rays, so cost scales with triangles × rays. A per-mesh BVH (src/mesh/bvh.ts) collapses the triangle factor — ~20× on real models, built lazily on the first ray: model triangles before after fist.obj 18,576 67.2 s 3.2 s 20.8× heart.stl 13,060 26.7 s 1.3 s 20.0× torus 104×52 10,816 4.9 s 0.29 s 17.1× sphere 64×44 5,504 1.9 s 0.09 s 21.7× One machine (Darwin, bun 1.3.5), full scene render incl. hidden-line + cross hatch. Absolute times are machine-specific and drift a few percent between runs — the ratio is the point. bun run bench:bvh # reproduce the sweep (--quick skips the real models) It's pure culling in front of the same exact intersector — same rays, same hits, same order — so it buys speed without spending any exactness: the whole gallery, the importers, and every animation frame render byte-identical with it on and off. Two caveats worth stating plainly, because both are easy to get wrong when measuring this yourself: The exponent is scene-dependent, not a property of the engine. A shape-controlled sweep (one model, decimated to rising densities, so triangle count is the only variable) measures ~1.1–1.4 pre-BVH — not the quadratic reported from a heavier scene config. Fitting across different models, which is the tempting thing to do, conflates shape with count and measures nothing. A BVH does not make this flat. It fixes the per-ray factor; feature count, hatch samples, and silhouette density still grow with density. That residual is inherent to the algorithm. Determinism, and where it stops Byte-identical means on one platform. IEEE-754 mandates correct rounding for + − × ÷ and sqrt only; Math.sin/cos/hypot/atan2/acos/log2 are left to the platform's math library, and bun (JavaScriptCore) calls the system libm instead of bundling its own. macOS and glibc disagree by 1 ULP on some inputs, which nudges a few hatch/wobble/silhouette strokes by ~1px. But on a each platform all bytes are stable. Why it works this way Strokes are the core object. Every visual requirement is a policy over the stroke set, not a shading model. Transparency without alpha. Cross-hatching is inherently see-through: the gaps reveal the ghosted hidden edges behind. Alpha is an optional later add. Analytic primitives first. For quadrics, silhouettes are exact conics and hidden-line visibility is exact — the hardest module is easier here, not skipped. Triangle meshes then plug in behind the very same interface. Author supplies semantics, engine supplies mechanics. The developer marks what matters (importance/focus); the engine draws at the right level of detail. Architecture at a glance A scene is a set of FeatureSources. Each frame runs a five-stage pass: Feature extraction — silhouettes, creases, boundaries, suggestive & intersection curves, plus hatch regions. Visibility classification — split each curve into visible/hidden intervals. Abstraction filter — drop sub-threshold detail, consolidate, apply importance. Styling — weight, seeded wobble (lines + hatch), variable stroke width, dash, ghost, hatch density. Emit — sample analytic curves and hand to the backend (SVG first). Full detail, contracts, and the mesh/organ roadmap live in docs/DESIGN.md. A short phase view is in docs/ROADMAP.md. Project layout src/ math/ vectors, Mat3/Mat4, Basis, AABB, Camera + projection/unproject curve/ Curve / Curve2D carriers + exact conic kernel, root solvers, sampler pipeline/ contract types, visibility, styling (wobble/width/hatch), emit, render scene/ the FeatureSource seam + Scene / element / importance model primitives/ analytic primitives (Quadric→Sphere/Ellipsoid/Cylinder/Cone, Plane, Polygon, Line, ParametricCurve, Point, Torus) backend/ renderers — SVG (implemented) mesh/ the mesh regime — half-edge scaffold, curvature, silhouette zero-set, suggestive contours, streamline hatch, STL/OBJ loaders, and the raycast BVH (see docs/DESIGN.md §3) scripts/ bench-bvh.ts — the mesh raycast performance sweep examples/ gallery/*.krbn.ts + importers/ + animation.krbn.ts → committed *.svg docs/DESIGN.md the full design & roadmap Development bun install bun run typecheck bun run build bun test bun run bench:bvh # mesh raycast performance sweep The gallery SVGs are committed, and rendering is deterministic — so bun run render:gallery && git status --porcelain examples/ coming back empty is the regression test: if a change moves a pixel, git says so. About the author I like building things that run well; tools that make math visible. Krbn is an open-source attempt; another is AhaBlitz — a game that helps Romanian students prepare for their math exams (Evaluare Națională, Bacalaureat), built on hand-crafted simulators. License MIT — see LICENSE. Update the copyright holder to your name/org.",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://github.com/vpalos/Krbn#krbn"
+    },
+    {
+      "label": "API.md",
+      "url": "https://github.com/vpalos/Krbn/blob/main/API.md"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/vpalos/Krbn/blob/main/examples/gallery/16-gravity-well.svg"
+    },
+    {
+      "label": "See the full example gallery →",
+      "url": "https://github.com/vpalos/Krbn/blob/main/examples/README.md"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/vpalos/Krbn#why-a-pencil-is-a-rendering-problem"
+    },
+    {
+      "label": "Why \"on a given platform\".",
+      "url": "https://github.com/vpalos/Krbn#determinism-and-where-it-stops"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/vpalos/Krbn/blob/main/examples/gallery/15-mesh-showcase.svg"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/vpalos/Krbn/blob/main/examples/krbn-animation.gif"
+    },
+    {
+      "label": "example gallery",
+      "url": "https://github.com/vpalos/Krbn/blob/main/examples/README.md"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/vpalos/Krbn#genesis-imperfecta"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/vpalos/Krbn#disclaimer--built-with-ai-unapologetically"
+    },
+    {
+      "label": "docs/ROADMAP.md",
+      "url": "https://github.com/vpalos/Krbn/blob/main/docs/ROADMAP.md"
+    },
+    {
+      "label": "docs/DESIGN.md",
+      "url": "https://github.com/vpalos/Krbn/blob/main/docs/DESIGN.md"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/vpalos/Krbn#features"
+    },
+    {
+      "label": "gallery",
+      "url": "https://github.com/vpalos/Krbn/blob/main/examples/README.md"
+    },
+    {
+      "label": "solids",
+      "url": "https://github.com/vpalos/Krbn/blob/main/examples/gallery/05-solid-shading.svg"
+    },
+    {
+      "label": "torus",
+      "url": "https://github.com/vpalos/Krbn/blob/main/examples/gallery/10-torus.svg"
+    },
+    {
+      "label": "curves",
+      "url": "https://github.com/vpalos/Krbn/blob/main/examples/gallery/17-parametric-curves.svg"
+    },
+    {
+      "label": "knots",
+      "url": "https://github.com/vpalos/Krbn/blob/main/examples/gallery/15-mesh-showcase.svg"
+    },
+    {
+      "label": "creases",
+      "url": "https://github.com/vpalos/Krbn/blob/main/examples/gallery/18-creases.svg"
+    },
+    {
+      "label": "hidden lines",
+      "url": "https://github.com/vpalos/Krbn/blob/main/examples/gallery/01-hidden-lines.svg"
+    },
+    {
+      "label": "ghost vs drop",
+      "url": "https://github.com/vpalos/Krbn/blob/main/examples/gallery/19-hidden-modes.svg"
+    },
+    {
+      "label": "waterline",
+      "url": "https://github.com/vpalos/Krbn/blob/main/examples/gallery/03-depth-hatching.svg"
+    },
+    {
+      "label": "quartic",
+      "url": "https://github.com/vpalos/Krbn/blob/main/examples/gallery/08-quartic.svg"
+    },
+    {
+      "label": "suggestive",
+      "url": "https://github.com/vpalos/Krbn/blob/main/examples/gallery/14-suggestive.svg"
+    },
+    {
+      "label": "hatching",
+      "url": "https://github.com/vpalos/Krbn/blob/main/examples/gallery/02-hatching.svg"
+    },
+    {
+      "label": "fields",
+      "url": "https://github.com/vpalos/Krbn/blob/main/examples/gallery/12-direction-fields.svg"
+    },
+    {
+      "label": "gravity well",
+      "url": "https://github.com/vpalos/Krbn/blob/main/examples/gallery/16-gravity-well.svg"
+    },
+    {
+      "label": "wobble",
+      "url": "https://github.com/vpalos/Krbn/blob/main/examples/gallery/04-wobble.svg"
+    },
+    {
+      "label": "torus",
+      "url": "https://github.com/vpalos/Krbn/blob/main/examples/gallery/10-torus.svg"
+    },
+    {
+      "label": "consolidation",
+      "url": "https://github.com/vpalos/Krbn/blob/main/examples/gallery/09-consolidation.svg"
+    },
+    {
+      "label": "highlight",
+      "url": "https://github.com/vpalos/Krbn/blob/main/examples/gallery/06-highlight.svg"
+    },
+    {
+      "label": "the platform caveat",
+      "url": "https://github.com/vpalos/Krbn#determinism-and-where-it-stops"
+    },
+    {
+      "label": "API.md",
+      "url": "https://github.com/vpalos/Krbn/blob/main/API.md#pen-plotters"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/vpalos/Krbn#performance"
+    },
+    {
+      "label": "src/mesh/bvh.ts",
+      "url": "https://github.com/vpalos/Krbn/blob/main/src/mesh/bvh.ts"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/vpalos/Krbn#determinism-and-where-it-stops"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/vpalos/Krbn#why-it-works-this-way"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/vpalos/Krbn#architecture-at-a-glance"
+    },
+    {
+      "label": "docs/DESIGN.md",
+      "url": "https://github.com/vpalos/Krbn/blob/main/docs/DESIGN.md"
+    },
+    {
+      "label": "docs/ROADMAP.md",
+      "url": "https://github.com/vpalos/Krbn/blob/main/docs/ROADMAP.md"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/vpalos/Krbn#project-layout"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/vpalos/Krbn#development"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/vpalos/Krbn#about-the-author"
+    },
+    {
+      "label": "AhaBlitz",
+      "url": "https://ahablitz.ro"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/vpalos/Krbn#license"
+    },
+    {
+      "label": "LICENSE",
+      "url": "https://github.com/vpalos/Krbn/blob/main/LICENSE"
+    }
+  ],
+  "root_files": [
+    ".claude/rules",
+    "docs",
+    "examples",
+    "scripts",
+    "src",
+    "test",
+    ".editorconfig",
+    ".gitignore",
+    "API.md",
+    "CLAUDE.md",
+    "Krbn.code-workspace",
+    "LICENSE",
+    "README.md",
+    "bun.lock",
+    "package.json",
+    "tsconfig.json"
+  ],
+  "release_count": 0,
+  "status": "verified"
+}

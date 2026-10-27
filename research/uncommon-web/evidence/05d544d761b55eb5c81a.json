@@ -1,0 +1,151 @@
+{
+  "url": "https://github.com/akzhy/vara",
+  "final_url": "https://github.com/akzhy/vara",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:47:33.036508+00:00",
+  "stars": 291,
+  "forks": 46,
+  "description": "Vara is a javascript library that can create text drawing animations",
+  "homepage": "http://vara.akzhy.com",
+  "topics": [],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2019-01-10T14:38:40.000Z",
+  "branch": "master",
+  "commit": "2e76da0b84d8f46f5a676dd285fa35c1382df3b8",
+  "readme": "Vara Vara is a javascript library that can create text drawing animations The 1.x version of Vara will soon be replaced with v2 which uses canvas instead of SVG and might cause breaking changes Website | Examples | Codepen 1 | Codepen 2 Installation and Basic usage Using NPM npm install vara --save Or download and include the library as follows <script src=\"./lib/vara.min.js\" type=\"text/javascript\"></script> <!-- Or jsdelivr --> <script src=\"https://cdn.jsdelivr.net/npm/vara@1.4.0/lib/vara.min.js\" type=\"text/javascript\"></script> new Vara(\"#element\",\"font.json\",[{ text:\"Handwritten\" }],{ fontSize:46 }); The first argument, #element is the container element for the SVG. The font used is a specially created JSON file that contains the information needed to create the text. It is included by passing the URL of the font as the second argument. A few custom fonts are available in the Github repository, more will be added soon. Creation of custom fonts are explained here. The third argument is an array of objects, where each object will represent a block of text to be drawn. The text to be drawn is passed as the text property. The last argument is an object to provide the options like fontSize,color etc. Options // https://cdn.jsdelivr.net/npm/vara@1.4.0/fonts/fontdir/fontname.json new Vara(\"#container\",\"font.json\",[ { text:\"Hello World\", // String, text to be shown fontSize:24, // Number, size of the text strokeWidth:.5, // Width / Thickness of the stroke color:\"black\", // Color of the text id:\"\", // String or integer, for if animations are called manually or when using the get() method. Default is the index of the object. duration:2000, // Number, Duration of the animation in milliseconds textAlign:\"left\", // String, text align, accepted values are left,center,right x:0, // Number, x coordinate of the text y:0, // Number, y coordinate of the text fromCurrentPosition:{ // Whether the x or y coordinate should be from its calculated position, ie the position if x or y coordinates were not applied x:true, // Boolean y:true, // Boolean }, autoAnimation:true, // Boolean, Whether to animate the text automatically queued:true, // Boolean, Whether the animation should be in a queue delay:0, // Delay before the animation starts in milliseconds /* Letter spacing can be a number or an object, if number, the spacing will be applied to every character. If object, each letter can be assigned a different spacing as follows, letterSpacing: { a: 4, j: -6, global: -1 } The global property is used to set spacing of all other characters */ letterSpacing:0 }],{ // The options given below will be applicable to every text created, // however they will not override the options set above. // They will work as secondary options. fontSize:24, // Number, size of the text strokeWidth:.5, // Width / Thickness of the stroke color:\"black\", // Color of the text duration:2000, // Number, Duration of the animation in milliseconds textAlign:\"left\", // String, text align, accepted values are left,center,right autoAnimation:true, // Boolean, Whether to animate the text automatically queued:true, // Boolean, Whether the animation should be in a queue letterSpacing:0 }) Methods .ready(function) Is used to execute a function when the font is loaded and the elements are created. Any other method should be called inside this function. .get(id) Returns an object with properties characters and container. characters is an array of svg g elements, each representing a letter and container is an svg g wrapping the text block. If an id was given to the text during creation, it should be given as the argument, otherwise use the index of the text block. .draw(id) Used to animate texts with autoAnimation:false. If an id was given to the text during creation it should be given as the argument, otherwise use the index of the text block. .animationEnd(function(i,o){}) Used to execute a function once animation ends, triggers every time a block of text is drawn. Has two arguments, i - The id of the drawn text. o - The object described in the get() method. .playAll() Introduced in v1.1.0 Is used to play the animation of every text block, obeying delay and queue Sponsors Browser testing provided by Contact If you find an issue or a bug or want to suggest a new feature, you can Raise an issue Contact me through my webpage Contact by Email Comment on relevant page Contact through twitter If you would like to have a specific font created, you can mail me with the details and i will try to create it, if the font have a suitable license.",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://github.com/akzhy/Vara/blob/master/vara.gif"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/akzhy/vara#vara"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/fcaa00ca2b3e0c87498ea020870ecb383216c900e21a23011b395663577ee919/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f566172612e6a732d312e342e302d627269676874677265656e2e737667"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/08cef40a9105b6526ca22088bc514fbfdbc9aac1ddbf8d4e6c750e3a88a44dca/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4c6963656e73652d4d49542d626c75652e737667"
+    },
+    {
+      "label": "",
+      "url": "https://www.paypal.me/akzhy/10"
+    },
+    {
+      "label": "v2",
+      "url": "https://github.com/akzhy/Vara/tree/v2.0.0"
+    },
+    {
+      "label": "Website",
+      "url": "http://vara.akzhy.com"
+    },
+    {
+      "label": "Examples",
+      "url": "http://vara.akzhy.com/examples"
+    },
+    {
+      "label": "Codepen 1",
+      "url": "https://codepen.io/akzhy/pen/YdbYbj"
+    },
+    {
+      "label": "Codepen 2",
+      "url": "https://codepen.io/akzhy/pen/OrdYGO"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/akzhy/vara#website--examples--codepen-1--codepen-2"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/akzhy/vara#installation-and-basic-usage"
+    },
+    {
+      "label": "here",
+      "url": "http://vara.akzhy.com/creating-fonts"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/akzhy/vara#options"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/akzhy/vara#methods"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/akzhy/vara#readyfunction"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/akzhy/vara#getid"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/akzhy/vara#drawid"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/akzhy/vara#animationendfunctionio"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/akzhy/vara#playall"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/akzhy/vara#sponsors"
+    },
+    {
+      "label": "",
+      "url": "http://browserstack.com/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/akzhy/vara#contact"
+    },
+    {
+      "label": "Raise an issue",
+      "url": "https://github.com/akzhy/Vara/issues"
+    },
+    {
+      "label": "Contact me through my webpage",
+      "url": "http://www.akzhy.com/contact/"
+    },
+    {
+      "label": "Contact by Email",
+      "url": "mailto:hi@akzhy.com"
+    },
+    {
+      "label": "Comment on relevant page",
+      "url": "http://vara.akzhy.com/"
+    },
+    {
+      "label": "Contact through twitter",
+      "url": "https://twitter.com/_akzhy"
+    }
+  ],
+  "root_files": [
+    ".github",
+    "fonts",
+    "generator",
+    "lib",
+    "src",
+    ".gitignore",
+    ".prettierignore",
+    "LICENSE",
+    "README.md",
+    "babel.config.json",
+    "browserstack.png",
+    "changelog.md",
+    "index.html",
+    "package.json",
+    "vara.gif",
+    "yarn.lock"
+  ],
+  "release_count": 0,
+  "status": "verified"
+}

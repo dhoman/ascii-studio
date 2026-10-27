@@ -1,0 +1,112 @@
+{
+  "url": "https://github.com/Mezzomind/growtype",
+  "final_url": "https://github.com/Mezzomind/growtype",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:47:28.241916+00:00",
+  "stars": 0,
+  "forks": 0,
+  "description": "",
+  "homepage": "https://mezzomind.github.io/growtype/",
+  "topics": [],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2026-10-13T17:40:22.000Z",
+  "branch": "main",
+  "commit": "86add7927aab9f4158f3fceb631ed7b56f56ff3b",
+  "readme": "growtype Letters that grow out of a path like little mould spores. Playground · growtype · growtype-react npm install growtype-react # React component + hooks (includes the core) npm install growtype # framework-free: returns an SVG string Both packages are ESM-only and run in the browser; the core also renders in Node / on the server with CSS fonts. Repository A Vite+ monorepo: packages/core – growtype, the TypeScript library that produces the SVG. packages/react – growtype-react, a <Growtype> component and hooks. apps/playground – a React playground with controls for every option, path presets, freehand path drawing, font upload, SVG export, and a Config panel that copies your settings as JSON or a ready-made React component (and imports them back). Develop pnpm install pnpm dev # playground vp test # unit tests vp check # format, lint, type-check pnpm ready # check + test + build everything (what CI runs) The playground imports the library source directly, so edits to packages/*/src hot-reload. Release Both packages share one version. semantic-release chooses the next one from conventional commits on main, writes it into both packages, and tags it. GitHub Actions then stages them on npm with trusted publishing (OIDC — no npm token). A maintainer then approves each staged version with 2FA so it goes live. First release (once, by hand) Trusted publishing can only be configured on packages that already exist, so publish the first version from your machine (npm asks for your one-time password): pnpm install && pnpm ready && pnpm release:pack npm publish .release/growtype-0.2.0.tgz --access public npm publish .release/growtype-react-0.2.0.tgz --access public Then, for each package on npmjs.com → the package → Settings → Trusted publishing, add GitHub Actions with organization Mezzomind, repository growtype, workflow release.yml, and allow npm stage publish. A new configuration must be used for a successful stage within 2 days or it expires, so set it up when you're about to release. Every release after that Commit messages on main decide the bump: Commit Version fix: or perf: patch, 0.2.1 feat: minor, 0.3.0 feat!: or a BREAKING CHANGE: footer major, 1.0.0 Other commits (chore:, docs:, refactor:, …) do not release. Merge to main. The Release workflow runs semantic-release. When the commits call for a release, it sets version in both package.json files, prepends the notes to each CHANGELOG.md, stages whichever packages aren't on npm yet, then commits the bump to main, tags vX.Y.Z, and creates the GitHub release. Run the workflow again from the Actions tab to retry. Approve each staged package (2FA): npm stage approve growtype@x.y.z and npm stage approve growtype-react@x.y.z (or approve on npmjs.com). The playground deploys to GitHub Pages from main once Settings → Pages → Source is set to “GitHub Actions”. License MIT. Bundled fonts (Freckle Face, Young Serif, Gloock, Sniglet) are from Google Fonts under the SIL Open Font License; see the OFL-*.txt files next to them.",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://github.com/Mezzomind/growtype#growtype"
+    },
+    {
+      "label": "Playground",
+      "url": "https://mezzomind.github.io/growtype/"
+    },
+    {
+      "label": "growtype",
+      "url": "https://github.com/Mezzomind/growtype/blob/main/packages/core"
+    },
+    {
+      "label": "growtype-react",
+      "url": "https://github.com/Mezzomind/growtype/blob/main/packages/react"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/Mezzomind/growtype#repository"
+    },
+    {
+      "label": "Vite+",
+      "url": "https://viteplus.dev"
+    },
+    {
+      "label": "packages/core",
+      "url": "https://github.com/Mezzomind/growtype/blob/main/packages/core"
+    },
+    {
+      "label": "packages/react",
+      "url": "https://github.com/Mezzomind/growtype/blob/main/packages/react"
+    },
+    {
+      "label": "apps/playground",
+      "url": "https://github.com/Mezzomind/growtype/blob/main/apps/playground"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/Mezzomind/growtype#develop"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/Mezzomind/growtype#release"
+    },
+    {
+      "label": "semantic-release",
+      "url": "https://semantic-release.gitbook.io/"
+    },
+    {
+      "label": "conventional commits",
+      "url": "https://www.conventionalcommits.org/"
+    },
+    {
+      "label": "stages",
+      "url": "https://docs.npmjs.com/staged-publishing/"
+    },
+    {
+      "label": "trusted publishing",
+      "url": "https://docs.npmjs.com/trusted-publishers/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/Mezzomind/growtype#first-release-once-by-hand"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/Mezzomind/growtype#every-release-after-that"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/Mezzomind/growtype#license"
+    },
+    {
+      "label": "MIT",
+      "url": "https://github.com/Mezzomind/growtype/blob/main/LICENSE"
+    }
+  ],
+  "root_files": [
+    ".github/workflows",
+    "apps/playground",
+    "packages",
+    "scripts",
+    ".gitignore",
+    "LICENSE",
+    "README.md",
+    "package.json",
+    "pnpm-lock.yaml",
+    "pnpm-workspace.yaml",
+    "release.config.mjs",
+    "tsconfig.json",
+    "vite.config.ts"
+  ],
+  "release_count": 1,
+  "status": "verified"
+}

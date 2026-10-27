@@ -1,0 +1,75 @@
+{
+  "url": "https://github.com/hiaaryan/sileo",
+  "final_url": "https://github.com/hiaaryan/sileo",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:47:51.112058+00:00",
+  "stars": 1711,
+  "forks": 90,
+  "description": "An opinionated, physics-based toast component for React.",
+  "homepage": "https://sileo.aaryan.design",
+  "topics": [
+    "notifications",
+    "react",
+    "toast"
+  ],
+  "license": "",
+  "archived": false,
+  "created_at": "2026-02-08T00:07:15.000Z",
+  "branch": "main",
+  "commit": "b70fd826537dcdf0329e55f1e9ab208a66b61c79",
+  "readme": "sileo An opinionated, physics-based toast component for React. Try Out / Docs Sileo.mov Installation npm i sileo Getting Started import { sileo, Toaster } from \"sileo\"; export default function App() { return ( <> <Toaster position=\"top-right\" /> <YourApp /> </> ); } For detailed docs, click here: https://sileo.aaryan.design Repository This repository holds both the package and the site that documents it. Path What it is packages/sileo The sileo npm package. Published on GitHub Release. app, components, lib, public The Next.js site at sileo.aaryan.design, deployed by Vercel. # the site bun install bun run dev # the package cd packages/sileo bun install bun run dev",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://github.com/hiaaryan/sileo#sileo"
+    },
+    {
+      "label": "Try Out",
+      "url": "https://sileo.aaryan.design"
+    },
+    {
+      "label": "Docs",
+      "url": "https://sileo.aaryan.design/docs"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/hiaaryan/sileo#installation"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/hiaaryan/sileo#getting-started"
+    },
+    {
+      "label": "https://sileo.aaryan.design",
+      "url": "https://sileo.aaryan.design"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/hiaaryan/sileo#repository"
+    },
+    {
+      "label": "sileo.aaryan.design",
+      "url": "https://sileo.aaryan.design"
+    }
+  ],
+  "root_files": [
+    ".github/workflows",
+    "app",
+    "components",
+    "lib",
+    "packages/sileo",
+    "public",
+    ".gitignore",
+    ".oxfmtrc.json",
+    "README.md",
+    "bun.lock",
+    "eslint.config.mjs",
+    "mdx-components.tsx",
+    "next.config.ts",
+    "package.json",
+    "postcss.config.mjs",
+    "tsconfig.json"
+  ],
+  "release_count": 16,
+  "status": "verified"
+}

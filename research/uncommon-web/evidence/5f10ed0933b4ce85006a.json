@@ -1,0 +1,129 @@
+{
+  "url": "https://github.com/rushikeshmahajann/soonish",
+  "final_url": "https://github.com/rushikeshmahajann/soonish",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:48:15.102729+00:00",
+  "stars": 5,
+  "forks": 0,
+  "description": "91 loading animations for React, each on a 5×5 grid of dots. Plain CSS, Server Component-ready, installed with the shadcn CLI.",
+  "homepage": "https://soonish.rushikeshmahajan.com",
+  "topics": [],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2026-07-26T13:12:48.000Z",
+  "branch": "main",
+  "commit": "20da97a944d5954467d014a0dcaa5b8f58daad0d",
+  "readme": "soonish 91 loading animations for React, each on a 5×5 grid of dots. Plain CSS · no runtime · copied into your project with the shadcn CLI Website · Docs · Installation Install Add everything — the engine and all 91 loaders: npx shadcn@latest add https://soonish.rushikeshmahajan.com/r/soonish.json Or add just the one you want. Every loader is its own registry item, with a named component — copy any loader's command from the website: npx shadcn@latest add https://soonish.rushikeshmahajan.com/r/thinking.json The code lands in components/soonish and is yours to edit. No package to keep updated. Use import { Loader } from \"@/components/soonish\"; export default function Loading() { return <Loader name=\"thinking\" color=\"oklch(0.817 0.119 106.075)\" size={40} dotSize={6} />; } Loader has no hooks, so it works in Server Components — a natural fit for a Next.js loading.tsx. Prop Default name — Any of the 91 loader names. Typed, so your editor autocompletes them. color loader's pastel Any CSS color, including var(--your-token). size 24 Width of the whole loader in px. dotSize 3 Size of each dot in px. cellPadding — Gap between dots in px. Overrides size. speed 1 Playback speed. 2 is twice as fast. What's inside Family Pulse Wave 27 Brightness pulses along a path — sweep, ripple, rain, spiral, snake… AI / Process 10 Named for agent states — thinking, searching, streaming, reasoning… Scale · Funky Scale 16 Dots that grow and shrink — twist, jelly, pop-rotate, zigzag… Mandalas 18 Symmetric patterns — snowflake, gear, lotus, octagon… Patterns · Ported · Fields 20 Sonar, pinwheel, neon-drift, firefly, halo… Every loader is the same 25-dot grid — only the timing and the order the dots light up change. Develop This repo is the website (landing page, docs, registry) and the loader source. pnpm install pnpm dev # http://localhost:3000 pnpm registry:build # regenerate public/r/ so install commands work locally pnpm lint Path packages/soonish/ The loader library — Loader, loader data and CSS. What the registry ships. src/app/ The Next.js site: /, /docs/* and the /loaders workbench. scripts/build-registry.ts Builds the registry — one item per loader plus the core — into public/r/. design/ Source artwork. Not served. pnpm build runs registry:build first, so a production build always ships a fresh registry. public/r/ and registry/ are generated and gitignored. Deploy Registry links are baked in at build time. Set REGISTRY_URL to the production URL (e.g. https://soonish.rushikeshmahajan.com) — it also sets metadataBase for the OpenGraph image. On Vercel it falls back to the production domain automatically. Redeploy after changing the domain. License MIT © Rushikesh Mahajan — use it, change it, ship it. Built by Rushikesh Mahajan · GitHub · X · LinkedIn Copy the code, it's yours.",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://github.com/rushikeshmahajann/soonish/blob/main/design/soonish-icon.png"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/rushikeshmahajann/soonish#soonish"
+    },
+    {
+      "label": "Website",
+      "url": "https://soonish.rushikeshmahajan.com"
+    },
+    {
+      "label": "Docs",
+      "url": "https://soonish.rushikeshmahajan.com/docs"
+    },
+    {
+      "label": "Installation",
+      "url": "https://soonish.rushikeshmahajan.com/docs/installation"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/bedea32be2767a121200673e754d33370174f36358ab0db99cb949222db1c792/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f52656163742d31382532422d3061306130613f7374796c653d666c61742d737175617265266c6f676f3d7265616374266c6f676f436f6c6f723d434443383638"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/aa96770806d97d5ce87bc9fbc0bd8f012c31a0310703c8d4d674d9d76de0e66b/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f73686164636e2d72656769737472792d3061306130613f7374796c653d666c61742d737175617265266c6f676f436f6c6f723d434443383638"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/a443e6b794984405d77b13a2790ffbc3b943f7837934e796ae9e76488ed4455e/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f5365727665725f436f6d706f6e656e74732d72656164792d3061306130613f7374796c653d666c61742d737175617265"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/90e6b24ff2858311544e7c755169fad6de6d03b85b7c0337d77309d15aaf24da/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f547970655363726970742d74797065642d3061306130613f7374796c653d666c61742d737175617265266c6f676f3d74797065736372697074266c6f676f436f6c6f723d434443383638"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/rushikeshmahajann/soonish#install"
+    },
+    {
+      "label": "website",
+      "url": "https://soonish.rushikeshmahajan.com"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/rushikeshmahajann/soonish#use"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/rushikeshmahajann/soonish#whats-inside"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/rushikeshmahajann/soonish#develop"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/rushikeshmahajann/soonish#deploy"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/rushikeshmahajann/soonish#license"
+    },
+    {
+      "label": "MIT",
+      "url": "https://github.com/rushikeshmahajann/soonish/blob/main/LICENSE"
+    },
+    {
+      "label": "Rushikesh Mahajan",
+      "url": "https://rushikeshmahajan.com"
+    },
+    {
+      "label": "GitHub",
+      "url": "https://github.com/rushikeshmahajann"
+    },
+    {
+      "label": "X",
+      "url": "https://x.com/rushy_0"
+    },
+    {
+      "label": "LinkedIn",
+      "url": "https://www.linkedin.com/in/rushikeshmahajann/"
+    }
+  ],
+  "root_files": [
+    ".agents/skills/oklch-skill",
+    ".claude/skills",
+    "design",
+    "packages/soonish",
+    "public/images",
+    "scripts",
+    "src",
+    ".gitignore",
+    ".npmrc",
+    ".nvmrc",
+    "AGENTS.md",
+    "CLAUDE.md",
+    "LICENSE",
+    "README.md",
+    "components.json",
+    "eslint.config.mjs",
+    "next.config.ts",
+    "package.json",
+    "pnpm-lock.yaml",
+    "postcss.config.mjs",
+    "skills-lock.json",
+    "tsconfig.json"
+  ],
+  "release_count": 0,
+  "status": "verified"
+}

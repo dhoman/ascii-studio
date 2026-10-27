@@ -1,0 +1,359 @@
+{
+  "url": "https://github.com/thetarnav/glitched-writer",
+  "final_url": "https://github.com/thetarnav/glitched-writer",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:48:21.252446+00:00",
+  "stars": 135,
+  "forks": 9,
+  "description": "Glitched, text writing js module. Highly customizable settings. Decoding, decrypting, scrambling, or simply spelling out text.",
+  "homepage": "https://glitched-writer.site",
+  "topics": [
+    "animation",
+    "cyberpunk",
+    "front-end",
+    "glitch",
+    "html",
+    "javascript",
+    "nier",
+    "termial",
+    "text",
+    "text-animation",
+    "typescript",
+    "web",
+    "writing"
+  ],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2019-10-20T12:02:47.000Z",
+  "branch": "master",
+  "commit": "e171d7944d1c4a4ff0dc1376e0bea5d3854b741b",
+  "readme": "Glitched Writer What is Glitched Writer: A lightweight npm module for writing text to HTML elements. Highly customizable settings. Decoding, decrypting, scrambling, and simply spelling out text. Features: Manages text animation of HTML Element. Write, pause, play, add, remove and write some more! Highly customizable behavior. Set of options let you animate the text the way is suits your design. Adding Callback functions to fire on writer events (start, step, finish). Custom Event gw-finished will be dispatched on the HTML Element. For styling purposes writer attatches gw-writing class to the HTML Element and data-gw-string attribute with current string. Handles html tags & html entities (e.g. <br/>, <a href=\"#\">link</a>, &#59;, &amp;). Can letterize string it into many span elements inside the parent element. Written in Typescript. >>> PLAYGROUND <<< | >>> DEMOS <<< | >>> NPM <<< | >>> Vue component <<< Table Of Contents Installation Usage Creating Class Instance Writing Queue Writing Pausing & Playing One-Time-Use On Text Input Callbacks | Events Add & Remove Writing HTML Letterize Endless option Changing options after creation CSS Tricks Available imports Presets Options Effect style Control Generators Installation Download and install with npm. npm i glitched-writer import GlitchedWriter from 'glitched-writer' Or use Skypack to import without need to install the package. import GlitchedWriter from 'https://cdn.skypack.dev/glitched-writer' CDN You can also attach script tag with src pointing to CDN, like JsDelivr. <script src=\"https://cdn.jsdelivr.net/npm/glitched-writer/lib/index.min.js\"></script> In result, the GlitchedWriter object will be available in your code, this object contains all named exports, listed here. // use create method to create new instance. const writer = GlitchedWriter.create(Element, options, finishCB) Usage: Creating Class Instance Creating writer class instance: // Calling GlitchedWriter constructor: const writer = new GlitchedWriter( htmlElement, // Element / Selector string / undefined options, // {...} / Preset name / undefined onFinishCallback, // (string, data) => {} / undefined ) // Custom options: const writer = new GlitchedWriter(htmlElement, { interval: [10, 70], oneAtATime: true, letterize: true, }) // On-finish-callback added: const writer = new GlitchedWriter(htmlElement, {}, (string, writerData) => { console.log(`Current string: ${string}`) console.log('All the class data:', writerData) }) Writing Writing stuff and waiting with async / await. import { wait } from 'glitched-writer' // Wrap this in some async function: // Or use .then() instead. const res = await writer.write('Welcome') console.log(`Finished writing: ${res.string}`) console.log('All the writer data:', res) await wait(1200) // additional simple promise to wait some time await writer.write('...to Glitch City!') Queue Writing If you have prepared array of texts to write - in a loop, or one time - you can pass them all to the .write() method and initiate a Queue. const phrases = ['First, write this.', 'Then this.', 'And finally this!'] writer.queueWrite(phrases, 1000, true) /** * 1. @param texts * - string[] - Array of strings to write * - HTMLElement - the parent element with the paragraphs * - string - query selector pointing to that element * 2. @param queueInterval - Time to wait between writing each texts [ms] * 3. @param loop - boolean | Callback | number - What to do when the queue has ended. * - false -> stop; * - true -> continue looping; * - Callback -> stop and fire the callback. * - number -> wait number ms and than continue */ Texts from HTML (SEO Friendly) Instead of using the string array, you can place an div with your queue as paragraphs on the page. Then pass it to the queueWrite function as first param. This allows bots and search engines, as well as users with JavaScript disabled, to see your text on the page. <div id=\"phrases\" style=\"display: none;\"> <p>Welcome!</p> <p>to my <b>awesome</b> website.</p> </div> <!-- will read as: ['Welcome!', 'to my <b>awesome</b> website.'] --> writer.queueWrite('#phrases', queueInterval, loop) Pausing & Playing You can pause and resume playing at any time. writer.write('Some very cool header.').then(({ status, message }) => { // this will run when the writing stops. console.log(`${status}: ${message}`) }) setTimeout( () => writer.pause(), // will stop writing 1000, ) setTimeout(async () => { const { string } = await writer.play() // continue writing console.log('Completed:', string) // will log after finished writing }, 2000) One-Time-Use For quick one-time writing. import { write, queueWrite } from 'glitched-writer' write('Write this and BEGONE!', htmlElement, options, stepCB, finishCB) queueWrite(texts, htmlElement, options, interval, loop, stepCB, finishCB) On Text Input Don't be afraid to call write method on top of each oder. New will stop the ongoing. But, it's good to debounce the event handler. import debounce from 'lodash.debounce' const onInput = debounce(() => writer.write(inputEl.value), 500) inputEl.addEventListener('input', onInput) Callbacks | Events // your html element: textHtmlElement.addEventListener('gw-finished', e => console.log('finished writing:', e.detail.string), ) /** * Adding callbacks: writer.addCallback(type, callback) * * @param type \"start\" | \"step\" | \"finish\" * @param callback your callback function: (string, writerData) => {} */ const startCB = string => console.log('Started writing:', string) // add writer.addCallback('start', startCB) // remove writer.removeCallback('start', startCB) Add & Remove .add(string) & .remove(number) are methods usefull for quick changes to the previous text. // Let's say current text content is: \"Hello World\" writer.add('!!!') // -> Hello World!!! writer.remove(9) // -> Hello Writing HTML (! Potentially dangerous !) Let's you write text with html tags in it. Don't use on user-generated content. // You need to enable html option. const writer = new GlitchedWriter(htmlElement, { html: true }) writer.write('<b>Be sure to click <a href=\"...\">this!</a></b>') Letterize Splits written text into series of <span> elements. Then writing letters seperately into these child-elements. // You need to enable html option. const writer = new GlitchedWriter(htmlElement, { letterize: true }) writer.write('Hello there!') /** * The shape of one Char: * span.gw-char (+ .gw-finished when compleated | .gw-changed with each change) * span.gw-ghosts * span.gw-letter (+ .gw-glitched when is a glitched letter) * span.gw-ghosts */ Endless animation Option endless let's you run the text animation until you disable that function. This opens the door for some additional effects, like: Show on hover (e.g. on secret fields) or refreshing text to give it user attention. Here is a live example. // SHOW ON HOVER // First make the password scramble forever writer.endless(true) writer.write('PASSWORD') // And disable endless option on hover passEl.addEventListener('mouseover', () => writer.endless(false)) Changing options post initialization Options can be changed in 2 ways after instance creation. // Extending current options writer.options.extend({ html: true, maxGhosts: 10, // the rest will stay the same }) // Reseting options writer.options.set({ letterize: true, oneAtATime: 4, // the rest will be set to default }) Optimizing CSS - Preventing Layour Shifts Changing text rapidly can cause a lot of layout shift. These are few css tricks worth considering when using this package: /* 1. Warn the browser that the text content will be changing */ .gw { will-change: contents; } /* 2. It's good to make the element position absolute or fixed so it wont influence the rest of the layout */ .gw { position: fixed; } /* 3. Make the width and height constant, so it doesn't shift while writing */ .gw { width: 80ch; height: 6rem; } /* 4. If you cannot limit the element size, then you should warn browser that it will change */ .gw { will-change: contents, height, width; } Available imports List of all things that can be imported from glitched-writer module. import GlitchedWriter, { // <-- GlitchedWriter class CustomOptions, // <-- Options type Callback, // <-- Callbacks type WriterDataResponse, // <-- Type of a data response in callbacks write, // <-- One time, standalone write function queueWrite, // <-- Standalone queue write function presets, // <-- Object with all prepared presets of options glyphs, // <-- Some glyph sets wait, // <-- Ulitity promise function, that can be used to wait some time create, // <-- Function serving as an alternative way to create GlitchedWriter instance. } from 'glitched-writer' Presets To use one of the available presets, You can simply write it's name when creating writer, in the place of options. Available presets, as for now: default - Loaded automatically, featured on the GIF up top. nier - Imitating the way text was appearing in the NieR: Automata's UI. typewriter - Simple but feels like being written by a human: one letter at a time, with erasing enabled by default. terminal - Similar to the typewriter preset but more \"robotic\". Characters flow smoothly (with stable interval), but with little \"stutering\" here and there. zalgo - Inspired by the \"zalgo\" or \"cursed text\", Ghost characters mostly includes the unicode combining characters, which makes the text glitch vertically. Requires high \"maxGhosts\" to look good. neo - Recreated: Justin Windle's \"Text Scramble Effect\" encrypted - Simple Text Scramble effect, suits well displaying secret data, like passwords or card numbers. And generally looks good for more \"casual\" usecases - where you don't want too much \"layout shifting\", caused by rapid characters number changing. bitbybit - Writes text word by word, in rhythmic but stattering manner. cosmic - Text slowly appears from and vanishes to the hollowness of space. Use with preserved sequences of white space (white-space: pre-wrap;) new GlitchedWriter(htmlElement, 'terminal') Importing preset objects You can import the option object of mentioned presets and tweak them, as well as some glyph sets. import { presets, glyphs } from 'glitched-writer' // Extend preset for your needs: new GlitchedWriter(htmlElement, { ...presets.typewriter, letterize: true, }) Customizing behavior There are many options you can tweak to customize the writting effect. Check out the playground website I've made, where you can test both presets and options. Range values will result in random values for each step for every letter. Ghost are \"glitched letters\" that gets rendered randomly in the time of writing, but aren't part of final string. Stylistic Options: - options that set the visual effect. steps?: [number, number] | number, // [1, 8] interval?: [number, number] | number, // [60, 170] delay?: [number, number] | number, // [0, 2000] changeChance?: number, // 0.6 ghostChance?: number, // 0.2 maxGhosts?: number, // '0.2' oneAtATime?: boolean | number | 'word', // 0 | false glyphs?: string | string[] | Set<string>, // glyphs.full + glyphs.zalgo glyphsFromText?: boolean, // false fillSpace?: boolean, // true mode?: 'normal' | 'matching' | 'erase' | 'clear', // 'matching' steps - Number of minimum steps it takes one letter to reach it's goal one. Set to 0 if you want them to change to right letter in one step. (int) interval - Interval between each step, for every letter. (int: ms) delay - first delay each letter must wait before it starts working (int: ms) changeChance - Chance of letter being replaced by a glitched character (p: 0-1) ghostChance - Chance for ghost letter to appear (p: 0-1) maxGhosts - Maximal number of ghosts to occur int - (eg. 15) -> this will be the limit. float - (eg. 0.25) -> Limit = maxGhosts * goalString.length oneAtATime - Without this option enabled, letters in your string will animate all at once. Enabling this option, by setting it to true or any intiger larger than 0, will cause the string to be written from letter by letter, left to right. Number value, signifies how many letters will be typed at once. \"word\" - now you can also set is to \"word\". Instead of writing letter by letter, or couple of letters, writer will divide goal text by words. glyphs - A set of characters that can appear as ghosts or letters can change into them glyphsFromText - If you want to add letters from written text to the glyph charset fillSpace - With this enabled if letter gets erased ny replacing with space - to keep the same \"width\" of previous string, and to make letters \"disappear in space\". If disabled, every letter will \"stick\" to the rest. To make it more clear (hopefully), here is an example \"frame\" of writing: \"Something farely long\" -> \"Short String\". false - \"XOSh8rt S3rinFv\" true - \" X OSh8rt S3rinF v \" mode - Writing mode - decides on how to prepare the Char Table. 'matching' - Will scan starting and goal string for matching characters and will try to build character map from that. Requires ghosts enabled (>0) to take effect 'normal' - Wont do any matching, just converts starting string into character map. 'erase' - First Erases entire string and then writes your text. 'erase_smart' - Same as erase, but saves the matching begginging letters 'clear' - Instantly deletes entire textContent and then writes your text. Control Options: - options that control writer behavior. html?: boolean, // false letterize?: boolean, // false endless?: boolean // false fps?: number, // 60 html - Potentially dangerous option. If true, written string will be injected as html, not text content. It provides advanced text formating with html tags and more. But be sure to NOT enable it on user-provided content. letterize - Instead of injecting written text to \"textContent\" or \"innerHTML\", it appends every letter of that text as a child span element. Then changing textContent of that span to current letter. It gives a lot of styling possibilities, as you can style ghosts, letters, and whole chars seperately, depending on current writer and char state. endless - It will make the animation endless. But why? Well, you can disable this option while the animation is running ( writer.endless(false) ) and finish the animation when you want. fps - Animation loop is done using requestAnimationFrame, with fps you can controll the maximum framerate of writing animation. Only actually matters for high refresh monitors. (! wont have an effect with letterize enabled !) Generator Options: - custom functions used to generate variables contextually, for use in writing. /** * @param char - Char for which to generate value * @param base - default function generating that value */ // generaing ghost/glitched char genGlyph?: (char: Char, base: Function) => string genDelay?: (char: Char, base: Function) => number // [ms] genInterval?: (char: Char, base: Function) => number // [ms] The End - couple of final words Thanks for checking out the Glitched Writer. Let me know, if you are using it somewhere - would love to see it working out there. If you have any questions, just create new discusion or issue. Or just send me an email at gthetarnav@gmail.com, if you want. Presets or feature ideas are also welcome :)",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://github.com/thetarnav/glitched-writer#glitched-writer"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/glitched-writer"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/glitched-writer"
+    },
+    {
+      "label": "",
+      "url": "https://www.jsdelivr.com/package/npm/glitched-writer"
+    },
+    {
+      "label": "",
+      "url": "https://bundlephobia.com/result?p=glitched-writer"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/glitched-writer"
+    },
+    {
+      "label": "",
+      "url": "https://glitched-writer.site"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/thetarnav/glitched-writer#what-is-glitched-writer"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/thetarnav/glitched-writer#features"
+    },
+    {
+      "label": "PLAYGROUND",
+      "url": "https://glitched-writer.site"
+    },
+    {
+      "label": "DEMOS",
+      "url": "https://codepen.io/collection/XWVEEa"
+    },
+    {
+      "label": "NPM",
+      "url": "https://www.npmjs.com/package/glitched-writer"
+    },
+    {
+      "label": "Vue component",
+      "url": "https://www.npmjs.com/package/vue-glitched-writer"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/thetarnav/glitched-writer#-playground----demos----npm----vue-component-"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/thetarnav/glitched-writer#table-of-contents"
+    },
+    {
+      "label": "Installation",
+      "url": "https://github.com/thetarnav/glitched-writer#installation"
+    },
+    {
+      "label": "Usage",
+      "url": "https://github.com/thetarnav/glitched-writer#usage"
+    },
+    {
+      "label": "Creating Class Instance",
+      "url": "https://github.com/thetarnav/glitched-writer#creating-class-instance"
+    },
+    {
+      "label": "Writing",
+      "url": "https://github.com/thetarnav/glitched-writer#writing"
+    },
+    {
+      "label": "Queue Writing",
+      "url": "https://github.com/thetarnav/glitched-writer#queue-writing"
+    },
+    {
+      "label": "Pausing & Playing",
+      "url": "https://github.com/thetarnav/glitched-writer#pausing--playing"
+    },
+    {
+      "label": "One-Time-Use",
+      "url": "https://github.com/thetarnav/glitched-writer#one-time-use"
+    },
+    {
+      "label": "On Text Input",
+      "url": "https://github.com/thetarnav/glitched-writer#on-text-input"
+    },
+    {
+      "label": "Callbacks | Events",
+      "url": "https://github.com/thetarnav/glitched-writer#callbacks-%7C-events"
+    },
+    {
+      "label": "Add & Remove",
+      "url": "https://github.com/thetarnav/glitched-writer#add--remove"
+    },
+    {
+      "label": "Writing HTML",
+      "url": "https://github.com/thetarnav/glitched-writer#writing-html"
+    },
+    {
+      "label": "Letterize",
+      "url": "https://github.com/thetarnav/glitched-writer#letterize"
+    },
+    {
+      "label": "Endless option",
+      "url": "https://github.com/thetarnav/glitched-writer#endless-animation"
+    },
+    {
+      "label": "Changing options after creation",
+      "url": "https://github.com/thetarnav/glitched-writer#changing-options-post-initialization"
+    },
+    {
+      "label": "CSS Tricks",
+      "url": "https://github.com/thetarnav/glitched-writer#optimizing-css---preventing-layour-shifts"
+    },
+    {
+      "label": "Available imports",
+      "url": "https://github.com/thetarnav/glitched-writer#available-imports"
+    },
+    {
+      "label": "Presets",
+      "url": "https://github.com/thetarnav/glitched-writer#presets"
+    },
+    {
+      "label": "Options",
+      "url": "https://github.com/thetarnav/glitched-writer#customizing-behavior"
+    },
+    {
+      "label": "Effect style",
+      "url": "https://github.com/thetarnav/glitched-writer#stylistic-options"
+    },
+    {
+      "label": "Control",
+      "url": "https://github.com/thetarnav/glitched-writer#control-options"
+    },
+    {
+      "label": "Generators",
+      "url": "https://github.com/thetarnav/glitched-writer#generator-options"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/thetarnav/glitched-writer#installation"
+    },
+    {
+      "label": "Skypack",
+      "url": "https://www.skypack.dev/view/glitched-writer"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/thetarnav/glitched-writer#cdn"
+    },
+    {
+      "label": "JsDelivr",
+      "url": "https://www.jsdelivr.com/package/npm/glitched-writer"
+    },
+    {
+      "label": "listed here",
+      "url": "https://github.com/thetarnav/glitched-writer#available-imports"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/thetarnav/glitched-writer#usage"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/thetarnav/glitched-writer#creating-class-instance"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/thetarnav/glitched-writer#writing"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/thetarnav/glitched-writer#queue-writing"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/thetarnav/glitched-writer#texts-from-html-seo-friendly"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/thetarnav/glitched-writer#pausing--playing"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/thetarnav/glitched-writer#one-time-use"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/thetarnav/glitched-writer#on-text-input"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/thetarnav/glitched-writer#callbacks--events"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/thetarnav/glitched-writer#add--remove"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/thetarnav/glitched-writer#writing-html"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/thetarnav/glitched-writer#letterize"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/thetarnav/glitched-writer#endless-animation"
+    },
+    {
+      "label": "live example",
+      "url": "https://codepen.io/thetarnav/pen/oNBLpxb"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/thetarnav/glitched-writer#changing-options-post-initialization"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/thetarnav/glitched-writer#optimizing-css---preventing-layour-shifts"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/thetarnav/glitched-writer#available-imports"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/thetarnav/glitched-writer#presets"
+    },
+    {
+      "label": "default",
+      "url": "https://codepen.io/thetarnav/pen/MWWyPzY"
+    },
+    {
+      "label": "nier",
+      "url": "https://codepen.io/thetarnav/pen/OJWNRor"
+    },
+    {
+      "label": "typewriter",
+      "url": "https://codepen.io/thetarnav/pen/qBRpQpQ"
+    },
+    {
+      "label": "terminal",
+      "url": "https://codepen.io/thetarnav/pen/mdRyqga"
+    },
+    {
+      "label": "neo",
+      "url": "https://codepen.io/thetarnav/pen/vYgYWbb"
+    },
+    {
+      "label": "\"Text Scramble Effect\"",
+      "url": "https://codepen.io/soulwire/pen/mErPAK"
+    },
+    {
+      "label": "encrypted",
+      "url": "https://codepen.io/thetarnav/pen/oNBLpxb"
+    },
+    {
+      "label": "cosmic",
+      "url": "https://codepen.io/thetarnav/pen/ExWgYer"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/thetarnav/glitched-writer#importing-preset-objects"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/thetarnav/glitched-writer#customizing-behavior"
+    },
+    {
+      "label": "playground website",
+      "url": "https://glitched-writer.site/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/thetarnav/glitched-writer#stylistic-options"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/thetarnav/glitched-writer#control-options"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/thetarnav/glitched-writer#generator-options"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/thetarnav/glitched-writer#the-end---couple-of-final-words"
+    },
+    {
+      "label": "discusion",
+      "url": "https://github.com/thetarnav/glitched-writer/discussions"
+    },
+    {
+      "label": "issue",
+      "url": "https://github.com/thetarnav/glitched-writer/issues"
+    },
+    {
+      "label": "gthetarnav@gmail.com",
+      "url": "mailto:gthetarnav@gmail.com"
+    }
+  ],
+  "root_files": [
+    "dev",
+    "src",
+    ".eslintrc.json",
+    ".gitignore",
+    ".prettierrc",
+    "CONTRIBUTING.md",
+    "Gruntfile.js",
+    "LICENSE",
+    "README.md",
+    "package-lock.json",
+    "package.json",
+    "tsconfig-cjs.json",
+    "tsconfig.json",
+    "webpack.config.js"
+  ],
+  "release_count": 0,
+  "status": "verified"
+}

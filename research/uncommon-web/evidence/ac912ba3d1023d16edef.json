@@ -1,0 +1,110 @@
+{
+  "url": "https://github.com/ivanceras/svgbob",
+  "final_url": "https://github.com/ivanceras/svgbob",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:49:51.134316+00:00",
+  "stars": 4234,
+  "forks": 127,
+  "description": "Convert your ascii diagram scribbles into happy little SVG",
+  "homepage": "http://ivanceras.github.io/svgbob-editor/",
+  "topics": [
+    "ascii",
+    "bob",
+    "diagram",
+    "svg"
+  ],
+  "license": "Apache-2.0",
+  "archived": false,
+  "created_at": "2016-10-09T06:33:27.000Z",
+  "branch": "master",
+  "commit": "6d00ad9b1b091eb08f0a149cc58d1abf24a30859",
+  "readme": "Svgbob Svgbob can create a nice graphical representation of your text diagrams. Svgbob provides a cli which takes text as an input and creates an svg image as an output. Demo Specification Used by: google/comprehensive-rust via markdown-svgbob asciidoctor discourse typst/bob-draw zola kroki",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://github.com/ivanceras/svgbob#svgbob"
+    },
+    {
+      "label": "",
+      "url": "https://crates.io/crates/svgbob"
+    },
+    {
+      "label": "",
+      "url": "https://docs.rs/svgbob/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/ivanceras/svgbob/actions"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/ivanceras/svgbob/blob/master/LICENSE"
+    },
+    {
+      "label": "Demo",
+      "url": "https://ivanceras.github.io/svgbob-editor/"
+    },
+    {
+      "label": "",
+      "url": "https://private-user-images.githubusercontent.com/7972655/388073491-d882e4ae-4c2a-474f-a1d2-3e50536cb222.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3OTI3MTMyOTAsIm5iZiI6MTc5MjcxMjk5MCwicGF0aCI6Ii83OTcyNjU1LzM4ODA3MzQ5MS1kODgyZTRhZS00YzJhLTQ3NGYtYTFkMi0zZTUwNTM2Y2IyMjIucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI2MTAyMiUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNjEwMjJUMjM0OTUwWiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9NTg5ZjQ0NzgxMTgwNzI2ZWNjMmUwYjhhYzQ4NmEwMGQzZjZlZjQyY2Y5ODg3ZjE3YmI3MGZiMDg3YjFjMjViYiZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QmcmVzcG9uc2UtY29udGVudC10eXBlPWltYWdlJTJGcG5nIn0.fjobA9WpsFu_KjX67nnoCNQiThg0icp34KgsGUPDX9U"
+    },
+    {
+      "label": "Specification",
+      "url": "https://ivanceras.github.io/content/Svgbob/Specification.html"
+    },
+    {
+      "label": "",
+      "url": "https://liberapay.com/ivanceras/donate"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/ivanceras/svgbob#used-by"
+    },
+    {
+      "label": "google/comprehensive-rust",
+      "url": "https://github.com/google/comprehensive-rust"
+    },
+    {
+      "label": "markdown-svgbob",
+      "url": "https://github.com/boozook/mdbook-svgbob"
+    },
+    {
+      "label": "asciidoctor",
+      "url": "https://docs.asciidoctor.org/diagram-extension/latest/diagram_types/svgbob/"
+    },
+    {
+      "label": "discourse",
+      "url": "https://meta.discourse.org/t/discourse-svgbob/223573"
+    },
+    {
+      "label": "typst/bob-draw",
+      "url": "https://typst.app/universe/package/bob-draw/"
+    },
+    {
+      "label": "zola",
+      "url": "https://zola.discourse.group/t/diagramming-tool-integrations-plantuml-svgbob-graphviz-etc/269"
+    },
+    {
+      "label": "kroki",
+      "url": "https://kroki.io/"
+    }
+  ],
+  "root_files": [
+    ".github",
+    ".scripts",
+    "crates",
+    "snapcraft",
+    ".gitignore",
+    ".travis.yml",
+    "Architecture.md",
+    "Cargo.lock",
+    "Cargo.toml",
+    "Changelog.md",
+    "LICENSE",
+    "README.md",
+    "TODO.md",
+    "deny.toml"
+  ],
+  "release_count": 2,
+  "status": "verified"
+}

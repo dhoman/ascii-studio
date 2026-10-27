@@ -1,0 +1,201 @@
+{
+  "url": "https://github.com/pmndrs/cannon-es",
+  "final_url": "https://github.com/pmndrs/cannon-es",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:48:11.365721+00:00",
+  "stars": 2065,
+  "forks": 156,
+  "description": "💣 A lightweight 3D physics engine written in JavaScript.",
+  "homepage": "https://pmndrs.github.io/cannon-es/",
+  "topics": [
+    "cannonjs",
+    "physics"
+  ],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2020-03-03T10:44:31.000Z",
+  "branch": "master",
+  "commit": "dd971c4a604acdbb211955382e7a80de1f31edfb",
+  "readme": "cannon-es This is a maintained fork of cannon.js, originally created by Stefan Hedman @schteppe. It's a type-safe flatbundle (esm and cjs) which allows for tree shaking and usage in modern environments. These minor changes and improvements were also made: These PRs from the original repo were merged: schteppe/cannon.js#433, schteppe/cannon.js#430, schteppe/cannon.js#418, schteppe/cannon.js#360, schteppe/cannon.js#265, schteppe/cannon.js#392, schteppe/cannon.js#424 The ConvexPolyhedron constructor now accepts an object instead of a list of arguments. #6 The Cylinder is now oriented on the Y axis. #30 The type property of the Cylinder is now equal to Shape.types.CYLINDER. #59 Body.applyImpulse() and Body.applyForce() are now relative to the center of the body instead of the center of the world 86b0444 Sleeping bodies now wake up if a force or an impulse is applied to them #61 Added a property World.hasActiveBodies: boolean which will be false when all physics bodies are sleeping. This allows for invalidating frames when physics aren't active for increased performance. Add support for Trigger bodies. #83 Deprecated properties and methods have been removed. The original cannon.js debugger, which shows the wireframes of each body, has been moved to its own repo cannon-es-debugger. Added optional property World.frictionGravity: Vec3 which can be set to customize the force used when computing the friction between two colliding bodies. If undefined, World.gravity will be used. This property is useful to enable friction in zero gravity. This addresses issue #224 and follows the pattern established for p2.js. If instead you're using three.js in a React environment with react-three-fiber, check out use-cannon! It's a wrapper around cannon-es. Installation yarn add cannon-es Usage import { World } from 'cannon-es' // ... or, if you're using webpack, you can import it like this while still taking advantage of tree shaking: import * as CANNON from 'cannon-es' // ... Documentation Examples TO DO: Fix Octree as any assertions, and remove as any type assertions wherever possible Remove use of defined assertion (!) where possible (profile performance to ensure no degradation) Convert to abstract classes where possible (Equation, Solver, etc.?) V-HACD support (pmndrs/use-cannon#35 (comment)) Explore performance enhancements: https://github.com/RandyGaul/qu3e https://github.com/RandyGaul/cute_headers https://github.com/TheRohans/dapao/issues?q=is%3Aissue https://github.com/swift502/Sketchbook/commits/master/src/lib/cannon/cannon.js https://github.com/schteppe/cannon.js/pulls",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/cannon-es#cannon-es"
+    },
+    {
+      "label": "cannon.js",
+      "url": "https://github.com/schteppe/cannon.js"
+    },
+    {
+      "label": "@schteppe",
+      "url": "https://github.com/schteppe"
+    },
+    {
+      "label": "schteppe/cannon.js#433",
+      "url": "https://github.com/schteppe/cannon.js/pull/433"
+    },
+    {
+      "label": "schteppe/cannon.js#430",
+      "url": "https://github.com/schteppe/cannon.js/pull/430"
+    },
+    {
+      "label": "schteppe/cannon.js#418",
+      "url": "https://github.com/schteppe/cannon.js/pull/418"
+    },
+    {
+      "label": "schteppe/cannon.js#360",
+      "url": "https://github.com/schteppe/cannon.js/pull/360"
+    },
+    {
+      "label": "schteppe/cannon.js#265",
+      "url": "https://github.com/schteppe/cannon.js/pull/265"
+    },
+    {
+      "label": "schteppe/cannon.js#392",
+      "url": "https://github.com/schteppe/cannon.js/pull/392"
+    },
+    {
+      "label": "schteppe/cannon.js#424",
+      "url": "https://github.com/schteppe/cannon.js/pull/424"
+    },
+    {
+      "label": "#6",
+      "url": "https://github.com/pmndrs/cannon-es/pull/6"
+    },
+    {
+      "label": "#30",
+      "url": "https://github.com/pmndrs/cannon-es/pull/30"
+    },
+    {
+      "label": "#59",
+      "url": "https://github.com/pmndrs/cannon-es/pull/59"
+    },
+    {
+      "label": "86b0444",
+      "url": "https://github.com/schteppe/cannon.js/commit/86b0444c93356aeaa25dd1af795fa162574c6f4b"
+    },
+    {
+      "label": "#61",
+      "url": "https://github.com/pmndrs/cannon-es/pull/61"
+    },
+    {
+      "label": "Trigger bodies",
+      "url": "https://pmndrs.github.io/cannon-es/examples/trigger"
+    },
+    {
+      "label": "#83",
+      "url": "https://github.com/pmndrs/cannon-es/pull/83"
+    },
+    {
+      "label": "original cannon.js debugger",
+      "url": "https://github.com/schteppe/cannon.js/blob/master/tools/threejs/CannonDebugRenderer.js"
+    },
+    {
+      "label": "cannon-es-debugger",
+      "url": "https://github.com/pmndrs/cannon-es-debugger"
+    },
+    {
+      "label": "#224",
+      "url": "https://github.com/schteppe/cannon.js/issues/224"
+    },
+    {
+      "label": "pattern established for p2.js",
+      "url": "https://github.com/schteppe/p2.js/blob/master/src/world/World.js#L88-L92"
+    },
+    {
+      "label": "react-three-fiber",
+      "url": "https://github.com/pmndrs/react-three-fiber"
+    },
+    {
+      "label": "use-cannon",
+      "url": "https://github.com/pmndrs/use-cannon"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/cannon-es#installation"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/cannon-es#usage"
+    },
+    {
+      "label": "Documentation",
+      "url": "https://pmndrs.github.io/cannon-es/docs/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/cannon-es#documentation"
+    },
+    {
+      "label": "",
+      "url": "https://pmndrs.github.io/cannon-es/docs/"
+    },
+    {
+      "label": "Examples",
+      "url": "https://pmndrs.github.io/cannon-es/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/cannon-es#examples"
+    },
+    {
+      "label": "",
+      "url": "https://pmndrs.github.io/cannon-es/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/cannon-es#to-do"
+    },
+    {
+      "label": "pmndrs/use-cannon#35 (comment)",
+      "url": "https://github.com/pmndrs/use-cannon/issues/35#issuecomment-600188994"
+    },
+    {
+      "label": "https://github.com/RandyGaul/qu3e",
+      "url": "https://github.com/RandyGaul/qu3e"
+    },
+    {
+      "label": "https://github.com/RandyGaul/cute_headers",
+      "url": "https://github.com/RandyGaul/cute_headers"
+    },
+    {
+      "label": "https://github.com/TheRohans/dapao/issues?q=is%3Aissue",
+      "url": "https://github.com/TheRohans/dapao/issues?q=is%3Aissue"
+    },
+    {
+      "label": "https://github.com/swift502/Sketchbook/commits/master/src/lib/cannon/cannon.js",
+      "url": "https://github.com/swift502/Sketchbook/commits/master/src/lib/cannon/cannon.js"
+    },
+    {
+      "label": "https://github.com/schteppe/cannon.js/pulls",
+      "url": "https://github.com/schteppe/cannon.js/pulls"
+    }
+  ],
+  "root_files": [
+    ".github/workflows",
+    ".husky",
+    "dist",
+    "docs",
+    "examples",
+    "screenshots",
+    "src",
+    "test",
+    ".gitignore",
+    ".npmignore",
+    ".prettierignore",
+    ".prettierrc",
+    "LICENSE",
+    "docs-style.css",
+    "getting-started.md",
+    "index.html",
+    "jest.config.ts",
+    "package.json",
+    "readme.md",
+    "rollup.config.js",
+    "tsconfig.json",
+    "typedoc.json",
+    "yarn.lock"
+  ],
+  "release_count": 15,
+  "status": "verified"
+}

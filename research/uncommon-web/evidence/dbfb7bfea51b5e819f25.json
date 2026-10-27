@@ -1,0 +1,181 @@
+{
+  "url": "https://github.com/picturepan2/devices.css",
+  "final_url": "https://github.com/picturepan2/devices.css",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:48:10.700036+00:00",
+  "stars": 2429,
+  "forks": 248,
+  "description": "Devices.css - Modern devices crafted in pure CSS",
+  "homepage": "https://devicescss.xyz",
+  "topics": [],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2017-09-13T04:38:47.000Z",
+  "branch": "master",
+  "commit": "11846244977a4905a4fb9ac12bb2121e068d6147",
+  "readme": "Devices.css Devices.css - Modern devices crafted in pure CSS All devices are elegantly developed in pure CSS. The first are newly announced iPhone X and iPhone 8. More devices are coming. You can use these minimal devices in landing and screenshot showcase pages. Devices Phones iPhone 14 Pro iPhone 14 iPhone X iPhone 8 Google Pixel 2 XL Google Pixel Samsung Galaxy S8 Computers MacBook Pro MacBook Pro (2018) MacBook iMac Surface Book Surface Studio Tablets iPad Pro iPad Pro (2017) Surface Pro (2017) Watches Apple Watch Ultra Apple Watch Series 8 Accessories Apple HomePod Pro Display XDR What's next Add more devices and form factors Add landscape support Add responsive support Getting started Download the compiled and minified Devices.css files. Include devices.css located in /dist in your website or Web app <head> part. <link rel=\"stylesheet\" href=\"dist/devices.css\"> Go to Demo page to copy the device HTML source code and paste it to anywhere you want. All devices use the same HTML structure with different device-[device-name] classes. <div class=\"device device-iphone-x\"> <div class=\"device-frame\"> <img class=\"device-screen\" src=\"...\"> </div> <div class=\"device-stripe\"></div> <div class=\"device-header\"></div> <div class=\"device-sensors\"></div> <div class=\"device-btns\"></div> <div class=\"device-power\"></div> </div> Also, there are optional device-[device-color] classes for different color variants. You can add any screenshot or video with the device-screen class. The resolution aspect ratios are based on real ones. Custom You can custom Devices.css by modifing SASS .scss files located in src folder. Browser support Devices.css uses Autoprefixer to make most styles compatible with earlier browsers. For best compatibility, these browsers are recommended: Chrome (LAST 4) Microsoft Edge (LAST 4) Firefox (EXTENDED SUPPORT RELEASE) Safari (LAST 4) Opera (LAST 4) Built with ♥ by Yan Zhu. Feel free to submit a pull request. Help is always appreciated. Devices.css is completely free to use. If you enjoy it, please consider donating via Paypal for the further development. ♥",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://github.com/picturepan2/devices.css#devicescss"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/picturepan2/devices.css#devices"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/picturepan2/devices.css#phones"
+    },
+    {
+      "label": "iPhone 14 Pro",
+      "url": "https://devicescss.xyz/phones.html#iphone-14-pro"
+    },
+    {
+      "label": "iPhone 14",
+      "url": "https://devicescss.xyz/phones.html#iphone-14"
+    },
+    {
+      "label": "iPhone X",
+      "url": "https://devicescss.xyz/phones.html#iphone-x"
+    },
+    {
+      "label": "iPhone 8",
+      "url": "https://devicescss.xyz/phones.html#iphone-8"
+    },
+    {
+      "label": "Google Pixel 2 XL",
+      "url": "https://devicescss.xyz/phones.html#google-pixel-2-xl"
+    },
+    {
+      "label": "Google Pixel",
+      "url": "https://devicescss.xyz/phones.html#google-pixel"
+    },
+    {
+      "label": "Samsung Galaxy S8",
+      "url": "https://devicescss.xyz/phones.html#galaxy-s8"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/picturepan2/devices.css#computers"
+    },
+    {
+      "label": "MacBook Pro",
+      "url": "https://devicescss.xyz/computers.html#macbook-pro"
+    },
+    {
+      "label": "MacBook Pro (2018)",
+      "url": "https://devicescss.xyz/computers.html#macbook-pro-2018"
+    },
+    {
+      "label": "MacBook",
+      "url": "https://devicescss.xyz/computers.html#macbook"
+    },
+    {
+      "label": "iMac",
+      "url": "https://devicescss.xyz/computers.html#imac"
+    },
+    {
+      "label": "Surface Book",
+      "url": "https://devicescss.xyz/computers.html#surface-book"
+    },
+    {
+      "label": "Surface Studio",
+      "url": "https://devicescss.xyz/computers.html#surface-studio"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/picturepan2/devices.css#tablets"
+    },
+    {
+      "label": "iPad Pro",
+      "url": "https://devicescss.xyz/tablets.html#ipad-pro"
+    },
+    {
+      "label": "iPad Pro (2017)",
+      "url": "https://devicescss.xyz/tablets.html#ipad-pro-2017"
+    },
+    {
+      "label": "Surface Pro (2017)",
+      "url": "https://devicescss.xyz/tablets.html#surface-pro-2017"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/picturepan2/devices.css#watches"
+    },
+    {
+      "label": "Apple Watch Ultra",
+      "url": "https://devicescss.xyz/watches.html#apple-watch-ultra"
+    },
+    {
+      "label": "Apple Watch Series 8",
+      "url": "https://devicescss.xyz/watches.html#apple-watch-series-8"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/picturepan2/devices.css#accessories"
+    },
+    {
+      "label": "Apple HomePod",
+      "url": "https://devicescss.xyz/accessories.html#homepod"
+    },
+    {
+      "label": "Pro Display XDR",
+      "url": "https://devicescss.xyz/accessories.html#pro-display-xdr"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/picturepan2/devices.css#whats-next"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/picturepan2/devices.css#getting-started"
+    },
+    {
+      "label": "Devices.css files",
+      "url": "https://github.com/picturepan2/devices.css"
+    },
+    {
+      "label": "Demo page",
+      "url": "https://devicescss.xyz/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/picturepan2/devices.css#custom"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/picturepan2/devices.css#browser-support"
+    },
+    {
+      "label": "Autoprefixer",
+      "url": "https://github.com/postcss/autoprefixer"
+    },
+    {
+      "label": "Yan Zhu",
+      "url": "https://twitter.com/picturepan2"
+    },
+    {
+      "label": "donating via Paypal",
+      "url": "https://www.paypal.me/picturepan2"
+    }
+  ],
+  "root_files": [
+    "dist",
+    "docs",
+    "src",
+    ".csscomb.json",
+    ".gitattributes",
+    ".gitignore",
+    ".hound.yml",
+    ".scss-lint.yml",
+    "LICENSE",
+    "README.md",
+    "gulpfile.js",
+    "index.html",
+    "package-lock.json",
+    "package.json"
+  ],
+  "release_count": 0,
+  "status": "verified"
+}

@@ -1,0 +1,443 @@
+{
+  "url": "https://github.com/daybrush/moveable",
+  "final_url": "https://github.com/daybrush/moveable",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:47:43.456164+00:00",
+  "stars": 10767,
+  "forks": 660,
+  "description": "Moveable! Draggable! Resizable! Scalable! Rotatable! Warpable! Pinchable! Groupable! Snappable!",
+  "homepage": "https://daybrush.com/moveable/",
+  "topics": [
+    "draggable",
+    "groupable",
+    "movable",
+    "moveable",
+    "pinchable",
+    "resizable",
+    "rotatable",
+    "scalable",
+    "snappable",
+    "warpable"
+  ],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2019-07-05T15:04:30.000Z",
+  "branch": "master",
+  "commit": "75069102f30c88cd89ecaaa8ca7e5f7434e54807",
+  "readme": "Moveable Moveable is Draggable, Resizable, Scalable, Rotatable, Warpable, Pinchable, Groupable, Snappable Github / Demo / Storybook / API / Main Project Moveable Draggable Resizable Scalable Rotatable Warpable Pinchable Groupable Snappable Clippable Roundable OriginDraggable Selecto 🔥 Features Draggable refers to the ability to drag and move targets. Resizable indicates whether the target's width and height can be increased or decreased. Scalable indicates whether the target's x and y can be scale of transform. Rotatable indicates whether the target can be rotated. Warpable indicates whether the target can be warped (distorted, bented). Pinchable indicates whether the target can be pinched with draggable, resizable, scalable, rotatable. Groupable indicates Whether the targets can be moved in group with draggable, resizable, scalable, rotatable. Snappable indicates whether to snap to the guideline. OriginDraggable* indicates Whether to drag origin. Clippable indicates Whether to clip the target. Roundable indicates Whether to show and drag or double click border-radius. Support SVG Elements (svg, path, line, ellipse, g, rect, ...etc) Support Major Browsers Support 3d Transform ⚙️ Installation npm $ npm i moveable scripts <script src=\"//daybrush.com/moveable/release/latest/dist/moveable.min.js\"></script> 📄 Documents Moveable Handbook How to use Group How to use custom CSS How to make custom able API Documentation 🚀 How to use All classes of moveable control box and able elements have a moveable- prefix. So please don't put moveable- class name in target. import Moveable from \"moveable\"; const moveable = new Moveable(document.body, { target: document.querySelector(\".target\"), // If the container is null, the position is fixed. (default: parentElement(document.body)) container: document.body, draggable: true, resizable: true, scalable: true, rotatable: true, warpable: true, // Enabling pinchable lets you use events that // can be used in draggable, resizable, scalable, and rotateable. pinchable: true, // [\"resizable\", \"scalable\", \"rotatable\"] origin: true, keepRatio: true, // Resize, Scale Events at edges. edge: false, throttleDrag: 0, throttleResize: 0, throttleScale: 0, throttleRotate: 0, }); /* draggable */ moveable.on(\"dragStart\", ({ target, clientX, clientY }) => { console.log(\"onDragStart\", target); }).on(\"drag\", ({ target, transform, left, top, right, bottom, beforeDelta, beforeDist, delta, dist, clientX, clientY, }) => { console.log(\"onDrag left, top\", left, top); target!.style.left = `${left}px`; target!.style.top = `${top}px`; // console.log(\"onDrag translate\", dist); // target!.style.transform = transform; }).on(\"dragEnd\", ({ target, isDrag, clientX, clientY }) => { console.log(\"onDragEnd\", target, isDrag); }); /* resizable */ moveable.on(\"resizeStart\", ({ target, clientX, clientY }) => { console.log(\"onResizeStart\", target); }).on(\"resize\", ({ target, width, height, dist, delta, clientX, clientY }) => { console.log(\"onResize\", target); delta[0] && (target!.style.width = `${width}px`); delta[1] && (target!.style.height = `${height}px`); }).on(\"resizeEnd\", ({ target, isDrag, clientX, clientY }) => { console.log(\"onResizeEnd\", target, isDrag); }); /* scalable */ moveable.on(\"scaleStart\", ({ target, clientX, clientY }) => { console.log(\"onScaleStart\", target); }).on(\"scale\", ({ target, scale, dist, delta, transform, clientX, clientY, }: OnScale) => { console.log(\"onScale scale\", scale); target!.style.transform = transform; }).on(\"scaleEnd\", ({ target, isDrag, clientX, clientY }) => { console.log(\"onScaleEnd\", target, isDrag); }); /* rotatable */ moveable.on(\"rotateStart\", ({ target, clientX, clientY }) => { console.log(\"onRotateStart\", target); }).on(\"rotate\", ({ target, beforeDelta, delta, dist, transform, clientX, clientY }) => { console.log(\"onRotate\", dist); target!.style.transform = transform; }).on(\"rotateEnd\", ({ target, isDrag, clientX, clientY }) => { console.log(\"onRotateEnd\", target, isDrag); }); /* warpable */ this.matrix = [ 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, ]; moveable.on(\"warpStart\", ({ target, clientX, clientY }) => { console.log(\"onWarpStart\", target); }).on(\"warp\", ({ target, clientX, clientY, delta, dist, multiply, transform, }) => { console.log(\"onWarp\", target); // target.style.transform = transform; this.matrix = multiply(this.matrix, delta); target.style.transform = `matrix3d(${this.matrix.join(\",\")})`; }).on(\"warpEnd\", ({ target, isDrag, clientX, clientY }) => { console.log(\"onWarpEnd\", target, isDrag); }); /* pinchable */ // Enabling pinchable lets you use events that // can be used in draggable, resizable, scalable, and rotateable. moveable.on(\"pinchStart\", ({ target, clientX, clientY }) => { // pinchStart event occur before dragStart, rotateStart, scaleStart, resizeStart console.log(\"onPinchStart\"); }).on(\"pinch\", ({ target, clientX, clientY, datas }) => { // pinch event occur before drag, rotate, scale, resize console.log(\"onPinch\"); }).on(\"pinchEnd\", ({ isDrag, target, clientX, clientY, datas }) => { // pinchEnd event occur before dragEnd, rotateEnd, scaleEnd, resizeEnd console.log(\"onPinchEnd\"); }); 📦 Packages moveable: A Vanilla Component that create Moveable, Draggable, Resizable, Scalable, Rotatable, Warpable, Pinchable. react-moveable: A React Component that create Moveable, Draggable, Resizable, Scalable, Rotatable, Warpable, Pinchable. preact-moveable: A Preact Component that create Moveable, Draggable, Resizable, Scalable, Rotatable, Warpable, Pinchable. ngx-moveable: An Angular Component that create Moveable, Draggable, Resizable, Scalable, Rotatable, Warpable, Pinchable. svelte-moveable: A Svelte Component that create Moveable, Draggable, Resizable, Scalable, Rotatable, Warpable, Pinchable. lit-moveable: A Lit Component that create Moveable, Draggable, Resizable, Scalable, Rotatable, Warpable, Pinchable. vue-moveable: A Vue Component that create Moveable, Draggable, Resizable, Scalable, Rotatable, Warpable, Pinchable. vue3-moveable: A Vue 3 Component that create Moveable, Draggable, Resizable, Scalable, Rotatable, Warpable, Pinchable. ⚙️ Developments The moveable repo is managed as a monorepo with yarn. yarn config set registry https://registry.npmjs.org/ The main project was made with react and I used croact to make it lighter with umd. For development and testing, check in packages/react-moveable. npm run storybook $ yarn $ npm run packages:build $ npm run storybook Runs the app in the development mode. Open http://localhost:6006 to view it in the browser. The page will reload if you make edits. You will also see any lint errors in the console. ⭐️ Show Your Support Please give a ⭐️ if this project helped you! 👏 Contributing If you have any questions or requests or want to contribute to moveable or other packages, please write the issue or give me a Pull Request freely. Code Contributors This project exists thanks to all the people who contribute. [Contribute]. 🐞 Bug Report If you find a bug, please report to us opening a new Issue on GitHub. Sponsors Open Collective Financial Contributors Become a financial contributor and help us sustain our community. [Contribute] Individuals Organizations Support this project with your organization. Your logo will show up here with a link to your website. [Contribute] 📝 License This project is MIT licensed. MIT License Copyright (c) 2019 Daybrush Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://raw.githubusercontent.com/daybrush/moveable/master/demo/images/logo.png"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/daybrush/moveable#moveable"
+    },
+    {
+      "label": "",
+      "url": "https://opencollective.com/moveable"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/moveable"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/daybrush/moveable/actions"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/0a1070767ebb57227d8ffe574a49f977100128a18f7477e66f0b2d26e13f9a6b/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f6c616e67756167652d747970657363726970742d626c75652e7376673f7374796c653d666c61742d737175617265"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/daybrush/moveable/blob/master/LICENSE"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/daybrush/moveable/tree/master/packages/react-moveable"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/daybrush/moveable/tree/master/packages/preact-moveable"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/daybrush/moveable/tree/master/packages/ngx-moveable"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/daybrush/moveable/tree/master/packages/vue-moveable"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/daybrush/moveable/tree/master/packages/vue3-moveable"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/daybrush/moveable/tree/master/packages/svelte-moveable"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/daybrush/moveable/tree/master/packages/lit-moveable"
+    },
+    {
+      "label": "Github",
+      "url": "https://github.com/daybrush/moveable"
+    },
+    {
+      "label": "Demo",
+      "url": "https://daybrush.com/moveable"
+    },
+    {
+      "label": "Storybook",
+      "url": "https://daybrush.com/moveable/storybook/"
+    },
+    {
+      "label": "API",
+      "url": "https://daybrush.com/moveable/release/latest/doc/"
+    },
+    {
+      "label": "Main Project",
+      "url": "https://github.com/daybrush/scena"
+    },
+    {
+      "label": "Draggable",
+      "url": "https://daybrush.com/moveable/storybook/index.html?path=/story/basic--basic-draggable"
+    },
+    {
+      "label": "Resizable",
+      "url": "https://daybrush.com/moveable/storybook/index.html?path=/story/basic--basic-resizable"
+    },
+    {
+      "label": "Scalable",
+      "url": "https://daybrush.com/moveable/storybook/index.html?path=/story/basic--basic-scalable"
+    },
+    {
+      "label": "Rotatable",
+      "url": "https://daybrush.com/moveable/storybook/index.html?path=/story/basic--basic-rotatable"
+    },
+    {
+      "label": "",
+      "url": "https://raw.githubusercontent.com/daybrush/moveable/master/demo/images/draggable.gif"
+    },
+    {
+      "label": "",
+      "url": "https://raw.githubusercontent.com/daybrush/moveable/master/demo/images/resizable.gif"
+    },
+    {
+      "label": "",
+      "url": "https://raw.githubusercontent.com/daybrush/moveable/master/demo/images/scalable.gif"
+    },
+    {
+      "label": "",
+      "url": "https://raw.githubusercontent.com/daybrush/moveable/master/demo/images/rotatable.gif"
+    },
+    {
+      "label": "Warpable",
+      "url": "https://daybrush.com/moveable/storybook/index.html?path=/story/basic--basic-warpable"
+    },
+    {
+      "label": "Pinchable",
+      "url": "https://daybrush.com/moveable/release/latest/doc/Moveable.Pinchable.html"
+    },
+    {
+      "label": "Groupable",
+      "url": "https://daybrush.com/moveable/storybook/index.html?path=/story/group--group-draggable-resizable-rotatable"
+    },
+    {
+      "label": "Snappable",
+      "url": "https://daybrush.com/moveable/storybook/index.html?path=/story/snap-bound--snap-guidelines"
+    },
+    {
+      "label": "",
+      "url": "https://raw.githubusercontent.com/daybrush/moveable/master/demo/images/warpable.gif"
+    },
+    {
+      "label": "",
+      "url": "https://raw.githubusercontent.com/daybrush/moveable/master/demo/images/pinchable.gif"
+    },
+    {
+      "label": "",
+      "url": "https://raw.githubusercontent.com/daybrush/moveable/master/demo/images/groupable.gif"
+    },
+    {
+      "label": "",
+      "url": "https://raw.githubusercontent.com/daybrush/moveable/master/demo/images/snappable.gif"
+    },
+    {
+      "label": "Clippable",
+      "url": "https://daybrush.com/moveable/storybook/index.html?path=/story/basic--basic-clippable"
+    },
+    {
+      "label": "Roundable",
+      "url": "https://daybrush.com/moveable/storybook/index.html?path=/story/basic--basic-roundable"
+    },
+    {
+      "label": "OriginDraggable",
+      "url": "https://daybrush.com/moveable/storybook/index.html?path=/story/basic--basic-origin-draggable"
+    },
+    {
+      "label": "Selecto",
+      "url": "https://github.com/daybrush/selecto"
+    },
+    {
+      "label": "",
+      "url": "https://raw.githubusercontent.com/daybrush/moveable/master/demo/images/clippable.gif"
+    },
+    {
+      "label": "",
+      "url": "https://raw.githubusercontent.com/daybrush/moveable/master/demo/images/roundable.gif"
+    },
+    {
+      "label": "",
+      "url": "https://raw.githubusercontent.com/daybrush/moveable/master/demo/images/origindraggable.gif"
+    },
+    {
+      "label": "",
+      "url": "https://raw.githubusercontent.com/daybrush/moveable/master/demo/images/selecto.gif"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/daybrush/moveable#-features"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/daybrush/moveable#️-installation"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/daybrush/moveable#npm"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/daybrush/moveable#scripts"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/daybrush/moveable#-documents"
+    },
+    {
+      "label": "Moveable Handbook",
+      "url": "https://github.com/daybrush/moveable/blob/master/handbook/handbook.md"
+    },
+    {
+      "label": "How to use Group",
+      "url": "https://github.com/daybrush/moveable/blob/master/handbook/handbook.md#toc-group"
+    },
+    {
+      "label": "How to use custom CSS",
+      "url": "https://github.com/daybrush/moveable/blob/master/handbook/handbook.md#toc-custom-css"
+    },
+    {
+      "label": "How to make custom able",
+      "url": "https://github.com/daybrush/moveable/blob/master/packages/react-moveable/src/ables/README.md"
+    },
+    {
+      "label": "API Documentation",
+      "url": "https://daybrush.com/moveable/release/latest/doc/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/daybrush/moveable#-how-to-use"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/daybrush/moveable#-packages"
+    },
+    {
+      "label": "moveable",
+      "url": "https://github.com/daybrush/moveable/blob/master/packages/moveable"
+    },
+    {
+      "label": "react-moveable",
+      "url": "https://github.com/daybrush/moveable/blob/master/packages/react-moveable"
+    },
+    {
+      "label": "preact-moveable",
+      "url": "https://github.com/daybrush/moveable/blob/master/packages/preact-moveable"
+    },
+    {
+      "label": "ngx-moveable",
+      "url": "https://github.com/daybrush/moveable/blob/master/packages/ngx-moveable"
+    },
+    {
+      "label": "svelte-moveable",
+      "url": "https://github.com/daybrush/moveable/blob/master/packages/svelte-moveable"
+    },
+    {
+      "label": "lit-moveable",
+      "url": "https://github.com/daybrush/moveable/blob/master/packages/lit-moveable"
+    },
+    {
+      "label": "vue-moveable",
+      "url": "https://github.com/daybrush/moveable/blob/master/packages/vue-moveable"
+    },
+    {
+      "label": "vue3-moveable",
+      "url": "https://github.com/daybrush/moveable/blob/master/packages/vue3-moveable"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/daybrush/moveable#️-developments"
+    },
+    {
+      "label": "monorepo",
+      "url": "https://github.com/lerna/lerna"
+    },
+    {
+      "label": "croact",
+      "url": "https://github.com/daybrush/croact"
+    },
+    {
+      "label": "packages/react-moveable",
+      "url": "https://github.com/daybrush/moveable/blob/master/packages/react-moveable"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/daybrush/moveable#npm-run-storybook"
+    },
+    {
+      "label": "http://localhost:6006",
+      "url": "http://localhost:6006"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/daybrush/moveable#️-show-your-support"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/daybrush/moveable#-contributing"
+    },
+    {
+      "label": "issue",
+      "url": "https://github.com/daybrush/moveable/issues"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/daybrush/moveable#code-contributors"
+    },
+    {
+      "label": "Contribute",
+      "url": "https://github.com/daybrush/moveable/blob/master/CONTRIBUTING.md"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/daybrush/moveable/graphs/contributors"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/daybrush/moveable#-bug-report"
+    },
+    {
+      "label": "Issue",
+      "url": "https://github.com/daybrush/moveable/issues"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/daybrush/moveable#sponsors"
+    },
+    {
+      "label": "",
+      "url": "https://daybrush.com/sponsors/sponsors.svg"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/daybrush/moveable#open-collective-financial-contributors"
+    },
+    {
+      "label": "Contribute",
+      "url": "https://opencollective.com/moveable/contribute"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/daybrush/moveable#individuals"
+    },
+    {
+      "label": "",
+      "url": "https://opencollective.com/moveable"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/daybrush/moveable#organizations"
+    },
+    {
+      "label": "Contribute",
+      "url": "https://opencollective.com/moveable/contribute"
+    },
+    {
+      "label": "",
+      "url": "https://opencollective.com/moveable/organization/0/website"
+    },
+    {
+      "label": "",
+      "url": "https://opencollective.com/moveable/organization/1/website"
+    },
+    {
+      "label": "",
+      "url": "https://opencollective.com/moveable/organization/2/website"
+    },
+    {
+      "label": "",
+      "url": "https://opencollective.com/moveable/organization/3/website"
+    },
+    {
+      "label": "",
+      "url": "https://opencollective.com/moveable/organization/4/website"
+    },
+    {
+      "label": "",
+      "url": "https://opencollective.com/moveable/organization/5/website"
+    },
+    {
+      "label": "",
+      "url": "https://opencollective.com/moveable/organization/6/website"
+    },
+    {
+      "label": "",
+      "url": "https://opencollective.com/moveable/organization/7/website"
+    },
+    {
+      "label": "",
+      "url": "https://opencollective.com/moveable/organization/8/website"
+    },
+    {
+      "label": "",
+      "url": "https://opencollective.com/moveable/organization/9/website"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/daybrush/moveable#-license"
+    },
+    {
+      "label": "MIT",
+      "url": "https://github.com/daybrush/moveable/blob/master/LICENSE"
+    }
+  ],
+  "root_files": [
+    ".github",
+    "config",
+    "demo",
+    "handbook",
+    "packages",
+    "static/scripts",
+    "storybook",
+    "test",
+    ".editorconfig",
+    ".gitignore",
+    ".yarnrc",
+    "CHANGELOG-1.0.0.md",
+    "CHANGELOG.md",
+    "LICENSE",
+    "README.md",
+    "custom_css.md",
+    "groupable.md",
+    "jsdoc.json",
+    "lerna.json",
+    "package.json",
+    "yarn.lock"
+  ],
+  "release_count": 142,
+  "status": "verified"
+}

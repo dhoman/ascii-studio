@@ -1,0 +1,172 @@
+{
+  "url": "https://github.com/ragnarlotus/vue-flux",
+  "final_url": "https://github.com/ragnarlotus/vue-flux",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:48:12.966802+00:00",
+  "stars": 551,
+  "forks": 47,
+  "description": "Image slider which comes with 20 cool transitions",
+  "homepage": "https://ragnarlotus.github.io/vue-flux-docs/demos/demos",
+  "topics": [
+    "image",
+    "parallax",
+    "slider",
+    "vue"
+  ],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2018-03-31T09:24:34.000Z",
+  "branch": "main",
+  "commit": "3ac8083857966e68e2f66e92cb053d078cadd657",
+  "readme": "Documentation and demos Version 5 documentation Version 6 documentation Version 7 documentation Version 7 demos Overview This is an image slider developed with vue 3 which comes with 20 cool transitions out of the box. Features Feature Description Responsive The slider and the images are adapted to container to fill it always Compatibility Supported by all major browsers Expandable You can add your custom transitions very easily Customization Total customizable to suit most needs Gestures Mobile friendly by gestures Functionality You can use arrow keys to navigate. Switch to full screen Parallax It includes a parallax component very easy to set up Quick start Install and save the package. npm install --save vue-flux@latest Add component. This one has all the complements, so you can remove the ones you don't want. <script setup> import { ref, shallowReactive } from 'vue'; import { VueFlux, Img, } from 'vue-flux'; import { FluxCaption, FluxControls, FluxIndex, FluxPagination, FluxPreloader, } from 'vue-flux/complements'; import { Book, Zip, } from 'vue-flux/transitions'; import 'vue-flux/style.css'; const $vueFlux = ref(); const vfOptions = shallowReactive({ autoplay: true, }); const vfRscs = shallowReactive([ new Img('URL1', 'img 1'), new Img('URL2', 'img 2'), new Img('URL3', 'img 3'), ]); const vfTransitions = shallowReactive([Book, Zip]); </script> <template> <VueFlux :options=\"vfOptions\" :rscs=\"vfRscs\" :transitions=\"vfTransitions\" ref=\"$vueFlux\"> <template #preloader=\"preloaderProps\"> <FluxPreloader v-bind=\"preloaderProps\" /> </template> <template #caption=\"captionProps\"> <FluxCaption v-bind=\"captionProps\" /> </template> <template #controls=\"controlsProps\"> <FluxControls v-bind=\"controlsProps\" /> </template> <template #pagination=\"paginationProps\"> <FluxPagination v-bind=\"paginationProps\" /> </template> <template #index=\"indexProps\"> <FluxIndex v-bind=\"indexProps\" /> </template> </VueFlux> <button @click=\"$vueFlux.show('next')\">NEXT</button> </template> Performance Weight is about 60 KB so is pretty light having only the essential CSS. It also does not require a high end computer as animations are performed with CSS3 hardware acceleration. Included transitions 2D transitions Fade: fades from one image to next. Kenburn: fades, zoom and moves current image to next. Swipe: swipes the image to display next like uncovered with a curtain. Slide: slides the image horizontally revealing the next. Waterfall: divides the image in bars and drops them down in turns. Zip: divides the image in bars and slides them up and down alternately like a zip. Blinds 2D: divides the image in vertical bars that blinds and fades out. Blocks 1: the image is split in blocks that shrink and fade out randomly. Blocks 2: the image is split in blocks that shrink and fade out in wave from a corner to the opposite. Concentric: a concentric effect is performed by rotating the image converted into circles. Warp: a concentric effect is performed by rotating the image converted into circles in alternate direction. Camera: from outside to inside the image is being circled in black like a camera. 3D transitions Cube: turns the image to a side like if place in a cube. Book: makes the effect of turning a page to display next image. Fall: the image falls in front displaying next image. Wave: makes the image 3D and divides it in slices that turn vertically to display the next image. Blinds 3D: divides the image in vertical bars that blinds 180 deg to form the next image. Round 1: the image is split in blocks that turn 180 deg horizontally to form next image. Round 2: panels start to round vertically revealing the next image in upper arrow form leaving trail. Explode: the image starts to explode from the center to outside. Parallax As simple as this. <script setup> import { FluxParallax, Img } from 'vue-flux'; const rsc = new Img('URL1', 'img 1'); </script> <template> <FluxParallax :rsc=\"rsc\" style=\"height: 300px;\"> <div>CONTENT</div> </FluxParallax> </template> Troubleshooting If you find yourself running into issues during installation or running the slider, please check our documentation. If still needs help open an issue. I will be happy to discuss how they can be solved. Documentation You can view the full documentation at the project's documentation with examples and detailed information. Changelog Check the changelog for update info. Inspiration This slider was inspired by Flux Slider. Contributing Contributions, questions and comments are all welcome and encouraged. Do not hesitate to send me your own transitions to add them to the slider.",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://github.com/ragnarlotus/vue-flux#documentation-and-demos"
+    },
+    {
+      "label": "Version 5 documentation",
+      "url": "https://ragnarlotus.github.io/vue-flux-docs/documentation/v5/overview"
+    },
+    {
+      "label": "Version 6 documentation",
+      "url": "https://ragnarlotus.github.io/vue-flux-docs/documentation/v6/overview"
+    },
+    {
+      "label": "Version 7 documentation",
+      "url": "https://ragnarlotus.github.io/vue-flux-docs/documentation/v7/overview"
+    },
+    {
+      "label": "Version 7 demos",
+      "url": "https://ragnarlotus.github.io/vue-flux-docs/demos/demos"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/ragnarlotus/vue-flux#overview"
+    },
+    {
+      "label": "vue",
+      "url": "https://vuejs.org/"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/d9cf2c9b5450e364afb36be1722a5fb7c55a28b15e196a1ae8d53580b8c2c353/68747470733a2f2f696d672e736869656c64732e696f2f6e706d2f762f7675652d666c75782f6c61746573742e7376673f7374796c653d666c61742d737175617265"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/5d32acfc86a9e8ed318e7a1457b5f834aac2be45dfe1020c601bd6afa1bce0a9/68747470733a2f2f696d672e736869656c64732e696f2f6e706d2f64742f7675652d666c75782e7376673f7374796c653d666c61742d737175617265"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/642fdf797d24f4e82a00cfc1cad0b92747de04ec53c8b4645d44e472a8b3ca27/68747470733a2f2f696d672e736869656c64732e696f2f62756e646c6570686f6269612f6d696e2f7675652d666c75782f6c61746573742e7376673f7374796c653d666c61742d737175617265"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/1ac7e6a3cdd35fdd58fd2e9bbeeada8e695fb4d2489f70d4841a404b8f055d31/68747470733a2f2f696d672e736869656c64732e696f2f62756e646c6570686f6269612f6d696e7a69702f7675652d666c75782f6c61746573742e7376673f7374796c653d666c61742d737175617265"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/a55728ad86e48662c4a4ccd5b5229c618c512c6a1ddf5edc8d696be457a9bf57/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f6973737565732d7261772f7261676e61726c6f7475732f7675652d666c75782e7376673f7374796c653d666c61742d737175617265"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/7123c32787e013be5a8a13598ad01f562754637ed6141e89b02e85bf16d3e63e/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f6c6963656e73652f6d6173686170652f6170697374617475732e7376673f7374796c653d666c61742d737175617265"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/ragnarlotus/vue-flux#features"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/ragnarlotus/vue-flux#quick-start"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/ragnarlotus/vue-flux#performance"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/ragnarlotus/vue-flux#included-transitions"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/ragnarlotus/vue-flux#2d-transitions"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/ragnarlotus/vue-flux#3d-transitions"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/ragnarlotus/vue-flux#parallax"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/ragnarlotus/vue-flux#troubleshooting"
+    },
+    {
+      "label": "documentation",
+      "url": "https://ragnarlotus.github.io/vue-flux-docs/documentation/v7/overview"
+    },
+    {
+      "label": "issue",
+      "url": "https://github.com/ragnarlotus/vue-flux/issues/new"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/ragnarlotus/vue-flux#documentation"
+    },
+    {
+      "label": "documentation",
+      "url": "https://ragnarlotus.github.io/vue-flux-docs/documentation/v7/overview"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/ragnarlotus/vue-flux#changelog"
+    },
+    {
+      "label": "changelog",
+      "url": "https://ragnarlotus.github.io/vue-flux-docs/documentation/v7/changelog"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/ragnarlotus/vue-flux#inspiration"
+    },
+    {
+      "label": "Flux Slider",
+      "url": "http://joelambert.co.uk/flux/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/ragnarlotus/vue-flux#contributing"
+    }
+  ],
+  "root_files": [
+    ".github",
+    ".vscode",
+    "public/images",
+    "scripts",
+    "src",
+    ".editorconfig",
+    ".gitattributes",
+    ".gitignore",
+    ".markdownlint.cjs",
+    ".prettierrc.json",
+    "LICENSE",
+    "README.md",
+    "env.d.ts",
+    "eslint.config.ts",
+    "index.html",
+    "package-lock.json",
+    "package.json",
+    "tsconfig.app.json",
+    "tsconfig.build.json",
+    "tsconfig.json",
+    "tsconfig.node.json",
+    "tsconfig.vitest.json",
+    "vite.config.ts",
+    "vitest.config.ts"
+  ],
+  "release_count": 0,
+  "status": "verified"
+}

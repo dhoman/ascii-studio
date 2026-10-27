@@ -1,0 +1,758 @@
+{
+  "url": "https://github.com/xtermjs/xterm.js",
+  "final_url": "https://github.com/xtermjs/xterm.js",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:48:25.483911+00:00",
+  "stars": 21288,
+  "forks": 2023,
+  "description": "A terminal for the web",
+  "homepage": "https://xtermjs.org/",
+  "topics": [
+    "console",
+    "development",
+    "javascript",
+    "pty",
+    "ssh",
+    "terminal",
+    "terminal-emulators",
+    "tty",
+    "typescript",
+    "vt100",
+    "webgl",
+    "xterm"
+  ],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2014-03-24T16:04:04.000Z",
+  "branch": "master",
+  "commit": "991857a1b1cacf06f9531ba74a6e927a7a6398bb",
+  "readme": "Xterm.js is a frontend component that enables applications to bring fully-featured terminals to their users in the browser. It's used by popular projects such as VS Code (and its forks), Tabby and Hyper. Features Terminal apps just work: Xterm.js works with most terminal apps such as bash, vim, and tmux, including support for curses-based apps and mouse events. Performant: Xterm.js is really fast and includes an optional GPU-accelerated renderer. Rich Unicode support: Supports CJK, emojis, and IMEs. Self-contained: The core library has zero dependencies. Accessible: Screen reader mode and minimum contrast ratio support can be turned on. And much more: Links, theming, custom glyphs, addons, well documented API, etc. What xterm.js is not Xterm.js is not a terminal application that you can download and use on your computer. Xterm.js is not bash. Xterm.js can be connected to processes like bash and let you interact with them (provide input, receive output) through a library like node-pty. Getting Started First, you need to install the module. We ship exclusively through npm, so you need that installed and then add @xterm/xterm as a dependency by running: npm install --save @xterm/xterm The recommended way to load xterm.js with the ES module syntax, either using TypeScript or a modern JS tooling. Note that both CommonJS and ES module files are shipped with the npm package. import { Terminal } from '@xterm/xterm'; Then instantiate a Terminal object, open it on an element and write to it: const term = new Terminal(); term.open(document.getElementById('terminal')); term.write('Hello from \\x1B[1;3;31mxterm.js\\x1B[0m $ ') Most use cases will hook up input and output to a pseudoterminal API such as node-pty which will drive the terminal. pty.onData(data => term.write(data)); term.onData(data => pty.write(data)); Then make sure to also include the css/xterm.css file, for example in HTML: <link rel=\"stylesheet\" href=\"node_modules/@xterm/xterm/css/xterm.css\" /> Standalone example Here is a complete standalone example in a HTML file: <!doctype html> <html> <head> <link rel=\"stylesheet\" href=\"node_modules/@xterm/xterm/css/xterm.css\" /> <script src=\"node_modules/@xterm/xterm/lib/xterm.js\"></script> </head> <body> <div id=\"terminal\"></div> <script> const term = new Terminal(); term.open(document.getElementById('terminal')); term.write('Hello from \\x1B[1;3;31mxterm.js\\x1B[0m $ ') </script> </body> </html> Addons Addons are separate modules that extend the Terminal by building on the xterm.js API. To use an addon, you first need to install it in your project: npm install --save @xterm/addon-web-links Then import the addon, instantiate it and call Terminal.loadAddon: import { Terminal } from '@xterm/xterm'; import { WebLinksAddon } from '@xterm/addon-web-links'; const terminal = new Terminal(); // Load WebLinksAddon on terminal, this is all that's needed to get web links // working in the terminal. terminal.loadAddon(new WebLinksAddon()); The xterm.js team maintains the following addons, but anyone can build them: @xterm/addon-attach: Attaches to a server running a process via a websocket @xterm/addon-clipboard: Access the browser's clipboard @xterm/addon-fit: Fits the terminal to the containing element @xterm/addon-image: Adds image support @xterm/addon-ligatures: Enables rendering of ligatures @xterm/addon-progress: Adds support for the progress API (OSC 9;4) @xterm/addon-search: Adds search functionality @xterm/addon-serialize: Serializes the terminal's buffer to VT sequences or HTML @xterm/addon-unicode-graphemes: Enhanced unicode support including grapheme clustering (experimental) @xterm/addon-unicode11: Updates character widths to their unicode11 values @xterm/addon-web-fonts: Easily integrate web fonts @xterm/addon-web-links: Adds web link detection and interaction @xterm/addon-webgl: Renders xterm.js using a canvas element's webgl2 context Browser Support Since xterm.js is typically implemented as a developer tool, generally only modern evergreen browsers are supported officially. Specifically the latest versions of Chrome, Edge, Firefox, and Safari. Xterm.js also works seamlessly in Electron apps and may even work on earlier versions of the browsers. These are the versions we strive to keep working. Node.js Support We also publish @xterm/headless which is a stripped down version of xterm.js that runs headless in Node.js. An example use case for this is to keep track of a terminal's state where the process is running and using the serialize addon so it can get all state restored upon reconnection. API The full API for xterm.js is contained within the TypeScript declaration file, use the branch/tag picker in GitHub (w) to navigate to the correct version of the API. Some APIs may be marked with experimental, these are added to enable experimentation with new ideas without committing to support it like a normal semver API. Note that these APIs can change radically between versions, so be sure to read release notes if you plan on using experimental APIs. Releases Stable releases are done on an as needed basis. All current and past releases are available on this repo's releases page, you can see what's planned for upcoming releases looking through the repository milestones. Beta builds Beta releases are continuously published off the master branch. Install the latest beta build with: npm install --save @xterm/xterm@beta The principal implementation (VS Code) typically uses the latest or near the latest beta build. Generally they are quite stable but can potentially contain bugs or breaking changes. If stability is very important we recommend using the beta build primarily to test out new features and to verify bug fixes, unless you're tracking what's landing and are comfortable taking that risk. Contributing Read CONTRIBUTING.md to learn how to contribute to the project. Real-world uses Xterm.js is used in many world-class applications to provide great terminal experiences. SourceLair: In-browser IDE that provides its users with fully-featured Linux terminals based on xterm.js. Microsoft Visual Studio Code: Modern, versatile, and powerful open source code editor that provides an integrated terminal based on xterm.js. ttyd: A command-line tool for sharing terminal over the web, with fully-featured terminal emulation based on xterm.js. Eclipse Che: Developer workspace server, cloud IDE, and Eclipse next-generation IDE. Codenvy: Cloud workspaces for development teams. CoderPad: Online interviewing platform for programmers. Run code in many programming languages, with results displayed by xterm.js. WebSSH2: A web based SSH2 client using xterm.js, socket.io, and ssh2. Spyder Terminal: A full fledged system terminal embedded on Spyder IDE. Cloud Commander: Orthodox web file manager with console and editor. Next Tech: Online platform for interactive coding and web development courses. Live container-backed terminal uses xterm.js. RStudio: RStudio is an integrated development environment (IDE) for R. Terminal for Atom: A simple terminal for the Atom text editor. Eclipse Orion: A modern, open source software development environment that runs in the cloud. Code, deploy, and run in the cloud. Gravitational Teleport: Gravitational Teleport is a modern SSH server for remotely accessing clusters of Linux servers via SSH or HTTPS. Hexlet: Practical programming courses (JavaScript, PHP, Unix, databases, functional programming). A steady path from the first line of code to the first job. Selenoid UI: Simple UI for the scalable golang implementation of Selenium Hub named Selenoid. We use XTerm for streaming logs over websockets from docker containers. Portainer: Simple management UI for Docker. SSHy: HTML5 Based SSHv2 Web Client with E2E encryption utilising xterm.js, SJCL & websockets. JupyterLab: An extensible computational environment for Jupyter, supporting interactive data science and scientific computing across all programming languages. Theia: Theia is a cloud & desktop IDE framework implemented in TypeScript. Opshell Ops Helper tool to make life easier working with AWS instances across multiple organizations. Proxmox VE: Proxmox VE is a complete open-source platform for enterprise virtualization. It uses xterm.js for container terminals and the host shell. Script Runner: Run scripts (or a shell) in Atom. Whack Whack Terminal: Terminal emulator for Visual Studio 2017. VTerm: Extensible terminal emulator based on Electron and React. electerm: electerm is a terminal/ssh/sftp client(mac, win, linux) based on electron/node-pty/xterm. Kubebox: Terminal console for Kubernetes clusters. Azure Cloud Shell: Azure Cloud Shell is a Microsoft-managed admin machine built on Azure, for Azure. atom-xterm: Atom plugin for providing terminals inside your Atom workspace. rtty: Access your terminals from anywhere via the web. Pisth: An SFTP and SSH client for iOS. abstruse: Abstruse CI is a continuous integration platform based on Node.JS and Docker. Azure Data Studio: A data management tool that enables working with SQL Server, Azure SQL DB and SQL DW from Windows, macOS and Linux. FreeMAN: A free, cross-platform file manager for power users. Fluent Terminal: A terminal emulator based on UWP and web technologies. Hyper: A terminal built on web technologies. Diag: A better way to troubleshoot problems faster. Capture, share and reapply troubleshooting knowledge so you can focus on solving problems that matter. GoTTY: A simple command line tool that shares your terminal as a web application based on xterm.js. genact: A nonsense activity generator. cPanel & WHM: The hosting platform of choice. Nutanix: Nutanix Enterprise Cloud uses xterm in the webssh functionality within Nutanix Calm, and is also looking to move our old noserial (termjs) functionality to xterm.js. SSH Web Client: SSH Web Client with PHP. Juno: A flexible Julia IDE, based on Atom. webssh: Web based ssh client. info-beamer hosted: Uses xterm.js to manage digital signage devices from the web dashboard. Jumpserver: Jumpserver Luna project, Jumpserver is a bastion server project, Luna use xterm.js for web terminal emulation. LxdMosaic: Uses xterm.js to give terminal access to containers through LXD CodeInterview.io: A coding interview platform in 25+ languages and many web frameworks. Uses xterm.js to provide shell access. Bastillion: Bastillion is an open-source web-based SSH console that centrally manages administrative access to systems. PHP App Server: Create lightweight, installable almost-native applications for desktop OSes. ExecTerminal (nicely wraps the xterm.js Terminal), TerminalManager, and RunProcessSDK are self-contained, reusable ES5+ compliant Javascript components. NgTerminal: NgTerminal is a web terminal that leverages xterm.js on Angular 7+. You can easily add it into your application by adding <ng-terminal></ng-terminal> into your component. tty-share: Extremely simple terminal sharing over the Internet. Ten Hands: One place to run your command-line tasks. WebAssembly.sh: A WebAssembly WASI browser terminal Gus: A shared coding pad where you can run Python with xterm.js Linode: Linode uses xterm.js to provide users a web console for their Linode instances. FluffOS: Active maintained LPMUD driver with websocket support. x-terminal: Atom plugin for providing terminals inside your Atom workspace. CoCalc: Lots of free software pre-installed, to chat, collaborate, develop, program, publish, research, share, teach, in C++, HTML, Julia, Jupyter, LaTeX, Markdown, Python, R, SageMath, Scala, ... Dank Domain: Open source multiuser medieval game supporting old & new terminal emulation. DockerStacks: Local LAMP/LEMP development studio Codecademy: Uses xterm.js in its courses on Bash. Laravel Ssh Web Client: Laravel server inventory with ssh web client to connect at server using xterm.js Replit: Collaborative browser based IDE with support for 50+ different languages. TeleType: cli tool that allows you to share your terminal online conveniently. Show off mad cli-fu, help a colleague, teach, or troubleshoot. Intervue: Pair programming for interviews. Multiple programming languages are supported, with results displayed by xterm.js. TRASA: Zero trust access to Web, SSH, RDP, and Database services. Commas: Commas is a hackable terminal and command runner. Devtron: Software Delivery Workflow For Kubernetes. NxShell: An easy to use new terminal for SSH. gifcast: Converts an asciinema cast to an animated GIF. WizardWebssh: A terminal with Pyqt5 Widget for embedding, which can be used as an ssh client to connect to your ssh servers. It is written in Python, based on tornado, paramiko, and xterm.js. Wizard Assistant: Wizard Assistant comes with advanced automation tools, preloaded common and special time-saving commands, and a built-in SSH terminal. Now you can remotely administer, troubleshoot, and analyze any system with ease. ucli: Command Line for everyone 👨‍👩‍👧‍👦 at www.ucli.tech. Tess: Simple Terminal Fully Customizable for Everyone. Discover more at tessapp.dev HashiCorp Nomad: A container orchestrator with the ability to connect to remote tasks via a web interface using websockets and xterm.js. TermPair: View and control terminals from your browser with end-to-end encryption gdbgui: Browser-based frontend to gdb (gnu debugger) goormIDE: Run almost every programming languages with real-time collaboration, live pair programming, and built-in messenger. FleetDeck: Remote desktop & virtual terminal OpenSumi: A framework helps you quickly build Cloud or Desktop IDE products. KubeSail: The Self-Hosting Company - uses xterm to allow users to exec into kubernetes pods and build github apps WiTTY: Web-based interactive terminal emulator that allows users to easily record, share, and replay console sessions. libv86 Terminal Forwarding: Peer-to-peer SSH for the web, using WebRTC via Bugout for data transfer and v86 for web-based virtualization. hack.courses: Interactive Linux and command-line classes using xterm.js to expose a real terminal available for everyone. Render: Platform-as-a-service for your apps, websites, and databases using xterm.js to provide a command prompt for user containers and for streaming build and runtime logs. CloudTTY: A Friendly Kubernetes CloudShell (Web Terminal). Go SSH Web Client: A simple SSH web client using Go, WebSocket and Xterm.js. web3os: A decentralized operating system for the next web Cratecode: Learn to program for free through interactive online lessons. Cratecode uses xterm.js to give users access to their own Linux environment. Super Terminal: It is a http based terminal for developers who dont like repetition and save time. graSSHopper: A simple SSH client with file explorer, history and many more features. DomTerm: Tiles and tabs. Detachable sessions (like tmux). Remote connections using a nice ssh wrapper with predictive echo. Qt, Electron, Tauri/Wry, or desktop browser front-ends. Choose between xterm.js engine (faster) or native DomTerm (more functionality and graphics) - or both. Cloudtutor.io: innovative online learning platform that offers users access to an interactive lab. Helix Editor Playground: Online playground for the terminal based helix editor. Coder: Self-Hosted Remote Development Environments Wave Terminal: An open-source, ai-native, terminal built for seamless workflows. eva: Eva is a web application for SSH remote login, developed in Go. OpenSFTP: Super beautiful SSH and SFTP integrated workspace client. balena: Balena is a full-stack solution for developing, deploying, updating, and troubleshooting IoT Edge devices. We use xterm.js to manage & debug devices on balenaCloud. Filet Cloud: The lean and powerful personal cloud ⛅. pyTermTk: Python Terminal Toolkit - a Spiced Up Cross Compatible TUI Library 🌶️, use xterm.js for the HTML5 exporter. ecmaOS: A kernel and suite of applications tying modern web technologies into a browser-based operating system. LabEx: Interactive learning platform with hands-on labs and xterm.js-based online terminals, focused on learn-by-doing approach. EmuDevz: A free coding game where players learn how to build an emulator from scratch. SSH Connection Manager: Modern web-based SSH terminal and SFTP manager with AES-256 encryption, PWA support, and session management. WooTTY: Flawless browser terminal for real operators. Orca: Agentic development environment for 100x builders. 4bit: Terminal Color Scheme Designer. Cate: Open source desktop IDE on an infinite zoomable canvas. Editor, browser, and terminal panels float in spatial space; the terminals are xterm.js with the WebGL addon, backed by node-pty. OmnyShell PWA: Web client for OmnyShell, featuring remote terminals, a built-in IDE, AI-assisted workflows, and detachable/resumable sessions for seamless browser-based access to nodes. kmux: A keyboard-centric terminal workspace for running parallel AI coding agents side by side on macOS and Linux. LynxHub: Cross-platform, extensible terminal and browser for AI management. Codeman: Self-hosted mission control for AI coding agents, streaming live tmux sessions to browser and phone. JSVIsion: A Turbo Vision-Style TUI SDK for TypeScript. We use xterm.js in our docs to show live JSVision examples running in a web terminal. BitFun: Open-source desktop AI agent whose integrated terminals and read-only terminal output views use xterm.js with the Fit, Web Links, and WebGL addons. And much more... Do you use xterm.js in your application as well? Please open a Pull Request to include it here. We would love to have it on our list. Please add any new contributions to the end of the list. License Agreement If you contribute code to this project, you implicitly allow your code to be distributed under the MIT license. You are also implicitly verifying that all code is your original work. Copyright (c) 2017-2026, The xterm.js authors (MIT License) Copyright (c) 2014-2017, SourceLair, Private Company (www.sourcelair.com) (MIT License) Copyright (c) 2012-2013, Christopher Jeffrey (MIT License)",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://xtermjs.org"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/xtermjs/xterm.js"
+    },
+    {
+      "label": "VS Code",
+      "url": "https://code.visualstudio.com/"
+    },
+    {
+      "label": "Tabby",
+      "url": "https://tabby.sh/"
+    },
+    {
+      "label": "Hyper",
+      "url": "https://hyper.is/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/xtermjs/xterm.js#features"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/xtermjs/xterm.js#what-xtermjs-is-not"
+    },
+    {
+      "label": "node-pty",
+      "url": "https://github.com/microsoft/node-pty"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/xtermjs/xterm.js#getting-started"
+    },
+    {
+      "label": "npm",
+      "url": "https://www.npmjs.com"
+    },
+    {
+      "label": "@xterm/xterm",
+      "url": "https://www.npmjs.com/package/@xterm/xterm"
+    },
+    {
+      "label": "node-pty",
+      "url": "https://www.npmjs.com/package/node-pty"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/xtermjs/xterm.js#standalone-example"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/xtermjs/xterm.js#addons"
+    },
+    {
+      "label": "xterm.js API",
+      "url": "https://github.com/xtermjs/xterm.js/blob/master/typings/xterm.d.ts"
+    },
+    {
+      "label": "@xterm/addon-attach",
+      "url": "https://github.com/xtermjs/xterm.js/tree/master/addons/addon-attach"
+    },
+    {
+      "label": "@xterm/addon-clipboard",
+      "url": "https://github.com/xtermjs/xterm.js/tree/master/addons/addon-clipboard"
+    },
+    {
+      "label": "@xterm/addon-fit",
+      "url": "https://github.com/xtermjs/xterm.js/tree/master/addons/addon-fit"
+    },
+    {
+      "label": "@xterm/addon-image",
+      "url": "https://github.com/xtermjs/xterm.js/tree/master/addons/addon-image"
+    },
+    {
+      "label": "@xterm/addon-ligatures",
+      "url": "https://github.com/xtermjs/xterm.js/tree/master/addons/addon-ligatures"
+    },
+    {
+      "label": "@xterm/addon-progress",
+      "url": "https://github.com/xtermjs/xterm.js/tree/master/addons/addon-progress"
+    },
+    {
+      "label": "@xterm/addon-search",
+      "url": "https://github.com/xtermjs/xterm.js/tree/master/addons/addon-search"
+    },
+    {
+      "label": "@xterm/addon-serialize",
+      "url": "https://github.com/xtermjs/xterm.js/tree/master/addons/addon-serialize"
+    },
+    {
+      "label": "@xterm/addon-unicode-graphemes",
+      "url": "https://github.com/xtermjs/xterm.js/tree/master/addons/addon-unicode-graphemes"
+    },
+    {
+      "label": "@xterm/addon-unicode11",
+      "url": "https://github.com/xtermjs/xterm.js/tree/master/addons/addon-unicode11"
+    },
+    {
+      "label": "@xterm/addon-web-fonts",
+      "url": "https://github.com/xtermjs/xterm.js/tree/master/addons/addon-web-fonts"
+    },
+    {
+      "label": "@xterm/addon-web-links",
+      "url": "https://github.com/xtermjs/xterm.js/tree/master/addons/addon-web-links"
+    },
+    {
+      "label": "@xterm/addon-webgl",
+      "url": "https://github.com/xtermjs/xterm.js/tree/master/addons/addon-webgl"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/xtermjs/xterm.js#browser-support"
+    },
+    {
+      "label": "Electron",
+      "url": "https://electronjs.org/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/xtermjs/xterm.js#nodejs-support"
+    },
+    {
+      "label": "@xterm/headless",
+      "url": "https://www.npmjs.com/package/@xterm/headless"
+    },
+    {
+      "label": "serialize addon",
+      "url": "https://www.npmjs.com/package/@xterm/addon-serialize"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/xtermjs/xterm.js#api"
+    },
+    {
+      "label": "TypeScript declaration file",
+      "url": "https://github.com/xtermjs/xterm.js/blob/master/typings/xterm.d.ts"
+    },
+    {
+      "label": "semver",
+      "url": "https://semver.org/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/xtermjs/xterm.js#releases"
+    },
+    {
+      "label": "releases page",
+      "url": "https://github.com/sourcelair/xterm.js/releases"
+    },
+    {
+      "label": "milestones",
+      "url": "https://github.com/sourcelair/xterm.js/milestones"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/xtermjs/xterm.js#beta-builds"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/xtermjs/xterm.js#contributing"
+    },
+    {
+      "label": "CONTRIBUTING.md",
+      "url": "https://github.com/xtermjs/xterm.js/blob/master/CONTRIBUTING.md"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/xtermjs/xterm.js#real-world-uses"
+    },
+    {
+      "label": "SourceLair",
+      "url": "https://www.sourcelair.com/"
+    },
+    {
+      "label": "Microsoft Visual Studio Code",
+      "url": "http://code.visualstudio.com/"
+    },
+    {
+      "label": "ttyd",
+      "url": "https://github.com/tsl0922/ttyd"
+    },
+    {
+      "label": "Eclipse Che",
+      "url": "http://www.eclipse.org/che"
+    },
+    {
+      "label": "Codenvy",
+      "url": "http://www.codenvy.com"
+    },
+    {
+      "label": "CoderPad",
+      "url": "https://coderpad.io"
+    },
+    {
+      "label": "WebSSH2",
+      "url": "https://github.com/billchurch/WebSSH2"
+    },
+    {
+      "label": "Spyder Terminal",
+      "url": "https://github.com/spyder-ide/spyder-terminal"
+    },
+    {
+      "label": "Cloud Commander",
+      "url": "https://cloudcmd.io"
+    },
+    {
+      "label": "Next Tech",
+      "url": "https://next.tech"
+    },
+    {
+      "label": "RStudio",
+      "url": "https://www.rstudio.com/products/RStudio"
+    },
+    {
+      "label": "Terminal for Atom",
+      "url": "https://github.com/jsmecham/atom-terminal-tab"
+    },
+    {
+      "label": "Eclipse Orion",
+      "url": "https://orionhub.org"
+    },
+    {
+      "label": "Gravitational Teleport",
+      "url": "https://github.com/gravitational/teleport"
+    },
+    {
+      "label": "Hexlet",
+      "url": "https://en.hexlet.io"
+    },
+    {
+      "label": "Selenoid UI",
+      "url": "https://github.com/aerokube/selenoid-ui"
+    },
+    {
+      "label": "Portainer",
+      "url": "https://portainer.io"
+    },
+    {
+      "label": "SSHy",
+      "url": "https://github.com/stuicey/SSHy"
+    },
+    {
+      "label": "JupyterLab",
+      "url": "https://github.com/jupyterlab/jupyterlab"
+    },
+    {
+      "label": "Theia",
+      "url": "https://github.com/theia-ide/theia"
+    },
+    {
+      "label": "Opshell",
+      "url": "https://github.com/ricktbaker/opshell"
+    },
+    {
+      "label": "Proxmox VE",
+      "url": "https://www.proxmox.com/en/proxmox-ve"
+    },
+    {
+      "label": "Script Runner",
+      "url": "https://github.com/ioquatix/script-runner"
+    },
+    {
+      "label": "Whack Whack Terminal",
+      "url": "https://github.com/Microsoft/WhackWhackTerminal"
+    },
+    {
+      "label": "VTerm",
+      "url": "https://github.com/vterm/vterm"
+    },
+    {
+      "label": "electerm",
+      "url": "http://electerm.html5beta.com"
+    },
+    {
+      "label": "Kubebox",
+      "url": "https://github.com/astefanutti/kubebox"
+    },
+    {
+      "label": "Azure Cloud Shell",
+      "url": "https://shell.azure.com"
+    },
+    {
+      "label": "atom-xterm",
+      "url": "https://atom.io/packages/atom-xterm"
+    },
+    {
+      "label": "rtty",
+      "url": "https://github.com/zhaojh329/rtty"
+    },
+    {
+      "label": "Pisth",
+      "url": "https://github.com/ColdGrub1384/Pisth"
+    },
+    {
+      "label": "abstruse",
+      "url": "https://github.com/bleenco/abstruse"
+    },
+    {
+      "label": "Azure Data Studio",
+      "url": "https://github.com/Microsoft/azuredatastudio"
+    },
+    {
+      "label": "FreeMAN",
+      "url": "https://github.com/matthew-matvei/freeman"
+    },
+    {
+      "label": "Fluent Terminal",
+      "url": "https://github.com/felixse/FluentTerminal"
+    },
+    {
+      "label": "Hyper",
+      "url": "https://hyper.is"
+    },
+    {
+      "label": "Diag",
+      "url": "https://diag.ai"
+    },
+    {
+      "label": "GoTTY",
+      "url": "https://github.com/sorenisanerd/gotty"
+    },
+    {
+      "label": "genact",
+      "url": "https://github.com/svenstaro/genact"
+    },
+    {
+      "label": "cPanel & WHM",
+      "url": "https://cpanel.com"
+    },
+    {
+      "label": "Nutanix",
+      "url": "https://github.com/nutanix"
+    },
+    {
+      "label": "SSH Web Client",
+      "url": "https://github.com/roke22/PHP-SSH2-Web-Client"
+    },
+    {
+      "label": "Juno",
+      "url": "http://junolab.org/"
+    },
+    {
+      "label": "webssh",
+      "url": "https://github.com/huashengdun/webssh"
+    },
+    {
+      "label": "info-beamer hosted",
+      "url": "https://info-beamer.com"
+    },
+    {
+      "label": "Jumpserver",
+      "url": "https://github.com/jumpserver/luna"
+    },
+    {
+      "label": "LxdMosaic",
+      "url": "https://github.com/turtle0x1/LxdMosaic"
+    },
+    {
+      "label": "CodeInterview.io",
+      "url": "https://codeinterview.io"
+    },
+    {
+      "label": "Bastillion",
+      "url": "https://www.bastillion.io"
+    },
+    {
+      "label": "PHP App Server",
+      "url": "https://github.com/cubiclesoft/php-app-server/"
+    },
+    {
+      "label": "NgTerminal",
+      "url": "https://github.com/qwefgh90/ng-terminal"
+    },
+    {
+      "label": "tty-share",
+      "url": "https://tty-share.com"
+    },
+    {
+      "label": "Ten Hands",
+      "url": "https://github.com/saisandeepvaddi/ten-hands"
+    },
+    {
+      "label": "WebAssembly.sh",
+      "url": "https://webassembly.sh"
+    },
+    {
+      "label": "Gus",
+      "url": "https://gus.jp"
+    },
+    {
+      "label": "Linode",
+      "url": "https://linode.com"
+    },
+    {
+      "label": "FluffOS",
+      "url": "https://www.fluffos.info"
+    },
+    {
+      "label": "x-terminal",
+      "url": "https://atom.io/packages/x-terminal"
+    },
+    {
+      "label": "CoCalc",
+      "url": "https://cocalc.com/"
+    },
+    {
+      "label": "Dank Domain",
+      "url": "https://www.DDgame.us/"
+    },
+    {
+      "label": "DockerStacks",
+      "url": "https://docker-stacks.com/"
+    },
+    {
+      "label": "Codecademy",
+      "url": "https://codecademy.com/"
+    },
+    {
+      "label": "Laravel Ssh Web Client",
+      "url": "https://github.com/roke22/Laravel-ssh-client"
+    },
+    {
+      "label": "Replit",
+      "url": "https://replit.com"
+    },
+    {
+      "label": "TeleType",
+      "url": "https://github.com/akshaykmr/TeleType"
+    },
+    {
+      "label": "Intervue",
+      "url": "https://www.intervue.io"
+    },
+    {
+      "label": "TRASA",
+      "url": "https://trasa.io"
+    },
+    {
+      "label": "Commas",
+      "url": "https://github.com/CyanSalt/commas"
+    },
+    {
+      "label": "Devtron",
+      "url": "https://github.com/devtron-labs/devtron"
+    },
+    {
+      "label": "NxShell",
+      "url": "https://github.com/nxshell/nxshell"
+    },
+    {
+      "label": "gifcast",
+      "url": "https://dstein64.github.io/gifcast/"
+    },
+    {
+      "label": "WizardWebssh",
+      "url": "https://gitlab.com/mikeramsey/wizardwebssh"
+    },
+    {
+      "label": "Wizard Assistant",
+      "url": "https://wizardassistant.com/"
+    },
+    {
+      "label": "ucli",
+      "url": "https://github.com/tsadarsh/ucli"
+    },
+    {
+      "label": "www.ucli.tech",
+      "url": "https://www.ucli.tech"
+    },
+    {
+      "label": "Tess",
+      "url": "https://github.com/SquitchYT/Tess/"
+    },
+    {
+      "label": "tessapp.dev",
+      "url": "https://tessapp.dev"
+    },
+    {
+      "label": "HashiCorp Nomad",
+      "url": "https://www.nomadproject.io/"
+    },
+    {
+      "label": "TermPair",
+      "url": "https://github.com/cs01/termpair"
+    },
+    {
+      "label": "gdbgui",
+      "url": "https://github.com/cs01/gdbgui"
+    },
+    {
+      "label": "goormIDE",
+      "url": "https://ide.goorm.io/"
+    },
+    {
+      "label": "FleetDeck",
+      "url": "https://fleetdeck.io"
+    },
+    {
+      "label": "OpenSumi",
+      "url": "https://github.com/opensumi/core"
+    },
+    {
+      "label": "KubeSail",
+      "url": "https://kubesail.com"
+    },
+    {
+      "label": "WiTTY",
+      "url": "https://github.com/syssecfsu/witty"
+    },
+    {
+      "label": "libv86 Terminal Forwarding",
+      "url": "https://github.com/hello-smile6/libv86-terminal-forwarding"
+    },
+    {
+      "label": "Bugout",
+      "url": "https://github.com/chr15m/bugout"
+    },
+    {
+      "label": "v86",
+      "url": "https://github.com/copy/v86"
+    },
+    {
+      "label": "hack.courses",
+      "url": "https://hack.courses"
+    },
+    {
+      "label": "Render",
+      "url": "https://render.com"
+    },
+    {
+      "label": "CloudTTY",
+      "url": "https://github.com/cloudtty/cloudtty"
+    },
+    {
+      "label": "Go SSH Web Client",
+      "url": "https://github.com/wuchihsu/go-ssh-web-client"
+    },
+    {
+      "label": "web3os",
+      "url": "https://web3os.sh"
+    },
+    {
+      "label": "Cratecode",
+      "url": "https://cratecode.com"
+    },
+    {
+      "label": "Super Terminal",
+      "url": "https://github.com/bugwheels94/super-terminal"
+    },
+    {
+      "label": "graSSHopper",
+      "url": "https://grasshopper.coding.kiwi"
+    },
+    {
+      "label": "DomTerm",
+      "url": "https://domterm.org/xtermjs.html"
+    },
+    {
+      "label": "Remote connections",
+      "url": "https://domterm.org/Remoting-over-ssh.html"
+    },
+    {
+      "label": "Cloudtutor.io",
+      "url": "https://cloudtutor.io"
+    },
+    {
+      "label": "Helix Editor Playground",
+      "url": "https://github.com/tomgroenwoldt/helix-editor-playground"
+    },
+    {
+      "label": "Coder",
+      "url": "https://github.com/coder/coder"
+    },
+    {
+      "label": "Wave Terminal",
+      "url": "https://waveterm.dev"
+    },
+    {
+      "label": "eva",
+      "url": "https://github.com/info24/eva"
+    },
+    {
+      "label": "OpenSFTP",
+      "url": "https://opensftp.com"
+    },
+    {
+      "label": "balena",
+      "url": "https://www.balena.io/"
+    },
+    {
+      "label": "balenaCloud",
+      "url": "https://www.balena.io/cloud"
+    },
+    {
+      "label": "Filet Cloud",
+      "url": "https://github.com/fuglaro/filet-cloud"
+    },
+    {
+      "label": "pyTermTk",
+      "url": "https://github.com/ceccopierangiolieugenio/pyTermTk"
+    },
+    {
+      "label": "HTML5 exporter",
+      "url": "https://ceccopierangiolieugenio.github.io/pyTermTk/sandbox/sandbox.html"
+    },
+    {
+      "label": "ecmaOS",
+      "url": "https://ecmaos.sh"
+    },
+    {
+      "label": "LabEx",
+      "url": "https://labex.io"
+    },
+    {
+      "label": "EmuDevz",
+      "url": "https://afska.github.io/emudevz"
+    },
+    {
+      "label": "SSH Connection Manager",
+      "url": "https://github.com/Amtrend/ssh-manager"
+    },
+    {
+      "label": "WooTTY",
+      "url": "https://github.com/icoretech/wootty"
+    },
+    {
+      "label": "Orca",
+      "url": "https://github.com/stablyai/orca"
+    },
+    {
+      "label": "4bit",
+      "url": "https://ciembor.github.io/4bit"
+    },
+    {
+      "label": "Cate",
+      "url": "https://github.com/0-AI-UG/cate"
+    },
+    {
+      "label": "OmnyShell PWA",
+      "url": "https://github.com/OmnyGrid/omnyshell_web"
+    },
+    {
+      "label": "OmnyShell",
+      "url": "https://github.com/OmnyGrid/omnyshell"
+    },
+    {
+      "label": "kmux",
+      "url": "https://github.com/kkd927/kmux"
+    },
+    {
+      "label": "LynxHub",
+      "url": "https://github.com/KindaBrazy/LynxHub"
+    },
+    {
+      "label": "Codeman",
+      "url": "https://github.com/Ark0N/Codeman"
+    },
+    {
+      "label": "JSVIsion",
+      "url": "https://github.com/blendsdk/jsvision"
+    },
+    {
+      "label": "BitFun",
+      "url": "https://github.com/GCWing/BitFun"
+    },
+    {
+      "label": "And much more...",
+      "url": "https://github.com/xtermjs/xterm.js/network/dependents?package_id=UGFja2FnZS0xNjYzMjc4OQ%3D%3D"
+    },
+    {
+      "label": "open a Pull Request",
+      "url": "https://github.com/sourcelair/xterm.js/pulls"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/xtermjs/xterm.js#license-agreement"
+    },
+    {
+      "label": "The xterm.js authors",
+      "url": "https://github.com/xtermjs/xterm.js/graphs/contributors"
+    },
+    {
+      "label": "www.sourcelair.com",
+      "url": "https://www.sourcelair.com/home"
+    }
+  ],
+  "root_files": [
+    ".agents/skills",
+    ".devcontainer",
+    ".github",
+    ".vscode",
+    "addons",
+    "bin",
+    "css",
+    "demo",
+    "headless",
+    "images",
+    "src",
+    "test",
+    "typings",
+    ".editorconfig",
+    ".gitattributes",
+    ".gitignore",
+    ".gitmodules",
+    ".npmignore",
+    ".nvmrc",
+    ".oxlintrc.json",
+    ".oxlintrc.typings.json",
+    "AGENTS.md",
+    "CODE_OF_CONDUCT.md",
+    "CONTRIBUTING.md",
+    "LICENSE",
+    "README.md",
+    "eslint.config.mjs",
+    "eslint.config.naming.mjs",
+    "eslint.config.typings.mjs",
+    "package-lock.json",
+    "package.json",
+    "tsconfig.all.json",
+    "webpack.config.headless.js",
+    "webpack.config.js"
+  ],
+  "release_count": 89,
+  "status": "verified"
+}

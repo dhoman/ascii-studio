@@ -1,0 +1,328 @@
+{
+  "url": "https://github.com/sebyx07/cybercore-css",
+  "final_url": "https://github.com/sebyx07/cybercore-css",
+  "http_status": 200,
+  "checked_at": "2026-10-23T17:46:57.087580+00:00",
+  "stars": 75,
+  "forks": 10,
+  "description": "Pure CSS cyberpunk design framework with neon aesthetics. See also: cybercore-charts for data visualization.",
+  "homepage": "https://sebyx07.github.io/cybercore-css",
+  "topics": [
+    "charts",
+    "css",
+    "css-framework",
+    "cyberpunk",
+    "dark-theme",
+    "design-system",
+    "frontend",
+    "scss",
+    "ui"
+  ],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2026-01-13T21:38:40.000Z",
+  "branch": "main",
+  "commit": "5b90ffbcc4a1aa84d122eead296fab0cf7ee58ca",
+  "readme": "🌆 CYBERCORE CSS 🎮 A cyberpunk-inspired CSS framework for building futuristic interfaces Inspired by Cyberpunk 2077, Blade Runner, and the neon-soaked streets of Night City 🚀 Live Demo • 📖 Documentation • 💻 GitHub ⚡ Quick Start NPM Installation npm install cybercore-css CDN <link rel=\"stylesheet\" href=\"https://unpkg.com/cybercore-css@latest/dist/cybercore.min.css\" /> Import in Your Project // Import everything @use 'cybercore-css'; // Or import specific modules @use 'cybercore-css/components/buttons'; @use 'cybercore-css/effects/glitch'; 🎯 Features Feature Description 🎨 Pure CSS Zero JavaScript dependencies - just CSS/SCSS 🧩 Modular Import only what you need 🌙 Dark Theme Designed for dark interfaces 🔧 Customizable CSS variables for easy theming ♿ Accessible Respects prefers-reduced-motion 🤖 AI-Friendly Simple, predictable class names ⚡ Modern CSS CSS Layers, Container Queries, color-mix() 📱 Responsive Mobile-first approach 🎭 Icon System 153 cyberpunk-themed SVG icons 📸 Screenshots Glitch Effect Glitch text effect with chromatic aberration, scanlines, and animated distortion Neon Border Animated neon glow borders in cyan, magenta, and green variants Terminal Cyberpunk terminal component with scanlines and colored output Buttons Button variants: primary colors, outline, and ghost styles Cards Card components with datastream effect and interactive elements Icons 153 cyberpunk-themed SVG icons across 10 categories with search and filters Dashboard Showcase Full dashboard example combining multiple CYBERCORE components 🎨 Color Palette 🔵 Cyan #00f0ff → Primary accent 🔴 Magenta #ff2a6d → Secondary accent 🟡 Yellow #fcee0a → Warning/highlight 🟢 Green #05ffa1 → Success states ⚫ Void #0a0a0f → Background ⚪ Chrome #b4b4b4 → Neutral tones 🎭 Icons CYBERCORE CSS includes a complete icon system with 153 cyberpunk-themed SVG icons across 10 categories, with support for 4 style variants. Quick Start // Import the icon utilities import { renderIcon, getIcon, icons } from 'cybercore-css/icons'; // Render an icon with options const svg = renderIcon('terminal', { size: 24, color: 'cyan' }); // Get raw SVG string const terminalSvg = getIcon('terminal'); // Access the full registry console.log(icons.terminal.svg); Tree-Shakeable Imports // Import only the icons you need import { ChipIcon, TerminalIcon, SignalIcon, } from 'cybercore-css/icons/individual'; Icon Categories Category Icons Description Navigation 14 Arrows, chevrons, menus Actions 23 Edit, delete, copy, download Media 17 Play, pause, volume controls Communication 10 Messages, mail, notifications Data 14 Charts, database, cloud Security 15 Lock, shield, user, auth Tech 22 Terminal, code, chip, settings Files 15 File types, folders Status 12 Info, warning, error, success Social 11 Heart, star, bookmark, share Style Variants outline - Stroke-based, default style (1.5px stroke) solid - Filled icons for emphasis duotone - Two-tone with primary/secondary colors glitch - Animated/glitchy variant for cyber effects // Use different variants renderIcon('shield', { variant: 'solid' }); renderIcon('terminal', { variant: 'duotone' }); 📖 Full documentation: Icon System Docs 🧩 Components Buttons <!-- Primary button --> <button class=\"cyber-btn\">EXECUTE</button> <!-- Color variants --> <button class=\"cyber-btn cyber-btn--magenta\">DANGER</button> <button class=\"cyber-btn cyber-btn--yellow\">CAUTION</button> <button class=\"cyber-btn cyber-btn--green\">CONFIRM</button> <!-- Ghost style --> <button class=\"cyber-btn cyber-btn--ghost\">GHOST</button> Cards <div class=\"cyber-card\"> <div class=\"cyber-card__header\"> <h3 class=\"cyber-card__title\">SYSTEM STATUS</h3> </div> <div class=\"cyber-card__body\">All systems operational.</div> </div> <!-- Interactive card --> <div class=\"cyber-card cyber-card--interactive\"> <!-- Glows on hover! --> </div> <!-- Holographic effect --> <div class=\"cyber-card cyber-card--holo\"> <!-- Animated shimmer! --> </div> Inputs <input type=\"text\" class=\"cyber-input\" placeholder=\"Enter data...\" /> <!-- With field wrapper --> <div class=\"cyber-field\"> <label class=\"cyber-field__label\">USERNAME</label> <input type=\"text\" class=\"cyber-input\" /> <span class=\"cyber-field__helper\">Enter your handle</span> </div> Terminal <div class=\"cyber-terminal\"> <div class=\"cyber-terminal__chrome\"> <div class=\"cyber-terminal__dots\"> <span class=\"cyber-terminal__dot\"></span> <span class=\"cyber-terminal__dot\"></span> <span class=\"cyber-terminal__dot\"></span> </div> <span class=\"cyber-terminal__title\">system.exe</span> </div> <div class=\"cyber-terminal__body\"> <div class=\"cyber-terminal__line\"> <span class=\"cyber-terminal__prompt\">$</span> <span class=\"cyber-terminal__command\">hack the planet</span> </div> </div> </div> More Components 🏷️ Badges - Status indicators and labels ⚠️ Alerts - Notifications and messages 📊 Tables - Data grids with cyber styling 🔄 Progress - Loading bars and indicators 🗂️ Tabs - Tabbed navigation 📋 Modal - Dialog windows ⏳ Spinner - Loading animations 💀 Skeleton - Loading placeholders 🧭 Nav - Navigation bars ✨ Effects Glitch Text <h1 class=\"cyber-glitch\" data-text=\"GLITCH\">GLITCH</h1> Neon Border <div class=\"cyber-neon-border\">Glowing border effect</div> <div class=\"cyber-neon-border cyber-neon-border--magenta\">Magenta variant</div> Scanlines <div class=\"cyber-scanlines\">CRT monitor effect</div> Noise Overlay <div class=\"cyber-noise\">Static noise texture</div> Datastream <div class=\"cyber-datastream\">Animated light sweep</div> 🛠️ Utilities Text Colors <span class=\"cyber-text-cyan\">Cyan text</span> <span class=\"cyber-text-magenta\">Magenta text</span> <span class=\"cyber-text-yellow\">Yellow text</span> <span class=\"cyber-text-green\">Green text</span> Text Glow <span class=\"cyber-text-glow\">Glowing text</span> Display <div class=\"cyber-d-flex\">Flexbox</div> <div class=\"cyber-d-grid\">Grid</div> <div class=\"cyber-d-none\">Hidden</div> Spacing <div class=\"cyber-m-md\">Margin medium</div> <div class=\"cyber-p-lg\">Padding large</div> <div class=\"cyber-gap-sm\">Gap small</div> 🎛️ Customization CSS Variables Override any variable in your own CSS: :root { /* Change primary accent */ --cyber-cyan-500: #00ffaa; /* Adjust spacing */ --space-md: 1.5rem; /* Modify glow intensity */ --glow-cyan: 0 0 10px #00ffaa, 0 0 30px rgba(0, 255, 170, 0.5); } SCSS Configuration // Override before importing $cyber-primary: #00ffaa; $cyber-font-mono: 'JetBrains Mono', monospace; @use 'cybercore-css' with ( $primary-color: $cyber-primary, $font-mono: $cyber-font-mono ); 📁 Project Structure cybercore-css/ ├── src/scss/ │ ├── cybercore.scss # Main entry point │ ├── core/ │ │ ├── _variables.scss # Design tokens │ │ ├── _reset.scss # CSS reset │ │ ├── _base.scss # Base styles │ │ └── _typography.scss # Type system │ ├── components/ │ │ ├── _buttons.scss │ │ ├── _cards.scss │ │ ├── _inputs.scss │ │ └── ... (14 components) │ ├── effects/ │ │ ├── _glitch.scss │ │ ├── _neon-border.scss │ │ └── ... (6 effects) │ └── utilities/ │ ├── _display.scss │ ├── _flex.scss │ └── ... (8 utilities) └── dist/ ├── cybercore.css # Full build └── cybercore.min.css # Minified 🧪 Development # Install dependencies npm install # Start dev server with demo site npm run dev # Build CSS npm run build # Run tests npm run test # Lint npm run lint # Format npm run format 🚀 Browser Support Browser Version Chrome 105+ Firefox 121+ Safari 15.4+ Edge 105+ Requires CSS Layers, color-mix(), and container queries support 📜 License MIT License - Use it, hack it, share it. 🔗 Related Projects CYBERCORE CHARTS - Zero-dependency SVG chart library with the same cyberpunk aesthetic. Neon glows, dark themes, and AI-optimized. 🤝 Contributing Fork the repo Create your feature branch (git checkout -b feature/amazing-feature) Commit your changes (git commit -m 'Add amazing feature') Push to the branch (git push origin feature/amazing-feature) Open a Pull Request ⚡ Built for the future. Styled for Night City. ⚡ 🚀 Demo • 📖 Docs • 🐛 Issues • 💬 Discussions ██████╗██╗ ██╗██████╗ ███████╗██████╗ ██████╗ ██████╗ ██████╗ ███████╗ ██╔════╝╚██╗ ██╔╝██╔══██╗██╔════╝██╔══██╗██╔════╝██╔═══██╗██╔══██╗██╔════╝ ██║ ╚████╔╝ ██████╔╝█████╗ ██████╔╝██║ ██║ ██║██████╔╝█████╗ ██║ ╚██╔╝ ██╔══██╗██╔══╝ ██╔══██╗██║ ██║ ██║██╔══██╗██╔══╝ ╚██████╗ ██║ ██████╔╝███████╗██║ ██║╚██████╗╚██████╔╝██║ ██║███████╗ ╚═════╝ ╚═╝ ╚═════╝ ╚══════╝╚═╝ ╚═╝ ╚═════╝ ╚═════╝ ╚═╝ ╚═╝╚══════╝",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://github.com/sebyx07/cybercore-css#-cybercore-css"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/922d67e0d9e1195e30ec5560575dea170fb384389f53de4310e10f5e8854797e/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f4359424552434f52452d4353532d3030663066663f7374796c653d666f722d7468652d6261646765266c6162656c436f6c6f723d306130613066"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/3da6343c8550481b19fc07a1de08017450f82565326840f11d90c159f9bb0ef7/68747470733a2f2f696d672e736869656c64732e696f2f6e706d2f762f6379626572636f72652d6373733f7374796c653d666f722d7468652d626164676526636f6c6f723d666632613664266c6162656c436f6c6f723d306130613066"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/894f4f1c3689197b4d4e39f9cd4ed56e277340e399cfba534cc571c4a45f7f64/68747470733a2f2f696d672e736869656c64732e696f2f6e706d2f6c2f6379626572636f72652d6373733f7374796c653d666f722d7468652d626164676526636f6c6f723d666365653061266c6162656c436f6c6f723d306130613066"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/ae5d6aa7ed4846734cb0a578de36e3f67db012fa28f69bc4bb95ac41c14bf563/68747470733a2f2f696d672e736869656c64732e696f2f62756e646c6570686f6269612f6d696e7a69702f6379626572636f72652d6373733f7374796c653d666f722d7468652d626164676526636f6c6f723d303566666131266c6162656c436f6c6f723d306130613066"
+    },
+    {
+      "label": "🚀 Live Demo",
+      "url": "https://sebyx07.github.io/cybercore-css"
+    },
+    {
+      "label": "📖 Documentation",
+      "url": "https://sebyx07.github.io/cybercore-css/#/docs"
+    },
+    {
+      "label": "💻 GitHub",
+      "url": "https://github.com/sebyx07/cybercore-css"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/sebyx07/cybercore-css#-quick-start"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/sebyx07/cybercore-css#npm-installation"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/sebyx07/cybercore-css#cdn"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/sebyx07/cybercore-css#import-in-your-project"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/sebyx07/cybercore-css#-features"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/sebyx07/cybercore-css#-screenshots"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/sebyx07/cybercore-css#glitch-effect"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/sebyx07/cybercore-css/blob/main/assets/img.png"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/sebyx07/cybercore-css#neon-border"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/sebyx07/cybercore-css/blob/main/assets/img_1.png"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/sebyx07/cybercore-css#terminal"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/sebyx07/cybercore-css/blob/main/assets/terminal.png"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/sebyx07/cybercore-css#buttons"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/sebyx07/cybercore-css/blob/main/assets/buttons.png"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/sebyx07/cybercore-css#cards"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/sebyx07/cybercore-css/blob/main/assets/cards.png"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/sebyx07/cybercore-css#icons"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/sebyx07/cybercore-css/blob/main/assets/icons.png"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/sebyx07/cybercore-css#dashboard-showcase"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/sebyx07/cybercore-css/blob/main/assets/showcase.png"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/sebyx07/cybercore-css#-color-palette"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/sebyx07/cybercore-css#-icons"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/sebyx07/cybercore-css#quick-start"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/sebyx07/cybercore-css#tree-shakeable-imports"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/sebyx07/cybercore-css#icon-categories"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/sebyx07/cybercore-css#style-variants"
+    },
+    {
+      "label": "Icon System Docs",
+      "url": "https://sebyx07.github.io/cybercore-css/#/docs/icons"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/sebyx07/cybercore-css#-components"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/sebyx07/cybercore-css#buttons-1"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/sebyx07/cybercore-css#cards-1"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/sebyx07/cybercore-css#inputs"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/sebyx07/cybercore-css#terminal-1"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/sebyx07/cybercore-css#more-components"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/sebyx07/cybercore-css#-effects"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/sebyx07/cybercore-css#glitch-text"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/sebyx07/cybercore-css#neon-border-1"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/sebyx07/cybercore-css#scanlines"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/sebyx07/cybercore-css#noise-overlay"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/sebyx07/cybercore-css#datastream"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/sebyx07/cybercore-css#️-utilities"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/sebyx07/cybercore-css#text-colors"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/sebyx07/cybercore-css#text-glow"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/sebyx07/cybercore-css#display"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/sebyx07/cybercore-css#spacing"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/sebyx07/cybercore-css#️-customization"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/sebyx07/cybercore-css#css-variables"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/sebyx07/cybercore-css#scss-configuration"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/sebyx07/cybercore-css#-project-structure"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/sebyx07/cybercore-css#-development"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/sebyx07/cybercore-css#-browser-support"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/sebyx07/cybercore-css#-license"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/sebyx07/cybercore-css#-related-projects"
+    },
+    {
+      "label": "CYBERCORE CHARTS",
+      "url": "https://github.com/sebyx07/cybercore-charts"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/sebyx07/cybercore-css#-contributing"
+    },
+    {
+      "label": "🚀 Demo",
+      "url": "https://sebyx07.github.io/cybercore-css"
+    },
+    {
+      "label": "📖 Docs",
+      "url": "https://sebyx07.github.io/cybercore-css/#/docs"
+    },
+    {
+      "label": "🐛 Issues",
+      "url": "https://github.com/sebyx07/cybercore-css/issues"
+    },
+    {
+      "label": "💬 Discussions",
+      "url": "https://github.com/sebyx07/cybercore-css/discussions"
+    }
+  ],
+  "root_files": [
+    ".changeset",
+    ".claude/agents",
+    ".github/workflows",
+    "assets",
+    "demo",
+    "docs",
+    "examples",
+    "scripts",
+    "src",
+    "tests",
+    ".eslintrc.json",
+    ".gitignore",
+    ".npmignore",
+    ".nvmrc",
+    ".prettierignore",
+    ".prettierrc",
+    ".stylelintrc.json",
+    "CHANGELOG.md",
+    "CLAUDE.md",
+    "CONTRIBUTING.md",
+    "LICENSE",
+    "README.md",
+    "cybercore-demo.html",
+    "idea.txt",
+    "package-lock.json",
+    "package.json",
+    "playwright.config.ts",
+    "postcss.config.js",
+    "tsconfig.json",
+    "tsconfig.node.json",
+    "vitest.config.ts"
+  ],
+  "release_count": 5,
+  "status": "verified"
+}

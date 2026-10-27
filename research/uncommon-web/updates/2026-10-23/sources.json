@@ -1,0 +1,203 @@
+{
+  "version": 1,
+  "sources": [
+    {
+      "id": 1,
+      "url": "https://webdev.teknium.io",
+      "title": "",
+      "accessed": "2026-10-23"
+    },
+    {
+      "id": 2,
+      "url": "https://github.com/vincentdoerig/latex-css",
+      "title": "",
+      "accessed": "2026-10-23"
+    },
+    {
+      "id": 3,
+      "url": "https://github.com/d3/d3-geo-projection",
+      "title": "",
+      "accessed": "2026-10-23"
+    },
+    {
+      "id": 4,
+      "url": "https://github.com/mapbox/webgl-wind",
+      "title": "",
+      "accessed": "2026-10-23"
+    },
+    {
+      "id": 5,
+      "url": "https://github.com/redblobgames/mapgen4",
+      "title": "",
+      "accessed": "2026-10-23"
+    },
+    {
+      "id": 6,
+      "url": "https://github.com/magjac/d3-graphviz",
+      "title": "",
+      "accessed": "2026-10-23"
+    },
+    {
+      "id": 7,
+      "url": "https://github.com/unconed/mathbox",
+      "title": "",
+      "accessed": "2026-10-23"
+    },
+    {
+      "id": 8,
+      "url": "https://github.com/arscan/encom-globe",
+      "title": "",
+      "accessed": "2026-10-23"
+    },
+    {
+      "id": 9,
+      "url": "https://github.com/nielssp/classic-stylesheets",
+      "title": "",
+      "accessed": "2026-10-23"
+    },
+    {
+      "id": 10,
+      "url": "https://github.com/igorfelipeduca/aqua",
+      "title": "",
+      "accessed": "2026-10-23"
+    },
+    {
+      "id": 11,
+      "url": "https://github.com/micah5/PSone.css",
+      "title": "",
+      "accessed": "2026-10-23"
+    },
+    {
+      "id": 12,
+      "url": "https://github.com/inbn/TheSims.css",
+      "title": "",
+      "accessed": "2026-10-23"
+    },
+    {
+      "id": 13,
+      "url": "https://github.com/metakirby5/yorha",
+      "title": "",
+      "accessed": "2026-10-23"
+    },
+    {
+      "id": 14,
+      "url": "https://github.com/biagio-scaglia/frutiger-js",
+      "title": "",
+      "accessed": "2026-10-23"
+    },
+    {
+      "id": 15,
+      "url": "https://github.com/torch2424/aesthetic-css",
+      "title": "",
+      "accessed": "2026-10-23"
+    },
+    {
+      "id": 16,
+      "url": "https://github.com/kristopolous/BOOTSTRA.386",
+      "title": "",
+      "accessed": "2026-10-23"
+    },
+    {
+      "id": 17,
+      "url": "https://github.com/TimonBozzApps/design-system-3gs",
+      "title": "",
+      "accessed": "2026-10-23"
+    },
+    {
+      "id": 18,
+      "url": "https://github.com/retrostrap/retrostrap",
+      "title": "",
+      "accessed": "2026-10-23"
+    },
+    {
+      "id": 19,
+      "url": "https://github.com/joernweissenborn/lcars",
+      "title": "",
+      "accessed": "2026-10-23"
+    },
+    {
+      "id": 20,
+      "url": "https://github.com/arwes/arwes",
+      "title": "",
+      "accessed": "2026-10-23"
+    },
+    {
+      "id": 21,
+      "url": "https://github.com/alddesign/cyberpunk-css",
+      "title": "",
+      "accessed": "2026-10-23"
+    },
+    {
+      "id": 22,
+      "url": "https://github.com/sebyx07/cybercore-css",
+      "title": "",
+      "accessed": "2026-10-23"
+    },
+    {
+      "id": 23,
+      "url": "https://github.com/DulanDev/frontpanel",
+      "title": "",
+      "accessed": "2026-10-23"
+    },
+    {
+      "id": 24,
+      "url": "https://github.com/papercss/papercss",
+      "title": "",
+      "accessed": "2026-10-23"
+    },
+    {
+      "id": 25,
+      "url": "https://github.com/chr15m/DoodleCSS",
+      "title": "",
+      "accessed": "2026-10-23"
+    },
+    {
+      "id": 26,
+      "url": "https://github.com/Todari/react-pixel-ui",
+      "title": "",
+      "accessed": "2026-10-23"
+    },
+    {
+      "id": 27,
+      "url": "https://github.com/bramus/css-houdini-ringparticles",
+      "title": "",
+      "accessed": "2026-10-23"
+    },
+    {
+      "id": 28,
+      "url": "https://github.com/bramus/css-houdini-voronoi",
+      "title": "",
+      "accessed": "2026-10-23"
+    },
+    {
+      "id": 29,
+      "url": "https://github.com/ConradSollitt/css-houdini-fractals",
+      "title": "",
+      "accessed": "2026-10-23"
+    },
+    {
+      "id": 30,
+      "url": "https://github.com/5t3ph/houdini-cosmic-starfield",
+      "title": "",
+      "accessed": "2026-10-23"
+    },
+    {
+      "id": 31,
+      "url": "https://github.com/jh3y/houdini-tesla",
+      "title": "",
+      "accessed": "2026-10-23"
+    },
+    {
+      "id": 32,
+      "url": "https://github.com/una/extra.css",
+      "title": "",
+      "accessed": "2026-10-23"
+    },
+    {
+      "id": 33,
+      "url": "https://registry.npmjs.org/houdini-doom-fire/latest",
+      "title": "",
+      "accessed": "2026-10-23"
+    }
+  ]
+}

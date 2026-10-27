@@ -1,0 +1,150 @@
+{
+  "url": "https://github.com/metafizzy/zdog",
+  "final_url": "https://github.com/metafizzy/zdog",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:48:01.972920+00:00",
+  "stars": 10677,
+  "forks": 409,
+  "description": "Flat, round, designer-friendly pseudo-3D engine for canvas & SVG",
+  "homepage": "https://zzz.dog",
+  "topics": [
+    "3d",
+    "canvas",
+    "svg"
+  ],
+  "license": "",
+  "archived": false,
+  "created_at": "2019-03-06T14:52:39.000Z",
+  "branch": "master",
+  "commit": "dde8684be686bc6d3cbedb6be49875c0a03a14c0",
+  "readme": "Zdog Round, flat, designer-friendly pseudo-3D engine View complete documentation and live demos at zzz.dog. Install Download zdog.dist.min.js minified, or zdog.dist.js un-minified CDN Link directly to Zdog JS on unpkg. <script src=\"https://unpkg.com/zdog@1/dist/zdog.dist.min.js\"></script> Package managers npm: npm install zdog Bower: bower install zdog Hello world demo Create 3D models with Zdog by adding shapes. See Getting started for a walk-through of this demo. let isSpinning = true; let illo = new Zdog.Illustration({ element: '.zdog-canvas', zoom: 4, dragRotate: true, // stop spinning when drag starts onDragStart: function() { isSpinning = false; }, }); // circle new Zdog.Ellipse({ addTo: illo, diameter: 20, translate: { z: 10 }, stroke: 5, color: '#636', }); // square new Zdog.Rect({ addTo: illo, width: 20, height: 20, translate: { z: -10 }, stroke: 3, color: '#E62', fill: true, }); function animate() { illo.rotate.y += isSpinning ? 0.03 : 0; illo.updateRenderGraph(); requestAnimationFrame( animate ); } animate(); About Zdog Hi, Dave here. I wanted to make a video game. I needed a 3D engine, but most engines were too powerful and complex for me. I made Zdog so I could design and display simple 3D models without a lot of overhead. Zdog is directly inspired by Dogz, a virtual pet game by P.F. Magic released in 1995. It used flat 2D circle sprites to render the Dogz’ models, but in a 3D scene. See Dogz playthrough video here. Dogz were fully animated in real time, running, flopping, scratching (on Windows 3.1!). It was remarkable. Zdog uses the same principle. It renders all shapes using the 2D drawing APIs in either <canvas> or <svg>. Spheres are actually dots. Toruses are actually circles. Capsules are actually thick lines. It’s a simple, but effective trick. The underlying 3D math comes from Rotating 3D Shapes by Peter Collingridge. Zdog is pronounced \"Zee-dog\" in American parlance or \"Zed-dog\" in British. Beta! Zdog v1 is a beta-release, of sorts. This is my first time creating a 3D engine, so I probably got some stuff wrong. Expect lots of changes for v2. Provide input and select new features on the Zdog issue tracker on GitHub. More Zdog resources Other people's stuff: Zfont - Text plugin for Zdog vue-zdog - Vue wrapper for Zdog zDogPy - Python port of Zdog for DrawBot Made with Zdog CodePen Collection Made with Zdog on Twitter My stuff: Zdog demos on CodePen, source code at zdog-demos zdog-docs - Docs site source code Licensed MIT. Made by Metafizzy 🌈🐻",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://github.com/metafizzy/zdog#zdog"
+    },
+    {
+      "label": "zzz.dog",
+      "url": "https://zzz.dog"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/metafizzy/zdog#install"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/metafizzy/zdog#download"
+    },
+    {
+      "label": "zdog.dist.min.js",
+      "url": "https://unpkg.com/zdog@1/dist/zdog.dist.min.js"
+    },
+    {
+      "label": "zdog.dist.js",
+      "url": "https://unpkg.com/zdog@1/dist/zdog.dist.js"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/metafizzy/zdog#cdn"
+    },
+    {
+      "label": "unpkg",
+      "url": "https://unpkg.com"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/metafizzy/zdog#package-managers"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/metafizzy/zdog#hello-world-demo"
+    },
+    {
+      "label": "Getting started",
+      "url": "https://zzz.dog/getting-started"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/metafizzy/zdog#about-zdog"
+    },
+    {
+      "label": "Dave here",
+      "url": "https://desandro.com"
+    },
+    {
+      "label": "Dogz",
+      "url": "https://en.wikipedia.org/wiki/Petz"
+    },
+    {
+      "label": "See Dogz playthrough video here.",
+      "url": "https://www.youtube.com/watch?v=6lKSn_cHw5k"
+    },
+    {
+      "label": "Rotating 3D Shapes",
+      "url": "https://www.khanacademy.org/computing/computer-programming/programming-games-visualizations/programming-3d-shapes/a/rotating-3d-shapes"
+    },
+    {
+      "label": "Peter Collingridge",
+      "url": "https://petercollingridge.appspot.com/3D-tutorial/rotating-objects"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/metafizzy/zdog#beta"
+    },
+    {
+      "label": "Zdog issue tracker on GitHub",
+      "url": "https://github.com/metafizzy/zdog/issues"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/metafizzy/zdog#more-zdog-resources"
+    },
+    {
+      "label": "Zfont",
+      "url": "https://jaames.github.io/zfont/"
+    },
+    {
+      "label": "vue-zdog",
+      "url": "https://github.com/AlexandreBonaventure/vue-zdog"
+    },
+    {
+      "label": "zDogPy",
+      "url": "https://github.com/gferreira/zdogpy"
+    },
+    {
+      "label": "Made with Zdog CodePen Collection",
+      "url": "https://codepen.io/collection/DzdGMe/"
+    },
+    {
+      "label": "Made with Zdog on Twitter",
+      "url": "https://twitter.com/i/moments/1135000612356206592"
+    },
+    {
+      "label": "Zdog demos on CodePen",
+      "url": "https://github.com/metafizzy/zdog-demos"
+    },
+    {
+      "label": "zdog-demos",
+      "url": "https://github.com/metafizzy/zdog-demos"
+    },
+    {
+      "label": "zdog-docs",
+      "url": "https://github.com/metafizzy/zdog-docs"
+    }
+  ],
+  "root_files": [
+    ".github",
+    "demos",
+    "dist",
+    "js",
+    "tasks",
+    ".eslintrc.js",
+    ".gitignore",
+    "README.md",
+    "bower.json",
+    "package-lock.json",
+    "package.json"
+  ],
+  "release_count": 5,
+  "status": "verified"
+}

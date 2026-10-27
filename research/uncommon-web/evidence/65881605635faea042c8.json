@@ -1,0 +1,120 @@
+{
+  "url": "https://github.com/whatisjery/atelier-ui",
+  "final_url": "https://github.com/whatisjery/atelier-ui",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:48:24.678015+00:00",
+  "stars": 41,
+  "forks": 3,
+  "description": "A registry of WebGL and motion components for React.",
+  "homepage": "https://atelier-ui.com",
+  "topics": [
+    "animation-library",
+    "awwwards",
+    "css",
+    "motion",
+    "nextjs",
+    "r3f",
+    "react",
+    "react-three-fiber",
+    "shaders",
+    "taiwlindcss",
+    "ui-library",
+    "webgl"
+  ],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2026-05-07T17:55:02.000Z",
+  "branch": "main",
+  "commit": "f7071e425863e9a7acecb0e44f3ae688ceca9f2a",
+  "readme": "Atelier UI 🎨 What is Atelier UI? Atelier (French for workshop) is a Motion and React Three Fiber component system, built for React and Next.js. You copy the source into your project and own it. ✨ Features It's your code. Components are copied into your project and remain fully customizable. Ready-made effects. Backgrounds, text animations, cursor interactions, scroll effects, and page transitions. A real WebGL system. Components share a single canvas and stay aligned to the DOM. Built for React 19 + Tailwind v4. Works with Next.js, Vite, or any React setup. Page transitions are the exception and need Next.js 15.3 or later. 📦 Install Add any component by name: npx shadcn@latest add @atelier/fluid-distortion This copies the source into your project, pulls in anything shared, and installs the dependencies it needs. Most components are free and MIT. Some need a license key, set as ATELIER_PRO_KEY in .env.local, and install with the same command. ⚙️ How it works Every component plugs into three shared systems, mounted once in your root layout. One WebGL provider. Every WebGL component renders into a single <Canvas>. Textures, shaders and post-processing are shared, so adding an effect doesn't add a context. One Smooth Scroll provider. Lenis runs on the same Motion loop that renders the canvas, so WebGL effects stay aligned to the DOM at any scroll speed. One transition system. TransitionPage wraps the route content, TransitionLink triggers the change. Every install also writes a skill file that tells your coding agent how to wire what it just copied. 📖 Docs Browse every component with live previews at atelier-ui.com/docs. 🤝 Contributing See the contribution guide. 📄 License MIT.",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://github.com/whatisjery/atelier-ui#atelier-ui"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/atelier-ui"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/whatisjery/atelier-ui/stargazers"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/whatisjery/atelier-ui/blob/main/LICENSE.md"
+    },
+    {
+      "label": "",
+      "url": "https://atelier-ui.com"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/whatisjery/atelier-ui#-what-is-atelier-ui"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/whatisjery/atelier-ui#-features"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/whatisjery/atelier-ui#-install"
+    },
+    {
+      "label": "license key",
+      "url": "https://www.atelier-ui.com/docs/getting-started/license"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/whatisjery/atelier-ui#️-how-it-works"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/whatisjery/atelier-ui#-docs"
+    },
+    {
+      "label": "atelier-ui.com/docs",
+      "url": "https://atelier-ui.com/docs"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/whatisjery/atelier-ui#-contributing"
+    },
+    {
+      "label": "contribution guide",
+      "url": "https://atelier-ui.com/docs/getting-started/contribution"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/whatisjery/atelier-ui#-license"
+    },
+    {
+      "label": "MIT",
+      "url": "https://github.com/whatisjery/atelier-ui/blob/main/LICENSE.md"
+    }
+  ],
+  "root_files": [
+    ".github/workflows",
+    ".vscode",
+    ".zed",
+    "packages/cli-tool",
+    "public",
+    "skills/atelier-ui",
+    "src",
+    ".gitignore",
+    "LICENSE.md",
+    "README.md",
+    "biome.json",
+    "lefthook.yml",
+    "mdx-components.tsx",
+    "next.config.ts",
+    "package.json",
+    "pnpm-lock.yaml",
+    "pnpm-workspace.yaml",
+    "postcss.config.mjs",
+    "tsconfig.json",
+    "vitest.config.mts"
+  ],
+  "release_count": 0,
+  "status": "verified"
+}

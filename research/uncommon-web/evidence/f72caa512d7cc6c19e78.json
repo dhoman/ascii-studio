@@ -1,0 +1,93 @@
+{
+  "url": "https://github.com/timqian/chart.xkcd",
+  "final_url": "https://github.com/timqian/chart.xkcd",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:48:21.798760+00:00",
+  "stars": 7869,
+  "forks": 207,
+  "description": "xkcd styled chart lib",
+  "homepage": "https://timqian.com/chart.xkcd/",
+  "topics": [
+    "chart",
+    "graph",
+    "hand-drawn",
+    "html5",
+    "html5-charts",
+    "svg",
+    "svg-sprite",
+    "xkcd"
+  ],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2019-08-05T03:13:05.000Z",
+  "branch": "main",
+  "commit": "9a6913fbd64d0327882d11d0cd4d00eeca0d3c36",
+  "readme": "About Chart.xkcd is a chart library that plots “sketchy”, “cartoony” or “hand-drawn” styled charts. Check out the documentation for more instructions and links, or try out the examples Quick start It’s easy to get started with chart.xkcd. All that’s required is the script included in your page along with a single <svg> node to render the chart. In the following example we create a line chart. Preview and edit on codepen <svg class=\"line-chart\"></svg> <script src=\"https://cdn.jsdelivr.net/npm/chart.xkcd@2/dist/chart.xkcd.min.js\"></script> <script> const svg = document.querySelector('.line-chart') new chartXkcd.Line(svg, { title: 'Monthly income of an indie developer', xLabel: 'Month', yLabel: '$ Dollars', data: { labels:['1', '2', '3', '4', '5', '6','7', '8', '9', '10'], datasets: [{ label: 'Plan', data: [30, 70, 200, 300, 500 ,800, 1500, 2900, 5000, 8000], }, { label: 'Reality', data: [0, 1, 30, 70, 80, 100, 50, 80, 40, 150], }] }, options: {} }); </script> Contributing Code: read the contributing.md file Financial: Become a patron - chart.xkcd is an MIT-licensed open source project with its ongoing development made possible entirely by the support of my patrons. If you like this tool, please consider supporting my work by becoming a patron. Fund issues on issuehunt - Issues on chart.xkcd can be funded by anyone and the money will be distributed to contributors. Star History",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://timqian.com/chart.xkcd/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/timqian/chart.xkcd#about"
+    },
+    {
+      "label": "documentation",
+      "url": "https://timqian.com/chart.xkcd/"
+    },
+    {
+      "label": "examples",
+      "url": "https://timqian.com/chart.xkcd/example.html"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/timqian/chart.xkcd#quick-start"
+    },
+    {
+      "label": "Preview and edit on codepen",
+      "url": "https://codepen.io/timqian/pen/GRKqLaL"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/timqian/chart.xkcd#contributing"
+    },
+    {
+      "label": "contributing.md",
+      "url": "https://github.com/timqian/chart.xkcd/blob/main/contributing.md"
+    },
+    {
+      "label": "Become a patron",
+      "url": "https://www.patreon.com/timqian"
+    },
+    {
+      "label": "Fund issues on issuehunt",
+      "url": "https://issuehunt.io/r/timqian/chart.xkcd?tab=idle"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/timqian/chart.xkcd#star-history"
+    },
+    {
+      "label": "",
+      "url": "https://star-history.com/#timqian/chart.xkcd&Date"
+    }
+  ],
+  "root_files": [
+    ".github",
+    "assets",
+    "docs",
+    "examples",
+    "src",
+    ".gitignore",
+    "LICENSE",
+    "contributing.md",
+    "eslint.config.js",
+    "package-lock.json",
+    "package.json",
+    "readme.md",
+    "vite.config.js"
+  ],
+  "release_count": 9,
+  "status": "verified"
+}

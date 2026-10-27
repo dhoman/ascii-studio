@@ -1,0 +1,295 @@
+{
+  "url": "https://github.com/coderline/alphaTab",
+  "final_url": "https://github.com/coderline/alphaTab",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:47:40.862059+00:00",
+  "stars": 1880,
+  "forks": 301,
+  "description": "alphaTab is a cross platform music notation and guitar tablature rendering library.",
+  "homepage": "http://www.alphatab.net",
+  "topics": [
+    "alphatab",
+    "guitar",
+    "guitar-tablature",
+    "html5",
+    "html5-web-audio",
+    "javascript",
+    "music-notation",
+    "music-sheet",
+    "musicxml",
+    "svg"
+  ],
+  "license": "NOASSERTION",
+  "archived": false,
+  "created_at": "2011-03-17T11:12:15.000Z",
+  "branch": "develop",
+  "commit": "c53d5adfcefd49af6c748fbadd5e054de8ce1b3c",
+  "readme": "alphaTab Music notation, rendered as a first-class SDK. alphaTab renders interactive sheet music and guitar tablature from Guitar Pro, MusicXML, Capella and alphaTex files, and plays it back with a built-in synthesizer or in sync with your own audio and video. One TypeScript core ships for the web, .NET and Android, with no runtime dependencies and TypeScript types included. Open source since 2010. Website · Documentation · Playground · Features · Release notes · Discussions alphaTab draws the score, cursor and selection. The player around it is your own UI, built on alphaTab's API and events. Highlights One score, every notation. Standard notation, guitar and bass tablature, drum tabs, slash notation and numbered notation (jianpu), alone or side by side. Plays what it shows. A built-in SoundFont2/SoundFont3 synthesizer, or playback synced to a backing track, an audio file or a video. Interactive by design. Beat-accurate cursor, click to seek, range selection and looping, tempo control, count-in and metronome, all exposed as events you subscribe to. Layouts that adapt. Page, horizontal and parchment layouts that reflow on resize, down to phone widths. Multi-track control. Show, hide, mute and solo tracks at runtime, with per-track volume and transposition. Make it yours. Colors per notation element, interchangeable SMuFL music fonts and fine-grained control over what is displayed. Edit and export. Modify the data model in code and export to Guitar Pro, alphaTex, MIDI or rendered audio. Formats Reads Guitar Pro 3–8 (.gp3 .gp4 .gp5 .gpx .gp), MusicXML (.xml .musicxml .mxl), Capella (.capx), alphaTex Writes Guitar Pro 7+ (.gp), alphaTex, MIDI, audio (PCM samples) Quick start Install the package: npm install @coderline/alphatab Or skip the install and try it from a CDN. Save this as an HTML file and open it in a browser: <div id=\"alphaTab\"> \\title \"Hello alphaTab\" . :4 0.6 1.6 3.6 0.5 2.5 3.5 0.4 2.4 | 3.4 0.3 2.3 0.2 1.2 3.2 0.1 1.1 | 3.1.1 </div> <script type=\"module\"> import * as alphaTab from 'https://cdn.jsdelivr.net/npm/@coderline/alphatab@latest/dist/alphaTab.min.mjs'; const api = new alphaTab.AlphaTabApi(document.getElementById('alphaTab'), { tex: true }); </script> The music inside the <div> is alphaTex, alphaTab's plain-text notation format. Edit it live in the Playground, or continue with the web tutorial to add playback and a player UI. Using a bundler? The Vite and webpack plugins set up the web workers, audio worklets, fonts and SoundFont for you. Platforms The .NET and Kotlin libraries are transpiled from the same TypeScript source, so features and behavior match across platforms. Platform Package Install Guide Evergreen browsers and Node.js @coderline/alphatab npm install @coderline/alphatab Web .NET Standard 2.0 AlphaTab dotnet add package AlphaTab .NET WPF and WinForms (.NET 8) AlphaTab.Windows dotnet add package AlphaTab.Windows .NET Android (Kotlin, API 26+) net.alphatab:alphaTab implementation(\"net.alphatab:alphaTab:<version>\") Android Packages in this repository Package Description @coderline/alphatab The rendering and playback library. @coderline/alphatab-vite Vite plugin that bundles alphaTab's workers, fonts and SoundFont. @coderline/alphatab-webpack webpack plugin that bundles alphaTab's workers, fonts and SoundFont. @coderline/alphatab-language-server alphaTex language server with completion, hover docs and formatting, plus a TextMate grammar. @coderline/alphatab-monaco alphaTex editing in the Monaco editor (experimental). Documentation Getting started: installation and configuration for web, .NET and Android. Feature catalog: every capability with a live example. alphaTex: the syntax reference for writing music as text. API reference: settings, events, methods and the data model. Tutorials: build a complete player step by step. llms.txt: an index of the documentation for AI assistants. Community Built with alphaTab: browse community projects, from practice apps to score editors, in Show and tell. Questions and ideas: start a thread in GitHub Discussions or ask on Stack Overflow. Bugs: open an issue using the bug template. Contributing: read the contribution guidelines and the code of conduct. AI-assisted contributions follow AGENTS.md. Supporting alphaTab Due to tax regulations in Austria, where alphaTab is developed, we unfortunately cannot accept donations. If alphaTab is useful to you, please consider donating to a charity of your choice instead. And share what you built in Show and tell: we love to see alphaTab in the wild. A star on GitHub also helps others discover the project. License alphaTab is licensed under the Mozilla Public License 2.0. The bundled music fonts Bravura and Petaluma (© Steinberg Media Technologies) and the Noto fonts are licensed under the SIL Open Font License. The bundled SONiVOX SoundFont is licensed under the Apache License 2.0. Thanks BrowserStack for a free plan to test alphaTab on all browsers and operating systems. Bernhard Schelling, author of TinySoundFont, and Steve Folta, author of SFZero, whose work forms the core of alphaTab's synthesizer. Everyone who contributes code, reports bugs and suggests features.",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://github.com/coderline/alphaTab#alphatab"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@coderline/alphatab"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@coderline/alphatab"
+    },
+    {
+      "label": "",
+      "url": "https://www.nuget.org/packages/AlphaTab"
+    },
+    {
+      "label": "",
+      "url": "https://www.nuget.org/packages/AlphaTab"
+    },
+    {
+      "label": "",
+      "url": "https://central.sonatype.com/artifact/net.alphatab/alphaTab"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/CoderLine/alphaTab/actions/workflows/build.yml"
+    },
+    {
+      "label": "Website",
+      "url": "https://alphatab.net"
+    },
+    {
+      "label": "Documentation",
+      "url": "https://alphatab.net/docs/introduction"
+    },
+    {
+      "label": "Playground",
+      "url": "https://alphatab.net/playground"
+    },
+    {
+      "label": "Features",
+      "url": "https://alphatab.net/docs/features/"
+    },
+    {
+      "label": "Release notes",
+      "url": "https://alphatab.net/docs/releases"
+    },
+    {
+      "label": "Discussions",
+      "url": "https://github.com/CoderLine/alphaTab/discussions"
+    },
+    {
+      "label": "",
+      "url": "https://alphatab.net/playground"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/coderline/alphaTab#highlights"
+    },
+    {
+      "label": "alphaTex",
+      "url": "https://alphatab.net/docs/alphatex/introduction"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/coderline/alphaTab#quick-start"
+    },
+    {
+      "label": "alphaTex",
+      "url": "https://alphatab.net/docs/alphatex/introduction"
+    },
+    {
+      "label": "Playground",
+      "url": "https://alphatab.net/playground"
+    },
+    {
+      "label": "web tutorial",
+      "url": "https://alphatab.net/docs/tutorials"
+    },
+    {
+      "label": "Vite",
+      "url": "https://alphatab.net/docs/getting-started/installation-vite"
+    },
+    {
+      "label": "webpack",
+      "url": "https://alphatab.net/docs/getting-started/installation-webpack"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/coderline/alphaTab#platforms"
+    },
+    {
+      "label": "@coderline/alphatab",
+      "url": "https://www.npmjs.com/package/@coderline/alphatab"
+    },
+    {
+      "label": "Web",
+      "url": "https://alphatab.net/docs/getting-started/installation-web"
+    },
+    {
+      "label": "AlphaTab",
+      "url": "https://www.nuget.org/packages/AlphaTab"
+    },
+    {
+      "label": ".NET",
+      "url": "https://alphatab.net/docs/getting-started/installation-net"
+    },
+    {
+      "label": "AlphaTab.Windows",
+      "url": "https://www.nuget.org/packages/AlphaTab.Windows"
+    },
+    {
+      "label": ".NET",
+      "url": "https://alphatab.net/docs/getting-started/installation-net"
+    },
+    {
+      "label": "net.alphatab:alphaTab",
+      "url": "https://central.sonatype.com/artifact/net.alphatab/alphaTab"
+    },
+    {
+      "label": "Android",
+      "url": "https://alphatab.net/docs/getting-started/installation-android"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/coderline/alphaTab#packages-in-this-repository"
+    },
+    {
+      "label": "@coderline/alphatab",
+      "url": "https://www.npmjs.com/package/@coderline/alphatab"
+    },
+    {
+      "label": "@coderline/alphatab-vite",
+      "url": "https://www.npmjs.com/package/@coderline/alphatab-vite"
+    },
+    {
+      "label": "@coderline/alphatab-webpack",
+      "url": "https://www.npmjs.com/package/@coderline/alphatab-webpack"
+    },
+    {
+      "label": "@coderline/alphatab-language-server",
+      "url": "https://www.npmjs.com/package/@coderline/alphatab-language-server"
+    },
+    {
+      "label": "@coderline/alphatab-monaco",
+      "url": "https://www.npmjs.com/package/@coderline/alphatab-monaco"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/coderline/alphaTab#documentation"
+    },
+    {
+      "label": "Getting started",
+      "url": "https://alphatab.net/docs/introduction"
+    },
+    {
+      "label": "Feature catalog",
+      "url": "https://alphatab.net/docs/features/"
+    },
+    {
+      "label": "alphaTex",
+      "url": "https://alphatab.net/docs/alphatex/introduction"
+    },
+    {
+      "label": "API reference",
+      "url": "https://alphatab.net/docs/reference/api"
+    },
+    {
+      "label": "Tutorials",
+      "url": "https://alphatab.net/docs/tutorials"
+    },
+    {
+      "label": "llms.txt",
+      "url": "https://alphatab.net/llms.txt"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/coderline/alphaTab#community"
+    },
+    {
+      "label": "Show and tell",
+      "url": "https://github.com/CoderLine/alphaTab/discussions/categories/show-and-tell"
+    },
+    {
+      "label": "GitHub Discussions",
+      "url": "https://github.com/CoderLine/alphaTab/discussions"
+    },
+    {
+      "label": "Stack Overflow",
+      "url": "https://stackoverflow.com/questions/tagged/alphatab"
+    },
+    {
+      "label": "issue",
+      "url": "https://github.com/CoderLine/alphaTab/issues"
+    },
+    {
+      "label": "contribution guidelines",
+      "url": "https://github.com/CoderLine/alphaTab/blob/develop/CONTRIBUTING.md"
+    },
+    {
+      "label": "code of conduct",
+      "url": "https://github.com/CoderLine/alphaTab/blob/develop/code-of-conduct.md"
+    },
+    {
+      "label": "AGENTS.md",
+      "url": "https://github.com/CoderLine/alphaTab/blob/develop/AGENTS.md"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/coderline/alphaTab#supporting-alphatab"
+    },
+    {
+      "label": "Show and tell",
+      "url": "https://github.com/CoderLine/alphaTab/discussions/categories/show-and-tell"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/coderline/alphaTab#license"
+    },
+    {
+      "label": "Mozilla Public License 2.0",
+      "url": "https://github.com/CoderLine/alphaTab/blob/develop/LICENSE"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/coderline/alphaTab#thanks"
+    },
+    {
+      "label": "BrowserStack",
+      "url": "https://www.browserstack.com"
+    },
+    {
+      "label": "Bernhard Schelling",
+      "url": "https://github.com/schellingb/TinySoundFont"
+    },
+    {
+      "label": "Steve Folta",
+      "url": "https://github.com/stevefolta/SFZero"
+    },
+    {
+      "label": "contributes code",
+      "url": "https://github.com/CoderLine/alphaTab/graphs/contributors"
+    }
+  ],
+  "root_files": [
+    ".github",
+    ".vscode",
+    "img",
+    "packages",
+    "scripts",
+    ".editorconfig",
+    ".gitignore",
+    "AGENTS.md",
+    "CLAUDE.md",
+    "CONTRIBUTING.md",
+    "LICENSE",
+    "README.md",
+    "biome.jsonc",
+    "code-of-conduct.md",
+    "package-lock.json",
+    "package.json",
+    "tsconfig.base.json"
+  ],
+  "release_count": 22,
+  "status": "verified"
+}

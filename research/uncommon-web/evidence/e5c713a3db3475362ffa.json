@@ -1,0 +1,171 @@
+{
+  "url": "https://github.com/cloydlau/webgl-fluid",
+  "final_url": "https://github.com/cloydlau/webgl-fluid",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:47:40.103323+00:00",
+  "stars": 111,
+  "forks": 17,
+  "description": "ESM support for https://github.com/PavelDoGreat/WebGL-Fluid-Simulation.",
+  "homepage": "https://cloydlau.github.io/playground/webgl-fluid/",
+  "topics": [
+    "background",
+    "fluid",
+    "gpu",
+    "navier-stokes",
+    "simulation",
+    "webgl"
+  ],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2020-11-14T12:07:42.000Z",
+  "branch": "main",
+  "commit": "ab6dbe272f8cf605e807d51ff3fa8e0c9d7263d8",
+  "readme": "WebGL Fluid ESM support for WebGL-Fluid-Simulation. Features Hover to activate by default, can also be click Control whether to generate configurable number of random splats at initialization and at intervals Set a custom splat color Background image Install NPM npm i webgl-fluid CDN + ESM <!doctype html> <html lang=\"en\"> <head> <meta charset=\"UTF-8\" /> </head> <body> <canvas style=\"width: 100vw; height: 100vh\" /> <script type=\"importmap\"> { \"imports\": { \"webgl-fluid\": \"https://cdn.jsdelivr.net/npm/webgl-fluid@0.4/dist/webgl-fluid.mjs\" } } </script> <script type=\"module\"> import WebGLFluid from 'webgl-fluid' WebGLFluid(document.querySelector('canvas'), { // options }) </script> </body> </html> CDN + IIFE <!doctype html> <html lang=\"en\"> <head> <meta charset=\"UTF-8\" /> </head> <body> <canvas style=\"width: 100vw; height: 100vh\" /> <script src=\"https://cdn.jsdelivr.net/npm/webgl-fluid@0.4\"></script> <script> WebGLFluid(document.querySelector('canvas'), { // options }) </script> </body> </html> Options WebGLFluid(document.querySelector('canvas'), { TRIGGER: 'hover', IMMEDIATE: true, AUTO: false, INTERVAL: 3000, SIM_RESOLUTION: 128, DYE_RESOLUTION: 1024, CAPTURE_RESOLUTION: 512, DENSITY_DISSIPATION: 1, VELOCITY_DISSIPATION: 0.3, PRESSURE: 0.8, PRESSURE_ITERATIONS: 20, CURL: 30, SPLAT_RADIUS: 0.35, SPLAT_FORCE: 6000, SPLAT_COUNT: Number.parseInt(Math.random() * 20) + 5, SPLAT_COLOR: undefined, SHADING: true, COLORFUL: true, COLOR_UPDATE_SPEED: 10, PAUSED: false, BACK_COLOR: { r: 0, g: 0, b: 0 }, TRANSPARENT: false, BLOOM: true, BLOOM_ITERATIONS: 8, BLOOM_RESOLUTION: 256, BLOOM_INTENSITY: 0.8, BLOOM_THRESHOLD: 0.6, BLOOM_SOFT_KNEE: 0.7, SUNRAYS: true, SUNRAYS_RESOLUTION: 196, SUNRAYS_WEIGHT: 1.0, }) Trigger Mode WebGLFluid(document.querySelector('canvas'), { TRIGGER: 'hover', // Can be change to 'click' }) Auto Splating at Initialization WebGLFluid(document.querySelector('canvas'), { IMMEDIATE: true, }) Auto Splating at Intervals WebGLFluid(document.querySelector('canvas'), { AUTO: true, // Whether to enable auto-splating INTERVAL: 3000, // The time (in milliseconds) the timer should delay in between auto-splating }) Set the Splats' Count WebGLFluid(document.querySelector('canvas'), { SPLAT_COUNT: Number.parseInt(Math.random() * 20) + 5, }) Set the Splat Color SPLAT_COLOR replaces the random dye color used by splats. The value should be an RGB object and is used directly as the dye color. Omit SPLAT_COLOR to keep the default random colors. WebGLFluid(document.querySelector('canvas'), { SPLAT_COLOR: { r: 0.1, g: 0.05, b: 0.2 }, }) When SPLAT_COLOR is set, it takes precedence over COLORFUL and disables random color changes. Background Image CSS canvas { width: 100vw; height: 100vh; background-image: url('xxx.png'); background-size: 100% 100%; } JS WebGLFluid(document.querySelector('canvas'), { TRANSPARENT: true }) Background Color Background color will be whitened by 13 on each RGB color values when options.BLOOM is true. Set it to false to get pure color. Example Vue 3 <script setup> import { onMounted, ref } from 'vue' import WebGLFluid from 'webgl-fluid' const canvas = ref() onMounted(() => { WebGLFluid(canvas.value) }) </script> <template> <canvas ref=\"canvas\" /> </template> <style> canvas { width: 100vw; height: 100vh; } </style> Vue 2 <script> import WebGLFluid from 'webgl-fluid' export default { mounted() { WebGLFluid(this.$refs.canvas) } } </script> <template> <canvas ref=\"canvas\" /> </template> <style> canvas { width: 100vw; height: 100vh; } </style> Vanilla JS or Any Other Framework <!-- index.html --> <!doctype html> <html lang=\"en\"> <head> <meta charset=\"UTF-8\" /> </head> <body> <canvas style=\"width: 100vw; height: 100vh\" /> <script src=\"src/index.js\"></script> </body> </html> // src/index.js import WebGLFluid from 'webgl-fluid' WebGLFluid(document.querySelector('canvas'), { // options }) Changelog Detailed changes for each release are documented in the release notes",
+  "readme_links": [
+    {
+      "label": "WebGL Fluid",
+      "url": "https://npmjs.com/package/webgl-fluid"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/cloydlau/webgl-fluid#------webgl-fluid---"
+    },
+    {
+      "label": "WebGL-Fluid-Simulation",
+      "url": "https://github.com/PavelDoGreat/WebGL-Fluid-Simulation"
+    },
+    {
+      "label": "",
+      "url": "https://cloydlau.github.io/playground/webgl-fluid/"
+    },
+    {
+      "label": "",
+      "url": "https://bundlephobia.com/package/webgl-fluid"
+    },
+    {
+      "label": "",
+      "url": "https://www.jsdelivr.com/package/npm/webgl-fluid"
+    },
+    {
+      "label": "",
+      "url": "https://npm-stat.com/charts.html?package=webgl-fluid&from=2020-11-14"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/webgl-fluid?activeTab=versions"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/antfu/eslint-config"
+    },
+    {
+      "label": "",
+      "url": "https://conventionalcommits.org"
+    },
+    {
+      "label": "",
+      "url": "https://semantic-release.gitbook.io"
+    },
+    {
+      "label": "",
+      "url": "https://pr.new"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/cloydlau/webgl-fluid#features"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/cloydlau/webgl-fluid#install"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/cloydlau/webgl-fluid#npm"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/cloydlau/webgl-fluid#cdn--esm"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/cloydlau/webgl-fluid#cdn--iife"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/cloydlau/webgl-fluid#options"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/cloydlau/webgl-fluid#trigger-mode"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/cloydlau/webgl-fluid#auto-splating-at-initialization"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/cloydlau/webgl-fluid#auto-splating-at-intervals"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/cloydlau/webgl-fluid#set-the-splats-count"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/cloydlau/webgl-fluid#set-the-splat-color"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/cloydlau/webgl-fluid#background-image"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/cloydlau/webgl-fluid#background-color"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/cloydlau/webgl-fluid#example"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/cloydlau/webgl-fluid#vue-3"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/cloydlau/webgl-fluid#vue-2"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/cloydlau/webgl-fluid#vanilla-js-or-any-other-framework"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/cloydlau/webgl-fluid#changelog"
+    },
+    {
+      "label": "release notes",
+      "url": "https://github.com/cloydlau/webgl-fluid/releases"
+    }
+  ],
+  "root_files": [
+    ".github/workflows",
+    ".vitepress",
+    ".vscode",
+    "scripts",
+    "src",
+    ".gitignore",
+    "LICENSE",
+    "README.md",
+    "browserslist.txt",
+    "commitlint.config.mjs",
+    "eslint.config.mjs",
+    "esm.html",
+    "iife.html",
+    "package.json",
+    "pnpm-lock.yaml",
+    "pnpm-workspace.yaml",
+    "vite.config.ts"
+  ],
+  "release_count": 11,
+  "status": "verified"
+}

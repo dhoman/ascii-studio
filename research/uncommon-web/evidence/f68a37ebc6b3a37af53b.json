@@ -1,0 +1,122 @@
+{
+  "url": "https://github.com/formkit/auto-animate",
+  "final_url": "https://github.com/formkit/auto-animate",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:47:47.827469+00:00",
+  "stars": 13937,
+  "forks": 266,
+  "description": "A zero-config, drop-in animation utility that adds smooth transitions to your web app. You can use it with React, Vue, or any other JavaScript application.",
+  "homepage": "https://auto-animate.formkit.com",
+  "topics": [
+    "animation",
+    "javascript",
+    "react",
+    "ui",
+    "vue"
+  ],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2022-05-11T18:50:01.000Z",
+  "branch": "master",
+  "commit": "06882a8e69ba9bc8456d8f2ae6010f697fd7a37c",
+  "readme": "Add motion to your apps with a single line of code. AutoAnimate is a zero-config, drop-in animation utility that adds smooth transitions to your web app. You can use it with Vue, React, Solid or any other JavaScript application. With one line of code, you can improve your interfaces, for example: Installation Install using your package manager of choice. # yarn yarn add @formkit/auto-animate # npm npm install @formkit/auto-animate # pnpm pnpm add @formkit/auto-animate Boom! Done. That was fast! 🐇 Usage 📖 View the documentation site for usage instructions. Examples 📖 View the documentation site for examples. Plugins 📖 View the documentation site for plugin instructions. Support us Is AutoAnimate saving you time? Please consider supporting us with a recurring or one-time donation! 🙏 Contributing Thank you for your willingness to contribute to this free and open source project! When contributing, consider first discussing your desired change with the core team via GitHub issues, Discord, or other method.",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/3eb5d8c8aaef25546ae8cfc31f71e59069c7d7fee082099a4f3994790860d253/68747470733a2f2f63646e2e666f726d6b2e69742f7765622d6173736574732f6c6f676f2d6175746f2d616e696d6174652e737667"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/formkit/auto-animate/actions/workflows/main.yml/badge.svg"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/eef50722dca5329b55242ccd9fa92b4ab194befaf00cde9ac8e6f9e750e97978/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f73706f6e736f72732f666f726d6b6974"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/formkit/auto-animate#add-motion-to-your-apps-with-a-single-line-of-code"
+    },
+    {
+      "label": "",
+      "url": "https://auto-animate.formkit.com"
+    },
+    {
+      "label": "",
+      "url": "https://auto-animate.formkit.com"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/formkit/auto-animate#installation"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/formkit/auto-animate#usage"
+    },
+    {
+      "label": "View the documentation site for usage instructions",
+      "url": "https://auto-animate.formkit.com#usage"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/formkit/auto-animate#examples"
+    },
+    {
+      "label": "View the documentation site for examples",
+      "url": "https://auto-animate.formkit.com#examples"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/formkit/auto-animate#plugins"
+    },
+    {
+      "label": "View the documentation site for plugin instructions",
+      "url": "https://auto-animate.formkit.com#plugins"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/formkit/auto-animate#support-us"
+    },
+    {
+      "label": "supporting us with a recurring or one-time donation",
+      "url": "https://github.com/sponsors/formkit"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/formkit/auto-animate#contributing"
+    },
+    {
+      "label": "GitHub issues",
+      "url": "https://github.com/formkit/auto-animate/issues"
+    },
+    {
+      "label": "Discord",
+      "url": "https://discord.gg/SHYT8pyeNm"
+    }
+  ],
+  "root_files": [
+    ".dmux-hooks",
+    ".github",
+    "build",
+    "docs",
+    "src",
+    "tests",
+    ".cursorrules",
+    ".editorconfig",
+    ".gitignore",
+    ".npmignore",
+    ".npmrc",
+    ".prettierrc",
+    "LICENSE",
+    "README.md",
+    "marko.json",
+    "package.json",
+    "playwright.config.ts",
+    "pnpm-lock.yaml",
+    "rollup.config.js",
+    "tsconfig.json",
+    "tsconfig.marko.json"
+  ],
+  "release_count": 8,
+  "status": "verified"
+}

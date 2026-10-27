@@ -1,0 +1,170 @@
+{
+  "url": "https://github.com/romboHQ/tailwindcss-motion",
+  "final_url": "https://github.com/romboHQ/tailwindcss-motion",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:48:14.074359+00:00",
+  "stars": 3335,
+  "forks": 38,
+  "description": "tailwindcss-motion is a Tailwind CSS Plugin made at RomboHQ. It’s a simple, yet powerful, animation library with a simple syntax.",
+  "homepage": "https://rombo.co/tailwind/",
+  "topics": [
+    "animate",
+    "animation",
+    "css",
+    "design",
+    "motion",
+    "preset",
+    "tailwindcss",
+    "tailwindcss-plugin"
+  ],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2024-09-20T19:37:08.000Z",
+  "branch": "main",
+  "commit": "da5ffc26d3243ddc20ed6792ec7e0c3e7ecc7d3a",
+  "readme": "✨ tailwindcss-motion ✨ tailwindcss-motion is a Tailwind CSS Plugin made at RomboHQ. It’s a simple, yet powerful, animation library with a simple syntax. Motion, without commotion. ⚒️ Installation 1. Install npm package npm i -D tailwindcss-motion 2. Add into your tailwind.config.js // tailwind.config.js export default { content: [...], theme: { extend: {...}, }, plugins: [require('tailwindcss-motion')], }; or, to use ESM: import tailwindcssMotion from \"tailwindcss-motion\"; /** @type {import('tailwindcss').Config} */ export default { content: [...], theme: { extend: {}, }, plugins: [tailwindcssMotion], }; 📝 TypeScript Support The plugin includes TypeScript definitions out of the box. Theme customizations and plugin configuration are fully typed: import type { Config } from \"tailwindcss\"; import motion from \"tailwindcss-motion\"; const config: Config = { theme: { extend: { motionScale: { \"200\": \"200%\", }, motionTimingFunction: { custom: \"cubic-bezier(0.4, 0, 0.2, 1)\", }, }, }, plugins: [motion], }; How does it work? We provide a simple syntax to animate any element in your Tailwind project. Instead of defining custom keyframes, we provide utility classes to animate every dimension, inline. For example, for a slide and fade effect — you simply need motion-translate-x-in-25 motion-opacity-in-0 or, you can use one of our presets with motion-preset-fade Documentation For full documentation, visit docs.rombo.co/tailwind 🧩 Introducing the Chrome Extension Take your animations to the next level with the Rombo Chrome Extension! Create animations visually: Use our intuitive animator directly in your browser. Loop animations Save presets: Keep your animations organized and reusable. Export options: Output animations as Tailwind classes, pure CSS, or Framer Motion code. Examples Landing page - https://play.tailwindcss.com/uAuVF8F1vC Chat dialog - https://play.tailwindcss.com/gjGqEKswjQ Low Battery Dynamic Island - https://play.tailwindcss.com/tvYFbHtNNQ Apple Color Swatches - https://play.tailwindcss.com/cvQ3Nk3v8j Rombo Loop - https://play.tailwindcss.com/MLdegkb9Wq Emoji Animations - https://play.tailwindcss.com/86s55I4wmC What's Rombo? Rombo is an early-stage company, building tools to help companies build beautiful interactive interfaces. We're starting out with a toolkit for engineers, designers and creative marketers to animate natively inside common Workflows — like Tailwind, Figma, Webflow, Shopify & more to come! More Resources Bringing Motion to Tailwind CSS: Building an animation plugin at Rombo - Blog post about the creation of this library Animator Builder - Create animations intuitively and export them to Tailwind classes UnoCSS port - Port created by @whatnickcodes",
+  "readme_links": [
+    {
+      "label": "tailwindcss-motion",
+      "url": "https://rombo.co/tailwind/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/romboHQ/tailwindcss-motion#-tailwindcss-motion-"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/tailwindcss-motion"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/tailwindcss-motion"
+    },
+    {
+      "label": "RomboHQ",
+      "url": "https://rombo.co/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/romboHQ/tailwindcss-motion#️-installation"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/romboHQ/tailwindcss-motion#-typescript-support"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/romboHQ/tailwindcss-motion#how-does-it-work"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/romboHQ/tailwindcss-motion#documentation"
+    },
+    {
+      "label": "docs.rombo.co/tailwind",
+      "url": "https://docs.rombo.co/tailwind"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/romboHQ/tailwindcss-motion#-introducing-the-chrome-extension"
+    },
+    {
+      "label": "Rombo Chrome Extension",
+      "url": "https://rombo.co/extension/"
+    },
+    {
+      "label": "",
+      "url": "https://private-user-images.githubusercontent.com/60023139/397825636-68a751f7-00a5-449e-a92d-f5499d3b9152.gif?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3OTI3MTMxOTMsIm5iZiI6MTc5MjcxMjg5MywicGF0aCI6Ii82MDAyMzEzOS8zOTc4MjU2MzYtNjhhNzUxZjctMDBhNS00NDllLWE5MmQtZjU0OTlkM2I5MTUyLmdpZj9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNjEwMjIlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjYxMDIyVDIzNDgxM1omWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWRlZDA0ZGZhZjMxNDM4MzczOWI4OWFmN2NiZGI2ODYyNDkxNGE2ZmYzYzhkNWVkOGVhOWQ1ZTU0MGYxNTA0MjcmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JnJlc3BvbnNlLWNvbnRlbnQtdHlwZT1pbWFnZSUyRmdpZiJ9.gyZKoGOxGtMyfp6GU-AhuQrYj4izk-NEQJPRqgCR480"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/romboHQ/tailwindcss-motion#examples"
+    },
+    {
+      "label": "https://play.tailwindcss.com/uAuVF8F1vC",
+      "url": "https://play.tailwindcss.com/uAuVF8F1vC"
+    },
+    {
+      "label": "",
+      "url": "https://private-user-images.githubusercontent.com/60023139/373085333-c847e7ee-f5b6-4620-afdc-2f8b037c36fd.gif?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3OTI3MTMxOTMsIm5iZiI6MTc5MjcxMjg5MywicGF0aCI6Ii82MDAyMzEzOS8zNzMwODUzMzMtYzg0N2U3ZWUtZjViNi00NjIwLWFmZGMtMmY4YjAzN2MzNmZkLmdpZj9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNjEwMjIlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjYxMDIyVDIzNDgxM1omWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWUyY2JlNTMzM2UyN2M3YzEzMzllNmFjN2RlY2MwYzNiY2JkMDI1YjEzODExZjdiYWVmNGU2NDllYjliOWM2YjYmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JnJlc3BvbnNlLWNvbnRlbnQtdHlwZT1pbWFnZSUyRmdpZiJ9.9BQwy78TXgiCIvKEUhCh-RJctb2Fz2PN82bpCbWdums"
+    },
+    {
+      "label": "https://play.tailwindcss.com/gjGqEKswjQ",
+      "url": "https://play.tailwindcss.com/gjGqEKswjQ"
+    },
+    {
+      "label": "",
+      "url": "https://private-user-images.githubusercontent.com/60023139/373086500-f11fbe59-7902-4d73-ab13-0e20ca7cc21b.gif?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3OTI3MTMxOTMsIm5iZiI6MTc5MjcxMjg5MywicGF0aCI6Ii82MDAyMzEzOS8zNzMwODY1MDAtZjExZmJlNTktNzkwMi00ZDczLWFiMTMtMGUyMGNhN2NjMjFiLmdpZj9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNjEwMjIlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjYxMDIyVDIzNDgxM1omWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWZlNzQwZGYxNmE1MjRiMjc0NTM3OTNmMWYyMTUyNjJmYjAzM2VlNDNmMDI5NzA1NDQwZjk1ZjQ2M2FlNGZiYTYmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JnJlc3BvbnNlLWNvbnRlbnQtdHlwZT1pbWFnZSUyRmdpZiJ9.4GCkHZntMRAi9qClX4kP7szA5vMZXFcVbrxY_CnZd5Y"
+    },
+    {
+      "label": "https://play.tailwindcss.com/tvYFbHtNNQ",
+      "url": "https://play.tailwindcss.com/tvYFbHtNNQ"
+    },
+    {
+      "label": "",
+      "url": "https://private-user-images.githubusercontent.com/60023139/373346388-5f1e67d7-5f93-46d5-badb-ab1d3d526efc.gif?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3OTI3MTMxOTMsIm5iZiI6MTc5MjcxMjg5MywicGF0aCI6Ii82MDAyMzEzOS8zNzMzNDYzODgtNWYxZTY3ZDctNWY5My00NmQ1LWJhZGItYWIxZDNkNTI2ZWZjLmdpZj9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNjEwMjIlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjYxMDIyVDIzNDgxM1omWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTRjYTcxNjM0YzAxMjhiYTE4NTdmZDU0MTNlMzYxMzk2YjY2ZDRhNGM1YjI4MjE2Mjg4YjJlZjllNTBlM2I4OTcmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JnJlc3BvbnNlLWNvbnRlbnQtdHlwZT1pbWFnZSUyRmdpZiJ9.fGEJnk8HEUyCysLxwGI4YPWYhfBsaJQRWFwlT-BeTFw"
+    },
+    {
+      "label": "https://play.tailwindcss.com/cvQ3Nk3v8j",
+      "url": "https://play.tailwindcss.com/cvQ3Nk3v8j"
+    },
+    {
+      "label": "",
+      "url": "https://private-user-images.githubusercontent.com/60023139/373346582-887fba04-9642-4a4f-8ace-7375a4aa65b6.gif?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3OTI3MTMxOTMsIm5iZiI6MTc5MjcxMjg5MywicGF0aCI6Ii82MDAyMzEzOS8zNzMzNDY1ODItODg3ZmJhMDQtOTY0Mi00YTRmLThhY2UtNzM3NWE0YWE2NWI2LmdpZj9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNjEwMjIlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjYxMDIyVDIzNDgxM1omWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWQ3NDZmMWYyOWQ4ODgyZDJkOTI2NmY1YWY0MjU2ZjgxY2ZmNjcyNTQ5NzY1ZGM1MjQ1NWE5OTdmOGU3MGU5NGImWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JnJlc3BvbnNlLWNvbnRlbnQtdHlwZT1pbWFnZSUyRmdpZiJ9.6V1sBq61n76FPfzEZt9X5jqsdaZvrcq6mTbfwuyhfAk"
+    },
+    {
+      "label": "https://play.tailwindcss.com/MLdegkb9Wq",
+      "url": "https://play.tailwindcss.com/MLdegkb9Wq"
+    },
+    {
+      "label": "",
+      "url": "https://private-user-images.githubusercontent.com/60023139/383246111-7138fb7a-d622-4590-92b5-6682806797e0.gif?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3OTI3MTMxOTMsIm5iZiI6MTc5MjcxMjg5MywicGF0aCI6Ii82MDAyMzEzOS8zODMyNDYxMTEtNzEzOGZiN2EtZDYyMi00NTkwLTkyYjUtNjY4MjgwNjc5N2UwLmdpZj9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNjEwMjIlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjYxMDIyVDIzNDgxM1omWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTExNTQ2ZGQ2MDJiYjg3NTlhZWE5NjY1Nzc3NTgzOGE5NmNiN2MyNTcxMzIxYzBlZDVkMTIxMDNhNDE1YjkwN2ImWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JnJlc3BvbnNlLWNvbnRlbnQtdHlwZT1pbWFnZSUyRmdpZiJ9.uGdYuik8miK7ngXmNPFzY2TvdFvLjQ2cAghj7a3J8hA"
+    },
+    {
+      "label": "https://play.tailwindcss.com/86s55I4wmC",
+      "url": "https://play.tailwindcss.com/86s55I4wmC"
+    },
+    {
+      "label": "",
+      "url": "https://private-user-images.githubusercontent.com/60023139/383302140-3143dc8c-99c1-4df7-8709-a52b67d2824a.gif?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3OTI3MTMxOTMsIm5iZiI6MTc5MjcxMjg5MywicGF0aCI6Ii82MDAyMzEzOS8zODMzMDIxNDAtMzE0M2RjOGMtOTljMS00ZGY3LTg3MDktYTUyYjY3ZDI4MjRhLmdpZj9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNjEwMjIlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjYxMDIyVDIzNDgxM1omWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTBjNzRkZjI3NDExN2RjMzZlOGE3NGIxMGUxM2Q2ZmQyNmFlMTQ5NGRiYjYwMjM2MWQxZmMxM2RlYzQ2Y2JkN2EmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JnJlc3BvbnNlLWNvbnRlbnQtdHlwZT1pbWFnZSUyRmdpZiJ9.PnMwHz2o0XR9j-G6mWNxN5_EQIGoQKGvp6BiK8EV8Pw"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/romboHQ/tailwindcss-motion#whats-rombo"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/romboHQ/tailwindcss-motion#more-resources"
+    },
+    {
+      "label": "Bringing Motion to Tailwind CSS: Building an animation plugin at Rombo",
+      "url": "https://www.kvin.me/posts/tailwind-motion"
+    },
+    {
+      "label": "Animator Builder",
+      "url": "https://rombo.co/tailwind/#animator"
+    },
+    {
+      "label": "UnoCSS port",
+      "url": "https://github.com/whatnickcodes/unocss-preset-tailwindcss-motion"
+    },
+    {
+      "label": "@whatnickcodes",
+      "url": "https://github.com/whatnickcodes"
+    }
+  ],
+  "root_files": [
+    "src",
+    "web",
+    ".gitignore",
+    "LICENSE",
+    "README.md",
+    "eslint.config.js",
+    "package.json",
+    "pnpm-lock.yaml",
+    "tsconfig.json",
+    "tsup.config.ts"
+  ],
+  "release_count": 9,
+  "status": "verified"
+}

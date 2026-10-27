@@ -1,0 +1,120 @@
+{
+  "url": "https://github.com/penrose/penrose",
+  "final_url": "https://github.com/penrose/penrose",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:48:09.941085+00:00",
+  "stars": 7996,
+  "forks": 363,
+  "description": "Create beautiful diagrams just by typing notation in plain text.",
+  "homepage": "https://penrose.cs.cmu.edu",
+  "topics": [
+    "diagrams",
+    "domain-specific-language",
+    "mathematics",
+    "programming-language",
+    "visualization"
+  ],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2016-09-22T04:47:19.000Z",
+  "branch": "main",
+  "commit": "164ad55777e9975baa0e0860a5d18051f66beafa",
+  "readme": "Penrose Penrose is a platform that enables people to create beautiful diagrams just by typing notation in plain text. The goal is to make it easy for non-experts to create and explore high-quality diagrams and provide deeper insight into challenging technical concepts. We aim to democratize the process of creating visual intuition. Usage You can try Penrose in your browser without any installation. For a more detailed step-by-step introduction, check out our tutorials. Or, for more reference-style information, take a look at our documentation. Example Here's a simple Penrose visualization in the domain of set theory. It's specified by the following trio of Domain, Substance, and Style programs (with variation MonsoonCaterpillar95943): setTheory.domain: type Set predicate Disjoint(Set s1, Set s2) predicate Intersecting(Set s1, Set s2) predicate Subset(Set s1, Set s2) tree.substance: Set A, B, C, D, E, F, G Subset(B, A) Subset(C, A) Subset(D, B) Subset(E, B) Subset(F, C) Subset(G, C) Disjoint(E, D) Disjoint(F, G) Disjoint(B, C) AutoLabel All euler.style: canvas { width = 800 height = 700 } forall Set x { shape x.icon = Circle { } shape x.text = Equation { string : x.label fontSize : \"32px\" } ensure contains(x.icon, x.text) encourage norm(x.text.center - x.icon.center) == 0 layer x.text above x.icon } forall Set x; Set y where Subset(x, y) { ensure disjoint(y.text, x.icon, 10) ensure contains(y.icon, x.icon, 5) layer x.icon above y.icon } forall Set x; Set y where Disjoint(x, y) { ensure disjoint(x.icon, y.icon) } forall Set x; Set y where Intersecting(x, y) { ensure overlapping(x.icon, y.icon) ensure disjoint(y.text, x.icon) ensure disjoint(x.text, y.icon) } Contributing See CONTRIBUTING.md. License This repository is licensed under the MIT License.",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@penrose/core"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/penrose/penrose/blob/main/LICENSE"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/penrose/penrose/actions/workflows/build.yml"
+    },
+    {
+      "label": "",
+      "url": "https://discord.gg/a7VXJU4dfR"
+    },
+    {
+      "label": "",
+      "url": "https://twitter.com/UsePenrose"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/penrose/penrose#penrose-----"
+    },
+    {
+      "label": "Penrose",
+      "url": "https://penrose.cs.cmu.edu/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/penrose/penrose#usage"
+    },
+    {
+      "label": "try Penrose in your browser",
+      "url": "https://penrose.cs.cmu.edu/try/index.html"
+    },
+    {
+      "label": "tutorials",
+      "url": "https://penrose.cs.cmu.edu/docs/tutorial/welcome"
+    },
+    {
+      "label": "documentation",
+      "url": "https://penrose.cs.cmu.edu/docs/ref"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/penrose/penrose#example"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/penrose/penrose/blob/main/docs/assets/output.svg"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/penrose/penrose#contributing"
+    },
+    {
+      "label": "CONTRIBUTING.md",
+      "url": "https://github.com/penrose/penrose/blob/main/CONTRIBUTING.md"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/penrose/penrose#license"
+    },
+    {
+      "label": "MIT License",
+      "url": "https://github.com/penrose/penrose/blob/main/LICENSE"
+    }
+  ],
+  "root_files": [
+    ".github",
+    ".vscode",
+    "docs",
+    "mem-bench",
+    "packages",
+    "util",
+    ".gitignore",
+    ".prettierignore",
+    ".prettierrc.json",
+    ".python-version",
+    "CHANGELOG.md",
+    "CODE_OF_CONDUCT.md",
+    "CONTRIBUTING.md",
+    "LICENSE",
+    "README.md",
+    "cloudflare.sh",
+    "flake.lock",
+    "flake.nix",
+    "lerna.json",
+    "nx.json",
+    "package.json",
+    "tsconfig.json",
+    "yarn.lock"
+  ],
+  "release_count": 15,
+  "status": "verified"
+}

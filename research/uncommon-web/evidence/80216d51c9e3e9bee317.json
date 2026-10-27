@@ -1,0 +1,213 @@
+{
+  "url": "https://github.com/rough-stuff/wired-elements",
+  "final_url": "https://github.com/rough-stuff/wired-elements",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:48:14.512510+00:00",
+  "stars": 10845,
+  "forks": 342,
+  "description": "Collection of custom elements that appear hand drawn. Great for wireframes or a fun look.",
+  "homepage": "https://wiredjs.com",
+  "topics": [
+    "lit-element",
+    "lit-html",
+    "prototyping",
+    "web-components",
+    "webcomponents",
+    "wireframe",
+    "wireframes"
+  ],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2017-08-28T06:12:03.000Z",
+  "branch": "master",
+  "commit": "0802655b6a0220d17e95e9d1565a7a1b10a24fef",
+  "readme": "wired-elements 👉 wiredjs.com Wired Elements is a series of basic UI Elements that have a hand drawn look. These can be used for wireframes, mockups, or just the fun hand-drawn look. Try now Play with wired-elements: Wired Elements Try it with a framework Wired Elements in React Wired Elements in Vue Wired Elements in Svelte Install The package (wired-elements) exports all components in the wired category. List of all wired elements can be found here. Add wired-elements to your project: npm i wired-elements Or load the ES module directly through unpkg <script type=\"module\" src=\"https://unpkg.com/wired-elements?module\"></script> Usage Import into your module script: import { WiredButton, WiredInput } from \"wired-elements\" or import { WiredButton } from 'wired-elements/lib/wired-button.js'; import { WiredInput } from 'wired-elements/lib/wired-input.js'; Use it in your HTML: <wired-input placeholder=\"Enter name\"></wired-input> <wired-button>Click Me</wired-button> Learn about web components here. Component API To view details of each component - properties, events, css-properties, etc, are provided in the docs folder. Demo Demo of all components is available at wiredjs.com. Credits wired-elements was built using RoughJS and Lit. Contributors Become a sponsor of the Rough suite of libraries Financial Contributors Become a financial contributor and help us sustain our community. [Contribute] Individuals Organizations Support this project with your organization. Your logo will show up here with a link to your website. [Contribute] License MIT License (c) Preet Shihn",
+  "readme_links": [
+    {
+      "label": "wiredjs.com",
+      "url": "https://wiredjs.com"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/rough-stuff/wired-elements#wired-elements-wiredjscom"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/178c1bd1ab744e0730df498ac663fb061233145421d4ae808f5d1414ceb65474/68747470733a2f2f692e696d6775722e636f6d2f717474506c6c672e706e67"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/rough-stuff/wired-elements#try-now"
+    },
+    {
+      "label": "Wired Elements",
+      "url": "https://codesandbox.io/s/wired-elements-vanilla-4bpny"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/rough-stuff/wired-elements#try-it-with-a-framework"
+    },
+    {
+      "label": "Wired Elements in React",
+      "url": "https://codesandbox.io/s/xrll5wyl8w"
+    },
+    {
+      "label": "Wired Elements in Vue",
+      "url": "https://codesandbox.io/s/vj389y9375"
+    },
+    {
+      "label": "Wired Elements in Svelte",
+      "url": "https://codesandbox.io/s/wired-elements-svelte-4hfkb"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/rough-stuff/wired-elements#install"
+    },
+    {
+      "label": "here",
+      "url": "https://github.com/rough-stuff/wired-elements/tree/master/src"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/rough-stuff/wired-elements#usage"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/rough-stuff/wired-elements#use-it-in-your-html"
+    },
+    {
+      "label": "here",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/Web_Components"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/rough-stuff/wired-elements#component-api"
+    },
+    {
+      "label": "docs folder",
+      "url": "https://github.com/rough-stuff/wired-elements/tree/master/docs"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/rough-stuff/wired-elements#demo"
+    },
+    {
+      "label": "wiredjs.com",
+      "url": "https://wiredjs.com/showcase.html"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/rough-stuff/wired-elements#credits"
+    },
+    {
+      "label": "RoughJS",
+      "url": "https://roughjs.com/"
+    },
+    {
+      "label": "Lit",
+      "url": "https://lit.dev/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/rough-stuff/wired-elements#contributors"
+    },
+    {
+      "label": "Rough suite of libraries",
+      "url": "https://github.com/rough-stuff"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/rough-stuff/wired-elements#financial-contributors"
+    },
+    {
+      "label": "Contribute",
+      "url": "https://opencollective.com/rough/contribute"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/rough-stuff/wired-elements#individuals"
+    },
+    {
+      "label": "",
+      "url": "https://opencollective.com/rough"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/rough-stuff/wired-elements#organizations"
+    },
+    {
+      "label": "Contribute",
+      "url": "https://opencollective.com/rough/contribute"
+    },
+    {
+      "label": "",
+      "url": "https://opencollective.com/rough/organization/0/website"
+    },
+    {
+      "label": "",
+      "url": "https://opencollective.com/rough/organization/1/website"
+    },
+    {
+      "label": "",
+      "url": "https://opencollective.com/rough/organization/2/website"
+    },
+    {
+      "label": "",
+      "url": "https://opencollective.com/rough/organization/3/website"
+    },
+    {
+      "label": "",
+      "url": "https://opencollective.com/rough/organization/4/website"
+    },
+    {
+      "label": "",
+      "url": "https://opencollective.com/rough/organization/5/website"
+    },
+    {
+      "label": "",
+      "url": "https://opencollective.com/rough/organization/6/website"
+    },
+    {
+      "label": "",
+      "url": "https://opencollective.com/rough/organization/7/website"
+    },
+    {
+      "label": "",
+      "url": "https://opencollective.com/rough/organization/8/website"
+    },
+    {
+      "label": "",
+      "url": "https://opencollective.com/rough/organization/9/website"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/rough-stuff/wired-elements#license"
+    },
+    {
+      "label": "MIT License",
+      "url": "https://github.com/rough-stuff/wired-elements/blob/master/LICENSE"
+    },
+    {
+      "label": "Preet Shihn",
+      "url": "https://twitter.com/preetster"
+    }
+  ],
+  "root_files": [
+    ".github",
+    "docs",
+    "examples",
+    "experimental",
+    "src",
+    ".gitignore",
+    ".npmignore",
+    "CHANGELOG.md",
+    "LICENSE",
+    "README.md",
+    "package-lock.json",
+    "package.json",
+    "tsconfig.json",
+    "tslint.json"
+  ],
+  "release_count": 13,
+  "status": "verified"
+}

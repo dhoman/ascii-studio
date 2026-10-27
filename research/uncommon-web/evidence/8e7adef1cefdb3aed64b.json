@@ -1,0 +1,139 @@
+{
+  "url": "https://github.com/pqoqubbw/icons",
+  "final_url": "https://github.com/pqoqubbw/icons",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:48:12.227216+00:00",
+  "stars": 8233,
+  "forks": 291,
+  "description": "beautifully crafted animated icons",
+  "homepage": "https://lucide-animated.com",
+  "topics": [],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2024-10-31T21:39:28.000Z",
+  "branch": "main",
+  "commit": "4662fff2b60fdcf4751b32013606756caf7c4c26",
+  "readme": "lucide-animated is beautifully crafted animated icons. Demo → lucide-animated Sponsorship → lucide-animated/sponsorship Svelte icons: movingicons.dev by @jis3r Vue icons: imfenghuang.github.io/icons by @imfenghuang Angular icons: ajitzero/animated-icons by @ajitzero Flutter icons: flutter_lucide_animated by @ravikovind Contributing We welcome contributions to lucide-animated! Please read our contributing guidelines on how to submit improvements and new icons. Terms of Use Feel free to use these components in personal and commercial projects. However, while the tutorials and demos are available for your use as-is, they cannot be redistributed or resold. Let’s keep things fair and respect each other’s work. If you have any questions or just want to say hi, feel free to reach out to me on X 👉 @pqoqubbw. Notes This project is a work in progress, and i'm continuously working to improve and expand this collection. I’d love to hear your feedback or see your contributions as the project evolves!",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://vercel.com/oss"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pqoqubbw/icons#lucide-animated-is-beautifully-crafted-animated-icons"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pqoqubbw/icons/blob/main/public/og.png"
+    },
+    {
+      "label": "lucide-animated",
+      "url": "https://lucide-animated.com"
+    },
+    {
+      "label": "lucide-animated/sponsorship",
+      "url": "https://lucide-animated.com/sponsorship"
+    },
+    {
+      "label": "movingicons.dev",
+      "url": "https://www.movingicons.dev/"
+    },
+    {
+      "label": "@jis3r",
+      "url": "https://github.com/jis3r"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pqoqubbw/icons#svelte-icons-movingiconsdev-by-jis3r"
+    },
+    {
+      "label": "imfenghuang.github.io/icons",
+      "url": "https://imfenghuang.github.io/icons/"
+    },
+    {
+      "label": "@imfenghuang",
+      "url": "https://github.com/imfenghuang"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pqoqubbw/icons#vue-icons-imfenghuanggithubioicons-by-imfenghuang"
+    },
+    {
+      "label": "ajitzero/animated-icons",
+      "url": "https://github.com/ajitzero/animated-icons"
+    },
+    {
+      "label": "@ajitzero",
+      "url": "https://github.com/ajitzero"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pqoqubbw/icons#angular-icons-ajitzeroanimated-icons-by-ajitzero"
+    },
+    {
+      "label": "flutter_lucide_animated",
+      "url": "https://pub.dev/packages/flutter_lucide_animated"
+    },
+    {
+      "label": "@ravikovind",
+      "url": "https://github.com/ravikovind"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pqoqubbw/icons#flutter-icons-flutter_lucide_animated-by-ravikovind"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pqoqubbw/icons#contributing"
+    },
+    {
+      "label": "contributing guidelines",
+      "url": "https://github.com/pqoqubbw/icons/blob/main/CONTRIBUTING.md"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pqoqubbw/icons#terms-of-use"
+    },
+    {
+      "label": "@pqoqubbw",
+      "url": "https://x.com/pqoqubbw"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pqoqubbw/icons#notes"
+    }
+  ],
+  "root_files": [
+    ".github",
+    ".vscode",
+    "actions",
+    "app",
+    "components",
+    "fonts",
+    "helpers",
+    "hooks",
+    "icons",
+    "lib",
+    "providers",
+    "public",
+    "scripts",
+    "seo",
+    ".gitignore",
+    "CONTRIBUTING.md",
+    "LICENSE",
+    "README.md",
+    "biome.jsonc",
+    "constants.ts",
+    "next.config.ts",
+    "package.json",
+    "pnpm-lock.yaml",
+    "pnpm-workspace.yaml",
+    "postcss.config.mjs",
+    "proxy.ts",
+    "registry.json",
+    "tsconfig.json"
+  ],
+  "release_count": 0,
+  "status": "verified"
+}

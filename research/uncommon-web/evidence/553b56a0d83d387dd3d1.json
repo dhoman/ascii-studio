@@ -1,0 +1,486 @@
+{
+  "url": "https://github.com/liabru/matter-js",
+  "final_url": "https://github.com/liabru/matter-js",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:47:58.807208+00:00",
+  "stars": 18489,
+  "forks": 1995,
+  "description": "a 2D rigid body physics engine for the web ▲● ■",
+  "homepage": "",
+  "topics": [
+    "canvas",
+    "javascript",
+    "physics",
+    "physics-engine",
+    "rigid-bodies",
+    "web"
+  ],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2014-02-19T14:16:17.000Z",
+  "branch": "master",
+  "commit": "b8ee71cd7f9b49f53639ddaedd6254f1929bcbe5",
+  "readme": "Matter.js is a JavaScript 2D rigid body physics engine for the web brm.io/matter-js Demos ・ Gallery ・ Features ・ Plugins ・ Install ・ Usage ・ Examples ・ Docs ・ Wiki ・ References ・ License Demos Mixed Shapes Solid Shapes Concave SVG Paths Concave Terrain Concave Bodies Compound Bodies Newton's Cradle Wrecking Ball Slingshot Game Rounded Corners Views Time Scaling Body Manipulation Composite Manipulation Raycasting Sprites Pyramid Car Catapult Reverse Gravity Bridge Avalanche Basic Soft Bodies Cloth Events Collision Filtering Chains Ball Pool Stack Circle Stack Compound Stack Restitution Friction Air Friction Static Friction Sleeping Beach Balls Stress 1 Stress 2 Sensors Gallery See how others are using matter.js physics Patrick Heng by Patrick Heng USELESS by Nice and Serious Secret 7 by Goodness New Company by New Company Game of The Year by Google Pablo The Flamingo by Nathan Gordon Les métamorphoses de Mr. Kalia by Lab212 Phaser by Photon Storm Sorry I Have No Filter by Jessica Walsh Fuse by Fuse Glyphfinder by überdosis Isolation by sabato studio more... Features Rigid bodies Compound bodies Composite bodies Concave and convex hulls Physical properties (mass, area, density etc.) Restitution (elastic and inelastic collisions) Collisions (broad-phase, mid-phase and narrow-phase) Stable stacking and resting Conservation of momentum Friction and resistance Events Constraints Gravity Sleeping and static bodies Plugins Rounded corners (chamfering) Views (translate, zoom) Collision queries (raycasting, region tests) Time scaling (slow-mo, speed-up) Canvas renderer (supports vectors and textures) MatterTools for creating, testing and debugging worlds World state serialisation (requires resurrect.js) Cross-browser and Node.js support (Chrome, Firefox, Safari, IE8+) Mobile-compatible (touch, responsive) An original JavaScript physics implementation (not a port) Install You can install using package managers npm and Yarn using: npm install matter-js Alternatively you can download a stable release or try the latest experimental alpha build (master) and include the script in your web page: <script src=\"matter.js\" type=\"text/javascript\"></script> Performance with other tools (e.g. Webpack, Vue etc.) Bundlers and frameworks may reduce real-time performance when using their default configs, especially in development modes. When using Webpack, the default sourcemap config can have a large impact, for a solution see issue. When using Vue.js, watchers can have a large impact, for a solution see issue. Usage Visit the Getting started wiki page for a minimal usage example which should work in both browsers and Node.js. Also see the Running and Rendering wiki pages, which show how to use your own game and rendering loops. Tutorials See the list of tutorials. Examples See the examples directory which contains the source for all demos. There are even more examples on codepen. Plugins The engine can be extended through plugins, see these resources: Using plugins Creating plugins List of plugins matter-plugin-boilerplate Documentation See the API Documentation and the wiki Building and Contributing To build you must first install node.js and pnpm, then run pnpm install This will install the required build dependencies, then run pnpm run start to spawn a development server. For information on contributing see CONTRIBUTING.md. Changelog To see what's new or changed in the latest version, see the changelog. References See the wiki page on References. License Matter.js is licensed under The MIT License (MIT) Copyright (c) 2014 Liam Brummitt This license is also supplied with the release and source code. As stated in the license, absolutely no warranty is provided.",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/8066ce91afbf9ba1ec4ce8dca24cdd400e8f5c367e76f89b17569e3dfe21901a/68747470733a2f2f62726d2e696f2f6d61747465722d6a732f696d672f6d61747465722d6a732e737667"
+    },
+    {
+      "label": "brm.io/matter-js",
+      "url": "https://brm.io/matter-js/"
+    },
+    {
+      "label": "Demos",
+      "url": "https://github.com/liabru/matter-js#demos"
+    },
+    {
+      "label": "Gallery",
+      "url": "https://github.com/liabru/matter-js#gallery"
+    },
+    {
+      "label": "Features",
+      "url": "https://github.com/liabru/matter-js#features"
+    },
+    {
+      "label": "Plugins",
+      "url": "https://github.com/liabru/matter-js#plugins"
+    },
+    {
+      "label": "Install",
+      "url": "https://github.com/liabru/matter-js#install"
+    },
+    {
+      "label": "Usage",
+      "url": "https://github.com/liabru/matter-js#usage"
+    },
+    {
+      "label": "Examples",
+      "url": "https://github.com/liabru/matter-js#examples"
+    },
+    {
+      "label": "Docs",
+      "url": "https://github.com/liabru/matter-js#documentation"
+    },
+    {
+      "label": "Wiki",
+      "url": "https://github.com/liabru/matter-js/wiki"
+    },
+    {
+      "label": "References",
+      "url": "https://github.com/liabru/matter-js#references"
+    },
+    {
+      "label": "License",
+      "url": "https://github.com/liabru/matter-js#license"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/liabru/matter-js#demos"
+    },
+    {
+      "label": "Mixed Shapes",
+      "url": "https://brm.io/matter-js/demo/#mixed"
+    },
+    {
+      "label": "Solid Shapes",
+      "url": "https://brm.io/matter-js/demo/#mixedSolid"
+    },
+    {
+      "label": "Concave SVG Paths",
+      "url": "https://brm.io/matter-js/demo/#svg"
+    },
+    {
+      "label": "Concave Terrain",
+      "url": "https://brm.io/matter-js/demo/#terrain"
+    },
+    {
+      "label": "Concave Bodies",
+      "url": "https://brm.io/matter-js/demo/#concave"
+    },
+    {
+      "label": "Compound Bodies",
+      "url": "https://brm.io/matter-js/demo/#compound"
+    },
+    {
+      "label": "Newton's Cradle",
+      "url": "https://brm.io/matter-js/demo/#newtonsCradle"
+    },
+    {
+      "label": "Wrecking Ball",
+      "url": "https://brm.io/matter-js/demo/#wreckingBall"
+    },
+    {
+      "label": "Slingshot Game",
+      "url": "https://brm.io/matter-js/demo/#slingshot"
+    },
+    {
+      "label": "Rounded Corners",
+      "url": "https://brm.io/matter-js/demo/#rounded"
+    },
+    {
+      "label": "Views",
+      "url": "https://brm.io/matter-js/demo/#views"
+    },
+    {
+      "label": "Time Scaling",
+      "url": "https://brm.io/matter-js/demo/#timescale"
+    },
+    {
+      "label": "Body Manipulation",
+      "url": "https://brm.io/matter-js/demo/#manipulation"
+    },
+    {
+      "label": "Composite Manipulation",
+      "url": "https://brm.io/matter-js/demo/#compositeManipulation"
+    },
+    {
+      "label": "Raycasting",
+      "url": "https://brm.io/matter-js/demo/#raycasting"
+    },
+    {
+      "label": "Sprites",
+      "url": "https://brm.io/matter-js/demo/#sprites"
+    },
+    {
+      "label": "Pyramid",
+      "url": "https://brm.io/matter-js/demo/#pyramid"
+    },
+    {
+      "label": "Car",
+      "url": "https://brm.io/matter-js/demo/#car"
+    },
+    {
+      "label": "Catapult",
+      "url": "https://brm.io/matter-js/demo/#catapult"
+    },
+    {
+      "label": "Reverse Gravity",
+      "url": "https://brm.io/matter-js/demo/#gravity"
+    },
+    {
+      "label": "Bridge",
+      "url": "https://brm.io/matter-js/demo/#bridge"
+    },
+    {
+      "label": "Avalanche",
+      "url": "https://brm.io/matter-js/demo/#avalanche"
+    },
+    {
+      "label": "Basic Soft Bodies",
+      "url": "https://brm.io/matter-js/demo/#softBody"
+    },
+    {
+      "label": "Cloth",
+      "url": "https://brm.io/matter-js/demo/#cloth"
+    },
+    {
+      "label": "Events",
+      "url": "https://brm.io/matter-js/demo/#events"
+    },
+    {
+      "label": "Collision Filtering",
+      "url": "https://brm.io/matter-js/demo/#collisionFiltering"
+    },
+    {
+      "label": "Chains",
+      "url": "https://brm.io/matter-js/demo/#chains"
+    },
+    {
+      "label": "Ball Pool",
+      "url": "https://brm.io/matter-js/demo/#ballPool"
+    },
+    {
+      "label": "Stack",
+      "url": "https://brm.io/matter-js/demo/#stack"
+    },
+    {
+      "label": "Circle Stack",
+      "url": "https://brm.io/matter-js/demo/#circleStack"
+    },
+    {
+      "label": "Compound Stack",
+      "url": "https://brm.io/matter-js/demo/#compoundStack"
+    },
+    {
+      "label": "Restitution",
+      "url": "https://brm.io/matter-js/demo/#restitution"
+    },
+    {
+      "label": "Friction",
+      "url": "https://brm.io/matter-js/demo/#friction"
+    },
+    {
+      "label": "Air Friction",
+      "url": "https://brm.io/matter-js/demo/#airFriction"
+    },
+    {
+      "label": "Static Friction",
+      "url": "https://brm.io/matter-js/demo/#staticFriction"
+    },
+    {
+      "label": "Sleeping",
+      "url": "https://brm.io/matter-js/demo/#sleeping"
+    },
+    {
+      "label": "Beach Balls",
+      "url": "https://brm.io/matter-js/demo/#beachBalls"
+    },
+    {
+      "label": "Stress 1",
+      "url": "https://brm.io/matter-js/demo/#stress"
+    },
+    {
+      "label": "Stress 2",
+      "url": "https://brm.io/matter-js/demo/#stress2"
+    },
+    {
+      "label": "Sensors",
+      "url": "https://brm.io/matter-js/demo/#sensors"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/liabru/matter-js#gallery"
+    },
+    {
+      "label": "Patrick Heng",
+      "url": "https://patrickheng.com/"
+    },
+    {
+      "label": "USELESS",
+      "url": "https://useless.london/"
+    },
+    {
+      "label": "Secret 7",
+      "url": "https://secret-7.com/"
+    },
+    {
+      "label": "New Company",
+      "url": "https://www.new.company/"
+    },
+    {
+      "label": "Game of The Year",
+      "url": "https://gameoftheyear.withgoogle.com/"
+    },
+    {
+      "label": "Pablo The Flamingo",
+      "url": "https://pablotheflamingo.com/"
+    },
+    {
+      "label": "Les métamorphoses de Mr. Kalia",
+      "url": "https://lab212.org/oeuvres/2:art/18/Les-metamorphoses-de-Mr-Kalia"
+    },
+    {
+      "label": "Phaser",
+      "url": "https://phaser.io/"
+    },
+    {
+      "label": "Sorry I Have No Filter",
+      "url": "https://sorryihavenofilter.com/pages/about/"
+    },
+    {
+      "label": "Fuse",
+      "url": "https://fuse.blog/"
+    },
+    {
+      "label": "Glyphfinder",
+      "url": "https://www.glyphfinder.com/"
+    },
+    {
+      "label": "Isolation",
+      "url": "https://isolation.is/postcards/my-week"
+    },
+    {
+      "label": "more...",
+      "url": "https://github.com/liabru/matter-js/wiki/Gallery"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/liabru/matter-js#features"
+    },
+    {
+      "label": "MatterTools",
+      "url": "https://github.com/liabru/matter-tools"
+    },
+    {
+      "label": "resurrect.js",
+      "url": "https://github.com/skeeto/resurrect-js"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/liabru/matter-js#install"
+    },
+    {
+      "label": "npm",
+      "url": "https://www.npmjs.org/package/matter-js"
+    },
+    {
+      "label": "Yarn",
+      "url": "https://yarnpkg.com/"
+    },
+    {
+      "label": "stable release",
+      "url": "https://github.com/liabru/matter-js/tags"
+    },
+    {
+      "label": "alpha build",
+      "url": "https://github.com/liabru/matter-js/tree/master/build"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/liabru/matter-js#performance-with-other-tools-eg-webpack-vue-etc"
+    },
+    {
+      "label": "Webpack",
+      "url": "https://webpack.js.org/"
+    },
+    {
+      "label": "issue",
+      "url": "https://github.com/liabru/matter-js/issues/1001"
+    },
+    {
+      "label": "Vue.js",
+      "url": "https://vuejs.org/"
+    },
+    {
+      "label": "issue",
+      "url": "https://github.com/liabru/matter-js/issues/1001#issuecomment-998911435"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/liabru/matter-js#usage"
+    },
+    {
+      "label": "Getting started",
+      "url": "https://github.com/liabru/matter-js/wiki/Getting-started"
+    },
+    {
+      "label": "Running",
+      "url": "https://github.com/liabru/matter-js/wiki/Running"
+    },
+    {
+      "label": "Rendering",
+      "url": "https://github.com/liabru/matter-js/wiki/Rendering"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/liabru/matter-js#tutorials"
+    },
+    {
+      "label": "tutorials",
+      "url": "https://github.com/liabru/matter-js/wiki/Tutorials"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/liabru/matter-js#examples"
+    },
+    {
+      "label": "examples",
+      "url": "https://github.com/liabru/matter-js/tree/master/examples"
+    },
+    {
+      "label": "demos",
+      "url": "https://github.com/liabru/matter-js#demos"
+    },
+    {
+      "label": "codepen",
+      "url": "https://codepen.io/collection/Fuagy/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/liabru/matter-js#plugins"
+    },
+    {
+      "label": "Using plugins",
+      "url": "https://github.com/liabru/matter-js/wiki/Using-plugins"
+    },
+    {
+      "label": "Creating plugins",
+      "url": "https://github.com/liabru/matter-js/wiki/Creating-plugins"
+    },
+    {
+      "label": "List of plugins",
+      "url": "https://github.com/liabru/matter-js/wiki/List-of-plugins"
+    },
+    {
+      "label": "matter-plugin-boilerplate",
+      "url": "https://github.com/liabru/matter-plugin-boilerplate"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/liabru/matter-js#documentation"
+    },
+    {
+      "label": "API Documentation",
+      "url": "https://brm.io/matter-js/docs/"
+    },
+    {
+      "label": "wiki",
+      "url": "https://github.com/liabru/matter-js/wiki"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/liabru/matter-js#building-and-contributing"
+    },
+    {
+      "label": "node.js",
+      "url": "https://nodejs.org/"
+    },
+    {
+      "label": "pnpm",
+      "url": "https://pnpm.io/"
+    },
+    {
+      "label": "CONTRIBUTING.md",
+      "url": "https://github.com/liabru/matter-js/blob/master/CONTRIBUTING.md"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/liabru/matter-js#changelog"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/liabru/matter-js/blob/master/CHANGELOG.md"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/liabru/matter-js#references"
+    },
+    {
+      "label": "References",
+      "url": "https://github.com/liabru/matter-js/wiki/References"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/liabru/matter-js#license"
+    },
+    {
+      "label": "The MIT License (MIT)",
+      "url": "https://opensource.org/licenses/MIT"
+    }
+  ],
+  "root_files": [
+    ".github/workflows",
+    "build",
+    "demo",
+    "examples",
+    "src",
+    "test",
+    ".gitignore",
+    ".npmrc",
+    "CHANGELOG.md",
+    "CONTRIBUTING.md",
+    "LICENSE",
+    "README.md",
+    "RELEASE.md",
+    "eslint.config.mjs",
+    "package.json",
+    "pnpm-lock.yaml",
+    "pnpm-workspace.yaml",
+    "rollup.config.demo.mjs",
+    "rollup.config.mjs",
+    "yuidoc.json"
+  ],
+  "release_count": 0,
+  "status": "verified"
+}

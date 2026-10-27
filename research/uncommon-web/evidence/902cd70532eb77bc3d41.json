@@ -1,0 +1,111 @@
+{
+  "url": "https://github.com/khang-nd/7.css",
+  "final_url": "https://github.com/khang-nd/7.css",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:47:57.011194+00:00",
+  "stars": 2465,
+  "forks": 124,
+  "description": "A JS-independent, tree-shakeable CSS framework for building faithful recreations of the Windows 7 UI.",
+  "homepage": "https://khang-nd.github.io/7.css/",
+  "topics": [
+    "css",
+    "html",
+    "scss",
+    "ui-design",
+    "windows-7"
+  ],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2020-12-30T03:45:16.000Z",
+  "branch": "main",
+  "commit": "76d29abe7e76598fc521e707933f9ffa1b320259",
+  "readme": "7.css demo.mp4 7.css is a CSS framework that takes semantic HTML and styles them to the Windows 7 design. It is built on top of XP.css, which is an extension of 98.CSS. It does not ship with any JavaScript, so it is compatible with your frontend framework of choice. 📦 Installation / Usage Directly via unpkg: <!DOCTYPE html> <html> <head> <title>7.css example</title> <meta charset=\"UTF-8\" /> <link rel=\"stylesheet\" href=\"https://unpkg.com/7.css\" /> </head> <body> <div class=\"window\" style=\"margin: 32px; width: 250px\"> <div class=\"title-bar\"> <div class=\"title-bar-text\">My First Program</div> </div> <div class=\"window-body\"> <p>Hello, world!</p> </div> </div> </body> </html> Via npm: npm install 7.css Then import it as below: import \"7.css/dist/7.css\"; 📚 Documentation / Demo Refer to the documentation page for specific instructions on this framework's components. 🛠 Developing Clone the repo and run npm install. The core styles are managed in gui. You can use npm start to start a development environment that will watch for file changes and rebuild the files, reloading your browser in the process. You can run a build manually with npm run build. This will write to the dist/ directory. 📝 Issues, Contributing, etc. You are so welcome to report issues, help out with contributions or whatever you could think of to improve this lovely UI framework. ⚙ Integrations 7.css has been seen adopted in the following JS framework projects by the community: Vue - win7-ui Svelte - svelte-7.css (work in progress) 📜 Changelog Refer to Releases.",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://github.com/khang-nd/7.css#7css"
+    },
+    {
+      "label": "",
+      "url": "http://npm.im/7.css"
+    },
+    {
+      "label": "",
+      "url": "https://unpkg.com/7.css"
+    },
+    {
+      "label": "XP.css",
+      "url": "https://github.com/botoxparty/XP.css"
+    },
+    {
+      "label": "98.CSS",
+      "url": "https://github.com/jdan/98.css"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/khang-nd/7.css#-installation--usage"
+    },
+    {
+      "label": "unpkg",
+      "url": "https://unpkg.com/"
+    },
+    {
+      "label": "npm",
+      "url": "https://www.npmjs.com/package/7.css"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/khang-nd/7.css#-documentation--demo"
+    },
+    {
+      "label": "documentation page",
+      "url": "https://khang-nd.github.io/7.css/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/khang-nd/7.css#-developing"
+    },
+    {
+      "label": "gui",
+      "url": "https://github.com/khang-nd/7.css/tree/main/gui"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/khang-nd/7.css#-issues-contributing-etc"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/khang-nd/7.css#-integrations"
+    },
+    {
+      "label": "win7-ui",
+      "url": "https://github.com/Visnalize/win7-ui"
+    },
+    {
+      "label": "svelte-7.css",
+      "url": "https://github.com/JericoFX/svelte-7.css"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/khang-nd/7.css#-changelog"
+    },
+    {
+      "label": "Releases",
+      "url": "https://github.com/khang-nd/7.css/releases"
+    }
+  ],
+  "root_files": [
+    "docs",
+    "gui",
+    ".gitignore",
+    ".prettierrc",
+    "LICENSE",
+    "README.md",
+    "build.js",
+    "package-lock.json",
+    "package.json",
+    "server.js"
+  ],
+  "release_count": 19,
+  "status": "verified"
+}

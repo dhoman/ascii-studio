@@ -1,0 +1,243 @@
+{
+  "url": "https://github.com/thednp/kute.js",
+  "final_url": "https://github.com/thednp/kute.js",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:48:20.993147+00:00",
+  "stars": 2643,
+  "forks": 173,
+  "description": "KUTE.js is a JavaScript animation engine for modern browsers. ",
+  "homepage": "http://thednp.github.io/kute.js",
+  "topics": [
+    "animation-engine",
+    "easing-functions",
+    "javascript",
+    "nodejs-modules",
+    "tween"
+  ],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2015-03-20T15:42:02.000Z",
+  "branch": "master",
+  "commit": "c23b845458b3bd4f55ad24458ce9d8f8821fcf76",
+  "readme": "KUTE.js A modern JavaScript animation engine built on ES6+ standards with strong TypeScript definitions and most essential features for the web with easy to use methods to set up high performance, cross-browser animations. The focus is code quality, flexibility, performance and size. KUTE.js packs a series of components for presentation attributes, SVG transform, draw SVG strokes and path morphing, text string write up or number countdowns, plus additional CSS properties like colors, border-radius or typographic properties. For components documentation, examples and other cool tips, check the demo. Components KUTE.js includes 18 components, but not all of them are bundled with the default distribution package: backgroundPosition - enables the animation for the backgroundPosition CSS property borderRadius - enables the animation for all the borderRadius properties boxModel - enables the animation for the boxModel properties like top , left, width, etc clipProperty - enables the animation for the clip property colorProperties - enables the animation for the color properties like color, backgroundColor filterEffects - enables the animation for the filter property htmlAttributes - enables the animation for any numeric as well as some color based HTML Attributes opacityProperty - enables the animation for the opacity property scrollProperty - enables the animation for the window/Element scrollTop Object property shadowProperties - enables the animation for the shadowProperties properties: textShadow & boxShadow svgCubicMorph - enables the animation for the d Presentation Attribute of the <path> SVGElement targets; this implements some Raphael.js functionality svgMorph - enables the animation for the d Presentation Attribute of the <path> SVGElement targets; this component implements some D3.js and flubber functionality svgDraw - enables the animation for the strokeDasharray and strokeDashoffset CSS properties specific to <path> SVGElement svgTransform - enables the animation for the transform presentation attribute textProperties - enables the animation for numeric HTMLTextElement related CSS properties like fontSize or letterSpacing textWrite - enables the animation for the content of various strings transformFunctions - enables the animation for the transform CSS3 property, the default component bundled with the official build transformLegacy - enables the animation for the transform CSS3 property on legacy browsers IE9+, not included with the official build, but can be used in your custom builds transformMatrix - enables the animation for the transform CSS3 property; this component implements DOMMatrix() API and is super light All above mentioned components have a BASE version which doesn't include value processing, and their purpose is to provide a way to ship your super light version of your application. Wiki For a complete developer guide, usage and stuff like npm, visit the wiki. Special Thanks Mike Bostock for his awesome D3.js, one of the sources for our reworked SVGMorph component. Noah Veltman for his awesome flubber, another one of the sources for the SVGMorph component. Andrew Willems for his awesome Stackoverflow answer resulting in the creation of our SVGCubicMorph component. Dmitry Baranovskiy for his awesome Raphael.js, another source for our SVGCubicMorph component. @dalisoft contributed a great deal to the performance and functionality of previous versions of KUTE.js. Contributions Contributors & Collaborators License MIT License",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://github.com/thednp/kute.js#kutejs"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/thednp/kute.js/actions/workflows/ci.yml"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/kute.js"
+    },
+    {
+      "label": "",
+      "url": "http://npm-stat.com/charts.html?package=kute.js"
+    },
+    {
+      "label": "",
+      "url": "https://www.jsdelivr.com/package/npm/kute.js"
+    },
+    {
+      "label": "",
+      "url": "https://cdnjs.com/libraries/kute.js"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/6ce8baeb4be0a3d39c10ec2beef62d8e1ab1750c8af9719f1b2ad3d6546bab5e/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f7376672d2d706174682d2d636f6d6d616e6465722d322e312e31312d627269676874677265656e"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/4fe1caf0388e0474e3b67f9e8b003abff8ba6f383922d5c707af17072c6e15a3/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f40746865646e702f62657a6965722d2d656173696e672d312e302e31342d627269676874677265656e"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/d2e0b591084a374a9a6d36b80986299b298932af6d4af8b72cc1e0663a811f1b/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f747970657363726970742d362e302e322d627269676874677265656e"
+    },
+    {
+      "label": "demo",
+      "url": "http://thednp.github.io/kute.js/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/thednp/kute.js#components"
+    },
+    {
+      "label": "backgroundPosition",
+      "url": "http://thednp.github.io/kute.js/backgroundPosition.html"
+    },
+    {
+      "label": "borderRadius",
+      "url": "http://thednp.github.io/kute.js/borderRadius.html"
+    },
+    {
+      "label": "boxModel",
+      "url": "http://thednp.github.io/kute.js/boxModel.html"
+    },
+    {
+      "label": "clipProperty",
+      "url": "http://thednp.github.io/kute.js/clipProperty.html"
+    },
+    {
+      "label": "colorProperties",
+      "url": "http://thednp.github.io/kute.js/colorProperties.html"
+    },
+    {
+      "label": "filterEffects",
+      "url": "http://thednp.github.io/kute.js/filterEffects.html"
+    },
+    {
+      "label": "htmlAttributes",
+      "url": "http://thednp.github.io/kute.js/htmlAttributes.html"
+    },
+    {
+      "label": "opacityProperty",
+      "url": "http://thednp.github.io/kute.js/opacityProperty.html"
+    },
+    {
+      "label": "scrollProperty",
+      "url": "http://thednp.github.io/kute.js/scrollProperty.html"
+    },
+    {
+      "label": "shadowProperties",
+      "url": "http://thednp.github.io/kute.js/shadowProperties.html"
+    },
+    {
+      "label": "svgCubicMorph",
+      "url": "http://thednp.github.io/kute.js/svgCubicMorph.html"
+    },
+    {
+      "label": "Raphael.js",
+      "url": "https://dmitrybaranovskiy.github.io/raphael/"
+    },
+    {
+      "label": "svgMorph",
+      "url": "http://thednp.github.io/kute.js/svgMorph.html"
+    },
+    {
+      "label": "D3.js",
+      "url": "https://github.com/d3/d3"
+    },
+    {
+      "label": "flubber",
+      "url": "https://github.com/veltman/flubber"
+    },
+    {
+      "label": "svgDraw",
+      "url": "http://thednp.github.io/kute.js/svgDraw.html"
+    },
+    {
+      "label": "svgTransform",
+      "url": "http://thednp.github.io/kute.js/svgTransform.html"
+    },
+    {
+      "label": "textProperties",
+      "url": "http://thednp.github.io/kute.js/textProperties.html"
+    },
+    {
+      "label": "textWrite",
+      "url": "http://thednp.github.io/kute.js/textWrite.html"
+    },
+    {
+      "label": "transformFunctions",
+      "url": "http://thednp.github.io/kute.js/transformFunctions.html"
+    },
+    {
+      "label": "transformMatrix",
+      "url": "http://thednp.github.io/kute.js/transformMatrix.html"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/thednp/kute.js#wiki"
+    },
+    {
+      "label": "the wiki",
+      "url": "https://github.com/thednp/kute.js/wiki"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/thednp/kute.js#special-thanks"
+    },
+    {
+      "label": "Mike Bostock",
+      "url": "https://bost.ocks.org/mike/"
+    },
+    {
+      "label": "D3.js",
+      "url": "https://github.com/d3/d3"
+    },
+    {
+      "label": "SVGMorph",
+      "url": "http://thednp.github.io/kute.js/svgMorph.html"
+    },
+    {
+      "label": "Noah Veltman",
+      "url": "https://github.com/veltman"
+    },
+    {
+      "label": "flubber",
+      "url": "https://github.com/veltman/flubber"
+    },
+    {
+      "label": "Andrew Willems",
+      "url": "https://stackoverflow.com/users/5218951/andrew-willems"
+    },
+    {
+      "label": "Stackoverflow answer",
+      "url": "https://stackoverflow.com/questions/35560989/javascript-how-to-determine-a-svg-path-draw-direction"
+    },
+    {
+      "label": "SVGCubicMorph",
+      "url": "http://thednp.github.io/kute.js/svgCubicMorph.html"
+    },
+    {
+      "label": "Dmitry Baranovskiy",
+      "url": "https://dmitry.baranovskiy.com/"
+    },
+    {
+      "label": "Raphael.js",
+      "url": "https://dmitrybaranovskiy.github.io/raphael/"
+    },
+    {
+      "label": "@dalisoft",
+      "url": "https://github.com/dalisoft"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/thednp/kute.js#contributions"
+    },
+    {
+      "label": "Contributors & Collaborators",
+      "url": "https://github.com/thednp/kute.js/graphs/contributors"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/thednp/kute.js#license"
+    },
+    {
+      "label": "MIT License",
+      "url": "https://github.com/thednp/kute.js/blob/master/LICENSE"
+    }
+  ],
+  "root_files": [
+    ".github",
+    "dist",
+    "docs",
+    "src",
+    "types",
+    ".gitignore",
+    ".npmignore",
+    "LICENSE",
+    "README.md",
+    "jsconfig.json",
+    "package.json",
+    "pnpm-lock.yaml",
+    "rolldown.config.js",
+    "tsconfig.json"
+  ],
+  "release_count": 42,
+  "status": "verified"
+}

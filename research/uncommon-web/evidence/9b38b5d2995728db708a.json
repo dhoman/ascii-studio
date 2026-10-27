@@ -1,0 +1,551 @@
+{
+  "url": "https://github.com/vasturiano/3d-force-graph",
+  "final_url": "https://github.com/vasturiano/3d-force-graph",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:48:22.877519+00:00",
+  "stars": 6484,
+  "forks": 1028,
+  "description": "3D force-directed graph component using ThreeJS/WebGL",
+  "homepage": "https://vasturiano.github.io/3d-force-graph/example/large-graph/",
+  "topics": [
+    "3d",
+    "3d-force-graph",
+    "d3js",
+    "data-visualization",
+    "force-directed-graphs",
+    "threejs",
+    "webgl"
+  ],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2017-02-27T04:09:20.000Z",
+  "branch": "master",
+  "commit": "5ccd00f47d72a571319da70ccac080bb8e09709f",
+  "readme": "3D Force-Directed Graph A web component to represent a graph data structure in a 3-dimensional space using a force-directed iterative layout. Uses ThreeJS/WebGL for 3D rendering and either d3-force-3d or ngraph for the underlying physics engine. See also the 2D canvas version, VR version and AR version. And check out the React bindings. Examples Basic (source) Asynchronous load (source) Larger graph (~4k elements) (source) Directional arrows (source) Directional moving particles (source) Curved lines and self links (source) Auto-colored nodes/links (source) Text as nodes (source) Images as nodes (source) HTML in nodes (source) Custom node geometries (source) Gradient Links (source) Text in Links (source) Orbit controls (source) Fly controls (source) Camera automatic orbitting (source) Click to focus on node (source) Click to expand/collapse nodes (source) Fix nodes after dragging (source) Fit graph to canvas (source) Highlight nodes/links (source) Multiple Node Selection (source) Dynamic data changes (source) Node collision detection (source) Manipulate link force distance (source) Emit link particles on demand (source) Force-directed tree (DAG mode) (source) yarn.lock dependency graph (DAG mode) (source) Add external objects to scene (source) Bloom Post-Processing Effect (source) Pause / Resume animation (source) ❤️ Support This Project If you find this module useful and would like to support its development, you can buy me a ☕. Your contributions help keep open-source sustainable! Quick start import ForceGraph3D from '3d-force-graph'; or using a script tag <script src=\"//cdn.jsdelivr.net/npm/3d-force-graph\"></script> then const myGraph = new ForceGraph3D(<myDOMElement>) .graphData(<myData>); API reference Initialisation new ForceGraph3d(<domElement>, { configOptions }) Config options Description Default controlType: str Which type of control to use to control the camera. Choice between trackball, orbit or fly. trackball rendererConfig: object Configuration parameters to pass to the ThreeJS WebGLRenderer constructor. { antialias: true, alpha: true } extraRenderers: array If you wish to include custom objects that require a dedicated renderer besides WebGL, such as CSS3DRenderer, include in this array those extra renderer instances. [] Data input Method Description Default graphData([data]) Getter/setter for graph data structure (see below for syntax details). Can also be used to apply incremental updates. { nodes: [], links: [] } jsonUrl([url]) URL of JSON file to load graph data directly from, as an alternative to specifying graphData directly. nodeId([str]) Node object accessor attribute for unique node id (used in link objects source/target). id linkSource([str]) Link object accessor attribute referring to id of source node. source linkTarget([str]) Link object accessor attribute referring to id of target node. target Container layout Method Description Default width([px]) Getter/setter for the canvas width. <window width> height([px]) Getter/setter for the canvas height. <window height> backgroundColor([str]) Getter/setter for the chart background color. #000011 showNavInfo([boolean]) Getter/setter for whether to show the navigation controls footer info. true Node styling Method Description Default nodeRelSize([num]) Getter/setter for the ratio of node sphere volume (cubic px) per value unit. 4 nodeVal([num, str or fn]) Node object accessor function, attribute or a numeric constant for the node numeric value (affects sphere volume). val nodeLabel([str or fn]) Node object accessor function or attribute for name (shown in label). Supports plain text, HTML string content or an HTML element. name nodeVisibility([boolean, str or fn]) Node object accessor function, attribute or a boolean constant for whether to display the node. true nodeColor([str or fn]) Node object accessor function or attribute for node color (affects sphere color). color nodeAutoColorBy([str or fn]) Node object accessor function (fn(node)) or attribute (e.g. 'type') to automatically group colors by. Only affects nodes without a color attribute. nodeOpacity([num]) Getter/setter for the nodes sphere opacity, between [0,1]. 0.75 nodeResolution([num]) Getter/setter for the geometric resolution of each node, expressed in how many slice segments to divide the circumference. Higher values yield smoother spheres. 8 nodeThreeObject([Object3d, str or fn]) Node object accessor function or attribute for generating a custom 3d object to render as graph nodes. Should return an instance of ThreeJS Object3d. If a falsy value is returned, the default 3d object type will be used instead for that node. default node object is a sphere, sized according to val and styled according to color. nodeThreeObjectExtend([bool, str or fn]) Node object accessor function, attribute or a boolean value for whether to replace the default node when using a custom nodeThreeObject (false) or to extend it (true). false nodePositionUpdate([fn(nodeObject, coords, node)]) Getter/setter for the custom function to call for updating the position of nodes at every render iteration. It receives the respective node ThreeJS Object3d, the coordinates of the node ({x,y,z} each), and the node's data. If the function returns a truthy value, the regular position update function will not run for that node. Link styling Method Description Default linkLabel([str or fn]) Link object accessor function or attribute for name (shown in label). Supports plain text, HTML string content or an HTML element. name linkVisibility([boolean, str or fn]) Link object accessor function, attribute or a boolean constant for whether to display the link line. A value of false maintains the link force without rendering it. true linkColor([str or fn]) Link object accessor function or attribute for line color. color linkAutoColorBy([str or fn]) Link object accessor function (fn(link)) or attribute (e.g. 'type') to automatically group colors by. Only affects links without a color attribute. linkOpacity([num]) Getter/setter for line opacity of links, between [0,1]. 0.2 linkWidth([num, str or fn]) Link object accessor function, attribute or a numeric constant for the link line width. A value of zero will render a ThreeJS Line whose width is constant (1px) regardless of distance. Values are rounded to the nearest decimal for indexing purposes. 0 linkResolution([num]) Getter/setter for the geometric resolution of each link, expressed in how many radial segments to divide the cylinder. Higher values yield smoother cylinders. Applicable only to links with positive width. 6 linkCurvature([num, str or fn]) Link object accessor function, attribute or a numeric constant for the curvature radius of the link line. Curved lines are represented as 3D bezier curves, and any numeric value is accepted. A value of 0 renders a straight line. 1 indicates a radius equal to half of the line length, causing the curve to approximate a semi-circle. For self-referencing links (source equal to target) the curve is represented as a loop around the node, with length proportional to the curvature value. Lines are curved clockwise for positive values, and counter-clockwise for negative values. Note that rendering curved lines is purely a visual effect and does not affect the behavior of the underlying forces. 0 linkCurveRotation([num, str or fn]) Link object accessor function, attribute or a numeric constant for the rotation along the line axis to apply to the curve. Has no effect on straight lines. At 0 rotation, the curve is oriented in the direction of the intersection with the XY plane. The rotation angle (in radians) will rotate the curved line clockwise around the \"start-to-end\" axis from this reference orientation. 0 linkMaterial([Material, str or fn]) Link object accessor function or attribute for specifying a custom material to style the graph links with. Should return an instance of ThreeJS Material. If a falsy value is returned, the default material will be used instead for that link. default link material is MeshLambertMaterial styled according to color and opacity. linkThreeObject([Object3d, str or fn]) Link object accessor function or attribute for generating a custom 3d object to render as graph links. Should return an instance of ThreeJS Object3d. If a falsy value is returned, the default 3d object type will be used instead for that link. default link object is a line or cylinder, sized according to width and styled according to material. linkThreeObjectExtend([bool, str or fn]) Link object accessor function, attribute or a boolean value for whether to replace the default link when using a custom linkThreeObject (false) or to extend it (true). false linkPositionUpdate([fn(linkObject, { start, end }, link)]) Getter/setter for the custom function to call for updating the position of links at every render iteration. It receives the respective link ThreeJS Object3d, the start and end coordinates of the link ({x,y,z} each), and the link's data. If the function returns a truthy value, the regular position update function will not run for that link. linkDirectionalArrowLength([num, str or fn]) Link object accessor function, attribute or a numeric constant for the length of the arrow head indicating the link directionality. The arrow is displayed directly over the link line, and points in the direction of source > target. A value of 0 hides the arrow. 0 linkDirectionalArrowColor([str or fn]) Link object accessor function or attribute for the color of the arrow head. color linkDirectionalArrowRelPos([num, str or fn]) Link object accessor function, attribute or a numeric constant for the longitudinal position of the arrow head along the link line, expressed as a ratio between 0 and 1, where 0 indicates immediately next to the source node, 1 next to the target node, and 0.5 right in the middle. 0.5 linkDirectionalArrowResolution([num]) Getter/setter for the geometric resolution of the arrow head, expressed in how many slice segments to divide the cone base circumference. Higher values yield smoother arrows. 8 linkDirectionalParticles([num, str or fn]) Link object accessor function, attribute or a numeric constant for the number of particles (small spheres) to display over the link line. The particles are distributed equi-spaced along the line, travel in the direction source > target, and can be used to indicate link directionality. 0 linkDirectionalParticleSpeed([num, str or fn]) Link object accessor function, attribute or a numeric constant for the directional particles speed, expressed as the ratio of the link length to travel per frame. Values above 0.5 are discouraged. 0.01 linkDirectionalParticleOffset([num, str or fn]) Link object accessor function, attribute or a numeric constant for the offset of the directional particles initial position, expressed as a value between 0 and 1, relative to a full position cycle. 0 linkDirectionalParticleWidth([num, str or fn]) Link object accessor function, attribute or a numeric constant for the directional particles width. Values are rounded to the nearest decimal for indexing purposes. 0.5 linkDirectionalParticleColor([str or fn]) Link object accessor function or attribute for the directional particles color. color linkDirectionalParticleResolution([num]) Getter/setter for the geometric resolution of each directional particle, expressed in how many slice segments to divide the circumference. Higher values yield smoother particles. 4 linkDirectionalParticleThreeObject([Object3d, str or fn]) Link object accessor function or attribute for a custom 3d object to use in the directional particles. Should return an instance of ThreeJS Object3d. Activating this will ignore the set values for the particle's width, color and resolution. emitParticle(link) An alternative mechanism for generating particles, this method emits a non-cyclical single particle within a specific link. The emitted particle shares the styling (speed, shape, color) of the regular particle props. A valid link object that is included in graphData should be passed as a single parameter. Render control Method Description Default pauseAnimation() Pauses the rendering cycle of the component, effectively freezing the current view and cancelling all user interaction. This method can be used to save performance in circumstances when a static image is sufficient. resumeAnimation() Resumes the rendering cycle of the component, and re-enables the user interaction. This method can be used together with pauseAnimation for performance optimization purposes. cameraPosition([{x,y,z}], [lookAt], [ms]) Getter/setter for the camera position, in terms of x, y, z coordinates. Each of the coordinates is optional, allowing for motion in just some dimensions. The optional second argument can be used to define the direction that the camera should aim at, in terms of an {x,y,z} point in the 3D space. The 3rd optional argument defines the duration of the transition (in ms) to animate the camera motion. A value of 0 (default) moves the camera immediately to the final position. By default the camera will face the center of the graph at a z distance proportional to the amount of nodes in the system. zoomToFit([ms], [px], [nodeFilterFn]) Automatically moves the camera so that all of the nodes become visible within its field of view. If no nodes are found no action is taken. It accepts three optional arguments: the first defines the duration of the transition (in ms) to animate the camera motion (default: 0ms). The second argument is the amount of padding (in px) between the edge of the canvas and the outermost node location (default: 10px). The third argument specifies a custom node filter: node => <boolean>, which should return a truthy value if the node is to be included. This can be useful for focusing on a portion of the graph. (0, 10, node => true) postProcessingComposer() Access the post-processing composer. Use this to add post-processing rendering effects to the scene. By default the composer has a single pass (RenderPass) that directly renders the scene without any effects. lights([array]) Getter/setter for the list of lights to use in the scene. Each item should be an instance of Light. AmbientLight + DirectionalLight (from above) scene() Access the internal ThreeJS Scene. Can be used to extend the current scene with additional objects not related to 3d-force-graph. camera() Access the internal ThreeJS Camera. renderer() Access the internal ThreeJS WebGL renderer. controls() Access the internal ThreeJS controls object. refresh() Redraws all the nodes/links. Force engine configuration Method Description Default forceEngine([str]) Getter/setter for which force-simulation engine to use (d3 or ngraph). d3 numDimensions([int]) Getter/setter for number of dimensions to run the force simulation on (1, 2 or 3). 3 dagMode([str]) Apply layout constraints based on the graph directionality. Only works correctly for DAG graph structures (without cycles). Choice between td (top-down), bu (bottom-up), lr (left-to-right), rl (right-to-left), zout (near-to-far), zin (far-to-near), radialout (outwards-radially) or radialin (inwards-radially). dagLevelDistance([num]) If dagMode is engaged, this specifies the distance between the different graph depths. auto-derived from the number of nodes dagNodeFilter([fn]) Node accessor function to specify nodes to ignore during the DAG layout processing. This accessor method receives a node object and should return a boolean value indicating whether the node is to be included. Excluded nodes will be left unconstrained and free to move in any direction. node => true onDagError([fn]) Callback to invoke if a cycle is encountered while processing the data structure for a DAG layout. The loop segment of the graph is included for information, as an array of node ids. By default an exception will be thrown whenever a loop is encountered. You can override this method to handle this case externally and allow the graph to continue the DAG processing. Strict graph directionality is not guaranteed if a loop is encountered and the result is a best effort to establish a hierarchy. throws exception d3AlphaMin([num]) Getter/setter for the simulation alpha min parameter, only applicable if using the d3 simulation engine. 0 d3AlphaDecay([num]) Getter/setter for the simulation intensity decay parameter, only applicable if using the d3 simulation engine. 0.0228 d3VelocityDecay([num]) Getter/setter for the nodes' velocity decay that simulates the medium resistance, only applicable if using the d3 simulation engine. 0.4 d3Force(str, [fn]) Getter/setter for the internal forces that control the d3 simulation engine. Follows the same interface as d3-force-3d's simulation.force. Three forces are included by default: 'link' (based on forceLink), 'charge' (based on forceManyBody) and 'center' (based on forceCenter). Each of these forces can be reconfigured, or new forces can be added to the system. This method is only applicable if using the d3 simulation engine. d3ReheatSimulation() Reheats the force simulation engine, by setting the alpha value to 1. Only applicable if using the d3 simulation engine. ngraphPhysics([object]) Specify custom physics configuration for ngraph, according to its configuration object syntax. This method is only applicable if using the ngraph simulation engine. ngraph default warmupTicks([int]) Getter/setter for number of layout engine cycles to dry-run at ignition before starting to render. 0 cooldownTicks([int]) Getter/setter for how many build-in frames to render before stopping and freezing the layout engine. Infinity cooldownTime([num]) Getter/setter for how long (ms) to render for before stopping and freezing the layout engine. 15000 onEngineTick(fn) Callback function invoked at every tick of the simulation engine. - onEngineStop(fn) Callback function invoked when the simulation engine stops and the layout is frozen. - Interaction Method Description Default onNodeClick(fn) Callback function for node (left-button) clicks. The node object and the event object are included as arguments onNodeClick(node, event). - onNodeRightClick(fn) Callback function for node right-clicks. The node object and the event object are included as arguments onNodeRightClick(node, event). - onNodeHover(fn) Callback function for node mouse over events. The node object (or null if there's no node under the mouse line of sight) is included as the first argument, and the previous node object (or null) as second argument: onNodeHover(node, prevNode). - onNodeDrag(fn) Callback function for node drag interactions. This function is invoked repeatedly while dragging a node, every time its position is updated. The node object is included as the first argument, and the change in coordinates since the last iteration of this function are included as the second argument in format {x,y,z}: onNodeDrag(node, translate). - onNodeDragEnd(fn) Callback function for the end of node drag interactions. This function is invoked when the node is released. The node object is included as the first argument, and the entire change in coordinates from initial location are included as the second argument in format {x,y,z}: onNodeDragEnd(node, translate). - onLinkClick(fn) Callback function for link (left-button) clicks. The link object and the event object are included as arguments onLinkClick(link, event). - onLinkRightClick(fn) Callback function for link right-clicks. The link object and the event object are included as arguments onLinkRightClick(link, event). - onLinkHover(fn) Callback function for link mouse over events. The link object (or null if there's no link under the mouse line of sight) is included as the first argument, and the previous link object (or null) as second argument: onLinkHover(link, prevLink). - onBackgroundClick(fn) Callback function for click events on the empty space between the nodes and links. The event object is included as single argument onBackgroundClick(event). - onBackgroundRightClick(fn) Callback function for right-click events on the empty space between the nodes and links. The event object is included as single argument onBackgroundRightClick(event). - linkHoverPrecision([int]) Whether to display the link label when gazing the link closely (low value) or from far away (high value). 1 showPointerCursor(boolean or fn) Whether to show a pointer cursor when hovering over clickable portions of the canvas. Accepts either a boolean constant or a callback function which receives the object currently under the cursor and is expected to return a boolean value. true enablePointerInteraction([boolean]) Getter/setter for whether to enable the mouse tracking events. This activates an internal tracker of the canvas mouse position and enables the functionality of object hover/click and tooltip labels, at the cost of performance. If you're looking for maximum gain in your graph performance it's recommended to switch off this property. true enableNodeDrag([boolean]) Getter/setter for whether to enable the user interaction to drag nodes by click-dragging. Only supported on the d3 force engine. If enabled, every time a node is dragged the simulation is re-heated so the other nodes react to the changes. Only applicable if enablePointerInteraction is true and using the d3 force engine. true enableNavigationControls([boolean]) Getter/setter for whether to enable the trackball navigation controls used to move the camera using mouse interactions (rotate/zoom/pan). true Utility Method Description getGraphBbox([nodeFilterFn]) Returns the current bounding box of the nodes in the graph, formatted as { x: [<num>, <num>], y: [<num>, <num>], z: [<num>, <num>] }. If no nodes are found, returns null. Accepts an optional argument to define a custom node filter: node => <boolean>, which should return a truthy value if the node is to be included. This can be useful to calculate the bounding box of a portion of the graph. graph2ScreenCoords(x, y, z) Utility method to translate node coordinates to the viewport domain. Given a set of x,y,z graph coordinates, returns the current equivalent {x, y} in viewport coordinates. screen2GraphCoords(x, y, distance) Utility method to translate viewport distance coordinates to the graph domain. Given a pair of x,y screen coordinates and distance from the camera, returns the current equivalent {x, y, z} in the domain of graph node coordinates. Input JSON syntax { \"nodes\": [ { \"id\": \"id1\", \"name\": \"name1\", \"val\": 1 }, { \"id\": \"id2\", \"name\": \"name2\", \"val\": 10 }, ... ], \"links\": [ { \"source\": \"id1\", \"target\": \"id2\" }, ... ] }",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://github.com/vasturiano/3d-force-graph#3d-force-directed-graph"
+    },
+    {
+      "label": "",
+      "url": "https://npmjs.org/package/3d-force-graph"
+    },
+    {
+      "label": "",
+      "url": "https://bundlephobia.com/result?p=3d-force-graph"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmtrends.com/3d-force-graph"
+    },
+    {
+      "label": "",
+      "url": "https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=L398E7PKP47E8&currency_code=USD&source=url"
+    },
+    {
+      "label": "",
+      "url": "https://vasturiano.github.io/3d-force-graph/example/large-graph/"
+    },
+    {
+      "label": "force-directed",
+      "url": "https://en.wikipedia.org/wiki/Force-directed_graph_drawing"
+    },
+    {
+      "label": "ThreeJS",
+      "url": "https://github.com/mrdoob/three.js/"
+    },
+    {
+      "label": "d3-force-3d",
+      "url": "https://github.com/vasturiano/d3-force-3d"
+    },
+    {
+      "label": "ngraph",
+      "url": "https://github.com/anvaka/ngraph.forcelayout3d"
+    },
+    {
+      "label": "2D canvas version",
+      "url": "https://github.com/vasturiano/force-graph"
+    },
+    {
+      "label": "VR version",
+      "url": "https://github.com/vasturiano/3d-force-graph-vr"
+    },
+    {
+      "label": "AR version",
+      "url": "https://github.com/vasturiano/3d-force-graph-ar"
+    },
+    {
+      "label": "React bindings",
+      "url": "https://github.com/vasturiano/react-force-graph"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/vasturiano/3d-force-graph#examples"
+    },
+    {
+      "label": "Basic",
+      "url": "https://vasturiano.github.io/3d-force-graph/example/basic/"
+    },
+    {
+      "label": "source",
+      "url": "https://github.com/vasturiano/3d-force-graph/blob/master/example/basic/index.html"
+    },
+    {
+      "label": "Asynchronous load",
+      "url": "https://vasturiano.github.io/3d-force-graph/example/async-load/"
+    },
+    {
+      "label": "source",
+      "url": "https://github.com/vasturiano/3d-force-graph/blob/master/example/async-load/index.html"
+    },
+    {
+      "label": "Larger graph (~4k elements)",
+      "url": "https://vasturiano.github.io/3d-force-graph/example/large-graph/"
+    },
+    {
+      "label": "source",
+      "url": "https://github.com/vasturiano/3d-force-graph/blob/master/example/large-graph/index.html"
+    },
+    {
+      "label": "Directional arrows",
+      "url": "https://vasturiano.github.io/3d-force-graph/example/directional-links-arrows/"
+    },
+    {
+      "label": "source",
+      "url": "https://github.com/vasturiano/3d-force-graph/blob/master/example/directional-links-arrows/index.html"
+    },
+    {
+      "label": "Directional moving particles",
+      "url": "https://vasturiano.github.io/3d-force-graph/example/directional-links-particles/"
+    },
+    {
+      "label": "source",
+      "url": "https://github.com/vasturiano/3d-force-graph/blob/master/example/directional-links-particles/index.html"
+    },
+    {
+      "label": "Curved lines and self links",
+      "url": "https://vasturiano.github.io/3d-force-graph/example/curved-links/"
+    },
+    {
+      "label": "source",
+      "url": "https://github.com/vasturiano/3d-force-graph/blob/master/example/curved-links/index.html"
+    },
+    {
+      "label": "Auto-colored nodes/links",
+      "url": "https://vasturiano.github.io/3d-force-graph/example/auto-colored/"
+    },
+    {
+      "label": "source",
+      "url": "https://github.com/vasturiano/3d-force-graph/blob/master/example/auto-colored/index.html"
+    },
+    {
+      "label": "Text as nodes",
+      "url": "https://vasturiano.github.io/3d-force-graph/example/text-nodes/"
+    },
+    {
+      "label": "source",
+      "url": "https://github.com/vasturiano/3d-force-graph/blob/master/example/text-nodes/index.html"
+    },
+    {
+      "label": "Images as nodes",
+      "url": "https://vasturiano.github.io/3d-force-graph/example/img-nodes/"
+    },
+    {
+      "label": "source",
+      "url": "https://github.com/vasturiano/3d-force-graph/blob/master/example/img-nodes/index.html"
+    },
+    {
+      "label": "HTML in nodes",
+      "url": "https://vasturiano.github.io/3d-force-graph/example/html-nodes/"
+    },
+    {
+      "label": "source",
+      "url": "https://github.com/vasturiano/3d-force-graph/blob/master/example/html-nodes/index.html"
+    },
+    {
+      "label": "Custom node geometries",
+      "url": "https://vasturiano.github.io/3d-force-graph/example/custom-node-geometry/"
+    },
+    {
+      "label": "source",
+      "url": "https://github.com/vasturiano/3d-force-graph/blob/master/example/custom-node-geometry/index.html"
+    },
+    {
+      "label": "Gradient Links",
+      "url": "https://vasturiano.github.io/3d-force-graph/example/gradient-links/"
+    },
+    {
+      "label": "source",
+      "url": "https://github.com/vasturiano/3d-force-graph/blob/master/example/gradient-links/index.html"
+    },
+    {
+      "label": "Text in Links",
+      "url": "https://vasturiano.github.io/3d-force-graph/example/text-links/"
+    },
+    {
+      "label": "source",
+      "url": "https://github.com/vasturiano/3d-force-graph/blob/master/example/text-links/index.html"
+    },
+    {
+      "label": "Orbit controls",
+      "url": "https://vasturiano.github.io/3d-force-graph/example/controls-orbit/"
+    },
+    {
+      "label": "source",
+      "url": "https://github.com/vasturiano/3d-force-graph/blob/master/example/controls-orbit/index.html"
+    },
+    {
+      "label": "Fly controls",
+      "url": "https://vasturiano.github.io/3d-force-graph/example/controls-fly/"
+    },
+    {
+      "label": "source",
+      "url": "https://github.com/vasturiano/3d-force-graph/blob/master/example/controls-fly/index.html"
+    },
+    {
+      "label": "Camera automatic orbitting",
+      "url": "https://vasturiano.github.io/3d-force-graph/example/camera-auto-orbit/"
+    },
+    {
+      "label": "source",
+      "url": "https://github.com/vasturiano/3d-force-graph/blob/master/example/camera-auto-orbit/index.html"
+    },
+    {
+      "label": "Click to focus on node",
+      "url": "https://vasturiano.github.io/3d-force-graph/example/click-to-focus/"
+    },
+    {
+      "label": "source",
+      "url": "https://github.com/vasturiano/3d-force-graph/blob/master/example/click-to-focus/index.html"
+    },
+    {
+      "label": "Click to expand/collapse nodes",
+      "url": "https://vasturiano.github.io/3d-force-graph/example/expandable-nodes/"
+    },
+    {
+      "label": "source",
+      "url": "https://github.com/vasturiano/3d-force-graph/blob/master/example/expandable-nodes/index.html"
+    },
+    {
+      "label": "Fix nodes after dragging",
+      "url": "https://vasturiano.github.io/3d-force-graph/example/fix-dragged-nodes/"
+    },
+    {
+      "label": "source",
+      "url": "https://github.com/vasturiano/3d-force-graph/blob/master/example/fix-dragged-nodes/index.html"
+    },
+    {
+      "label": "Fit graph to canvas",
+      "url": "https://vasturiano.github.io/3d-force-graph/example/fit-to-canvas/"
+    },
+    {
+      "label": "source",
+      "url": "https://github.com/vasturiano/3d-force-graph/blob/master/example/fit-to-canvas/index.html"
+    },
+    {
+      "label": "Highlight nodes/links",
+      "url": "https://vasturiano.github.io/3d-force-graph/example/highlight/"
+    },
+    {
+      "label": "source",
+      "url": "https://github.com/vasturiano/3d-force-graph/blob/master/example/highlight/index.html"
+    },
+    {
+      "label": "Multiple Node Selection",
+      "url": "https://vasturiano.github.io/3d-force-graph/example/multi-selection/"
+    },
+    {
+      "label": "source",
+      "url": "https://github.com/vasturiano/3d-force-graph/blob/master/example/multi-selection/index.html"
+    },
+    {
+      "label": "Dynamic data changes",
+      "url": "https://vasturiano.github.io/3d-force-graph/example/dynamic/"
+    },
+    {
+      "label": "source",
+      "url": "https://github.com/vasturiano/3d-force-graph/blob/master/example/dynamic/index.html"
+    },
+    {
+      "label": "Node collision detection",
+      "url": "https://vasturiano.github.io/3d-force-graph/example/collision-detection/"
+    },
+    {
+      "label": "source",
+      "url": "https://github.com/vasturiano/3d-force-graph/blob/master/example/collision-detection/index.html"
+    },
+    {
+      "label": "Manipulate link force distance",
+      "url": "https://vasturiano.github.io/3d-force-graph/example/manipulate-link-force/"
+    },
+    {
+      "label": "source",
+      "url": "https://github.com/vasturiano/3d-force-graph/blob/master/example/manipulate-link-force/index.html"
+    },
+    {
+      "label": "Emit link particles on demand",
+      "url": "https://vasturiano.github.io/3d-force-graph/example/emit-particles/"
+    },
+    {
+      "label": "source",
+      "url": "https://github.com/vasturiano/3d-force-graph/blob/master/example/emit-particles/index.html"
+    },
+    {
+      "label": "Force-directed tree (DAG mode)",
+      "url": "https://vasturiano.github.io/3d-force-graph/example/tree/"
+    },
+    {
+      "label": "source",
+      "url": "https://github.com/vasturiano/3d-force-graph/blob/master/example/tree/index.html"
+    },
+    {
+      "label": "yarn.lock dependency graph (DAG mode)",
+      "url": "https://vasturiano.github.io/3d-force-graph/example/dag-yarn/"
+    },
+    {
+      "label": "source",
+      "url": "https://github.com/vasturiano/3d-force-graph/blob/master/example/dag-yarn/index.html"
+    },
+    {
+      "label": "Add external objects to scene",
+      "url": "https://vasturiano.github.io/3d-force-graph/example/scene/"
+    },
+    {
+      "label": "source",
+      "url": "https://github.com/vasturiano/3d-force-graph/blob/master/example/scene/index.html"
+    },
+    {
+      "label": "Bloom Post-Processing Effect",
+      "url": "https://vasturiano.github.io/3d-force-graph/example/bloom-effect/"
+    },
+    {
+      "label": "source",
+      "url": "https://github.com/vasturiano/3d-force-graph/blob/master/example/bloom-effect/index.html"
+    },
+    {
+      "label": "Pause / Resume animation",
+      "url": "https://vasturiano.github.io/3d-force-graph/example/pause-resume/"
+    },
+    {
+      "label": "source",
+      "url": "https://github.com/vasturiano/3d-force-graph/blob/master/example/pause-resume/index.html"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/vasturiano/3d-force-graph#️-support-this-project"
+    },
+    {
+      "label": "buy me a ☕",
+      "url": "https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=L398E7PKP47E8&currency_code=USD&source=url"
+    },
+    {
+      "label": "",
+      "url": "https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=L398E7PKP47E8&currency_code=USD&source=url"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/vasturiano/3d-force-graph#quick-start"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/vasturiano/3d-force-graph#api-reference"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/vasturiano/3d-force-graph#initialisation"
+    },
+    {
+      "label": "trackball",
+      "url": "https://threejs.org/examples/misc_controls_trackball.html"
+    },
+    {
+      "label": "orbit",
+      "url": "https://threejs.org/examples/#misc_controls_orbit"
+    },
+    {
+      "label": "fly",
+      "url": "https://threejs.org/examples/misc_controls_fly.html"
+    },
+    {
+      "label": "ThreeJS WebGLRenderer",
+      "url": "https://threejs.org/docs/#api/en/renderers/WebGLRenderer"
+    },
+    {
+      "label": "CSS3DRenderer",
+      "url": "https://threejs.org/docs/#examples/en/renderers/CSS3DRenderer"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/vasturiano/3d-force-graph#data-input"
+    },
+    {
+      "label": "incremental updates",
+      "url": "https://bl.ocks.org/vasturiano/2f602ea6c51c664c29ec56cbe2d6a5f6"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/vasturiano/3d-force-graph#container-layout"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/vasturiano/3d-force-graph#node-styling"
+    },
+    {
+      "label": "HTML element",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement"
+    },
+    {
+      "label": "ThreeJS Object3d",
+      "url": "https://threejs.org/docs/index.html#api/core/Object3D"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/vasturiano/3d-force-graph#link-styling"
+    },
+    {
+      "label": "HTML element",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement"
+    },
+    {
+      "label": "ThreeJS Line",
+      "url": "https://threejs.org/docs/#api/objects/Line"
+    },
+    {
+      "label": "ThreeJS Material",
+      "url": "https://threejs.org/docs/#api/materials/Material"
+    },
+    {
+      "label": "MeshLambertMaterial",
+      "url": "https://threejs.org/docs/#api/materials/MeshLambertMaterial"
+    },
+    {
+      "label": "ThreeJS Object3d",
+      "url": "https://threejs.org/docs/index.html#api/core/Object3D"
+    },
+    {
+      "label": "ThreeJS Object3d",
+      "url": "https://threejs.org/docs/index.html#api/core/Object3D"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/vasturiano/3d-force-graph#render-control"
+    },
+    {
+      "label": "post-processing composer",
+      "url": "https://threejs.org/docs/#examples/en/postprocessing/EffectComposer"
+    },
+    {
+      "label": "rendering effects",
+      "url": "https://github.com/mrdoob/three.js/tree/dev/examples/jsm/postprocessing"
+    },
+    {
+      "label": "RenderPass",
+      "url": "https://github.com/mrdoob/three.js/blob/dev/examples/jsm/postprocessing/RenderPass.js"
+    },
+    {
+      "label": "Light",
+      "url": "https://threejs.org/docs/#api/en/lights/Light"
+    },
+    {
+      "label": "AmbientLight",
+      "url": "https://threejs.org/docs/?q=ambient#api/en/lights/AmbientLight"
+    },
+    {
+      "label": "DirectionalLight",
+      "url": "https://threejs.org/docs/#api/en/lights/DirectionalLight"
+    },
+    {
+      "label": "Scene",
+      "url": "https://threejs.org/docs/#api/scenes/Scene"
+    },
+    {
+      "label": "Camera",
+      "url": "https://threejs.org/docs/#api/cameras/PerspectiveCamera"
+    },
+    {
+      "label": "WebGL renderer",
+      "url": "https://threejs.org/docs/#api/renderers/WebGLRenderer"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/vasturiano/3d-force-graph#force-engine-configuration"
+    },
+    {
+      "label": "d3",
+      "url": "https://github.com/vasturiano/d3-force-3d"
+    },
+    {
+      "label": "ngraph",
+      "url": "https://github.com/anvaka/ngraph.forcelayout"
+    },
+    {
+      "label": "DAG",
+      "url": "https://en.wikipedia.org/wiki/Directed_acyclic_graph"
+    },
+    {
+      "label": "simulation alpha min",
+      "url": "https://github.com/vasturiano/d3-force-3d#simulation_alphaMin"
+    },
+    {
+      "label": "simulation intensity decay",
+      "url": "https://github.com/vasturiano/d3-force-3d#simulation_alphaDecay"
+    },
+    {
+      "label": "velocity decay",
+      "url": "https://github.com/vasturiano/d3-force-3d#simulation_velocityDecay"
+    },
+    {
+      "label": "simulation.force",
+      "url": "https://github.com/vasturiano/d3-force-3d#simulation_force"
+    },
+    {
+      "label": "forceLink",
+      "url": "https://github.com/vasturiano/d3-force-3d#forceLink"
+    },
+    {
+      "label": "forceManyBody",
+      "url": "https://github.com/vasturiano/d3-force-3d#forceManyBody"
+    },
+    {
+      "label": "forceCenter",
+      "url": "https://github.com/vasturiano/d3-force-3d#forceCenter"
+    },
+    {
+      "label": "configuration object",
+      "url": "https://github.com/anvaka/ngraph.forcelayout#configuring-physics"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/vasturiano/3d-force-graph#interaction"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/vasturiano/3d-force-graph#utility"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/vasturiano/3d-force-graph#input-json-syntax"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/vasturiano/3d-force-graph/blob/9376e16343721efd0416710c21db03ce8fa4dfb0/package.json#L57"
+    }
+  ],
+  "root_files": [
+    ".github/ISSUE_TEMPLATE",
+    "example",
+    "src",
+    ".babelrc",
+    ".gitignore",
+    "LICENSE",
+    "README.md",
+    "_config.yml",
+    "package.json",
+    "rollup.config.dev.js",
+    "rollup.config.js",
+    "yarn.lock"
+  ],
+  "release_count": 0,
+  "status": "verified"
+}

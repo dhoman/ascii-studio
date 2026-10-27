@@ -2,7 +2,7 @@ import { ramps } from './style';
 
 export function mountLab() {
   document.querySelector<HTMLElement>('#app')!.innerHTML = `
-    <header><div><p class="eyebrow">ASCII STUDIO / LAB 01</p><h1>Seeing in characters.</h1><p class="intro">Still images, moving pictures, and you.</p></div><span class="badge">LOCAL MEDIA LAB</span></header>
+    <header><div><p class="eyebrow">ASCII STUDIO / LAB 01</p><h1>Seeing in characters.</h1><p class="intro">Still images, moving pictures, and you.</p><a href="/sindri.html">Sindri forge — 20 animated hero studies ↗</a></div><span class="badge">LOCAL MEDIA LAB</span></header>
     <section class="toolbar input-bar" aria-label="Input controls">
       <label>Input mode<select id="mode" aria-label="Input mode"><option value="image">Still image</option><option value="video">Video</option><option value="webcam">Webcam</option></select></label>
       <label id="source-label">Source image<select id="source" aria-label="Source image"></select></label>

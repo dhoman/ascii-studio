@@ -1,0 +1,53 @@
+{
+  "url": "https://github.com/mortspace/fur",
+  "final_url": "https://github.com/mortspace/fur",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:48:03.738258+00:00",
+  "stars": 16,
+  "forks": 2,
+  "description": "a coat of fur for any shape, drawn strand by strand on a canvas. pettable.",
+  "homepage": "",
+  "topics": [],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2026-06-12T16:04:43.000Z",
+  "branch": "master",
+  "commit": "2e8a8edf33cc8bf034705c84ea68bd674518793f",
+  "readme": "fur a coat of fur for any shape. it's a react component that draws thousands of tiny strands onto one canvas, with a fringe around the edge so it actually reads as fur. works on the built-in shapes, on a custom svg path, or on a line of text (yes, including inside the holes of letters). no images, no textures, nothing to download. it's also pettable. drag across it and the strands bend with your pointer, then spring back. the animation loop only runs while something is still moving, so when it's sitting there it costs nothing. install npm i feral-fur use it import { Fur } from 'feral-fur' import 'feral-fur/fur.css' // a pink fur folder <Fur shape=\"folder\" color=\"#f5a8c9\" style={{ width: 320, aspectRatio: '29 / 24' }} /> // fur on text <Fur text=\"feral\" style={{ width: 420, aspectRatio: '10 / 3' }} /> // fur on your own path <Fur path=\"M 20 0 L 80 0 ...\" style={{ width: 300, height: 300 }} /> the element sizes the fur, so give the <Fur> a width/height (or aspect-ratio) and it fills it. the fringe pokes past the box on purpose, so leave it a little room and don't clip it with overflow: hidden. props prop type default what it does color string #f5a8c9 coat colour, any css colour. shadows and tips come off this shape folder | card | heart folder built-in shape, ignored if you pass path or text path string svg path string, auto-fit and centred in the element pathBox { width, height } scale the path from this box instead of auto-fitting text string grow fur on text instead of a shape fluff number 1 strand length density number 1 how many strands, capped so big elements stay cheap mess number 0.5 0 is combed, 1 is slept on seed number 7 same seed + same size gives the same fur padColor string fill the interior holes with bare skin of this colour (paw pads) pettable boolean true pointer petting. off automatically under reduced motion children ReactNode drawn on top of the coat notes petting is turned off when the user has reduced motion on, so you don't need to handle that yourself. the canvas is aria-hidden, it's decorative. MIT.",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://github.com/mortspace/fur#fur"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/mortspace/fur#install"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/mortspace/fur#use-it"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/mortspace/fur#props"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/mortspace/fur#notes"
+    }
+  ],
+  "root_files": [
+    ".gitignore",
+    "LICENSE",
+    "README.md",
+    "fur.css",
+    "fur.tsx",
+    "index.ts",
+    "package-lock.json",
+    "package.json",
+    "tsconfig.json",
+    "tsup.config.ts"
+  ],
+  "release_count": 0,
+  "status": "verified"
+}

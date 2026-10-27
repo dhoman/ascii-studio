@@ -1,0 +1,252 @@
+{
+  "url": "https://github.com/chromatone/chromatone.center",
+  "final_url": "https://github.com/chromatone/chromatone.center",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:47:39.975371+00:00",
+  "stars": 151,
+  "forks": 12,
+  "description": "Chromatone is a digital garden of visual music theory and a collection of visual music instruments",
+  "homepage": "https://chromatone.center",
+  "topics": [
+    "chords",
+    "chroma",
+    "chromatone",
+    "digitalgarden",
+    "elementary-audio",
+    "melody",
+    "metronome",
+    "music",
+    "music-theory",
+    "sound-engineering",
+    "spectrogram",
+    "synth",
+    "theory",
+    "visual-music",
+    "visualization",
+    "vite",
+    "vitepress",
+    "webapp"
+  ],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2021-04-28T19:06:47.000Z",
+  "branch": "master",
+  "commit": "6ff4256380281ae0c3985e81c4d9ad939f88b90b",
+  "readme": "Chromatone Visual Music Language Independent open-source research project to use colors, shapes and motion to learn, play and communicate melody, harmony and rhythms in live music performance environment. Open digital garden Theory Scientific research on many aspects of music theory as cards and short overviews on physics and physiology of vision and hearing and their intersection at visual music research, exploration, practice and self expression. Visual Music Theory Practice Progressive web-apps as useful tools to have in a pocket to learn and use in everyday music practice. These are open source web-experiments with various interactive combinations of sounds and colors. Visual Music Practice Use-chromatone package I'm maintaining an open-source collection of sound analysis and synthesis tools along with other useful media instruments to experiment with. All in a form of convenient NPM package you can use in any JS project, both SSR and client-side. Ideal tool for modern audio researchers, educators and their students as we abstract all the low level details into simple building blocks that can be used for prototyping and concept verification. Chromatone composables Chromatone database package We collect all the musical knowledge we can get so then we can build new insights on top of this pile. Lists of intervals, chords and scales, rhythmic patterns from different cultures and more data, neatly stored in YAML format and provided to be used as a standalone NPM package with treeshaking enabled. Music Database TECH STACK JS UI Vite - Next generation frontend tooling for fast development and building unplugin-vue-components - On-demand components auto-importing for Vue unplugin-icons - Access thousands of icons as Vue components on-demand Icônes - Icon explorer with instant searching and SVG downloading Vitepress - Vue-powered static site generator Vue 3 - Progressive JavaScript framework for building user interfaces VueUse - Collection of essential Vue Composition Utilities VueUse/Gesture - Vue Composables making your app interactive with gestures Floating Vue - Tooltips, dropdowns, and popovers made easy for Vue UnoCSS - Instant on-demand atomic CSS engine Pug - Templating engine for concise HTML Graphics colord - Tiny color manipulation and conversion library PaperJs - Vector graphics scripting framework simplex-noise - Simplex noise implementation for JavaScript hydra-synth - Livecoding networked visuals in the browser Music TonalJs - Music theory library for JavaScript AbcJs - JavaScript library for rendering music notation WebMidi.js - Web MIDI API wrapper for easy MIDI device interaction Audio Tone.js - Framework for creating interactive music in the browser @tonejs/midi - Convert MIDI into Tone.js-friendly JSON Meyda - Audio feature extraction library for JavaScript AubioJs - WebAssembly port of Aubio, a library for audio analysis audiomotion-analyzer - High-resolution real-time audio spectrum analyzer Elementary audio - WebAssembly-powered audio engine for sound synthesis and analysis RecordRTC - WebRTC JavaScript library for audio/video/screen recording TODO: https://baianat.github.io/leaps/reveal.html#example https://vuexyz.org/primitives/useArc.html Codesandbox You can instantly fork and start editing your own copy of the whole web-app with this link. So if you want to edit some small imperfection or adjust any parameter of any of components - your are welcome to use Chromatone repo as a playground for your own ideas. And we would be glad to merge your contributions too! Edit repo on Codesandbox",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://github.com/chromatone/chromatone.center#chromatone"
+    },
+    {
+      "label": "",
+      "url": "https://chromatone.center/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/chromatone/chromatone.center#visual-music-language"
+    },
+    {
+      "label": "Open digital garden",
+      "url": "https://github.com/chromatone/chromatone.center/blob/master/content/index.md"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/chromatone/chromatone.center#theory"
+    },
+    {
+      "label": "Visual Music Theory",
+      "url": "https://github.com/chromatone/chromatone.center/blob/master/content/theory/index.md"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/chromatone/chromatone.center#practice"
+    },
+    {
+      "label": "Visual Music Practice",
+      "url": "https://github.com/chromatone/chromatone.center/blob/master/content/practice/index.md"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/chromatone/chromatone.center#use-chromatone-package"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/use-chromatone"
+    },
+    {
+      "label": "Chromatone composables",
+      "url": "https://github.com/chromatone/chromatone.center/blob/master/use/README.md"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/chromatone/chromatone.center#chromatone-database-package"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/chromatone-db"
+    },
+    {
+      "label": "Music Database",
+      "url": "https://github.com/chromatone/chromatone.center/blob/master/db/README.md"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/chromatone/chromatone.center#tech-stack"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/chromatone/chromatone.center#js-ui"
+    },
+    {
+      "label": "Vite",
+      "url": "https://vitejs.dev/"
+    },
+    {
+      "label": "unplugin-vue-components",
+      "url": "https://github.com/antfu/unplugin-vue-components"
+    },
+    {
+      "label": "unplugin-icons",
+      "url": "https://github.com/antfu/unplugin-icons"
+    },
+    {
+      "label": "Icônes",
+      "url": "https://icones.js.org/"
+    },
+    {
+      "label": "Vitepress",
+      "url": "https://vitepress.vuejs.org/guide/global-component.html#content"
+    },
+    {
+      "label": "Vue 3",
+      "url": "https://v3.vuejs.org/"
+    },
+    {
+      "label": "VueUse",
+      "url": "https://vueuse.org"
+    },
+    {
+      "label": "VueUse/Gesture",
+      "url": "https://gesture.vueuse.org"
+    },
+    {
+      "label": "Floating Vue",
+      "url": "https://floating-vue.starpad.dev"
+    },
+    {
+      "label": "UnoCSS",
+      "url": "https://github.com/unocss/unocss"
+    },
+    {
+      "label": "Pug",
+      "url": "https://pugjs.org/api/getting-started.html"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/chromatone/chromatone.center#graphics"
+    },
+    {
+      "label": "colord",
+      "url": "https://www.npmjs.com/package/colord"
+    },
+    {
+      "label": "PaperJs",
+      "url": "http://paperjs.org"
+    },
+    {
+      "label": "simplex-noise",
+      "url": "https://github.com/jwagner/simplex-noise.js"
+    },
+    {
+      "label": "hydra-synth",
+      "url": "https://github.com/hydra-synth/hydra"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/chromatone/chromatone.center#music"
+    },
+    {
+      "label": "TonalJs",
+      "url": "https://github.com/tonaljs/tonal"
+    },
+    {
+      "label": "AbcJs",
+      "url": "https://paulrosen.github.io/abcjs/"
+    },
+    {
+      "label": "WebMidi.js",
+      "url": "https://webmidijs.org/docs/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/chromatone/chromatone.center#audio"
+    },
+    {
+      "label": "Tone.js",
+      "url": "https://tonejs.github.io"
+    },
+    {
+      "label": "@tonejs/midi",
+      "url": "https://github.com/Tonejs/Midi"
+    },
+    {
+      "label": "Meyda",
+      "url": "https://meyda.js.org"
+    },
+    {
+      "label": "AubioJs",
+      "url": "https://github.com/qiuxiang/aubiojs"
+    },
+    {
+      "label": "audiomotion-analyzer",
+      "url": "https://www.npmjs.com/package/audiomotion-analyzer"
+    },
+    {
+      "label": "Elementary audio",
+      "url": "https://elementary.audio"
+    },
+    {
+      "label": "RecordRTC",
+      "url": "https://recordrtc.org/"
+    },
+    {
+      "label": "https://baianat.github.io/leaps/reveal.html#example",
+      "url": "https://baianat.github.io/leaps/reveal.html#example"
+    },
+    {
+      "label": "https://vuexyz.org/primitives/useArc.html",
+      "url": "https://vuexyz.org/primitives/useArc.html"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/chromatone/chromatone.center#codesandbox"
+    },
+    {
+      "label": "Edit repo on Codesandbox",
+      "url": "https://codesandbox.io/p/github/chromatone/chromatone.center/"
+    }
+  ],
+  "root_files": [
+    ".codesandbox",
+    ".github/workflows",
+    "components",
+    "content",
+    "db",
+    "theme",
+    "use",
+    ".gitignore",
+    ".markdownlint.yaml",
+    ".npmrc",
+    ".prettierignore",
+    "CHANGELOG.md",
+    "LICENSE",
+    "README.md",
+    "jsconfig.json",
+    "package.json",
+    "pnpm-lock.yaml",
+    "pnpm-workspace.yaml"
+  ],
+  "release_count": 50,
+  "status": "verified"
+}

@@ -1,0 +1,161 @@
+{
+  "url": "https://github.com/pmndrs/react-spring",
+  "final_url": "https://github.com/pmndrs/react-spring",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:48:11.506647+00:00",
+  "stars": 29178,
+  "forks": 1224,
+  "description": "✌️ A spring physics based React animation library",
+  "homepage": "http://www.react-spring.dev/",
+  "topics": [
+    "animation-library",
+    "react",
+    "react-spring",
+    "spring-physics",
+    "springs"
+  ],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2018-03-07T15:39:32.000Z",
+  "branch": "next",
+  "commit": "e17c982134c2d62403f8f5b2958efbbcd79de435",
+  "readme": "react-spring A spring-physics first animation library giving you flexible tools to confidently cast your ideas react-spring is a cross-platform spring-physics first animation library. It's as simple as: const styles = useSpring({ from: { opacity: 0 }, to: { opacity: 1 } }) <animated.div style={styles} /> Just a small bit about us: Cross-Platform: We support react-dom and react-three-fiber. Versatile: Be declarative with your animations or if you prefer, imperative. Spring-Physics First: By default animation use springs for fluid interactivity, but we support durations with easings as well. There's a lot more to be had! Give it a try and find out. Getting Started ⚡️ Jump Start # Install the target you need npm install @react-spring/web # or, for react-three-fiber npm install @react-spring/three import { animated, useSpring } from '@react-spring/web' const FadeIn = ({ isVisible, children }) => { const styles = useSpring({ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 24, }) return <animated.div style={styles}>{children}</animated.div> } It's as simple as that to create scroll-in animations when value of isVisible is toggled. 📖 Documentation and Examples More documentation on the project can be found here. Pages contain their own examples which you can check out there, or open in codesandbox for a more in-depth view! 📣 What others say Used by And many others... Backers Thank you to all our backers! 🙏 If you want to join them here, then consider contributing to our Opencollective. Contributors This project exists thanks to all the people who contribute.",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/256b14144911de26460146e1d6a339b2a77aa01a0f930f19c2951363ade4c61e/68747470733a2f2f692e696d6775722e636f6d2f515a6f776e68672e706e67"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/react-spring#react-spring"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/react-spring#a-spring-physics-first-animation-library-giving-you-flexible-tools-to-confidently-cast-your-ideas"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@react-spring/web"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@react-spring/web"
+    },
+    {
+      "label": "",
+      "url": "https://discord.gg/AXfNsGx64f"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/react-spring#getting-started"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/react-spring#️-jump-start"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/react-spring#-documentation-and-examples"
+    },
+    {
+      "label": "here",
+      "url": "https://www.react-spring.dev"
+    },
+    {
+      "label": "examples",
+      "url": "https://react-spring.dev/hooks/use-spring#demos"
+    },
+    {
+      "label": "open in codesandbox",
+      "url": "https://codesandbox.io/s/github/pmndrs/react-spring/tree/main/demo/src/sandboxes/card"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/react-spring#-what-others-say"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/react-spring/blob/next/assets/testimonies.jpg"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/react-spring#used-by"
+    },
+    {
+      "label": "",
+      "url": "https://nextjs.org/"
+    },
+    {
+      "label": "",
+      "url": "https://codesandbox.io/"
+    },
+    {
+      "label": "",
+      "url": "https://aragon.org/"
+    },
+    {
+      "label": "many others...",
+      "url": "https://github.com/pmndrs/react-spring/network/dependents"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/react-spring#backers"
+    },
+    {
+      "label": "Opencollective",
+      "url": "https://opencollective.com/pmndrs"
+    },
+    {
+      "label": "",
+      "url": "https://opencollective.com/pmndrs#backers"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/pmndrs/react-spring#contributors"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/react-spring/react-spring/graphs/contributors"
+    }
+  ],
+  "root_files": [
+    ".changeset",
+    ".claude/skills",
+    ".github",
+    ".husky",
+    ".specify",
+    ".vscode",
+    "assets",
+    "demo",
+    "docs",
+    "packages",
+    "scripts",
+    "specs",
+    "targets",
+    "tests/e2e",
+    ".dockerignore",
+    ".git-blame-ignore-revs",
+    ".gitignore",
+    ".npmignore",
+    ".npmrc",
+    ".nvmrc",
+    ".oxfmtrc.json",
+    ".oxlintrc.json",
+    "CLAUDE.md",
+    "CONTRIBUTING.md",
+    "Dockerfile",
+    "LICENSE",
+    "README.md",
+    "package.json",
+    "pnpm-lock.yaml",
+    "pnpm-workspace.yaml",
+    "renovate.json",
+    "tsconfig.json",
+    "tsdown.config.base.d.mts",
+    "tsdown.config.base.mjs",
+    "turbo.json",
+    "vitest.config.ts"
+  ],
+  "release_count": 60,
+  "status": "verified"
+}

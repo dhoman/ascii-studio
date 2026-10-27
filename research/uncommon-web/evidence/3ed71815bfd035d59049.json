@@ -1,0 +1,148 @@
+{
+  "url": "https://github.com/educlopez/thegridcn-ui",
+  "final_url": "https://github.com/educlopez/thegridcn-ui",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:47:45.311334+00:00",
+  "stars": 392,
+  "forks": 27,
+  "description": "An authentic Tron: Ares inspired theme system for shadcn/ui",
+  "homepage": "https://thegridcn.com",
+  "topics": [
+    "shadcn",
+    "shadcn-ui",
+    "theme",
+    "tron"
+  ],
+  "license": "",
+  "archived": false,
+  "created_at": "2026-01-12T15:09:10.000Z",
+  "branch": "main",
+  "commit": "c29f16d5515446171c6436961d266e2566e45297",
+  "readme": "The GridCN A Tron: Ares inspired theme system for shadcn/ui. Grid-native components, six Greek-god color schemes, three.js effects, and a copy-paste registry that plugs into the shadcn CLI. What is this The GridCN turns plain shadcn/ui into a neon, glass-HUD design system modeled after Tron: Ares. It ships 55+ base components, 90+ Tron-flavored components (HUDs, radars, timers, maps, 3D grids), and six themes built on oklch() CSS variables — all installable one-by-one through npx shadcn add. Nothing is locked behind a package. Every component is raw TSX you own, just like shadcn/ui itself. The site at thegridcn.com is both the showcase and the registry. Features Six themes · Ares, Tron, Clu, Athena, Aphrodite, Poseidon 145+ components · base UI + Tron-specific HUD/3D/effects shadcn CLI native · install any component with npx shadcn add Token export · pnpm tokens:build emits per-theme CSS + JSON under public/tokens/ Three.js integration · Grid3D, Tunnel, GridFloor, always SSR-safe Copy-paste friendly · full source visible in the showcase with one-click copy Quick start Three ways to use The GridCN, from lightest touch to full clone. 1. Live preview Browse every component with live switching across the six themes at thegridcn.com/components. Each card shows the rendered component, its variants, and the source. 2. Copy a single component Open the component at thegridcn.com/components. Switch to any theme to preview the styling. Click the copy button on the source block. Paste into your own components/ directory. Install listed peer deps if any. 3. Install via the registry (recommended) The site exposes a shadcn-compatible registry. Apply a registry:base preset (Radix or Base UI — Vega is the New York look) or register the namespace yourself: npx shadcn@latest add @thegridcn/radix-vega # or npx shadcn@latest add @thegridcn/base-vega { \"registries\": { \"@thegridcn\": \"https://thegridcn.com/r/{name}.json\" } } Then install anything by short name: npx shadcn@latest add @thegridcn/button npx shadcn@latest add @thegridcn/data-card npx shadcn@latest add @thegridcn/theme-ares # or several at once npx shadcn@latest add @thegridcn/button @thegridcn/hud @thegridcn/radar See the full walkthrough (namespace vs full URL, theming, tokens, troubleshooting) in docs/install.md. Theme usage Wrap your app once, then switch themes anywhere. // app/layout.tsx import { ThemeProvider } from \"@/components/theme\"; export default function RootLayout({ children }: { children: React.ReactNode }) { return ( <html lang=\"en\" suppressHydrationWarning> <body> <ThemeProvider defaultTheme=\"ares\">{children}</ThemeProvider> </body> </html> ); } // any client component \"use client\"; import { useTheme } from \"@/components/theme\"; export function Toggle() { const { theme, setTheme } = useTheme(); return ( <button onClick={() => setTheme(theme === \"ares\" ? \"tron\" : \"ares\")}> {theme} </button> ); } Themes are data-theme attributes on <html>, so any CSS-variable-based component reacts automatically. Token export Run pnpm tokens:build to regenerate public/tokens/: public/tokens/ index.json · manifest of all themes tron.css · copy-paste CSS block tron.json · flat vars object { \"--primary\": \"oklch(...)\", ... } ares.{css,json} clu.{css,json} athena.{css,json} aphrodite.{css,json} poseidon.{css,json} Drop a CSS file into any project: /* your-app/app/globals.css */ @import \"https://thegridcn.com/tokens/ares.css\"; Or import the JSON into your Tailwind config: // tailwind.config.ts import ares from \"./tokens/ares.json\" with { type: \"json\" }; export default { theme: { extend: { colors: { primary: ares.vars[\"--primary\"], // ... map the rest }, }, }, }; Development pnpm install pnpm dev # http://localhost:3000 pnpm build # production build (runs registry:build first) pnpm lint # eslint pnpm tokens:build # regenerate public/tokens/ Package manager is pnpm. Node 18+. Project layout: src/ app/ · Next.js App Router components/ui/ · 55+ shadcn base components components/thegridcn/ · Tron-flavored components + 3D + effects components/theme/ · ThemeProvider + useTheme lib/ · cn(), registry helpers scripts/ · registry + tokens build scripts public/r/ · generated registry JSON (one per component) public/tokens/ · generated theme tokens docs/install.md · shadcn CLI install guide Contributing PRs are welcome — especially new Tron-flavored components, theme polish, and registry improvements. Open an issue first for anything larger than a tweak so we can align on direction. License MIT End of line.",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://github.com/educlopez/thegridcn-ui#the-gridcn"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/educlopez/thegridcn-ui/blob/main/LICENSE"
+    },
+    {
+      "label": "",
+      "url": "https://nextjs.org/"
+    },
+    {
+      "label": "",
+      "url": "https://react.dev/"
+    },
+    {
+      "label": "",
+      "url": "https://tailwindcss.com/"
+    },
+    {
+      "label": "",
+      "url": "https://ui.shadcn.com/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/educlopez/thegridcn-ui/blob/main/docs/images/hero.png"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/educlopez/thegridcn-ui#what-is-this"
+    },
+    {
+      "label": "thegridcn.com",
+      "url": "https://thegridcn.com"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/educlopez/thegridcn-ui#features"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/educlopez/thegridcn-ui#quick-start"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/educlopez/thegridcn-ui#1-live-preview"
+    },
+    {
+      "label": "thegridcn.com/components",
+      "url": "https://thegridcn.com/components"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/educlopez/thegridcn-ui#2-copy-a-single-component"
+    },
+    {
+      "label": "thegridcn.com/components",
+      "url": "https://thegridcn.com/components"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/educlopez/thegridcn-ui#3-install-via-the-registry-recommended"
+    },
+    {
+      "label": "docs/install.md",
+      "url": "https://github.com/educlopez/thegridcn-ui/blob/main/docs/install.md"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/educlopez/thegridcn-ui#theme-usage"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/educlopez/thegridcn-ui#token-export"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/educlopez/thegridcn-ui#development"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/educlopez/thegridcn-ui#contributing"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/educlopez/thegridcn-ui#license"
+    },
+    {
+      "label": "MIT",
+      "url": "https://github.com/educlopez/thegridcn-ui/blob/main/LICENSE"
+    }
+  ],
+  "root_files": [
+    ".agents/skills",
+    ".atl",
+    ".claude/skills",
+    ".cursor/skills",
+    ".github",
+    ".opencode/skills",
+    ".playwright-mcp",
+    "docs",
+    "public",
+    "scripts",
+    "src",
+    ".gitignore",
+    ".npmrc",
+    "AGENTS.md",
+    "CLAUDE.md",
+    "CONTRIBUTING.md",
+    "README.md",
+    "biome.jsonc",
+    "components.json",
+    "eslint.config.mjs",
+    "next.config.ts",
+    "package.json",
+    "pnpm-lock.yaml",
+    "pnpm-workspace.yaml",
+    "postcss.config.mjs",
+    "registry.json",
+    "tsconfig.json",
+    "vitest.config.ts"
+  ],
+  "release_count": 0,
+  "status": "verified"
+}

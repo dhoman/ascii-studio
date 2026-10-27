@@ -1,0 +1,246 @@
+{
+  "url": "https://github.com/gl-transitions/gl-transitions",
+  "final_url": "https://github.com/gl-transitions/gl-transitions",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:47:49.269993+00:00",
+  "stars": 2160,
+  "forks": 323,
+  "description": "The open collection of GL Transitions",
+  "homepage": "https://gl-transitions.com/",
+  "topics": [
+    "glsl",
+    "transition",
+    "transitions",
+    "webgl"
+  ],
+  "license": "NOASSERTION",
+  "archived": false,
+  "created_at": "2017-05-20T17:25:00.000Z",
+  "branch": "master",
+  "commit": "66a975917ab01a738408c81eb74fd329935e1c72",
+  "readme": "GL Transitions An open collection of 100+ transitions between two images, written by the community as small GLSL functions that follow one specification. They are translated to SkSL, GLSL ES 3.00, WGSL, Metal and AGSL, for web pages, React Native and Android apps, iOS and macOS video exports or Rust renderers. CI compiles every translation, renders the SkSL, WGSL, Metal and AGSL ones and compares them with the GLSL original, and compatibility.json in the npm package gives the result for each transition and target. Browse them and edit them live at gl-transitions.com. Use the transitions Platform Package Install Any JavaScript: the sources in every language, with their parameters gl-transitions npm install gl-transitions WebGL, regl, gl-react, rendering videos from the command line gl-transition, regl-transition, react-gl-transition, gl-transition-scripts npm install gl-transition (or regl-transition, react-gl-transition, gl-transition-scripts) React Native Skia @gl-transitions/react-native-skia npm install gl-transitions @gl-transitions/react-native-skia, with @shopify/react-native-skia Remotion @gl-transitions/remotion npm install gl-transitions @gl-transitions/remotion @remotion/transitions Apple platforms: Metal, AVFoundation video compositions, SwiftUI GLTransitions Swift Package Manager, from gl-transitions-swift Android 13+: AGSL RuntimeShader, Kotlin and Java com.gl-transitions:gl-transitions Gradle, from Maven Central Rust: skia-safe, wgpu, Bevy… gl-transitions cargo add gl-transitions Coding agents llms.txt, Agent Skill Each package's README has a usage example. Example apps: SwiftUI, Android, React Native Skia, Remotion, fframes. Outside this project, the transitions are also used by editly, ffmpeg-gl-transition and xfade-easing (FFmpeg). Contribute a transition Write it in the editor, which renders it as you type. Open a pull request that adds transitions/YourTransition.glsl, following the specification and CONTRIBUTING.md. CI checks it, renders it and comments preview GIFs on the pull request. Releases New transitions merged into master are published in the next minor release of the npm package, listed in the changelog. The Swift package and the Android library are released with the same version, and the Rust crate with a patch release (changelog). License MIT. Each transition states its license in its header, and the packages give it with each transition: all are MIT except two under BSD licenses. GL Transition Specification v1 This section specifies GL Transitions v1, 1 as in gl-transitions@1, the major version of the npm package. A breaking change to this specification bumps that major version. What is a transition? A Transition is an animation that smoothly animates the intermediary steps between 2 textures: from and to. The step is specified by a progress value that moves from 0.0 to 1.0. ImportantWhen progress is 0.0, only the from texture must be rendered. When progress is 1.0, only the to texture must be rendered. GL Transition // transition of a simple fade. vec4 transition (vec2 uv) { return mix( getFromColor(uv), getToColor(uv), progress ); } A GL Transition is GLSL code that implements a transition function which takes a vec2 uv position and returns a vec4 color. This color represents the mix of the from to the to textures based on the variation of a contextual progress value from 0.0 to 1.0. Language and coordinates The code is GLSL ES 1.00 (WebGL 1). The implementer provides the rest of the fragment shader: the precision, the contextual variables and functions below, and main(). So a transition must not define main() or declare a precision, and doesn't need #ifdef GL_ES. uv goes from vec2(0.0) to vec2(1.0) over the output, with the origin at the bottom left. Don't use gl_FragCoord or a resolution uniform: the transition must render the same at any size. transition returns the color as straight (not premultiplied) RGBA, like the colors getFromColor and getToColor return. It returns it rather than writing gl_FragColor. Contextual variables progress (float): a value that moves from 0.0 to 1.0 during the transition. ratio (float): the ratio of the viewport. It equals width / height. (width and height are not exposed because you don't need them. A transition code should be scalable to any size. ratio can still be used to preserve some shape ratio, e.g. you want to draw squares) Contextual functions vec4 getFromColor(vec2 uv): lookup the \"from\" texture at a given uv coordinate. vec4 getToColor(vec2 uv): lookup the \"to\" texture at a given uv coordinate. don't directly use texture2D to get a texture pixel out of the from and to textures. Instead, use getFromColor(vec2) and getToColor(vec2). That way, the \"implementer\" can properly implement ratio preserving support as well as choosing a different color for the \"out of bound\" case. Header Header comments credit the transition, usually at the top of the file: // Author: Your Name // License: MIT Author and License are required. The value of Author must not contain : (write name (gitlab.com/handle) rather than a URL with a scheme), so that tools reading key: value lines don't misread it. Tools reading a transition without License treat it as MIT. Transition parameters Transition parameters are parameters that the final user can set to tweak the transition. They are constant over a full run of a transition (no parameter changes when progress moves from 0.0 to 1.0). any constant you define in your transitions are potential parameters to expose. A parameter is a uniform of type bool, int, float, vec2, vec3, vec4, ivec2, ivec3 or ivec4, with a default value. A uniform without a default value isn't a parameter. When you define a transition parameter, you must also define a default value that will get set in case the final user didn't provide it. It's unfortunately not possible to initialize a uniform in GLSL ES 1.00 (WebGL 1) but we support commented code // = value Examples: uniform float foo; // = 42.0 uniform vec2 foo; // = vec2(42.0, 42.0) The following variants are also supported: uniform float foo/* = 42.0 */; uniform vec2 foo /*= vec2(42.0, 42.0)*/, bar /* = vec2(1.) */; uniform vec2 foo, bar; // = vec2(1.0, 2.0); // both at the same time ! (needs a ';' if you have this second //, like usual glsl code) Transition metadata (optional) Transitions can describe themselves so that tools, editors and package integrations can list, search and expose them with a proper UI. All of it is optional and lives in comments, so the shader stays valid GLSL. Header lines, next to Author and License: // Author: Adrian Purser // License: MIT // Description: The outgoing image drops out of the frame with a few bounces, revealing the incoming one // Tags: bounce, slide, vertical, shadow Description: one line describing what the transition looks like. Tags: comma-separated, lowercase words or dash-separated words (e.g. wipe, zoom-in). Parameter hints go on comment lines directly above the uniform they describe. Text after the hints is the parameter description; @param alone marks a description-only line: // @color Color of the shadow cast on the incoming image uniform vec4 shadow_colour; // = vec4(0.,0.,0.,.6) // @range(1, 10, 1) Number of bounces before settling uniform float bounces; // = 3.0 // @param Wipe from right to left instead uniform bool reversed; // = false Hint Applies to Meaning @range(min, max) / @range(min, max, step) float, int, vec*, ivec* Suggested bounds for a UI control (applies per component for vectors) @color vec3, vec4 The value is an RGB / RGBA color @param any No hint, only a description Hints are on their own line (not after the default value) so that existing parsers of the // = value syntax keep working. Extra textures A transition may declare additional uniform sampler2D inputs (e.g. luma, displacement). They are listed in the textures field of gl-transitions.json; the implementer is responsible for providing them. They are sampled with texture2D directly (e.g. texture2D(luma, uv)). gl-transitions.json format The npm package exposes the collection as an array of objects: Field Description name File name without .glsl. Stable: never renamed once published author, license From the header comments glsl The transition source paramsTypes, defaultParams Parameter types and default values (legacy, kept for compatibility) params Per parameter: type, default, and when annotated min, max, step, color, description description, tags From the header comments (tags is always an array) textures Extra sampler2D inputs beyond from and to createdAt, updatedAt From git history gl-transitions collection policy A transition's name (its file name) never changes once it is published. If we have duplicated transitions or one transition is more generic than another one, we don't necessarily drop the less generic one: it might be more performant and might fit for some users, and we keep backward compatibility. If we still want to drop it, we deprecate it and drop it at the next major version. New transitions are preferably MIT licensed, and come with a Description and Tags (see Transition metadata).",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://github.com/gl-transitions/gl-transitions#gl-transitions"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/gl-transitions/gl-transitions/actions/workflows/ci.yml"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/gl-transitions"
+    },
+    {
+      "label": "",
+      "url": "https://crates.io/crates/gl-transitions"
+    },
+    {
+      "label": "",
+      "url": "https://central.sonatype.com/artifact/com.gl-transitions/gl-transitions"
+    },
+    {
+      "label": "",
+      "url": "https://gl-transitions.com/gallery"
+    },
+    {
+      "label": "specification",
+      "url": "https://github.com/gl-transitions/gl-transitions#gl-transition-specification-v1"
+    },
+    {
+      "label": "gl-transitions.com",
+      "url": "https://gl-transitions.com"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/gl-transitions/gl-transitions#use-the-transitions"
+    },
+    {
+      "label": "gl-transitions",
+      "url": "https://github.com/gl-transitions/gl-transitions/blob/master/packages/gl-transitions"
+    },
+    {
+      "label": "gl-transition, regl-transition, react-gl-transition, gl-transition-scripts",
+      "url": "https://github.com/gre/gl-transition-libs"
+    },
+    {
+      "label": "@gl-transitions/react-native-skia",
+      "url": "https://github.com/gl-transitions/gl-transitions/blob/master/packages/react-native-skia"
+    },
+    {
+      "label": "@gl-transitions/remotion",
+      "url": "https://github.com/gl-transitions/gl-transitions/blob/master/packages/remotion"
+    },
+    {
+      "label": "GLTransitions",
+      "url": "https://github.com/gl-transitions/gl-transitions/blob/master/swift"
+    },
+    {
+      "label": "gl-transitions-swift",
+      "url": "https://github.com/gl-transitions/gl-transitions-swift"
+    },
+    {
+      "label": "com.gl-transitions:gl-transitions",
+      "url": "https://github.com/gl-transitions/gl-transitions/blob/master/android"
+    },
+    {
+      "label": "gl-transitions",
+      "url": "https://github.com/gl-transitions/gl-transitions/blob/master/crates/gl-transitions"
+    },
+    {
+      "label": "llms.txt",
+      "url": "https://cdn.jsdelivr.net/npm/gl-transitions@1/llms.txt"
+    },
+    {
+      "label": "Agent Skill",
+      "url": "https://github.com/gl-transitions/gl-transitions/blob/master/skills/gl-transitions/SKILL.md"
+    },
+    {
+      "label": "SwiftUI",
+      "url": "https://github.com/gl-transitions/gl-transitions/blob/master/examples/swiftui"
+    },
+    {
+      "label": "Android",
+      "url": "https://github.com/gl-transitions/gl-transitions/blob/master/examples/android"
+    },
+    {
+      "label": "React Native Skia",
+      "url": "https://github.com/gl-transitions/gl-transitions/blob/master/examples/react-native-skia"
+    },
+    {
+      "label": "Remotion",
+      "url": "https://github.com/gl-transitions/gl-transitions/blob/master/examples/remotion"
+    },
+    {
+      "label": "fframes",
+      "url": "https://github.com/gl-transitions/gl-transitions/blob/master/examples/fframes"
+    },
+    {
+      "label": "editly",
+      "url": "https://github.com/mifi/editly"
+    },
+    {
+      "label": "ffmpeg-gl-transition",
+      "url": "https://github.com/transitive-bullshit/ffmpeg-gl-transition"
+    },
+    {
+      "label": "xfade-easing",
+      "url": "https://github.com/scriptituk/xfade-easing"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/gl-transitions/gl-transitions#contribute-a-transition"
+    },
+    {
+      "label": "editor",
+      "url": "https://gl-transitions.com/editor"
+    },
+    {
+      "label": "specification",
+      "url": "https://github.com/gl-transitions/gl-transitions#gl-transition-specification-v1"
+    },
+    {
+      "label": "CONTRIBUTING.md",
+      "url": "https://github.com/gl-transitions/gl-transitions/blob/master/CONTRIBUTING.md"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/gl-transitions/gl-transitions#releases"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/gl-transitions/gl-transitions/blob/master/packages/gl-transitions/CHANGELOG.md"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/gl-transitions/gl-transitions/blob/master/crates/gl-transitions/CHANGELOG.md"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/gl-transitions/gl-transitions#license"
+    },
+    {
+      "label": "MIT",
+      "url": "https://github.com/gl-transitions/gl-transitions/blob/master/LICENSE"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/gl-transitions/gl-transitions#gl-transition-specification-v1"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/gl-transitions/gl-transitions#what-is-a-transition"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/gl-transitions/gl-transitions#gl-transition"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/gl-transitions/gl-transitions#language-and-coordinates"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/gl-transitions/gl-transitions#contextual-variables"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/gl-transitions/gl-transitions#contextual-functions"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/gl-transitions/gl-transitions#header"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/gl-transitions/gl-transitions#transition-parameters"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/gl-transitions/gl-transitions#transition-metadata-optional"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/gl-transitions/gl-transitions#extra-textures"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/gl-transitions/gl-transitions#gl-transitionsjson-format"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/gl-transitions/gl-transitions#gl-transitions-collection-policy"
+    },
+    {
+      "label": "Transition metadata",
+      "url": "https://github.com/gl-transitions/gl-transitions#transition-metadata-optional"
+    }
+  ],
+  "root_files": [
+    ".changeset",
+    ".github",
+    "android",
+    "crates/gl-transitions",
+    "examples",
+    "packages",
+    "scripts",
+    "skills/gl-transitions",
+    "swift",
+    "transitions",
+    ".editorconfig",
+    ".gitattributes",
+    ".gitignore",
+    ".prettierrc.json",
+    "CONTRIBUTING.md",
+    "LICENSE",
+    "README.md",
+    "mise.lock",
+    "mise.toml",
+    "package.json",
+    "pnpm-lock.yaml",
+    "pnpm-workspace.yaml"
+  ],
+  "release_count": 5,
+  "status": "verified"
+}

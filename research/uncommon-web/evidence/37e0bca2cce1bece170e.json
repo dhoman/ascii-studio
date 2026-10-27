@@ -1,0 +1,312 @@
+{
+  "url": "https://github.com/Abhishek-Mallick/Isometric",
+  "final_url": "https://github.com/Abhishek-Mallick/Isometric",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:45:55.824346+00:00",
+  "stars": 12,
+  "forks": 0,
+  "description": "Isometric line figures and UI primitives for React. Drawings that answer the pointer, components that stand on their own depth.",
+  "homepage": "https://isometric.buildlab.in",
+  "topics": [
+    "components",
+    "design-system",
+    "isometric",
+    "nextjs",
+    "radix-ui",
+    "react",
+    "shadcn",
+    "shadcn-registry",
+    "shadcn-ui",
+    "svg",
+    "tailwindcss",
+    "ui-library"
+  ],
+  "license": "NOASSERTION",
+  "archived": false,
+  "created_at": "2026-10-04T11:52:32.000Z",
+  "branch": "main",
+  "commit": "2b71b961241a4bcbda03544186572e41a8e07d45",
+  "readme": "Isometric Isometric line figures and UI primitives for React. Website · Components · Playground · Engine · llms.txt · Changelog · Contributing Isometric is a collection of drawings and controls that stand in three dimensions, drawn in fine lines. The figures are SVG drawings that answer the pointer: a skyline that rises where you point, a laptop whose lid follows you, a bar chart drawn from your data. The interactive objects are made of parts you can operate: slide the panel off a PC, ring a church bell, haul a pulley. The Blocks kit is mineable blocks with game UI to match, and the World puts everything in one town you can explore and build in. The primitives are buttons, cards, tabs and the rest, each standing on a depth drawn in the same lines. You install the source with the shadcn CLI, so every component is yours to edit. What's included 12 figures: Skyline, Stack, Keys, Rack, Laptop, Bars, Steps, Files, Cylinders, Parcel, Nodes and Cube. Each takes the same options (intensity, theme, label, onRead) and reads out what it is doing. 5 interactive objects: PC Case, Heart, Reactor, Pulley and Church. Every part answers a click and the keyboard, and reports through onActivate. The Blocks kit: Block, Chest, Torch and Tree, with a Block Icon, Hotbar, Inventory, Hearts Meter and XP Bar. World: a town of every object on block terrain, with pan, zoom, day and night, and a build mode. See it in the playground. Engine anatomy: a working twin-turbo V12 you can start, rev, see through in X-ray, take apart into its parts, and follow one cylinder at a time, with live gauges and the pressure and volume loop. See it on the engine page. 11 primitives: Button, Card, Switch, Tabs, Slider, Toggle Group, Kbd, Badge, Progress, Input and Grid, built on Radix UI with keyboard and screen-reader support. A small engine (lib/isometric): orthographic projection, meshes with hidden faces removed and true outlines for curved solids, picking, springs, and one shared animation loop that sleeps offscreen and when nothing moves. No dependencies beyond React. Your theme, unchanged. Everything reads shadcn's tokens, so it follows your palette and .dark. Tune it with --iso-* custom properties. Docs for humans and agents: every component page has a live preview, install command, props table and source, plus llms.txt and per-component Markdown. Components Figures Primitives Skyline Towers rise around the pointer Iso Button Stands on its depth, sinks when pressed Stack An app window in four layers Iso Card A slab, composed like shadcn's Card Keys A keyboard that presses back Iso Switch A block in a recessed groove Rack Server units slide out Iso Tabs The chosen tile stands up Laptop The lid follows the pointer Iso Slider A cube on a rail, with ticks Bars A bar chart from your data Iso Toggle Group Keys that stay down when on Steps Progress as a staircase Iso Kbd A keycap for shortcuts Files Sheets rise from a folder Iso Badge A small slab for status Cylinders A database stack that parts Iso Progress Blocks that stand up as they fill Parcel A box that opens as you near Iso Input A recessed well Nodes A pulse routes through a network Iso Grid An isometric lattice backdrop Cube Layers twist and settle Interactive objects and Blocks Objects Blocks PC Case Panel off, memory out, power on Block Mine it; it grows back Heart Beats, and likes with a burst Chest The lid lifts, items rise Reactor Coils charge, pulses fire Torch Flickers; snuff and relight Pulley Haul the rope, 2:1 or 4:1 Tree Sways, sheds leaves Church Doors, bell and lit windows Hotbar · Inventory · Hearts Meter · XP Bar Game UI to match Installation Isometric needs React 19, Tailwind CSS v4 and a components.json (run npx shadcn@latest init first). npx shadcn@latest add @isometric/skyline @isometric/iso-button npx shadcn@latest add @isometric/church @isometric/world npx shadcn@latest add @isometric/all # everything If your shadcn CLI does not know the namespace yet, register it in components.json: { \"registries\": { \"@isometric\": \"https://isometric.buildlab.in/r/{name}.json\" } } Usage import { Bars } from \"@/components/ui/isometric/bars\" import { IsoButton } from \"@/components/ui/isometric/iso-button\" export default function Page() { return ( <> <Bars data={[12, 18, 9, 24]} labels={[\"Q1\", \"Q2\", \"Q3\", \"Q4\"]} intensity={0.7} /> <IsoButton variant=\"solid\">Get started</IsoButton> </> ) } Theming :root { --iso-accent: #2450b8; /* what the pointer touches */ --iso-plate: var(--background); /* the fill of every face */ --iso-stroke: 0.9; /* stroke width in CSS px */ --iso-side: var(--muted); /* the side faces of primitives */ } See the docs for every token. Development pnpm install pnpm dev # generates the registry, then runs the site on :3000 pnpm test # engine and registry tests pnpm build # name check, registry, static export to out/ pnpm test:e2e # browser smoke tests against out/ pnpm lint # ESLint pnpm format # Prettier The registry is generated from registry/index.ts. Components live in registry/isometric/ui/isometric, the engine in registry/isometric/lib/isometric. The engine page's maths is in anatomy/ and its view in components/engine; VISUAL=1 pnpm test:e2e adds screenshot comparisons of it, against baselines made on the same platform. License MIT",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://isometric.buildlab.in"
+    },
+    {
+      "label": "Website",
+      "url": "https://isometric.buildlab.in"
+    },
+    {
+      "label": "Components",
+      "url": "https://isometric.buildlab.in/components"
+    },
+    {
+      "label": "Playground",
+      "url": "https://isometric.buildlab.in/playground"
+    },
+    {
+      "label": "Engine",
+      "url": "https://isometric.buildlab.in/engine"
+    },
+    {
+      "label": "llms.txt",
+      "url": "https://isometric.buildlab.in/llms.txt"
+    },
+    {
+      "label": "Changelog",
+      "url": "https://github.com/Abhishek-Mallick/Isometric/blob/main/CHANGELOG.md"
+    },
+    {
+      "label": "Contributing",
+      "url": "https://github.com/Abhishek-Mallick/Isometric/blob/main/.github/CONTRIBUTING.md"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/Abhishek-Mallick/Isometric/blob/main/LICENSE"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/Abhishek-Mallick/Isometric/actions/workflows/ci.yml"
+    },
+    {
+      "label": "",
+      "url": "https://isometric.buildlab.in"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/Abhishek-Mallick/Isometric#whats-included"
+    },
+    {
+      "label": "playground",
+      "url": "https://isometric.buildlab.in/playground"
+    },
+    {
+      "label": "engine page",
+      "url": "https://isometric.buildlab.in/engine"
+    },
+    {
+      "label": "llms.txt",
+      "url": "https://isometric.buildlab.in/llms.txt"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/Abhishek-Mallick/Isometric#components"
+    },
+    {
+      "label": "Skyline",
+      "url": "https://isometric.buildlab.in/components/skyline"
+    },
+    {
+      "label": "Iso Button",
+      "url": "https://isometric.buildlab.in/components/iso-button"
+    },
+    {
+      "label": "Stack",
+      "url": "https://isometric.buildlab.in/components/stack"
+    },
+    {
+      "label": "Iso Card",
+      "url": "https://isometric.buildlab.in/components/iso-card"
+    },
+    {
+      "label": "Keys",
+      "url": "https://isometric.buildlab.in/components/keys"
+    },
+    {
+      "label": "Iso Switch",
+      "url": "https://isometric.buildlab.in/components/iso-switch"
+    },
+    {
+      "label": "Rack",
+      "url": "https://isometric.buildlab.in/components/rack"
+    },
+    {
+      "label": "Iso Tabs",
+      "url": "https://isometric.buildlab.in/components/iso-tabs"
+    },
+    {
+      "label": "Laptop",
+      "url": "https://isometric.buildlab.in/components/laptop"
+    },
+    {
+      "label": "Iso Slider",
+      "url": "https://isometric.buildlab.in/components/iso-slider"
+    },
+    {
+      "label": "Bars",
+      "url": "https://isometric.buildlab.in/components/bars"
+    },
+    {
+      "label": "Iso Toggle Group",
+      "url": "https://isometric.buildlab.in/components/iso-toggle-group"
+    },
+    {
+      "label": "Steps",
+      "url": "https://isometric.buildlab.in/components/steps"
+    },
+    {
+      "label": "Iso Kbd",
+      "url": "https://isometric.buildlab.in/components/iso-kbd"
+    },
+    {
+      "label": "Files",
+      "url": "https://isometric.buildlab.in/components/files"
+    },
+    {
+      "label": "Iso Badge",
+      "url": "https://isometric.buildlab.in/components/iso-badge"
+    },
+    {
+      "label": "Cylinders",
+      "url": "https://isometric.buildlab.in/components/cylinders"
+    },
+    {
+      "label": "Iso Progress",
+      "url": "https://isometric.buildlab.in/components/iso-progress"
+    },
+    {
+      "label": "Parcel",
+      "url": "https://isometric.buildlab.in/components/parcel"
+    },
+    {
+      "label": "Iso Input",
+      "url": "https://isometric.buildlab.in/components/iso-input"
+    },
+    {
+      "label": "Nodes",
+      "url": "https://isometric.buildlab.in/components/nodes"
+    },
+    {
+      "label": "Iso Grid",
+      "url": "https://isometric.buildlab.in/components/iso-grid"
+    },
+    {
+      "label": "Cube",
+      "url": "https://isometric.buildlab.in/components/cube"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/Abhishek-Mallick/Isometric#interactive-objects-and-blocks"
+    },
+    {
+      "label": "PC Case",
+      "url": "https://isometric.buildlab.in/components/pc-case"
+    },
+    {
+      "label": "Block",
+      "url": "https://isometric.buildlab.in/components/block"
+    },
+    {
+      "label": "Heart",
+      "url": "https://isometric.buildlab.in/components/heart"
+    },
+    {
+      "label": "Chest",
+      "url": "https://isometric.buildlab.in/components/chest"
+    },
+    {
+      "label": "Reactor",
+      "url": "https://isometric.buildlab.in/components/reactor"
+    },
+    {
+      "label": "Torch",
+      "url": "https://isometric.buildlab.in/components/torch"
+    },
+    {
+      "label": "Pulley",
+      "url": "https://isometric.buildlab.in/components/pulley"
+    },
+    {
+      "label": "Tree",
+      "url": "https://isometric.buildlab.in/components/tree"
+    },
+    {
+      "label": "Church",
+      "url": "https://isometric.buildlab.in/components/church"
+    },
+    {
+      "label": "Hotbar",
+      "url": "https://isometric.buildlab.in/components/hotbar"
+    },
+    {
+      "label": "Inventory",
+      "url": "https://isometric.buildlab.in/components/inventory"
+    },
+    {
+      "label": "Hearts Meter",
+      "url": "https://isometric.buildlab.in/components/hearts-meter"
+    },
+    {
+      "label": "XP Bar",
+      "url": "https://isometric.buildlab.in/components/xp-bar"
+    },
+    {
+      "label": "",
+      "url": "https://isometric.buildlab.in/playground"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/Abhishek-Mallick/Isometric#installation"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/Abhishek-Mallick/Isometric#usage"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/Abhishek-Mallick/Isometric#theming"
+    },
+    {
+      "label": "the docs",
+      "url": "https://isometric.buildlab.in/docs#theming"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/Abhishek-Mallick/Isometric#development"
+    },
+    {
+      "label": "registry/index.ts",
+      "url": "https://github.com/Abhishek-Mallick/Isometric/blob/main/registry/index.ts"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/Abhishek-Mallick/Isometric#license"
+    },
+    {
+      "label": "MIT",
+      "url": "https://github.com/Abhishek-Mallick/Isometric/blob/main/LICENSE"
+    }
+  ],
+  "root_files": [
+    ".github",
+    "anatomy",
+    "app",
+    "components",
+    "docs/superpowers",
+    "e2e",
+    "lib",
+    "public",
+    "registry",
+    "scripts",
+    "test",
+    ".gitignore",
+    ".nvmrc",
+    ".prettierignore",
+    ".prettierrc.json",
+    "CHANGELOG.md",
+    "LICENSE",
+    "README.md",
+    "components.json",
+    "eslint.config.mjs",
+    "next.config.ts",
+    "package.json",
+    "playwright.config.ts",
+    "pnpm-lock.yaml",
+    "postcss.config.mjs",
+    "registry.json",
+    "tsconfig.json",
+    "vitest.config.ts"
+  ],
+  "release_count": 1,
+  "status": "verified"
+}

@@ -1,0 +1,116 @@
+{
+  "url": "https://github.com/piqnt/planck.js",
+  "final_url": "https://github.com/piqnt/planck.js",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:48:10.603286+00:00",
+  "stars": 5299,
+  "forks": 256,
+  "description": "2D JavaScript Physics Engine",
+  "homepage": "http://piqnt.com/planck.js/",
+  "topics": [
+    "2d",
+    "box2d",
+    "canvas",
+    "cross-platform",
+    "game-development",
+    "game-engine",
+    "gamedev",
+    "html5",
+    "javascript",
+    "physics-engine",
+    "planck",
+    "planck-js",
+    "rigid-bodies"
+  ],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2016-03-22T04:46:05.000Z",
+  "branch": "master",
+  "commit": "36aa6c3159c3348916b1c7aa117a957da785c9fb",
+  "readme": "Planck.js Planck.js is JavaScript/TypeScript rewrite of Box2D physics engine for cross-platform HTML5 game development. Motivations Taking advantage of Box2D's efforts and achievements Developing readable and editable code in JavaScript/TypeScript Providing idiomatic JavaScript/TypeScript API Optimizing the library for web and mobile platforms Documentation Examples Discord Made with Planck.js Report Issues To speed up resolving issues, please provide testbed code to reproduce the issue.",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://github.com/piqnt/planck.js#planckjs"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/piqnt/planck.js#motivations"
+    },
+    {
+      "label": "Documentation",
+      "url": "https://piqnt.com/planck.js/docs/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/piqnt/planck.js#documentation"
+    },
+    {
+      "label": "Examples",
+      "url": "https://piqnt.com/planck.js/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/piqnt/planck.js#examples"
+    },
+    {
+      "label": "Discord",
+      "url": "https://discord.com/invite/znjh6J7"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/piqnt/planck.js#discord"
+    },
+    {
+      "label": "Made with Planck.js",
+      "url": "https://github.com/piqnt/planck.js/wiki/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/piqnt/planck.js#made-with-planckjs"
+    },
+    {
+      "label": "Report Issues",
+      "url": "https://github.com/piqnt/planck.js/issues"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/piqnt/planck.js#report-issues"
+    },
+    {
+      "label": "testbed",
+      "url": "https://piqnt.com/planck.js/docs/testbed"
+    }
+  ],
+  "root_files": [
+    ".changeset",
+    ".github/workflows",
+    "benchmark",
+    "dist",
+    "docs",
+    "example",
+    "src",
+    "test-d",
+    "testbed",
+    "types/globals",
+    ".gitattributes",
+    ".gitignore",
+    ".prettierignore",
+    ".prettierrc.json",
+    "CHANGELOG.md",
+    "CHANGES.md",
+    "HelloWorld.ts",
+    "LICENSE.txt",
+    "README.md",
+    "eslint.config.mjs",
+    "index.d.ts",
+    "index.html",
+    "package-lock.json",
+    "package.json",
+    "tsconfig.json",
+    "typedoc.json",
+    "vite.config.mts"
+  ],
+  "release_count": null,
+  "status": "verified"
+}

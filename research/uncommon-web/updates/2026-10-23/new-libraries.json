@@ -1,0 +1,1281 @@
+[
+  {
+    "name": "LaTeX.css",
+    "categories": [
+      "¶Typography & text"
+    ],
+    "frameworks": [
+      "css"
+    ],
+    "tags": [
+      "typography",
+      "prose",
+      "math"
+    ],
+    "demos": [
+      "https://webdev.teknium.io/#latex-css-paper"
+    ],
+    "links": [
+      {
+        "label": "↗ full window",
+        "url": "https://webdev.teknium.io/d/type5/demos/latex-css-paper/"
+      },
+      {
+        "label": "site ↗",
+        "url": "https://latex.vercel.app"
+      },
+      {
+        "label": "source ↗",
+        "url": "https://github.com/vincentdoerig/latex-css"
+      },
+      {
+        "label": "npm ↗",
+        "url": "https://www.npmjs.com/package/latex.css"
+      }
+    ],
+    "capabilities": [
+      "Drop in one stylesheet and plain HTML picks up Latin Modern type, a centred title and author block, an abstract, booktabs-style table rules and numbered captions; a few opt-in classes add theorem and proof blocks. Here the paper's real source sits beside the typeset page and a linked inspector tours h1 → equation → theorem → proof → table → footnotes. The math is plain HTML entities, no KaTeX or MathJax, and .latex-dark flips the theme."
+    ],
+    "installs": [
+      "npm i latex.css"
+    ]
+  },
+  {
+    "name": "d3-geo-projection",
+    "categories": [
+      "◍Data, maps & graphs as art"
+    ],
+    "frameworks": [
+      "vanilla"
+    ],
+    "tags": [
+      "canvas",
+      "maps",
+      "geo",
+      "data-viz"
+    ],
+    "demos": [
+      "https://webdev.teknium.io/#geo-projection-morph"
+    ],
+    "links": [
+      {
+        "label": "↗ full window",
+        "url": "https://webdev.teknium.io/d/viz3/demos/geo-projection-morph/"
+      },
+      {
+        "label": "site ↗",
+        "url": "https://d3js.org/d3-geo-projection/"
+      },
+      {
+        "label": "source ↗",
+        "url": "https://github.com/d3/d3-geo-projection"
+      },
+      {
+        "label": "npm ↗",
+        "url": "https://www.npmjs.com/package/d3-geo-projection"
+      }
+    ],
+    "capabilities": [
+      "d3-geo-projection exposes each projection's raw math, so you can write a raw function that blends two of them and morph the world from Hammer to Larrivée to Bertin 1953. Paired with d3-geo-polygon's clipped polyhedral projections (Cahill–Keyes, Waterman, Fuller's Airocean), the same canvas path renders Tissot's indicatrices that show each projection's distortion. Natural Earth 110m land (public domain) via world-atlas."
+    ],
+    "installs": [
+      "npm i d3-geo-projection d3-geo-polygon d3-geo"
+    ]
+  },
+  {
+    "name": "webgl-wind",
+    "categories": [
+      "◍Data, maps & graphs as art"
+    ],
+    "frameworks": [
+      "vanilla"
+    ],
+    "tags": [
+      "webgl",
+      "particles",
+      "maps",
+      "data"
+    ],
+    "demos": [
+      "https://webdev.teknium.io/#webgl-wind-gfs-streaks"
+    ],
+    "links": [
+      {
+        "label": "↗ full window",
+        "url": "https://webdev.teknium.io/d/viz3/demos/webgl-wind-gfs-streaks/"
+      },
+      {
+        "label": "site ↗",
+        "url": "https://mapbox.github.io/webgl-wind/demo/"
+      },
+      {
+        "label": "source ↗",
+        "url": "https://github.com/mapbox/webgl-wind"
+      }
+    ],
+    "capabilities": [
+      "Vladimir Agafonkin's webgl-wind keeps every particle position in a texture and advects it in a fragment shader against a u/v wind PNG, so 65k trails cost the CPU nothing. The fading screen-texture feedback gives the streaks their silky ink look; here it runs on real NOAA GFS frames (public domain) with a custom teal-to-ember speed ramp."
+    ],
+    "installs": [
+      "npm i github:mapbox/webgl-wind#b1f6468"
+    ]
+  },
+  {
+    "name": "mapgen4",
+    "categories": [
+      "◍Data, maps & graphs as art"
+    ],
+    "frameworks": [
+      "vanilla"
+    ],
+    "tags": [
+      "webgl",
+      "procedural",
+      "maps",
+      "worker"
+    ],
+    "demos": [
+      "https://webdev.teknium.io/#mapgen4-painted-island"
+    ],
+    "links": [
+      {
+        "label": "↗ full window",
+        "url": "https://webdev.teknium.io/d/viz3/demos/mapgen4-painted-island/"
+      },
+      {
+        "label": "site ↗",
+        "url": "https://www.redblobgames.com/maps/mapgen4/"
+      },
+      {
+        "label": "source ↗",
+        "url": "https://github.com/redblobgames/mapgen4"
+      }
+    ],
+    "capabilities": [
+      "mapgen4 builds a Delaunay/Voronoi dual mesh, runs elevation, wind-driven rainfall and river flow in a Web Worker, then renders it with an oblique projection and outline shading that reads like a hand-drawn relief map. Paint ocean, valleys or peaks and the rivers, biomes and rain shadows recompute in tens of milliseconds."
+    ],
+    "installs": [
+      "git clone https://github.com/redblobgames/mapgen4 && cd mapgen4 && ./build.sh"
+    ]
+  },
+  {
+    "name": "d3-graphviz",
+    "categories": [
+      "◍Data, maps & graphs as art"
+    ],
+    "frameworks": [
+      "vanilla"
+    ],
+    "tags": [
+      "svg",
+      "graphs",
+      "wasm",
+      "animation"
+    ],
+    "demos": [
+      "https://webdev.teknium.io/#graphviz-dot-morph"
+    ],
+    "links": [
+      {
+        "label": "↗ full window",
+        "url": "https://webdev.teknium.io/d/viz3/demos/graphviz-dot-morph/"
+      },
+      {
+        "label": "site ↗",
+        "url": "https://github.com/magjac/d3-graphviz"
+      },
+      {
+        "label": "source ↗",
+        "url": "https://github.com/magjac/d3-graphviz"
+      },
+      {
+        "label": "npm ↗",
+        "url": "https://www.npmjs.com/package/d3-graphviz"
+      }
+    ],
+    "capabilities": [
+      "d3-graphviz runs real Graphviz (compiled to WebAssembly) in the browser, then diffs each new layout against the last and tweens nodes, edges and shapes between them. You write plain DOT strings per state and get morphing diagrams without placing a single coordinate yourself. Here nine DOT keyframes of a git repo branch, merge and squash; the layout flips TB/LR with the viewport."
+    ],
+    "installs": [
+      "npm i d3-graphviz d3"
+    ]
+  },
+  {
+    "name": "MathBox",
+    "categories": [
+      "◍Data, maps & graphs as art"
+    ],
+    "frameworks": [
+      "vanilla"
+    ],
+    "tags": [
+      "webgl",
+      "math",
+      "three",
+      "dataviz"
+    ],
+    "demos": [
+      "https://webdev.teknium.io/#mathbox-complex-surfaces"
+    ],
+    "links": [
+      {
+        "label": "↗ full window",
+        "url": "https://webdev.teknium.io/d/viz3/demos/mathbox-complex-surfaces/"
+      },
+      {
+        "label": "site ↗",
+        "url": "https://mathbox.org/"
+      },
+      {
+        "label": "source ↗",
+        "url": "https://github.com/unconed/mathbox"
+      },
+      {
+        "label": "npm ↗",
+        "url": "https://www.npmjs.com/package/mathbox"
+      }
+    ],
+    "capabilities": [
+      "Steven Wittens' declarative scene graph for math diagrams: emit data with expr callbacks, then draw it as surfaces, vectors, lines and SDF labels with crisp, resolution-independent strokes. Here |f(z)| becomes a domain-colored relief that morphs between z², z³−1, sin z and 1/z while particle trails ride the field."
+    ],
+    "installs": [
+      "npm i mathbox three"
+    ]
+  },
+  {
+    "name": "ENCOM Globe",
+    "categories": [
+      "◍Data, maps & graphs as art"
+    ],
+    "frameworks": [
+      "vanilla"
+    ],
+    "tags": [
+      "webgl",
+      "globe",
+      "three",
+      "dataviz"
+    ],
+    "demos": [
+      "https://webdev.teknium.io/#encom-hex-globe"
+    ],
+    "links": [
+      {
+        "label": "↗ full window",
+        "url": "https://webdev.teknium.io/d/viz3/demos/encom-hex-globe/"
+      },
+      {
+        "label": "site ↗",
+        "url": "https://www.robscanlon.com/encom-globe/"
+      },
+      {
+        "label": "source ↗",
+        "url": "https://github.com/arscan/encom-globe"
+      },
+      {
+        "label": "npm ↗",
+        "url": "https://www.npmjs.com/package/encom-globe"
+      }
+    ],
+    "capabilities": [
+      "Rob Scanlon's recreation of the ENCOM boardroom globe: continents built from hexasphere tiles that sweep in with a build-up animation, spring-loaded pins, orange markers joined by arcs, and satellites pulsing wave rings. A distinct film-UI look next to generic globe libraries."
+    ],
+    "installs": [
+      "npm i encom-globe"
+    ]
+  },
+  {
+    "name": "Classic Stylesheets",
+    "categories": [
+      "▣Retro OS & themed CSS"
+    ],
+    "frameworks": [
+      "css"
+    ],
+    "tags": [
+      "themes",
+      "retro",
+      "desktop"
+    ],
+    "demos": [
+      "https://webdev.teknium.io/#classic-stylesheets-theme-switcher"
+    ],
+    "links": [
+      {
+        "label": "↗ full window",
+        "url": "https://webdev.teknium.io/d/retro3/demos/classic-stylesheets-theme-switcher/"
+      },
+      {
+        "label": "site ↗",
+        "url": "https://nielssp.github.io/classic-stylesheets/"
+      },
+      {
+        "label": "source ↗",
+        "url": "https://github.com/nielssp/classic-stylesheets"
+      },
+      {
+        "label": "npm ↗",
+        "url": "https://www.npmjs.com/package/classic-stylesheets"
+      }
+    ],
+    "capabilities": [
+      "One package styles plain HTML as Windows 3.x, 9x/2000, XP, CDE or Mac OS 9, and its 205 skins recolor each theme through CSS variables. This desktop never re-renders: a Notepad, a list view and a tabbed Display Properties dialog switch eras by swapping a single <style> tag. The windows drag and maximize through the library's own wm.js module."
+    ],
+    "installs": [
+      "npm i classic-stylesheets"
+    ]
+  },
+  {
+    "name": "Aqua",
+    "categories": [
+      "▣Retro OS & themed CSS"
+    ],
+    "frameworks": [
+      "react"
+    ],
+    "tags": [
+      "shadcn",
+      "tailwind",
+      "skeuomorphic"
+    ],
+    "demos": [
+      "https://webdev.teknium.io/#aqua-pinstripe-desktop"
+    ],
+    "links": [
+      {
+        "label": "↗ full window",
+        "url": "https://webdev.teknium.io/d/retro3/demos/aqua-pinstripe-desktop/"
+      },
+      {
+        "label": "site ↗",
+        "url": "https://aqua.duca.dev"
+      },
+      {
+        "label": "source ↗",
+        "url": "https://github.com/igorfelipeduca/aqua"
+      }
+    ],
+    "capabilities": [
+      "Lickable gel buttons, barber-pole progress bars, pinstriped windows, a Dock and a click-wheel music player, shipped as copy-in shadcn components on Radix + Tailwind. One --aqua-accent variable drives every gel gradient via color-mix, so recoloring the whole skin is a single CSS change."
+    ],
+    "installs": [
+      "npx shadcn@latest add https://aqua.duca.dev/r/theme.json https://aqua.duca.dev/r/button.json https://aqua.duca.dev/r/dock.json"
+    ]
+  },
+  {
+    "name": "PSone.css",
+    "categories": [
+      "▣Retro OS & themed CSS"
+    ],
+    "frameworks": [
+      "css"
+    ],
+    "tags": [
+      "retro",
+      "jrpg"
+    ],
+    "demos": [
+      "https://webdev.teknium.io/#psone-memory-card"
+    ],
+    "links": [
+      {
+        "label": "↗ full window",
+        "url": "https://webdev.teknium.io/d/retro3/demos/psone-memory-card/"
+      },
+      {
+        "label": "site ↗",
+        "url": "https://micah5.github.io/PSone.css/"
+      },
+      {
+        "label": "source ↗",
+        "url": "https://github.com/micah5/PSone.css"
+      }
+    ],
+    "capabilities": [
+      "PSone.css recreates late-90s console menus: navy gradient windows with a double white bevel, gradient-fade buttons, segmented HP/MP-style progress bars and radio options picked by a pointer cursor. Here it runs a two-slot memory-card manager with original save icons, a party status preview and a copy/delete confirm dialog."
+    ],
+    "installs": [
+      "npm i github:micah5/PSone.css"
+    ]
+  },
+  {
+    "name": "TheSims.css",
+    "categories": [
+      "▣Retro OS & themed CSS"
+    ],
+    "frameworks": [
+      "css"
+    ],
+    "tags": [
+      "retro",
+      "ui-kit"
+    ],
+    "demos": [
+      "https://webdev.teknium.io/#thesims-needs-panel"
+    ],
+    "links": [
+      {
+        "label": "↗ full window",
+        "url": "https://webdev.teknium.io/d/retro3/demos/thesims-needs-panel/"
+      },
+      {
+        "label": "site ↗",
+        "url": "https://thesimscss.inbn.dev/"
+      },
+      {
+        "label": "source ↗",
+        "url": "https://github.com/inbn/TheSims.css"
+      },
+      {
+        "label": "npm ↗",
+        "url": "https://www.npmjs.com/package/thesims.css"
+      }
+    ],
+    "capabilities": [
+      "A classless kit (adapted from 98.css) that restyles native buttons, skewed buttons, radios, checkboxes, range sliders and scrollbars as the chunky navy bevel panels and Comic-font controls of a 2000 life-sim. The demo drives decaying needs bars, a game clock on speed radios, an action queue, a buy catalog and an isometric build preview."
+    ],
+    "installs": [
+      "npm i thesims.css"
+    ]
+  },
+  {
+    "name": "YoRHa CSS",
+    "categories": [
+      "▣Retro OS & themed CSS"
+    ],
+    "frameworks": [
+      "css"
+    ],
+    "tags": [
+      "classless",
+      "retro",
+      "canvas"
+    ],
+    "demos": [
+      "https://webdev.teknium.io/#yorha-unit-terminal"
+    ],
+    "links": [
+      {
+        "label": "↗ full window",
+        "url": "https://webdev.teknium.io/d/retro3/demos/yorha-unit-terminal/"
+      },
+      {
+        "label": "site ↗",
+        "url": "https://metakirby5.github.io/yorha/"
+      },
+      {
+        "label": "source ↗",
+        "url": "https://github.com/metakirby5/yorha"
+      },
+      {
+        "label": "npm ↗",
+        "url": "https://www.npmjs.com/package/yorha"
+      }
+    ],
+    "capabilities": [
+      "YoRHa styles plain HTML (h1, figure/figcaption, table, blockquote, button) as a khaki field terminal on a hairline grid, with no classes needed. Its signature move is the button highlight: an inverted bar slides in from the left between two hairlines. Here a build-time transform copies every :hover rule to an .is-hover class, so the library's own CSS draws the idle auto-cursor and the keyboard cursor."
+    ],
+    "installs": [
+      "npm i yorha"
+    ]
+  },
+  {
+    "name": "Frutiger.js",
+    "categories": [
+      "▣Retro OS & themed CSS"
+    ],
+    "frameworks": [
+      "react"
+    ],
+    "tags": [
+      "css",
+      "glassmorphism",
+      "canvas"
+    ],
+    "demos": [
+      "https://webdev.teknium.io/#frutiger-aero-welcome"
+    ],
+    "links": [
+      {
+        "label": "↗ full window",
+        "url": "https://webdev.teknium.io/d/retro3/demos/frutiger-aero-welcome/"
+      },
+      {
+        "label": "site ↗",
+        "url": "https://biagio-scaglia.github.io/frutiger-js/"
+      },
+      {
+        "label": "source ↗",
+        "url": "https://github.com/biagio-scaglia/frutiger-js"
+      },
+      {
+        "label": "npm ↗",
+        "url": "https://www.npmjs.com/package/@frutiger.js/react"
+      }
+    ],
+    "capabilities": [
+      "A pure-CSS (cascade-layered) design system plus React wrappers that rebuilds the mid-2000s Frutiger Aero look: gel pill buttons, specular gloss caps, acrylic window frames and Vista-style taskbars. It also ships canvas effects like a swaying GrassField, rising AeroBackgroundFX bubbles and a WaterRipple that splashes wherever you tap."
+    ],
+    "installs": [
+      "npm i @frutiger.js/core @frutiger.js/react"
+    ]
+  },
+  {
+    "name": "A E S T H E T I C",
+    "categories": [
+      "▣Retro OS & themed CSS"
+    ],
+    "frameworks": [
+      "css"
+    ],
+    "tags": [
+      "retro",
+      "vaporwave",
+      "canvas"
+    ],
+    "demos": [
+      "https://webdev.teknium.io/#aesthetic-css-vaporwave-desk"
+    ],
+    "links": [
+      {
+        "label": "↗ full window",
+        "url": "https://webdev.teknium.io/d/retro3/demos/aesthetic-css-vaporwave-desk/"
+      },
+      {
+        "label": "site ↗",
+        "url": "https://torch2424.github.io/aesthetic-css/"
+      },
+      {
+        "label": "source ↗",
+        "url": "https://github.com/torch2424/aesthetic-css"
+      },
+      {
+        "label": "npm ↗",
+        "url": "https://www.npmjs.com/package/aesthetic-css"
+      }
+    ],
+    "capabilities": [
+      "A small Sass/CSS framework that mixes Windows 95 and XP chrome (modals, tabs, taskbar, boot loaders, notifications) with a seapunk pink, lilac and cyan palette. Its effects layer adds a CRT scanline-and-flicker overlay and an attr()-driven text glitch, so a whole page reads as a late-night mall broadcast."
+    ],
+    "installs": [
+      "npm i aesthetic-css"
+    ]
+  },
+  {
+    "name": "BOOTSTRA.386",
+    "categories": [
+      "▣Retro OS & themed CSS"
+    ],
+    "frameworks": [
+      "css"
+    ],
+    "tags": [
+      "bootstrap",
+      "dos",
+      "text-mode"
+    ],
+    "demos": [
+      "https://webdev.teknium.io/#bootstra386-bbs"
+    ],
+    "links": [
+      {
+        "label": "↗ full window",
+        "url": "https://webdev.teknium.io/d/retro3/demos/bootstra386-bbs/"
+      },
+      {
+        "label": "site ↗",
+        "url": "https://bootstra386.com"
+      },
+      {
+        "label": "source ↗",
+        "url": "https://github.com/kristopolous/BOOTSTRA.386"
+      }
+    ],
+    "capabilities": [
+      "BOOTSTRA.386 re-skins stock Bootstrap 5 into an EGA 16-colour, 16px-cell text-mode screen: blue background, square corners, one fixed font size for every element. Unmodified navbar, card, table, list-group, progress, badge, input-group and a real Bootstrap Modal make up this fictional BBS, so ordinary Bootstrap markup turns into a 386-era terminal."
+    ],
+    "installs": [
+      "git clone https://github.com/kristopolous/BOOTSTRA.386"
+    ]
+  },
+  {
+    "name": "3GS UI",
+    "categories": [
+      "▣Retro OS & themed CSS"
+    ],
+    "frameworks": [
+      "react"
+    ],
+    "tags": [
+      "css",
+      "skeuomorphic",
+      "retro"
+    ],
+    "demos": [
+      "https://webdev.teknium.io/#3gs-ui-settings"
+    ],
+    "links": [
+      {
+        "label": "↗ full window",
+        "url": "https://webdev.teknium.io/d/retro3/demos/3gs-ui-settings/"
+      },
+      {
+        "label": "site ↗",
+        "url": "https://design-system-3gs.vercel.app"
+      },
+      {
+        "label": "source ↗",
+        "url": "https://github.com/TimonBozzApps/design-system-3gs"
+      },
+      {
+        "label": "npm ↗",
+        "url": "https://www.npmjs.com/package/@3gs/ui"
+      }
+    ],
+    "capabilities": [
+      "A React design system that rebuilds 2009-era handset chrome from CSS alone: half-split gel gradients, pinstripe grouped tables, ON/OFF pill switches, pointed back buttons and lucide icons tinted through an SVG gloss gradient. Every colour and gel is a --gs-* token, with a dark default and the blue-gray light theme one attribute away."
+    ],
+    "installs": [
+      "npm i @3gs/ui"
+    ]
+  },
+  {
+    "name": "Retrostrap",
+    "categories": [
+      "▣Retro OS & themed CSS"
+    ],
+    "frameworks": [
+      "vanilla"
+    ],
+    "tags": [
+      "css",
+      "retro",
+      "web1.0",
+      "widgets"
+    ],
+    "demos": [
+      "https://webdev.teknium.io/#retrostrap-geocities-home"
+    ],
+    "links": [
+      {
+        "label": "↗ full window",
+        "url": "https://webdev.teknium.io/d/retro3/demos/retrostrap-geocities-home/"
+      },
+      {
+        "label": "site ↗",
+        "url": "https://retrostrap.dev"
+      },
+      {
+        "label": "source ↗",
+        "url": "https://github.com/retrostrap/retrostrap"
+      },
+      {
+        "label": "npm ↗",
+        "url": "https://www.npmjs.com/package/retrostrap"
+      }
+    ],
+    "capabilities": [
+      "A zero-dependency CSS + JS kit that enforces the era: web-safe colors only, nine period font stacks, radius 0, hard bevels, linear motion. Marquees, odometer hit counters, webrings, guestbooks and LED clocks are real widgets, and Retrostrap.audit() flags anything that slips out of 1999."
+    ],
+    "installs": [
+      "npm i retrostrap"
+    ]
+  },
+  {
+    "name": "LCARS CSS",
+    "categories": [
+      "#CSS-only & stylesheets"
+    ],
+    "frameworks": [
+      "css"
+    ],
+    "tags": [
+      "sci-fi",
+      "ui-kit"
+    ],
+    "demos": [
+      "https://webdev.teknium.io/#lcars-ops-console"
+    ],
+    "links": [
+      {
+        "label": "↗ full window",
+        "url": "https://webdev.teknium.io/d/css2/demos/lcars-ops-console/"
+      },
+      {
+        "label": "site ↗",
+        "url": "https://joernweissenborn.github.io/lcars/"
+      },
+      {
+        "label": "source ↗",
+        "url": "https://github.com/joernweissenborn/lcars"
+      }
+    ],
+    "capabilities": [
+      "A class-based CSS framework (no JS) for the elbow-frame console look: elbows, segmented bars, pill elements, hollow brackets, blinking text boxes, row-scanning tables and a large named colour palette, all sized on a rem grid. Because everything is rem-based, the whole console rescales from one root font size, and switching colour classes recolours the full frame."
+    ],
+    "installs": [
+      "curl -LO https://raw.githubusercontent.com/joernweissenborn/lcars/2885f10/lcars/css/lcars.css"
+    ]
+  },
+  {
+    "name": "Arwes",
+    "categories": [
+      "#CSS-only & stylesheets"
+    ],
+    "frameworks": [
+      "react"
+    ],
+    "tags": [
+      "svg",
+      "canvas",
+      "audio"
+    ],
+    "demos": [
+      "https://webdev.teknium.io/#arwes-hud-console"
+    ],
+    "links": [
+      {
+        "label": "↗ full window",
+        "url": "https://webdev.teknium.io/d/css2/demos/arwes-hud-console/"
+      },
+      {
+        "label": "site ↗",
+        "url": "https://github.com/arwes/arwes"
+      },
+      {
+        "label": "source ↗",
+        "url": "https://github.com/arwes/arwes"
+      },
+      {
+        "label": "npm ↗",
+        "url": "https://www.npmjs.com/package/@arwes/react"
+      }
+    ],
+    "capabilities": [
+      "Arwes builds interfaces out of SVG frames that draw their own outlines, text that deciphers into place and canvas grids, dots and moving lines, all timed by one Animator tree so panels enter in staggered sequence. It also ships a bleeps manager for UI sounds; here every bleep is synthesized in the browser into WAV blobs, so the demo bundles no audio files."
+    ],
+    "installs": [
+      "npm i @arwes/react"
+    ]
+  },
+  {
+    "name": "cyberpunk-css",
+    "categories": [
+      "#CSS-only & stylesheets"
+    ],
+    "frameworks": [
+      "css"
+    ],
+    "tags": [
+      "clip-path",
+      "glitch",
+      "ui-kit"
+    ],
+    "demos": [
+      "https://webdev.teknium.io/#cyberpunk-css-netrunner"
+    ],
+    "links": [
+      {
+        "label": "↗ full window",
+        "url": "https://webdev.teknium.io/d/css2/demos/cyberpunk-css-netrunner/"
+      },
+      {
+        "label": "site ↗",
+        "url": "https://alddesign.github.io/cyberpunk-css/demo/"
+      },
+      {
+        "label": "source ↗",
+        "url": "https://github.com/alddesign/cyberpunk-css"
+      }
+    ],
+    "capabilities": [
+      "One stylesheet of acid-yellow, cyan and red components cut from clip-path polygons: notched buttons with a glitch layer, chamfered tiles, razor-edged borders, striped banners and five keyframe glitch effects. It needs no JavaScript and no build step. Every panel, table, checkbox, input, banner meter and dialog here is a stock class; the upstream BlenderPro and logo fonts aren't redistributable, so they're aliased to OFL Rajdhani and Oxanium."
+    ],
+    "installs": [
+      "curl -O https://raw.githubusercontent.com/alddesign/cyberpunk-css/main/cyberpunk.css"
+    ]
+  },
+  {
+    "name": "CYBERCORE CSS",
+    "categories": [
+      "#CSS-only & stylesheets"
+    ],
+    "frameworks": [
+      "css"
+    ],
+    "tags": [
+      "design-system",
+      "hud",
+      "icons"
+    ],
+    "demos": [
+      "https://webdev.teknium.io/#cybercore-css-hud"
+    ],
+    "links": [
+      {
+        "label": "↗ full window",
+        "url": "https://webdev.teknium.io/d/css2/demos/cybercore-css-hud/"
+      },
+      {
+        "label": "site ↗",
+        "url": "https://sebyx07.github.io/cybercore-css/"
+      },
+      {
+        "label": "source ↗",
+        "url": "https://github.com/sebyx07/cybercore-css"
+      },
+      {
+        "label": "npm ↗",
+        "url": "https://www.npmjs.com/package/cybercore-css"
+      }
+    ],
+    "capabilities": [
+      "A zero-JS design system built on CSS layers, color-mix() and custom properties: chamfered cards with bracket corners, glitch text driven by a data-text attribute, scanline and datastream overlays, striped and segmented meters, terminals, alerts and tables. Retheme it by overriding its --cyber-* and --space-* tokens; the optional icon registry renders SVG strings for the same palette."
+    ],
+    "installs": [
+      "npm i cybercore-css"
+    ]
+  },
+  {
+    "name": "Frontpanel",
+    "categories": [
+      "#CSS-only & stylesheets"
+    ],
+    "frameworks": [
+      "css"
+    ],
+    "tags": [
+      "skeuomorphic",
+      "y2k",
+      "components"
+    ],
+    "demos": [
+      "https://webdev.teknium.io/#frontpanel-minidisc-deck"
+    ],
+    "links": [
+      {
+        "label": "↗ full window",
+        "url": "https://webdev.teknium.io/d/css2/demos/frontpanel-minidisc-deck/"
+      },
+      {
+        "label": "site ↗",
+        "url": "https://dulandev.github.io/frontpanel/"
+      },
+      {
+        "label": "source ↗",
+        "url": "https://github.com/DulanDev/frontpanel"
+      },
+      {
+        "label": "npm ↗",
+        "url": "https://www.npmjs.com/package/@frontpanel/css"
+      }
+    ],
+    "capabilities": [
+      "Frontpanel gives you .fp-* classes and --fp-* tokens for building device front panels: liquid-chrome rims, gel pills, molded caps, LCD glass with ghost segments, seven-segment readouts, LED meters, knobs and faders. Everything sits in one cascade layer, so your own CSS wins, and a data-fp-skin attribute flips the whole device between Chrome Silver and Gunmetal Night."
+    ],
+    "installs": [
+      "npm i @frontpanel/css"
+    ]
+  },
+  {
+    "name": "PaperCSS",
+    "categories": [
+      "#CSS-only & stylesheets"
+    ],
+    "frameworks": [
+      "css"
+    ],
+    "tags": [
+      "hand-drawn",
+      "components"
+    ],
+    "demos": [
+      "https://webdev.teknium.io/#papercss-sketchbook"
+    ],
+    "links": [
+      {
+        "label": "↗ full window",
+        "url": "https://webdev.teknium.io/d/css2/demos/papercss-sketchbook/"
+      },
+      {
+        "label": "site ↗",
+        "url": "https://www.getpapercss.com"
+      },
+      {
+        "label": "source ↗",
+        "url": "https://github.com/papercss/papercss"
+      },
+      {
+        "label": "npm ↗",
+        "url": "https://www.npmjs.com/package/papercss"
+      }
+    ],
+    "capabilities": [
+      "PaperCSS gets its sketchy look from pure CSS: asymmetric elliptical border-radius values make every border wobble, and plain classes like paper-btn, badge, alert, progress and tabs restyle native HTML. No JS runtime and no images, so the hand-drawn look survives zooming and theming."
+    ],
+    "installs": [
+      "npm i papercss"
+    ]
+  },
+  {
+    "name": "Doodle CSS",
+    "categories": [
+      "#CSS-only & stylesheets"
+    ],
+    "frameworks": [
+      "css"
+    ],
+    "tags": [
+      "hand-drawn",
+      "svg"
+    ],
+    "demos": [
+      "https://webdev.teknium.io/#doodle-css-scribble"
+    ],
+    "links": [
+      {
+        "label": "↗ full window",
+        "url": "https://webdev.teknium.io/d/css2/demos/doodle-css-scribble/"
+      },
+      {
+        "label": "site ↗",
+        "url": "https://chr15m.github.io/DoodleCSS/"
+      },
+      {
+        "label": "source ↗",
+        "url": "https://github.com/chr15m/DoodleCSS"
+      },
+      {
+        "label": "npm ↗",
+        "url": "https://www.npmjs.com/package/doodle.css"
+      }
+    ],
+    "capabilities": [
+      "Doodle CSS draws its boxes, buttons, checkboxes, radios, hr and blockquote with border-image slices of hand-drawn SVGs, so plain form markup inside a .doodle wrapper looks scribbled. The demo inverts the ink with a CSS filter to turn the same SVGs into chalk and blueprint themes."
+    ],
+    "installs": [
+      "npm i doodle.css"
+    ]
+  },
+  {
+    "name": "React Pixel UI",
+    "categories": [
+      "#CSS-only & stylesheets"
+    ],
+    "frameworks": [
+      "react"
+    ],
+    "tags": [
+      "css",
+      "pixel-art"
+    ],
+    "demos": [
+      "https://webdev.teknium.io/#react-pixel-ui-forge"
+    ],
+    "links": [
+      {
+        "label": "↗ full window",
+        "url": "https://webdev.teknium.io/d/css2/demos/react-pixel-ui-forge/"
+      },
+      {
+        "label": "site ↗",
+        "url": "https://react-pixel-ui.vercel.app"
+      },
+      {
+        "label": "source ↗",
+        "url": "https://github.com/Todari/react-pixel-ui"
+      },
+      {
+        "label": "npm ↗",
+        "url": "https://www.npmjs.com/package/@react-pixel-ui/react"
+      }
+    ],
+    "capabilities": [
+      "<Pixel> reads an element's computed border-radius, border, gradient and box-shadow and redraws them as staircase clip-paths, block-sampled gradient PNGs and hard drop-shadows, with no canvas. Your existing CSS stays the source of truth: change a class or style and the pixel version is regenerated, including the shimmering pedestal gradient in this demo."
+    ],
+    "installs": [
+      "npm i @react-pixel-ui/react"
+    ]
+  },
+  {
+    "name": "CSS Houdini Ring Particles",
+    "categories": [
+      "#CSS-only & stylesheets"
+    ],
+    "frameworks": [
+      "css"
+    ],
+    "tags": [
+      "houdini",
+      "paint-api",
+      "particles"
+    ],
+    "demos": [
+      "https://webdev.teknium.io/#houdini-ring-particles"
+    ],
+    "links": [
+      {
+        "label": "↗ full window",
+        "url": "https://webdev.teknium.io/d/css3/demos/houdini-ring-particles/"
+      },
+      {
+        "label": "site ↗",
+        "url": "https://github.com/bramus/css-houdini-ringparticles#readme"
+      },
+      {
+        "label": "source ↗",
+        "url": "https://github.com/bramus/css-houdini-ringparticles"
+      },
+      {
+        "label": "npm ↗",
+        "url": "https://www.npmjs.com/package/css-houdini-ringparticles"
+      }
+    ],
+    "capabilities": [
+      "Bramus's worklet behind the Google I/O 2022 hero: every dot is drawn by paint(ring-particles), and the only animation is a registered --animation-tick custom property going 0 → 1. Three stacked layers with different seeds, lags and blend modes trail the pointer through @property transitions on --ring-x/--ring-y. Non-Chromium browsers get the same worklet through css-paint-polyfill."
+    ],
+    "installs": [
+      "npm i css-houdini-ringparticles"
+    ]
+  },
+  {
+    "name": "Houdini Doom Fire",
+    "categories": [
+      "#CSS-only & stylesheets"
+    ],
+    "frameworks": [
+      "css"
+    ],
+    "tags": [
+      "houdini",
+      "paint-worklet",
+      "pixel"
+    ],
+    "demos": [
+      "https://webdev.teknium.io/#houdini-doom-fire-sunset"
+    ],
+    "links": [
+      {
+        "label": "↗ full window",
+        "url": "https://webdev.teknium.io/d/css3/demos/houdini-doom-fire-sunset/"
+      },
+      {
+        "label": "site ↗",
+        "url": "https://andreban.github.io/houdini-doom-fire/"
+      },
+      {
+        "label": "npm ↗",
+        "url": "https://www.npmjs.com/package/houdini-doom-fire"
+      }
+    ],
+    "capabilities": [
+      "registerPaint('doomfire') runs the classic PSX Doom fire cellular automaton inside paint(), so any background, even background-clip: text letters, can burn; animating one registered length makes it repaint every frame. Here it rises from a horizon drawn by the same author's houdini-sunset worklet (gradient sky + pixel perspective grid), all from CSS."
+    ],
+    "installs": [
+      "npm i houdini-doom-fire houdini-sunset"
+    ]
+  },
+  {
+    "name": "CSS Houdini Voronoi",
+    "categories": [
+      "#CSS-only & stylesheets"
+    ],
+    "frameworks": [
+      "css"
+    ],
+    "tags": [
+      "houdini",
+      "paint-worklet",
+      "generative"
+    ],
+    "demos": [
+      "https://webdev.teknium.io/#houdini-voronoi-microscope"
+    ],
+    "links": [
+      {
+        "label": "↗ full window",
+        "url": "https://webdev.teknium.io/d/css3/demos/houdini-voronoi-microscope/"
+      },
+      {
+        "label": "site ↗",
+        "url": "https://github.com/bramus/css-houdini-voronoi"
+      },
+      {
+        "label": "source ↗",
+        "url": "https://github.com/bramus/css-houdini-voronoi"
+      },
+      {
+        "label": "npm ↗",
+        "url": "https://www.npmjs.com/package/css-houdini-voronoi"
+      }
+    ],
+    "capabilities": [
+      "registerPaint('voronoi') turns a handful of custom properties (cell count, margin, line and dot colours, seed) into a background-image, and its seeded sites make the diagram deterministic. Here a second layer with the same seed at 2× size is clipped into a lens and lines up exactly with the tissue beneath it, while both layers breathe on one @property-animated --voronoi-margin. The out-of-focus debris comes from its sibling worklet, css-houdini-circles."
+    ],
+    "installs": [
+      "npm i css-houdini-voronoi css-houdini-circles"
+    ]
+  },
+  {
+    "name": "CSS Houdini Fractals",
+    "categories": [
+      "#CSS-only & stylesheets"
+    ],
+    "frameworks": [
+      "css"
+    ],
+    "tags": [
+      "houdini",
+      "generative"
+    ],
+    "demos": [
+      "https://webdev.teknium.io/#houdini-fractal-trees"
+    ],
+    "links": [
+      {
+        "label": "↗ full window",
+        "url": "https://webdev.teknium.io/d/css3/demos/houdini-fractal-trees/"
+      },
+      {
+        "label": "site ↗",
+        "url": "https://conradsollitt.github.io/css-houdini-fractals/"
+      },
+      {
+        "label": "source ↗",
+        "url": "https://github.com/ConradSollitt/css-houdini-fractals"
+      },
+      {
+        "label": "npm ↗",
+        "url": "https://www.npmjs.com/package/css-houdini-fractals"
+      }
+    ],
+    "capabilities": [
+      "One registerPaint('fractals') worklet draws a recursive binary tree of lines, circles or squares from the element's bottom edge, styled entirely by custom properties: --angle, --next-line-size, --shape and a space-separated --colors list it cycles per segment. Here three trees share the worklet; a registered <integer> --angle is computed from an @property --sway keyframe, so the grove sways without any JS animation loop."
+    ],
+    "installs": [
+      "npm i css-houdini-fractals"
+    ]
+  },
+  {
+    "name": "Houdini Cosmic Starfield",
+    "categories": [
+      "#CSS-only & stylesheets"
+    ],
+    "frameworks": [
+      "css"
+    ],
+    "tags": [
+      "houdini",
+      "paint-worklet",
+      "generative"
+    ],
+    "demos": [
+      "https://webdev.teknium.io/#houdini-cosmic-starfield"
+    ],
+    "links": [
+      {
+        "label": "↗ full window",
+        "url": "https://webdev.teknium.io/d/css3/demos/houdini-cosmic-starfield/"
+      },
+      {
+        "label": "site ↗",
+        "url": "https://github.com/5t3ph/houdini-cosmic-starfield"
+      },
+      {
+        "label": "source ↗",
+        "url": "https://github.com/5t3ph/houdini-cosmic-starfield"
+      },
+      {
+        "label": "npm ↗",
+        "url": "https://www.npmjs.com/package/houdini-cosmic-starfield"
+      }
+    ],
+    "capabilities": [
+      "Stephanie Eckles's worklet paints a gradient sky, stars and optional cosmic clouds from three custom properties, and the star count doubles as the PRNG seed, so one number is a whole reproducible sky. Here it is stacked as transparent star-only layers (8-digit #00000000 gradient), SVG-tinted nebula bands and a dust lane, all drifting and parallaxing on the compositor, and a warp swaps every seed."
+    ],
+    "installs": [
+      "npm i houdini-cosmic-starfield"
+    ]
+  },
+  {
+    "name": "Houdini Tesla & Noise",
+    "categories": [
+      "#CSS-only & stylesheets"
+    ],
+    "frameworks": [
+      "css"
+    ],
+    "tags": [
+      "houdini",
+      "paint-api"
+    ],
+    "demos": [
+      "https://webdev.teknium.io/#houdini-tesla-noise"
+    ],
+    "links": [
+      {
+        "label": "↗ full window",
+        "url": "https://webdev.teknium.io/d/css3/demos/houdini-tesla-noise/"
+      },
+      {
+        "label": "site ↗",
+        "url": "https://github.com/jh3y/houdini-tesla"
+      },
+      {
+        "label": "source ↗",
+        "url": "https://github.com/jh3y/houdini-tesla"
+      },
+      {
+        "label": "npm ↗",
+        "url": "https://www.npmjs.com/package/houdini-tesla"
+      }
+    ],
+    "capabilities": [
+      "Two tiny paint worklets: tesla-coil strokes a fresh random jagged arc with a shadowBlur glow every time an input changes, and noise fills a box with random HSL cells. Here three stacked arc strips are rotated and stretched between two electrodes, re-randomised by a stepped @property keyframe, while noise textures the console deck, the buttons and a tiled film grain."
+    ],
+    "installs": [
+      "npm i houdini-tesla houdini-noise"
+    ]
+  },
+  {
+    "name": "Extra.css",
+    "categories": [
+      "#CSS-only & stylesheets"
+    ],
+    "frameworks": [
+      "css"
+    ],
+    "tags": [
+      "houdini",
+      "paint-api",
+      "typography"
+    ],
+    "demos": [
+      "https://webdev.teknium.io/#extra-css-party-invite"
+    ],
+    "links": [
+      {
+        "label": "↗ full window",
+        "url": "https://webdev.teknium.io/d/css3/demos/extra-css-party-invite/"
+      },
+      {
+        "label": "site ↗",
+        "url": "https://extra-css.netlify.app/"
+      },
+      {
+        "label": "source ↗",
+        "url": "https://github.com/una/extra.css"
+      },
+      {
+        "label": "npm ↗",
+        "url": "https://www.npmjs.com/package/extra.css"
+      }
+    ],
+    "capabilities": [
+      "Five tiny CSS Paint API worklets (confetti, sparkles, scalloped border, super-underline, cross-out) that you drive entirely from custom properties in your stylesheet. Here every decoration is a background-image: paint(); the random worklets re-roll whenever an input property changes, so a steps() keyframe on a registered property gives them a hand-drawn stop-motion boil."
+    ],
+    "installs": [
+      "npm i extra.css"
+    ]
+  }
+]

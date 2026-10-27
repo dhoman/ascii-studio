@@ -1,0 +1,155 @@
+{
+  "url": "https://github.com/TheOrcDev/8bitcn-ui",
+  "final_url": "https://github.com/TheOrcDev/8bitcn-ui",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:47:30.407744+00:00",
+  "stars": 2059,
+  "forks": 120,
+  "description": "A set of retro-designed, accessible components and a code distribution platform. Open Source. Open Code.",
+  "homepage": "https://www.8bitcn.com/",
+  "topics": [
+    "8-bit",
+    "components",
+    "retro",
+    "shadcn",
+    "ui"
+  ],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2025-03-27T16:11:51.000Z",
+  "branch": "main",
+  "commit": "da3c0722b110d7bb99a7b7d7e2ee53251f2151e1",
+  "readme": "8bitcn/ui Accessible retro components that you can copy and paste into your apps.Free. Open Source. Built on shadcn/ui. Documentation · Components · Blocks · Themes · Discord Contributing Please read the contributing guide. Usage Example To add the button component to your project, run the following command: pnpm dlx shadcn@latest add @8bitcn/button Once installed, you can import and use the component in your files: import { Button } from \"@/components/ui/8bit\"; export default function App() { return <Button>Click me</Button>; } Note: The import path @/components/ui/8bit assumes your project has a path alias configured (common in Next.js and similar frameworks). Adjust the path to match your project's structure if needed. License Licensed under the MIT license. Open Source Program Star History",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://github.com/TheOrcDev/8bitcn-ui#8bitcnui"
+    },
+    {
+      "label": "",
+      "url": "https://8bitcn.com"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/TheOrcDev/8bitcn-ui/stargazers"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/TheOrcDev/8bitcn-ui/forks"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/TheOrcDev/8bitcn-ui/blob/main/license.md"
+    },
+    {
+      "label": "",
+      "url": "https://ui.shadcn.com"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/sponsors/theorcdev"
+    },
+    {
+      "label": "Documentation",
+      "url": "https://8bitcn.com/docs"
+    },
+    {
+      "label": "Components",
+      "url": "https://8bitcn.com/docs/components"
+    },
+    {
+      "label": "Blocks",
+      "url": "https://8bitcn.com/docs/blocks"
+    },
+    {
+      "label": "Themes",
+      "url": "https://8bitcn.com/themes"
+    },
+    {
+      "label": "Discord",
+      "url": "https://discord.com/invite/uFB5YzH9YG"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/TheOrcDev/8bitcn-ui#contributing"
+    },
+    {
+      "label": "contributing guide",
+      "url": "https://github.com/TheOrcDev/8bitcn-ui/blob/main/contributing.md"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/TheOrcDev/8bitcn-ui#usage-example"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/TheOrcDev/8bitcn-ui/blob/main/public/images/readme/8bitcn-button-example.png"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/TheOrcDev/8bitcn-ui#license"
+    },
+    {
+      "label": "MIT license",
+      "url": "https://github.com/TheOrcDev/8bitcn-ui/blob/main/license.md"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/TheOrcDev/8bitcn-ui#open-source-program"
+    },
+    {
+      "label": "",
+      "url": "https://vercel.com/oss"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/TheOrcDev/8bitcn-ui#star-history"
+    },
+    {
+      "label": "",
+      "url": "https://repostars.dev/?repos=TheOrcDev%2F8bitcn-ui&theme=terminal"
+    }
+  ],
+  "root_files": [
+    ".claude/skills",
+    ".cursor",
+    ".github",
+    ".husky",
+    ".opencode/command",
+    ".vscode",
+    "app",
+    "artifacts",
+    "components",
+    "config",
+    "content/docs",
+    "db",
+    "hooks",
+    "lib",
+    "plans",
+    "public",
+    "scripts",
+    "server",
+    "test",
+    "types",
+    ".gitignore",
+    "AGENTS.md",
+    "README.md",
+    "biome.jsonc",
+    "components.json",
+    "contributing.md",
+    "drizzle.config.ts",
+    "license.md",
+    "mdx-components.tsx",
+    "next.config.ts",
+    "opencode.jsonc",
+    "package.json",
+    "pnpm-lock.yaml",
+    "postcss.config.mjs",
+    "registry.json",
+    "source.config.ts",
+    "tsconfig.json",
+    "vitest.config.ts"
+  ],
+  "release_count": 0,
+  "status": "verified"
+}

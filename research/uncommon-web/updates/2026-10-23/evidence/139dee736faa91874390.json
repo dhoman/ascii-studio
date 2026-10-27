@@ -1,0 +1,130 @@
+{
+  "url": "https://github.com/vincentdoerig/latex-css",
+  "final_url": "https://github.com/vincentdoerig/latex-css",
+  "http_status": 200,
+  "checked_at": "2026-10-23T17:46:57.690736+00:00",
+  "stars": 3484,
+  "forks": 151,
+  "description": "LaTeX.css is a CSS library that makes your website look like a LaTeX document",
+  "homepage": "https://latex.vercel.app",
+  "topics": [
+    "classless",
+    "classless-theme",
+    "css",
+    "css-library",
+    "html",
+    "latex",
+    "latex-css"
+  ],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2020-05-18T11:30:55.000Z",
+  "branch": "master",
+  "commit": "1fbe1d74f8ca33595a1d50c677810033da40aa52",
+  "readme": "LaTeX.CSS LaTeX.css is a minimal, almost class-less CSS library which makes any website look like a LaTeX document. It is based on @davidrzs' latexCSS. Getting Started Using the <link> tag Add the following code in the head of your project. <link rel=\"stylesheet\" href=\"https://latex.vercel.app/style.min.css\" /> or use a CDN like Unpkg: <link rel=\"stylesheet\" href=\"https://unpkg.com/latex.css/style.min.css\" /> Using NPM/Yarn NPM: npm install latex.css Yarn: yarn add latex.css Add any optional classnames to elements with special styles (author subtitle, abstract, lemmas, theorems, etc.). A list of supported class-based elements can be found here. Languages The labels of theorems, definitions, lemmas and proofs can be changed to other supported languages by including the following snippet in addition to the main CSS file. <link rel=\"stylesheet\" href=\"https://latex.vercel.app/lang/es.css\" /> and changing the html lang attribute: <html lang=\"es\"> Have a look at the language support page for more info and a demo of the different languages. Contributing Contributions, feedback and issues are welcome. Feel free to fork, comment, critique, or submit a pull request. Acknowledgements This project is based on David Zollikofer's project latexCSS. Most of the CSS reset is based on Andy Bell's Modern CSS Reset. The sample HTML5 markup test page is based on html5-test-page by @cbracco. The idea of sidenotes was taken and adpated from Tufte CSS. License This project is open source and available under the MIT License.",
+  "readme_links": [
+    {
+      "label": "LaTeX.CSS",
+      "url": "https://latex.vercel.app/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/vincentdoerig/latex-css#latexcss"
+    },
+    {
+      "label": "",
+      "url": "https://opensource.org/licenses/MIT"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/latex.css"
+    },
+    {
+      "label": "latexCSS",
+      "url": "https://github.com/davidrzs/latexcss"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/vincentdoerig/latex-css#getting-started"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/vincentdoerig/latex-css#using-the-link-tag"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/vincentdoerig/latex-css#using-npmyarn"
+    },
+    {
+      "label": "here",
+      "url": "https://latex.vercel.app/#class-based-elements"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/vincentdoerig/latex-css#languages"
+    },
+    {
+      "label": "supported languages",
+      "url": "https://github.com/vincentdoerig/latex-css/blob/master/lang"
+    },
+    {
+      "label": "language support page",
+      "url": "https://latex.vercel.app/languages"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/vincentdoerig/latex-css#contributing"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/vincentdoerig/latex-css#acknowledgements"
+    },
+    {
+      "label": "latexCSS",
+      "url": "https://github.com/davidrzs/latexcss"
+    },
+    {
+      "label": "Modern CSS Reset",
+      "url": "https://hankchizljaw.com/wrote/a-modern-css-reset/"
+    },
+    {
+      "label": "HTML5 markup test page",
+      "url": "https://latex.vercel.app/elements"
+    },
+    {
+      "label": "html5-test-page",
+      "url": "https://github.com/cbracco/html5-test-page"
+    },
+    {
+      "label": "Tufte CSS",
+      "url": "https://edwardtufte.github.io/tufte-css/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/vincentdoerig/latex-css#license"
+    },
+    {
+      "label": "MIT License",
+      "url": "https://github.com/vincentdoerig/latex-css/blob/master/LICENSE"
+    }
+  ],
+  "root_files": [
+    "fonts",
+    "lang",
+    "prism",
+    ".gitignore",
+    "CHANGELOG.md",
+    "LICENSE",
+    "README.md",
+    "elements.html",
+    "index.html",
+    "languages.html",
+    "package-lock.json",
+    "package.json",
+    "style.css",
+    "vercel.json",
+    "vite.config.js"
+  ],
+  "release_count": 17,
+  "status": "verified"
+}

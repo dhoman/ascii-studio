@@ -1,0 +1,303 @@
+{
+  "url": "https://github.com/russellgoldenberg/scrollama",
+  "final_url": "https://github.com/russellsamora/scrollama",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:48:15.591721+00:00",
+  "stars": 6007,
+  "forks": 294,
+  "description": "Scrollytelling with IntersectionObserver.",
+  "homepage": "https://russellsamora.github.io/scrollama/basic",
+  "topics": [],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2017-10-20T13:05:29.000Z",
+  "branch": "main",
+  "commit": "afab8ab2509a7e0112bee4bd7c131eafc50ffc3a",
+  "readme": "Scrollama is a modern & lightweight JavaScript library for scrollytelling using IntersectionObserver in favor of scroll events. Current version: 3.2.0 3.0 Why 3.0? The core parts of the Scrollama code base are being refactored for 3.0 to simplfy and clarify the logic. The goal behind this to ease make future maintainance, bug fixing, and feature additions easier moving forward. New Fetaures Built-in resize using resize observers. Custom offsets on steps with data attributes Deprecated Features the order option Important Changes Version 3.0.0+: order has been deprecated. Version 2.0.0+: .onContainerEnter and .onContainerExit have been deprecated in favor of CSS property position: sticky;. How to use position sticky. Version 1.4.0+: you must manually add the IntersectionObserver polyfill for cross-browser support. See installation for details. Jump to examples. Why? Scrollytelling can be complicated to implement and difficult to make performant. The goal of this library is to provide a simple interface for creating scroll-driven interactives. Scrollama is focused on performance by using IntersectionObserver to handle element position detection. Examples Note: most of these examples use D3 to keep the code concise, but this can be used with any library, or with no library at all. Basic - just step triggers Progress - incremental step progress callback Sticky Graphic (Side by Side) - using CSS position: sticky; to create a fixed graphic to the side of the text. Sticky Graphic (Overlay) - using CSS position: sticky; to create a fixed graphic with fullscreen graphic with text overlayed. Custom Offset - Adding a data attribute to an element to provide a unique offset for a step. Mobile Pattern - using pixels instead of percent for offset value so it doesn't jump around on scroll direction change iframe Embed - Embedding a Scrollama instance inside an iframe using root option Installation Note: As of version 1.4.0, the IntersectionObserver polyfill has been removed from the build. You must include it yourself for cross-browser support. Check here to see if you need to include the polyfill. Old school (exposes the scrollama global): <script src=\"https://unpkg.com/scrollama\"></script> New school: npm install scrollama --save And then import/require it: import scrollama from \"scrollama\"; // or... const scrollama = require(\"scrollama\"); How to use Basic You can use this library to simply trigger steps, similar to something like Waypoints. This is useful if you need more control over your interactive, or you don't want to follow the sticky scrollytelling pattern. You can use any id/class naming conventions you want. The HTML structure should look like: <!--you don't need the \"data-step\" attr, but can be useful for storing instructions for JS --> <div class=\"step\" data-step=\"a\"></div> <div class=\"step\" data-step=\"b\"></div> <div class=\"step\" data-step=\"c\"></div> // instantiate the scrollama const scroller = scrollama(); // setup the instance, pass callback functions scroller .setup({ step: \".step\", }) .onStepEnter((response) => { // { element, index, direction } }) .onStepExit((response) => { // { element, index, direction } }); API scrollama.setup([options]) options: Option Type Description Default step string or HTMLElement[] required Selector (or array of elements) for the step elements that will trigger changes. offset number (0 - 1, or string with \"px\") How far from the top of the viewport to trigger a step. 0.5 progress boolean Whether to fire incremental step progress updates or not. false threshold number (1 or higher) The granularity of the progress interval in pixels (smaller = more granular). 4 once boolean Only trigger the step to enter once then remove listener. false debug boolean Whether to show visual debugging tools or not. false parent HTMLElement[] Parent element for step selector (use if you steps are in shadow DOM). undefined container HTMLElement Parent element for the scroll story (use if scrollama is nested in a HTML element with overflow set to scroll or auto) undefined root HTMLElement The element that is used as the viewport for checking visibility of the target. Must be the ancestor of the target. Defaults to the browser viewport if not specified or if null. See more details about usage of root on MDN. undefined scrollama.onStepEnter(callback) Callback that fires when the top or bottom edge of a step element enters the offset threshold. The argument of the callback is an object: { element: DOMElement, index: number, direction: string } element: The step element that triggered index: The index of the step of all steps direction: 'up' or 'down' scrollama.onStepExit(callback) Callback that fires when the top or bottom edge of a step element exits the offset threshold. The argument of the callback is an object: { element: DOMElement, index: number, direction: string } element: The step element that triggered index: The index of the step of all steps direction: 'up' or 'down' scrollama.onStepProgress(callback) Callback that fires the progress (0 - 1) a step has made through the threshold. The argument of the callback is an object: { element: DOMElement, index: number, progress: number } element: The step element that triggered index: The index of the step of all steps progress: The percent of completion of the step (0 - 1) direction: 'up' or 'down' scrollama.offsetTrigger([number or string]) Get or set the offset percentage. Value must be between 0-1 (where 0 = top of viewport, 1 = bottom), or a string that includes \"px\" (e.g., \"200px\"). If set, returns the scrollama instance. scrollama.resize() This is no longer necessary with the addition of a built-in resize observer. Tell scrollama to get latest dimensions the browser/DOM. It is best practice to throttle resize in your code, update the DOM elements, then call this function at the end. scrollama.enable() Tell scrollama to resume observing for trigger changes. Only necessary to call if you have previously disabled. scrollama.disable() Tell scrollama to stop observing for trigger changes. scrollama.destroy() Removes all observers and callback functions. custom offset To override the offset passed in the options, set a custom offset for an individual element using data attributes. For example: <div class=\"step\" data-offset=\"0.25\"> or data-offset=\"100px\". Scrollama In The Wild The Billionaire Playbook - ProPublica Women's Pockets are Inferior - The Pudding Trump approval rating - Politico How the opioid epidemic evolved - Washington Post US Covid-19 deaths, explained in 8 charts and maps - Vox Life After Death on Wikipedia - The Pudding YouTube With Me - YouTube Unchecked Power - ProPublica Trump's environmental policies rule only part of America - Politico The story of New Zealand’s Covid-19 lockdown, in graphs - Stuff Trump and Biden's Paths to Victory in the 2020 Election - Wall Street Journal The sicence of superspreading - Science El dominio histórico de la derecha en Madrid - elDiario.es The Permutation Test - Jared Wilber Constellations - Nadieh Bremer Remote Triggering of Earthquakes - Will Chase Scrollytelling - Mapbox Tips Avoid using viewport height (vh) in your CSS because scrolling up and down constantly triggers vh to change, which will also trigger a window resize. Alternatives Scroll Trigger Waypoints ScrollMagic graph-scroll.js ScrollStory enter-view Logo Logo by the awesome Elaina Natario License MIT License Copyright (c) 2022 Russell Samora Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/9c294a34cefcf8a8a91254f52e1208f7419fff3f7f11d7cca70ae16a66524646/68747470733a2f2f72757373656c6c73616d6f72612e6769746875622e696f2f7363726f6c6c616d612f6c6f676f2e706e67"
+    },
+    {
+      "label": "IntersectionObserver",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/russellsamora/scrollama#30"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/russellsamora/scrollama#why-30"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/russellsamora/scrollama#new-fetaures"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/russellsamora/scrollama#deprecated-features"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/russellsamora/scrollama#important-changes"
+    },
+    {
+      "label": "How to use position sticky.",
+      "url": "https://pudding.cool/process/scrollytelling-sticky/"
+    },
+    {
+      "label": "installation",
+      "url": "https://github.com/russellsamora/scrollama#installation"
+    },
+    {
+      "label": "Jump to examples.",
+      "url": "https://github.com/russellsamora/scrollama#examples"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/russellsamora/scrollama#why"
+    },
+    {
+      "label": "IntersectionObserver",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API"
+    },
+    {
+      "label": "",
+      "url": "https://pudding.cool/process/how-to-implement-scrollytelling"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/russellsamora/scrollama#examples"
+    },
+    {
+      "label": "Basic",
+      "url": "https://russellsamora.github.io/scrollama/basic"
+    },
+    {
+      "label": "Progress",
+      "url": "https://russellsamora.github.io/scrollama/progress"
+    },
+    {
+      "label": "Sticky Graphic (Side by Side)",
+      "url": "https://russellsamora.github.io/scrollama/sticky-side"
+    },
+    {
+      "label": "Sticky Graphic (Overlay)",
+      "url": "https://russellsamora.github.io/scrollama/sticky-overlay"
+    },
+    {
+      "label": "Custom Offset",
+      "url": "https://russellsamora.github.io/scrollama/custom-offset"
+    },
+    {
+      "label": "Mobile Pattern",
+      "url": "https://russellsamora.github.io/scrollama/mobile-pattern"
+    },
+    {
+      "label": "iframe Embed",
+      "url": "https://russellsamora.github.io/scrollama/iframe"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/russellsamora/scrollama#installation"
+    },
+    {
+      "label": "here",
+      "url": "https://caniuse.com/#feat=intersectionobserver"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/russellsamora/scrollama#how-to-use"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/russellsamora/scrollama#basic"
+    },
+    {
+      "label": "Waypoints",
+      "url": "http://imakewebthings.com/waypoints/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/russellsamora/scrollama#api"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/russellsamora/scrollama#scrollamasetupoptions"
+    },
+    {
+      "label": "MDN",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API#intersection_observer_concepts_and_usage"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/russellsamora/scrollama#scrollamaonstepentercallback"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/russellsamora/scrollama#scrollamaonstepexitcallback"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/russellsamora/scrollama#scrollamaonstepprogresscallback"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/russellsamora/scrollama#scrollamaoffsettriggernumber-or-string"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/russellsamora/scrollama#scrollamaresize"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/russellsamora/scrollama#scrollamaenable"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/russellsamora/scrollama#scrollamadisable"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/russellsamora/scrollama#scrollamadestroy"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/russellsamora/scrollama#custom-offset"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/russellsamora/scrollama#scrollama-in-the-wild"
+    },
+    {
+      "label": "The Billionaire Playbook - ProPublica",
+      "url": "https://www.propublica.org/article/the-billionaire-playbook-how-sports-owners-use-their-teams-to-avoid-millions-in-taxes"
+    },
+    {
+      "label": "Women's Pockets are Inferior - The Pudding",
+      "url": "https://pudding.cool/2018/08/pockets/"
+    },
+    {
+      "label": "Trump approval rating - Politico",
+      "url": "https://www.politico.com/interactives/2019/trump-approval-rating-polls/"
+    },
+    {
+      "label": "How the opioid epidemic evolved - Washington Post",
+      "url": "https://www.washingtonpost.com/graphics/2019/investigations/opioid-pills-overdose-analysis/"
+    },
+    {
+      "label": "US Covid-19 deaths, explained in 8 charts and maps - Vox",
+      "url": "https://www.vox.com/22252693/covid-19-deaths-us-who-died"
+    },
+    {
+      "label": "Life After Death on Wikipedia - The Pudding",
+      "url": "https://pudding.cool/2018/08/wiki-death/"
+    },
+    {
+      "label": "YouTube With Me - YouTube",
+      "url": "https://youtube.com/trends/articles/with-me-interactive/"
+    },
+    {
+      "label": "Unchecked Power - ProPublica",
+      "url": "https://projects.propublica.org/nypd-unchecked-power/"
+    },
+    {
+      "label": "Trump's environmental policies rule only part of America - Politico",
+      "url": "https://www.politico.com/interactives/2018/trump-environmental-policies-rollbacks/"
+    },
+    {
+      "label": "The story of New Zealand’s Covid-19 lockdown, in graphs - Stuff",
+      "url": "https://interactives.stuff.co.nz/2020/05/coronavirus-covid-19-data-new-zealand/"
+    },
+    {
+      "label": "Trump and Biden's Paths to Victory in the 2020 Election - Wall Street Journal",
+      "url": "https://www.wsj.com/graphics/the-paths-to-victory/"
+    },
+    {
+      "label": "The sicence of superspreading - Science",
+      "url": "https://vis.sciencemag.org/covid-clusters/"
+    },
+    {
+      "label": "El dominio histórico de la derecha en Madrid - elDiario.es",
+      "url": "https://www.eldiario.es/madrid/gana-derecha-elecciones-madrid-mayoritaria-30-rico_1_7347696.html"
+    },
+    {
+      "label": "The Permutation Test - Jared Wilber",
+      "url": "https://www.jwilber.me/permutationtest/"
+    },
+    {
+      "label": "Constellations - Nadieh Bremer",
+      "url": "https://nbremer.github.io/planet-constellations/"
+    },
+    {
+      "label": "Remote Triggering of Earthquakes - Will Chase",
+      "url": "https://www.williamrchase.com/vizrisk/vizrisk_main/"
+    },
+    {
+      "label": "Scrollytelling - Mapbox",
+      "url": "https://demos.mapbox.com/scrollytelling/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/russellsamora/scrollama#tips"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/russellsamora/scrollama#alternatives"
+    },
+    {
+      "label": "Scroll Trigger",
+      "url": "https://greensock.com/scrolltrigger/"
+    },
+    {
+      "label": "Waypoints",
+      "url": "http://imakewebthings.com/waypoints/"
+    },
+    {
+      "label": "ScrollMagic",
+      "url": "http://scrollmagic.io/"
+    },
+    {
+      "label": "graph-scroll.js",
+      "url": "https://1wheel.github.io/graph-scroll/"
+    },
+    {
+      "label": "ScrollStory",
+      "url": "https://sjwilliams.github.io/scrollstory/"
+    },
+    {
+      "label": "enter-view",
+      "url": "https://github.com/russellsamora/enter-view"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/russellsamora/scrollama#logo"
+    },
+    {
+      "label": "Elaina Natario",
+      "url": "https://twitter.com/elainanatario"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/russellsamora/scrollama#license"
+    }
+  ],
+  "root_files": [
+    "build",
+    "dev",
+    "docs",
+    "src",
+    ".gitignore",
+    ".npm-ignore",
+    "LICENSE",
+    "README.md",
+    "index.d.ts",
+    "index.js",
+    "package.json",
+    "rollup.config.js"
+  ],
+  "release_count": null,
+  "status": "verified"
+}

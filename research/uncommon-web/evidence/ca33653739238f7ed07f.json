@@ -1,0 +1,106 @@
+{
+  "url": "https://github.com/antfu/drauu",
+  "final_url": "https://github.com/antfu/drauu",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:47:34.636672+00:00",
+  "stars": 1525,
+  "forks": 77,
+  "description": "Headless SVG-based drawboard in browser.",
+  "homepage": "https://drauu.netlify.app/",
+  "topics": [
+    "drawboard"
+  ],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2021-08-05T17:03:34.000Z",
+  "branch": "main",
+  "commit": "3baf273f4e9a1107a34728c04e63cb3c83f4d4e0",
+  "readme": "drauu SVG-based drawing tool in browser. Built for Slidev. Live Demo (built with Vanilla JavaScript!) Features Vanilla JavaScript - integrate into any framework you like SVG-based - scalable, transparent, and serializable Stylus / Touch pressure support Headless (unstyled) - style it as you want Undo / Redo stacks Install npm i drauu <svg id=\"svg\"></svg> import { createDrauu } from 'drauu' const drauu = createDrauu({ el: '#svg', brush: { mode: 'stylus', // 'line', 'rectangle', 'ellipse' color: 'skyblue', size: 5, } }) // change brush color drauu.options.brush.color = 'red' Credits Inspired by scribby by naknomum excalidraw draw by amoshydra live-draw by antfu Thanks! Sponsors License MIT",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://github.com/antfu/drauu#drauu"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/drauu"
+    },
+    {
+      "label": "Slidev",
+      "url": "https://github.com/slidevjs/slidev"
+    },
+    {
+      "label": "Live Demo",
+      "url": "http://drauu.netlify.app/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/antfu/drauu#features"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/antfu/drauu#install"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/antfu/drauu#credits"
+    },
+    {
+      "label": "scribby",
+      "url": "https://github.com/naknomum/scribby"
+    },
+    {
+      "label": "naknomum",
+      "url": "https://github.com/naknomum"
+    },
+    {
+      "label": "excalidraw",
+      "url": "https://github.com/excalidraw/excalidraw"
+    },
+    {
+      "label": "draw",
+      "url": "https://github.com/amoshydra/draw"
+    },
+    {
+      "label": "amoshydra",
+      "url": "https://github.com/amoshydra"
+    },
+    {
+      "label": "live-draw",
+      "url": "https://github.com/antfu/live-draw"
+    },
+    {
+      "label": "antfu",
+      "url": "https://github.com/antfu"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/antfu/drauu#sponsors"
+    },
+    {
+      "label": "",
+      "url": "https://cdn.jsdelivr.net/gh/antfu/static/sponsors.svg"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/antfu/drauu#license"
+    }
+  ],
+  "root_files": [
+    ".github",
+    ".vscode",
+    "packages",
+    "playground",
+    ".gitignore",
+    "LICENSE",
+    "README.md",
+    "eslint.config.js",
+    "netlify.toml",
+    "package.json",
+    "pnpm-lock.yaml",
+    "pnpm-workspace.yaml",
+    "tsconfig.json"
+  ],
+  "release_count": 1,
+  "status": "verified"
+}

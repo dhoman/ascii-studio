@@ -1,0 +1,83 @@
+{
+  "url": "https://github.com/maartenkeizer/dither-avatar",
+  "final_url": "https://github.com/maartenkeizer/dither-avatar",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:48:00.326831+00:00",
+  "stars": 87,
+  "forks": 3,
+  "description": "Deterministic dithered SVG avatars from any seed string. Zero dependencies.",
+  "homepage": "https://dither-avatar.pages.dev",
+  "topics": [],
+  "license": "",
+  "archived": false,
+  "created_at": "2026-05-11T15:08:22.000Z",
+  "branch": "main",
+  "commit": "4e4a3440b1c49b9477fa8b365ad5802cdaafd1de",
+  "readme": "dither-avatar Deterministic dithered SVG avatars from any seed string. Zero dependencies. Live playground → Install npm install dither-avatar Usage Core (any JS runtime) import { generateDitherAvatar, ditherAvatarDataUri } from 'dither-avatar'; const svg = generateDitherAvatar('alice'); const uri = ditherAvatarDataUri('alice'); React import { DitherAvatar } from 'dither-avatar/react'; function UserProfile({ username }) { return <DitherAvatar seed={username} size={48} />; } API generateDitherAvatar(seed: string): string Returns raw SVG markup for the given seed. ditherAvatarDataUri(seed: string): string Returns a data:image/svg+xml,... URI — safe to use as an <img> src. <DitherAvatar seed size? className? style? /> Renders an <img> with the avatar as a data URI. Zero XSS risk. <DitherAvatarSVG seed size? className? style? /> Renders an inline <svg>. Note: uses dangerouslySetInnerHTML. License MIT",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://github.com/maartenkeizer/dither-avatar#dither-avatar"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/maartenkeizer/dither-avatar/blob/main/preview.png"
+    },
+    {
+      "label": "Live playground →",
+      "url": "https://dither-avatar.pages.dev"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/maartenkeizer/dither-avatar#install"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/maartenkeizer/dither-avatar#usage"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/maartenkeizer/dither-avatar#core-any-js-runtime"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/maartenkeizer/dither-avatar#react"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/maartenkeizer/dither-avatar#api"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/maartenkeizer/dither-avatar#generateditheravatarseed-string-string"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/maartenkeizer/dither-avatar#ditheravatardatauriseed-string-string"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/maartenkeizer/dither-avatar#ditheravatar-seed-size-classname-style-"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/maartenkeizer/dither-avatar#ditheravatarsvg-seed-size-classname-style-"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/maartenkeizer/dither-avatar#license"
+    }
+  ],
+  "root_files": [
+    "src",
+    ".gitignore",
+    "README.md",
+    "package-lock.json",
+    "package.json",
+    "preview.png",
+    "tsconfig.json",
+    "tsup.config.ts"
+  ],
+  "release_count": 0,
+  "status": "verified"
+}

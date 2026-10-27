@@ -1,0 +1,277 @@
+{
+  "url": "https://github.com/nolly-studio/cult-ui",
+  "final_url": "https://github.com/nolly-studio/cult-ui",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:48:06.471482+00:00",
+  "stars": 6672,
+  "forks": 352,
+  "description": "Animated components for design engineers. 150+ free shadcn/ui components, built with Tailwind CSS and Motion. MIT licensed.",
+  "homepage": "https://www.cult-ui.com",
+  "topics": [
+    "components",
+    "design-engineering",
+    "framer-motion",
+    "nextjs",
+    "react",
+    "shadcn-ui",
+    "tailwindcss",
+    "typescript"
+  ],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2024-05-28T04:57:48.000Z",
+  "branch": "main",
+  "commit": "7f031dc812f7bda10213bab62752dd6d080297ff",
+  "readme": "Cult UI 150+ animated components, all free. Including 58 just added. Open source, built to drop into any shadcn/ui project. Browse components · Docs · Installation · Changelog Install Every component is a shadcn/ui registry item. The CLI copies the source into your project, so you own the code. npx shadcn@latest add https://www.cult-ui.com/r/shift-card.json Or register the namespace once in components.json and install by name: { \"registries\": { \"@cult-ui\": \"https://www.cult-ui.com/r/{name}.json\" } } npx shadcn@latest add @cult-ui/shift-card Components use Tailwind CSS v4 and shadcn theme tokens, and most animate with Motion. Each docs page lists its dependencies. Just added 58 new components. Illustrations, device mockups, cards and more, with the same docs and one-line install as the rest of Cult UI. Globe Kanban board Fluted glass Mac screen Analytics chart Folded card Browse all components → Built with Cult UI The components are free. The full-stack AI apps built from them are AI SDK Agents. Agent patterns on the Vercel AI SDK with live previews. Install with shadcn, download a Next.js app, or open in v0. Competitor research agent Paste a competitor URL, get positioning, pricing and a sales battle card. Data analysis agent Upload CSV or JSON, get charts, outliers and insights with confidence scores. Accessibility audit agent A WCAG 2.1 audit of any site, with a prioritized fix plan. Table editor artifact A spreadsheet you edit by chatting with it. Branding agent Extract any site's design system: tokens, palette and brand personality. Chart generation artifact Burn rate charts and financial analysis from a conversation. Browse 100+ patterns → For AI agents The docs are written to be read by coding agents as well as people. llms.txt indexes every page, and llms-full.txt has the full docs in one file. Add .md to any docs URL for clean markdown, for example /docs/components/dock.md. The shadcn MCP server lets Cursor, Claude Code and VS Code search and install Cult UI components from a prompt. Cult UI stays free MIT licensed and maintained full time. AI SDK Agents is what pays for it. If you ship AI features, it is the best way to keep this library going. Or star it on GitHub. More from the studio: AI SDK Agents – 100+ Vercel AI SDK agent patterns with live previews and full-stack templates. Newcopy – An AI cofounder that knows your brand. Marketing copy that converts. Best Models – Independent ranking of the best models on Vercel AI Gateway, updated daily. Eve Directory – The open registry for Eve agents. Inspect every file before you install. Need a team? Nolly Studio is an AI-native product studio: agent systems and design-engineered UI, shipped in weeks. Contributing Read the contributing guide to get the repo running locally and add a component. License MIT © Nolly Studio. Made by @nolansym.",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://www.cult-ui.com"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/nolly-studio/cult-ui#cult-ui"
+    },
+    {
+      "label": "Browse components",
+      "url": "https://www.cult-ui.com/docs/components/dynamic-island"
+    },
+    {
+      "label": "Docs",
+      "url": "https://www.cult-ui.com/docs"
+    },
+    {
+      "label": "Installation",
+      "url": "https://www.cult-ui.com/docs/installation"
+    },
+    {
+      "label": "Changelog",
+      "url": "https://www.cult-ui.com/docs/changelog"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/nolly-studio/cult-ui#install"
+    },
+    {
+      "label": "Motion",
+      "url": "https://motion.dev"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/nolly-studio/cult-ui#just-added"
+    },
+    {
+      "label": "",
+      "url": "https://www.cult-ui.com/docs/components/globe"
+    },
+    {
+      "label": "Globe",
+      "url": "https://www.cult-ui.com/docs/components/globe"
+    },
+    {
+      "label": "",
+      "url": "https://www.cult-ui.com/docs/components/kanban-board"
+    },
+    {
+      "label": "Kanban board",
+      "url": "https://www.cult-ui.com/docs/components/kanban-board"
+    },
+    {
+      "label": "",
+      "url": "https://www.cult-ui.com/docs/components/fluted-glass"
+    },
+    {
+      "label": "Fluted glass",
+      "url": "https://www.cult-ui.com/docs/components/fluted-glass"
+    },
+    {
+      "label": "",
+      "url": "https://www.cult-ui.com/docs/components/mac-screen"
+    },
+    {
+      "label": "Mac screen",
+      "url": "https://www.cult-ui.com/docs/components/mac-screen"
+    },
+    {
+      "label": "",
+      "url": "https://www.cult-ui.com/docs/components/analytics-chart"
+    },
+    {
+      "label": "Analytics chart",
+      "url": "https://www.cult-ui.com/docs/components/analytics-chart"
+    },
+    {
+      "label": "",
+      "url": "https://www.cult-ui.com/docs/components/folded-card"
+    },
+    {
+      "label": "Folded card",
+      "url": "https://www.cult-ui.com/docs/components/folded-card"
+    },
+    {
+      "label": "Browse all components →",
+      "url": "https://www.cult-ui.com/docs/components/dynamic-island"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/nolly-studio/cult-ui#built-with-cult-ui"
+    },
+    {
+      "label": "AI SDK Agents",
+      "url": "https://aisdkagents.com/?utm_source=cult-ui&utm_medium=github&utm_content=readme-section-link"
+    },
+    {
+      "label": "",
+      "url": "https://aisdkagents.com/patterns/example-agent-competitor?utm_source=cult-ui&utm_medium=github&utm_content=readme-pattern-card"
+    },
+    {
+      "label": "Competitor research agent",
+      "url": "https://aisdkagents.com/patterns/example-agent-competitor?utm_source=cult-ui&utm_medium=github&utm_content=readme-pattern-card"
+    },
+    {
+      "label": "",
+      "url": "https://aisdkagents.com/patterns/example-agent-data-analysis?utm_source=cult-ui&utm_medium=github&utm_content=readme-pattern-card"
+    },
+    {
+      "label": "Data analysis agent",
+      "url": "https://aisdkagents.com/patterns/example-agent-data-analysis?utm_source=cult-ui&utm_medium=github&utm_content=readme-pattern-card"
+    },
+    {
+      "label": "",
+      "url": "https://aisdkagents.com/patterns/example-agent-a11y-audit?utm_source=cult-ui&utm_medium=github&utm_content=readme-pattern-card"
+    },
+    {
+      "label": "Accessibility audit agent",
+      "url": "https://aisdkagents.com/patterns/example-agent-a11y-audit?utm_source=cult-ui&utm_medium=github&utm_content=readme-pattern-card"
+    },
+    {
+      "label": "",
+      "url": "https://aisdkagents.com/patterns/ai-artifact-table?utm_source=cult-ui&utm_medium=github&utm_content=readme-pattern-card"
+    },
+    {
+      "label": "Table editor artifact",
+      "url": "https://aisdkagents.com/patterns/ai-artifact-table?utm_source=cult-ui&utm_medium=github&utm_content=readme-pattern-card"
+    },
+    {
+      "label": "",
+      "url": "https://aisdkagents.com/patterns/example-agent-branding?utm_source=cult-ui&utm_medium=github&utm_content=readme-pattern-card"
+    },
+    {
+      "label": "Branding agent",
+      "url": "https://aisdkagents.com/patterns/example-agent-branding?utm_source=cult-ui&utm_medium=github&utm_content=readme-pattern-card"
+    },
+    {
+      "label": "",
+      "url": "https://aisdkagents.com/patterns/ai-artifact-chart?utm_source=cult-ui&utm_medium=github&utm_content=readme-pattern-card"
+    },
+    {
+      "label": "Chart generation artifact",
+      "url": "https://aisdkagents.com/patterns/ai-artifact-chart?utm_source=cult-ui&utm_medium=github&utm_content=readme-pattern-card"
+    },
+    {
+      "label": "Browse 100+ patterns →",
+      "url": "https://aisdkagents.com/directory?utm_source=cult-ui&utm_medium=github&utm_content=readme-directory"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/nolly-studio/cult-ui#for-ai-agents"
+    },
+    {
+      "label": "llms.txt",
+      "url": "https://www.cult-ui.com/llms.txt"
+    },
+    {
+      "label": "llms-full.txt",
+      "url": "https://www.cult-ui.com/llms-full.txt"
+    },
+    {
+      "label": "/docs/components/dock.md",
+      "url": "https://www.cult-ui.com/docs/components/dock.md"
+    },
+    {
+      "label": "shadcn MCP server",
+      "url": "https://www.cult-ui.com/docs/mcp-server"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/nolly-studio/cult-ui#cult-ui-stays-free"
+    },
+    {
+      "label": "star it on GitHub",
+      "url": "https://github.com/nolly-studio/cult-ui"
+    },
+    {
+      "label": "AI SDK Agents",
+      "url": "https://aisdkagents.com/?utm_source=cult-ui&utm_medium=github&utm_content=readme-studio"
+    },
+    {
+      "label": "Newcopy",
+      "url": "https://www.newcopy.ai"
+    },
+    {
+      "label": "Best Models",
+      "url": "https://www.bestmodels.dev/"
+    },
+    {
+      "label": "Eve Directory",
+      "url": "https://www.evedirectory.com/"
+    },
+    {
+      "label": "Nolly Studio",
+      "url": "https://www.nolly.studio/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/nolly-studio/cult-ui#contributing"
+    },
+    {
+      "label": "contributing guide",
+      "url": "https://github.com/nolly-studio/cult-ui/blob/main/CONTRIBUTING.md"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/nolly-studio/cult-ui#license"
+    },
+    {
+      "label": "MIT",
+      "url": "https://github.com/nolly-studio/cult-ui/blob/main/LICENSE.md"
+    },
+    {
+      "label": "@nolansym",
+      "url": "https://x.com/nolansym"
+    }
+  ],
+  "root_files": [
+    ".agents/skills",
+    ".changeset",
+    ".claude",
+    ".cursor",
+    ".github",
+    ".husky",
+    ".vscode",
+    "apps/www",
+    ".commitlintrc.json",
+    ".editorconfig",
+    ".eslintrc.json",
+    ".gitignore",
+    ".kodiak.toml",
+    ".npmrc",
+    ".nvmrc",
+    ".prettierignore",
+    "CONTRIBUTING.md",
+    "DESIGN.md",
+    "LICENSE.md",
+    "README.md",
+    "package.json",
+    "pnpm-lock.yaml",
+    "pnpm-workspace.yaml",
+    "postcss.config.mjs",
+    "prettier.config.cjs",
+    "tailwind.config.cjs",
+    "tsconfig.json",
+    "turbo.json",
+    "vitest.config.ts"
+  ],
+  "release_count": null,
+  "status": "verified"
+}

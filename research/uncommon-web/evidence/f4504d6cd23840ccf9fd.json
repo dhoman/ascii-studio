@@ -1,0 +1,164 @@
+{
+  "url": "https://github.com/css-doodle/css-doodle",
+  "final_url": "https://github.com/css-doodle/css-doodle",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:47:41.713123+00:00",
+  "stars": 6068,
+  "forks": 209,
+  "description": "A web component for visual art and creative coding",
+  "homepage": "https://css-doodle.com",
+  "topics": [
+    "creative-coding",
+    "css",
+    "css-doodle",
+    "generative",
+    "generative-art",
+    "patterns",
+    "visual-art",
+    "web-component"
+  ],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2017-02-14T02:26:31.000Z",
+  "branch": "main",
+  "commit": "d8696c7cce901c353f176a598ec2a34b9a6c99e5",
+  "readme": "css-doodle A web component for visual art and creative coding with CSS. Write CSS rules for a grid of cells, mix in randomness and math, and draw generative patterns, backgrounds, icons and decorations. Website · Getting started · Reference · Playground · Discover Example Tools Playground: write and share doodles in the browser Shapes: discover new CSS polygon shapes SVG playground: generate SVG code with the same syntax cssd: command-line preview and image/video export Articles and talks An Introduction to css-doodle Article by Yuan Chuan, 2024. How the project started, from recreating a Dribbble pattern with a grid of elements to a tool for generative art. Written up from a Groove meetup talk; the slides are on GitHub. Experimenting A New Syntax To Write SVG Article by Yuan Chuan, 2022. The idea behind @svg: writing SVG with CSS syntax. Arte generativo con CSS Talk by Sonia Ruiz, 2020, in Spanish (31 min). An introduction to generative art, where algorithms produce the work, made with CSS. How to Draw Patterns with CSS Using CSS Doodle Tutorial by Adi Purdila on Envato Tuts+, 2019. Installs css-doodle, then builds four demos step by step with @grid, @size and random values from @r(). Who uses css-doodle Tabbied: generated patterns for prints and wallpapers Development npm install npm test # unit tests npm run build # css-doodle.min.js make runs both. Support css-doodle is free and MIT licensed. If it has been useful to you, consider backing it on Open Collective. Thank you! 🙏",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://css-doodle.com"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/css-doodle/css-doodle#css-doodle"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/css-doodle"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/css-doodle/css-doodle/blob/main/LICENSE"
+    },
+    {
+      "label": "",
+      "url": "https://opencollective.com/css-doodle"
+    },
+    {
+      "label": "Website",
+      "url": "https://css-doodle.com"
+    },
+    {
+      "label": "Getting started",
+      "url": "https://css-doodle.com/getting-started/"
+    },
+    {
+      "label": "Reference",
+      "url": "https://css-doodle.com/reference/"
+    },
+    {
+      "label": "Playground",
+      "url": "https://css-doodle.com/new/"
+    },
+    {
+      "label": "Discover",
+      "url": "https://css-doodle.com/discover/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/css-doodle/css-doodle#example"
+    },
+    {
+      "label": "",
+      "url": "https://css-doodle.com/new/?code=%40grid%3A%204%20%2F%20480px%20%2F%20blue%20%2B.75%3B%0Aborder-radius%3A%20%40pn(100%25%200%2C%200%20100%25%2C%2050%25)%3B%0Abackground%3A%20%23fff%3B"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/css-doodle/css-doodle#tools"
+    },
+    {
+      "label": "Playground",
+      "url": "https://css-doodle.com/new/"
+    },
+    {
+      "label": "Shapes",
+      "url": "https://css-doodle.com/shapes/"
+    },
+    {
+      "label": "SVG playground",
+      "url": "https://css-doodle.com/svg/"
+    },
+    {
+      "label": "cssd",
+      "url": "https://github.com/css-doodle/cli"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/css-doodle/css-doodle#articles-and-talks"
+    },
+    {
+      "label": "An Introduction to css-doodle",
+      "url": "https://yuanchuan.dev/an-introduction-to-css-doodle"
+    },
+    {
+      "label": "slides",
+      "url": "https://github.com/yuanchuan/intro-to-css-doodle"
+    },
+    {
+      "label": "Experimenting A New Syntax To Write SVG",
+      "url": "https://yuanchuan.dev/experimenting-a-new-syntax-to-write-svg"
+    },
+    {
+      "label": "Arte generativo con CSS",
+      "url": "https://www.youtube.com/watch?v=KKg6Uo1pVLU"
+    },
+    {
+      "label": "How to Draw Patterns with CSS Using CSS Doodle",
+      "url": "https://webdesign.tutsplus.com/how-to-draw-patterns-with-css-using-css-doodle--cms-33110t"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/css-doodle/css-doodle#who-uses-css-doodle"
+    },
+    {
+      "label": "Tabbied",
+      "url": "https://tabbied.com"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/css-doodle/css-doodle#development"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/css-doodle/css-doodle#support"
+    },
+    {
+      "label": "backing it on Open Collective",
+      "url": "https://opencollective.com/css-doodle"
+    },
+    {
+      "label": "",
+      "url": "https://opencollective.com/css-doodle#backers"
+    },
+    {
+      "label": "",
+      "url": "https://opencollective.com/css-doodle#sponsors"
+    }
+  ],
+  "root_files": [
+    ".github",
+    "build",
+    "changelog",
+    "docs",
+    "src",
+    "test",
+    ".gitignore",
+    "CODE_OF_CONDUCT.md",
+    "LICENSE",
+    "Makefile",
+    "README.md",
+    "package.json"
+  ],
+  "release_count": 131,
+  "status": "verified"
+}

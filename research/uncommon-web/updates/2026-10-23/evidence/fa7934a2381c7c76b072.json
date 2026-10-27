@@ -1,0 +1,218 @@
+{
+  "url": "https://github.com/papercss/papercss",
+  "final_url": "https://github.com/papercss/papercss",
+  "http_status": 200,
+  "checked_at": "2026-10-23T17:46:56.528640+00:00",
+  "stars": 4196,
+  "forks": 226,
+  "description": "The Less Formal CSS Framework",
+  "homepage": "https://getpapercss.com",
+  "topics": [
+    "css",
+    "html",
+    "scss"
+  ],
+  "license": "ISC",
+  "archived": false,
+  "created_at": "2017-08-23T20:15:22.000Z",
+  "branch": "master",
+  "commit": "b341c1606fca5b3880307d779414f43a5ccbc9b6",
+  "readme": "PaperCSS The less formal CSS framework, with a quick and easy integration. Table of contents Table of contents Quick-start Content of the framework Documentation Customizing Contributing About Resources Credits and license Quick-start There are several options available: You can download the latest release. Clone the repo: git clone https://github.com/papercss/papercss.git Install with npm: npm install papercss Install with yarn: yarn add papercss Import it using a CDN (it will automatically download the latest version): https://unpkg.com/papercss/dist/paper.min.css https://unpkg.com/papercss/dist/paper.css Content of the framework We provide compiled CSS (paper.css) as well as minified CSS (paper.min.css). You can choose which components you may want to use. Only the components that get imported into src/styles.scss will be compiled into dist/paper.css. You can also play with original, source files, written in SCSS, in src/. Documentation You can view the docs at getpapercss.com. Those are directly from the master branch; this means those features are stable and ready to be used in your project. You can also view the develop branch at develop.getpapercss.com, this includes new features that are coming soon in the master branch. Be warned, a feature in develop can be removed without any prevention. Customizing You can customize PaperCSS easily, clone the repo, run npm install and make any changes to .scss files in src/. The main place you might want to make changes would be core/_config.scss, where you can specify new colors or fonts for your CSS build. After you make changes, be sure to build the new CSS files. Do so by running npm run css:build and get them from the dist/ folder. Contributing This project is open source and contributions are very welcomed. It is also as beginner friendly as possible, so don't be afraid to jump in if you've never contributed to any Git project before! Feel free to reach out if you are new and need help with the process. Please before sending a PR, make sure you are properly using the .editorconfig file with your IDE. If your IDE doesn't natively support editorconfig files, you can use an extension/package/module. For example in Atom there is the editorconfig package, as well for Sublime Text, VS Code, Vim, ... Once you are ready to contribute, here the workflow you should follow: Fork the repo then clone it: git clone git@github.com:[your_username]/papercss.git cd papercss then install dependencies: npm install Change your current branch to develop: git checkout develop Create your new branch where you will write your code: git checkout -b feature-thing develop. Please be sure to prepend your new feature branch with \"feature-\" Write some code! To build the scss (in src/) to css (in dist/), run npm run css:build. Note: you will need to re-run this command to include the latest changes in src/. To preview your changes, you can run npm start. This will start a localhost server. Check to make sure your code is following style rules with npm run stylelint Once done commit and push your changes to your fork. The linter is also run as a pre-commit hook. Open a pull request on the origin papercss repo. Be sure to include any pictures and/or details on what you have done; it will help reviewers a lot! When your changes are approved, they will be merged into the develop branch, which will finally be merged into the master branch when we reach a milestone regarding features and bug fixes. Check out Vincent Driessen's blog post, GitFlow, or #27 for more details on how this works. Note: If you have a hotfix (usually typos and minor documentation tweaks), create your hotfix branch off of the master branch instead of develop: git checkout -b hotfix-thing master. The changes will be merged into both the master and develop to keep the branches consistent. About PaperCSS was originally made by @rhyneav to be something different than the typical mODerN STylEs and clean pages found in every other CSS framework. It was built with LESS and deployed on a single index.html page before being open sourced. It has since evolved; The CSS source has been rewritten in SCSS and the documentation is now built with Hugo (all thanks to some wonderful contributors). It is currently maintained by the PaperCSS team. The goal of PaperCSS is to be as minimal as possible when adding classes. For example, a button should just look like a paper button. There shouldn't be a need to add a class such as paper-button. Because of this, adding PaperCSS to a markdown generated page should instantly paper-ize it. Feel free to use it for wireframes, web apps, blogs, or whatever else you can think of! If you are new to Git or SCSS, this would be a great project to get your feet wet with. I'd be happy to help walk you through the pull request process. Resources Components: react-papercss-design a React component library based on PaperCSS Spaper PaperCSS components for Svelte vue-papercss A vue-plugin for the less formal CSS framework RailsPapercss Rails gem for Papercss framework react-native-paper-css PaperCSS for react-native React PaperCSS Another react component library implementation for PaperCSS Icons: handdrawn.css Another hand-drawn css library with rich icons included hand-drawn-icons Icon pack with a hand-drawn style Credits and license Code and documentation under ISC license. Shout out to Tiffany Rayside for creating Imperfect Buttons, which was an inspiration for this project. https://codepen.io/tmrDevelops/pen/VeRvKX",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://getpapercss.com"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/papercss/papercss#papercss"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/papercss/papercss#table-of-contents"
+    },
+    {
+      "label": "Table of contents",
+      "url": "https://github.com/papercss/papercss#table-of-contents"
+    },
+    {
+      "label": "Quick-start",
+      "url": "https://github.com/papercss/papercss#quick-start"
+    },
+    {
+      "label": "Content of the framework",
+      "url": "https://github.com/papercss/papercss#content-of-the-framework"
+    },
+    {
+      "label": "Documentation",
+      "url": "https://github.com/papercss/papercss#documentation"
+    },
+    {
+      "label": "Customizing",
+      "url": "https://github.com/papercss/papercss#customizing"
+    },
+    {
+      "label": "Contributing",
+      "url": "https://github.com/papercss/papercss#contributing"
+    },
+    {
+      "label": "About",
+      "url": "https://github.com/papercss/papercss#about"
+    },
+    {
+      "label": "Resources",
+      "url": "https://github.com/papercss/papercss#resources"
+    },
+    {
+      "label": "Credits and license",
+      "url": "https://github.com/papercss/papercss#credits-and-license"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/papercss/papercss#quick-start"
+    },
+    {
+      "label": "download the latest release",
+      "url": "https://github.com/papercss/papercss/releases"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/papercss/papercss#content-of-the-framework"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/papercss/papercss#documentation"
+    },
+    {
+      "label": "getpapercss.com",
+      "url": "https://www.getpapercss.com"
+    },
+    {
+      "label": "develop.getpapercss.com",
+      "url": "https://develop.getpapercss.com"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/papercss/papercss#customizing"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/papercss/papercss#contributing"
+    },
+    {
+      "label": "editorconfig package",
+      "url": "https://atom.io/packages/editorconfig"
+    },
+    {
+      "label": "Sublime Text",
+      "url": "https://github.com/sindresorhus/editorconfig-sublime"
+    },
+    {
+      "label": "VS Code",
+      "url": "https://github.com/editorconfig/editorconfig-vscode"
+    },
+    {
+      "label": "Vim",
+      "url": "https://github.com/editorconfig/editorconfig-vim"
+    },
+    {
+      "label": "Vincent Driessen's blog post",
+      "url": "http://nvie.com/posts/a-successful-git-branching-model/"
+    },
+    {
+      "label": "GitFlow",
+      "url": "https://datasift.github.io/gitflow/IntroducingGitFlow.html"
+    },
+    {
+      "label": "#27",
+      "url": "https://github.com/rhyneav/papercss/issues/27"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/papercss/papercss#about"
+    },
+    {
+      "label": "@rhyneav",
+      "url": "https://github.com/rhyneav"
+    },
+    {
+      "label": "wonderful contributors",
+      "url": "https://github.com/papercss/papercss/graphs/contributors"
+    },
+    {
+      "label": "PaperCSS team",
+      "url": "https://github.com/orgs/papercss/people"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/papercss/papercss#resources"
+    },
+    {
+      "label": "react-papercss-design",
+      "url": "https://hacker0limbo.github.io/react-papercss-design/en-US"
+    },
+    {
+      "label": "Spaper",
+      "url": "https://oli8.github.io/spaper/"
+    },
+    {
+      "label": "vue-papercss",
+      "url": "https://github.com/papercss/vue-papercss"
+    },
+    {
+      "label": "RailsPapercss",
+      "url": "https://github.com/papercss/rails_papercss_gem"
+    },
+    {
+      "label": "react-native-paper-css",
+      "url": "https://github.com/papercss/react-native-paper-css"
+    },
+    {
+      "label": "React PaperCSS",
+      "url": "https://papercss.github.io/React-Paper-CSS-Page/"
+    },
+    {
+      "label": "handdrawn.css",
+      "url": "https://fxaeberhard.github.io/handdrawn.css/"
+    },
+    {
+      "label": "hand-drawn-icons",
+      "url": "https://github.com/nikhilol/hand-drawn-icons"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/papercss/papercss#credits-and-license"
+    },
+    {
+      "label": "ISC license",
+      "url": "https://github.com/papercss/papercss/blob/master/license"
+    },
+    {
+      "label": "https://codepen.io/tmrDevelops/pen/VeRvKX",
+      "url": "https://codepen.io/tmrDevelops/pen/VeRvKX"
+    }
+  ],
+  "root_files": [
+    ".github",
+    "build",
+    "dist",
+    "docs",
+    "img/screenshots",
+    "src",
+    ".browserslistrc",
+    ".editorconfig",
+    ".gitignore",
+    ".npmignore",
+    ".stylelintrc.json",
+    "CODE_OF_CONDUCT.md",
+    "CONTRIBUTING.md",
+    "DISTRIBUTING.md",
+    "LICENSE.md",
+    "README.md",
+    "netlify.toml",
+    "package-lock.json",
+    "package.json"
+  ],
+  "release_count": 23,
+  "status": "verified"
+}

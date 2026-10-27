@@ -1,5 +1,13 @@
 # ascii-studio
 
+## Sindri hero gallery
+
+Open **http://localhost:5173/sindri.html** for 20 animated hero studies, separate from the existing media lab. The contact sheet compares ASCII, ordered dithering, pixels, halftone, edge contours, hatching, and ember particles. Select a card for a live hero mockup; star directions to keep a browser-local shortlist. Pause, replay the strike, change pace, hide copy, and export the artwork PNG or reproducibility JSON. Direct links use the look ID in the URL hash.
+
+Sindri is an original code-drawn dwarf illustration, not a supplied or licensed character model. Scene, animation timing, presets, and treatment are separate modules. This is a 2D look-development prototype, not the future Three.js scene renderer. Reduced-motion preferences start the preview paused; hidden tabs do not advance the scene. No media-lab inputs or cameras are started by this page.
+
+`node scripts/capture-sindri.mjs` captures all 20 directions and a four-look MP4 under ignored `captures/sindri/` (requires Chromium and system ffmpeg with libx264). Set `AGENT_BROWSER_EXECUTABLE_PATH` for the installed Chromium. The capture is deterministic browser rendering, not a target-device benchmark.
+
 Exploring character-based visuals: a browser ASCII lab (image, video, webcam) first, then a small game built on whatever look survives motion and interaction.
 
 ## Milestones

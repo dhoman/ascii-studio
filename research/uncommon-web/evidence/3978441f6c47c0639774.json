@@ -1,0 +1,155 @@
+{
+  "url": "https://github.com/area-is/react-3d-mockups",
+  "final_url": "https://github.com/area-is/react-3d-mockups",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:47:35.146194+00:00",
+  "stars": 6,
+  "forks": 1,
+  "description": "React live 3D mockup components",
+  "homepage": "http://area.is/react-3d-mockups",
+  "topics": [],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2026-07-09T18:02:17.000Z",
+  "branch": "main",
+  "commit": "ade89ee4c64cb9a5de1f82a02e1e0468bc2255b4",
+  "readme": "react-3d-mockups ▶ Watch the 38-second film - every frame of it rendered with react-3d-mockups and Remotion 3D device mockups for React. What you put on a device's screen is regular DOM, positioned on the glass with CSS 3D transforms, so it keeps running: React state and effects, video, iframes. The browser draws the text, so it stays sharp at any angle. By default the screens don't take input: dragging rotates the model, and hardware in front of a screen hides it pixel for pixel. An experimental prop, experimentalScreenInput, lets them take clicks, scrolling and typing while hardware still covers them (how it works). In active development. The API may change over the next few weeks. Breaking changes are listed in the changelog with what to change; pin an exact version (npm install --save-exact react-3d-mockups) if you need it to stay put. Built on three.js and react-three-fiber. Every model is generated from code at runtime, so there are no 3D asset files to load or host. The devices: the Galaxy S26 line, two foldable generations (Z Fold 7 and Z Flip 7, the wide Z Fold 8, the Z Fold 8 Ultra and Z Flip 8) and Apple's foldable iPhone Duo, the iPhone 17 family and the iPhone 18 Pros, MacBook Air, Pro and Neo, the iPad and Galaxy Tab families, three Apple Watches (Series 11, Series 12 and the titanium Ultra 4) and three Galaxy Watches (8, 9 and the titanium Ultra 2) on full wristbands, and a 27\" desktop display. The objects use the same API for their printable surfaces: books, magazines, brochures, business cards, ID badges, credit cards (EMV chip, embossed number and name), packaging (product box, mailer box, gable-top milk carton, shopping bag), custom-size panels and boxes at any millimeter dimensions, posters, vinyl records, out-of-home formats (billboard, bus shelter, double-sided DOOH totem, A-frame, roll-up banner, storefront), a TV in three designs from 32\" to 98\", and wrap-ready vehicles (transit bus, cargo van, 53 ft semi trailer): 58 models in all (33 devices, 25 objects). 'use client' import { GalaxyMockup } from 'react-3d-mockups' export function Hero() { return ( // The mockup fills its parent, so give the parent a height. <div style={{ height: 560 }}> <GalaxyMockup autoRotate float> {/* Any React node, iframe or video. */} <div style={{ height: '100%', display: 'grid', placeItems: 'center', background: '#111', color: '#fff', fontSize: 32, }} > Hello </div> </GalaxyMockup> </div> ) } Documentation and live demos → Every device and object has its own page with a live prop explorer. Monorepo layout Path npm name What it is packages/react react-3d-mockups The published npm package - the whole library apps/docs - Next.js docs & live demos site examples/remotion - Remotion project that renders mockups to video: the promo film, three campaign films and short looping clips. Not a workspace: it installs the package the way an app would infra/apex - The stand-in Worker for the area.is apex (see DEPLOYMENT.md) Inside the package, src/core holds the specs, geometry math and screen/stage behavior, depends on three and never imports React; the rest of src is the react-three-fiber layer that renders it. Keeping the numbers out of the components is what makes each mockup measurable and unit-testable without a renderer. See ARCHITECTURE.md for the layering rule. Development Uses npm workspaces. Node 22+ required (wrangler, concurrently and vitest all floor there). This is the toolchain for working on the repo - the published package declares no engines and runs in the browser. npm install # installs all workspaces + builds the package (prepare hook) npm run dev # package in watch mode + docs at http://localhost:3000 npm run build # builds the package, then the docs site as a Worker bundle npm run typecheck # typechecks both workspaces npm run test # core unit tests (no DOM, no WebGL) npm run devices:check # the sizes and counts the docs quote, against the library npm run size:check # what importing each mockup costs, against the documented table npm run docs:examples # every tsx/ts block in the READMEs and docs, compiled against the package npm run visual # visual regression vs baselines (needs `npm run dev` running) npm run bench # performance behaviour vs budgets (needs a running site) See CONTRIBUTING.md for what each check catches; they overlap less than they look. Releasing and deploying The package is published to npm from CI, through npm Trusted Publishing, whenever a version bump is merged to main; the tag and GitHub Release follow automatically. To cut one, run Prepare a release from the Actions tab (or npm run release -- minor locally) and merge the PR it opens. The details are in CONTRIBUTING.md. The docs site runs on Cloudflare Workers (OpenNext), deployed by Workers Builds on push, and is served at a path on the apex. Everything about building, deploying and routing it - including the stand-in Worker for the area.is apex - is in apps/docs/DEPLOYMENT.md. License MIT © Ye Joo Park",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://github.com/area-is/react-3d-mockups/blob/main/assets/logo-stack-green.svg"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/area-is/react-3d-mockups#react-3d-mockups"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/react-3d-mockups"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/area-is/react-3d-mockups/blob/main/LICENSE"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/area-is/react-3d-mockups/actions/workflows/ci.yml"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/area-is/react-3d-mockups/blob/main/assets/hero.png"
+    },
+    {
+      "label": "",
+      "url": "https://area.is/react-3d-mockups/media/react-3d-mockups.mp4"
+    },
+    {
+      "label": "▶ Watch the 38-second film",
+      "url": "https://area.is/react-3d-mockups/media/react-3d-mockups.mp4"
+    },
+    {
+      "label": "Remotion",
+      "url": "https://github.com/area-is/react-3d-mockups/blob/main/examples/remotion"
+    },
+    {
+      "label": "how it works",
+      "url": "https://area.is/react-3d-mockups/docs/screen-content#experimental-screens-that-take-input"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/area-is/react-3d-mockups/blob/main/CHANGELOG.md"
+    },
+    {
+      "label": "three.js",
+      "url": "https://threejs.org"
+    },
+    {
+      "label": "react-three-fiber",
+      "url": "https://github.com/pmndrs/react-three-fiber"
+    },
+    {
+      "label": "Documentation and live demos →",
+      "url": "https://area.is/react-3d-mockups"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/area-is/react-3d-mockups#monorepo-layout"
+    },
+    {
+      "label": "packages/react",
+      "url": "https://github.com/area-is/react-3d-mockups/blob/main/packages/react"
+    },
+    {
+      "label": "apps/docs",
+      "url": "https://github.com/area-is/react-3d-mockups/blob/main/apps/docs"
+    },
+    {
+      "label": "examples/remotion",
+      "url": "https://github.com/area-is/react-3d-mockups/blob/main/examples/remotion"
+    },
+    {
+      "label": "infra/apex",
+      "url": "https://github.com/area-is/react-3d-mockups/blob/main/infra/apex"
+    },
+    {
+      "label": "DEPLOYMENT.md",
+      "url": "https://github.com/area-is/react-3d-mockups/blob/main/apps/docs/DEPLOYMENT.md"
+    },
+    {
+      "label": "ARCHITECTURE.md",
+      "url": "https://github.com/area-is/react-3d-mockups/blob/main/ARCHITECTURE.md"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/area-is/react-3d-mockups#development"
+    },
+    {
+      "label": "CONTRIBUTING.md",
+      "url": "https://github.com/area-is/react-3d-mockups/blob/main/CONTRIBUTING.md"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/area-is/react-3d-mockups#releasing-and-deploying"
+    },
+    {
+      "label": "CONTRIBUTING.md",
+      "url": "https://github.com/area-is/react-3d-mockups/blob/main/CONTRIBUTING.md#releasing"
+    },
+    {
+      "label": "apps/docs/DEPLOYMENT.md",
+      "url": "https://github.com/area-is/react-3d-mockups/blob/main/apps/docs/DEPLOYMENT.md"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/area-is/react-3d-mockups#license"
+    },
+    {
+      "label": "MIT",
+      "url": "https://github.com/area-is/react-3d-mockups/blob/main/LICENSE"
+    },
+    {
+      "label": "Ye Joo Park",
+      "url": "https://github.com/subwaymatch"
+    }
+  ],
+  "root_files": [
+    ".github",
+    "agent-outputs",
+    "apps/docs",
+    "assets",
+    "examples/remotion",
+    "infra/apex",
+    "packages/react",
+    ".gitignore",
+    "ARCHITECTURE.md",
+    "CHANGELOG.md",
+    "CONTRIBUTING.md",
+    "LICENSE",
+    "README.md",
+    "package-lock.json",
+    "package.json",
+    "tsconfig.base.json"
+  ],
+  "release_count": 3,
+  "status": "verified"
+}

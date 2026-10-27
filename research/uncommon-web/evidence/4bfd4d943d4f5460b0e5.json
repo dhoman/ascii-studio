@@ -1,0 +1,109 @@
+{
+  "url": "https://github.com/shshaw/splitting",
+  "final_url": "https://github.com/shshaw/splitting",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:48:16.832154+00:00",
+  "stars": 1757,
+  "forks": 73,
+  "description": "JavaScript microlibrary to split an element by words, characters, children and more, populated with CSS variables!",
+  "homepage": "https://splitting.js.org",
+  "topics": [
+    "animation",
+    "character",
+    "css",
+    "css-vars",
+    "split",
+    "splitting",
+    "text",
+    "transition"
+  ],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2018-01-05T17:45:54.000Z",
+  "branch": "master",
+  "commit": "d5a8fd0137e90770ae10d2e0e874a4a101161544",
+  "readme": "CSS Vars for split words, chars & more! Splitting.js is a JavaScript microlibrary designed to split (section off) an element in a variety of ways, such as words, characters, child nodes, and more! Most Splitting methods utilize a series of <span>s populated with CSS variables and data attributes unlocking transitions and animations that were previously not feasible with CSS. Install with npm i splitting -s or Download. Consult the guide & documentation for more details and installation instructions. Guide & Documentation Demos Maintainers Maintainer GitHub Twitter Stephen Shaw @shshaw @shshaw Christopher Wallis @notoriousb1t @notoriousb1t",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://splitting.js.org"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/shshaw/splitting"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/shshaw/splitting#css-vars-for-split-words-chars--more"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/c6f51f84a715ed4b501226c05eb67aaaa76d39db951c19bf3f320a6a159618b6/68747470733a2f2f6170692e7472617669732d63692e6f72672f7368736861772f53706c697474696e672e7376673f6272616e63683d312e302e30"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/e880b3ac2b05f9066e8fa74113d9376dc35294484f7f1d5166f6c9b22dae1265/68747470733a2f2f696d672e736869656c64732e696f2f62756e646c6570686f6269612f6d696e2f73706c697474696e672e7376673f6c6162656c3d4d696e696669656425323053697a65"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/eb33878556bf0b72167f4e3138882a631170653fce542be9039e69f2baaf9c95/68747470733a2f2f696d672e736869656c64732e696f2f62756e646c6570686f6269612f6d696e7a69702f73706c697474696e672e7376673f6c6162656c3d475a495025323053697a65"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/c6119240e5a2f3ab4bd83808079763f3eb4aeecda0f9187845e11dd90cc0be98/68747470733a2f2f696d672e736869656c64732e696f2f6e706d2f6c2f73706c697474696e672e7376673f6c6162656c3d4c6963656e7365"
+    },
+    {
+      "label": "Download",
+      "url": "https://github.com/shshaw/Splitting/archive/master.zip"
+    },
+    {
+      "label": "guide & documentation",
+      "url": "https://splitting.js.org/guide.html"
+    },
+    {
+      "label": "Guide & Documentation",
+      "url": "https://splitting.js.org/guide.html"
+    },
+    {
+      "label": "Demos",
+      "url": "https://codepen.io/collection/43588e4b7beaaf25ede7e38e61441e54/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/shshaw/splitting#maintainers"
+    },
+    {
+      "label": "@shshaw",
+      "url": "https://github.com/shshaw"
+    },
+    {
+      "label": "@shshaw",
+      "url": "https://twitter.com/shshaw"
+    },
+    {
+      "label": "@notoriousb1t",
+      "url": "https://github.com/notoriousb1t"
+    },
+    {
+      "label": "@notoriousb1t",
+      "url": "https://twitter.com/notoriousb1t"
+    }
+  ],
+  "root_files": [
+    ".vscode",
+    "config",
+    "dist",
+    "src",
+    "tests",
+    ".babelrc",
+    ".gitignore",
+    ".npmignore",
+    ".travis.yml",
+    "LICENSE.md",
+    "README.md",
+    "package-lock.json",
+    "package.json"
+  ],
+  "release_count": 8,
+  "status": "verified"
+}

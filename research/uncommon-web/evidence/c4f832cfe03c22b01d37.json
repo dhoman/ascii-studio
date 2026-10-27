@@ -1,0 +1,182 @@
+{
+  "url": "https://github.com/kerrshift/ephemera",
+  "final_url": "https://github.com/kerrshift/ephemera",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:47:57.108789+00:00",
+  "stars": 1,
+  "forks": 0,
+  "description": "Ephemera — a paper UI design system for React. shadcn/ui-compatible components styled as stationery, with six paper themes.",
+  "homepage": "https://ephemera.kerrshift.com",
+  "topics": [
+    "component-library",
+    "design-system",
+    "nextjs",
+    "paper-design-system",
+    "paper-ui",
+    "paper-ux",
+    "radix-ui",
+    "react",
+    "react-components",
+    "shadcn",
+    "shadcn-registry",
+    "shadcn-ui",
+    "skeuomorphism",
+    "tailwindcss",
+    "typescript",
+    "ui-components",
+    "ui-kit"
+  ],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2026-10-12T18:14:03.000Z",
+  "branch": "main",
+  "commit": "27c93ee45865c488e9d9e50abbbe18eaa7707923",
+  "readme": "Ephemera — Paper UI Design System for React A design system printed on paper. Ephemera is a free, open-source paper UI design system for React. Its components look like real stationery: buttons that press like typewriter keys, inputs on ruled lines, folder tabs, ledger tables, label-maker badges, dialogs that arrive like letters and toasts that print like receipts. Six paper types switch with a single attribute. It's a shadcn/ui registry, so components install straight into your project as source you own. They share shadcn's APIs, so you can swap them in one at a time. Website & docs · Components · llms.txt · Contributing Quick start Ephemera needs a React project with Tailwind CSS v4 and the shadcn CLI (npx shadcn@latest init). # the paper theme, its fonts and every core component npx shadcn@latest add https://ephemera.kerrshift.com/r/all.json # or one at a time npx shadcn@latest add https://ephemera.kerrshift.com/r/button.json The CLI merges the paper theme into your global CSS and installs the fonts (next/font in Next.js, @fontsource packages elsewhere). There's nothing to import by hand. Pick a paper: <html data-paper=\"cream\"> {/* cream · kraft · ledger · blueprint · newsprint · carbon */} Then use components exactly like shadcn/ui: import { Button } from \"@/components/ui/button\"; <Button>Send letter</Button> <Button variant=\"paper\">Save draft</Button> If your project already has shadcn components with the same names (new projects ship a button.tsx), the CLI asks before replacing them. Answer y, or add --overwrite to replace them all with the paper versions. Short names Ephemera is being added to the shadcn registry directory as @ephemera. Once it's listed, npx shadcn@latest add @ephemera/button works with no configuration. Until then, add the namespace to your components.json: { \"registries\": { \"@ephemera\": \"https://ephemera.kerrshift.com/r/{name}.json\" } } What's included Paper Theme – six paper types as CSS variables (--paper, --ink, --pen, --rule…), a .paper grain utility and .paper-ruled notebook lines, plus five fonts (Fraunces, IBM Plex Mono, Courier Prime, Caveat, Anton). It also sets the standard shadcn variables, so components you already have pick up the paper colors. Core (28) – built on Radix for keyboard and screen reader support. Forms Layout Overlays Display Button, Input, Checkbox, Radio Group, Switch, Select, Slider, Date Picker Card, Tabs, Accordion, Separator, Table Dialog, Sheet, Popover, Tooltip, Dropdown Menu, Toast Badge, Avatar, Alert, Progress, Skeleton, Kbd, Calendar, Breadcrumb, Pagination Extras (9) – Receipt, Ticket, Boarding Pass, Polaroid, Postage Stamp, Rubber Stamp, Envelope, Wax Seal and Sticky Note. Each is a single self-contained file that needs only React and Tailwind. Every component has a live demo, props table and source on the website. Using it with AI coding tools /llms.txt lists every component with its install command, and each /r/<name>.json contains the full source, so coding agents can discover and install components on their own. Development This repository is both the component registry and the documentation site (Next.js, exported as a static site). git clone https://github.com/kerrshift/ephemera.git cd ephemera npm install npm run dev # http://localhost:3000 Script What it does npm run dev Regenerates the registry, then starts the dev server npm run build Regenerates the registry and exports the static site to out/ npm run typecheck Type-checks the project npm run preview Serves out/ locally with Cloudflare's runtime (run build first) npm run deploy Builds and deploys to Cloudflare src/registry/ephemera/ the components and paper.css (what gets installed) registry.json the registry index; scripts/build-registry.mjs turns it into public/r/*.json and llms.txt src/app/ the documentation site src/lib/docs*.ts usage examples and props tables src/components/ demos and site-only components public/r/ and public/llms.txt are generated on every dev/build run and aren't committed. Set NEXT_PUBLIC_SITE_URL to build for a different domain (it defaults to https://ephemera.kerrshift.com). Contributing Bug reports, component ideas and pull requests are welcome. Please read CONTRIBUTING.md and our Code of Conduct first. To report a security issue, see SECURITY.md. License MIT © KerrShift Created by Sahil Gangurde (@lostmartian) and published by KerrShift, an applied intelligence lab building instruments for autonomous software.",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://github.com/kerrshift/ephemera#ephemera--paper-ui-design-system-for-react"
+    },
+    {
+      "label": "shadcn/ui",
+      "url": "https://ui.shadcn.com"
+    },
+    {
+      "label": "Website & docs",
+      "url": "https://ephemera.kerrshift.com"
+    },
+    {
+      "label": "Components",
+      "url": "https://ephemera.kerrshift.com/#core"
+    },
+    {
+      "label": "llms.txt",
+      "url": "https://ephemera.kerrshift.com/llms.txt"
+    },
+    {
+      "label": "Contributing",
+      "url": "https://github.com/kerrshift/ephemera/blob/main/CONTRIBUTING.md"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/kerrshift/ephemera/actions/workflows/ci.yml"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/kerrshift/ephemera/blob/main/LICENSE"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/kerrshift/ephemera/blob/main/.github/assets/ephemera.png"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/kerrshift/ephemera#quick-start"
+    },
+    {
+      "label": "Tailwind CSS v4",
+      "url": "https://tailwindcss.com"
+    },
+    {
+      "label": "shadcn CLI",
+      "url": "https://ui.shadcn.com/docs/cli"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/kerrshift/ephemera#short-names"
+    },
+    {
+      "label": "shadcn registry directory",
+      "url": "https://ui.shadcn.com/docs/directory"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/kerrshift/ephemera#whats-included"
+    },
+    {
+      "label": "Radix",
+      "url": "https://www.radix-ui.com"
+    },
+    {
+      "label": "the website",
+      "url": "https://ephemera.kerrshift.com"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/kerrshift/ephemera#using-it-with-ai-coding-tools"
+    },
+    {
+      "label": "/llms.txt",
+      "url": "https://ephemera.kerrshift.com/llms.txt"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/kerrshift/ephemera#development"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/kerrshift/ephemera#contributing"
+    },
+    {
+      "label": "CONTRIBUTING.md",
+      "url": "https://github.com/kerrshift/ephemera/blob/main/CONTRIBUTING.md"
+    },
+    {
+      "label": "Code of Conduct",
+      "url": "https://github.com/kerrshift/ephemera/blob/main/CODE_OF_CONDUCT.md"
+    },
+    {
+      "label": "SECURITY.md",
+      "url": "https://github.com/kerrshift/ephemera/blob/main/SECURITY.md"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/kerrshift/ephemera#license"
+    },
+    {
+      "label": "MIT",
+      "url": "https://github.com/kerrshift/ephemera/blob/main/LICENSE"
+    },
+    {
+      "label": "KerrShift",
+      "url": "https://kerrshift.com"
+    },
+    {
+      "label": "Sahil Gangurde",
+      "url": "https://lostmartian.in"
+    },
+    {
+      "label": "@lostmartian",
+      "url": "https://github.com/lostmartian"
+    },
+    {
+      "label": "KerrShift",
+      "url": "https://kerrshift.com"
+    }
+  ],
+  "root_files": [
+    ".github",
+    "public",
+    "scripts",
+    "src",
+    ".editorconfig",
+    ".gitignore",
+    ".nvmrc",
+    "AGENTS.md",
+    "CHANGELOG.md",
+    "CITATION.cff",
+    "CODE_OF_CONDUCT.md",
+    "CONTRIBUTING.md",
+    "LICENSE",
+    "README.md",
+    "SECURITY.md",
+    "next.config.ts",
+    "package-lock.json",
+    "package.json",
+    "registry.json",
+    "tsconfig.json",
+    "wrangler.jsonc"
+  ],
+  "release_count": 0,
+  "status": "verified"
+}

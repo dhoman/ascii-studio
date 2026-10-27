@@ -1,0 +1,188 @@
+{
+  "url": "https://github.com/cosmosgl/graph",
+  "final_url": "https://github.com/cosmosgl/graph",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:47:41.530458+00:00",
+  "stars": 1302,
+  "forks": 88,
+  "description": "GPU-accelerated force graph layout and rendering",
+  "homepage": "https://cosmos.gl",
+  "topics": [
+    "embeddings",
+    "force",
+    "graph",
+    "network",
+    "simulation",
+    "visualization",
+    "webgl"
+  ],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2022-04-14T01:30:14.000Z",
+  "branch": "main",
+  "commit": "68f18038d5367e2682b5726b62976f26e6d65586",
+  "readme": "GPU-accelerated Force Graph cosmos.gl is a high-performance WebGL Force Graph algorithm and rendering engine. All the computations and drawing occur on the GPU in fragment and vertex shaders, avoiding expensive memory operations. It enables the real-time simulation of network graphs consisting of hundreds of thousands of points and links on modern hardware. This engine powers 🪐 Cosmograph — a toolset for exploring complex networks and AI embeddings. cosmos-reel-720p.mp4 📺 Comparison with other libraries 🎮 Check out our storybook for examples Quick Start Install the package: npm install @cosmos.gl/graph Note: luma.gl (@luma.gl/core, @luma.gl/engine, @luma.gl/shadertools, @luma.gl/webgl, compatible range ~9.3.0) is a peer dependency. npm 7+ installs it automatically; with Yarn, or pnpm configurations that skip auto-installing peers, add the four packages explicitly at ~9.3.0 — a bare install gets a newer luma.gl. Keeping luma.gl as a peer lets cosmos.gl share one luma.gl installation — and one GPU Device — with hosts like deck.gl. Get the data, configure the graph and run the simulation: import { Graph } from '@cosmos.gl/graph' const div = document.querySelector('div') const config = { spaceSize: 4096, simulationFriction: 0.1, // keeps the graph inert simulationGravity: 0, // disables the gravity force simulationRepulsion: 0.5, // increases repulsion between points curvedLinks: true, // curved links fitViewOnInit: true, // fit the view to the graph after initialization fitViewDelay: 1000, // wait 1 second before fitting the view fitViewPadding: 0.3, // centers the graph with a padding of ~30% of screen rescalePositions: false, // rescale positions, useful when coordinates are too small enableDrag: true, // enable dragging points onClick: (pointIndex) => { console.log('Clicked point index: ', pointIndex) }, /* ... */ } const graph = new Graph(div, config) // Points: [x1, y1, x2, y2, x3, y3] const pointPositions = new Float32Array([ 0.0, 0.0, // Point 1 at (0,0) 1.0, 0.0, // Point 2 at (1,0) 0.5, 1.0, // Point 3 at (0.5,1) ]); graph.setPointPositions(pointPositions) // Links: [sourceIndex1, targetIndex1, sourceIndex2, targetIndex2] const links = new Float32Array([ 0, 1, // Link from point 0 to point 1 1, 2, // Link from point 1 to point 2 2, 0, // Link from point 2 to point 0 ]); graph.setLinks(links) graph.render() What's New in v3.0? cosmos.gl v3.0 brings a new rendering engine, async initialization, and several new features: luma.gl (WebGL 2) — rendering ported from regl to luma.gl, with support for sharing a custom Device across multiple graphs via new Graph(div, config, devicePromise). Async initialization — the constructor returns immediately; all public methods queue until the device is ready. Use graph.ready / graph.isReady to know when the graph is usable. Simulation control — rendering is now separate from simulation. The simulation starts automatically by default; use start(), stop(), pause(), and unpause() to control it independently. Link sampling — sample visible links on screen with getSampledLinks() and getSampledLinkPositionsMap() for rendering labels or overlays along links. Touch and pen support — tap, drag, and pinch-to-zoom on phones and tablets. Long-press (~500 ms) triggers context menu callbacks. onMouseMove and all click callbacks fire from touch input. Context menu support — new callbacks for right-click on desktop and long-press on touch/pen: onContextMenu, onPointContextMenu, onLinkContextMenu, onBackgroundContextMenu. Fit viewport to points — setZoomTransformByPointPositions() zooms and pans to fit a set of points into view. Config-driven highlighting — imperative selection methods replaced by highlightedPointIndices, highlightedLinkIndices, and outlinedPointIndices config properties. Points and links are highlighted independently. Focused links are rendered wider via focusedLinkIndex / focusedLinkWidthIncrease. New findPointsInRect(), findPointsInPolygon(), getNeighboringPointIndices(), getConnectedLinkIndices(), and getConnectedPointIndices() methods. Link blending control — linkBlending: false disables alpha blending for significantly faster link rendering on dense graphs. Hover improvements — onPointMouseOver now includes isHighlighted and isOutlined parameters; hover correctly highlights the topmost point when points overlap. Config API changes — setConfig() now resets all values to defaults before applying; use the new setConfigPartial() to update individual properties without resetting the rest. Init-only config fields — initialZoomLevel, randomSeed, and attribution can only be set during initialization and are preserved across config updates. Runtime simulation toggle — enableSimulation can now be changed at runtime via setConfig() or setConfigPartial(). GPU transitions — point positions, point colors/sizes, and link colors/widths now animate by default (transitionDuration: 800, transitionEasing: TransitionEasing.CubicInOut). Use transitionDuration: 0 to keep snap updates. Transition callbacks — use onTransitionStart, onTransition, and onTransitionEnd to track transition lifecycle and progress. Default point shape — new pointDefaultShape config property lets you set the fallback shape for all points when no per-point shapes are provided. Accepts a PointShape enum value (e.g., PointShape.Star), a plain number (e.g., 6), or a numeric string (e.g., \"6\"). Collision force — new GPU-accelerated collision force keeps points from overlapping, using a spatial-hash grid that scales to large graphs. Enable it with simulationCollision, and tune the spacing with simulationCollisionRadius (fixed radius vs. size-derived) and simulationCollisionPadding (extra gap between points). See the Collision example. Exported defaults — defaultConfigValues is now part of the public API. Optimized hover detection — skips GPU work when the mouse hasn't moved. Check the Migration Guide for upgrading from v2. What's New in v2.0? cosmos.gl v2.0 introduces significant improvements in performance and data handling: Enhanced data structures with WebGL-compatible formats. Methods like setPointPositions and setLinks replace setData for improved efficiency. Direct control over point and link attributes via Float32Array (e.g., colors, sizes, widths). Updated event handling based on indices instead of objects. New Point Clustering force (setPointClusters, setClusterPositions and setPointClusterStrength). Ability to drag points. Check the Migration Guide for upgrading from v1. Examples Actions Showcase (via cosmograph.app) Silk Road Case: Bitcoin Transactions (📄 Read more) ABACUS Shell (source) The MathWorks, Inc: symmetric positive definite matrix (source) Known Issues Starting from version 15.4, iOS has stopped supporting the key WebGL extension powering our Many-Body force implementation (EXT_float_blend). We're investigating this issue and exploring solutions. The latest iOS works again! cosmos.gl doesn't work on Android devices that don't support the OES_texture_float WebGL extension. Documentation 🧑‍💻 Quick Start 🛠 Configuration ⚙️ API Reference 🚀 Migration Guide License MIT Contact GitHub Discussions",
+  "readme_links": [
+    {
+      "label": "Cosmograph",
+      "url": "https://cosmograph.app"
+    },
+    {
+      "label": "📺 Comparison with other libraries",
+      "url": "https://www.youtube.com/watch?v=HWk78hP8aEE"
+    },
+    {
+      "label": "🎮 Check out our storybook for examples",
+      "url": "https://cosmosgl.github.io/graph/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/cosmosgl/graph#quick-start"
+    },
+    {
+      "label": "luma.gl",
+      "url": "https://luma.gl"
+    },
+    {
+      "label": "configure",
+      "url": "https://cosmosgl.github.io/graph/?path=/docs/configuration--docs"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/cosmosgl/graph#whats-new-in-v30"
+    },
+    {
+      "label": "luma.gl",
+      "url": "https://luma.gl/"
+    },
+    {
+      "label": "Collision example",
+      "url": "https://cosmosgl.github.io/graph/?path=/story/examples-forces--collision"
+    },
+    {
+      "label": "Migration Guide",
+      "url": "https://github.com/cosmosgl/graph/blob/main/migration-notes.md"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/cosmosgl/graph#whats-new-in-v20"
+    },
+    {
+      "label": "Migration Guide",
+      "url": "https://github.com/cosmosgl/graph/blob/main/migration-notes.md"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/cosmosgl/graph#examples"
+    },
+    {
+      "label": "Actions",
+      "url": "https://cosmosgl.github.io/graph/?path=/story/examples-get-started--actions"
+    },
+    {
+      "label": "cosmograph.app",
+      "url": "https://cosmograph.app"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/cosmosgl/graph#showcase-via-cosmographapp"
+    },
+    {
+      "label": "Silk Road Case: Bitcoin Transactions",
+      "url": "https://run.cosmograph.app/public/987cf266-fd90-4940-b52d-f75a1e006237"
+    },
+    {
+      "label": "📄 Read more",
+      "url": "https://medium.com/@cosmograph.app/visualizing-darknet-6846dec7f1d7"
+    },
+    {
+      "label": "ABACUS Shell",
+      "url": "https://run.cosmograph.app/public/b099a861-47ba-4110-b778-c4ef0f29644f"
+    },
+    {
+      "label": "source",
+      "url": "http://sparse.tamu.edu/Puri/ABACUS_shell_hd"
+    },
+    {
+      "label": "The MathWorks, Inc: symmetric positive definite matrix",
+      "url": "https://run.cosmograph.app/public/cb6f43f2-71c7-47de-97c5-d86ac549cfed"
+    },
+    {
+      "label": "source",
+      "url": "https://sparse.tamu.edu/MathWorks/Kuu"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/cosmosgl/graph#known-issues"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/cosmosgl/graph#documentation"
+    },
+    {
+      "label": "Quick Start",
+      "url": "https://cosmosgl.github.io/graph/?path=/docs/welcome-to-cosmos-gl--docs"
+    },
+    {
+      "label": "Configuration",
+      "url": "https://cosmosgl.github.io/graph/?path=/docs/configuration--docs"
+    },
+    {
+      "label": "API Reference",
+      "url": "https://cosmosgl.github.io/graph/?path=/docs/api-reference--docs"
+    },
+    {
+      "label": "Migration Guide",
+      "url": "https://github.com/cosmosgl/graph/blob/main/migration-notes.md"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/cosmosgl/graph#license"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/cosmosgl/graph#contact"
+    },
+    {
+      "label": "GitHub Discussions",
+      "url": "https://github.com/orgs/cosmosgl/discussions"
+    }
+  ],
+  "root_files": [
+    ".agents/skills/history",
+    ".claude",
+    ".githooks",
+    ".github",
+    ".storybook",
+    "docs",
+    "history",
+    "integrations/deck-layers",
+    "scripts",
+    "src",
+    "test",
+    ".coderabbit.yaml",
+    ".eslintrc",
+    ".gitignore",
+    "AGENTS.md",
+    "CHARTER.md",
+    "CITATION.cff",
+    "CLAUDE.md",
+    "CODE_OF_CONDUCT.md",
+    "CONTRIBUTING.md",
+    "GOVERNANCE.md",
+    "LICENCE",
+    "README.md",
+    "cosmos_awesome.md",
+    "logo.svg",
+    "migration-notes.md",
+    "package.json",
+    "pnpm-lock.yaml",
+    "pnpm-workspace.yaml",
+    "tsconfig.json",
+    "tsconfig.typecheck.json",
+    "vite.config.ts",
+    "vitest.config.ts"
+  ],
+  "release_count": 23,
+  "status": "verified"
+}

@@ -1,0 +1,113 @@
+{
+  "url": "https://github.com/shika-works/pixelium-design",
+  "final_url": "https://github.com/shika-works/pixelium-design",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:48:16.517769+00:00",
+  "stars": 252,
+  "forks": 13,
+  "description": "Pixelium Design – A pixel-art UI component library for Vue, built with TypeScript and Vite. Nostalgic aesthetics, tree-shakable components, dark/light themes, and full type safety out of the box.",
+  "homepage": "https://shika-works.github.io/pixelium-design",
+  "topics": [],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2025-08-24T08:46:39.000Z",
+  "branch": "main",
+  "commit": "a6159f321584101beec87de861848f81e40eb538",
+  "readme": "Pixelium Design Pixelium Design – A pixel-art UI component library for Vue, built with TypeScript and Vite. Nostalgic aesthetics, tree-shakable components, dark and light themes, full type safety, ready to use right out of the box. 中文 API Document 🚀 Tech Stack Vue 3 – Full modern features ⚗️ including Composition API TypeScript – Built on TS type system ✅ for out-of-the-box type safety Vite – Lightning-fast cold start ⚡ + HMR 🔥, production build via Rollup 📦 oxlint – Blazing-fast Rust linter 🦀 to keep code quality & consistency ✨ 🎨 Features Pixel Aesthetics – Retro pixel look 👾 with customizable resolution & palette 🎮 OKlab Palette – Theme generator 🌈 based on the OKlab color model for one-click custom palettes 🎨 Tree-shakable – Each component individually exported 🧩; unused code auto-dropped 🗑️ Dark Mode – Supports dark mode 🌙 following system preference or manual toggle 🔦 Documentation & Support Documentation: View the documentation to learn more about features and usage. Support: Encounter any issues? Feel free to submit an Issue or Pull Request. Please read the Conventional Commits specification before committing. License Pixelium Design is released under the MIT License. This project uses the following third-party assets: Font: Fusion Pixel, licensed under SIL OFL 1.1. Icons: Icons from Pixel Icon Library by HackerNoon, @hackernoon/pixel-icon-library, licensed under CC BY 4.0 International. The open-source version of pixelarticons. The open-source version is licensed under MIT. Thank you for using Pixelium Design.",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://github.com/shika-works/pixelium-design#pixelium-design"
+    },
+    {
+      "label": "中文",
+      "url": "https://github.com/shika-works/pixelium-design/blob/main/README.zh.md"
+    },
+    {
+      "label": "API Document",
+      "url": "https://shika-works.github.io/pixelium-design/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/shika-works/pixelium-design#-tech-stack"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/shika-works/pixelium-design#-features"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/shika-works/pixelium-design#documentation--support"
+    },
+    {
+      "label": "View the documentation",
+      "url": "https://shika-works.github.io/pixelium-design/"
+    },
+    {
+      "label": "Issue",
+      "url": "https://github.com/shika-works/pixelium-design/issues"
+    },
+    {
+      "label": "Pull Request",
+      "url": "https://github.com/shika-works/pixelium-design/pulls"
+    },
+    {
+      "label": "Conventional Commits",
+      "url": "https://github.com/shika-works/pixelium-design/blob/main/conventional-commits.md"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/shika-works/pixelium-design#license"
+    },
+    {
+      "label": "MIT License",
+      "url": "https://github.com/shika-works/pixelium-design/blob/main/LICENSE"
+    },
+    {
+      "label": "Fusion Pixel",
+      "url": "https://github.com/TakWolf/fusion-pixel-font"
+    },
+    {
+      "label": "SIL OFL 1.1",
+      "url": "https://github.com/TakWolf/fusion-pixel-font/blob/master/LICENSE-OFL"
+    },
+    {
+      "label": "@hackernoon/pixel-icon-library",
+      "url": "https://github.com/hackernoon/pixel-icon-library"
+    },
+    {
+      "label": "CC BY 4.0 International",
+      "url": "https://pixeliconlibrary.com/license/"
+    },
+    {
+      "label": "pixelarticons",
+      "url": "https://pixelarticons.com/"
+    },
+    {
+      "label": "MIT",
+      "url": "https://github.com/halfmage/pixelarticons/blob/master/LICENSE"
+    }
+  ],
+  "root_files": [
+    ".claude/skills/write-component-docs",
+    ".github/workflows",
+    ".husky",
+    ".vscode",
+    "packages",
+    ".gitattributes",
+    ".gitignore",
+    ".prettierignore",
+    ".prettierrc.js",
+    "LICENSE",
+    "README.md",
+    "README.zh.md",
+    "commitlint.config.js",
+    "conventional-commits.md",
+    "conventional-commits.zh.md",
+    "package.json",
+    "pnpm-lock.yaml",
+    "pnpm-workspace.yaml"
+  ],
+  "release_count": 22,
+  "status": "verified"
+}

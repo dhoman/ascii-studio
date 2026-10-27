@@ -1,0 +1,102 @@
+{
+  "url": "https://github.com/jh3y/whirl",
+  "final_url": "https://github.com/jh3y/whirl",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:47:54.241511+00:00",
+  "stars": 1836,
+  "forks": 249,
+  "description": "CSS loading animations with minimal effort!",
+  "homepage": "https://whirl.netlify.app",
+  "topics": [
+    "animation",
+    "css",
+    "css-loading-animations",
+    "hacktoberfest",
+    "hacktoberfest2020",
+    "loader",
+    "loading",
+    "loading-animation",
+    "loading-animations",
+    "loading-bar",
+    "loading-indicator",
+    "loading-screen",
+    "loading-spinner",
+    "loading-spinners",
+    "progress",
+    "pseudo-elements",
+    "spinner",
+    "spinners",
+    "whirl"
+  ],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2014-02-22T02:19:51.000Z",
+  "branch": "master",
+  "commit": "a43ebd524ca890e87d651e2530c5596ab1f0a563",
+  "readme": "Whirl CSS loading animations with minimal effort! whirl is a curation of CSS loading animations(whirls! 😅). It started as a drop in CSS file to get easy animations using :pseudo elements. It's now a collection of loading animations to use, take inspiration from, change and do what you want with 👍 No CSS distro? It's inefficient. It's likely an app will only use one or two loaders. Pulling them all into an app would be overkill. Most projects use some form of bundling making it possible to import a single loader's styles. Usage You've got different options here. You can install whirl and import the styles you want. You get both CSS and SASS files 👍 npm i @jh3y/whirl yarn add @jh3y/whirl Alternatively, you can grab the CSS or SASS and change to your needs. There's a dynamic link in the demo. Or visit the latest versions tag branch 👍 ⚠️ Be aware that if you're bundling, you'll likely have to override some styles. Be careful with conflicting classnames or animation names. Contributing See CONTRIBUTING. @jh3y 🐻 2019",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://travis-ci.org/jh3y/whirl"
+    },
+    {
+      "label": "",
+      "url": "https://app.netlify.com/sites/whirl/deploys"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/jh3y/whirl#whirl"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/jh3y/whirl#css-loading-animations-with-minimal-effort"
+    },
+    {
+      "label": "",
+      "url": "https://raw.github.com/jh3y/pics/master/whirl/whirl.gif"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/jh3y/whirl#no-css-distro"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/jh3y/whirl#usage"
+    },
+    {
+      "label": "CSS or SASS",
+      "url": "https://github.com/jh3y/whirl/tags"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/jh3y/whirl#contributing"
+    },
+    {
+      "label": "CONTRIBUTING",
+      "url": "https://github.com/jh3y/whirl/blob/master/.github/CONTRIBUTING.md"
+    }
+  ],
+  "root_files": [
+    ".github",
+    "public",
+    "src",
+    "utils",
+    ".babelrc",
+    ".browserslistrc",
+    ".eslintrc",
+    ".gitignore",
+    ".npmignore",
+    ".postcssrc",
+    ".prettierrc",
+    ".stylelintrc",
+    ".travis.yml",
+    "LICENSE",
+    "README.md",
+    "netlify.toml",
+    "package-lock.json",
+    "package.json",
+    "yarn.lock"
+  ],
+  "release_count": 1,
+  "status": "verified"
+}

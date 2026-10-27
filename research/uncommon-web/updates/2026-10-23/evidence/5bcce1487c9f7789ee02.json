@@ -1,0 +1,68 @@
+{
+  "url": "https://github.com/alddesign/cyberpunk-css",
+  "final_url": "https://github.com/alddesign/cyberpunk-css",
+  "http_status": 200,
+  "checked_at": "2026-10-23T17:46:53.908591+00:00",
+  "stars": 85,
+  "forks": 5,
+  "description": "A pure CSS library providing Cyberpunk 2077 themed elements for your webpage.",
+  "homepage": "https://alddesign.github.io/cyberpunk-css/demo/",
+  "topics": [
+    "css",
+    "css3",
+    "cyberpunk",
+    "cyberpunk-2077",
+    "cyberpunk2077",
+    "pure-css"
+  ],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2022-11-09T16:59:27.000Z",
+  "branch": "main",
+  "commit": "c6a77b49062c9c876a85c0137cb69c2acc9fd1d8",
+  "readme": "!Feedback! If this framework is missing anything you would like to have, please, let me know. Open up an issue or create a pull request. cyberpunk-css A pure CSS library providing Cyberpunk 2077 themed elements for your webpage. Demo & getting started: https://alddesign.github.io/cyberpunk-css/demo/ Screenshots of the demo page:",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://github.com/alddesign/cyberpunk-css#feedback"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/alddesign/cyberpunk-css#cyberpunk-css"
+    },
+    {
+      "label": "https://alddesign.github.io/cyberpunk-css/demo/",
+      "url": "https://alddesign.github.io/cyberpunk-css/demo/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/alddesign/cyberpunk-css#screenshots-of-the-demo-page"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/alddesign/cyberpunk-css/blob/main/demo/img/screen01.png"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/alddesign/cyberpunk-css/blob/main/demo/img/screen02.png"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/alddesign/cyberpunk-css/blob/main/demo/img/screen03.png"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/alddesign/cyberpunk-css/blob/main/demo/img/screen04.png"
+    }
+  ],
+  "root_files": [
+    "demo",
+    "fonts",
+    ".gitignore",
+    "LICENSE",
+    "README.md",
+    "cyberpunk.css"
+  ],
+  "release_count": 4,
+  "status": "verified"
+}

@@ -1,0 +1,158 @@
+{
+  "url": "https://github.com/simeydotme/hover-tilt",
+  "final_url": "https://github.com/simeydotme/hover-tilt",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:48:17.337476+00:00",
+  "stars": 166,
+  "forks": 13,
+  "description": "A Svelte & Web Component for a hoverable tilting card with optional glare / mask",
+  "homepage": "https://hover-tilt.simey.me",
+  "topics": [
+    "css",
+    "effect",
+    "glare",
+    "hover",
+    "js",
+    "react",
+    "svelte",
+    "tilt",
+    "vue",
+    "web-component"
+  ],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2025-11-16T10:56:16.000Z",
+  "branch": "main",
+  "commit": "5db58f38cbbfa20054ca2c21a144d866d304b34a",
+  "readme": "Hover Tilt A simple, flexible tilt & glare component for Svelte 5. Available as both a Svelte Component and Web Component. Works with any framework or vanilla JavaScript via the Web Component. Documentation Getting Started - Installation and basic usage Full Documentation - Complete API reference and examples Installation npm install hover-tilt # or pnpm add hover-tilt # or yarn add hover-tilt # or bun add hover-tilt Quick Start Svelte Component <script> import { HoverTilt } from 'hover-tilt'; </script> <HoverTilt tiltFactor={1.5} scaleFactor={1.1}> <div class=\"card\">Your content here</div> </HoverTilt> Web Component Works in any framework or vanilla HTML: <script type=\"module\" src=\"node_modules/hover-tilt/dist/hover-tilt.js\"></script> <hover-tilt tilt-factor=\"1.5\" scale-factor=\"1.1\"> <div class=\"card\">Your content here</div> </hover-tilt> With Vue <script setup> import 'hover-tilt/web-component'; </script> <template> <hover-tilt tilt-factor=\"1.5\" scale-factor=\"1.1\"> <div class=\"card\">Your content here</div> </hover-tilt> </template> With React import 'hover-tilt/web-component'; function MyComponent() { return ( <hover-tilt tilt-factor=\"1.5\" scale-factor=\"1.1\"> <div className=\"card\">Your content here</div> </hover-tilt> ); } With jQuery <script src=\"https://code.jquery.com/jquery-3.6.0.min.js\"></script> <script type=\"module\" src=\"node_modules/hover-tilt/dist/hover-tilt.js\"></script> <hover-tilt tilt-factor=\"1.5\" scale-factor=\"1.1\"> <div class=\"card\">Your content here</div> </hover-tilt> Contributing We welcome contributions! Please see CONTRIBUTING.md for guidelines. License MPL-2.0 Author Simon Goellner (@simeydotme)",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://raw.githubusercontent.com/simeydotme/hover-tilt/main/apps/docs/src/assets/hover-tilt.svg"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/simeydotme/hover-tilt#----hover-tilt--"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/simeydotme/hover-tilt/releases"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/hover-tilt"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/simeydotme/hover-tilt#svelte-component"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/simeydotme/hover-tilt#web-component"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/simeydotme/hover-tilt#with-vue"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/simeydotme/hover-tilt#with-react"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/simeydotme/hover-tilt#with-angular"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/simeydotme/hover-tilt#with-astro"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/simeydotme/hover-tilt#with-jquery"
+    },
+    {
+      "label": "",
+      "url": "https://raw.githubusercontent.com/simeydotme/hover-tilt/main/packages/hover-tilt/static/hover-tilt-example.gif"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/simeydotme/hover-tilt#documentation"
+    },
+    {
+      "label": "Getting Started",
+      "url": "https://hover-tilt.simey.me/getting-started"
+    },
+    {
+      "label": "Full Documentation",
+      "url": "https://hover-tilt.simey.me/options/props"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/simeydotme/hover-tilt#installation"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/simeydotme/hover-tilt#quick-start"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/simeydotme/hover-tilt#svelte-component"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/simeydotme/hover-tilt#web-component"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/simeydotme/hover-tilt#with-vue"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/simeydotme/hover-tilt#with-react"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/simeydotme/hover-tilt#with-jquery"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/simeydotme/hover-tilt#contributing"
+    },
+    {
+      "label": "CONTRIBUTING.md",
+      "url": "https://github.com/simeydotme/hover-tilt/CONTRIBUTING.md"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/simeydotme/hover-tilt#license"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/simeydotme/hover-tilt#author"
+    },
+    {
+      "label": "@simeydotme",
+      "url": "https://github.com/simeydotme"
+    }
+  ],
+  "root_files": [
+    ".cursor/rules",
+    ".github",
+    ".husky",
+    "apps/docs",
+    "packages/hover-tilt",
+    ".gitignore",
+    ".npmrc",
+    ".prettierignore",
+    ".prettierrc",
+    "CONTRIBUTING.md",
+    "LICENSE",
+    "README.md",
+    "netlify.toml",
+    "package.json",
+    "pnpm-lock.yaml",
+    "pnpm-workspace.yaml"
+  ],
+  "release_count": 0,
+  "status": "verified"
+}

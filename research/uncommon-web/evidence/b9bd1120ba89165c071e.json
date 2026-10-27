@@ -1,0 +1,157 @@
+{
+  "url": "https://github.com/ncdai/react-wheel-picker",
+  "final_url": "https://github.com/ncdai/react-wheel-picker",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:48:04.963073+00:00",
+  "stars": 779,
+  "forks": 28,
+  "description": "iOS-like wheel picker for React with smooth inertia scrolling and infinite loop support. / Backed by ▲ Vercel OSS Program",
+  "homepage": "https://react-wheel-picker.chanhdai.com",
+  "topics": [
+    "picker-component",
+    "react",
+    "wheelpicker"
+  ],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2025-05-15T09:15:12.000Z",
+  "branch": "main",
+  "commit": "734f9cbea0d17430ba00fec381b7d507710690cc",
+  "readme": "Backed by ▲ Vercel OSS Program iOS-like wheel picker for React with smooth inertia scrolling and infinite loop support. Natural touch scrolling with smooth inertia, mouse drag and scroll for desktop. Infinite loop scrolling. Unstyled core for complete style customization. Full keyboard navigation and type-ahead search. → Live demo: https://react-wheel-picker.chanhdai.com Documentation Please read the documentation for setup and API usage. Contributing Please read the contributing guide. Contributors License Licensed under the MIT license. Sponsors This project is proudly supported by: Open Source Program Platinum Sponsors Gold Sponsors Silver Sponsors Spark Supporters Using this package at work? Sponsor me to help with support and maintenance.",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://github.com/ncdai/react-wheel-picker"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@ncdai/react-wheel-picker"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@ncdai/react-wheel-picker"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/ncdai/react-wheel-picker/actions"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/ncdai/react-wheel-picker"
+    },
+    {
+      "label": "▲ Vercel OSS Program",
+      "url": "https://vercel.com/blog/summer-2025-oss-program#react-wheel-picker"
+    },
+    {
+      "label": "https://react-wheel-picker.chanhdai.com",
+      "url": "https://react-wheel-picker.chanhdai.com"
+    },
+    {
+      "label": "",
+      "url": "https://react-wheel-picker.chanhdai.com"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/ncdai/react-wheel-picker#documentation"
+    },
+    {
+      "label": "documentation",
+      "url": "https://react-wheel-picker.chanhdai.com/docs/getting-started"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/ncdai/react-wheel-picker#contributing"
+    },
+    {
+      "label": "contributing guide",
+      "url": "https://github.com/ncdai/react-wheel-picker/blob/main/CONTRIBUTING.md"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/ncdai/react-wheel-picker#contributors"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/ncdai/react-wheel-picker/graphs/contributors"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/ncdai/react-wheel-picker#license"
+    },
+    {
+      "label": "MIT license",
+      "url": "https://github.com/ncdai/react-wheel-picker/blob/main/LICENSE"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/ncdai/react-wheel-picker#sponsors"
+    },
+    {
+      "label": "",
+      "url": "https://vercel.com/blog/summer-2025-oss-program"
+    },
+    {
+      "label": "",
+      "url": "https://claude.com?utm_source=react-wheel-picker"
+    },
+    {
+      "label": "",
+      "url": "https://openpanel.dev/open-source?utm_source=react-wheel-picker"
+    },
+    {
+      "label": "",
+      "url": "https://www.mintlify.com/oss-program?utm_source=react-wheel-picker"
+    },
+    {
+      "label": "",
+      "url": "https://www.nixtla.io?utm_source=react-wheel-picker"
+    },
+    {
+      "label": "",
+      "url": "https://shadcnstudio.com?utm_source=chanhdai.com&utm_medium=banner&utm_campaign=github"
+    },
+    {
+      "label": "",
+      "url": "https://shadcncraft.com?atp=ncdai&utm_source=react-wheel-picker"
+    },
+    {
+      "label": "",
+      "url": "https://www.shadcnblocks.com?via=ncdai&utm_source=react-wheel-picker"
+    },
+    {
+      "label": "",
+      "url": "https://uirules.com?utm_source=react-wheel-picker"
+    },
+    {
+      "label": "",
+      "url": "https://shoogle.dev?utm_source=react-wheel-picker"
+    },
+    {
+      "label": "Sponsor me",
+      "url": "https://github.com/sponsors/ncdai"
+    }
+  ],
+  "root_files": [
+    ".changeset",
+    ".github",
+    ".vscode",
+    "apps/web",
+    "packages/react-wheel-picker",
+    ".gitignore",
+    ".prettierignore",
+    ".prettierrc",
+    "CODE_OF_CONDUCT.md",
+    "CONTRIBUTING.md",
+    "LICENSE",
+    "README.md",
+    "package.json",
+    "pnpm-lock.yaml",
+    "pnpm-workspace.yaml",
+    "registry.json",
+    "tsconfig.json",
+    "turbo.json"
+  ],
+  "release_count": 17,
+  "status": "verified"
+}

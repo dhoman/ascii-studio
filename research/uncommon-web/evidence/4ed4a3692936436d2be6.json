@@ -1,0 +1,71 @@
+{
+  "url": "https://github.com/nexus-js/ui",
+  "final_url": "https://github.com/nexus-js/ui",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:48:05.697777+00:00",
+  "stars": 873,
+  "forks": 129,
+  "description": "NexusUI: Web Audio Interfaces",
+  "homepage": "http://nexus-js.github.io/ui/",
+  "topics": [
+    "computer-music",
+    "electroacoustic-music",
+    "javascript",
+    "javascript-toolkit",
+    "nexusui",
+    "web-audio"
+  ],
+  "license": "",
+  "archived": false,
+  "created_at": "2014-06-04T20:19:30.000Z",
+  "branch": "master",
+  "commit": "d3f52ae85c077b883a92f1c7f73ab8fa325cd09b",
+  "readme": "NexusUI Version 2 NexusUI is a JavaScript toolkit of web audio interfaces and other helper methods for building instruments in the browser. For more info, see the website. For documentation and tutorials, see the API. Join us on our Discord to chat about NexusUI current and future developments. Also join us if you need help using any of the components.",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://github.com/nexus-js/ui#nexusui"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/fe31e79df22e8ae7461ef126633f8ca4615a63f85706dc2c339a78a112d5d538/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f6d61696e7461696e6572732d77616e7465642d7265642e737667"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/nexus-js/ui#version-2"
+    },
+    {
+      "label": "website",
+      "url": "http://nexus-js.github.io/ui/"
+    },
+    {
+      "label": "the API",
+      "url": "http://nexus-js.github.io/ui/api/"
+    },
+    {
+      "label": "Discord",
+      "url": "https://discord.gg/gFMXnyK"
+    }
+  ],
+  "root_files": [
+    "api",
+    "dist",
+    "example",
+    "lib",
+    "script",
+    ".gitignore",
+    ".npmignore",
+    "CHANGELOG.md",
+    "CODE_OF_CONDUCT.md",
+    "CONTRIBUTING.md",
+    "README.md",
+    "favicon.png",
+    "index.html",
+    "index.js",
+    "package-lock.json",
+    "package.json",
+    "webpack.config.js"
+  ],
+  "release_count": 0,
+  "status": "verified"
+}

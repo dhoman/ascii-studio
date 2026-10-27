@@ -1,0 +1,276 @@
+{
+  "url": "https://github.com/aicanvas-me/aicanvas",
+  "final_url": "https://github.com/aicanvas-me/aicanvas",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:47:32.581638+00:00",
+  "stars": 68,
+  "forks": 6,
+  "description": "Open-core registry of animated React components, blocks, design systems, and templates. Real, editable code: install with one shadcn CLI command or let your AI agent pull it over MCP.",
+  "homepage": "https://aicanvas.me",
+  "topics": [
+    "ai",
+    "claude-code",
+    "component-library",
+    "copy-paste",
+    "design-system",
+    "framer-motion",
+    "mcp",
+    "model-context-protocol",
+    "nextjs",
+    "react",
+    "shadcn-registry",
+    "shadcn-ui",
+    "tailwindcss",
+    "typescript",
+    "ui-components"
+  ],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2026-04-04T11:06:11.000Z",
+  "branch": "main",
+  "commit": "116155722851f52c91acf23585858571041d2d90",
+  "readme": "AI Canvas Finished Components, Not Headless Primitives A growing collection of animated React components and composed page blocks, installed as real source code in your project rather than as a dependency. Install · Components · Blocks · MCP · Repo layout · FAQ · License Install Add any component to your project with one command: npx shadcn@latest add @aicanvas/task-cards Starting a new project? Initialize first, then add: npx shadcn@latest init # new projects only npx shadcn@latest add @aicanvas/task-cards Installs are tied to a free AI Canvas account. Signed out, the CLI writes a small placeholder file instead of the component, so authenticate once first: Sign up free and copy your token from account settings. Put it in .env.local as AICANVAS_TOKEN. Add the registry to your project's components.json, once: { \"registries\": { \"@aicanvas\": { \"url\": \"https://aicanvas.me/r/{name}.json\", \"params\": { \"token\": \"${AICANVAS_TOKEN}\" } } } } Every npx shadcn@latest add @aicanvas/<slug> is authenticated after that. Each component page also shows a ready tokenized command when you are signed in. No account is needed to read the code: every component page shows its full source, free to read and copy. Requirements Tailwind CSS v4, React 19 and Framer Motion. Components are written against Tailwind v4 tokens and will not render correctly on v3. The Next.js App Router is the default target, not a requirement. Three ways to use it Path Command or action Best for shadcn CLI npx shadcn@latest add @aicanvas/<slug> Dropping finished, open-source code straight into your repo AI Canvas MCP npx -y @aicanvas/mcp Letting your AI editor search and install components for you Remix with AI Copy the full prompt from any free component page Rebuilding a component your way in any AI coding tool Browse the full catalog and copy the exact command for any component at aicanvas.me. pnpm dlx, yarn dlx, and bunx work too. Why AI Canvas MIT licensed. The free library is MIT, so you can use it in personal and commercial projects, modify it freely, and ship it without attribution. Premium components, design systems, and templates are proprietary. Full source, yours to keep. Every component arrives as real React and TypeScript code in your codebase, not a black-box dependency. Restyle it, extend it, or ship it as is. It is yours. Built for AI workflows. Install with the shadcn CLI, connect the MCP so your agent installs for you, or hand it a remix prompt that works in any AI coding tool. Animated by default. Built with Framer Motion and Tailwind CSS, ready for the Next.js App Router or any modern React setup. 3D pieces use Three.js. Components Browse all components at aicanvas.me Blocks Composed, multi-component page sections: card decks, task boards, galleries. Same install, same MIT license, just a larger unit of work than a single component. Browse all blocks at aicanvas.me Use it with your AI editor (MCP) Connect AI Canvas to your AI editor and let your agent search, inspect, and install components for you. Save tokens. Do not start from scratch. claude mcp add aicanvas -- npx -y @aicanvas/mcp Or add it to your MCP config: { \"mcpServers\": { \"aicanvas\": { \"command\": \"npx\", \"args\": [\"-y\", \"@aicanvas/mcp\"] } } } Works with Claude Code, Codex, Cursor, and other MCP-compatible editors. The server is read-only and fetches the live registry at runtime, so new components reach your agent shortly after they ship. It returns published component metadata and source. Repository layout This repo holds the AI Canvas source: the website and the free component library. The component source lives here, not just the site. Path What's there components-workspace/<slug>/ Each free component: index.tsx source and its prompts.ts remix prompt, plus a spec.md on many design-systems/andromeda/ The free Andromeda design system source: tokens, components, utilities app/ The aicanvas.me website (Next.js App Router) scripts/generate-registry.mjs Builds the shadcn registry JSON from the sources above The @aicanvas registry files served at /r/*.json are generated at build time from components-workspace/ and design-systems/, so there is no checked-in registry/ folder. Run node scripts/generate-registry.mjs to produce them locally. Tech stack React and TypeScript, Tailwind CSS, and Framer Motion. Built for the Next.js App Router and works in any modern React setup. 3D components use Three.js. Common Questions Do I need an account? Not to read the code. Every component page shows its full source, free to read and copy. Most of the free library also lives right here in this repo. A free account is only needed for the one-command npx shadcn add install, which writes a placeholder file when you are signed out. Does it work outside Next.js? Yes. Components are plain React and TypeScript with Tailwind and Framer Motion. The App Router is the default target, not a requirement. A few components load their display font through next/font/google; outside Next.js, swap that import for your own font loader. Do I get a dependency or real code? Real code. Installing copies the source into your project, so you own it and can change anything. There is no AI Canvas package to keep in sync. Can I use it commercially? Yes, the free library is MIT. Use it in commercial projects, modify it, and ship it without attribution. Premium is licensed separately, see License. What is the remix prompt? Every component ships with one comprehensive, platform-agnostic prompt. Paste it into any AI coding tool to rebuild that component your way instead of copying it as is. How do I keep components up to date? You do not have to. Once installed, the code is yours and never changes under you. Re-run the install command if you want the latest version of a component. Contributing AI Canvas is actively maintained and new components ship regularly. Issues, ideas, and pull requests are welcome: open an issue to suggest a component or report a bug. If AI Canvas saves you time, a star helps more builders find it. License The free library is MIT licensed. Use it in personal and commercial projects, modify it freely, and ship it without attribution. See LICENSE. Premium components, design systems, and templates are proprietary under the AI Canvas Premium License.",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://aicanvas.me"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/aicanvas-me/aicanvas#ai-canvas"
+    },
+    {
+      "label": "",
+      "url": "https://aicanvas.me"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/aicanvas-me/aicanvas/blob/main/LICENSE"
+    },
+    {
+      "label": "",
+      "url": "https://aicanvas.me"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/aicanvas-me/aicanvas#install"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/aicanvas-me/aicanvas#use-it-with-your-ai-editor-mcp"
+    },
+    {
+      "label": "",
+      "url": "https://mcpservers.org/servers/uinerd16/aicanvas"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/aicanvas-me/aicanvas"
+    },
+    {
+      "label": "Install",
+      "url": "https://github.com/aicanvas-me/aicanvas#install"
+    },
+    {
+      "label": "Components",
+      "url": "https://github.com/aicanvas-me/aicanvas#components"
+    },
+    {
+      "label": "Blocks",
+      "url": "https://github.com/aicanvas-me/aicanvas#blocks"
+    },
+    {
+      "label": "MCP",
+      "url": "https://github.com/aicanvas-me/aicanvas#use-it-with-your-ai-editor-mcp"
+    },
+    {
+      "label": "Repo layout",
+      "url": "https://github.com/aicanvas-me/aicanvas#repository-layout"
+    },
+    {
+      "label": "FAQ",
+      "url": "https://github.com/aicanvas-me/aicanvas#common-questions"
+    },
+    {
+      "label": "License",
+      "url": "https://github.com/aicanvas-me/aicanvas#license"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/aicanvas-me/aicanvas#install"
+    },
+    {
+      "label": "Sign up free",
+      "url": "https://aicanvas.me/account/sign-up"
+    },
+    {
+      "label": "account settings",
+      "url": "https://aicanvas.me/account/settings"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/aicanvas-me/aicanvas#requirements"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/aicanvas-me/aicanvas#three-ways-to-use-it"
+    },
+    {
+      "label": "aicanvas.me",
+      "url": "https://aicanvas.me"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/aicanvas-me/aicanvas#why-ai-canvas"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/aicanvas-me/aicanvas#components"
+    },
+    {
+      "label": "",
+      "url": "https://aicanvas.me/components/tilted-coverflow"
+    },
+    {
+      "label": "",
+      "url": "https://aicanvas.me/components/crypto-swap"
+    },
+    {
+      "label": "",
+      "url": "https://aicanvas.me/components/signature-pad"
+    },
+    {
+      "label": "",
+      "url": "https://aicanvas.me/components/product-card-deck"
+    },
+    {
+      "label": "",
+      "url": "https://aicanvas.me/components/glass-ai-compose"
+    },
+    {
+      "label": "",
+      "url": "https://aicanvas.me/components/voice-chat-pill"
+    },
+    {
+      "label": "Browse all components at aicanvas.me",
+      "url": "https://aicanvas.me"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/aicanvas-me/aicanvas#blocks"
+    },
+    {
+      "label": "",
+      "url": "https://aicanvas.me/components/ai-job-cards"
+    },
+    {
+      "label": "",
+      "url": "https://aicanvas.me/components/scroll-wipe-gallery"
+    },
+    {
+      "label": "",
+      "url": "https://aicanvas.me/components/task-cards"
+    },
+    {
+      "label": "",
+      "url": "https://aicanvas.me/components/slide-deck"
+    },
+    {
+      "label": "Browse all blocks at aicanvas.me",
+      "url": "https://aicanvas.me/components/category/blocks"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/aicanvas-me/aicanvas#use-it-with-your-ai-editor-mcp"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/aicanvas-me/aicanvas#repository-layout"
+    },
+    {
+      "label": "components-workspace/<slug>/",
+      "url": "https://github.com/aicanvas-me/aicanvas/blob/main/components-workspace"
+    },
+    {
+      "label": "design-systems/andromeda/",
+      "url": "https://github.com/aicanvas-me/aicanvas/blob/main/design-systems/andromeda"
+    },
+    {
+      "label": "app/",
+      "url": "https://github.com/aicanvas-me/aicanvas/blob/main/app"
+    },
+    {
+      "label": "scripts/generate-registry.mjs",
+      "url": "https://github.com/aicanvas-me/aicanvas/blob/main/scripts/generate-registry.mjs"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/aicanvas-me/aicanvas#tech-stack"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/aicanvas-me/aicanvas#common-questions"
+    },
+    {
+      "label": "License",
+      "url": "https://github.com/aicanvas-me/aicanvas#license"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/aicanvas-me/aicanvas#contributing"
+    },
+    {
+      "label": "a star",
+      "url": "https://github.com/aicanvas-me/aicanvas/stargazers"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/aicanvas-me/aicanvas#license"
+    },
+    {
+      "label": "LICENSE",
+      "url": "https://github.com/aicanvas-me/aicanvas/blob/main/LICENSE"
+    }
+  ],
+  "root_files": [
+    ".agents/skills",
+    ".githooks",
+    ".github/workflows",
+    "app",
+    "assets/readme-buttons",
+    "components-workspace",
+    "design-systems",
+    "integration",
+    "lib",
+    "mcp",
+    "public",
+    "registry-data",
+    "reviewer",
+    "scripts",
+    "skills",
+    "supabase",
+    "supervisor",
+    ".env.example",
+    ".gitignore",
+    "AGENTS.md",
+    "CLAUDE.md",
+    "LICENSE",
+    "PROFILE_README.md",
+    "README.md",
+    "component-order.json",
+    "eslint.config.mjs",
+    "glama.json",
+    "instrumentation.ts",
+    "next.config.ts",
+    "package-lock.json",
+    "package.json",
+    "postcss.config.mjs",
+    "premium.lock.json",
+    "proxy.ts",
+    "tsconfig.json",
+    "vercel.json",
+    "vitest.config.ts"
+  ],
+  "release_count": 0,
+  "status": "verified"
+}

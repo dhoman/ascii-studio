@@ -1,0 +1,72 @@
+{
+  "url": "https://github.com/vitling/acid-banger",
+  "final_url": "https://github.com/vitling/acid-banger",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:48:23.884322+00:00",
+  "stars": 1202,
+  "forks": 69,
+  "description": "The Endless Acid Banger",
+  "homepage": "",
+  "topics": [],
+  "license": "",
+  "archived": false,
+  "created_at": "2021-04-20T08:47:56.000Z",
+  "branch": "main",
+  "commit": "bb93d972d9c656fe0acc861c94a492b56634d5e7",
+  "readme": "The Endless Acid Banger An algorithmic human-computer techno jam Built in Typescript with the WebAudio API. Live version running at www.vitling.xyz/toys/acid-banger Support You can support my work by Sponsoring me on GitHub or buying my music License & Intended use This is an art project, not a software tool for music creation. I consider it to be finished, and as such I will likely not be accepting feature requests or feature-driven PRs. Please feel encouraged to fork the project and do something else with it if you would like - I love to see further creative work built on top of it. This work is licensed under a Creative Commons Attribution 4.0 International License. I am aware that this is an unusual choice for code, but it reflects its status as an art project. IANAL, so I'm not sure how this stands up legally, but in my mind this is an infinite interactive composition and as such it should be licensed like music or other creative works. This means you can use the ideas and/or the code and/or the music output in derivative works, but you must give credit to the original source (ie. me and this project).",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://github.com/vitling/acid-banger#the-endless-acid-banger"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/vitling/acid-banger/blob/main/preview.png?raw=true"
+    },
+    {
+      "label": "www.vitling.xyz/toys/acid-banger",
+      "url": "https://www.vitling.xyz/toys/acid-banger"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/vitling/acid-banger#support"
+    },
+    {
+      "label": "Sponsoring me on GitHub",
+      "url": "https://github.com/sponsors/vitling"
+    },
+    {
+      "label": "buying",
+      "url": "https://music.vitling.xyz"
+    },
+    {
+      "label": "my music",
+      "url": "https://edgenetwork.bandcamp.com/album/edge001-spaceport-lounge-music"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/vitling/acid-banger#license--intended-use"
+    },
+    {
+      "label": "Creative Commons Attribution 4.0 International License",
+      "url": "http://creativecommons.org/licenses/by/4.0/"
+    }
+  ],
+  "root_files": [
+    ".github",
+    "src",
+    ".gitignore",
+    "909BD.mp3",
+    "909CH.mp3",
+    "909OH.mp3",
+    "909SD.mp3",
+    "README.md",
+    "build.sh",
+    "index.html",
+    "preview.png",
+    "tsconfig.json",
+    "ui.css"
+  ],
+  "release_count": 0,
+  "status": "verified"
+}

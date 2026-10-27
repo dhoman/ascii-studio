@@ -1,5 +1,9 @@
 # Asset provenance
 
+## Sindri forge studies
+
+The dwarf, cap, beard, hammer, anvil, arch, and particles in `src/sindri-scene.ts` and `src/sindri-renderer.ts` are original procedural artwork authored for this project. No external textures, character models, logos, downloaded fonts, or God of War artwork are used. The name refers to the mythological dwarf smith; this is a stylized interpretation, not a claim of an approved character likeness. UI and ASCII rendering use local system font stacks. Rune particles use Unicode characters rendered by the browser's available fallback fonts. Review branding/character direction before publishing as a production website.
+
 ## Reference still images
 
 User-provided local files, used for private visual exploration:

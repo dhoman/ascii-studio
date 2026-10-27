@@ -1,0 +1,209 @@
+{
+  "url": "https://github.com/theatre-js/theatre",
+  "final_url": "https://github.com/theatre-js/theatre",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:48:20.515789+00:00",
+  "stars": 12785,
+  "forks": 483,
+  "description": "Motion design editor for the web",
+  "homepage": "https://www.theatrejs.com",
+  "topics": [
+    "animation",
+    "devtools",
+    "generative-art",
+    "motion-design",
+    "r3f",
+    "threejs"
+  ],
+  "license": "Apache-2.0",
+  "archived": false,
+  "created_at": "2013-12-23T11:02:52.000Z",
+  "branch": "main",
+  "commit": "6ea82b938ea49609489f6377ded693ccc6ee8f5b",
+  "readme": "Motion Design, for the web ✨ Update: Theatre.js 1.0 is around the corner. We have temporarily moved development to a private repo so we can iterate faster. We'll push our work back to this public repo soon. Terms and license will remain OSS, as before. (Also, we're hiring – join the core team!). Theatre.js is an animation library for high-fidelity motion graphics. It is designed to help you express detailed animation, enabling you to create intricate movement, and convey nuance. Theatre.js can be used both programmatically and visually. You can use Theatre.js to: Animate 3D objects made with THREE.js or other 3D libraries Art by drei.lu Animate HTML/SVG via React or other libraries Design micro-interactions Choreograph generative interactive art Or animate any other JS variable Documentation and Tutorials The docs are at theatrejs.com/docs: Video tutorials Crash course Animating with music Yuri Artiukh's stream with a section on using Theatre.js with THREE.js <Add your own tutorials here> Community and support Join our friendly community on Discord, follow the updates on twitter or write us an email. Development and contributing If you want to change the source of Theatre, have a look at the guide here. Proposing fixes and changes You can always get help with bugfixes or discuss changes with our community on Discord, or directly open an issue on Github. Helping with outstanding issues Feel free to chime in on any issue. We have also labeled some issues with \"Help wanted\" or \"Good first issue\" if you're just getting started with the codebase. Helping with documentation The documentation website's repo is here. Writing/recording tutorials If you make tutorials or video content about Theatre, tell us to showcase it here :) License Your use of Theatre.js is governed under the Apache License Version 2.0: Theatre's core (@theatre/core) is released under the Apache License. Same goes for most packages in this repository. The studio (@theatre/studio) is released under the AGPL 3.0 License. This is the package that you use to edit your animations, setup your scenes, etc. You only use the studio during design/development. Your project's final bundle only includes @theatre/core, so only the Apache License applies.",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://github.com/theatre-js/theatre#gh-dark-mode-only"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/theatre-js/theatre#gh-light-mode-only"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/theatre-js/theatre#--"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/theatre-js/theatre"
+    },
+    {
+      "label": "",
+      "url": "https://discord.gg/Tku4CJKf4B"
+    },
+    {
+      "label": "",
+      "url": "https://twitter.com/theatre_js"
+    },
+    {
+      "label": "",
+      "url": "https://www.youtube.com/channel/UCsp9XOCs8v2twyq5kMLzS2Q"
+    },
+    {
+      "label": "we're hiring – join the core team!",
+      "url": "https://www.theatrejs.com/join"
+    },
+    {
+      "label": "",
+      "url": "https://raw.githubusercontent.com/AriaMinaei/theatre-docs/main/docs/.vuepress/public/preview-3d-short.gif"
+    },
+    {
+      "label": "drei.lu",
+      "url": "https://sketchfab.com/models/91964c1ce1a34c3985b6257441efa500"
+    },
+    {
+      "label": "",
+      "url": "https://raw.githubusercontent.com/AriaMinaei/theatre-docs/main/docs/.vuepress/public/preview-dom.gif"
+    },
+    {
+      "label": "",
+      "url": "https://raw.githubusercontent.com/AriaMinaei/theatre-docs/main/docs/.vuepress/public/preview-micro-interaction.gif"
+    },
+    {
+      "label": "",
+      "url": "https://raw.githubusercontent.com/AriaMinaei/theatre-docs/main/docs/.vuepress/public/preview-generative.gif"
+    },
+    {
+      "label": "",
+      "url": "https://raw.githubusercontent.com/AriaMinaei/theatre-docs/main/docs/.vuepress/public/preview-console.gif"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/theatre-js/theatre#documentation-and-tutorials"
+    },
+    {
+      "label": "theatrejs.com/docs",
+      "url": "https://www.theatrejs.com/docs"
+    },
+    {
+      "label": "Video tutorials",
+      "url": "https://www.youtube.com/channel/UCsp9XOCs8v2twyq5kMLzS2Q"
+    },
+    {
+      "label": "Crash course",
+      "url": "https://www.youtube.com/watch?v=icR9EIS1q34"
+    },
+    {
+      "label": "Animating with music",
+      "url": "https://www.youtube.com/watch?v=QoS4gMxwq_4"
+    },
+    {
+      "label": "Yuri Artiukh",
+      "url": "https://twitter.com/akella"
+    },
+    {
+      "label": "stream",
+      "url": "https://youtu.be/qmRqgFbNprM?t=3462"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/theatre-js/theatre#community-and-support"
+    },
+    {
+      "label": "Discord",
+      "url": "https://discord.gg/bm9f8F9Y9N"
+    },
+    {
+      "label": "twitter",
+      "url": "https://twitter.com/theatre_js"
+    },
+    {
+      "label": "email",
+      "url": "mailto:hello@theatrejs.com"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/theatre-js/theatre#development-and-contributing"
+    },
+    {
+      "label": "here",
+      "url": "https://github.com/theatre-js/theatre/blob/main/CONTRIBUTING.md"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/theatre-js/theatre#proposing-fixes-and-changes"
+    },
+    {
+      "label": "Discord",
+      "url": "https://discord.gg/bm9f8F9Y9N"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/theatre-js/theatre#helping-with-outstanding-issues"
+    },
+    {
+      "label": "issue",
+      "url": "https://github.com/AriaMinaei/theatre/issues"
+    },
+    {
+      "label": "\"Help wanted\"",
+      "url": "https://github.com/AriaMinaei/theatre/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc+label%3A%22help+wanted%22"
+    },
+    {
+      "label": "\"Good first issue\"",
+      "url": "https://github.com/AriaMinaei/theatre/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc+label%3A%22good+first+issue%22"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/theatre-js/theatre#helping-with-documentation"
+    },
+    {
+      "label": "here",
+      "url": "https://github.com/theatre-js/theatre-docs/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/theatre-js/theatre#writingrecording-tutorials"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/theatre-js/theatre#license"
+    }
+  ],
+  "root_files": [
+    ".github",
+    ".husky",
+    ".vscode",
+    ".yarn",
+    "compat-tests",
+    "devEnv",
+    "examples",
+    "packages",
+    ".editorconfig",
+    ".eslintignore",
+    ".eslintrc.js",
+    ".gitignore",
+    ".prettierignore",
+    ".prettierrc",
+    ".yarnrc.yml",
+    "CHANGELOG.md",
+    "CONTRIBUTING.md",
+    "LICENSE",
+    "Notes.md",
+    "README.md",
+    "credits.txt",
+    "docker-compose.yml",
+    "jest.compat-tests.config.js",
+    "jest.config.js",
+    "knip.config.json",
+    "lerna.json",
+    "package.json",
+    "render.yaml",
+    "tsconfig.base.json",
+    "wallaby.conf.js",
+    "yarn.lock"
+  ],
+  "release_count": 0,
+  "status": "verified"
+}

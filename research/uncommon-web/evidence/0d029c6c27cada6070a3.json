@@ -1,0 +1,515 @@
+{
+  "url": "https://github.com/crashmax-dev/fireworks-js",
+  "final_url": "https://github.com/crashmax-dev/fireworks-js",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:47:41.624735+00:00",
+  "stars": 1387,
+  "forks": 95,
+  "description": "🎆 A simple fireworks library! Ready to use components available for React, Vue 3, Svelte, Angular, Preact, Solid, and Web Components.",
+  "homepage": "https://fireworks.js.org",
+  "topics": [
+    "angular",
+    "animation",
+    "canvas",
+    "fireworks",
+    "hacktoberfest",
+    "javascript",
+    "library",
+    "monorepository",
+    "npm-package",
+    "particles",
+    "preact",
+    "react",
+    "solidjs",
+    "svelte",
+    "typescript",
+    "vue",
+    "vue3",
+    "web-components",
+    "zero-dependency"
+  ],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2021-01-18T14:05:03.000Z",
+  "branch": "master",
+  "commit": "8f01eeaef422c1f0880e94ce99040025a1b74d7e",
+  "readme": "A simple fireworks library! | fireworks.js.org Table of Contents Warning This readme refers to upcoming v2 version, read here for v1 documentation. Features Browsers support Demo Installation CDN Usage fireworks-js @fireworks-js/react @fireworks-js/preact @fireworks-js/solid @fireworks-js/vue @fireworks-js/svelte @fireworks-js/angular @fireworks-js/web Documentation Options API Community Features 🔥 Zero dependencies ⚙️ Flexible configuration 📦 Lightweight (~3.0kB gzipped) 📜 Supports TypeScript type definition Browsers support Edge Firefox Chrome Safari iOS Safari Opera Yandex ✔ ✔ ✔ ✔ ✔ ✔ ✔ Demo You can play with fireworks-js at fireworks.js.org or stackblitz.com Installation npm install fireworks-js yarn add fireworks-js pnpm add fireworks-js Package Status Description fireworks-js Vanilla JS @fireworks-js/react React component @fireworks-js/preact Preact component @fireworks-js/solid Solid component @fireworks-js/vue Vue 3 component @fireworks-js/svelte Svelte component @fireworks-js/angular Angular component @fireworks-js/web Web components CDN <!-- jsDelivr --> <script src=\"https://cdn.jsdelivr.net/npm/fireworks-js@2.x/dist/index.umd.js\"></script> <!-- UNPKG --> <script src=\"https://unpkg.com/fireworks-js@2.x/dist/index.umd.js\"></script> <!-- Usage --> <script> const container = document.querySelector('.fireworks') const fireworks = new Fireworks.default(container) fireworks.start() </script> Usage fireworks-js import { Fireworks } from 'fireworks-js' const container = document.querySelector('.container') const fireworks = new Fireworks(container, { /* options */ }) fireworks.start() @fireworks-js/react npm install @fireworks-js/react @fireworks-js/preact npm install @fireworks-js/preact @fireworks-js/solid npm install @fireworks-js/solid @fireworks-js/vue npm install @fireworks-js/vue @fireworks-js/svelte npm install @fireworks-js/svelte @fireworks-js/angular npm install @fireworks-js/angular @fireworks-js/web npm install @fireworks-js/web Documentation Options Note The options is optional, as are each of its properties. Property Type Default hue object hue rocketsPoint object rocketsPoint mouse object mouse boundaries object boundaries sound object sound delay object delay brightness object brightness decay object decay lineWidth object lineWidth lineStyle string round explosion number 5 opacity number 0.5 acceleration number 1.05 friction number 0.95 gravity number 1.5 particles number 50 traceLength number 3 flickering number 50 intensity number 30 traceSpeed number 10 intensity number 30 autoresize boolean true The hue, delay, decay, brightness, lineWidth.explosion, lineWidth.trace, sound.volume and rocketsPoint options accept an object: Property Type min number max number Note The min and max properties are used to randomly select values from the range. The mouse options accept an object: Property Type Default click boolean false move boolean false max number 1 Note The max property has no effect if click is false. The sound options accept an object: Property Type Default enabled boolean false files string[] files volume object volume const fireworks = new Fireworks(container, { autoresize: true, opacity: 0.5, acceleration: 1.05, friction: 0.97, gravity: 1.5, particles: 50, traceLength: 3, traceSpeed: 10, explosion: 5, intensity: 30, flickering: 50, lineStyle: 'round', hue: { min: 0, max: 360 }, delay: { min: 30, max: 60 }, rocketsPoint: { min: 50, max: 50 }, lineWidth: { explosion: { min: 1, max: 3 }, trace: { min: 1, max: 2 } }, brightness: { min: 50, max: 80 }, decay: { min: 0.015, max: 0.03 }, mouse: { click: false, move: false, max: 1 } }) API .start() Start fireworks. .launch(count) Launching a specified number of fireworks. Type: number Default 1 .stop(dispose) Stop fireworks. Type: boolean Default: false .waitStop(dispose) Asynchronous stopping of the fireworks. Type: boolean Default: false .pause() Start/stop fireworks. .clear() Cleaning the canvas from fireworks. .currentOptions Getting current fireworks options. .updateOptions(options) Force update fireworks options. Type: options .updateSize(sizes) Force update canvas size. Type: sizes .updateBoundaries(boundaries) Force update canvas boundaries. Type: boundaries Community Star History Author crashmax License MIT",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://fireworks.js.org"
+    },
+    {
+      "label": "fireworks.js.org",
+      "url": "https://fireworks.js.org"
+    },
+    {
+      "label": "",
+      "url": "https://www.upwork.com/o/companies/~01e5f1563365e3c1b5/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/crashmax-dev/fireworks-js/actions"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/crashmax-dev/fireworks-js/blob/master/LICENSE"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/fireworks-js"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/fireworks-js"
+    },
+    {
+      "label": "",
+      "url": "https://bundlephobia.com/package/fireworks-js@latest"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/crashmax-dev/fireworks-js#table-of-contents"
+    },
+    {
+      "label": "read here",
+      "url": "https://github.com/crashmax-dev/fireworks-js/tree/v1"
+    },
+    {
+      "label": "Features",
+      "url": "https://github.com/crashmax-dev/fireworks-js#features"
+    },
+    {
+      "label": "Browsers support",
+      "url": "https://github.com/crashmax-dev/fireworks-js#browsers-support"
+    },
+    {
+      "label": "Demo",
+      "url": "https://github.com/crashmax-dev/fireworks-js#demo"
+    },
+    {
+      "label": "Installation",
+      "url": "https://github.com/crashmax-dev/fireworks-js#installation"
+    },
+    {
+      "label": "CDN",
+      "url": "https://github.com/crashmax-dev/fireworks-js#cdn"
+    },
+    {
+      "label": "Usage",
+      "url": "https://github.com/crashmax-dev/fireworks-js#usage"
+    },
+    {
+      "label": "fireworks-js",
+      "url": "https://github.com/crashmax-dev/fireworks-js#fireworks-js"
+    },
+    {
+      "label": "@fireworks-js/react",
+      "url": "https://github.com/crashmax-dev/fireworks-js#fireworks-jsreact"
+    },
+    {
+      "label": "@fireworks-js/preact",
+      "url": "https://github.com/crashmax-dev/fireworks-js#fireworks-jspreact"
+    },
+    {
+      "label": "@fireworks-js/solid",
+      "url": "https://github.com/crashmax-dev/fireworks-js#fireworks-jssolid"
+    },
+    {
+      "label": "@fireworks-js/vue",
+      "url": "https://github.com/crashmax-dev/fireworks-js#fireworks-jsvue"
+    },
+    {
+      "label": "@fireworks-js/svelte",
+      "url": "https://github.com/crashmax-dev/fireworks-js#fireworks-jssvelte"
+    },
+    {
+      "label": "@fireworks-js/angular",
+      "url": "https://github.com/crashmax-dev/fireworks-js#fireworks-jsangular"
+    },
+    {
+      "label": "@fireworks-js/web",
+      "url": "https://github.com/crashmax-dev/fireworks-js#fireworks-jsweb"
+    },
+    {
+      "label": "Documentation",
+      "url": "https://github.com/crashmax-dev/fireworks-js#documentation"
+    },
+    {
+      "label": "Options",
+      "url": "https://github.com/crashmax-dev/fireworks-js#options"
+    },
+    {
+      "label": "API",
+      "url": "https://github.com/crashmax-dev/fireworks-js#api"
+    },
+    {
+      "label": "Community",
+      "url": "https://github.com/crashmax-dev/fireworks-js#community"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/crashmax-dev/fireworks-js#features"
+    },
+    {
+      "label": "dependencies",
+      "url": "https://www.npmjs.com/package/fireworks-js?activeTab=dependencies"
+    },
+    {
+      "label": "configuration",
+      "url": "https://github.com/crashmax-dev/fireworks-js#options"
+    },
+    {
+      "label": "~3.0kB gzipped",
+      "url": "https://bundlephobia.com/package/fireworks-js"
+    },
+    {
+      "label": "TypeScript",
+      "url": "https://www.typescriptlang.org"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/crashmax-dev/fireworks-js#browsers-support"
+    },
+    {
+      "label": "",
+      "url": "http://godban.github.io/browsers-support-badges/"
+    },
+    {
+      "label": "",
+      "url": "http://godban.github.io/browsers-support-badges/"
+    },
+    {
+      "label": "",
+      "url": "http://godban.github.io/browsers-support-badges/"
+    },
+    {
+      "label": "",
+      "url": "http://godban.github.io/browsers-support-badges/"
+    },
+    {
+      "label": "",
+      "url": "http://godban.github.io/browsers-support-badges/"
+    },
+    {
+      "label": "",
+      "url": "http://godban.github.io/browsers-support-badges/"
+    },
+    {
+      "label": "",
+      "url": "http://godban.github.io/browsers-support-badges/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/crashmax-dev/fireworks-js#demo"
+    },
+    {
+      "label": "fireworks.js.org",
+      "url": "https://fireworks.js.org"
+    },
+    {
+      "label": "stackblitz.com",
+      "url": "https://stackblitz.com/edit/fireworks-js-react?file=src%2FApp.tsx"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/crashmax-dev/fireworks-js#installation"
+    },
+    {
+      "label": "fireworks-js",
+      "url": "https://github.com/crashmax-dev/fireworks-js#fireworks-js"
+    },
+    {
+      "label": "",
+      "url": "https://npm.im/fireworks-js"
+    },
+    {
+      "label": "@fireworks-js/react",
+      "url": "https://github.com/crashmax-dev/fireworks-js#fireworks-jsreact"
+    },
+    {
+      "label": "",
+      "url": "https://npm.im/@fireworks-js/react"
+    },
+    {
+      "label": "@fireworks-js/preact",
+      "url": "https://github.com/crashmax-dev/fireworks-js#fireworks-jspreact"
+    },
+    {
+      "label": "",
+      "url": "https://npm.im/@fireworks-js/preact"
+    },
+    {
+      "label": "@fireworks-js/solid",
+      "url": "https://github.com/crashmax-dev/fireworks-js#fireworks-jssolid"
+    },
+    {
+      "label": "",
+      "url": "https://npm.im/@fireworks-js/solid"
+    },
+    {
+      "label": "@fireworks-js/vue",
+      "url": "https://github.com/crashmax-dev/fireworks-js#fireworks-jsvue"
+    },
+    {
+      "label": "",
+      "url": "https://npm.im/@fireworks-js/vue"
+    },
+    {
+      "label": "@fireworks-js/svelte",
+      "url": "https://github.com/crashmax-dev/fireworks-js#fireworks-jssvelte"
+    },
+    {
+      "label": "",
+      "url": "https://npm.im/@fireworks-js/svelte"
+    },
+    {
+      "label": "@fireworks-js/angular",
+      "url": "https://github.com/crashmax-dev/fireworks-js#fireworks-jsangular"
+    },
+    {
+      "label": "",
+      "url": "https://npm.im/@fireworks-js/angular"
+    },
+    {
+      "label": "@fireworks-js/web",
+      "url": "https://github.com/crashmax-dev/fireworks-js#fireworks-jsweb"
+    },
+    {
+      "label": "",
+      "url": "https://npm.im/@fireworks-js/web"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/crashmax-dev/fireworks-js#cdn"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/crashmax-dev/fireworks-js#usage"
+    },
+    {
+      "label": "fireworks-js",
+      "url": "https://github.com/crashmax-dev/fireworks-js/tree/master/examples/basic"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/crashmax-dev/fireworks-js#fireworks-js"
+    },
+    {
+      "label": "@fireworks-js/react",
+      "url": "https://github.com/crashmax-dev/fireworks-js/tree/master/examples/with-react"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/crashmax-dev/fireworks-js#fireworks-jsreact"
+    },
+    {
+      "label": "@fireworks-js/preact",
+      "url": "https://github.com/crashmax-dev/fireworks-js/tree/master/examples/with-preact"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/crashmax-dev/fireworks-js#fireworks-jspreact"
+    },
+    {
+      "label": "@fireworks-js/solid",
+      "url": "https://github.com/crashmax-dev/fireworks-js/tree/master/examples/with-solid"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/crashmax-dev/fireworks-js#fireworks-jssolid"
+    },
+    {
+      "label": "@fireworks-js/vue",
+      "url": "https://github.com/crashmax-dev/fireworks-js/tree/master/examples/with-vue"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/crashmax-dev/fireworks-js#fireworks-jsvue"
+    },
+    {
+      "label": "@fireworks-js/svelte",
+      "url": "https://github.com/crashmax-dev/fireworks-js/tree/master/examples/with-svelte"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/crashmax-dev/fireworks-js#fireworks-jssvelte"
+    },
+    {
+      "label": "@fireworks-js/angular",
+      "url": "https://github.com/crashmax-dev/fireworks-js/tree/master/examples/with-angular"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/crashmax-dev/fireworks-js#fireworks-jsangular"
+    },
+    {
+      "label": "@fireworks-js/web",
+      "url": "https://github.com/crashmax-dev/fireworks-js/tree/master/examples/with-web-components"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/crashmax-dev/fireworks-js#fireworks-jsweb"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/crashmax-dev/fireworks-js#documentation"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/crashmax-dev/fireworks-js#options"
+    },
+    {
+      "label": "hue",
+      "url": "https://github.com/crashmax-dev/fireworks-js/blob/eedee4020e9c458fde83b60dfac6f2502d4593bb/packages/fireworks-js/src/options.ts#L49-L52"
+    },
+    {
+      "label": "rocketsPoint",
+      "url": "https://github.com/crashmax-dev/fireworks-js/blob/eedee4020e9c458fde83b60dfac6f2502d4593bb/packages/fireworks-js/src/options.ts#L54-L57"
+    },
+    {
+      "label": "mouse",
+      "url": "https://github.com/crashmax-dev/fireworks-js/blob/eedee4020e9c458fde83b60dfac6f2502d4593bb/packages/fireworks-js/src/options.ts#L70-L74"
+    },
+    {
+      "label": "boundaries",
+      "url": "https://github.com/crashmax-dev/fireworks-js/blob/eedee4020e9c458fde83b60dfac6f2502d4593bb/packages/fireworks-js/src/options.ts#L104-L110"
+    },
+    {
+      "label": "sound",
+      "url": "https://github.com/crashmax-dev/fireworks-js/blob/eedee4020e9c458fde83b60dfac6f2502d4593bb/packages/fireworks-js/src/options.ts#L91-L102"
+    },
+    {
+      "label": "delay",
+      "url": "https://github.com/crashmax-dev/fireworks-js/blob/eedee4020e9c458fde83b60dfac6f2502d4593bb/packages/fireworks-js/src/options.ts#L76-L79"
+    },
+    {
+      "label": "brightness",
+      "url": "https://github.com/crashmax-dev/fireworks-js/blob/eedee4020e9c458fde83b60dfac6f2502d4593bb/packages/fireworks-js/src/options.ts#L81-L84"
+    },
+    {
+      "label": "decay",
+      "url": "https://github.com/crashmax-dev/fireworks-js/blob/eedee4020e9c458fde83b60dfac6f2502d4593bb/packages/fireworks-js/src/options.ts#L86-L89"
+    },
+    {
+      "label": "lineWidth",
+      "url": "https://github.com/crashmax-dev/fireworks-js/blob/eedee4020e9c458fde83b60dfac6f2502d4593bb/packages/fireworks-js/src/options.ts#L59-L68"
+    },
+    {
+      "label": "files",
+      "url": "https://github.com/crashmax-dev/fireworks-js/blob/eedee4020e9c458fde83b60dfac6f2502d4593bb/packages/fireworks-js/src/options.ts#L93-L97"
+    },
+    {
+      "label": "volume",
+      "url": "https://github.com/crashmax-dev/fireworks-js/blob/eedee4020e9c458fde83b60dfac6f2502d4593bb/packages/fireworks-js/src/options.ts#L98-L101"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/crashmax-dev/fireworks-js#api"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/crashmax-dev/fireworks-js#start"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/crashmax-dev/fireworks-js#launchcount"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/crashmax-dev/fireworks-js#stopdispose"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/crashmax-dev/fireworks-js#waitstopdispose"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/crashmax-dev/fireworks-js#pause"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/crashmax-dev/fireworks-js#clear"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/crashmax-dev/fireworks-js#currentoptions"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/crashmax-dev/fireworks-js#updateoptionsoptions"
+    },
+    {
+      "label": "options",
+      "url": "https://github.com/crashmax-dev/fireworks-js/blob/6819ec8456ecb97140a8e1f41959ca2da5c17ddf/packages/fireworks-js/src/types.ts#L3-L25"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/crashmax-dev/fireworks-js#updatesizesizes"
+    },
+    {
+      "label": "sizes",
+      "url": "https://github.com/crashmax-dev/fireworks-js/blob/6819ec8456ecb97140a8e1f41959ca2da5c17ddf/packages/fireworks-js/src/types.ts#L58-L61"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/crashmax-dev/fireworks-js#updateboundariesboundaries"
+    },
+    {
+      "label": "boundaries",
+      "url": "https://github.com/crashmax-dev/fireworks-js/blob/6819ec8456ecb97140a8e1f41959ca2da5c17ddf/packages/fireworks-js/src/types.ts#L35-L40"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/crashmax-dev/fireworks-js#community"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/crashmax-dev/fireworks-js#star-history"
+    },
+    {
+      "label": "",
+      "url": "https://star-history.com/#crashmax-dev/fireworks-js&Date"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/crashmax-dev/fireworks-js#author"
+    },
+    {
+      "label": "crashmax",
+      "url": "https://github.com/crashmax-dev"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/crashmax-dev/fireworks-js#license"
+    },
+    {
+      "label": "MIT",
+      "url": "https://github.com/crashmax-dev/fireworks-js/blob/master/LICENSE"
+    }
+  ],
+  "root_files": [
+    ".changeset",
+    ".github",
+    ".vscode",
+    "examples",
+    "packages",
+    "website",
+    ".editorconfig",
+    ".gitattributes",
+    ".gitignore",
+    ".npmrc",
+    ".prettierignore",
+    ".prettierrc.cjs",
+    "CODE_OF_CONDUCT.md",
+    "CONTRIBUTING.md",
+    "LICENSE",
+    "README.md",
+    "package.json",
+    "pnpm-lock.yaml",
+    "pnpm-workspace.yaml",
+    "turbo.json"
+  ],
+  "release_count": 26,
+  "status": "verified"
+}

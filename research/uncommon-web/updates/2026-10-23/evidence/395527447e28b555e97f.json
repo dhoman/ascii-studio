@@ -1,0 +1,306 @@
+{
+  "url": "https://github.com/unconed/mathbox",
+  "final_url": "https://github.com/unconed/mathbox",
+  "http_status": 200,
+  "checked_at": "2026-10-23T17:46:57.403399+00:00",
+  "stars": 1505,
+  "forks": 126,
+  "description": "Presentation-quality WebGL math graphing",
+  "homepage": "",
+  "topics": [],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2015-09-28T07:55:08.000Z",
+  "branch": "master",
+  "commit": "f80933e114ed8051c8182fe09b83837696b4f0e9",
+  "readme": "MathBox Presentation-quality WebGL math graphing MathBox is a library for rendering presentation-quality math diagrams in a browser using WebGL. Built on top of Three.js and ShaderGraph it provides a clean API to visualize mathematical relationships and animate them declaratively. For background, see the article series on Acko.net. Presentations: The Pixel Factory Demos: Audio Visualizer (code) Cylindrical Stream (code) Data/Shape Mapping (code) LaTeX/HTML/GL Labels (code) Quaternion Hypersphere (code) Render-to-Texture History (code) Vertex Warping (code) Volumetric Vectors (code) And many more at https://mathbox.org. Installation You can install MathBox via npm for use with a bundler like Webpack, or include a global MathBox object onto your page by including the library via CDN. NPM Package Run the following in your project's directory to install MathBox and Three.js via npm: npm install mathbox three Import THREE and MathBox (library and stylesheet), along with a controls instance that you'll pass to the MathBox.mathBox constructor: import \"mathbox/mathbox.css\" import * as THREE from \"three\" import { OrbitControls } from \"three/examples/jsm/controls/OrbitControls.js\" import * as MathBox from \"mathbox\" Install via CDN Include the following in your HTML header to load all required libraries and styles: <!-- Install your choice of three.js version from CDN: --> <script type=\"text/javascript\" src=\"https://cdn.jsdelivr.net/npm/three@0.137.0/build/three.min.js\" ></script> <!-- Load a Controls instance, making sure that the version matches the Three.js version above: --> <script type=\"text/javascript\" src=\"https://cdn.jsdelivr.net/npm/three@0.137.0/examples/js/controls/OrbitControls.js\" ></script> <!-- Install the latest MathBox, either mathbox.js or mathbos.min.js --> <script type=\"text/javascript\" src=\"https://cdn.jsdelivr.net/npm/mathbox@latest/build/bundle/mathbox.js\" ></script> <!-- Include the MathBox CSS: --> <link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/mathbox@latest/build/mathbox.css\" /> Basic Usage Construct a MathBox instance by passing initialization options to the mathBox() constructor: const options = { controls: { // Orbit controls, i.e. Euler angles, with gimbal lock klass: THREE.OrbitControls }, }; const root = MathBox.mathBox(options); Note See threestrap for all available options. To spawn inside a specific element, pass an HTMLElement with the element option: const element = document.querySelector(\"#my-thing\"); const options = { element: element, controls: { klass: THREE.OrbitControls }, }; const root = MathBox.mathBox(options); On initialization, mathBox returns a MathBox API object, wrapping the MathBox <root/>. Insert new MathBox nodes into the component tree by calling the method associated with the primitive you'd like to add. Note See the Primitives doc for a description of all primitives and their properties. The following code will set up a 3D Cartesian coordinate system with the specified range and scale for its x, y and z axes, and then insert an x and y axis into the scene: const view = root .cartesian({ range: [ [-2, 2], [-1, 1], [-1, 1], ], scale: [2, 1, 1], }) .axis({ axis: 1, }) .axis({ axis: 2, }); Use your mouse to click and drag the camera's orientation, and zoom in and out: Each primitive call: creates a new element inserts it into the tree returns a version of the API object with its selection focused on the new element. Calling print() on some selection will print a representation to the console of the selection and any children. For example, view.print() prints the following: <cartesian range={[ [-2, 2], [-1, 1], [-1, 1], ]} scale={[2, 1, 1]} > <axis axis={1} /> <axis axis={2} /> </cartesian> Select objects using .select() and a CSS-like selector to get a jQuery-like selection: root.select(\"cartesian > axis\"); Next, visit the Quick Start page for a more involved example that builds up an animating, interactive mathematical graph with labeled axes. Docs & Help For help, see the following resources: Glossary of terms to help get familiar with MathBox and WebGL. MathBox API for typical usage. List of Primitives for a full element reference. Writing Custom Shaders for info on custom shaders and GPU-side processing. Context API for advanced usage. For more involved questions, or just to say hi, please join us in the MathBox Google Group. Related Projects threestrap - Three.js bootstrapper shadergraph - Functional GLSL linker MathBox-react - React bindings for MathBox MathBox.cljs - ClojureScript bindings for MathBox via MathBox-react Who's using MathBox? Math3D online graphing calculator KineticGraphs JS Engine (code) Textbook: \"Interactive Linear Algebra\"\" (code) Many visualizations at Sam Zhang's homepage Jesse Bettencourt's Torus Knot Fibration Master's project (code) Interactive knot visualizations And the many demos listed on this thread of the MathBox Google group. License MIT License. MathBox and ShaderGraph (c) Steven Wittens 2013-2023. Libraries and 3rd party shaders (c) their respective authors.",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://github.com/unconed/mathbox#mathbox"
+    },
+    {
+      "label": "",
+      "url": "https://npmjs.com/package/mathbox"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/unconed/mathbox/actions/workflows/tests.yaml"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/unconed/mathbox/blob/master/LICENSE.md"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/unconed/mathbox#presentation-quality-webgl-math-graphing"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/d4c95a6be994deb2c11de306a69ed18a619a6c4af68d17ebf49e7bda2369b7cf/687474703a2f2f61636b6f2e6e65742f66696c65732f6d617468626f78322f636f766572312e6a7067"
+    },
+    {
+      "label": "Three.js",
+      "url": "https://threejs.org/"
+    },
+    {
+      "label": "ShaderGraph",
+      "url": "https://github.com/unconed/shadergraph"
+    },
+    {
+      "label": "article series on Acko.net",
+      "url": "http://acko.net/blog/mathbox2/"
+    },
+    {
+      "label": "The Pixel Factory",
+      "url": "http://acko.net/files/gltalks/pixelfactory/online.html#0"
+    },
+    {
+      "label": "Audio Visualizer",
+      "url": "https://mathbox.org/demo/audio-visualizer.html"
+    },
+    {
+      "label": "code",
+      "url": "https://github.com/unconed/mathbox/blob/master/examples/demo/audio-visualizer.html"
+    },
+    {
+      "label": "Cylindrical Stream",
+      "url": "https://mathbox.org/demo/cylindrical-stream.html"
+    },
+    {
+      "label": "code",
+      "url": "https://github.com/unconed/mathbox/blob/master/examples/demo/cylindrical-stream.html"
+    },
+    {
+      "label": "Data/Shape Mapping",
+      "url": "https://mathbox.org/demo/shapes.html"
+    },
+    {
+      "label": "code",
+      "url": "https://github.com/unconed/mathbox/blob/master/examples/demo/shapes.html"
+    },
+    {
+      "label": "LaTeX/HTML/GL Labels",
+      "url": "https://mathbox.org/demo/labels.html"
+    },
+    {
+      "label": "code",
+      "url": "https://github.com/unconed/mathbox/blob/master/examples/demo/labels.html"
+    },
+    {
+      "label": "Quaternion Hypersphere",
+      "url": "https://mathbox.org/math/quat.html"
+    },
+    {
+      "label": "code",
+      "url": "https://github.com/unconed/mathbox/blob/master/examples/math/quat.html"
+    },
+    {
+      "label": "Render-to-Texture History",
+      "url": "https://mathbox.org/test/resample2.html"
+    },
+    {
+      "label": "code",
+      "url": "https://github.com/unconed/mathbox/blob/master/examples/test/resample2.html"
+    },
+    {
+      "label": "Vertex Warping",
+      "url": "https://mathbox.org/test/vertex.html"
+    },
+    {
+      "label": "code",
+      "url": "https://github.com/unconed/mathbox/blob/master/examples/test/vertex.html"
+    },
+    {
+      "label": "Volumetric Vectors",
+      "url": "https://mathbox.org/test/volume.html"
+    },
+    {
+      "label": "code",
+      "url": "https://github.com/unconed/mathbox/blob/master/examples/test/volume.html"
+    },
+    {
+      "label": "https://mathbox.org",
+      "url": "https://mathbox.org"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/unconed/mathbox#installation"
+    },
+    {
+      "label": "npm",
+      "url": "https://npmjs.com/package/mathbox"
+    },
+    {
+      "label": "Webpack",
+      "url": "https://webpack.js.org/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/unconed/mathbox#npm-package"
+    },
+    {
+      "label": "Three.js",
+      "url": "https://threejs.org/"
+    },
+    {
+      "label": "npm",
+      "url": "https://npmjs.com/package/mathbox"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/unconed/mathbox#install-via-cdn"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/unconed/mathbox#basic-usage"
+    },
+    {
+      "label": "threestrap",
+      "url": "https://github.com/unconed/threestrap"
+    },
+    {
+      "label": "HTMLElement",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement"
+    },
+    {
+      "label": "the Primitives doc",
+      "url": "https://github.com/unconed/mathbox/blob/master/docs/primitives.md"
+    },
+    {
+      "label": "",
+      "url": "https://user-images.githubusercontent.com/69635/213530497-22cdf2c2-bea6-4ef4-beea-fbebf73c85d4.gif"
+    },
+    {
+      "label": "Quick Start",
+      "url": "https://github.com/unconed/mathbox/blob/master/docs/intro.md"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/unconed/mathbox#docs--help"
+    },
+    {
+      "label": "Glossary",
+      "url": "https://github.com/unconed/mathbox/blob/master/docs/glossary.md"
+    },
+    {
+      "label": "MathBox API",
+      "url": "https://github.com/unconed/mathbox/blob/master/docs/api.md"
+    },
+    {
+      "label": "List of Primitives",
+      "url": "https://github.com/unconed/mathbox/blob/master/docs/primitives.md"
+    },
+    {
+      "label": "Writing Custom Shaders",
+      "url": "https://github.com/unconed/mathbox/blob/master/docs/shaders.md"
+    },
+    {
+      "label": "Context API",
+      "url": "https://github.com/unconed/mathbox/blob/master/docs/context.md"
+    },
+    {
+      "label": "MathBox Google Group",
+      "url": "https://groups.google.com/forum/#!forum/mathbox"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/unconed/mathbox#related-projects"
+    },
+    {
+      "label": "threestrap",
+      "url": "https://github.com/unconed/threestrap"
+    },
+    {
+      "label": "shadergraph",
+      "url": "https://github.com/unconed/shadergraph"
+    },
+    {
+      "label": "MathBox-react",
+      "url": "https://github.com/christopherChudzicki/mathbox-react"
+    },
+    {
+      "label": "MathBox.cljs",
+      "url": "https://github.com/mentat-collective/mathbox.cljs"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/unconed/mathbox#whos-using-mathbox"
+    },
+    {
+      "label": "Math3D online graphing calculator",
+      "url": "https://www.math3d.org/"
+    },
+    {
+      "label": "KineticGraphs JS Engine",
+      "url": "https://kineticgraphs.org/"
+    },
+    {
+      "label": "code",
+      "url": "https://github.com/cmakler/kgjs"
+    },
+    {
+      "label": "Textbook: \"Interactive Linear Algebra\"\"",
+      "url": "https://textbooks.math.gatech.edu/ila/"
+    },
+    {
+      "label": "code",
+      "url": "https://github.com/QBobWatson/ila"
+    },
+    {
+      "label": "Sam Zhang's homepage",
+      "url": "https://sam.zhang.fyi/#projects"
+    },
+    {
+      "label": "Torus Knot Fibration",
+      "url": "http://jessebett.com/TorusKnotFibration/"
+    },
+    {
+      "label": "code",
+      "url": "https://github.com/jessebett/TorusKnotFibration"
+    },
+    {
+      "label": "Interactive knot visualizations",
+      "url": "https://rockey-math.github.io/mathbox/graph3d-curve"
+    },
+    {
+      "label": "this thread",
+      "url": "https://groups.google.com/g/mathbox/c/Uvyb5fHaLq4"
+    },
+    {
+      "label": "MathBox Google group",
+      "url": "https://groups.google.com/forum/#!forum/mathbox"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/unconed/mathbox#license"
+    },
+    {
+      "label": "MIT License",
+      "url": "https://github.com/unconed/mathbox/blob/master/LICENSE.md"
+    }
+  ],
+  "root_files": [
+    ".github/workflows",
+    "config",
+    "docs",
+    "examples",
+    "src",
+    "test",
+    ".eslintrc.js",
+    ".gitignore",
+    ".prettierignore",
+    "CHANGES.md",
+    "FUNDING.yml",
+    "LICENSE.md",
+    "README.md",
+    "developing.md",
+    "gulpfile.js",
+    "karma.conf.js",
+    "package-lock.json",
+    "package.json",
+    "tsconfig.json"
+  ],
+  "release_count": 11,
+  "status": "verified"
+}

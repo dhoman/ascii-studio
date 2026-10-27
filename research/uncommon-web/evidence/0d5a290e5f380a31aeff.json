@@ -1,0 +1,110 @@
+{
+  "url": "https://github.com/johnnesky/beepbox",
+  "final_url": "https://github.com/johnnesky/beepbox",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:47:54.624722+00:00",
+  "stars": 1199,
+  "forks": 313,
+  "description": "An online tool for sketching and sharing instrumental melodies.",
+  "homepage": "https://beepbox.co",
+  "topics": [],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2019-08-30T06:00:11.000Z",
+  "branch": "main",
+  "commit": "355e510099d230d066d95074c16d748d59fe054c",
+  "readme": "BeepBox BeepBox is an online tool for sketching and sharing instrumental melodies. Try it out here! All song data is packaged into the URL at the top of your browser. When you make changes to the song, the URL is updated to reflect your changes. When you are satisfied with your song, just copy and paste the URL to save and share your song! BeepBox is a passion project, and will always be free to use. If you find it valuable and have the means, any gratuity via PayPal would be appreciated! BeepBox is developed by John Nesky. This source code is available under the MIT license. Synthesizer library You can use BeepBox's synthesizer to play music in your own web app! See the npm package for more details. Compiling The code is written in TypeScript, which requires Node & npm so install those first. To contribute changes, you'll also need git. Then to build this project, open the command line and run: git clone https://github.com/johnnesky/beepbox.git cd beepbox npm install npm run build Code The code is divided into several folders. The synth/ folder has just the code you need to be able to play BeepBox songs out loud, and you could use this code in your own projects, like a web game. After compiling the synth code, open website/synth_example.html to see a demo using it. To rebuild just the synth code, run: npm run build-synth The editor/ folder has additional code to display the online song editor interface. After compiling the editor code, open website/index.html to see the editor interface. To rebuild just the editor code, run: npm run build-editor The player/ folder has a miniature song player interface for embedding on other sites. To rebuild just the player code, run: npm run build-player The website/ folder contains index.html files to view the interfaces. The build process outputs JavaScript files into this folder. Dependencies Most of the dependencies are listed in package.json, although I'd like to note that BeepBox also has an indirect, optional dependency on lamejs via jsdelivr for exporting .mp3 files. If the user attempts to export an .mp3 file, BeepBox will direct the browser to download that dependency on demand.",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://github.com/johnnesky/beepbox#beepbox"
+    },
+    {
+      "label": "here",
+      "url": "https://www.beepbox.co"
+    },
+    {
+      "label": "PayPal",
+      "url": "https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=QZJTX9GRYEV9N&currency_code=USD"
+    },
+    {
+      "label": "John Nesky",
+      "url": "https://johnnesky.com/"
+    },
+    {
+      "label": "MIT license",
+      "url": "https://github.com/johnnesky/beepbox/blob/main/LICENSE.md"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/johnnesky/beepbox#synthesizer-library"
+    },
+    {
+      "label": "the npm package",
+      "url": "https://www.npmjs.com/package/beepbox"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/johnnesky/beepbox#compiling"
+    },
+    {
+      "label": "install those first",
+      "url": "https://nodejs.org/en/download"
+    },
+    {
+      "label": "git",
+      "url": "https://github.com/git-guides/install-git"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/johnnesky/beepbox#code"
+    },
+    {
+      "label": "synth/",
+      "url": "https://github.com/johnnesky/beepbox/blob/main/synth"
+    },
+    {
+      "label": "editor/",
+      "url": "https://github.com/johnnesky/beepbox/blob/main/editor"
+    },
+    {
+      "label": "player/",
+      "url": "https://github.com/johnnesky/beepbox/blob/main/player"
+    },
+    {
+      "label": "website/",
+      "url": "https://github.com/johnnesky/beepbox/blob/main/website"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/johnnesky/beepbox#dependencies"
+    },
+    {
+      "label": "package.json",
+      "url": "https://github.com/johnnesky/beepbox/blob/main/package.json"
+    },
+    {
+      "label": "lamejs",
+      "url": "https://www.npmjs.com/package/lamejs"
+    },
+    {
+      "label": "jsdelivr",
+      "url": "https://www.jsdelivr.com/"
+    }
+  ],
+  "root_files": [
+    "dist",
+    "editor",
+    "player",
+    "scripts",
+    "synth",
+    "website",
+    ".gitignore",
+    "LICENSE.md",
+    "README.md",
+    "package-lock.json",
+    "package.json"
+  ],
+  "release_count": 40,
+  "status": "verified"
+}

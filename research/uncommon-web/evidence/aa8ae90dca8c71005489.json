@@ -1,0 +1,150 @@
+{
+  "url": "https://github.com/argyleink/transition.css",
+  "final_url": "https://github.com/argyleink/transition.css",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:47:35.049110+00:00",
+  "stars": 2022,
+  "forks": 128,
+  "description": ":octocat: Drop-in CSS transitions",
+  "homepage": "https://transition.style",
+  "topics": [
+    "animations",
+    "clip-path",
+    "css",
+    "hackpack",
+    "keyframes",
+    "masking",
+    "transitions"
+  ],
+  "license": "Apache-2.0",
+  "archived": false,
+  "created_at": "2020-07-28T22:25:06.000Z",
+  "branch": "main",
+  "commit": "340362692194fbb6c8002b2a5f034825521b390c",
+  "readme": "46 pre-built transitions! Hands on at Codepen or preview all @ transition.style Basics Import the CSS and set an attribute on some HTML: try on Codepen <link rel=\"stylesheet\" href=\"https://unpkg.com/transition-style\"> <div transition-style=\"in:wipe:up\"> 👍 </div> Installation NPM npm i transition-style import from CSS @import \"transition-style\"; or import from JS import 'transition-style'; CDN https://unpkg.com/transition-style Individual Category Bundles Circles https://unpkg.com/transition-style/transition.circles.min.css Squares https://unpkg.com/transition-style/transition.squares.min.css Polygons https://unpkg.com/transition-style/transition.polygons.min.css Wipes https://unpkg.com/transition-style/transition.wipes.min.css Import category bundles from NPM too import \"transition-style/transition.circles.min.css\" 👉 The Hackpack https://unpkg.com/transition-style/transition.hackpack.min.css More options, more control, smaller import by importing only the custom properties and base styles: compose custom transition combinations create multi-part transitions bring your own architecture with classes or CSS-in-JS or anything! The Hackpack Sandbox Custom properties ship with each .min.css as well 🔗 Bookmarklet Try transition.css on almost any existing site! Just copy 📋 the following, create a new bookmark, and paste in the URL: javascript:(function(){var a=document.createElement(\"link\");a.rel=\"stylesheet\";a.href=\"https://unpkg.com/transition-style\";document.head.append(a);})(); You can now go to a website and click the bookmark to try it out! Animations automatically run when you manually add classes in dev tools, or run code like this in the console: $('body').setAttribute('transition-style','in:circle:bottom-right') Caveat: this bookmarklet doesn't work on websites that have a strict CSP set up. Usage After transition.css has been added to your project, add an attribute to an element and watch the magic: <div transition-style=\"in:circle:bottom-right\"> A transitioned IN element </div> <div transition-style=\"out:wipe:down\"> A transitioned OUT element </div> if nothing is happening when using the attributes, it's likely transition.css has not loaded Attributes were chosen as the default so there's no question which transition is active. **There can be only 1 at a time.** With classes, for example, what happens when multiple \"transition in\" classes are applied to an element? Transition.css chooses to default with a state machine approach so things like a classname collision doesn't need solved. See the [custom](#custom) section below for ways to use classes and/or the shape custom properties so transition.css can fit into your development environment. The built in attribute based approach is very easy to hack, customize and escape. Using @keyframes Each bundle ships with the @keyframes declared, and you can use them as you see fit. You can use these to build your own animations or just hook into the presets in your own way: .main--state-in { animation: wipe-in-left; animation-duration: 2s; animation-fill-mode: both; } Checkout the src to find the names of the @keyframe animations. They follow a pattern like the attributes, so you should be able to assume what they are with decent accuracy. Using CSS Custom Properties Each bundle ships with clearly named custom properties which contain the state and geometry needed to orchestrate custom transitions. .overrides { --transition__duration: 1s; /* default: 2.5s */ --transition__easing: ease-in-out; /* default: cubic-bezier(.25, 1, .30, 1) */ --transition__delay: 1s; /* default: 0 */ } or target a specific transition and override it's defaults: [transition=\"in:wipe:up\"] { --transition__duration: 1s; } Custom Go off the rails and build your own transitions with these variables. There's even the The Hackpack which is exclusively the custom props 🤘💀 Here's how you can compose a brand new transition from the custom property primitives: @keyframes circle-swoop { from { clip-path: var(--circle-top-right-out); } to { clip-path: var(--circle-bottom-right-in); } } .--in-custom { --transition__duration: 1s; --transition__easing: ease-in-out; animation-name: circle-swoop; } Then, in the HTML: <div transition-style class=\"--in-custom\"> A custom transitioned element </div> The only rule is that you must transition from the same type of shapes At this point you're using Transition.css to it's maximum. You can reach a huge set of transitions by using the custom properties. Have fun! Play Play and experiment with this Codepen Development See the svelte branch. Production npm run bundle concurrently bundles and minifies.",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/40836f6eaa2e8013e8a5e5e5d8af4c4e8ccc66e796d8f7fa510d50e50e48523c/68747470733a2f2f696d672e736869656c64732e696f2f6e706d2f64742f7472616e736974696f6e2e6373732e737667"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/1605513c6b14fea9c3724ed264d8f92ce7552772bf1983c25266498a7219dc82/68747470733a2f2f696d672e736869656c64732e696f2f6e706d2f762f7472616e736974696f6e2e6373732e737667"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/e54b7190545620666c91a2bd1ec8add1db6e0e47175d3c158c88da1f7246faf4/68747470733a2f2f696d672e736869656c64732e696f2f6e706d2f6c2f7472616e736974696f6e2e6373732e737667"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/870bbf7a0861c9ec0e1509e757a226daecb8895fe30f01dc401bc550db56f18e/68747470733a2f2f6170692e6e65746c6966792e636f6d2f6170692f76312f6261646765732f35386430656366352d363234312d343230392d616133352d6366303939383365306233372f6465706c6f792d737461747573"
+    },
+    {
+      "label": "",
+      "url": "https://codepen.io/argyleink/pen/zYqYpEB"
+    },
+    {
+      "label": "Codepen",
+      "url": "https://codepen.io/argyleink/pen/RwrzGJb"
+    },
+    {
+      "label": "transition.style",
+      "url": "https://transition.style"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/argyleink/transition.css#basics"
+    },
+    {
+      "label": "try on Codepen",
+      "url": "https://codepen.io/argyleink/pen/QWNRXEG"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/argyleink/transition.css/blob/main/gif/wipe-up.gif?raw=true"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/argyleink/transition.css#installation"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/argyleink/transition.css#npm"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/argyleink/transition.css#cdn"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/argyleink/transition.css#-the-hackpack"
+    },
+    {
+      "label": "The Hackpack Sandbox",
+      "url": "https://codepen.io/argyleink/pen/MWyJxLx"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/argyleink/transition.css#-bookmarklet"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/argyleink/transition.css/blob/main/gif/opposing-corner-fold.gif?raw=true"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/argyleink/transition.css#usage"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/argyleink/transition.css#using-keyframes"
+    },
+    {
+      "label": "src",
+      "url": "https://github.com/argyleink/transition.css/blob/main/src"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/argyleink/transition.css#using-css-custom-properties"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/argyleink/transition.css#custom"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/argyleink/transition.css#play"
+    },
+    {
+      "label": "this Codepen",
+      "url": "https://codepen.io/argyleink/pen/RwrzGJb"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/argyleink/transition.css#development"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/argyleink/transition.css#production"
+    }
+  ],
+  "root_files": [
+    "gif",
+    "src",
+    ".gitignore",
+    "CODE_OF_CONDUCT.md",
+    "CONTRIBUTING.md",
+    "LICENSE",
+    "README.md",
+    "package-lock.json",
+    "package.json",
+    "transition.circles.min.css",
+    "transition.hackpack.min.css",
+    "transition.min.css",
+    "transition.polygons.min.css",
+    "transition.squares.min.css",
+    "transition.wipes.min.css"
+  ],
+  "release_count": 9,
+  "status": "verified"
+}

@@ -1,0 +1,141 @@
+{
+  "url": "https://github.com/daybrush/scenejs-timeline",
+  "final_url": "https://github.com/daybrush/scenejs-timeline",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:49:49.201694+00:00",
+  "stars": 203,
+  "forks": 22,
+  "description": "🎬 @scenejs/timeline is a component that represents the timeline of Scene.js. You can control time, properties, and items.",
+  "homepage": "https://daybrush.com/scenejs/",
+  "topics": [
+    "animation",
+    "css",
+    "css3-animation",
+    "react",
+    "scenejs",
+    "timeline",
+    "typescript"
+  ],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2019-06-07T12:49:21.000Z",
+  "branch": "master",
+  "commit": "07a0f4d81d37febb91efa9a47087e6109ed13311",
+  "readme": "Scene.js Timeline @scenejs/timeline is a component that represents the timeline of Scene.jsYou can control time, properties, and items. Scene.js / Example ⚙️ Installation $ npm i @scenejs/timeline <script src=\"https://daybrush.com/scenejs-timeline/release/latest/dist/timeline.pkgd.min.js\"></script> 🚀 How to use import Scene from \"scenejs\"; import Timeline, { SelectEvent } from \"@scenejs/timeline\"; const scene = new Scene({ ... }); const timeline = new Timeline(scene, document.body, { keyboard: true, }); timeline.on(\"select\", (e: SelectEvent) => { console.log(e.selectedItem); }); 📦 Packages react-scenejs-timeline: A React Component that control scene.js timeline. preact-timeline: A Preact Component that control scene.js timeline. ⭐️ Show Your Support Please give a ⭐️ if this project helped you! 👏 Contributing If you have any questions or requests or want to contribute to scenejs-timeline or other packages, please write the issue or give me a Pull Request freely. 🐞 Bug Report If you find a bug, please report to us opening a new Issue on GitHub. 📝 License This project is MIT licensed. MIT License Copyright (c) 2016 Daybrush Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://github.com/daybrush/scenejs-timeline/blob/master/demo/images/logo.png"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/daybrush/scenejs-timeline#scenejs-timeline"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@scenejs/timeline"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/0a1070767ebb57227d8ffe574a49f977100128a18f7477e66f0b2d26e13f9a6b/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f6c616e67756167652d747970657363726970742d626c75652e7376673f7374796c653d666c61742d737175617265"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/daybrush/scenejs-timeline/blob/master/LICENSE"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/daybrush/scenejs-timeline/tree/master/packages/react-scenejs-timeline/README.md"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/daybrush/scenejs-timeline/tree/master/packages/preact-timeline/README.md"
+    },
+    {
+      "label": "Scene.js",
+      "url": "https://github.com/daybrush/scenejs"
+    },
+    {
+      "label": "Scene.js",
+      "url": "https://github.com/daybrush/scenejs"
+    },
+    {
+      "label": "Example",
+      "url": "https://daybrush.com/scenejs/features.html#timeline"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/daybrush/scenejs-timeline/blob/master/demo/images/timeline.png"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/daybrush/scenejs-timeline#️-installation"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/daybrush/scenejs-timeline#-how-to-use"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/daybrush/scenejs-timeline#-packages"
+    },
+    {
+      "label": "react-scenejs-timeline",
+      "url": "https://github.com/daybrush/scenejs-timeline/tree/master/packages/react-scenejs-timeline"
+    },
+    {
+      "label": "preact-timeline",
+      "url": "https://github.com/daybrush/scenejs-timeline/tree/master/packages/preact-timeline"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/daybrush/scenejs-timeline#️-show-your-support"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/daybrush/scenejs-timeline#-contributing"
+    },
+    {
+      "label": "issue",
+      "url": "https://github.com/daybrush/scenejs-timeline/issues"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/daybrush/scenejs-timeline#-bug-report"
+    },
+    {
+      "label": "Issue",
+      "url": "https://github.com/daybrush/scenejs-timeline/issues"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/daybrush/scenejs-timeline#-license"
+    },
+    {
+      "label": "MIT",
+      "url": "https://github.com/daybrush/scenejs-timeline/blob/master/LICENSE"
+    }
+  ],
+  "root_files": [
+    "demo/images",
+    "packages",
+    "src",
+    ".editorconfig",
+    ".gitignore",
+    ".npmignore",
+    "LICENSE",
+    "README.md",
+    "clapper.html",
+    "index.html",
+    "main.png",
+    "package-lock.json",
+    "package.json",
+    "rollup.config.js",
+    "tsconfig.declaration.json",
+    "tsconfig.json",
+    "tsconfig.test.json",
+    "tslint.json"
+  ],
+  "release_count": 0,
+  "status": "verified"
+}

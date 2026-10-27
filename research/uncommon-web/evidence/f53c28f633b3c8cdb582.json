@@ -1,0 +1,106 @@
+{
+  "url": "https://github.com/radiumcoders/Evil-Buttons",
+  "final_url": "https://github.com/radiumcoders/Evil-Buttons",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:48:12.366875+00:00",
+  "stars": 232,
+  "forks": 21,
+  "description": "shadcn/ui registry of playful, highly animated button components with evil aesthetics and killing interactions.",
+  "homepage": "https://evilbuttons.com",
+  "topics": [
+    "8bit",
+    "animated",
+    "buttons",
+    "framer-motion",
+    "motion",
+    "nextjs",
+    "react",
+    "reusable-components",
+    "shadcn-ui",
+    "tailwindcss"
+  ],
+  "license": "Apache-2.0",
+  "archived": false,
+  "created_at": "2026-04-28T14:33:06.000Z",
+  "branch": "main",
+  "commit": "f768125bc7db98f2bc757efa1ea0f6d34ffa1430",
+  "readme": "Overview shadcn/ui registry of playful, highly animated button components with evil aesthetics and killing interactions. Customizable Shadcn/ui native Minimal but Cool Sponsors Evil Buttons is free and open source. These sponsors keep the buttons coming. Your logo here Your logo here Your logo here Your logo here Your logo here Become a sponsor to get your logo on the landing page, in the docs and here.",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://private-user-images.githubusercontent.com/209637072/662085504-7eb92611-7ce1-46b2-8672-d43917305968.png?jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3OTI3MTMxOTEsIm5iZiI6MTc5MjcxMjg5MSwicGF0aCI6Ii8yMDk2MzcwNzIvNjYyMDg1NTA0LTdlYjkyNjExLTdjZTEtNDZiMi04NjcyLWQ0MzkxNzMwNTk2OC5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjYxMDIyJTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI2MTAyMlQyMzQ4MTFaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT0xNjU1NmEyOGFmYjJiZjY1YWYzYWU1MDBhZDZkODhhN2Q5YjIxODhmYWM4ODg4ZjMxNjZhOWQxYTlmMjNkYmI4JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZyZXNwb25zZS1jb250ZW50LXR5cGU9aW1hZ2UlMkZwbmcifQ.GLDs10iCaHWbE95cPgcCw2L3r8nUr49RgD30Rp7VdRI"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/radiumcoders/Evil-Buttons#overview"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/radiumcoders/Evil-Buttons#sponsors"
+    },
+    {
+      "label": "Your logo here",
+      "url": "https://x.com/radiumcoders"
+    },
+    {
+      "label": "Your logo here",
+      "url": "https://x.com/radiumcoders"
+    },
+    {
+      "label": "Your logo here",
+      "url": "https://x.com/radiumcoders"
+    },
+    {
+      "label": "",
+      "url": "https://www.shadcn-labs.com/?utm_source=evilbuttons&utm_medium=referral&utm_campaign=backed_by"
+    },
+    {
+      "label": "Your logo here",
+      "url": "https://x.com/radiumcoders"
+    },
+    {
+      "label": "Your logo here",
+      "url": "https://x.com/radiumcoders"
+    },
+    {
+      "label": "Become a sponsor",
+      "url": "https://www.evilbuttons.com"
+    }
+  ],
+  "root_files": [
+    ".agents/skills",
+    ".claude/skills/bklit-ui",
+    ".commandcode",
+    ".github/workflows",
+    "app",
+    "assets",
+    "components",
+    "content/docs",
+    "hooks",
+    "lib",
+    "plans",
+    "public",
+    "scripts",
+    "types",
+    ".gitignore",
+    ".npmrc",
+    "AGENTS.md",
+    "CLAUDE.md",
+    "CONTRIBUTING.md",
+    "LICENSE",
+    "README.md",
+    "components.json",
+    "eslint.config.mjs",
+    "next.config.mjs",
+    "package.json",
+    "pnpm-lock.yaml",
+    "pnpm-workspace.yaml",
+    "postcss.config.mjs",
+    "registry.components.json",
+    "skills-lock.json",
+    "source.config.ts",
+    "tsconfig.json"
+  ],
+  "release_count": null,
+  "status": "verified"
+}

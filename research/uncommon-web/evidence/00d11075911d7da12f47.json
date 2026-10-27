@@ -1,0 +1,134 @@
+{
+  "url": "https://github.com/ingram-projects/animxyz",
+  "final_url": "https://github.com/ingram-projects/animxyz",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:47:52.791232+00:00",
+  "stars": 2499,
+  "forks": 62,
+  "description": "The first truly composable CSS animation library. Built for Vue, React, SCSS, and CSS, AnimXYZ will bring your website to life.",
+  "homepage": "https://animxyz.com",
+  "topics": [
+    "animation",
+    "animxyz",
+    "composable-animations",
+    "css",
+    "css-animations",
+    "css-framework",
+    "functional-css",
+    "react",
+    "scss",
+    "vue"
+  ],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2020-05-03T23:22:04.000Z",
+  "branch": "master",
+  "commit": "4d8c784d9ff8c6d1bcd531da87cc8b8f43a5032e",
+  "readme": "AnimXYZ animxyz.com AnimXYZ helps you create, customize, and compose animations for your website. Powered by CSS variables to allow a nearly limitless number of unique animations without writing a single keyframe. Save time and have complete control over how your elements move. Built for Vue, React, SCSS, and CSS, AnimXYZ will bring your website to life. For example here is how you make an element fade and shrink in from above: <div class=\"xyz-in\" xyz=\"fade up big\">I will animate in!</div> Changing the class to xyz-out reverses the direction of the animation: <div class=\"xyz-out\" xyz=\"fade up big\">I will animate out!</div> See it in action here For simple animations, that's all you need, but AnimXYZ can do so much more! Check out the AnimXYZ docs! Installation Using a package manager AnimXYZ can be installed using your favorite package manager: # with npm npm install @animxyz/core # with yarn yarn add @animxyz/core After installation, you will need to import AnimXYZ into your project. Import into a Webpack project If your Webpack project uses css-loader you can import the CSS by putting this snippet anywhere in your javascript code: import '@animxyz/core' Import into a SASS project AnimXYZ is built in SASS and provides useful functions and mixins for customization. Import it anywhere in your SASS code: // Import the functions/mixins @import '@animxyz/core'; // Add all the core/utilities selectors @include xyz-all; // --- Or for more control and granularity --- @include xyz-core; @include xyz-utilities; Using jsDelivr To add AnimXYZ using a CDN put this link in the <head> of your index.html file: <link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/@animxyz/core\"> Vue & React If you are using AnimXYZ in a Vue or React project we strongly recommend you also use our AnimXYZ components. To add those, follow the installation instructions in the relevant sections Vue and React. Made By Miles Ingram • GitHub • Website Mattan Ingram • GitHub • Website",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://animxyz.com"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/ingram-projects/animxyz#animxyz"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@animxyz/core"
+    },
+    {
+      "label": "animxyz.com",
+      "url": "https://animxyz.com"
+    },
+    {
+      "label": "See it in action here",
+      "url": "https://animxyz.com/docs?tab=examples&example=Example%201#the-basics"
+    },
+    {
+      "label": "Check out the AnimXYZ docs!",
+      "url": "https://animxyz.com/docs"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/ingram-projects/animxyz#installation"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/ingram-projects/animxyz#using-a-package-manager"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/ingram-projects/animxyz#import-into-a-webpack-project"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/ingram-projects/animxyz#import-into-a-sass-project"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/ingram-projects/animxyz#using-jsdelivr"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/ingram-projects/animxyz#vue--react"
+    },
+    {
+      "label": "Vue",
+      "url": "https://animxyz.com/docs/#vue-installation"
+    },
+    {
+      "label": "React",
+      "url": "https://animxyz.com/docs/#react-installation"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/ingram-projects/animxyz#made-by"
+    },
+    {
+      "label": "GitHub",
+      "url": "https://github.com/milesingrams"
+    },
+    {
+      "label": "Website",
+      "url": "https://milesingram.me"
+    },
+    {
+      "label": "GitHub",
+      "url": "https://github.com/mattaningram"
+    },
+    {
+      "label": "Website",
+      "url": "https://mattaningram.com"
+    }
+  ],
+  "root_files": [
+    ".changeset",
+    ".claude",
+    ".github/workflows",
+    ".husky",
+    "examples",
+    "packages",
+    "site",
+    "tests/functional",
+    "utils",
+    ".browserslistrc",
+    ".editorconfig",
+    ".eslintrc.js",
+    ".gitignore",
+    ".npmrc",
+    "CHANGELOG.md",
+    "LICENSE",
+    "README.md",
+    "bili.rootconfig.js",
+    "commitlint.config.js",
+    "modernization-plan.md",
+    "netlify.toml",
+    "package-lock.json",
+    "package.json",
+    "turbo.json"
+  ],
+  "release_count": 7,
+  "status": "verified"
+}

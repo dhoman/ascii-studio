@@ -1,0 +1,639 @@
+{
+  "url": "https://github.com/nextapps-de/winbox",
+  "final_url": "https://github.com/nextapps-de/winbox",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:48:05.667185+00:00",
+  "stars": 6455,
+  "forks": 217,
+  "description": "WinBox is a modern HTML5 window manager for the Web.",
+  "homepage": "",
+  "topics": [
+    "box",
+    "desktop",
+    "desktop-app",
+    "desktop-widget",
+    "frame",
+    "popup",
+    "winbox",
+    "window",
+    "window-manager",
+    "windowmanager",
+    "windows"
+  ],
+  "license": "Apache-2.0",
+  "archived": false,
+  "created_at": "2021-04-12T16:55:39.000Z",
+  "branch": "master",
+  "commit": "bbb453aca2c3c5122c06ae0c6446eea1730d9142",
+  "readme": "Modern window manager for the web: lightweight, outstanding performance, no dependencies, fully customizable, open source! Demo • Getting Started • Options • API • Themes • Customize • Changelog Live Demo and Code Examples https://nextapps-de.github.io/winbox/ Support this Project Hello my name is Thomas, also known as ts-thomas. This is a personal project which I fully made in my free time. It is hosted by the Github account from the company Nextapps where I work to give it more exposure. I have never received any financial support for this project from the company Nextapps as some of you might have guessed, since it is a free and open source project. I'm really happy that WinBox.js is getting so much positive feedback and also feature requests. Please feel free to support me by making a personal donation which helps me a lot to keep this project alive and also to providing all the contribution to keep WinBox.js on a professional top-end level. Thanks a lot, Thomas (ts-thomas) Plugins / Add-ons / Extensions Vue 2 and 3 (a wrapper component that adds the ability to mount Vue components in WinBox.js): https://github.com/wobsoriano/vue-winbox A React controlled component for WinBox.js, with full Reactful props and state.: https://github.com/rickonono3/react-winbox Getting Started Get Latest Stable Build (Recommended): Bundle: (all assets bundled into one single file: js + css + html + icons) winbox.bundle.min.js Download https://rawcdn.githack.com/nextapps-de/winbox/0.2.82/dist/winbox.bundle.min.js Non-Bundled: (js and css are separated, css includes icons as base64) winbox.min.js Download https://rawcdn.githack.com/nextapps-de/winbox/0.2.82/dist/js/winbox.min.js winbox.min.css Download https://rawcdn.githack.com/nextapps-de/winbox/0.2.82/dist/css/winbox.min.css Sources: (not bundled at all, images as url to original resources) ES6 Modules Download The /src/js folder of this Github repository LESS Files (source) Download The /src/css folder of this Github repository winbox.css (compiled) Download https://rawcdn.githack.com/nextapps-de/winbox/0.2.82/src/css/winbox.css src.zip Download Download all source files including image original resources. Get Latest (NPM): npm install winbox Use Bundled Version (Recommended) The bundled version includes all assets like js, css, html and icon images as base64. A best practice is to load the library as async and use some modern preloading mechanism: <html> <head> <link rel=\"preload\" href=\"winbox.bundle.min.js\" as=\"script\"> </head> <body> <!-- HTML CONTENT --> <!-- BOTTOM OF BODY --> <script src=\"winbox.bundle.min.js\" async></script> <!-- YOUR SCRIPT --> <script src=\"my-script.js\" defer></script> </body> </html> When you get troubles with unavailable references then remove the async or defer from this example and invest some minutes later to find out how you can properly load js assets asynchronously today. Use Non-Bundled Version The non-bundled version needs to load js and css separately (css already includes icons as base64). <html> <head> <link rel=\"stylesheet\" href=\"winbox.min.css\"> <script src=\"winbox.min.js\"></script> </head> <body></body> </html> You can also load the non-bundled version in the same way. ES6 Modules The ES6 modules are located in src/js/. But you need to load the stylesheet file explicitly since this is just automatically loaded by the bundled version. <head> <link rel=\"stylesheet\" href=\"dist/css/winbox.min.css\"> </head> <script type=\"module\"> import WinBox from \"./src/js/winbox.js\"; </script> You can also load modules via CDN, e.g.: <script type=\"module\"> import WinBox from \"https://unpkg.com/winbox@0.2.82/src/js/winbox.js\"; </script> The ES6 modules are not minified. Please use your favored bundler or build tool for this purpose. Overview Constructor: new WinBox(title, options<key: value>) : winbox Global methods: WinBox.new(title, options<key: value>) : winbox WinBox.stack() : Array<winbox> Instance member methods: winbox.mount(src) winbox.unmount(dest) winbox.setUrl(string) winbox.setTitle(string) winbox.setIcon(url) winbox.move(x, y) winbox.resize(width, height) winbox.close(boolean) winbox.focus(state) winbox.blur(state) winbox.hide(state) winbox.show(state) winbox.minimize(state) winbox.maximize(state) winbox.fullscreen(state) winbox.restore(state) winbox.setBackground(string) winbox.addClass(name) winbox.removeClass(name) winbox.hasClass(name) winbox.toggleClass(name) winbox.addControl(options) winbox.removeControl(name) Instance properties (readonly): winbox.id winbox.index winbox.window winbox.body Instance properties (writable): winbox.x winbox.y winbox.width winbox.height winbox.top winbox.right winbox.bottom winbox.left winbox.minwidth winbox.minheight winbox.maxwidth winbox.maxheight Instance state boolean properties (readonly): winbox.min winbox.max winbox.full winbox.hidden winbox.focused Callback methods: winbox.oncreate winbox.onshow winbox.onhide winbox.onclose winbox.onfocus winbox.onblur winbox.onmove winbox.onresize winbox.onfullscreen winbox.onmaximize winbox.onminimize winbox.onrestore Options Option Values Description id number | string Set a unique id to the window. Used to define custom styles in css, query elements by context or just to identify the corresponding window instance. If no ID was set it will automatically create one for you. index number Set the initial z-index of the window to this value (will be increased automatically when unfocused/focused). title string The window title. mount HTMLElement Mount an element (widget, template, etc.) to the window body. html string Set the innerHTML of the window body. url string Open URL inside the window (loaded via iframe). widthheight number | string Set the initial width/height of the window (supports units \"px\" and \"%\"). minwidthminheight number | string Set the minimal width/height of the window (supports units \"px\" and \"%\"). Should be at least the height of the window header title bar. maxwidthmaxheight number | string Set the maximum width/height of the window (supports units \"px\" and \"%\"). autosize boolean Automatically size the window to fit the window contents. overflow boolean Allow the window to move outside the viewport. xy number | string Set the initial position of the window (supports: \"right\" for x-axis, \"bottom\" for y-axis, \"center\" for both, units \"px\" and \"%\" for both). max boolean Automatically toggles the window into maximized state when created. min boolean Automatically toggles the window into minimized state when created. hidden boolean Automatically toggles the window into hidden state when created. modal boolean Shows the window as modal. toprightbottomleft number | string Set or limit the viewport of the window's available area (supports units \"px\" and \"%\"). Also used for custom splitscreen configurations. background string Set the background of the window (supports all CSS styles which are also supported by the style-attribute \"background\", e.g. colors, transparent colors, hsl, gradients, background images) border number Set the border width of the window (supports all the browsers css units). icon string Make the titlebar icon visible and set the image source to this url. class string Add one or more classnames to the window (multiple classnames as array or separated with whitespaces e.g. \"class-a class-b\"). Used to define custom styles in css, query elements by context (also within CSS) or just to tag the corresponding window instance.WinBox provides you some useful Built-in Control Classes to easily setup a custom configuration. oncreate function(options) Callback triggered when the winbox element is being created. You can modify all these winbox options from this table passed as first parameter. onmove function(x, y) Callback triggered when the window moves. onresize function(width, height) Callback triggered when the window resizes. onfullscreen function() Callback triggered when the window enters fullscreen. onminimize function() Callback triggered when the window enters minimized mode. onmaximize function() Callback triggered when the window enters maximize mode. onrestore function() Callback triggered when the window returns to a windowed state from a Fullscreen, Minimized or Maximized state. onhide function() Callback triggered when the window is hidden with win.hide() onshow function() Callback triggered when the window is shown with win.show() onclose function(force) Callbacks triggered when the window is closing. The keyword this inside the callback function refers to the corresponding WinBox instance. Note: the event 'onclose' will be triggered right before closing and stops closing when a callback was applied and returns a truthy value. onfocus function() Callback triggered when a window goes into focused state. onblur function() Callback triggered when a window lost the focused state. Create and Setup Window Basic Window When no root was specified the window will append to the document.body. new WinBox(\"Window Title\"); Alternatively: WinBox.new(\"Window Title\"); Alternatively: new WinBox({ title: \"Window Title\" }); Alternatively: var winbox = WinBox(); winbox.setTitle(\"Window Title\"); Custom Root The root is the unique element in a document where the window will append to. In most cases that is usually the document.body which is the default root. Multiple roots at the same time are just partially supported (they share the same viewport actually). new WinBox(\"Window Title\", { root: document.body }); Custom Color Supports all CSS styles which are also supported by the style-attribute \"background\", e.g. colors, rgba, hsl, gradients, background images. new WinBox(\"Custom Color\", { background: \"#ff005d\" }); Alternatively: var winbox = new WinBox(\"Custom Color\"); winbox.setBackground(\"#ff005d\"); Custom Border Supports all units. new WinBox({ title: \"Custom Border\", border: \"1em\" }); You can also define multiple border values (the order is: top, right, bottom, left): new WinBox({ title: \"Custom Border\", border: \"0 1em 15px 1em\" }); Custom Titlebar Icon Supports all datatypes which are also supported by the style-attribute \"background-image\", e.g. URL, base64 encoded data. The default icon size is 20 x 20 pixels. new WinBox({ title: \"Custom Icon\", icon: \"img/icon.svg\" }); Alternatively: var winbox = new WinBox(\"Custom Icon\"); winbox.setIcon(\"img/icon.svg\"); See below in the style section to find out how to easily customize the titlebar icon style via css. Custom Viewport Define the available area (relative to the document) in which the window can move or could be resized (supports units \"px\" and \"%\"). new WinBox(\"Custom Viewport\", { top: \"50px\", right: \"5%\", bottom: 50, left: \"5%\" }); Alternatively (but just support numbers!): var winbox = new WinBox(\"Custom Viewport\"); winbox.top = 50; winbox.right = 200; winbox.bottom = 0; winbox.left = 200 Custom Position / Size Supports keywords \"right\" for x-axis, \"bottom\" for y-axis, \"center\" for both, units px and % also for both. new WinBox(\"Custom Viewport\", { x: \"center\", y: \"center\", width: \"50%\", height: \"50%\" }); new WinBox(\"Custom Viewport\", { x: \"right\", y: \"bottom\", width: \"200px\", height: \"200px\" }); Alternatively (also supports same units and keywords as above): var winbox = new WinBox(\"Custom Viewport\"); winbox.resize(\"50%\", \"50%\") .move(\"center\", \"center\"); Alternatively (just support numeric values as px when directly assigned!): var winbox = new WinBox(\"Custom Viewport\"); winbox.width = 200; winbox.height = 200; winbox.resize(); winbox.x = 100; winbox.y = 100; winbox.move(); In some cases you need to execute .resize() before .move() to properly apply relative positions which is taking the windows size into account. Overflow Window Allow the window to move outside the viewport borders on left, right and bottom (default is \"false\"). new WinBox({ title: \"Overflow Window\", overflow: true }); Modal Window new WinBox({ title: \"Modal Window\", modal: true }); Window Stack The window stack gets you an ordered list of every created window which wasn't already closed. The last focused windows is placed as last entry in the Array. const a = new WinBox(\"A\"); // window A gets focused const b = new WinBox(\"B\"); // window B gets focused const c = new WinBox(\"C\"); // window C gets focused a.focus(); // window A gets focused // get window stack ordered by focus history const stack = WinBox.stack(); // [B, C, A] Themes Feel free to create your own themes and share them with us. You will find all themes here. Load the corresponding css files (or use a bundler), e.g.: <head> <link rel=\"stylesheet\" href=\"dist/css/winbox.min.css\"> <link rel=\"stylesheet\" href=\"dist/css/themes/modern.min.css\"> <script src=\"dist/js/winbox.min.js\"></script> </head> Just add the name of the theme via class: var winbox = new WinBox({ title: \"Theme: Modern\", class: \"modern\" }); Alternatively: var winbox = new WinBox(\"Theme: Modern\"); winbox.addClass(\"modern\"); You can change themes during the lifetime of the window. Manage Window Content Set innerHTML Do not forget to sanitize any user inputs which is part of the html as this can lead to unintended XSS! new WinBox(\"Set innerHTML\", { html: \"<h1>Lorem Ipsum</h1>\" }); Alternatively: var winbox = new WinBox(\"Set innerHTML\"); winbox.body.innerHTML = \"<h1>Lorem Ipsum</h1>\"; Mount DOM (Cloned) When cloning you can easily create multiple window instances of the same content in parallel. <div id=\"content\"> <h1>Lorem Ipsum</h1> <p>Lorem ipsum [...]</p> </div> var node = document.getElementById(\"content\"); new WinBox(\"Mount DOM\", { mount: node.cloneNode(true) }); Alternatively: var node = document.getElementById(\"content\"); var winbox = new WinBox(\"Mount DOM\"); winbox.mount(node.cloneNode(true)); Mount DOM (Singleton) + Auto-Unmount A singleton is a unique fragment which can move inside the document. When creating multiple windows and mounting the same fragment to it, the fragment will leave the old window (see the method above for cloning). This workaround is also compatible if you are using server-side rendering. You can simply use a hidden backstore to hold contents, as well you can use any other strategy like a templating engine etc. <div id=\"backstore\" style=\"display: none\"> <div id=\"content\"> <h1>Lorem Ipsum</h1> <p>Lorem ipsum [...]</p> </div> </div> var node = document.getElementById(\"content\"); new WinBox(\"Mount DOM\", { mount: node }); Auto-Unmount is a helpful feature which automatically moves back the fragment to the backstore source when closing the window. Alternatively: var node = document.getElementById(\"content\"); var winbox = new WinBox(\"Mount DOM\"); winbox.mount(node); Explicit Unmount <div id=\"backstore\" style=\"display: none\"> <div id=\"content\"> <h1>Lorem Ipsum</h1> <p>Lorem ipsum [...]</p> </div> </div> <div id=\"backstore-2\" style=\"display: none\"></div> var node = document.getElementById(\"content\"); var winbox = new WinBox(\"Mount DOM\"); Move fragment from hidden backstore to the window body: winbox.mount(node); Move fragment back to the hidden backstore source: winbox.unmount(); Or move fragment to another destination: winbox.unmount(document.getElementById(\"backstore-2\")); Or just auto-unmount as default when closing: winbox.close(); Override default auto-unmount behavior when closing the window: new WinBox(\"Mount DOM\", { mount: node, onclose: function(){ this.unmount(document.getElementById(\"backstore-2\")); } }); Manual Mount Contents Feel free to use the winbox.body directly: var node = document.getElementById(\"content\"); var winbox = new WinBox(\"Mount DOM\"); winbox.body.appendChild(node); Or delegate it as a root to your templating engine, e.g.: Mikado(template).mount(winbox.body).render(data); Open URI / URL Do not forget to sanitize any user inputs when it is part of the url as this can lead to unintended XSS! The onload callback is optionally. new WinBox(\"Open URL\", { url: \"https://wikipedia.com\", onload: function(){ /* extern page loaded */} }); You can use every URI scheme which is supported by src attribute, e.g. URL, image or video, base64 encoded data. Alternatively: var winbox = new WinBox(\"Open URL\"); winbox.setUrl(\"https://wikipedia.com\", function(){ /* extern page loaded */ }); The WinBox Window Instance Window States / Information: var winbox = new WinBox(); console.log(\"Window ID:\", winbox.id); console.log(\"Window Index:\", winbox.index); console.log(\"Current Maximize State:\", winbox.max); console.log(\"Current Minimize State:\", winbox.min); console.log(\"Current Fullscreen State:\", winbox.full); console.log(\"Current Hidden State:\", winbox.hidden); console.log(\"Current Focused State:\", winbox.focused); Window Size: var winbox = new WinBox(); winbox.width = 200; winbox.height = 200; winbox.resize(); console.log(\"Current Width:\", winbox.width); console.log(\"Current Height:\", winbox.height); Window Position: var winbox = new WinBox(); winbox.x = 100; winbox.y = 100; winbox.move(); console.log(\"Current Position X:\", winbox.x); console.log(\"Current Position Y:\", winbox.y); Window Viewport: var winbox = new WinBox(); winbox.top = 50; winbox.right = 50; winbox.bottom = 50; winbox.left = 50; // update window if needed: winbox.resize().move(); console.log(\"Current Viewport Top:\", winbox.top); console.log(\"Current Viewport Right:\", winbox.right); console.log(\"Current Viewport Bottom:\", winbox.bottom); console.log(\"Current Viewport Left:\", winbox.left); The window body acts like the document.body and has a scroll pane: var winbox = new WinBox(); winbox.body.innerHTML = \"<h1>Lorem Ipsum</h1>\"; Get the DOM element from the window outer frame: var winbox = new WinBox(); var root = winbox.window; You also can get the window element by DOM id: var winbox = new WinBox(); var root = document.getElementById(winbox.id); The window element points to the window most outer root element which also holds the window control and state classes: You can access and modify the window DOM element directly: const root = winbox.window; const hidden = root.classList.contains(\"hide\"); const focused = root.classList.contains(\"focus\"); root.classList.remove(\"modal\"); root.classList.add(\"my-theme\"); root.classList.toggle(\"my-toggle\"); Or as an equivalent to the example above by using the WinBox built-in methods respectively: const hidden = winbox.hasClass(\"hide\"); const focused = winbox.hasClass(\"focus\"); winbox.removeClass(\"modal\"); winbox.addClass(\"my-theme\"); winbox.toggleClass(\"my-toggle\"); You can grab the winbox instance from the window outer frame DOM element: var winbox = new WinBox(); // assume you have a DOM reference to the winbox window: var window_element = document.getElementById(winbox.id); // grab corresponding instance from window element: winbox = window_element.winbox; Controls var winbox = new WinBox(); Focus a window (bring up to front): winbox.focus(); winbox.focus(true); winbox.blur(false); Blur a focused window: winbox.blur(); winbox.blur(true); winbox.focus(false); Set the minimized state of a window: winbox.minimize(); winbox.minimize(true); winbox.minimize(false); Set the maximized state of a window: winbox.maximize(); winbox.maximize(true); winbox.maximize(false); Set the fullscreen state of a window: winbox.fullscreen(); winbox.fullscreen(true); winbox.fullscreen(false); Restore the state of a window: winbox.restore(); Hide a specific window: winbox.hide(); winbox.hide(true); winbox.show(false); Show a specific hidden window: winbox.show(); winbox.show(true); winbox.hide(false); Close and destroy a window: winbox.close(); Close and destroy a window depending on custom conditional (e.g. by a confirmation status): winbox.close(false || true); Chaining Methods var winbox = WinBox(); winbox.setTitle(\"Title\") .setBackground(\"#fff\") .resize(\"50%\", \"50%\") .move(\"center\", \"center\") .mount(document.getElementById(\"content\")); When using \"center\" as position you need to call .resize() before .move(). Callbacks You can assign callbacks via the option payload when creating a window. The keyword this in your callback function refers to the corresponding WinBox Instance. var winbox = WinBox({ oncreate: function(options){ options.autosize = true; }, onfocus: function(){ this.setBackground(\"#fff\"); }, onblur: function(){ this.setBackground(\"#999\"); }, onresize: function(width, height){ console.log(\"width:\", width, \"height:\", height); }, onfullscreen: function(){ this.setBackground(\"#666\"); }, onminimize: function(){ this.setBackground(\"#999\"); }, onmaximize: function(){ this.setBackground(\"#AAA\"); }, onrestore: function(){ this.setBackground(\"#DDD\"); }, onmove: function(x, y){ console.log(\"x:\", x, \"y:\", y); }, onclose: function(force){ // return \"true\" to skip the closing // return \"false\" to allow closing // use delegated force parameter optionally return !confirm(\"Close window?\"); } }); The \"onclose\" callback The event onclose will be triggered right before closing and stops closing when a callback was applied and returns a truthy value. Within your callback function just return true to stops the closing or return false to perform closing as default. new WinBox({ onclose: function(){ // return \"true\" to skip the closing // return \"false\" to allow closing if(do_some_checks()){ return true; } } }); The force parameter from the winbox.close(boolean) will be delegated to your callback function as the first parameter. You need to handle the \"force\" state in your callback function. var winbox = WinBox({ onclose: function onclose(force){ // use delegated force parameter optionally return !force && !confirm(\"Close window?\"); } }); Close the window and execute callback as default (will show the prompt from example above): winbox.close(); Force closing the window (does not show the prompt from example above): winbox.close(true); Use Control Classes WinBox provides you some built-in control classes you can pass when creating a window instance. All control classes from this list could be added or removed during lifetime of the window (after creation). State classes like max, min, full, hidden and focus could not be changed manually! For this purpose use the WinBox member methods accordingly e.g. maximize(), minimize(), hide(). Classname Description no-animation Disables the windows transition animation no-shadow Disables the windows drop shadow no-header Hide the window header incl. title and toolbar no-min Hide the minimize icon no-max Hide the maximize icon no-full Hide the fullscreen icon no-close Hide the close icon no-resize Disables the window resizing capability no-move Disables the window moving capability Without the header the user isn't able to move the window frame. It may be useful for creating fixed popups. Pass in classnames when creating the window to apply behaviour: const winbox = WinBox({ class: [ \"no-min\", \"no-max\", \"no-full\", \"no-resize\", \"no-move\" ] }); The example above is a good start to create classical popups. Alternatively you can use a whitespace separated string: const winbox = WinBox({ class: \"no-min no-max no-full no-resize no-move\" }); You can add or remove all control classes from above along the window's lifetime: const winbox = WinBox(); winbox.addClass(\"no-resize\") .addClass(\"no-move\"); winbox.removeClass(\"no-resize\") .removeClass(\"no-move\"); winbox.toggleClass(\"no-resize\") .toggleClass(\"no-move\"); const state = winbox.hasClass(\"no-resize\") && winbox.hasClass(\"no-move\"); Custom Splitscreen Use the viewport limit to define your own splitscreen areas, e.g. for a simple vertical split: new WinBox(\"Split Left\", { right: \"50%\" }); new WinBox(\"Split Right\", { left: \"50%\" }); Same way you can also define custom sizes and positions for each split as well as complex grids, e.g.: new WinBox(\"Split Top-Left\", { right: \"66%\", bottom: \"50%\", max: true }); new WinBox(\"Split Bottom-Left\", { right: \"66%\", top: \"50%\", max: true }); new WinBox(\"Split Middle\", { left: \"34%\", right: \"34%\", max: true }); new WinBox(\"Split Top-Right\", { left: \"66%\", bottom: \"50%\", max: true }); new WinBox(\"Split Bottom-Right\", { left: \"66%\", top: \"50%\", max: true }); The splitscreen from above will look like this grid: --------------------------------------------- | | | | | | | | | Top Left | | Top Right | | | | | | | | | --------------- Middle ---------------- | | | | | | | | | Bottom Left | | Bottom Right | | | | | | | | | --------------------------------------------- You can set the values for the viewport dynamically, doing this makes it possible to size the grid dynamically and also change the grid schema. Custom Controls This example will add a custom control button .wb-like to the window heading toolbar along some CSS for icon styling: .wb-like { background-size: 20px auto; } .wb-like.active { background-image: url(demo/heart-filled.svg) !important; } Attach a control to the window toolbar: winbox.addControl({ // the position index index: 1, // classname to apply styling class: \"wb-like\", // icon url when not specified via classname image: \"demo/heart.svg\", // click listener click: function(event, winbox){ // the winbox instance will be passed as 2nd parameter console.log(winbox.id); // \"this\" refers to the button which was clicked: this.classList.toggle(\"active\"); } }); Remove a control from the window toolbar: winbox.removeControl(\"wb-like\") .removeControl(\"wb-min\"); Custom Template (Layout) You can fully customize the WinBox window layout by providing a custom template via the config during creation. This way you can add new elements to the window or re-arrange them. This example will add a control button .wb-custom to the window toolbar by using a custom template along some CSS: .wb-custom { background-image: url(demo/icon-github.svg); background-size: 17px auto; } Create by using a custom template: const template = document.createElement(\"div\"); template.innerHTML = ` <div class=wb-header> <div class=wb-control> <span class=wb-custom></span> <span class=wb-close></span> </div> <div class=wb-drag></div> </div> <div class=wb-body></div> `; new WinBox(\"Custom Template\", { template }); The .wb-drag element needs to be existing when the user should be able to move the window by dragging the heading toolbar. Customize Window Additionally, take a look into the themes folder to get some ideas how to customize the window. The window boilerplate: Hide or disable specific icons: .wb-min { display: none } .wb-full { display: none } .wb-max { display: none } .wb-close { display: none } Modify a specific icon: .wb-max { background-image: url(src/img/max.png); background-position: center; background-size: 15px auto; } Use black standard icons (useful for bright backgrounds): .wb-control { filter: invert(1) } Modify or disable resizing areas on the window borders: /* north */ .wb-n { display: none } /* east */ .wb-e { display: none } /* south */ .wb-s { display: none } /* west */ .wb-w { display: none } /* north-west */ .wb-nw { display: none } /* north-east */ .wb-ne { display: none } /* south-west */ .wb-sw { display: none } /* south-east */ .wb-se { display: none } Modify or disable the window drop shadow: .winbox { box-shadow: none } Style the header title: .wb-title { font-size: 12px } Style the titlebar icon: .wb-icon { width: 35px; background-size: 35px 35px; } Style the window background (frame): .winbox { background: linear-gradient(90deg, #ff00f0, #0050ff); border-radius: 12px 12px 0 0; } Style the body of a window element and set the frame border: .wb-body { /* the width of window frame border: */ margin: 4px; color: #fff; background: #131820; } The margin of .wb-body corresponds to the width of the window border. Apply styles when window is in \"minimized\" state: .winbox { border-radius: 10px; } .winbox.min { border-radius: 0; } .winbox.min .windbox-title { font-size: 12px; } Apply styles when window is NOT in \"minimized\" state: .winbox:not(.min) { /* apply styles */ } Apply styles when window is in \"maximized\" state: .winbox { border-radius: 10px; } .winbox.max { border-radius: 0; } .winbox.max .wb-max { opacity: 0.5; } Apply styles when window is NOT in \"maximized\" state: .winbox:not(.max) { /* apply styles */ } Apply styles when window is in \"fullscreen\" state: .wb-body:fullscreen { /* apply styles */ } Apply styles when window is in \"focus\" state: .winbox { background: #999; } .winbox.focus { background: #0050ff; } .winbox .wb-control { display: none; } .winbox.focus .wb-control { display: block; } Apply styles when window is NOT in \"focus\" state (the same logic from example above, but shorter): .winbox:not(.focus) { background: #999; } .winbox:not(.focus) .wb-control { display: none; } Apply styles when window is in \"modal\" state: .winbox.modal .wb-close { display: none } Customize the modal background overlay: .winbox.modal:after { background: #0d1117; opacity: 0.5; animation: none; } Style Scrollbars .wb-body::-webkit-scrollbar { width: 12px; } .wb-body::-webkit-scrollbar-track { background: transparent; } .wb-body::-webkit-scrollbar-thumb { border-radius: 10px; background: #263040; } .wb-body::-webkit-scrollbar-thumb:window-inactive { background: #181f2a; } .wb-body::-webkit-scrollbar-corner { background: transparent; } Useful Hints Often you need to hide specific content parts when it was mounted to a window or hiding when NOT inside a window: Now you can add the two classes \"wb-hide\" and \"wb-show\" to any element to control visibility between the two states \"inside\" and \"outside\" a window: <body> <main id=\"content\"> <header class=\"wb-hide\">Hide this header when in windowed mode</header> <section> <!-- page contents --> </section> <footer class=\"wb-show\">Hide this footer when NOT in windowed mode</footer> </main> </body> The display property when using \"wb-show\" might not fit your needs. Please change this css class definition to your desired display-state accordingly. new WinBox({ mount: document.getElementById(\"content\") }); Best Practices Use a non-scrolling body element to get the best user experience on mobile devices. Or provide an alternative view strategy for mobile devices, e.g. when the device is a touch device then open a classical app view. If a mouse pointer is available, then mount this view to the WinBox window. Also, you can place a switch button in your application where the user can also toggle between these two modes. WinBox on Angular application Step 1: Install WinBox library npm i winbox Step 2: Install WinBox types npm i @types/winbox --save-dev Step 3: Import WinBox in a component import { Component } from '@angular/core'; import 'winbox'; declare const WinBox: WinBox.WinBoxConstructor; @Component({ selector: 'my-app', template: '<button (click)=\"openWindow()\">Open Window</button>' }) export class AppComponent { openWindow() { WinBox.new(); } } WinBox on Vue application https://github.com/wobsoriano/vue-winbox It uses the native teleport component in Vue 3 and recommends https://github.com/LinusBorg/vue-simple-portal for Vue 2 users. WinBox on React application https://github.com/rickonono3/react-winbox A React controlled component for WinBox.js, with full Reactful props and state. Includes all configurations of WinBox.js by using React component props. Custom Builds Go to the root directory of WinBox and run: npm install Perform a build: npm run build The final build is located in the dist/ folder. Copyright 2021-2023 Thomas Wilkerling, Hosted by Nextapps GmbH Released under the Apache 2.0 License",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/8a3c0017d57e0ac521154071ec208cdb9b6c693bb71649b79636b1d3ccade1eb/68747470733a2f2f63646e2e6a7364656c6976722e6e65742f67682f6e657874617070732d64652f77696e626f78406d61737465722f64656d6f2f77696e626f782d6772616469656e742e737667"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/nextapps-de/winbox#----"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/nextapps-de/winbox#modern-window-manager-for-the-web-lightweight-outstanding-performance-no-dependencies-fully-customizable-open-source"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/winbox"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/nextapps-de/winbox/blob/master/LICENSE.md"
+    },
+    {
+      "label": "Demo",
+      "url": "https://nextapps-de.github.io/winbox/"
+    },
+    {
+      "label": "Getting Started",
+      "url": "https://github.com/nextapps-de/winbox#started"
+    },
+    {
+      "label": "Options",
+      "url": "https://github.com/nextapps-de/winbox#options"
+    },
+    {
+      "label": "API",
+      "url": "https://github.com/nextapps-de/winbox#api"
+    },
+    {
+      "label": "Themes",
+      "url": "https://github.com/nextapps-de/winbox#themes"
+    },
+    {
+      "label": "Customize",
+      "url": "https://github.com/nextapps-de/winbox#customize"
+    },
+    {
+      "label": "Changelog",
+      "url": "https://github.com/nextapps-de/winbox/blob/master/CHANGELOG.md"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/nextapps-de/winbox#live-demo-and-code-examples"
+    },
+    {
+      "label": "",
+      "url": "https://nextapps-de.github.io/winbox/"
+    },
+    {
+      "label": "https://nextapps-de.github.io/winbox/",
+      "url": "https://nextapps-de.github.io/winbox/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/nextapps-de/winbox#support-this-project"
+    },
+    {
+      "label": "",
+      "url": "https://opencollective.com/winboxjs/donate"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/sponsors/ts-thomas/"
+    },
+    {
+      "label": "",
+      "url": "https://liberapay.com/ts-thomas/donate"
+    },
+    {
+      "label": "",
+      "url": "https://www.patreon.com/user?u=96245532"
+    },
+    {
+      "label": "",
+      "url": "https://salt.bountysource.com/teams/ts-thomas"
+    },
+    {
+      "label": "",
+      "url": "https://www.paypal.com/donate/?hosted_button_id=GEVR88FC9BWRW"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/nextapps-de/winbox#plugins--add-ons--extensions"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/wobsoriano/vue-winbox"
+    },
+    {
+      "label": "https://github.com/wobsoriano/vue-winbox",
+      "url": "https://github.com/wobsoriano/vue-winbox"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/rickonono3/react-winbox"
+    },
+    {
+      "label": "https://github.com/rickonono3/react-winbox",
+      "url": "https://github.com/rickonono3/react-winbox"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/nextapps-de/winbox#getting-started"
+    },
+    {
+      "label": "Download",
+      "url": "https://github.com/nextapps-de/winbox/raw/0.2.82/dist/winbox.bundle.min.js"
+    },
+    {
+      "label": "https://rawcdn.githack.com/nextapps-de/winbox/0.2.82/dist/winbox.bundle.min.js",
+      "url": "https://rawcdn.githack.com/nextapps-de/winbox/0.2.82/dist/winbox.bundle.min.js"
+    },
+    {
+      "label": "Download",
+      "url": "https://github.com/nextapps-de/winbox/raw/0.2.82/dist/js/winbox.min.js"
+    },
+    {
+      "label": "https://rawcdn.githack.com/nextapps-de/winbox/0.2.82/dist/js/winbox.min.js",
+      "url": "https://rawcdn.githack.com/nextapps-de/winbox/0.2.82/dist/js/winbox.min.js"
+    },
+    {
+      "label": "Download",
+      "url": "https://github.com/nextapps-de/winbox/raw/0.2.82/dist/css/winbox.min.css"
+    },
+    {
+      "label": "https://rawcdn.githack.com/nextapps-de/winbox/0.2.82/dist/css/winbox.min.css",
+      "url": "https://rawcdn.githack.com/nextapps-de/winbox/0.2.82/dist/css/winbox.min.css"
+    },
+    {
+      "label": "Download",
+      "url": "https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/nextapps-de/winbox/tree/0.2.82/src/js"
+    },
+    {
+      "label": "Download",
+      "url": "https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/nextapps-de/winbox/tree/0.2.82/src/css"
+    },
+    {
+      "label": "Download",
+      "url": "https://github.com/nextapps-de/winbox/raw/0.2.82/src/css/winbox.css"
+    },
+    {
+      "label": "https://rawcdn.githack.com/nextapps-de/winbox/0.2.82/src/css/winbox.css",
+      "url": "https://rawcdn.githack.com/nextapps-de/winbox/0.2.82/src/css/winbox.css"
+    },
+    {
+      "label": "Download",
+      "url": "https://minhaskamal.github.io/DownGit/#/home?url=https://github.com/nextapps-de/winbox/tree/0.2.82/dist"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/nextapps-de/winbox#use-bundled-version-recommended"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/nextapps-de/winbox#use-non-bundled-version"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/nextapps-de/winbox#es6-modules"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/nextapps-de/winbox#overview"
+    },
+    {
+      "label": "WinBox(title, options<key: value>)",
+      "url": "https://github.com/nextapps-de/winbox#winbox.new"
+    },
+    {
+      "label": "WinBox.new(title, options<key: value>)",
+      "url": "https://github.com/nextapps-de/winbox#winbox.new"
+    },
+    {
+      "label": "WinBox.stack()",
+      "url": "https://github.com/nextapps-de/winbox#winbox.stack"
+    },
+    {
+      "label": "winbox.mount(src)",
+      "url": "https://github.com/nextapps-de/winbox#winbox.mount"
+    },
+    {
+      "label": "winbox.unmount(dest)",
+      "url": "https://github.com/nextapps-de/winbox#winbox.unmount"
+    },
+    {
+      "label": "winbox.setUrl(string)",
+      "url": "https://github.com/nextapps-de/winbox#winbox.setUrl"
+    },
+    {
+      "label": "winbox.setTitle(string)",
+      "url": "https://github.com/nextapps-de/winbox#winbox.setTitle"
+    },
+    {
+      "label": "winbox.setIcon(url)",
+      "url": "https://github.com/nextapps-de/winbox#winbox.setIcon"
+    },
+    {
+      "label": "winbox.move(x, y)",
+      "url": "https://github.com/nextapps-de/winbox#winbox.move"
+    },
+    {
+      "label": "winbox.resize(width, height)",
+      "url": "https://github.com/nextapps-de/winbox#winbox.resize"
+    },
+    {
+      "label": "winbox.close(boolean)",
+      "url": "https://github.com/nextapps-de/winbox#winbox.close"
+    },
+    {
+      "label": "winbox.focus(state)",
+      "url": "https://github.com/nextapps-de/winbox#winbox.focus"
+    },
+    {
+      "label": "winbox.blur(state)",
+      "url": "https://github.com/nextapps-de/winbox#winbox.blur"
+    },
+    {
+      "label": "winbox.hide(state)",
+      "url": "https://github.com/nextapps-de/winbox#winbox.hide"
+    },
+    {
+      "label": "winbox.show(state)",
+      "url": "https://github.com/nextapps-de/winbox#winbox.show"
+    },
+    {
+      "label": "winbox.minimize(state)",
+      "url": "https://github.com/nextapps-de/winbox#winbox.minimize"
+    },
+    {
+      "label": "winbox.maximize(state)",
+      "url": "https://github.com/nextapps-de/winbox#winbox.maximize"
+    },
+    {
+      "label": "winbox.fullscreen(state)",
+      "url": "https://github.com/nextapps-de/winbox#winbox.fullscreen"
+    },
+    {
+      "label": "winbox.restore(state)",
+      "url": "https://github.com/nextapps-de/winbox#winbox.restore"
+    },
+    {
+      "label": "winbox.setBackground(string)",
+      "url": "https://github.com/nextapps-de/winbox#winbox.setBackground"
+    },
+    {
+      "label": "winbox.addClass(name)",
+      "url": "https://github.com/nextapps-de/winbox#winbox.addClass"
+    },
+    {
+      "label": "winbox.removeClass(name)",
+      "url": "https://github.com/nextapps-de/winbox#winbox.removeClass"
+    },
+    {
+      "label": "winbox.hasClass(name)",
+      "url": "https://github.com/nextapps-de/winbox#winbox.hasClass"
+    },
+    {
+      "label": "winbox.toggleClass(name)",
+      "url": "https://github.com/nextapps-de/winbox#winbox.toggleClass"
+    },
+    {
+      "label": "winbox.addControl(options)",
+      "url": "https://github.com/nextapps-de/winbox#winbox.addControl"
+    },
+    {
+      "label": "winbox.removeControl(name)",
+      "url": "https://github.com/nextapps-de/winbox#winbox.removeControl"
+    },
+    {
+      "label": "winbox.id",
+      "url": "https://github.com/nextapps-de/winbox#winbox.id"
+    },
+    {
+      "label": "winbox.index",
+      "url": "https://github.com/nextapps-de/winbox#winbox.index"
+    },
+    {
+      "label": "winbox.window",
+      "url": "https://github.com/nextapps-de/winbox#winbox.window"
+    },
+    {
+      "label": "winbox.body",
+      "url": "https://github.com/nextapps-de/winbox#winbox.body"
+    },
+    {
+      "label": "winbox.x",
+      "url": "https://github.com/nextapps-de/winbox#winbox.x"
+    },
+    {
+      "label": "winbox.y",
+      "url": "https://github.com/nextapps-de/winbox#winbox.y"
+    },
+    {
+      "label": "winbox.width",
+      "url": "https://github.com/nextapps-de/winbox#winbox.width"
+    },
+    {
+      "label": "winbox.height",
+      "url": "https://github.com/nextapps-de/winbox#winbox.height"
+    },
+    {
+      "label": "winbox.top",
+      "url": "https://github.com/nextapps-de/winbox#winbox.top"
+    },
+    {
+      "label": "winbox.right",
+      "url": "https://github.com/nextapps-de/winbox#winbox.right"
+    },
+    {
+      "label": "winbox.bottom",
+      "url": "https://github.com/nextapps-de/winbox#winbox.bottom"
+    },
+    {
+      "label": "winbox.left",
+      "url": "https://github.com/nextapps-de/winbox#winbox.left"
+    },
+    {
+      "label": "winbox.minwidth",
+      "url": "https://github.com/nextapps-de/winbox#winbox.minwidth"
+    },
+    {
+      "label": "winbox.minheight",
+      "url": "https://github.com/nextapps-de/winbox#winbox.minheight"
+    },
+    {
+      "label": "winbox.maxwidth",
+      "url": "https://github.com/nextapps-de/winbox#winbox.maxwidth"
+    },
+    {
+      "label": "winbox.maxheight",
+      "url": "https://github.com/nextapps-de/winbox#winbox.maxheight"
+    },
+    {
+      "label": "winbox.min",
+      "url": "https://github.com/nextapps-de/winbox#winbox.min"
+    },
+    {
+      "label": "winbox.max",
+      "url": "https://github.com/nextapps-de/winbox#winbox.max"
+    },
+    {
+      "label": "winbox.full",
+      "url": "https://github.com/nextapps-de/winbox#winbox.full"
+    },
+    {
+      "label": "winbox.hidden",
+      "url": "https://github.com/nextapps-de/winbox#winbox.hidden"
+    },
+    {
+      "label": "winbox.focused",
+      "url": "https://github.com/nextapps-de/winbox#winbox.focused"
+    },
+    {
+      "label": "winbox.oncreate",
+      "url": "https://github.com/nextapps-de/winbox#winbox.oncreate"
+    },
+    {
+      "label": "winbox.onshow",
+      "url": "https://github.com/nextapps-de/winbox#winbox.onshow"
+    },
+    {
+      "label": "winbox.onhide",
+      "url": "https://github.com/nextapps-de/winbox#winbox.onhide"
+    },
+    {
+      "label": "winbox.onclose",
+      "url": "https://github.com/nextapps-de/winbox#winbox.onclose"
+    },
+    {
+      "label": "winbox.onfocus",
+      "url": "https://github.com/nextapps-de/winbox#winbox.onfocus"
+    },
+    {
+      "label": "winbox.onblur",
+      "url": "https://github.com/nextapps-de/winbox#winbox.onblur"
+    },
+    {
+      "label": "winbox.onmove",
+      "url": "https://github.com/nextapps-de/winbox#winbox.onmove"
+    },
+    {
+      "label": "winbox.onresize",
+      "url": "https://github.com/nextapps-de/winbox#winbox.onresize"
+    },
+    {
+      "label": "winbox.onfullscreen",
+      "url": "https://github.com/nextapps-de/winbox#winbox.onfullscreen"
+    },
+    {
+      "label": "winbox.onmaximize",
+      "url": "https://github.com/nextapps-de/winbox#winbox.onmaximize"
+    },
+    {
+      "label": "winbox.onminimize",
+      "url": "https://github.com/nextapps-de/winbox#winbox.onminimize"
+    },
+    {
+      "label": "winbox.onrestore",
+      "url": "https://github.com/nextapps-de/winbox#winbox.onrestore"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/nextapps-de/winbox#options"
+    },
+    {
+      "label": "Built-in Control Classes",
+      "url": "https://github.com/nextapps-de/winbox#control-classes"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/nextapps-de/winbox#create-and-setup-window"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/nextapps-de/winbox#basic-window"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/nextapps-de/winbox#custom-root"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/nextapps-de/winbox#custom-color"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/nextapps-de/winbox#custom-border"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/nextapps-de/winbox#custom-titlebar-icon"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/nextapps-de/winbox#custom-viewport"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/nextapps-de/winbox#custom-position--size"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/nextapps-de/winbox#overflow-window"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/nextapps-de/winbox#modal-window"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/nextapps-de/winbox#window-stack"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/nextapps-de/winbox#themes"
+    },
+    {
+      "label": "here",
+      "url": "https://github.com/nextapps-de/winbox/tree/master/dist/css/themes"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/nextapps-de/winbox#manage-window-content"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/nextapps-de/winbox#set-innerhtml"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/nextapps-de/winbox#mount-dom-cloned"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/nextapps-de/winbox#mount-dom-singleton--auto-unmount"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/nextapps-de/winbox#explicit-unmount"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/nextapps-de/winbox#manual-mount-contents"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/nextapps-de/winbox#open-uri--url"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/nextapps-de/winbox#the-winbox-window-instance"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/nextapps-de/winbox#controls"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/nextapps-de/winbox#chaining-methods"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/nextapps-de/winbox#callbacks"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/nextapps-de/winbox#the-onclose-callback"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/nextapps-de/winbox#use-control-classes"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/nextapps-de/winbox#custom-splitscreen"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/nextapps-de/winbox#custom-controls"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/nextapps-de/winbox#custom-template-layout"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/nextapps-de/winbox#customize-window"
+    },
+    {
+      "label": "themes folder",
+      "url": "https://github.com/nextapps-de/winbox/tree/master/src/css/themes"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/c5d6bb59568f28b9ec146c3fe44d620fad47f4fb4a4198fe582d19df40f1ac1b/68747470733a2f2f63646e2e6a7364656c6976722e6e65742f67682f6e657874617070732d64652f77696e626f78406d61737465722f64656d6f2f626f696c6572706c6174652e7376673f763d34"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/nextapps-de/winbox#style-scrollbars"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/nextapps-de/winbox#useful-hints"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/nextapps-de/winbox#best-practices"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/nextapps-de/winbox#winbox-on-angular-application"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/nextapps-de/winbox#winbox-on-vue-application"
+    },
+    {
+      "label": "https://github.com/wobsoriano/vue-winbox",
+      "url": "https://github.com/wobsoriano/vue-winbox"
+    },
+    {
+      "label": "teleport",
+      "url": "https://v3.vuejs.org/api/built-in-components.html#teleport"
+    },
+    {
+      "label": "https://github.com/LinusBorg/vue-simple-portal",
+      "url": "https://github.com/LinusBorg/vue-simple-portal"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/nextapps-de/winbox#winbox-on-react-application"
+    },
+    {
+      "label": "https://github.com/rickonono3/react-winbox",
+      "url": "https://github.com/rickonono3/react-winbox"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/nextapps-de/winbox#custom-builds"
+    },
+    {
+      "label": "Apache 2.0 License",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+    }
+  ],
+  "root_files": [
+    ".github",
+    "demo",
+    "dist",
+    "src",
+    "task",
+    ".gitattributes",
+    ".gitignore",
+    "CHANGELOG.md",
+    "LICENSE",
+    "README.md",
+    "index.html",
+    "package.json"
+  ],
+  "release_count": 28,
+  "status": "verified"
+}

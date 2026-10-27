@@ -1,0 +1,86 @@
+{
+  "url": "https://github.com/ekmas/neobrutalism-components",
+  "final_url": "https://github.com/ekmas/neobrutalism-components",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:47:45.945448+00:00",
+  "stars": 5612,
+  "forks": 188,
+  "description": "A collection of neobrutalism-styled Tailwind components.",
+  "homepage": "https://neobrutalism.dev",
+  "topics": [
+    "neobrutalism",
+    "neobrutalism-components",
+    "nextjs",
+    "react",
+    "react-component-library",
+    "react-components",
+    "react-typescript",
+    "react-ui-components",
+    "shadcn",
+    "shadcn-components",
+    "shadcn-theme",
+    "shadcn-ui",
+    "tailwind",
+    "ui-library"
+  ],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2023-07-25T17:51:55.000Z",
+  "branch": "main",
+  "commit": "3306a802724874a85f93079702b2795370a279d4",
+  "readme": "Neobrutalism components Introduction Neobrutalism components are a collection of neobrutalism-styled components based on shadcn/ui. Documentation Visit docs to get started. About I created this collection of components for people who want to learn more about neobrutalism style and to help them get started with creating neobrutalism layouts. License MIT",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://github.com/ekmas/neobrutalism-components#neobrutalism-components"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/ekmas/neobrutalism-components/blob/main/public/preview.png"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/ekmas/neobrutalism-components#introduction"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/ekmas/neobrutalism-components#documentation"
+    },
+    {
+      "label": "docs",
+      "url": "https://www.neobrutalism.dev/docs"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/ekmas/neobrutalism-components#about"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/ekmas/neobrutalism-components#license"
+    },
+    {
+      "label": "MIT",
+      "url": "https://github.com/ekmas/neobrutalism-components/blob/main/LICENSE"
+    }
+  ],
+  "root_files": [
+    "public",
+    "src",
+    ".eslintrc.json",
+    ".gitignore",
+    ".prettierignore",
+    ".prettierrc.js",
+    "CONTRIBUTING.md",
+    "LICENSE",
+    "README.md",
+    "next.config.mjs",
+    "package.json",
+    "pnpm-lock.yaml",
+    "postcss.config.js",
+    "registry.json",
+    "tsconfig.json",
+    "velite.config.ts"
+  ],
+  "release_count": null,
+  "status": "verified"
+}

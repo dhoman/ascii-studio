@@ -1,0 +1,118 @@
+{
+  "url": "https://github.com/bitjson/qr-code",
+  "final_url": "https://github.com/bitjson/qr-code",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:47:37.319444+00:00",
+  "stars": 1383,
+  "forks": 85,
+  "description": "A no-framework, no-dependencies, customizable, animate-able, SVG-based <qr-code> HTML element.",
+  "homepage": "https://qr.bitjson.com/",
+  "topics": [
+    "animated",
+    "bch",
+    "bitcoin",
+    "bitcoin-cash",
+    "cryptocurrency",
+    "ethereum",
+    "qr-code",
+    "qr-code-component",
+    "qr-code-generator",
+    "qr-generator",
+    "stencil",
+    "svg",
+    "svg-animations",
+    "web-animations",
+    "web-component"
+  ],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2023-02-27T08:44:10.000Z",
+  "branch": "master",
+  "commit": "de60f23e80d5c7477a1d58512e32eb6751b85f88",
+  "readme": "<qr-code> A no-framework, no-dependencies, customizable, animate-able, SVG-based <qr-code> HTML element. It's just a single, self-contained Web Component. bitjson-qr-code-demo.mp4 Announcement post – usage guidance and background information Interactive demo – try the above demo in your browser Usage Import <qr-code> using your build system or framework (e.g. npm install @bitjson/qr-code), or use the standalone script in your HTML <head> element: <script src=\"https://unpkg.com/@bitjson/qr-code@1.0.2/dist/qr-code.js\"></script> Then use the component anywhere in your HTML <body> element: <qr-code contents=\"https://bitjson.com\"></qr-code> Full Example Here's an example in pure HTML using most features: <qr-code id=\"qr1\" contents=\"https://bitjson.com/\" module-color=\"#1c7d43\" position-ring-color=\"#13532d\" position-center-color=\"#70c559\" mask-x-to-y-ratio=\"1.2\" style=\" width: 200px; height: 200px; margin: 2em auto; background-color: #fff; \" > <img src=\"assets/1.2-x-to-y-ratio-icon.svg\" slot=\"icon\" /> </qr-code> <script> document.getElementById('qr1').addEventListener('codeRendered', () => { document.getElementById('qr1').animateQRCode('MaterializeIn'); }); </script> Animations Animate in, animate on user interactions like URL hits or detected payments, and/or animate out when the QR code interaction is complete. Several preset animations are available, simply run them with the element's animateQRCode method: document.getElementById('qr1').animateQRCode('RadialRipple'); Available built-in presets: FadeInTopDown FadeInCenterOut MaterializeIn RadialRipple RadialRippleIn You can also design your own custom animations! Just pass a function to the qr-code's animateQRCode method, e.g.: document .getElementById('qr1') .animateQRCode((targets, _x, _y, _count, entity) => ({ targets, from: entity === 'module' ? Math.random() * 200 : 200, duration: 500, easing: 'cubic-bezier(.5,0,1,1)', web: { opacity: [1, 0], scale: [1, 1.1, 0.5] }, })); The built-in presets use this API internally, so review those for guidance and inspiration. Pull request for new presets are welcome! Animation Previewer The animation previewer makes fine-tuning animations much easier: try it by cloning this repo and running the live-reloading package script: git clone https://github.com/bitjson/qr-code.git cd qr-code npm ci npm start Then work on your animation in src/index.html using the animation previewer (at the bottom right of the window) to test the last-run animation at various speeds, scrub through it manually, or play it in reverse. Production build Disable the just-animate player in src/components/qr-code/qr-code.tsx, then build: npm run build You can test the built component by pointing the script in index.html to dist/qr-code.js and opening the page via the local filesystem.",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@bitjson/qr-code"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@bitjson/qr-code"
+    },
+    {
+      "label": "",
+      "url": "https://twitter.com/bitjson"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/bitjson/qr-code"
+    },
+    {
+      "label": "<qr-code>",
+      "url": "https://qr.bitjson.com/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/bitjson/qr-code#qr-code"
+    },
+    {
+      "label": "Web Component",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/Web_Components"
+    },
+    {
+      "label": "Announcement post",
+      "url": "https://blog.bitjson.com/qr-code/"
+    },
+    {
+      "label": "Interactive demo",
+      "url": "https://qr.bitjson.com/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/bitjson/qr-code#usage"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/bitjson/qr-code#full-example"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/bitjson/qr-code#animations"
+    },
+    {
+      "label": "built-in presets use this API internally",
+      "url": "https://github.com/bitjson/qr-code/blob/master/src/components/qr-code/animations.ts"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/bitjson/qr-code#animation-previewer"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/bitjson/qr-code#production-build"
+    },
+    {
+      "label": "src/components/qr-code/qr-code.tsx",
+      "url": "https://github.com/bitjson/qr-code/blob/master/src/components/qr-code/qr-code.tsx"
+    },
+    {
+      "label": "index.html",
+      "url": "https://github.com/bitjson/qr-code/blob/master/index.html"
+    }
+  ],
+  "root_files": [
+    ".github",
+    "src",
+    ".gitignore",
+    "LICENSE",
+    "favicon.ico",
+    "index.html",
+    "package-lock.json",
+    "package.json",
+    "readme.md",
+    "stencil.config.js",
+    "tsconfig.json"
+  ],
+  "release_count": 0,
+  "status": "verified"
+}

@@ -1,0 +1,341 @@
+{
+  "url": "https://github.com/naver/egjs-flicking",
+  "final_url": "https://github.com/naver/egjs-flicking",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:48:04.667509+00:00",
+  "stars": 2923,
+  "forks": 137,
+  "description": "🎠 ♻️ Everyday 30 million people experience. It's reliable, flexible and extendable carousel.",
+  "homepage": "https://naver.github.io/egjs-flicking/",
+  "topics": [
+    "angular",
+    "carousel",
+    "desktop",
+    "egjs",
+    "iscroll",
+    "javascript",
+    "mobile",
+    "react",
+    "reactjs",
+    "slider",
+    "tablet",
+    "typescript",
+    "vue"
+  ],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2017-04-28T02:32:33.000Z",
+  "branch": "master",
+  "commit": "158610f0897ac84ce570d9cc4c4fc9587a664bc6",
+  "readme": "@egjs/flicking Demo / Guide / API / Other components Reliable, flexible and extendable carousel component.📱💻🖥 🖱️Click each images to see its source or check our full demos. ✨ Features SSR ready — works with Next.js and Nuxt Circular mode — seamless infinite loop Free scroll — momentum-based native scroll experience Virtual scroll — render only visible panels for large datasets Plugins — AutoPlay, Fade, Parallax, Arrow, Pagination via @egjs/flicking-plugins TypeScript — fully typed API ⚙️ Installation npm $ npm install --save @egjs/flicking CDN jsDelivr: https://cdn.jsdelivr.net/npm/@egjs/flicking/dist/ unpkg: https://unpkg.com/@egjs/flicking/dist/ cdnjs: https://cdnjs.com/libraries/egjs-flicking 🏃 Quick Start HTML Flicking requires minimal structure to initialize properly. You don't need to consider this when using Flicking with the frameworks. <div id=\"my-flicking\" class=\"flicking-viewport\"> <div class=\"flicking-camera\"> <div class=\"panel\"></div> <div class=\"panel\"></div> <div class=\"panel\"></div> </div> </div> ES Modules import Flicking from \"@egjs/flicking\"; import \"@egjs/flicking/dist/flicking.css\"; const flicking = new Flicking(\"#my-flicking\", { circular: true }); With CDN <!-- Packaged with all dependencies --> <script src=\"https://unpkg.com/@egjs/flicking/dist/flicking.pkgd.min.js\"></script> <link rel=\"stylesheet\" href=\"https://unpkg.com/@egjs/flicking/dist/flicking.css\"> var flicking = new Flicking(\"#my-flicking\", { circular: true }); 📦 Packages This repository is a monorepo that contains Flicking and all its related packages. Package Version Description @egjs/flicking Core carousel library @egjs/flicking-plugins Readymade effects for your carousel @egjs/react-flicking React port of @egjs/flicking @egjs/vue3-flicking Vue 3 port of @egjs/flicking 🌐 Supported Browsers Latest Latest Latest 7+ 4+ 🤖 AI Native egjs is investing in an AI-native development experience — use-case-centered documentation, stronger TypeScript types, clearer error messages, and predictable internals to help both humans and AI agents use Flicking correctly. See the llms.txt guide for how to feed Flicking's documentation to LLMs and AI agents. 📖 Documentation & Demos Demos — includes an embedded live code editor for interactive exploration Guide API 🙌 Contributing See CONTRIBUTING.md. Please file issues on GitHub. 📜 License @egjs/flicking is released under the MIT license. Copyright (c) 2015-present NAVER Corp. Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/2636f5d31d7519b9ea80fd5b44960d43e36891db949c9a79fe5a9aa766cf00f3/68747470733a2f2f6e617665722e6769746875622e696f2f65676a732d666c69636b696e672f696d616765732f666c69636b696e672e737667"
+    },
+    {
+      "label": "@egjs/flicking",
+      "url": "https://naver.github.io/egjs-flicking/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/naver/egjs-flicking#----egjsflicking"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@egjs/flicking"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@egjs/flicking"
+    },
+    {
+      "label": "",
+      "url": "https://coveralls.io/github/naver/egjs-flicking?branch=master&style=flat-square"
+    },
+    {
+      "label": "",
+      "url": "https://deepscan.io/dashboard#view=project&tid=3998&pid=5802&bid=46086"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/naver/egjs-flicking/graphs/commit-activity"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@egjs/flicking"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/naver/egjs-flicking/graphs/contributors"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/naver/egjs-flicking/blob/master/LICENSE"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/naver/egjs-flicking/blob/master/packages/react-flicking/README.md"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/naver/egjs-flicking/blob/master/packages/vue3-flicking/README.md"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/c896cff2c2d00aaec5753bc3f389e29ac85b1037fb995ca82622dde70432bf00/68747470733a2f2f696d672e736869656c64732e696f2f7374617469632f76312e7376673f6c6162656c3d266d6573736167653d5479706553637269707426636f6c6f723d323934453830267374796c653d666c61742d737175617265266c6f676f3d74797065736372697074"
+    },
+    {
+      "label": "Demo",
+      "url": "https://naver.github.io/egjs-flicking/docs/demos/basic/default"
+    },
+    {
+      "label": "Guide",
+      "url": "https://naver.github.io/egjs-flicking/docs/guide/quickstart"
+    },
+    {
+      "label": "API",
+      "url": "https://naver.github.io/egjs-flicking/docs/api/classes/Flicking"
+    },
+    {
+      "label": "Other components",
+      "url": "https://naver.github.io/egjs/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/naver/egjs-flicking#--demo--guide--api---other-components"
+    },
+    {
+      "label": "",
+      "url": "https://codepen.io/egjs/pen/vqYyPO"
+    },
+    {
+      "label": "",
+      "url": "https://codepen.io/woodneck/pen/ydNvYy"
+    },
+    {
+      "label": "",
+      "url": "https://codepen.io/egjs/full/MMYQRE"
+    },
+    {
+      "label": "",
+      "url": "https://codepen.io/egjs/pen/vqYjrr"
+    },
+    {
+      "label": "full demos",
+      "url": "https://naver.github.io/egjs-flicking/docs/demos/basic/default"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/naver/egjs-flicking#--️click-each-images-to-see-its-source-or-check-our-full-demos"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/naver/egjs-flicking#-features"
+    },
+    {
+      "label": "Next.js",
+      "url": "https://nextjs.org/"
+    },
+    {
+      "label": "Nuxt",
+      "url": "https://nuxt.com/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/naver/egjs-flicking#️-installation"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/naver/egjs-flicking#npm"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/naver/egjs-flicking#cdn"
+    },
+    {
+      "label": "https://cdn.jsdelivr.net/npm/@egjs/flicking/dist/",
+      "url": "https://cdn.jsdelivr.net/npm/@egjs/flicking/dist/"
+    },
+    {
+      "label": "https://unpkg.com/@egjs/flicking/dist/",
+      "url": "https://unpkg.com/@egjs/flicking/dist/"
+    },
+    {
+      "label": "https://cdnjs.com/libraries/egjs-flicking",
+      "url": "https://cdnjs.com/libraries/egjs-flicking"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/naver/egjs-flicking#-quick-start"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/naver/egjs-flicking#html"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/naver/egjs-flicking#es-modules"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/naver/egjs-flicking#with-cdn"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/naver/egjs-flicking#-packages"
+    },
+    {
+      "label": "@egjs/flicking",
+      "url": "https://github.com/naver/egjs-flicking/blob/master/packages/flicking/README.md"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@egjs/flicking"
+    },
+    {
+      "label": "@egjs/flicking-plugins",
+      "url": "https://github.com/naver/egjs-flicking/blob/master/packages/flicking-plugins/README.md"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@egjs/flicking-plugins"
+    },
+    {
+      "label": "@egjs/react-flicking",
+      "url": "https://github.com/naver/egjs-flicking/blob/master/packages/react-flicking/README.md"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@egjs/react-flicking"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/42725ee3b6087aa036300e32d3002f2f98f6b90faa69c294c3c7e1e111bc3ed7/68747470733a2f2f6e617665722e6769746875622e696f2f65676a732d666c69636b696e672f696d672f69636f6e732f72656163742e737667"
+    },
+    {
+      "label": "React",
+      "url": "https://react.dev/"
+    },
+    {
+      "label": "@egjs/vue3-flicking",
+      "url": "https://github.com/naver/egjs-flicking/blob/master/packages/vue3-flicking/README.md"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/@egjs/vue3-flicking"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/02f96921de702bfdab55ff55e8202dc3a33ad7bf1303cfa0691c553fe0b868cd/68747470733a2f2f6e617665722e6769746875622e696f2f65676a732d666c69636b696e672f696d672f69636f6e732f7675652e737667"
+    },
+    {
+      "label": "Vue 3",
+      "url": "https://vuejs.org/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/naver/egjs-flicking#-supported-browsers"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/6bfbc5624ec1db7ade07ebccca261e42ad65f18961069d3be81a0defef735919/68747470733a2f2f73696d706c6569636f6e732e6f72672f69636f6e732f676f6f676c656368726f6d652e737667"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/2dede8c1f316717549855b9b947be40ed938bc2ffc6f01177792b574f4e69081/68747470733a2f2f73696d706c6569636f6e732e6f72672f69636f6e732f66697265666f7862726f777365722e737667"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/3d1b26d88af0ef4c982f54359821e24cef111a17c6c1f6a4bc207a2f5744c500/68747470733a2f2f73696d706c6569636f6e732e6f72672f69636f6e732f7361666172692e737667"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/e57d7d38ee7e22b625ad13c54645bc386d1f0bf3fa170dca3a5b75d0c7923da6/68747470733a2f2f73696d706c6569636f6e732e6f72672f69636f6e732f6170706c652e737667"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/dea0911b796d56ed8a96f9574463755215d721bdf8d59574b72a7365b59071fc/68747470733a2f2f73696d706c6569636f6e732e6f72672f69636f6e732f616e64726f69642e737667"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/naver/egjs-flicking#-ai-native"
+    },
+    {
+      "label": "llms.txt guide",
+      "url": "https://naver.github.io/egjs-flicking/docs/guide/llms"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/naver/egjs-flicking#-documentation--demos"
+    },
+    {
+      "label": "Demos",
+      "url": "https://naver.github.io/egjs-flicking/docs/demos/basic/default"
+    },
+    {
+      "label": "Guide",
+      "url": "https://naver.github.io/egjs-flicking/docs/guide/quickstart"
+    },
+    {
+      "label": "API",
+      "url": "https://naver.github.io/egjs-flicking/docs/api/classes/Flicking"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/naver/egjs-flicking#-contributing"
+    },
+    {
+      "label": "CONTRIBUTING.md",
+      "url": "https://github.com/naver/egjs-flicking/blob/master/CONTRIBUTING.md"
+    },
+    {
+      "label": "GitHub",
+      "url": "https://github.com/naver/egjs-flicking/issues"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/naver/egjs-flicking#-license"
+    },
+    {
+      "label": "MIT license",
+      "url": "https://github.com/naver/egjs-flicking/blob/master/LICENSE"
+    },
+    {
+      "label": "",
+      "url": "https://naver.github.io/egjs/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/naver"
+    }
+  ],
+  "root_files": [
+    ".claude",
+    ".github",
+    ".husky",
+    "config",
+    "dev-guide",
+    "packages",
+    ".editorconfig",
+    ".gitignore",
+    ".npmignore",
+    ".npmrc",
+    "AGENTS.md",
+    "CHANGELOG.md",
+    "CLAUDE.md",
+    "CONTRIBUTING.md",
+    "LICENSE",
+    "NOTICE",
+    "README.md",
+    "biome.json",
+    "jsconfig.json",
+    "package.json",
+    "pnpm-lock.yaml",
+    "pnpm-workspace.yaml",
+    "tsconfig.declaration.json",
+    "tsconfig.json"
+  ],
+  "release_count": 102,
+  "status": "verified"
+}

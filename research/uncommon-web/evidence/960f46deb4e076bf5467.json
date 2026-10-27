@@ -1,0 +1,99 @@
+{
+  "url": "https://github.com/blakesanie/React-Bubble-UI",
+  "final_url": "https://github.com/blakesanie/React-Bubble-UI",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:47:37.713099+00:00",
+  "stars": 173,
+  "forks": 43,
+  "description": "A highly configurable Bubble UI React.js component, similar to the iconic Apple Watch app layout.",
+  "homepage": "https://bubbleui.blakesanie.com",
+  "topics": [],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2020-12-09T00:48:04.000Z",
+  "branch": "main",
+  "commit": "358e3228d0d30b3164cb7310f7700b87cc733a1d",
+  "readme": "React-Bubble-UI 🔮 A highly configurable Bubble UI React.js component, similar to the iconic Apple Watch app layout. Install npm install --save react-bubble-ui Interactive Demo Interact with a live demo to configure to UI to your liking. Experience Demo Thorough Documentation Understand how to apply the component's high confirgurability to your design. Read Docs Contributing I highly encourage you to help improve this package further through the following steps: Fork this repository, and clone your fork Create an upstream remote and sync your local copy Branch off for the new feature Contribute the feature (write the code) Push to your (personal) origin repository Create a Pull Request Author This package was created by Blake Sanie in 2020. Like what you see? View his other projects 📱 , read his blog 💻 , or buy him a coffee ☕. License MIT © blakesanie",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://github.com/blakesanie/React-Bubble-UI#react-bubble-ui-"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/react-bubble-ui"
+    },
+    {
+      "label": "",
+      "url": "https://standardjs.com"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/blakesanie/React-Bubble-UI/blob/main/example/public/demo.gif"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/blakesanie/React-Bubble-UI#install"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/blakesanie/React-Bubble-UI#interactive-demo"
+    },
+    {
+      "label": "Experience Demo",
+      "url": "https://blakesanie.github.io/React-Bubble-UI/#/demo"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/blakesanie/React-Bubble-UI#thorough-documentation"
+    },
+    {
+      "label": "Read Docs",
+      "url": "https://blakesanie.github.io/React-Bubble-UI/#/docs"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/blakesanie/React-Bubble-UI#contributing"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/blakesanie/React-Bubble-UI#author"
+    },
+    {
+      "label": "Blake Sanie",
+      "url": "https://github.com/blakesanie"
+    },
+    {
+      "label": "View his other projects 📱",
+      "url": "https://blakesanie.com/cs"
+    },
+    {
+      "label": "read his blog 💻",
+      "url": "https://blakesanie.medium.com"
+    },
+    {
+      "label": "buy him a coffee ☕",
+      "url": "https://paypal.me/blakesanie?locale.x=en_US"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/blakesanie/React-Bubble-UI#license"
+    },
+    {
+      "label": "blakesanie",
+      "url": "https://github.com/blakesanie"
+    }
+  ],
+  "root_files": [
+    ".github/workflows",
+    "example",
+    "src",
+    ".gitignore",
+    "LICENSE",
+    "README.md",
+    "package-lock.json",
+    "package.json"
+  ],
+  "release_count": 0,
+  "status": "verified"
+}

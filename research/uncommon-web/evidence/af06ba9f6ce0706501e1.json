@@ -1,0 +1,85 @@
+{
+  "url": "https://github.com/googlecreativelab/chrome-music-lab",
+  "final_url": "https://github.com/googlecreativelab/chrome-music-lab",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:47:50.064457+00:00",
+  "stars": 2420,
+  "forks": 570,
+  "description": "A collection of experiments for exploring how music works, all built with the Web Audio API.",
+  "homepage": "http://musiclab.chromeexperiments.com",
+  "topics": [],
+  "license": "Apache-2.0",
+  "archived": true,
+  "created_at": "2016-02-29T19:24:00.000Z",
+  "branch": "master",
+  "commit": "e54bb414908da2b6286a6ad6431a5fcf8b68dc3f",
+  "readme": "ABOUT Chrome Music Lab is a website that makes learning music more accessible through fun, hands-on experiments. We’re sharing open-source code here so that others can build new experiments based on what we’ve started. The experiments use a variety of tools – Web Audio API, WebRTC, WebMIDI, Tone.js, and more. We hope they’re useful as inspiration or reference for anyone who wants to create their own music projects on the web. Consult the README in each experiment's folder for more information on building and running that experiment. Thanks to our collaborators @tambien, @ericrosenbaum, @theceremony, @marklundin, @alexanderchen, @borismus, @bretmorris, @gdenisov, @jasonfarrell, @jennicheung. If you'd like to share something with us, post it with #chromemusiclab or drop us a line at chromemusiclab-support@google.com.",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://github.com/googlecreativelab/chrome-music-lab#about"
+    },
+    {
+      "label": "Chrome Music Lab",
+      "url": "https://musiclab.chromeexperiments.com"
+    },
+    {
+      "label": "@tambien",
+      "url": "https://github.com/tambien"
+    },
+    {
+      "label": "@ericrosenbaum",
+      "url": "https://github.com/ericrosenbaum"
+    },
+    {
+      "label": "@theceremony",
+      "url": "https://github.com/theceremony"
+    },
+    {
+      "label": "@marklundin",
+      "url": "https://github.com/marklundin"
+    },
+    {
+      "label": "@alexanderchen",
+      "url": "https://github.com/alexanderchen"
+    },
+    {
+      "label": "@borismus",
+      "url": "https://github.com/borismus"
+    },
+    {
+      "label": "@bretmorris",
+      "url": "https://github.com/bretmorris"
+    },
+    {
+      "label": "@gdenisov",
+      "url": "https://github.com/gdenisov"
+    },
+    {
+      "label": "@jasonfarrell",
+      "url": "https://github.com/jasonfarrell"
+    },
+    {
+      "label": "@jennicheung",
+      "url": "https://github.com/jennicheung"
+    },
+    {
+      "label": "chromemusiclab-support@google.com",
+      "url": "mailto:chromemusiclab-support@google.com"
+    }
+  ],
+  "root_files": [
+    "arpeggios",
+    "chords",
+    "harmonics & strings",
+    "melodymaker",
+    "pianoroll",
+    "soundspinner",
+    "soundwaves",
+    "spectrogram",
+    "LICENSE",
+    "README.md"
+  ],
+  "release_count": 0,
+  "status": "verified"
+}

@@ -1,0 +1,194 @@
+{
+  "url": "https://github.com/asciinema/asciinema-player",
+  "final_url": "https://github.com/asciinema/asciinema-player",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:47:35.364722+00:00",
+  "stars": 2929,
+  "forks": 292,
+  "description": "Web player for terminal session recordings and live streams",
+  "homepage": "https://docs.asciinema.org/manual/player/",
+  "topics": [
+    "asciicast",
+    "asciinema",
+    "player",
+    "recording",
+    "terminal"
+  ],
+  "license": "Apache-2.0",
+  "archived": false,
+  "created_at": "2014-03-23T10:40:11.000Z",
+  "branch": "develop",
+  "commit": "fc82c581a10c6ae034517ad62323dea1a5ddb237",
+  "readme": "asciinema player asciinema player is a web player for terminal sessions recordings. Unlike typical web video players, which play heavyweight video files (.mp4, .mov), asciinema player plays lightweight terminal session recordings in the text-based asciicast format (.cast), such as those produced by the asciinema recorder. The player is built from the ground up with JavaScript and Rust (WASM), and is available as npm package and a standalone JS bundle. You can use it on any HTML page - in a project documentation, on a blog, or in a conference talk presentation. It's as easy as adding a single line of Javascript code to your web page: AsciinemaPlayer.create('demo.cast', document.getElementById('demo')); Check out the quick start guide for basic setup overview. You can see the player in action in asciinema documentation. Notable features: ability to copy-paste terminal content - it's just text after all! smooth, timing-accurate playback, idle time optimization to skip periods of inactivity, posters, markers for navigation or auto-pause, configurable font families and line height, automatic terminal scaling to fit into container element in most efficient way, full-screen mode, keystroke overlay showing keys typed during the recording, multiple color themes for standard 16 colors + support for 256 color palette and 24-bit true color (ISO-8613-3), adjustable playback speed, looped playback, infinite or finite, starting playback at specific time, API for programmatic control, keyboard shortcuts, support for other recording formats like ttyrec, typescript. Building To build the player, first download the source code: git clone https://github.com/asciinema/asciinema-player cd asciinema-player The recommended way to get the toolchain is the Nix dev shell, which provides Node.js, Rust and the wasm32-unknown-unknown target, and just works: nix develop If you don't use Nix, you need Node.js with npm, and the Rust toolchain (1.85 or later) with the wasm32-unknown-unknown target (added with rustup target add wasm32-unknown-unknown). Then build the player with: npm install npm run build This produces following output files: dist/index.js - monolithic ES module, to be import-ed in your JS bundle dist/bundle/asciinema-player.js - standalone monolithic player script (IIFE), to be linked directly from a website dist/bundle/asciinema-player.min.js - minimized version of the above dist/bundle/asciinema-player.css - stylesheet, to be linked directly from a website or included in a CSS bundle The monolithic version of the player covers majority of use cases, and it's all you need to use the player. In addition, the split version of the player is built with npm run build, producing the following files: dist/ui.js - UI ES module, to be import-ed in your JS bundle dist/bundle/asciinema-player-ui.js - standalone UI script (IIFE), to be linked directly from a website dist/bundle/asciinema-player-ui.min.js - minimized version of the above dist/bundle/asciinema-player-worker.js - standalone web worker script (IIFE), to be linked directly from a website dist/bundle/asciinema-player-worker.min.js - minimized version of the above The split version runs the UI and data crunching (parsing, terminal emulation) in separate OS threads, which improves UI's responsiveness during playback. In this setup the UI code runs in the window context, while the processing code runs in a WebWorker. The benefit of this configuration is typically observed only for high frame-rate / high bandwidth recordings. For typical demos/sessions it's not worth the setup hassle. Development For toolchain setup and build instructions, see Building. Running the test suite additionally requires Playwright browsers, which the Nix dev shell provides. Common tasks are defined in the justfile: just build, just test, just format. If you'd like to propose or submit any changes, please read the contribution guidelines first. Donations Sustainability of asciinema development relies on donations and sponsorships. Please help the software project you use and love. Become a supporter or a corporate sponsor. asciinema is sponsored by: Brightbox Consulting If you're interested in integration or customization of asciinema player to suit your needs, check asciinema consulting services. License © 2011 Marcin Kulik. All code is licensed under the Apache License, Version 2.0. See LICENSE file for details.",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://github.com/asciinema/asciinema-player#asciinema-player"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/asciinema/asciinema-player/actions/workflows/build.yml"
+    },
+    {
+      "label": "asciicast",
+      "url": "https://docs.asciinema.org/manual/asciicast/v3/"
+    },
+    {
+      "label": "asciinema recorder",
+      "url": "https://docs.asciinema.org/manual/cli/"
+    },
+    {
+      "label": "Rust",
+      "url": "https://www.rust-lang.org/"
+    },
+    {
+      "label": "WASM",
+      "url": "https://webassembly.org/"
+    },
+    {
+      "label": "npm package",
+      "url": "https://www.npmjs.com/package/asciinema-player"
+    },
+    {
+      "label": "standalone JS bundle",
+      "url": "https://github.com/asciinema/asciinema-player/releases/latest"
+    },
+    {
+      "label": "quick start guide",
+      "url": "https://docs.asciinema.org/manual/player/quick-start/"
+    },
+    {
+      "label": "asciinema documentation",
+      "url": "https://docs.asciinema.org/manual/player/"
+    },
+    {
+      "label": "idle time optimization",
+      "url": "https://docs.asciinema.org/manual/player/options/#idletimelimit"
+    },
+    {
+      "label": "posters",
+      "url": "https://docs.asciinema.org/manual/player/options/#poster"
+    },
+    {
+      "label": "markers",
+      "url": "https://docs.asciinema.org/manual/player/markers/"
+    },
+    {
+      "label": "font families",
+      "url": "https://docs.asciinema.org/manual/player/fonts/"
+    },
+    {
+      "label": "line height",
+      "url": "https://docs.asciinema.org/manual/player/options/#terminallineheight"
+    },
+    {
+      "label": "automatic terminal scaling",
+      "url": "https://docs.asciinema.org/manual/player/options/#fit"
+    },
+    {
+      "label": "keystroke overlay",
+      "url": "https://docs.asciinema.org/manual/player/options/#keystrokeoverlay"
+    },
+    {
+      "label": "multiple color themes for standard 16 colors",
+      "url": "https://docs.asciinema.org/manual/player/options/#theme"
+    },
+    {
+      "label": "adjustable playback speed",
+      "url": "https://docs.asciinema.org/manual/player/options/#speed"
+    },
+    {
+      "label": "looped playback",
+      "url": "https://docs.asciinema.org/manual/player/options/#loop"
+    },
+    {
+      "label": "starting playback at specific time",
+      "url": "https://docs.asciinema.org/manual/player/options/#startat"
+    },
+    {
+      "label": "API for programmatic control",
+      "url": "https://docs.asciinema.org/manual/player/api/"
+    },
+    {
+      "label": "keyboard shortcuts",
+      "url": "https://docs.asciinema.org/manual/player/shortcuts/"
+    },
+    {
+      "label": "support for other recording formats",
+      "url": "https://docs.asciinema.org/manual/player/parsers/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/asciinema/asciinema-player#building"
+    },
+    {
+      "label": "WebWorker",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/asciinema/asciinema-player#development"
+    },
+    {
+      "label": "Building",
+      "url": "https://github.com/asciinema/asciinema-player#building"
+    },
+    {
+      "label": "contribution guidelines",
+      "url": "https://github.com/asciinema/asciinema-player/blob/develop/CONTRIBUTING.md"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/asciinema/asciinema-player#donations"
+    },
+    {
+      "label": "supporter",
+      "url": "https://docs.asciinema.org/donations/#individuals"
+    },
+    {
+      "label": "corporate sponsor",
+      "url": "https://docs.asciinema.org/donations/#corporate-sponsorship"
+    },
+    {
+      "label": "Brightbox",
+      "url": "https://www.brightbox.com/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/asciinema/asciinema-player#consulting"
+    },
+    {
+      "label": "asciinema consulting services",
+      "url": "https://docs.asciinema.org/consulting/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/asciinema/asciinema-player#license"
+    },
+    {
+      "label": "LICENSE",
+      "url": "https://github.com/asciinema/asciinema-player/blob/develop/LICENSE"
+    }
+  ],
+  "root_files": [
+    ".github",
+    "src",
+    "tests",
+    ".gitignore",
+    ".prettierignore",
+    "CONTRIBUTING.md",
+    "LICENSE",
+    "README.md",
+    "eslint.config.js",
+    "flake.lock",
+    "flake.nix",
+    "index.d.ts",
+    "justfile",
+    "package-lock.json",
+    "package.json",
+    "playwright.config.js",
+    "rollup.config.mjs"
+  ],
+  "release_count": 67,
+  "status": "verified"
+}

@@ -1,0 +1,159 @@
+{
+  "url": "https://github.com/martinlaxenaire/curtainsjs",
+  "final_url": "https://github.com/martinlaxenaire/curtainsjs",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:48:00.924181+00:00",
+  "stars": 1827,
+  "forks": 114,
+  "description": "curtains.js is a lightweight vanilla WebGL javascript library that turns HTML DOM elements into interactive textured planes.",
+  "homepage": "https://www.curtainsjs.com/",
+  "topics": [
+    "3d",
+    "canvas",
+    "curtains",
+    "curtainsjs",
+    "dom",
+    "glsl",
+    "html5",
+    "javascript",
+    "responsive",
+    "shader",
+    "shaders",
+    "texture",
+    "webgl",
+    "webgl2"
+  ],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2018-04-25T14:40:13.000Z",
+  "branch": "master",
+  "commit": "840acaf7d960931350a4e9334b78161aa9b471b7",
+  "readme": "What is it ? Shaders are the new front-end web developpment big thing, with the ability to create very powerful 3D interactions and animations. A lot of very good javascript libraries already handle WebGL but with most of them it's kind of a headache to position your meshes relative to the DOM elements of your web page. curtains.js was created with just that issue in mind. It is a small vanilla WebGL javascript library that converts HTML elements containing images and videos into 3D WebGL textured planes, allowing you to animate them via shaders. You can define each plane size and position via CSS, which makes it super easy to add WebGL responsive planes all over your pages. Knowledge and technical requirements It is easy to use but you will of course have to possess good basics of HTML, CSS and javascript. If you've never heard about shaders, you may want to learn a bit more about them on The Book of Shaders for example. You will have to understand what are the vertex and fragment shaders, the use of uniforms as well as the GLSL syntax basics. Installation and usage You can directly download the files and start using the ES6 modules: import {Curtains, Plane} from 'path/to/src/index.mjs'; const curtains = new Curtains({ container: \"canvas\" }); const plane = new Plane(curtains, document.querySelector(\"#plane\")); Or you can use npm: npm i curtainsjs Load ES6 modules: import {Curtains, Plane} from 'curtainsjs'; In a browser, you can use the UMD files located in the `dist` directory: <script src=\"dist/curtains.umd.min.js\"></script> const curtains = new Curtains({ container: \"canvas\" }); const plane = new Plane(curtains, document.querySelector(\"#plane\")); // etc Usage with React Note that if you are using React, you might want to try react-curtains, curtains.js official React package. Documentation The library is split into classes modules. Most of them are used internally by the library but there are however a few classes meant to be used directly, exported in the src/index.mjs file. Core Curtains: appends a canvas to your container and instanciates the WebGL context. Also handles a few helpers like scroll and resize events, request animation frame loop, etc. Plane: creates a new Plane object bound to a HTML element. Textures: creates a new Texture object. Frame Buffer Objects RenderTarget: creates a frame buffer object. ShaderPass: creates a post processing pass using a RenderTarget object. Loader TextureLoader: loads HTML media elements such as images, videos or canvases and creates Texture objects using those sources. Math Vec2: creates a new Vector 2. Vec3: creates a new Vector 3. Mat4: creates a new Matrix 4. Quat: creates a new Quaternion. Extras PingPongPlane: creates a plane that uses FBOs ping pong to read/write a texture. FXAAPass: creates an antialiasing FXAA pass using a ShaderPass object. Full documentation Getting started API docs Examples Basic example HTML <body> <!-- div that will hold our WebGL canvas --> <div id=\"canvas\"></div> <!-- div used to create our plane --> <div class=\"plane\"> <!-- image that will be used as texture by our plane --> <img src=\"path/to/my-image.jpg\" crossorigin=\"\" /> </div> </body> CSS body { /* make the body fits our viewport */ position: relative; width: 100%; height: 100vh; margin: 0; overflow: hidden; } #canvas { /* make the canvas wrapper fits the document */ position: absolute; top: 0; right: 0; bottom: 0; left: 0; } .plane { /* define the size of your plane */ width: 80%; height: 80vh; margin: 10vh auto; } .plane img { /* hide the img element */ display: none; } Javascript import {Curtains, Plane} from 'curtainsjs'; window.addEventListener(\"load\", () => { // set up our WebGL context and append the canvas to our wrapper const curtains = new Curtains({ container: \"canvas\" }); // get our plane element const planeElement = document.getElementsByClassName(\"plane\")[0]; // set our initial parameters (basic uniforms) const params = { vertexShaderID: \"plane-vs\", // our vertex shader ID fragmentShaderID: \"plane-fs\", // our fragment shader ID uniforms: { time: { name: \"uTime\", // uniform name that will be passed to our shaders type: \"1f\", // this means our uniform is a float value: 0, }, }, }; // create our plane using our curtains object, the bound HTML element and the parameters const plane = new Plane(curtains, planeElement, params); plane.onRender(() => { // use the onRender method of our plane fired at each requestAnimationFrame call plane.uniforms.time.value++; // update our time uniform value }); }); Shaders Vertex shader <script id=\"plane-vs\" type=\"x-shader/x-vertex\"> #ifdef GL_ES precision mediump float; #endif // those are the mandatory attributes that the lib sets attribute vec3 aVertexPosition; attribute vec2 aTextureCoord; // those are mandatory uniforms that the lib sets and that contain our model view and projection matrix uniform mat4 uMVMatrix; uniform mat4 uPMatrix; // our texture matrix that will handle image cover uniform mat4 uTextureMatrix0; // pass your vertex and texture coords to the fragment shader varying vec3 vVertexPosition; varying vec2 vTextureCoord; void main() { gl_Position = uPMatrix * uMVMatrix * vec4(aVertexPosition, 1.0); // set the varyings // here we use our texture matrix to calculate the accurate texture coords vTextureCoord = (uTextureMatrix0 * vec4(aTextureCoord, 0.0, 1.0)).xy; vVertexPosition = aVertexPosition; } </script> Fragment shader <script id=\"plane-fs\" type=\"x-shader/x-fragment\"> #ifdef GL_ES precision mediump float; #endif // get our varyings varying vec3 vVertexPosition; varying vec2 vTextureCoord; // the uniform we declared inside our javascript uniform float uTime; // our texture sampler (default name, to use a different name please refer to the documentation) uniform sampler2D uSampler0; void main() { // get our texture coords from our varying vec2 textureCoord = vTextureCoord; // displace our pixels along the X axis based on our time uniform // textures coords are ranging from 0.0 to 1.0 on both axis textureCoord.x += sin(textureCoord.y * 25.0) * cos(textureCoord.x * 25.0) * (cos(uTime / 50.0)) / 25.0; // map our texture with the texture matrix coords gl_FragColor = texture2D(uSampler0, textureCoord); } </script> Changelog Complete changelog starting from version 7.1.0",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://github.com/martinlaxenaire/curtainsjs#what-is-it-"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/martinlaxenaire/curtainsjs/blob/master/documentation/images/promo.gif"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/martinlaxenaire/curtainsjs#knowledge-and-technical-requirements"
+    },
+    {
+      "label": "The Book of Shaders",
+      "url": "https://thebookofshaders.com/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/martinlaxenaire/curtainsjs#installation-and-usage"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/martinlaxenaire/curtainsjs#usage-with-react"
+    },
+    {
+      "label": "react-curtains",
+      "url": "https://github.com/martinlaxenaire/react-curtains"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/martinlaxenaire/curtainsjs#documentation"
+    },
+    {
+      "label": "src/index.mjs",
+      "url": "https://github.com/martinlaxenaire/curtainsjs/blob/master/src/index.mjs"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/martinlaxenaire/curtainsjs#core"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/martinlaxenaire/curtainsjs#frame-buffer-objects"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/martinlaxenaire/curtainsjs#loader"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/martinlaxenaire/curtainsjs#math"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/martinlaxenaire/curtainsjs#extras"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/martinlaxenaire/curtainsjs#full-documentation"
+    },
+    {
+      "label": "Getting started",
+      "url": "https://www.curtainsjs.com/get-started.html"
+    },
+    {
+      "label": "API docs",
+      "url": "https://www.curtainsjs.com/documentation.html"
+    },
+    {
+      "label": "Examples",
+      "url": "https://www.curtainsjs.com/index.html#examples"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/martinlaxenaire/curtainsjs#basic-example"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/martinlaxenaire/curtainsjs#html"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/martinlaxenaire/curtainsjs#css"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/martinlaxenaire/curtainsjs#javascript"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/martinlaxenaire/curtainsjs#shaders"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/martinlaxenaire/curtainsjs#vertex-shader"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/martinlaxenaire/curtainsjs#fragment-shader"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/martinlaxenaire/curtainsjs#changelog"
+    },
+    {
+      "label": "changelog",
+      "url": "https://github.com/martinlaxenaire/curtainsjs/blob/master/CHANGELOG.md"
+    }
+  ],
+  "root_files": [
+    ".github",
+    "dist",
+    "documentation",
+    "examples",
+    "src",
+    ".gitignore",
+    ".npmignore",
+    "CHANGELOG.md",
+    "LICENSE.txt",
+    "README.md",
+    "package-lock.json",
+    "package.json",
+    "rollup.config.js"
+  ],
+  "release_count": 0,
+  "status": "verified"
+}

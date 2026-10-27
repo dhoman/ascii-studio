@@ -1,0 +1,406 @@
+{
+  "url": "https://github.com/SumiMakito/Awesome-qr.js",
+  "final_url": "https://github.com/SumiMakito/Awesome-qr.js",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:47:30.486943+00:00",
+  "stars": 1703,
+  "forks": 247,
+  "description": "An awesome QR code generator written in JavaScript.",
+  "homepage": "https://www.bitcat.cc/webapp/awesome-qr/index.html",
+  "topics": [
+    "qr",
+    "qr-code",
+    "qr-generator",
+    "qrcode",
+    "qrcode-generator",
+    "qrcode-image"
+  ],
+  "license": "Apache-2.0",
+  "archived": false,
+  "created_at": "2017-04-27T14:11:34.000Z",
+  "branch": "master",
+  "commit": "8cd74b9db19b8b7313eaa34894fc06569b68e12d",
+  "readme": "Awesome-qr.js An awesome but simple QR code generator written in JavaScript. Gallery These QR codes were made with Awesome-qr.js 🤗 Contents Getting Started Node.js Browsers Options text size margin correctLevel maskPattern version components colorDark colorLight autoColor backgroundImage backgroundDimming gifBackground whiteMargin logoImage logoScale logoMargin logoCornerRadius dotScale (DEPRECATED) ComponentOptions scale protectors Sponsors Changelog Special thanks AwesomeQRCode: Designed for Android Other versions Copyright & License Getting Started Node.js Type definitions are included in the npm package. Please read ⚠️ Awesome-qr.js uses node-canvas as its drawing backend. You might need to take a look at its documentation to ensure that node-canvas works on your environment. yarn add awesome-qr // using Yarn npm install --save awesome-qr // using NPM Awesome-qr.js prior to v2.0.0 does not work well in Node.js environment and Awesome-qr.js prior to v1.2.0 does not work in Node.js environment. const { AwesomeQR } = require(\"awesome-qr\"); const fs = require(\"fs\"); // ... const background = fs.readFileSync(\"background.png\"); const buffer = await new AwesomeQR({ text: \"AwesomeQR by Makito - Awesome, right now.\", size: 500, backgroundImage: background, }).draw(); fs.writeFileSync(\"qrcode.png\", buffer); Browsers ⚛️ If you're using React, please use react-awesome-qr. <!-- import to the global scope --> <script src=\"dist/awesome-qr.js\"></script> <!-- or use require.js --> <script> require([\"dist/awesome-qr.js\"], (AwesomeQR) => ...); </script> var background; var reader = new FileReader(); reader.onload = function () { background = this.result; new AwesomeQR({ text: \"AwesomeQR by Makito - Awesome, right now.\", size: 500, backgroundImage: background, }).draw().then((dataURL) => ); }; reader.readAsDataURL(file); Options Options is an object that you can pass to the generator to customize your QR code. type Options = { text: string; size?: number; margin?: number; correctLevel?: number; maskPattern?: number; version?: number; components?: ComponentOptions; colorDark?: string; colorLight?: string; autoColor?: boolean; backgroundImage?: string | Buffer; backgroundDimming?: string; gifBackground?: ArrayBuffer; whiteMargin?: boolean; logoImage?: string | Buffer; logoScale?: number; logoMargin?: number; logoCornerRadius?: number; dotScale?: number; // DEPRECATED!! }; text Type string Text to be encoded in the QR code. size Type number? Default 400 Size of the QR code in pixel. margin Type number? Default 20 Size of margins around the QR code body in pixel. correctLevel Type number? Default QRErrorCorrectLevel.M ~> 0 For more information, please refer to Error correction feature | QRcode.com | DENSO WAVE. Error correction level of the QR code. maskPattern Type number? This is an advanced option. Leave untouched to let the code decide which mask pattern to use. Specify the mask pattern to be used in QR code encoding. Accepts a value provided by QRMaskPattern. To find out all eight mask patterns, please refer to Wikipedia File:QR_Code_Mask_Patterns.svg For more information, please refer to Reed–Solomon codes for coders: Masking. version Type number? This is an advanced option. Leave untouched to let the code decide which version to use. Specify the version to be used in QR code encoding. Accepts an integer in range [1, 40]. ⚠️ An error might occurs if the specified version does not have enough space for the input data. For more information, please refer to Information capacity and versions of QR Code | QRcode.com | DENSO WAVE. components Type ComponentOptions Controls the appearances of parts in the QR code. Read section ComponentOptions to learn more. colorDark Type string?, CSS <color> Default \"#000000\" For more information about CSS <color>, please refer to <color> - CSS: Cascading Style Sheets | MDN Color of the blocks on the QR code. colorLight Type string?, CSS <color> Default \"#ffffff\" Color of the empty areas on the QR code. autoColor Type boolean? Default true Automatically calculate the colorDark value from the QR code's background. backgroundImage Type (string|Buffer)? Default undefined Background image to be used in the QR code. Accepts a data: string in web browsers or a Buffer in Node.js. backgroundDimming Type string?, CSS <color> Default \"rgba(0, 0, 0, 0)\" Color of the dimming mask above the background image. gifBackground Type ArrayBuffer? Default undefined GIF background image to be used in the QR code. whiteMargin Type boolean? Default true Use a white margin instead of a transparent one which reveals the background of the QR code on margins. logoImage Type (string|Buffer)? Default undefined Logo image to be displayed at the center of the QR code. Accepts a data: string in web browsers or a Buffer in Node.js. When set to undefined or null, the logo is disabled. logoScale Type number? Default 0.2 Ratio of the logo size to the QR code size. logoMargin Type number? Default 6 Size of margins around the logo image in pixels. logoCornerRadius Type number? Default 8 Corner radius of the logo image in pixels. dotScale (DEPRECATED) Type number? Default 0.4 Use components to control the scaling in a more advanced way. This option is yet to be removed. You can still use this option to control the scaling of the QR code parts in the lagacy way. Ratio of the real size to the full size of the blocks. This can be helpful when you want to make more parts of the background visible. ComponentOptions ComponentOptions controls the appearances of parts in the QR code. type ComponentOptions = { data?: { scale?: number; }; timing?: { scale?: number; protectors?: boolean; }; alignment?: { scale?: number; protectors?: boolean; }; cornerAlignment?: { scale?: number; protectors?: boolean; }; }; // default ComponentOptions { data: { scale: 0.4, }, timing: { scale: 0.5, protectors: false, }, alignment: { scale: 0.5, protectors: false, }, cornerAlignment: { scale: 0.5, protectors: true, }, } scale Type number? Scale factor for blocks in the specified area of the QR code. protectors Type boolean? Controls whether or not to draw the translucent protectors under the specified area in the QR code. Sponsors It is those generous sponsors who supports this project makes the Awesome-qr.js more awesome! I'd like to express my sincere appreciation to all the generous sponsors. Coxxs Since sponsors' names will not show up here without their permissions, the list above only shows a part of all the sponsors. If you wish to have your name shown up here, please feel free to contact me. Changelog Check the full changelog Special thanks Awesome-qr.js is inspired by EFQRCode by EyreFree. EFQRCode is a tool to generate QRCode image or recognize QRCode from image, in Swift. If your application is in need of generating pretty QR codes in Swift, take a look at EFQRCode. It should help. AwesomeQRCode: Designed for Android Also, if you are developing Android apps, you can take a look at AwesomeQRCode, which is designed for Android projects. Other versions React component: react-awesome-qr Vue 2.x component: Vue-qr Copyright & License Awesome-qr.js is licensed under Apache License 2.0 License. Copyright (c) 2017-2020 Makito Licensed under the Apache License, Version 2.0 (the \"License\"); you may not use this file except in compliance with the License. You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \"AS IS\" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License. jquery-qrcode Copyright (c) 2011 Jerome Etienne, http://jetienne.com Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. QRCode for JavaScript Copyright (c) 2009 Kazuhiko Arase URL: http://www.d-project.com/ Licensed under the MIT license: http://www.opensource.org/licenses/mit-license.php The word \"QR Code\" is registered trademark of DENSO WAVE INCORPORATED http://www.denso-wave.com/qrcode/faqpatent-e.html",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://github.com/SumiMakito/Awesome-qr.js#awesome-qrjs-"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/4b4ab316a635a68a6efd9f32b51fc32793373c10a9c344a633c77586ecb4f281/68747470733a2f2f696d672e736869656c64732e696f2f6e706d2f762f617765736f6d652d71722f6c6174657374"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/5c46823e4ad92b14bd640114968b39e81e87c3d410b61fd8b034f932c7b3e629/68747470733a2f2f696d672e736869656c64732e696f2f6e706d2f762f617765736f6d652d71722f6e657874"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/b07e561688e48d2858183cfe680543119972dd13b5a76d51a7c7a61d1c38cd52/68747470733a2f2f696d672e736869656c64732e696f2f6e706d2f762f617765736f6d652d71722f62657461"
+    },
+    {
+      "label": "",
+      "url": "https://www.apache.org/licenses/LICENSE-2.0"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/SumiMakito/Awesome-qr.js#gallery-"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/sumimakito/Awesome-qr.js/blob/master/art/gallery-1.png"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/sumimakito/Awesome-qr.js/blob/master/art/gallery-2.png"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/sumimakito/Awesome-qr.js/blob/master/art/gallery-3.gif"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/SumiMakito/Awesome-qr.js#contents-"
+    },
+    {
+      "label": "Getting Started",
+      "url": "https://github.com/SumiMakito/Awesome-qr.js#getting-started"
+    },
+    {
+      "label": "Node.js",
+      "url": "https://github.com/SumiMakito/Awesome-qr.js#nodejs"
+    },
+    {
+      "label": "Browsers",
+      "url": "https://github.com/SumiMakito/Awesome-qr.js#browsers"
+    },
+    {
+      "label": "Options",
+      "url": "https://github.com/SumiMakito/Awesome-qr.js#options"
+    },
+    {
+      "label": "text",
+      "url": "https://github.com/SumiMakito/Awesome-qr.js#text"
+    },
+    {
+      "label": "size",
+      "url": "https://github.com/SumiMakito/Awesome-qr.js#size"
+    },
+    {
+      "label": "margin",
+      "url": "https://github.com/SumiMakito/Awesome-qr.js#margin"
+    },
+    {
+      "label": "correctLevel",
+      "url": "https://github.com/SumiMakito/Awesome-qr.js#correctlevel"
+    },
+    {
+      "label": "maskPattern",
+      "url": "https://github.com/SumiMakito/Awesome-qr.js#maskpattern"
+    },
+    {
+      "label": "version",
+      "url": "https://github.com/SumiMakito/Awesome-qr.js#version"
+    },
+    {
+      "label": "components",
+      "url": "https://github.com/SumiMakito/Awesome-qr.js#components"
+    },
+    {
+      "label": "colorDark",
+      "url": "https://github.com/SumiMakito/Awesome-qr.js#colordark"
+    },
+    {
+      "label": "colorLight",
+      "url": "https://github.com/SumiMakito/Awesome-qr.js#colorlight"
+    },
+    {
+      "label": "autoColor",
+      "url": "https://github.com/SumiMakito/Awesome-qr.js#autocolor"
+    },
+    {
+      "label": "backgroundImage",
+      "url": "https://github.com/SumiMakito/Awesome-qr.js#backgroundimage"
+    },
+    {
+      "label": "backgroundDimming",
+      "url": "https://github.com/SumiMakito/Awesome-qr.js#backgrounddimming"
+    },
+    {
+      "label": "gifBackground",
+      "url": "https://github.com/SumiMakito/Awesome-qr.js#gifbackground"
+    },
+    {
+      "label": "whiteMargin",
+      "url": "https://github.com/SumiMakito/Awesome-qr.js#whitemargin"
+    },
+    {
+      "label": "logoImage",
+      "url": "https://github.com/SumiMakito/Awesome-qr.js#logoimage"
+    },
+    {
+      "label": "logoScale",
+      "url": "https://github.com/SumiMakito/Awesome-qr.js#logoscale"
+    },
+    {
+      "label": "logoMargin",
+      "url": "https://github.com/SumiMakito/Awesome-qr.js#logomargin"
+    },
+    {
+      "label": "logoCornerRadius",
+      "url": "https://github.com/SumiMakito/Awesome-qr.js#logocornerradius"
+    },
+    {
+      "label": "dotScale (DEPRECATED)",
+      "url": "https://github.com/SumiMakito/Awesome-qr.js#deldotscaledel-deprecated"
+    },
+    {
+      "label": "ComponentOptions",
+      "url": "https://github.com/SumiMakito/Awesome-qr.js#componentoptions"
+    },
+    {
+      "label": "scale",
+      "url": "https://github.com/SumiMakito/Awesome-qr.js#scale"
+    },
+    {
+      "label": "protectors",
+      "url": "https://github.com/SumiMakito/Awesome-qr.js#protectors"
+    },
+    {
+      "label": "Sponsors",
+      "url": "https://github.com/SumiMakito/Awesome-qr.js#sponsors"
+    },
+    {
+      "label": "Changelog",
+      "url": "https://github.com/SumiMakito/Awesome-qr.js#changelog"
+    },
+    {
+      "label": "Special thanks",
+      "url": "https://github.com/SumiMakito/Awesome-qr.js#special-thanks"
+    },
+    {
+      "label": "AwesomeQRCode: Designed for Android",
+      "url": "https://github.com/SumiMakito/Awesome-qr.js#awesomeqrcode-designed-for-android"
+    },
+    {
+      "label": "Other versions",
+      "url": "https://github.com/SumiMakito/Awesome-qr.js#other-versions"
+    },
+    {
+      "label": "Copyright & License",
+      "url": "https://github.com/SumiMakito/Awesome-qr.js#copyright--license"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/SumiMakito/Awesome-qr.js#getting-started"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/SumiMakito/Awesome-qr.js#nodejs"
+    },
+    {
+      "label": "its documentation",
+      "url": "https://github.com/Automattic/node-canvas#installation"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/SumiMakito/Awesome-qr.js#browsers"
+    },
+    {
+      "label": "react-awesome-qr",
+      "url": "https://github.com/AwesomeQR/react-awesome-qr"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/SumiMakito/Awesome-qr.js#options"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/SumiMakito/Awesome-qr.js#text"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/SumiMakito/Awesome-qr.js#size"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/SumiMakito/Awesome-qr.js#margin"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/SumiMakito/Awesome-qr.js#correctlevel"
+    },
+    {
+      "label": "Error correction feature | QRcode.com | DENSO WAVE",
+      "url": "https://www.qrcode.com/en/about/error_correction.html"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/SumiMakito/Awesome-qr.js#maskpattern"
+    },
+    {
+      "label": "Wikipedia File:QR_Code_Mask_Patterns.svg",
+      "url": "https://en.wikipedia.org/wiki/File:QR_Code_Mask_Patterns.svg"
+    },
+    {
+      "label": "Reed–Solomon codes for coders: Masking",
+      "url": "https://en.wikiversity.org/wiki/Reed%E2%80%93Solomon_codes_for_coders#Masking"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/SumiMakito/Awesome-qr.js#version"
+    },
+    {
+      "label": "Information capacity and versions of QR Code | QRcode.com | DENSO WAVE",
+      "url": "https://www.qrcode.com/en/about/version.html"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/SumiMakito/Awesome-qr.js#components"
+    },
+    {
+      "label": "ComponentOptions",
+      "url": "https://github.com/SumiMakito/Awesome-qr.js#componentoptions"
+    },
+    {
+      "label": "ComponentOptions",
+      "url": "https://github.com/SumiMakito/Awesome-qr.js#componentoptions"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/SumiMakito/Awesome-qr.js#colordark"
+    },
+    {
+      "label": "<color> - CSS: Cascading Style Sheets | MDN",
+      "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/color_value"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/SumiMakito/Awesome-qr.js#colorlight"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/SumiMakito/Awesome-qr.js#autocolor"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/SumiMakito/Awesome-qr.js#backgroundimage"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/SumiMakito/Awesome-qr.js#backgrounddimming"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/SumiMakito/Awesome-qr.js#gifbackground"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/SumiMakito/Awesome-qr.js#whitemargin"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/SumiMakito/Awesome-qr.js#logoimage"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/SumiMakito/Awesome-qr.js#logoscale"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/SumiMakito/Awesome-qr.js#logomargin"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/SumiMakito/Awesome-qr.js#logocornerradius"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/SumiMakito/Awesome-qr.js#dotscale-deprecated"
+    },
+    {
+      "label": "components",
+      "url": "https://github.com/SumiMakito/Awesome-qr.js#components"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/SumiMakito/Awesome-qr.js#componentoptions"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/SumiMakito/Awesome-qr.js#scale"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/SumiMakito/Awesome-qr.js#protectors"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/SumiMakito/Awesome-qr.js#sponsors"
+    },
+    {
+      "label": "Coxxs",
+      "url": "https://coxxs.me/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/SumiMakito/Awesome-qr.js#changelog"
+    },
+    {
+      "label": "Check the full changelog",
+      "url": "https://github.com/sumimakito/Awesome-qr.js/blob/master/CHANGELOG.md"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/SumiMakito/Awesome-qr.js#special-thanks"
+    },
+    {
+      "label": "EFQRCode by EyreFree",
+      "url": "https://github.com/EyreFree/EFQRCode"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/SumiMakito/Awesome-qr.js#awesomeqrcode-designed-for-android"
+    },
+    {
+      "label": "AwesomeQRCode",
+      "url": "https://github.com/SumiMakito/AwesomeQRCode"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/SumiMakito/Awesome-qr.js#other-versions"
+    },
+    {
+      "label": "react-awesome-qr",
+      "url": "https://github.com/AwesomeQR/react-awesome-qr"
+    },
+    {
+      "label": "Vue-qr",
+      "url": "https://github.com/Binaryify/vue-qr"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/SumiMakito/Awesome-qr.js#copyright--license"
+    }
+  ],
+  "root_files": [
+    "art",
+    "dist",
+    "lib",
+    "src",
+    "test",
+    ".gitignore",
+    ".prettierrc.json",
+    "CHANGELOG.md",
+    "LICENSE",
+    "README.md",
+    "jsconfig.json",
+    "package.json",
+    "pnpm-lock.yaml",
+    "tsconfig.json",
+    "webpack.config.js",
+    "yarn.lock"
+  ],
+  "release_count": 4,
+  "status": "verified"
+}

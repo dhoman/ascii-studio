@@ -1,0 +1,108 @@
+{
+  "url": "https://github.com/meodai/bouffont",
+  "final_url": "https://github.com/meodai/bouffont",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:48:01.727475+00:00",
+  "stars": 13,
+  "forks": 1,
+  "description": "Generative puffy lettering as SVG: grow the letters of any font into one coherent hand.",
+  "homepage": "https://meodai.github.io/bouffont/",
+  "topics": [],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2026-10-06T19:28:41.000Z",
+  "branch": "main",
+  "commit": "32fd0e589b9a00a5c6c5e1a696213dac4fadb6bc",
+  "readme": "bouffont Generates lettering as SVG from a font and a text: each glyph is reduced to its centre lines, redrawn with one pen and grown by a list of strategies. Seeded and deterministic. Runs in the browser and in Node (ESM). Install npm install bouffont Usage import { bouffont, loadFont } from 'bouffont'; const font = await loadFont('/fonts/inter.woff'); const piece = bouffont({ text: 'bouffont', font, seed: 7, preset: 'throwup' }); piece.svg; // SVG markup (string) piece.letters; // geometry per letter: [{ char, shape: [[{ x, y }, …], …], … }, …] piece.metrics; // { stem, capHeight, … } in px piece.dom(); // SVG element plus references to its parts, see below loadFont accepts a URL, an ArrayBuffer (or typed array / Buffer) or an opentype.js Font. TTF, OTF and WOFF work; WOFF2 does not (opentype.js can't read it). In Node, read the file yourself: import { readFile } from 'node:fs/promises'; const font = await loadFont(await readFile('inter.woff')); // a Buffer works Growing frame by frame bouffontLive(options) (also bouffont.live) takes the same options and grows the piece one step at a time: simulations (grow, coral, dla) step by step, swells (inflate, block, pack, overgrow) in a few in-between frames, everything else at once. import { bouffontLive } from 'bouffont'; const live = bouffontLive({ text: 'hi', font, preset: 'coral' }); (function frame() { if (live.step()) { el.innerHTML = live.svg; // the current state, drawn with the render settings requestAnimationFrame(frame); } else { el.innerHTML = live.final().svg; // the finished piece, exactly what bouffont() gives } })(); step() advances one step and returns false once the growth is complete. svg draws the current state with the piece's render settings (for a quicker drawing, pass render: { draft: true }: fills and outlines only); letters holds the mid-growth shapes. final() finishes the growth (from any point) and returns the piece. knit and repel normally run last; frames get them too, so seams show from the first frame on (only in the drawing: the growth itself is unchanged). frame() returns the current state as plain data, and drawFrame(frame) draws it. Frames are independent, so a recording can be drawn in parallel in the worker pool: pool.draw(live.frame()) resolves to { svg, ms }. A step plus its drawing takes 10–50 ms (two lines of text; render.ink: 0, no gap lines, roughly halves it), so frames are best recorded once and played back. In a worker A piece takes roughly 15–500 ms depending on the preset and repel. To keep the page responsive and render several pieces in parallel, use the worker pool: import { createPool } from 'bouffont/worker'; const pool = createPool(); // one worker per core, minus one (max 8); or { size: 4 } const { svg, metrics, ms } = await pool.render({ text: 'hi', font: '/fonts/inter.woff', preset: 'bubble' }); font must be a URL (resolved against the page) or an ArrayBuffer. Each worker loads a URL once and keeps it. Options must be plain data: built-in strategies by name, no functions, no registerStrategy (it doesn't reach the workers). pool.render(options, { signal, priority, letters }): signal (AbortSignal) drops the job if it hasn't started, priority puts it at the front of the queue, letters: true also returns the letter geometry. The result has dom(doc) like a piece. pool.terminate() stops the workers. Needs a bundler or browser that supports module workers (new Worker(new URL('./worker.js', import.meta.url), { type: 'module' })). Pipeline text + font → layout → structure → envelope → strategies → decorations → svg layout: glyph outlines in px, first baseline at y = 0, lines centred. structure (on in every preset except crowd): each glyph is thinned to its centre lines (serifs, stroke contrast and terminals are dropped) and redrawn with one pen. The letters are then re-spaced by their new shapes. Regular weights work best; very heavy or high-contrast cuts can break. Skeletons are cached per font object, so redrawing the same text with other options is faster. structure: { pen: 0.15, spacing: 0.3, cap: 'round', join: 'round', follow: 0 } // pen: × cap height structure: false // grow the font outline itself envelope: optional outer shape the letters are warped into. strategies: growth, applied in order. render: outlines, fills and inner lines. All length options are in stems: the pen width when structure is on, otherwise the font's stroke thickness, measured from its \"O\". Inner lines of structured letters are drawn where the growth from two parts of a letter meets across a gap (a notch, the opening of a G), and run out through the edge. Options bouffont(options). A preset is merged under the other options. option default text font opentype.js Font, see loadFont seed 1 number or string preset throwup, bubbles, bubble, block, simple, crowd, candy, marquee, shard, and the slower simulations coral, lichen, frost; other options merge over it size 200 px lineHeight 1 text may contain newlines; lines are centred, baselines this × size apart structure on in presets redraw letters from their centre lines with one pen, see above tracking 0 letter spacing in stems, applied before growth; negative pushes letters into each other envelope none outer shape, see below details see below which crease lines get painted, at which angles knit 0 closes gaps between letters narrower than 2× this (stems); try 0.25 align 'middle' 'bottom' / 'top' / 'both': lines growth can't cross strategies [] applied in order density 0 0–1: even typographic colour. Each letter's growth is scaled by its ink (measured on the pen drawing): light letters like i, l, t swell more, heavy ones like m, w less overgrow 0 keep growing after letters meet. If the preset has generations, that many more rounds of its own growth (1 = one full round); otherwise letters swell outward by this many stems, contacts stay generations what keep growing means for a preset: [type, scaled, fixed] or a list; numbers in scaled are the values at overgrow: 1 and scale with it, e.g. ['dla', { reach: 1.2, particles: 0.8 }] repel false letters repel each other's growth: contested areas are split fairly into shared seams, no letter slides under another smooth 0 final smoothing pass, in stems (e.g. 0.4) or { amount, corners } decorations [] per letter render { mode, order, stroke, outline, invert, background } Envelopes (outer shape) rect, triangle (peak: where its tip is, 0–1 across), triangle-left (tip at 1/4), triangle-right (tip at 3/4), triangle-down, rhombus, circle, arch, bulge, pinch, wave, parallelogram, cloud (straight bottom, round puffs on top: bumps, overlap, vary; the seed moves the peaks and valleys), or your own: a function (u, opts) => [top, bottom] giving, for each position u across the piece (0 = left, 1 = right), the top and bottom edge as fractions of the height (0 = top, 1 = bottom). opts.rng is a seeded random source, for shapes that vary with the seed. // a lens: thin at the ends, full height in the middle const lens = (u) => [0.5 - 0.5 * Math.sin(u * Math.PI), 0.5 + 0.5 * Math.sin(u * Math.PI)]; envelope: { type: lens, height: 1.25 } envelope: { type: 'triangle', minHeight: 0.4, height: 1.25 } envelope: { type: 'parallelogram', skew: 0.35 } envelope: { type: 'wave', amplitude: 0.3, frequency: 1.5 } Letters are warped so their height follows the shape. Growth can be kept inside it with clip: true. Obstructions Shapes in the space around the letters that growth can't enter, so the letters grow around them (an envelope gives the outer shape; obstructions sit inside it). obstructions: 'dots' obstructions: { type: 'dots', count: 6, size: 1.1, vary: 0.3, front: 0.85, wobble: 0.15, gap: 0.22 } obstructions: { type: 'hole', size: 0.35, x: 0.5, y: 0.5, wobble: 0.15 } obstructions: { type: 'holes', count: 3, size: 0.25, vary: 0.25 } dots: seeded blobs where the letters grow, within front stems of a letter's drawing (on it too, unless onLetters: false), so outlines dent around them. hole: one big blob (radius size × the piece's smaller side, at x, y across the piece) the letters grow around. It may sit on the letters: their drawings stay whole, only the growth gives way. holes: count (3) such blobs at seeded random spots, each size (0.25) × the piece's smaller side (± vary), not overlapping. walls: count slightly wavy walls across the piece (angle: 0 = horizontal, 90 = vertical; width 1.4 stems, wobble), evenly spaced. Growth can't cross them, so the piece splits into rooms, like an envelope with inner walls. Through a letter, only its skeleton shows. Every obstacle may sit on the letters: their own drawings stay, only the growth gives way, so the skeleton shows inside a hole, a wall or a dot. Obstacles are blobs, not circles (wobble: how uneven), so the dents are as soft as the letters' own outlines. gap: how far the growth keeps clear of them; show: false leaves only the dents. A function (letters, ctx, opts) => polygons, or plain polygons, work too. Drawn behind the letters as data-part=\"obstruction\". Every strategy respects them, like the align lines. Align align: 'bottom' adds a line along the baseline that growth can't cross, so the letters stand flat on it. With an envelope, the line follows the envelope's bottom edge. 'top' does the same at the cap height (or the envelope's top edge), and 'both' does both. 'middle' (the default) lets letters grow in every direction. Details and gaps Only for letters grown from the font outline (structure: false); structured letters use the inner-line rule above. Growth leaves many possible crease lines; a painter would only paint some of them. details decides which: details: { keep: 2, min: 0.8, depth: 1.5, spacing: 0.5, angles: 6, angle: 0 } // the default details: false // keep every crease Every letter keeps its keep most important creases (the deepest notches), the ones that make it legible. Beyond those, a crease survives if it's at least min stems long, or its notch is at least depth stems deep: short and shallow ones are stubs. Of two creases closer than spacing, only the deeper one is kept. angles snaps the cuts to a handful of directions: a count (6 = every 30°, rotated by angle) or a list of degrees; null leaves them free. A crease that would lose most of itself when straightened (a curve, like a G's opening) keeps its curve. knit (off by default; try 0.25 stems) closes slivers and V-notches between letters, the spots where two outlines run into each other. A letter's own crease slits stay open. Strategies (growth) Strategies can be given as 'inflate', ['inflate', { amount: 0.5 }] or { type: 'inflate', amount: 0.5 }. strategy options inflate amount, smooth, keep, follow round swell: bubbles. follow makes the swell follow the font's own stroke thickness at each point: growth = amount × (thickness / stem)^follow. 1 keeps the font's contrast (thick swells more), -1 evens it out, 0 (default) is even block amount, miterLimit, keep sharp swell grow amount, steps, join, gap, neighbors, clip, keep step-wise growth into free space, until letters meet angular detail, angles, bulge: 'out' | 'in' | 'random' rebuilds edges at 0/45/90° chamfer size, inner cuts corners soften radius, inner, outer rounds corners smooth amount, corners irons out wiggles smaller than amount; corners sharper than corners° stay sharp wobble amount, wavelength hand-made line stretch amount, threshold, directions pulls one side out: extended ends bounce x, y, rotate, scale letters dance pack size, vary, overlap, grow, merge, keep needs structure: packs circles of seeded, varying size (radius size stems ± vary) along each centre line, grows them by grow, and rounds the joints by merge so they fuse into one lumpy shape coral steps, spacing, repel, attract, push, reach differential line growth: the outer outline is a chain of nodes that pull together, push apart and creep outward, so it wrinkles; never further than reach from the pen drawing dla reach, cell, particles, stick, crystal, arms, walk diffusion-limited aggregation: random walkers freeze onto the letter. crystal (0–1) only lets them stick along arms directions overgrow amount, seam, keep every letter swells by amount; space two letters both reach is split fairly with smooth seams, so contacts stay single lines and the outside keeps swelling. Counters stay open (also the top-level overgrow option) repel method, cell, step, seam splits every area two letters both cover between them, as if both grew into it at the same speed. Letters don't move. method: 'grid' (default) splits by distance on a grid of cell stems (default 0.08); method: 'grow' grows in polygon steps of step stems and smooths the seams by seam stems (0 leaves them stepped), 2–4× slower Options every strategy accepts: neighbors: 'ignore' | 'avoid': with avoid, a letter can only grow into space no other letter takes. gap sets the spacing in stems; a negative gap allows that much overlap. clip: true: stay inside the envelope. letters: [0, 2] or chance: 0.5: affect only some letters. Legibility: inflate, block and grow keep counters open and carve creases where the growth from two parts of a letter meets, like the inner lines of swollen letters. A crease that starts in a notch (the gaps in E or X) runs out through the edge, so the two parts of the letter don't join back together. keep sets their width in stems; keep: false turns this off. Custom strategies have the form (letters, ctx, opts) => letters. Pass a function directly, or use registerStrategy(name, fn). ctx has stem, rng (seeded, with range, pick, chance) and envelope. Polygon tools are exported as geom. Decorations decorations: [ { type: 'arrow', letters: 'last', direction: 'right' }, { type: 'spike', chance: 0.5, count: 2 }, { type: 'cut', chance: 0.6 }, { type: 'ball', chance: 0.3 }, { type: 'sparkle', letters: [0] }, ] Effects Drawn on the finished letters, inside them, without changing their shape: effects: [['depth', {}], ['shade', {}], ['shine', { angle: 225 }]] The light-based effects share angle: where the light comes from, in degrees (225 = top left; 0 = right, 90 = down). Each is drawn as its own data-part. effect options shine angle, inset, width, length, dot, intensity specular highlight: a streak just inside the edge facing the light, with a dot past its end. White with a thin outline shade angle, inset, width, intensity the shine's opposite: a solid crescent just inside the edges facing away from the light depth angle, length, fill, merge, intensity the letters extruded away from the light (3D). merge: true (default): one block behind all letters; false: each letter's side stacked with it. fill: 'paper' (white, outlined) or 'ink' inline inset a thin line inside every edge, counters too inset is how far inside the edge an effect sits, in stems, set per effect (defaults: shine 0.26, shade 0.16, inline 0.3). A negative inset puts it past the edge, drawn over the outline: effects: [['shade', { inset: 0.16 }], ['inline', { inset: 0.5 }], ['shine', { inset: -0.3 }]] intensity (default 1) scales an effect as a whole: more light (shine: a wider, longer streak and a bigger dot), a thicker shade, a deeper depth. inline has none. Effects inside the letters are drawn between the fill and the outline (with a negative inset, over it); depth is drawn before every letter, and the drawing grows to fit it. The fat band around the whole piece (as in bubble and block) is a render option, not an effect: render: { outline: 0.4 } (stems; 0 = none), for any preset. With band: 'letter' each letter gets its own band instead, stacked with it. Custom effects: registerEffect(name, (letter, ctx, opts) => [{ part, shape }]). Render mode: 'stack' (default) draws every letter outlined and stacked by order: ltr (each letter over the previous one), rtl (reverse), center (the middle letter on top, then descending outward), edges (the outer letters on top) or random. mode: 'merge' draws one outline around everything. stroke is the line thickness in stems. outline adds a band around the whole piece. invert draws a white line on black. curves (default 0, off) draws outlines as smooth curves through few points instead of polygons, e.g. 0.08 stems. fair (default 0, off) irons out lumps up to that size first, e.g. 0.35. corners (default 56°) keeps sharper turns crisp. Set curves: 0 for raw polygons; the simple preset does this. ink (default 0, off; try 0.4 stems) and gaps: inside a letter, a gap narrower than 2× ink is two outlines running side by side. With gaps: 'line' (default) it is closed and drawn as one line along its middle, with the outline pen; gaps: 'ink' fills it solid; ink: 0 leaves it alone. lines (default { angles: null, cap: 'round' }): how inner and gap lines are drawn, so they follow the style: smooth curves by default; with angles: 8 every segment snaps to 0/45/90° (the simple and block presets, with cap: 'square'). inner (default 0.5 stems, minimum length; 0 = off): inner lines of structured letters, computed from the final shape and drawn with the outline pen. Lines that would double an existing line are dropped. DOM references piece.svg is a string. piece.dom() builds the SVG element and hands back references to its parts, so fills and strokes can be styled or animated on their own, for the whole piece or per letter: const { svg, letters, fills, outlines, lines, strokes } = piece.dom(); document.body.append(svg); fills.forEach((f) => f.setAttribute('fill', 'gold')); // every fill letters[0].outline.style.strokeWidth = '6px'; // one letter's outline letters.forEach(({ group }, i) => (group.style.animationDelay = `${i * 80}ms`)); letters[i]: { char, index, group, fill, outline, lines, ink } in text order (the drawing order follows render.order). In mode: 'merge' there is one entry, index 'all'. fills, outlines, lines: all of them; strokes = outlines + lines (everything drawn with the pen). outlines starts with band, the outer outline around the whole piece (render.outline), a stroked and filled silhouette; extras holds decorations. Each call builds new elements. In Node, pass a document: piece.dom(window.document) from jsdom or happy-dom. The same parts are marked in the string, so CSS can target them too: [data-part=\"letter\"], [data-part=\"fill\"], [data-part=\"outline\"], [data-part=\"lines\"], [data-part=\"ink\"], [data-part=\"band\"], with data-index and data-char on each letter group. Development npm run dev # site and playground (demo/) npm run build # build the site to dist/ npm run gallery # contact sheet of presets → gallery/sheet.png npm test npm run lint The playground lists every @fontsource/* package installed as a dev dependency. License MIT © David Aerne",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://github.com/meodai/bouffont#bouffont"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/meodai/bouffont#install"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/meodai/bouffont#usage"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/meodai/bouffont#growing-frame-by-frame"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/meodai/bouffont#in-a-worker"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/meodai/bouffont#pipeline"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/meodai/bouffont#options"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/meodai/bouffont#envelopes-outer-shape"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/meodai/bouffont#obstructions"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/meodai/bouffont#align"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/meodai/bouffont#details-and-gaps"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/meodai/bouffont#strategies-growth"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/meodai/bouffont#decorations"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/meodai/bouffont#effects"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/meodai/bouffont#render"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/meodai/bouffont#dom-references"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/meodai/bouffont#development"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/meodai/bouffont#license"
+    }
+  ],
+  "root_files": [
+    ".github/workflows",
+    "demo",
+    "docs/specs",
+    "scripts",
+    "src",
+    "test",
+    ".gitignore",
+    "LICENSE",
+    "README.md",
+    "eslint.config.js",
+    "package-lock.json",
+    "package.json",
+    "vite.config.js"
+  ],
+  "release_count": 0,
+  "status": "verified"
+}

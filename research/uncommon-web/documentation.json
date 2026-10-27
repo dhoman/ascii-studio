@@ -1,0 +1,3539 @@
+{
+  "dithercn": {
+    "url": "https://dithercn.dev/docs/examples",
+    "basis": "Directory documentation link",
+    "check": {
+      "url": "https://dithercn.dev/docs/examples",
+      "http_status": 200,
+      "final_url": "https://dithercn.dev/docs/examples"
+    }
+  },
+  "Paper Shaders": {
+    "url": "https://shaders.paper.design/",
+    "basis": "Repository README: React documentation and interactive examples →",
+    "check": {
+      "url": "https://shaders.paper.design/",
+      "http_status": 200,
+      "final_url": "https://shaders.paper.design/"
+    }
+  },
+  "three.js AsciiEffect": {
+    "url": "https://threejs.org/docs/",
+    "basis": "Repository README: Docs",
+    "check": {
+      "url": "https://threejs.org/docs/",
+      "http_status": 200,
+      "final_url": "https://threejs.org/docs/"
+    }
+  },
+  "pixi-filters": {
+    "url": "http://pixijs.io/filters/docs/",
+    "basis": "Repository README: here",
+    "check": {
+      "url": "http://pixijs.io/filters/docs/",
+      "http_status": 200,
+      "final_url": "https://pixijs.io/filters/docs/"
+    }
+  },
+  "postprocessing": {
+    "url": "https://pmndrs.github.io/postprocessing/public/docs",
+    "basis": "Repository README: Documentation",
+    "check": {
+      "url": "https://pmndrs.github.io/postprocessing/public/docs",
+      "http_status": 200,
+      "final_url": "https://pmndrs.github.io/postprocessing/public/docs/"
+    }
+  },
+  "Ratzilla": {
+    "url": "https://docs.rs/ratzilla",
+    "basis": "Repository README: API Documentation",
+    "check": {
+      "url": "https://docs.rs/ratzilla",
+      "http_status": 200,
+      "final_url": "https://docs.rs/ratzilla/latest/ratzilla/"
+    }
+  },
+  "dotmax": {
+    "url": "https://docs.rs/dotmax",
+    "basis": "Repository README: ",
+    "check": {
+      "url": "https://docs.rs/dotmax",
+      "http_status": 200,
+      "final_url": "https://docs.rs/dotmax/latest/dotmax/"
+    }
+  },
+  "drawille-canvas": {
+    "url": "https://github.com/madbence/node-drawille-canvas#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/madbence/node-drawille-canvas#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/madbence/node-drawille-canvas#readme"
+    }
+  },
+  "rot.js": {
+    "url": "https://github.com/ondras/rot.js#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/ondras/rot.js#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/ondras/rot.js#readme"
+    }
+  },
+  "textmode.js": {
+    "url": "https://code.textmode.art/",
+    "basis": "Repository README: Read the documentation",
+    "check": {
+      "url": "https://code.textmode.art/",
+      "http_status": 200,
+      "final_url": "https://code.textmode.art/"
+    }
+  },
+  "play.core": {
+    "url": "https://github.com/ertdfgcvb/play.core#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/ertdfgcvb/play.core#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/ertdfgcvb/play.core#readme"
+    }
+  },
+  "ascii-magic-art": {
+    "url": "https://www.ascii-magic.com/ascii/docs",
+    "basis": "Repository README: Docs",
+    "check": {
+      "url": "https://www.ascii-magic.com/ascii/docs",
+      "http_status": 200,
+      "final_url": "https://www.ascii-magic.com/ascii/docs"
+    }
+  },
+  "asciichart + figlet": {
+    "url": "https://github.com/patorjk/figlet.js#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/patorjk/figlet.js#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/patorjk/figlet.js#readme"
+    }
+  },
+  "cli-spinners": {
+    "url": "https://github.com/sindresorhus/cli-spinners#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/sindresorhus/cli-spinners#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/sindresorhus/cli-spinners#readme"
+    }
+  },
+  "Matrix digital rain (Rezmason)": {
+    "url": "https://github.com/Rezmason/matrix#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/Rezmason/matrix#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/Rezmason/matrix#readme"
+    }
+  },
+  "AnsiLove.js": {
+    "url": "https://github.com/ansilove/ansilove.js#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/ansilove/ansilove.js#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/ansilove/ansilove.js#readme"
+    }
+  },
+  "glyphcss": {
+    "url": "https://glyphcss.com/guides/effects/",
+    "basis": "Repository README: effects guide",
+    "check": {
+      "url": "https://glyphcss.com/guides/effects/",
+      "http_status": 200,
+      "final_url": "https://glyphcss.com/guides/effects/"
+    }
+  },
+  "Asciify": {
+    "url": "https://asciify.org/docs",
+    "basis": "Repository README: Docs",
+    "check": {
+      "url": "https://asciify.org/docs",
+      "http_status": 200,
+      "final_url": "https://asciify.org/docs"
+    }
+  },
+  "svgbob (WASM)": {
+    "url": "https://github.com/agoose77/svgbob-wasm#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/agoose77/svgbob-wasm#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/agoose77/svgbob-wasm#readme"
+    }
+  },
+  "ASCII FX": {
+    "url": "https://github.com/Amir-Abushanab/ascii-fx#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/Amir-Abushanab/ascii-fx#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/Amir-Abushanab/ascii-fx#readme"
+    }
+  },
+  "glyphcast": {
+    "url": "https://github.com/MrProLopstar/glyphcast#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/MrProLopstar/glyphcast#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/MrProLopstar/glyphcast#readme"
+    }
+  },
+  "The Monospace Web": {
+    "url": "https://github.com/owickstrom/the-monospace-web#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/owickstrom/the-monospace-web#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/owickstrom/the-monospace-web#readme"
+    }
+  },
+  "crt-terminal": {
+    "url": "https://github.com/essserrr/crt-terminal#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/essserrr/crt-terminal#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/essserrr/crt-terminal#readme"
+    }
+  },
+  "asciinema-player": {
+    "url": "https://docs.asciinema.org/manual/player/",
+    "basis": "Directory documentation link",
+    "check": {
+      "url": "https://docs.asciinema.org/manual/player/",
+      "http_status": 200,
+      "final_url": "https://docs.asciinema.org/manual/player/"
+    }
+  },
+  "@thi.ng/text-canvas": {
+    "url": "https://docs.thi.ng/",
+    "basis": "Repository README: generated API docs",
+    "check": {
+      "url": "https://docs.thi.ng/",
+      "http_status": 200,
+      "final_url": "https://docs.thi.ng/"
+    }
+  },
+  "Pretext": {
+    "url": "https://github.com/chenglou/pretext#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/chenglou/pretext#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/chenglou/pretext#readme"
+    }
+  },
+  "GSAP SplitText": {
+    "url": "https://gsap.com/docs/v3/Plugins/SplitText/",
+    "basis": "Directory documentation link",
+    "check": {
+      "url": "https://gsap.com/docs/v3/Plugins/SplitText/",
+      "http_status": 200,
+      "final_url": "https://gsap.com/docs/v3/Plugins/SplitText/"
+    }
+  },
+  "NumberFlow": {
+    "url": "https://github.com/barvian/number-flow#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/barvian/number-flow#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/barvian/number-flow#readme"
+    }
+  },
+  "Rough Notation": {
+    "url": "https://github.com/rough-stuff/rough-notation#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/rough-stuff/rough-notation#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/rough-stuff/rough-notation#readme"
+    }
+  },
+  "Shiki": {
+    "url": "https://shiki.style",
+    "basis": "Repository README: 📚 Documentation",
+    "check": {
+      "url": "https://shiki.style",
+      "http_status": 200,
+      "final_url": "https://shiki.style/"
+    }
+  },
+  "Splitting.js": {
+    "url": "https://splitting.js.org/guide.html",
+    "basis": "Repository README: guide & documentation",
+    "check": {
+      "url": "https://splitting.js.org/guide.html",
+      "http_status": 200,
+      "final_url": "https://splitting.js.org/guide.html"
+    }
+  },
+  "Vara": {
+    "url": "https://github.com/akzhy/vara#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/akzhy/vara#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/akzhy/vara#readme"
+    }
+  },
+  "blotter.ts": {
+    "url": "https://github.com/dnhn/blotter#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/dnhn/blotter#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/dnhn/blotter#readme"
+    }
+  },
+  "Hanzi Writer": {
+    "url": "https://github.com/chanind/hanzi-writer#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/chanind/hanzi-writer#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/chanind/hanzi-writer#readme"
+    }
+  },
+  "Shiki Magic Move": {
+    "url": "https://shiki.style",
+    "basis": "Repository README: 📚 Documentation",
+    "check": {
+      "url": "https://shiki.style",
+      "http_status": 200,
+      "final_url": "https://shiki.style/"
+    }
+  },
+  "three-slug": {
+    "url": "https://github.com/manthrax/JSlug#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/manthrax/JSlug#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/manthrax/JSlug#readme"
+    }
+  },
+  "mejiro": {
+    "url": "https://github.com/libraz/mejiro/blob/main/docs/en",
+    "basis": "Repository README: Documentation",
+    "check": {
+      "url": "https://github.com/libraz/mejiro/blob/main/docs/en",
+      "http_status": 200,
+      "final_url": "https://github.com/libraz/mejiro/tree/main/docs/en"
+    }
+  },
+  "Justif": {
+    "url": "https://github.com/lyallcooper/justif#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/lyallcooper/justif#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/lyallcooper/justif#readme"
+    }
+  },
+  "three-text": {
+    "url": "https://github.com/countertype/three-text#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/countertype/three-text#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/countertype/three-text#readme"
+    }
+  },
+  "Heti 赫蹏": {
+    "url": "https://github.com/sivan/heti#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/sivan/heti#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/sivan/heti#readme"
+    }
+  },
+  "type-hangul": {
+    "url": "https://github.com/SDuck4/type-hangul#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/SDuck4/type-hangul#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/SDuck4/type-hangul#readme"
+    }
+  },
+  "feral fur": {
+    "url": "https://github.com/mortspace/fur#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/mortspace/fur#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/mortspace/fur#readme"
+    }
+  },
+  "Code Hike": {
+    "url": "https://codehike.org/docs",
+    "basis": "Repository README: https://codehike.org/docs",
+    "check": {
+      "url": "https://codehike.org/docs",
+      "http_status": 200,
+      "final_url": "https://codehike.org/docs"
+    }
+  },
+  "growtype": {
+    "url": "https://github.com/Mezzomind/growtype#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/Mezzomind/growtype#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/Mezzomind/growtype#readme"
+    }
+  },
+  "Burn-In.js": {
+    "url": "https://github.com/gogoSpace/burn-in.js#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/gogoSpace/burn-in.js#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/gogoSpace/burn-in.js#readme"
+    }
+  },
+  "Postext": {
+    "url": "https://postext.dev/en/docs",
+    "basis": "Repository README: postext.dev/en/docs",
+    "check": {
+      "url": "https://postext.dev/en/docs",
+      "http_status": 200,
+      "final_url": "https://postext.dev/en/docs"
+    }
+  },
+  "opentype.js": {
+    "url": "https://github.com/opentypejs/opentype.js/blob/master/docs/examples/typescript",
+    "basis": "Repository README: See this example",
+    "check": {
+      "url": "https://github.com/opentypejs/opentype.js/blob/master/docs/examples/typescript",
+      "http_status": 200,
+      "final_url": "https://github.com/opentypejs/opentype.js/tree/master/docs/examples/typescript"
+    }
+  },
+  "Wavefont + Linefont": {
+    "url": "https://github.com/dy/wavefont#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/dy/wavefont#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/dy/wavefont#readme"
+    }
+  },
+  "Glitched Writer": {
+    "url": "https://github.com/thetarnav/glitched-writer#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/thetarnav/glitched-writer#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/thetarnav/glitched-writer#readme"
+    }
+  },
+  "CircleType": {
+    "url": "https://github.com/peterhry/CircleType#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/peterhry/CircleType#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/peterhry/CircleType#readme"
+    }
+  },
+  "Tegaki": {
+    "url": "https://tegaki.ink/",
+    "basis": "Repository README: Website & docs",
+    "check": {
+      "url": "https://tegaki.ink/",
+      "http_status": 200,
+      "final_url": "https://tegaki.ink/"
+    }
+  },
+  "glyphShaper": {
+    "url": "https://github.com/over-punch/glyphShaper#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/over-punch/glyphShaper#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/over-punch/glyphShaper#readme"
+    }
+  },
+  "beer-text": {
+    "url": "https://github.com/y3klab/beer-text#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/y3klab/beer-text#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/y3klab/beer-text#readme"
+    }
+  },
+  "tightset": {
+    "url": "https://github.com/dmoptimal/tightset#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/dmoptimal/tightset#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/dmoptimal/tightset#readme"
+    }
+  },
+  "Ztext (react-ztext)": {
+    "url": "https://bennettfeely.com/ztext/",
+    "basis": "Repository README: ZText.js Documentation",
+    "check": {
+      "url": "https://bennettfeely.com/ztext/",
+      "http_status": 200,
+      "final_url": "https://bennettfeely.com/ztext/"
+    }
+  },
+  "ghostdust": {
+    "url": "https://github.com/dalzein/ghostdust#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/dalzein/ghostdust#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/dalzein/ghostdust#readme"
+    }
+  },
+  "glyphdust": {
+    "url": "https://github.com/linno-inc/glyphdust#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/linno-inc/glyphdust#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/linno-inc/glyphdust#readme"
+    }
+  },
+  "glyphed.js": {
+    "url": "https://github.com/a-elhaag/glyphed.js#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/a-elhaag/glyphed.js#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/a-elhaag/glyphed.js#readme"
+    }
+  },
+  "confettiText": {
+    "url": "https://github.com/over-punch/confettiText#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/over-punch/confettiText#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/over-punch/confettiText#readme"
+    }
+  },
+  "Paged.js": {
+    "url": "https://pagedjs.org/documentation/",
+    "basis": "Repository README: pagedjs.org/documentation",
+    "check": {
+      "url": "https://pagedjs.org/documentation/",
+      "http_status": 404,
+      "final_url": "https://pagedjs.org/documentation/"
+    }
+  },
+  "threadText": {
+    "url": "https://github.com/over-punch/ThreadText#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/over-punch/ThreadText#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/over-punch/ThreadText#readme"
+    }
+  },
+  "Markdeep": {
+    "url": "https://github.com/morgan3d/markdeep#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/morgan3d/markdeep#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/morgan3d/markdeep#readme"
+    }
+  },
+  "Tufte CSS": {
+    "url": "https://github.com/edwardtufte/tufte-css#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/edwardtufte/tufte-css#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/edwardtufte/tufte-css#readme"
+    }
+  },
+  "Zfont": {
+    "url": "https://github.com/jaames/zfont#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/jaames/zfont#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/jaames/zfont#readme"
+    }
+  },
+  "spoilerjs": {
+    "url": "https://github.com/shajidhasan/spoilerjs#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/shajidhasan/spoilerjs#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/shajidhasan/spoilerjs#readme"
+    }
+  },
+  "FlowToken": {
+    "url": "https://github.com/Ephibbs/flowtoken#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/Ephibbs/flowtoken#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/Ephibbs/flowtoken#readme"
+    }
+  },
+  "Smart Ticker": {
+    "url": "https://github.com/tombcato/smart-ticker#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/tombcato/smart-ticker#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/tombcato/smart-ticker#readme"
+    }
+  },
+  "Torph": {
+    "url": "https://github.com/lochie/torph#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/lochie/torph#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/lochie/torph#readme"
+    }
+  },
+  "harfbuzzjs": {
+    "url": "https://github.com/harfbuzz/harfbuzzjs#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/harfbuzz/harfbuzzjs#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/harfbuzz/harfbuzzjs#readme"
+    }
+  },
+  "Windups": {
+    "url": "https://windups.gwil.co",
+    "basis": "Repository README: Examples, guides, API docs, and more! Much of it presented by a talking frog!",
+    "check": {
+      "url": "https://windups.gwil.co",
+      "http_status": 0,
+      "final_url": "https://windups.gwil.co/"
+    }
+  },
+  "magnetType": {
+    "url": "https://github.com/over-punch/magnetType#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/over-punch/magnetType#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/over-punch/magnetType#readme"
+    }
+  },
+  "FloodText": {
+    "url": "https://github.com/over-punch/FloodText#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/over-punch/FloodText#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/over-punch/FloodText#readme"
+    }
+  },
+  "BrowserTextEffects": {
+    "url": "https://github.com/donlair/browsertexteffects#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/donlair/browsertexteffects#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/donlair/browsertexteffects#readme"
+    }
+  },
+  "use-springface": {
+    "url": "https://github.com/tol-is/springface#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/tol-is/springface#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/tol-is/springface#readme"
+    }
+  },
+  "Cobe": {
+    "url": "https://github.com/shuding/cobe#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/shuding/cobe#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/shuding/cobe#readme"
+    }
+  },
+  "Vanta.js": {
+    "url": "https://github.com/tengbao/vanta#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/tengbao/vanta#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/tengbao/vanta#readme"
+    }
+  },
+  "WebGL Fluid": {
+    "url": "https://github.com/cloydlau/webgl-fluid#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/cloydlau/webgl-fluid#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/cloydlau/webgl-fluid#readme"
+    }
+  },
+  "ShaderGradient": {
+    "url": "https://github.com/ruucm/shadergradient#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/ruucm/shadergradient#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/ruucm/shadergradient#readme"
+    }
+  },
+  "OGL": {
+    "url": "https://github.com/oframe/ogl#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/oframe/ogl#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/oframe/ogl#readme"
+    }
+  },
+  "Zdog": {
+    "url": "https://zzz.dog/getting-started",
+    "basis": "Repository README: Getting started",
+    "check": {
+      "url": "https://zzz.dog/getting-started",
+      "http_status": 200,
+      "final_url": "https://zzz.dog/getting-started"
+    }
+  },
+  "threejs-toys": {
+    "url": "https://github.com/klevron/threejs-toys#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/klevron/threejs-toys#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/klevron/threejs-toys#readme"
+    }
+  },
+  "tsParticles": {
+    "url": "https://particles.js.org/docs/",
+    "basis": "Repository README: https://particles.js.org/docs/",
+    "check": {
+      "url": "https://particles.js.org/docs/",
+      "http_status": 200,
+      "final_url": "https://particles.js.org/docs/"
+    }
+  },
+  "TypeGPU": {
+    "url": "https://docs.swmansion.com/TypeGPU/getting-started",
+    "basis": "Repository README: Documentation",
+    "check": {
+      "url": "https://docs.swmansion.com/TypeGPU/getting-started",
+      "http_status": 200,
+      "final_url": "https://docs.swmansion.com/TypeGPU/getting-started/"
+    }
+  },
+  "GSS (GPU Style Sheets)": {
+    "url": "https://www.gss-lang.dev/docs",
+    "basis": "Repository README: gss-lang.dev/docs",
+    "check": {
+      "url": "https://www.gss-lang.dev/docs",
+      "http_status": 200,
+      "final_url": "https://www.gss-lang.dev/docs"
+    }
+  },
+  "React Fluid Distortion": {
+    "url": "https://atelier-ui.com/docs/components/cursor/fluid-distortion",
+    "basis": "Directory documentation link",
+    "check": {
+      "url": "https://atelier-ui.com/docs/components/cursor/fluid-distortion",
+      "http_status": 200,
+      "final_url": "https://www.atelier-ui.com/en/docs/components/cursor/fluid-distortion"
+    }
+  },
+  "fireworks-js": {
+    "url": "https://github.com/crashmax-dev/fireworks-js#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/crashmax-dev/fireworks-js#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/crashmax-dev/fireworks-js#readme"
+    }
+  },
+  "color4bg": {
+    "url": "https://github.com/winterx/color4bg.js#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/winterx/color4bg.js#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/winterx/color4bg.js#readme"
+    }
+  },
+  "Shaders": {
+    "url": "https://shaders.com/docs/components",
+    "basis": "Repository README: 200+ components",
+    "check": {
+      "url": "https://shaders.com/docs/components",
+      "http_status": 200,
+      "final_url": "https://shaders.com/docs/components"
+    }
+  },
+  "Shader Lab (basement.studio)": {
+    "url": "https://github.com/basementstudio/shader-lab#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/basementstudio/shader-lab#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/basementstudio/shader-lab#readme"
+    }
+  },
+  "use-shader-fx": {
+    "url": "https://github.com/FunTechInc/use-shader-fx#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/FunTechInc/use-shader-fx#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/FunTechInc/use-shader-fx#readme"
+    }
+  },
+  "three.quarks": {
+    "url": "https://quarks.art/",
+    "basis": "Repository README: Documentation",
+    "check": {
+      "url": "https://quarks.art/",
+      "http_status": 200,
+      "final_url": "https://quarks.art/"
+    }
+  },
+  "three-nebula": {
+    "url": "https://three-nebula-docs.netlify.app/",
+    "basis": "Repository README: API reference documentation",
+    "check": {
+      "url": "https://three-nebula-docs.netlify.app/",
+      "http_status": 200,
+      "final_url": "https://three-nebula-docs.netlify.app/"
+    }
+  },
+  "three-raymarcher": {
+    "url": "https://github.com/danielesteban/three-raymarcher#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/danielesteban/three-raymarcher#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/danielesteban/three-raymarcher#readme"
+    }
+  },
+  "three-good-godrays": {
+    "url": "https://github.com/ameobea/three-good-godrays#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/ameobea/three-good-godrays#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/ameobea/three-good-godrays#readme"
+    }
+  },
+  "drei materials": {
+    "url": "https://github.com/pmndrs/drei#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/pmndrs/drei#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/pmndrs/drei#readme"
+    }
+  },
+  "Spark": {
+    "url": "https://sparkjs.dev/",
+    "basis": "Repository README: Documentation",
+    "check": {
+      "url": "https://sparkjs.dev/",
+      "http_status": 200,
+      "final_url": "https://sparkjs.dev/"
+    }
+  },
+  "<model-viewer>": {
+    "url": "https://github.com/google/model-viewer#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/google/model-viewer#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/google/model-viewer#readme"
+    }
+  },
+  "react-three-rapier": {
+    "url": "https://pmndrs.github.io/react-three-rapier/",
+    "basis": "Repository README: 🧩 API Docs",
+    "check": {
+      "url": "https://pmndrs.github.io/react-three-rapier/",
+      "http_status": 200,
+      "final_url": "https://pmndrs.github.io/react-three-rapier/"
+    }
+  },
+  "three.js WebGPU + TSL": {
+    "url": "https://threejs.org/docs/pages/TSL.html",
+    "basis": "Directory documentation link",
+    "check": {
+      "url": "https://threejs.org/docs/pages/TSL.html",
+      "http_status": 200,
+      "final_url": "https://threejs.org/docs/pages/TSL.html"
+    }
+  },
+  "Theatre.js": {
+    "url": "https://www.theatrejs.com/docs",
+    "basis": "Repository README: theatrejs.com/docs",
+    "check": {
+      "url": "https://www.theatrejs.com/docs",
+      "http_status": 200,
+      "final_url": "https://www.theatrejs.com/docs/latest"
+    }
+  },
+  "CustomShaderMaterial": {
+    "url": "https://github.com/FarazzShaikh/THREE-CustomShaderMaterial#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/FarazzShaikh/THREE-CustomShaderMaterial#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/FarazzShaikh/THREE-CustomShaderMaterial#readme"
+    }
+  },
+  "Neat": {
+    "url": "https://github.com/FireCMSco/neat#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/FireCMSco/neat#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/FireCMSco/neat#readme"
+    }
+  },
+  "Takram three-geospatial": {
+    "url": "https://github.com/takram-design-engineering/three-geospatial#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/takram-design-engineering/three-geospatial#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/takram-design-engineering/three-geospatial#readme"
+    }
+  },
+  "TSL Textures": {
+    "url": "https://github.com/boytchev/tsl-textures#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/boytchev/tsl-textures#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/boytchev/tsl-textures#readme"
+    }
+  },
+  "PlayCanvas Web Components": {
+    "url": "https://api.playcanvas.com/web-components",
+    "basis": "Repository README: API Reference",
+    "check": {
+      "url": "https://api.playcanvas.com/web-components",
+      "http_status": 200,
+      "final_url": "https://api.playcanvas.com/web-components/"
+    }
+  },
+  "Threlte": {
+    "url": "https://threlte.xyz",
+    "basis": "Repository README: documentation",
+    "check": {
+      "url": "https://threlte.xyz",
+      "http_status": 200,
+      "final_url": "https://threlte.xyz/"
+    }
+  },
+  "TresJS": {
+    "url": "https://docs.tresjs.org",
+    "basis": "Repository README: docs",
+    "check": {
+      "url": "https://docs.tresjs.org",
+      "http_status": 200,
+      "final_url": "https://docs.tresjs.org/"
+    }
+  },
+  "svader": {
+    "url": "https://github.com/sockmaster27/svader#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/sockmaster27/svader#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/sockmaster27/svader#readme"
+    }
+  },
+  "EZ-Tree": {
+    "url": "https://github.com/dgreenheck/ez-tree#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/dgreenheck/ez-tree#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/dgreenheck/ez-tree#readme"
+    }
+  },
+  "liquid-glass-react": {
+    "url": "https://github.com/rdev/liquid-glass-react#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/rdev/liquid-glass-react#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/rdev/liquid-glass-react#readme"
+    }
+  },
+  "Shader Park": {
+    "url": "https://github.com/shader-park/shader-park-core#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/shader-park/shader-park-core#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/shader-park/shader-park-core#readme"
+    }
+  },
+  "PowerGlitch": {
+    "url": "https://7ph.github.io/powerglitch/api-docs/variables/PowerGlitch.html",
+    "basis": "Repository README: api documentation",
+    "check": {
+      "url": "https://7ph.github.io/powerglitch/api-docs/variables/PowerGlitch.html",
+      "http_status": 200,
+      "final_url": "https://7ph.github.io/powerglitch/api-docs/variables/PowerGlitch.html"
+    }
+  },
+  "Mesh Gradient": {
+    "url": "https://github.com/mikhailmogilnikov/mesh-gradient#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/mikhailmogilnikov/mesh-gradient#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/mikhailmogilnikov/mesh-gradient#readme"
+    }
+  },
+  "GL Transitions": {
+    "url": "https://github.com/gl-transitions/gl-transitions#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/gl-transitions/gl-transitions#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/gl-transitions/gl-transitions#readme"
+    }
+  },
+  "curtains.js": {
+    "url": "https://www.curtainsjs.com/documentation.html",
+    "basis": "Repository README: API docs",
+    "check": {
+      "url": "https://www.curtainsjs.com/documentation.html",
+      "http_status": 200,
+      "final_url": "https://www.curtainsjs.com/documentation.html"
+    }
+  },
+  "css-doodle": {
+    "url": "https://css-doodle.com/getting-started/",
+    "basis": "Repository README: Getting started",
+    "check": {
+      "url": "https://css-doodle.com/getting-started/",
+      "http_status": 200,
+      "final_url": "https://css-doodle.com/getting-started"
+    }
+  },
+  "blobs": {
+    "url": "https://github.com/g-harel/blobs/blob/master/README.legacy.md",
+    "basis": "Repository README: Legacy documentation",
+    "check": {
+      "url": "https://github.com/g-harel/blobs/blob/master/README.legacy.md",
+      "http_status": 200,
+      "final_url": "https://github.com/g-harel/blobs/blob/master/README.legacy.md"
+    }
+  },
+  "liquidGL": {
+    "url": "https://github.com/naughtyduk/liquidGL#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/naughtyduk/liquidGL#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/naughtyduk/liquidGL#readme"
+    }
+  },
+  "VFX-JS": {
+    "url": "https://github.com/fand/vfx-js#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/fand/vfx-js#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/fand/vfx-js#readme"
+    }
+  },
+  "three-msdf-text-utils": {
+    "url": "https://github.com/leochocolat/three-msdf-text-utils#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/leochocolat/three-msdf-text-utils#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/leochocolat/three-msdf-text-utils#readme"
+    }
+  },
+  "glfx.js": {
+    "url": "https://github.com/evanw/glfx.js#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/evanw/glfx.js#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/evanw/glfx.js#readme"
+    }
+  },
+  "hover-effect": {
+    "url": "https://github.com/robin-dela/hover-effect#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/robin-dela/hover-effect#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/robin-dela/hover-effect#readme"
+    }
+  },
+  "Kampos": {
+    "url": "https://wix-incubator.github.io/kampos/docs/",
+    "basis": "Repository README: the docs",
+    "check": {
+      "url": "https://wix-incubator.github.io/kampos/docs/",
+      "http_status": 200,
+      "final_url": "https://wix-incubator.github.io/kampos/docs/"
+    }
+  },
+  "Metal FX": {
+    "url": "https://github.com/Jakubantalik/metal-fx#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/Jakubantalik/metal-fx#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/Jakubantalik/metal-fx#readme"
+    }
+  },
+  "Butterchurn": {
+    "url": "https://github.com/jberg/butterchurn#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/jberg/butterchurn#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/jberg/butterchurn#readme"
+    }
+  },
+  "regl": {
+    "url": "https://github.com/regl-project/regl/blob/gh-pages/API.md",
+    "basis": "Repository README: Docs",
+    "check": {
+      "url": "https://github.com/regl-project/regl/blob/gh-pages/API.md",
+      "http_status": 200,
+      "final_url": "https://github.com/regl-project/regl/blob/gh-pages/API.md"
+    }
+  },
+  "shader-doodle": {
+    "url": "https://github.com/halvves/shader-doodle#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/halvves/shader-doodle#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/mmmerl/shader-doodle"
+    }
+  },
+  "three.js": {
+    "url": "https://threejs.org/docs/",
+    "basis": "Repository README: Docs",
+    "check": {
+      "url": "https://threejs.org/docs/",
+      "http_status": 200,
+      "final_url": "https://threejs.org/docs/"
+    }
+  },
+  "wavesurfer.js": {
+    "url": "https://wavesurfer.xyz/docs/api/",
+    "basis": "Repository README: wavesurfer.xyz/docs/api",
+    "check": {
+      "url": "https://wavesurfer.xyz/docs/api/",
+      "http_status": 200,
+      "final_url": "https://wavesurfer.xyz/docs/api/"
+    }
+  },
+  "glitch-canvas": {
+    "url": "https://github.com/snorpey/glitch-canvas#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/snorpey/glitch-canvas#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/snorpey/glitch-canvas#readme"
+    }
+  },
+  "VEDA.js": {
+    "url": "https://github.com/fand/vedajs#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/fand/vedajs#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/fand/vedajs#readme"
+    }
+  },
+  "woscope": {
+    "url": "https://github.com/m1el/woscope#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/m1el/woscope#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/m1el/woscope#readme"
+    }
+  },
+  "Webvs": {
+    "url": "https://github.com/azeem/webvs#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/azeem/webvs#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/azeem/webvs#readme"
+    }
+  },
+  "DSSSP": {
+    "url": "https://dsssp.io/docs/",
+    "basis": "Repository README: dsssp.io/docs",
+    "check": {
+      "url": "https://dsssp.io/docs/",
+      "http_status": 200,
+      "final_url": "https://dsssp.io/docs/"
+    }
+  },
+  "SiriWave": {
+    "url": "https://github.com/kopiro/siriwave#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/kopiro/siriwave#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/kopiro/siriwave#readme"
+    }
+  },
+  "Audio Borealis": {
+    "url": "https://github.com/daformat/audio-borealis#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/daformat/audio-borealis#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/daformat/audio-borealis#readme"
+    }
+  },
+  "html-midi-player": {
+    "url": "https://github.com/cifkao/html-midi-player#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/cifkao/html-midi-player#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/cifkao/html-midi-player#readme"
+    }
+  },
+  "gpu-io": {
+    "url": "https://github.com/amandaghassaei/gpu-io/tree/main/docs",
+    "basis": "Repository README: docs/",
+    "check": {
+      "url": "https://github.com/amandaghassaei/gpu-io/tree/main/docs",
+      "http_status": 200,
+      "final_url": "https://github.com/amandaghassaei/gpu-io/tree/main/docs"
+    }
+  },
+  "three-plotter-renderer": {
+    "url": "https://github.com/neurofuzzy/three-plotter-renderer#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/neurofuzzy/three-plotter-renderer#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/neurofuzzy/three-plotter-renderer#readme"
+    }
+  },
+  "Heerich": {
+    "url": "https://github.com/meodai/heerich#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/meodai/heerich#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/meodai/heerich#readme"
+    }
+  },
+  "Leon Sans": {
+    "url": "https://github.com/cmiscm/leonsans#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/cmiscm/leonsans#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/cmiscm/leonsans#readme"
+    }
+  },
+  "bouffont": {
+    "url": "https://github.com/meodai/bouffont#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/meodai/bouffont#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/meodai/bouffont#readme"
+    }
+  },
+  "Heptapod Ink": {
+    "url": "https://heptapod-ink.tngl.io/",
+    "basis": "Directory site / examples; separate docs not identified",
+    "check": {
+      "url": "https://heptapod-ink.tngl.io/",
+      "http_status": 200,
+      "final_url": "https://heptapod-ink.tngl.io/"
+    }
+  },
+  "Two.js": {
+    "url": "https://two.js.org/docs/two/",
+    "basis": "Repository README: Documentation",
+    "check": {
+      "url": "https://two.js.org/docs/two/",
+      "http_status": 200,
+      "final_url": "https://two.js.org/docs/two/"
+    }
+  },
+  "canvas-sketch": {
+    "url": "https://github.com/mattdesl/canvas-sketch/blob/master/docs/README.md",
+    "basis": "Repository README: Documentation",
+    "check": {
+      "url": "https://github.com/mattdesl/canvas-sketch/blob/master/docs/README.md",
+      "http_status": 200,
+      "final_url": "https://github.com/mattdesl/canvas-sketch/blob/master/docs/README.md"
+    }
+  },
+  "@thi.ng/geom-fuzz": {
+    "url": "https://thi.ng/geom-fuzz",
+    "basis": "Directory site / examples; separate docs not identified",
+    "check": {
+      "url": "https://thi.ng/geom-fuzz",
+      "http_status": 200,
+      "final_url": "https://thi.ng/geom-fuzz"
+    }
+  },
+  "svg2roughjs": {
+    "url": "https://github.com/fskpf/svg2roughjs#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/fskpf/svg2roughjs#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/fskpf/svg2roughjs#readme"
+    }
+  },
+  "Shan Shui (shan-shui-inf)": {
+    "url": "https://github.com/LingDong-/shan-shui-inf#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/LingDong-/shan-shui-inf#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/LingDong-/shan-shui-inf#readme"
+    }
+  },
+  "Penrose": {
+    "url": "https://penrose.cs.cmu.edu/docs/ref",
+    "basis": "Repository README: documentation",
+    "check": {
+      "url": "https://penrose.cs.cmu.edu/docs/ref",
+      "http_status": 200,
+      "final_url": "https://penrose.cs.cmu.edu/docs/ref"
+    }
+  },
+  "MarkovJunior Web": {
+    "url": "https://github.com/Yuu6883/MarkovJuniorWeb#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/Yuu6883/MarkovJuniorWeb#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/Yuu6883/MarkovJuniorWeb#readme"
+    }
+  },
+  "Krbn": {
+    "url": "https://github.com/vpalos/Krbn/blob/main/docs/DESIGN.md",
+    "basis": "Repository README: docs/DESIGN.md",
+    "check": {
+      "url": "https://github.com/vpalos/Krbn/blob/main/docs/DESIGN.md",
+      "http_status": 200,
+      "final_url": "https://github.com/vpalos/Krbn/blob/main/docs/DESIGN.md"
+    }
+  },
+  "Spectral.js": {
+    "url": "https://github.com/rvanwijnen/spectral.js#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/rvanwijnen/spectral.js#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/rvanwijnen/spectral.js#readme"
+    }
+  },
+  "p5.grain": {
+    "url": "https://github.com/josephmiclaus/p5.grain#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/josephmiclaus/p5.grain#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/josephmiclaus/p5.grain#readme"
+    }
+  },
+  "Poline": {
+    "url": "https://github.com/meodai/poline#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/meodai/poline#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/meodai/poline#readme"
+    }
+  },
+  "Sketchy Plants": {
+    "url": "https://github.com/orta/plants#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/orta/plants#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/orta/plants#readme"
+    }
+  },
+  "hairline": {
+    "url": "https://github.com/lucasmarkes/hairline#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/lucasmarkes/hairline#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/lucasmarkes/hairline#readme"
+    }
+  },
+  "Globe.gl": {
+    "url": "https://github.com/vasturiano/globe.gl#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/vasturiano/globe.gl#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/vasturiano/globe.gl#readme"
+    }
+  },
+  "cosmos.gl": {
+    "url": "https://cosmosgl.github.io/graph/?path=/docs/api-reference--docs",
+    "basis": "Repository README: API Reference",
+    "check": {
+      "url": "https://cosmosgl.github.io/graph/?path=/docs/api-reference--docs",
+      "http_status": 200,
+      "final_url": "https://cosmos.gl/?path=/docs/api-reference--docs"
+    }
+  },
+  "deck.gl": {
+    "url": "https://deck.gl/docs",
+    "basis": "Repository README: API documentation",
+    "check": {
+      "url": "https://deck.gl/docs",
+      "http_status": 200,
+      "final_url": "https://deck.gl/docs"
+    }
+  },
+  "3d-force-graph": {
+    "url": "https://github.com/vasturiano/3d-force-graph#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/vasturiano/3d-force-graph#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/vasturiano/3d-force-graph#readme"
+    }
+  },
+  "Sigma.js": {
+    "url": "https://www.sigmajs.org/docs",
+    "basis": "Repository README: Documentation",
+    "check": {
+      "url": "https://www.sigmajs.org/docs",
+      "http_status": 200,
+      "final_url": "https://www.sigmajs.org/docs/"
+    }
+  },
+  "textures.js": {
+    "url": "https://github.com/riccardoscalco/textures#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/riccardoscalco/textures#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/riccardoscalco/textures#readme"
+    }
+  },
+  "d3-voronoi-treemap": {
+    "url": "https://github.com/Kcnarf/d3-voronoi-treemap#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/Kcnarf/d3-voronoi-treemap#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/Kcnarf/d3-voronoi-treemap#readme"
+    }
+  },
+  "Rough.js": {
+    "url": "https://github.com/rough-stuff/rough#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/rough-stuff/rough#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/rough-stuff/rough#readme"
+    }
+  },
+  "Wired Elements": {
+    "url": "https://github.com/rough-stuff/wired-elements/tree/master/docs",
+    "basis": "Repository README: docs folder",
+    "check": {
+      "url": "https://github.com/rough-stuff/wired-elements/tree/master/docs",
+      "http_status": 200,
+      "final_url": "https://github.com/rough-stuff/wired-elements/tree/master/docs"
+    }
+  },
+  "chart.xkcd": {
+    "url": "https://timqian.com/chart.xkcd/",
+    "basis": "Repository README: documentation",
+    "check": {
+      "url": "https://timqian.com/chart.xkcd/",
+      "http_status": 200,
+      "final_url": "https://timqian.com/chart.xkcd/"
+    }
+  },
+  "roughViz": {
+    "url": "https://github.com/jwilber/roughViz#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/jwilber/roughViz#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/jwilber/roughViz#readme"
+    }
+  },
+  "perfect-freehand": {
+    "url": "https://github.com/steveruizok/perfect-freehand#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/steveruizok/perfect-freehand#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/steveruizok/perfect-freehand#readme"
+    }
+  },
+  "Excalidraw": {
+    "url": "https://docs.excalidraw.com",
+    "basis": "Repository README: Documentation",
+    "check": {
+      "url": "https://docs.excalidraw.com",
+      "http_status": 200,
+      "final_url": "https://docs.excalidraw.com/"
+    }
+  },
+  "Vivus": {
+    "url": "https://github.com/maxwellito/vivus#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/maxwellito/vivus#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/maxwellito/vivus#readme"
+    }
+  },
+  "98.css": {
+    "url": "https://jdan.github.io/98.css/",
+    "basis": "Repository README: documentation page",
+    "check": {
+      "url": "https://jdan.github.io/98.css/",
+      "http_status": 200,
+      "final_url": "https://jdan.github.io/98.css/"
+    }
+  },
+  "XP.css": {
+    "url": "https://botoxparty.github.io/XP.css/",
+    "basis": "Repository README: documentation page",
+    "check": {
+      "url": "https://botoxparty.github.io/XP.css/",
+      "http_status": 200,
+      "final_url": "https://botoxparty.github.io/XP.css/"
+    }
+  },
+  "7.css": {
+    "url": "https://khang-nd.github.io/7.css/",
+    "basis": "Repository README: documentation page",
+    "check": {
+      "url": "https://khang-nd.github.io/7.css/",
+      "http_status": 200,
+      "final_url": "https://khang-nd.github.io/7.css/"
+    }
+  },
+  "system.css": {
+    "url": "https://sakofchit.github.io/system.css/",
+    "basis": "Repository README: Documentation",
+    "check": {
+      "url": "https://sakofchit.github.io/system.css/",
+      "http_status": 200,
+      "final_url": "https://sakofchit.github.io/system.css/"
+    }
+  },
+  "NES.css": {
+    "url": "https://github.com/nostalgic-css/NES.css#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/nostalgic-css/NES.css#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/nostalgic-css/NES.css#readme"
+    }
+  },
+  "Webamp": {
+    "url": "https://docs.webamp.org",
+    "basis": "Repository README: Webamp Documentation",
+    "check": {
+      "url": "https://docs.webamp.org",
+      "http_status": 200,
+      "final_url": "https://docs.webamp.org/"
+    }
+  },
+  "augmented-ui": {
+    "url": "http://augmented-ui.com/docs/",
+    "basis": "Repository README: http://augmented-ui.com/docs/",
+    "check": {
+      "url": "http://augmented-ui.com/docs/",
+      "http_status": 200,
+      "final_url": "http://augmented-ui.com/docs/"
+    }
+  },
+  "WebTUI": {
+    "url": "https://webtui.ironclad.sh/start/installation",
+    "basis": "Repository README: installation guide",
+    "check": {
+      "url": "https://webtui.ironclad.sh/start/installation",
+      "http_status": 200,
+      "final_url": "https://webtui.ironclad.sh/start/installation/"
+    }
+  },
+  "cursor-effects": {
+    "url": "https://github.com/tholman/cursor-effects#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/tholman/cursor-effects#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/tholman/cursor-effects#readme"
+    }
+  },
+  "JS Paint": {
+    "url": "https://github.com/1j01/jspaint#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/1j01/jspaint#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/1j01/jspaint#readme"
+    }
+  },
+  "OS-GUI": {
+    "url": "https://github.com/1j01/os-gui#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/1j01/os-gui#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/1j01/os-gui#readme"
+    }
+  },
+  "WinBox": {
+    "url": "https://github.com/nextapps-de/winbox#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/nextapps-de/winbox#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/nextapps-de/winbox#readme"
+    }
+  },
+  "React95": {
+    "url": "https://github.com/react95-io/React95#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/react95-io/React95#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/react95-io/React95#readme"
+    }
+  },
+  "TuiCss": {
+    "url": "https://github.com/vinibiavatti1/TuiCss/wiki",
+    "basis": "Repository README: -- Documentation --",
+    "check": {
+      "url": "https://github.com/vinibiavatti1/TuiCss/wiki",
+      "http_status": 200,
+      "final_url": "https://github.com/vinibiavatti1/TuiCss/wiki"
+    }
+  },
+  "oneko": {
+    "url": "https://oneko.dhrv.pw/docs",
+    "basis": "Repository README: Documentation",
+    "check": {
+      "url": "https://oneko.dhrv.pw/docs",
+      "http_status": 200,
+      "final_url": "https://oneko.dhrv.pw/docs"
+    }
+  },
+  "Motion": {
+    "url": "https://motion.dev/docs/react",
+    "basis": "Repository README: React",
+    "check": {
+      "url": "https://motion.dev/docs/react",
+      "http_status": 200,
+      "final_url": "https://motion.dev/docs/react"
+    }
+  },
+  "GSAP": {
+    "url": "https://gsap.com/docs",
+    "basis": "Repository README: full documentation here",
+    "check": {
+      "url": "https://gsap.com/docs",
+      "http_status": 200,
+      "final_url": "https://gsap.com/docs/v3/"
+    }
+  },
+  "anime.js": {
+    "url": "https://animejs.com/documentation",
+    "basis": "Repository README: here",
+    "check": {
+      "url": "https://animejs.com/documentation",
+      "http_status": 200,
+      "final_url": "https://animejs.com/documentation"
+    }
+  },
+  "Matter.js": {
+    "url": "https://brm.io/matter-js/docs/",
+    "basis": "Repository README: API Documentation",
+    "check": {
+      "url": "https://brm.io/matter-js/docs/",
+      "http_status": 200,
+      "final_url": "https://brm.io/matter-js/docs/"
+    }
+  },
+  "Lenis": {
+    "url": "https://github.com/darkroomengineering/lenis#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/darkroomengineering/lenis#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/darkroomengineering/lenis#readme"
+    }
+  },
+  "Atropos": {
+    "url": "https://github.com/nolimits4web/atropos#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/nolimits4web/atropos#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/nolimits4web/atropos#readme"
+    }
+  },
+  "AutoAnimate": {
+    "url": "https://auto-animate.formkit.com#usage",
+    "basis": "Repository README: View the documentation site for usage instructions",
+    "check": {
+      "url": "https://auto-animate.formkit.com#usage",
+      "http_status": 200,
+      "final_url": "https://auto-animate.formkit.com/#usage"
+    }
+  },
+  "canvas-confetti": {
+    "url": "https://github.com/catdad/canvas-confetti#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/catdad/canvas-confetti#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/catdad/canvas-confetti#readme"
+    }
+  },
+  "Tweakpane": {
+    "url": "https://tweakpane.github.io/docs/",
+    "basis": "Directory documentation link",
+    "check": {
+      "url": "https://tweakpane.github.io/docs/",
+      "http_status": 200,
+      "final_url": "https://tweakpane.github.io/docs/"
+    }
+  },
+  "Kinesis 2": {
+    "url": "https://kinesisjs.com/docs/",
+    "basis": "Repository README: Docs",
+    "check": {
+      "url": "https://kinesisjs.com/docs/",
+      "http_status": 200,
+      "final_url": "https://kinesisjs.com/docs/"
+    }
+  },
+  "flubber": {
+    "url": "https://github.com/veltman/flubber#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/veltman/flubber#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/veltman/flubber#readme"
+    }
+  },
+  "KUTE.js": {
+    "url": "https://github.com/thednp/kute.js#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/thednp/kute.js#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/thednp/kute.js#readme"
+    }
+  },
+  "React Flip Toolkit": {
+    "url": "https://github.com/aholachek/react-flip-toolkit#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/aholachek/react-flip-toolkit#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/aholachek/react-flip-toolkit#readme"
+    }
+  },
+  "React Bubble UI": {
+    "url": "https://blakesanie.github.io/React-Bubble-UI/#/docs",
+    "basis": "Repository README: Read Docs",
+    "check": {
+      "url": "https://blakesanie.github.io/React-Bubble-UI/#/docs",
+      "http_status": 200,
+      "final_url": "https://blakesanie.github.io/React-Bubble-UI/#/docs"
+    }
+  },
+  "Scene.js + Timeline": {
+    "url": "https://daybrush.com/scenejs/release/latest/doc/",
+    "basis": "Repository README: API Documentation",
+    "check": {
+      "url": "https://daybrush.com/scenejs/release/latest/doc/",
+      "http_status": 200,
+      "final_url": "https://daybrush.com/scenejs/release/latest/doc/"
+    }
+  },
+  "Shuffle.js": {
+    "url": "https://github.com/glen-cheney/Shuffle#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/glen-cheney/Shuffle#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/glen-cheney/Shuffle#readme"
+    }
+  },
+  "Disintegrate": {
+    "url": "https://github.com/ZachSaucier/Disintegrate#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/ZachSaucier/Disintegrate#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/ZachSaucier/Disintegrate#readme"
+    }
+  },
+  "Motion Canvas": {
+    "url": "https://motion-canvas.io/docs/quickstart",
+    "basis": "Repository README: Our documentation website.",
+    "check": {
+      "url": "https://motion-canvas.io/docs/quickstart",
+      "http_status": 200,
+      "final_url": "https://motion-canvas.io/docs/quickstart/"
+    }
+  },
+  "interact.js": {
+    "url": "http://interactjs.io/docs",
+    "basis": "Repository README: http://interactjs.io/docs",
+    "check": {
+      "url": "http://interactjs.io/docs",
+      "http_status": 200,
+      "final_url": "https://interactjs.io/docs/"
+    }
+  },
+  "Shopify Draggable": {
+    "url": "https://github.com/Shopify/draggable/blob/main/doc/typescript.md",
+    "basis": "Repository README: Documentation",
+    "check": {
+      "url": "https://github.com/Shopify/draggable/blob/main/doc/typescript.md",
+      "http_status": 200,
+      "final_url": "https://github.com/Shopify/draggable/blob/main/doc/typescript.md"
+    }
+  },
+  "Muuri": {
+    "url": "https://github.com/haltu/muuri#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/haltu/muuri#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/haltu/muuri#readme"
+    }
+  },
+  "AnimXYZ": {
+    "url": "https://animxyz.com/docs",
+    "basis": "Repository README: Check out the AnimXYZ docs!",
+    "check": {
+      "url": "https://animxyz.com/docs",
+      "http_status": 200,
+      "final_url": "https://animxyz.com/docs/"
+    }
+  },
+  "Animata": {
+    "url": "https://github.com/codse/animata#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/codse/animata#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/codse/animata#readme"
+    }
+  },
+  "Theme Toggles": {
+    "url": "https://toggles.dev",
+    "basis": "Repository README: Documentation",
+    "check": {
+      "url": "https://toggles.dev",
+      "http_status": 200,
+      "final_url": "https://toggles.dev/"
+    }
+  },
+  "Hamburgers": {
+    "url": "https://github.com/jonsuh/hamburgers#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/jonsuh/hamburgers#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/jonsuh/hamburgers#readme"
+    }
+  },
+  "Rive": {
+    "url": "https://rive.app/docs/getting-started/introduction",
+    "basis": "Repository README: Rive docs",
+    "check": {
+      "url": "https://rive.app/docs/getting-started/introduction",
+      "http_status": 200,
+      "final_url": "https://rive.app/docs/getting-started/introduction"
+    }
+  },
+  "dotLottie Web": {
+    "url": "https://docs.lottiefiles.com/en/runtimes/distributions/js",
+    "basis": "Directory documentation link",
+    "check": {
+      "url": "https://docs.lottiefiles.com/en/runtimes/distributions/js",
+      "http_status": 200,
+      "final_url": "https://docs.lottiefiles.com/en/runtimes/distributions/js"
+    }
+  },
+  "Flicking": {
+    "url": "https://naver.github.io/egjs-flicking/docs/demos/basic/default",
+    "basis": "Repository README: Demo",
+    "check": {
+      "url": "https://naver.github.io/egjs-flicking/docs/demos/basic/default",
+      "http_status": 200,
+      "final_url": "https://naver.github.io/egjs-flicking/docs/demos/basic/default"
+    }
+  },
+  "smooothy": {
+    "url": "https://github.com/vallafederico/smooothy/blob/master/docs/webgl.md",
+    "basis": "Repository README: In depth webgl related docs.",
+    "check": {
+      "url": "https://github.com/vallafederico/smooothy/blob/master/docs/webgl.md",
+      "http_status": 200,
+      "final_url": "https://github.com/vallafederico/smooothy/blob/master/docs/webgl.md"
+    }
+  },
+  "Interior": {
+    "url": "https://github.com/ddoemonn/interior#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/ddoemonn/interior#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/ddoemonn/interior#readme"
+    }
+  },
+  "React Wheel Picker": {
+    "url": "https://react-wheel-picker.chanhdai.com/docs/getting-started",
+    "basis": "Repository README: documentation",
+    "check": {
+      "url": "https://react-wheel-picker.chanhdai.com/docs/getting-started",
+      "http_status": 200,
+      "final_url": "https://react-wheel-picker.chanhdai.com/docs/getting-started"
+    }
+  },
+  "animate-css-grid": {
+    "url": "https://github.com/aholachek/animate-css-grid#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/aholachek/animate-css-grid#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/aholachek/animate-css-grid#readme"
+    }
+  },
+  "Parallax.js": {
+    "url": "https://github.com/wagerfield/parallax#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/wagerfield/parallax#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/wagerfield/parallax#readme"
+    }
+  },
+  "mo.js": {
+    "url": "https://mojs.github.io/api/",
+    "basis": "Repository README: API documentation",
+    "check": {
+      "url": "https://mojs.github.io/api/",
+      "http_status": 200,
+      "final_url": "https://mojs.github.io/api/"
+    }
+  },
+  "Swiper": {
+    "url": "https://swiperjs.com/swiper-api",
+    "basis": "Repository README: Documentation",
+    "check": {
+      "url": "https://swiperjs.com/swiper-api",
+      "http_status": 200,
+      "final_url": "https://swiperjs.com/swiper-api"
+    }
+  },
+  "Moveable": {
+    "url": "https://daybrush.com/moveable/release/latest/doc/",
+    "basis": "Repository README: API Documentation",
+    "check": {
+      "url": "https://daybrush.com/moveable/release/latest/doc/",
+      "http_status": 200,
+      "final_url": "https://daybrush.com/moveable/release/latest/doc/"
+    }
+  },
+  "SmoothUI": {
+    "url": "https://smoothui.dev/doc/mcp",
+    "basis": "Repository README: Learn more about MCP support →",
+    "check": {
+      "url": "https://smoothui.dev/doc/mcp",
+      "http_status": 404,
+      "final_url": "https://smoothui.dev/docs/mcp"
+    }
+  },
+  "Tailwind Motion": {
+    "url": "https://docs.rombo.co/tailwind",
+    "basis": "Repository README: docs.rombo.co/tailwind",
+    "check": {
+      "url": "https://docs.rombo.co/tailwind",
+      "http_status": 200,
+      "final_url": "https://docs.rombo.co/tailwind"
+    }
+  },
+  "pushIn.js": {
+    "url": "https://github.com/nateplusplus/pushin#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/nateplusplus/pushin#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/nateplusplus/pushin#readme"
+    }
+  },
+  "React Kino": {
+    "url": "https://www.react-kino.dev/docs",
+    "basis": "Repository README: Documentation",
+    "check": {
+      "url": "https://www.react-kino.dev/docs",
+      "http_status": 200,
+      "final_url": "https://www.react-kino.dev/docs"
+    }
+  },
+  "r3f-scroll-rig": {
+    "url": "https://github.com/14islands/r3f-scroll-rig/blob/master/docs/api.md",
+    "basis": "Repository README: API docs",
+    "check": {
+      "url": "https://github.com/14islands/r3f-scroll-rig/blob/master/docs/api.md",
+      "http_status": 200,
+      "final_url": "https://github.com/14islands/r3f-scroll-rig/blob/master/docs/api.md"
+    }
+  },
+  "impress.js": {
+    "url": "https://github.com/impress/impress.js/blob/master/DOCUMENTATION.md",
+    "basis": "Repository README: DOCUMENTATION.md",
+    "check": {
+      "url": "https://github.com/impress/impress.js/blob/master/DOCUMENTATION.md",
+      "http_status": 200,
+      "final_url": "https://github.com/impress/impress.js/blob/master/DOCUMENTATION.md"
+    }
+  },
+  "SSGOI": {
+    "url": "https://ssgoi.dev/docs",
+    "basis": "Repository README: Documentation",
+    "check": {
+      "url": "https://ssgoi.dev/docs",
+      "http_status": 200,
+      "final_url": "https://ssgoi.dev/docs"
+    }
+  },
+  "transition.css": {
+    "url": "https://github.com/argyleink/transition.css#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/argyleink/transition.css#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/argyleink/transition.css#readme"
+    }
+  },
+  "OriDomi": {
+    "url": "https://oxism.com/oriDomi/docs/oridomi.html",
+    "basis": "Repository README: annotated source",
+    "check": {
+      "url": "https://oxism.com/oriDomi/docs/oridomi.html",
+      "http_status": 200,
+      "final_url": "https://oxism.com/oriDomi/docs/oridomi.html"
+    }
+  },
+  "Peel.js": {
+    "url": "https://github.com/andrewplummer/peel-js#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/andrewplummer/peel-js#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/andrewplummer/peel-js#readme"
+    }
+  },
+  "Swup": {
+    "url": "https://swup.js.org/getting-started",
+    "basis": "Repository README: Documentation",
+    "check": {
+      "url": "https://swup.js.org/getting-started",
+      "http_status": 200,
+      "final_url": "https://swup.js.org/getting-started/"
+    }
+  },
+  "StPageFlip": {
+    "url": "https://nodlik.github.io/StPageFlip/docs/index.html",
+    "basis": "Repository README: https://nodlik.github.io/StPageFlip/docs/index.html",
+    "check": {
+      "url": "https://nodlik.github.io/StPageFlip/docs/index.html",
+      "http_status": 200,
+      "final_url": "https://nodlik.github.io/StPageFlip/docs/index.html"
+    }
+  },
+  "IE Page Transitions": {
+    "url": "https://github.com/bramus/ie-page-transitions#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/bramus/ie-page-transitions#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/bramus/ie-page-transitions#readme"
+    }
+  },
+  "Scrollama": {
+    "url": "https://github.com/russellgoldenberg/scrollama#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/russellgoldenberg/scrollama#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/russellsamora/scrollama"
+    }
+  },
+  "lax.js": {
+    "url": "https://github.com/alexfoxy/lax.js#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/alexfoxy/lax.js#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/alexfoxy/lax.js#readme"
+    }
+  },
+  "Lottie + lottie-interactivity": {
+    "url": "https://docs.lottiefiles.com/lottie-interactivity/",
+    "basis": "Repository README: docs.lottiefiles.com/lottie-interactivity",
+    "check": {
+      "url": "https://docs.lottiefiles.com/lottie-interactivity/",
+      "http_status": 404,
+      "final_url": "https://docs.lottiefiles.com/lottie-interactivity"
+    }
+  },
+  "Zumly": {
+    "url": "https://github.com/zumerlab/zumly/blob/main/docs/DRIVER_API.md",
+    "basis": "Repository README: docs/DRIVER_API.md",
+    "check": {
+      "url": "https://github.com/zumerlab/zumly/blob/main/docs/DRIVER_API.md",
+      "http_status": 200,
+      "final_url": "https://github.com/zumerlab/zumly/blob/main/docs/DRIVER_API.md"
+    }
+  },
+  "Vue Flux": {
+    "url": "https://ragnarlotus.github.io/vue-flux-docs/documentation/v5/overview",
+    "basis": "Repository README: Version 5 documentation",
+    "check": {
+      "url": "https://ragnarlotus.github.io/vue-flux-docs/documentation/v5/overview",
+      "http_status": 200,
+      "final_url": "https://ragnarlotus.github.io/vue-flux-docs/documentation/v5/overview/"
+    }
+  },
+  "LiquidFun": {
+    "url": "https://github.com/Birch-san/box2d-wasm/blob/master/docs",
+    "basis": "Repository README: documentation",
+    "check": {
+      "url": "https://github.com/Birch-san/box2d-wasm/blob/master/docs",
+      "http_status": 200,
+      "final_url": "https://github.com/Birch-san/box2d-wasm/tree/master/docs"
+    }
+  },
+  "Jolt Physics": {
+    "url": "https://jrouwe.github.io/JoltPhysics/",
+    "basis": "Repository README: C++ documentation",
+    "check": {
+      "url": "https://jrouwe.github.io/JoltPhysics/",
+      "http_status": 200,
+      "final_url": "https://jrouwe.github.io/JoltPhysics/"
+    }
+  },
+  "planck.js": {
+    "url": "https://piqnt.com/planck.js/docs/",
+    "basis": "Repository README: Documentation",
+    "check": {
+      "url": "https://piqnt.com/planck.js/docs/",
+      "http_status": 200,
+      "final_url": "https://piqnt.com/planck.js/docs/"
+    }
+  },
+  "cannon-es": {
+    "url": "https://pmndrs.github.io/cannon-es/docs/",
+    "basis": "Repository README: Documentation",
+    "check": {
+      "url": "https://pmndrs.github.io/cannon-es/docs/",
+      "http_status": 200,
+      "final_url": "https://pmndrs.github.io/cannon-es/docs/"
+    }
+  },
+  "Party": {
+    "url": "https://github.com/cazala/party/blob/main/docs",
+    "basis": "Repository README: docs/",
+    "check": {
+      "url": "https://github.com/cazala/party/blob/main/docs",
+      "http_status": 200,
+      "final_url": "https://github.com/cazala/party/tree/main/docs"
+    }
+  },
+  "verlet-js": {
+    "url": "https://github.com/subprotocol/verlet-js#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/subprotocol/verlet-js#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/subprotocol/verlet-js#readme"
+    }
+  },
+  "React Spring": {
+    "url": "https://github.com/pmndrs/react-spring#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/pmndrs/react-spring#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/pmndrs/react-spring#readme"
+    }
+  },
+  "Rebound": {
+    "url": "https://github.com/facebookarchive/rebound-js#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/facebookarchive/rebound-js#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/facebookarchive/rebound-js#readme"
+    }
+  },
+  "Dynamics.js": {
+    "url": "https://github.com/michaelvillar/dynamics.js#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/michaelvillar/dynamics.js#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/michaelvillar/dynamics.js#readme"
+    }
+  },
+  "Smooth Scrollbar": {
+    "url": "https://github.com/idiotWu/smooth-scrollbar#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/idiotWu/smooth-scrollbar#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/dolphin-wood/smooth-scrollbar"
+    }
+  },
+  "split-flap-elements": {
+    "url": "https://github.com/gabeosx/split-flap-elements#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/gabeosx/split-flap-elements#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/gabeosx/split-flap-elements#readme"
+    }
+  },
+  "Hover Tilt": {
+    "url": "https://hover-tilt.simey.me/options/props",
+    "basis": "Repository README: Full Documentation",
+    "check": {
+      "url": "https://hover-tilt.simey.me/options/props",
+      "http_status": 200,
+      "final_url": "https://hover-tilt.simey.me/options/props/"
+    }
+  },
+  "webaudio-controls": {
+    "url": "https://g200kg.github.io/webaudio-controls/docs/index.html",
+    "basis": "Repository README: Documents and Application Notes",
+    "check": {
+      "url": "https://g200kg.github.io/webaudio-controls/docs/index.html",
+      "http_status": 200,
+      "final_url": "https://g200kg.github.io/webaudio-controls/docs/index.html"
+    }
+  },
+  "Cuberto Mouse Follower": {
+    "url": "https://github.com/Cuberto/mouse-follower#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/Cuberto/mouse-follower#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/Cuberto/mouse-follower#readme"
+    }
+  },
+  "Odometer": {
+    "url": "http://github.hubspot.com/odometer",
+    "basis": "Repository README: Docs and Demo",
+    "check": {
+      "url": "http://github.hubspot.com/odometer",
+      "http_status": 200,
+      "final_url": "https://github.hubspot.com/odometer/"
+    }
+  },
+  "p5.brush": {
+    "url": "https://github.com/acamposuribe/p5.brush/blob/main/docs/standalone.md",
+    "basis": "Repository README: docs/standalone.md",
+    "check": {
+      "url": "https://github.com/acamposuribe/p5.brush/blob/main/docs/standalone.md",
+      "http_status": 200,
+      "final_url": "https://github.com/acamposuribe/p5.brush/blob/main/docs/standalone.md"
+    }
+  },
+  "segment-display": {
+    "url": "https://github.com/ChTosar/sixteensegment#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/ChTosar/sixteensegment#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/ChTosar/sixteensegment#readme"
+    }
+  },
+  "Boring Avatars": {
+    "url": "https://github.com/boringdesigners/boring-avatars#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/boringdesigners/boring-avatars#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/boringdesigners/boring-avatars#readme"
+    }
+  },
+  "Dice Box": {
+    "url": "https://fantasticdice.games/docs/usage/config#configuration-options",
+    "basis": "Repository README: Configuration Options",
+    "check": {
+      "url": "https://fantasticdice.games/docs/usage/config#configuration-options",
+      "http_status": 200,
+      "final_url": "https://fantasticdice.games/docs/usage/config#configuration-options"
+    }
+  },
+  "Fracture": {
+    "url": "https://github.com/aaronbeall/fracture#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/aaronbeall/fracture#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/aaronbeall/fracture#readme"
+    }
+  },
+  "RageLayer": {
+    "url": "https://www.parthjadhav.com/products/ragelayer/docs",
+    "basis": "Repository README: Documentation",
+    "check": {
+      "url": "https://www.parthjadhav.com/products/ragelayer/docs",
+      "http_status": 200,
+      "final_url": "https://www.parthjadhav.com/products/ragelayer/docs"
+    }
+  },
+  "SnapDOM": {
+    "url": "https://snapdom.dev/",
+    "basis": "Repository README: Documentation and demos",
+    "check": {
+      "url": "https://snapdom.dev/",
+      "http_status": 200,
+      "final_url": "https://snapdom.dev/"
+    }
+  },
+  "vault66-crt-effect": {
+    "url": "https://vault66.dev/",
+    "basis": "Repository README: Live playground and documentation →",
+    "check": {
+      "url": "https://vault66.dev/",
+      "http_status": 200,
+      "final_url": "https://vault66.dev/"
+    }
+  },
+  "crt-shader": {
+    "url": "https://crt-shader.vercel.app/",
+    "basis": "Repository README: Documentation",
+    "check": {
+      "url": "https://crt-shader.vercel.app/",
+      "http_status": 200,
+      "final_url": "https://crt-shader.vercel.app/"
+    }
+  },
+  "QR Code Styling": {
+    "url": "https://github.com/kozakdenys/qr-code-styling#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/kozakdenys/qr-code-styling#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/kozakdenys/qr-code-styling#readme"
+    }
+  },
+  "<qr-code> (bitjson)": {
+    "url": "https://github.com/bitjson/qr-code#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/bitjson/qr-code#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/bitjson/qr-code#readme"
+    }
+  },
+  "Awesome-qr.js": {
+    "url": "https://github.com/SumiMakito/Awesome-qr.js#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/SumiMakito/Awesome-qr.js#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/SumiMakito/Awesome-qr.js#readme"
+    }
+  },
+  "useAnimations": {
+    "url": "https://useanimations.com/documentation",
+    "basis": "Repository README: Documentation",
+    "check": {
+      "url": "https://useanimations.com/documentation",
+      "http_status": 200,
+      "final_url": "https://useanimations.com/documentation"
+    }
+  },
+  "Material Line Icons (line-md)": {
+    "url": "https://iconify.design/docs/usage/svg-css/",
+    "basis": "Repository README: Iconify documentation",
+    "check": {
+      "url": "https://iconify.design/docs/usage/svg-css/",
+      "http_status": 200,
+      "final_url": "https://iconify.design/docs/usage/svg-css/"
+    }
+  },
+  "DiceBear": {
+    "url": "https://www.dicebear.com/start/what-is-dicebear/",
+    "basis": "Repository README: Documentation",
+    "check": {
+      "url": "https://www.dicebear.com/start/what-is-dicebear/",
+      "http_status": 200,
+      "final_url": "https://www.dicebear.com/start/what-is-dicebear/"
+    }
+  },
+  "Blobatar": {
+    "url": "https://github.com/Alain00/blobatar/blob/main/packages/blobatar/README.md",
+    "basis": "Repository README: Full docs — options table, guarantees, and how it works →",
+    "check": {
+      "url": "https://github.com/Alain00/blobatar/blob/main/packages/blobatar/README.md",
+      "http_status": 200,
+      "final_url": "https://github.com/Alain00/blobatar/blob/main/packages/blobatar/README.md"
+    }
+  },
+  "dither-avatar": {
+    "url": "https://github.com/maartenkeizer/dither-avatar#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/maartenkeizer/dither-avatar#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/maartenkeizer/dither-avatar#readme"
+    }
+  },
+  "bwip-js": {
+    "url": "https://github.com/metafloor/bwip-js#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/metafloor/bwip-js#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/metafloor/bwip-js#readme"
+    }
+  },
+  "ipad-cursor": {
+    "url": "https://github.com/CatsJuice/ipad-cursor/blob/main/docs/README.zh.md",
+    "basis": "Repository README: ",
+    "check": {
+      "url": "https://github.com/CatsJuice/ipad-cursor/blob/main/docs/README.zh.md",
+      "http_status": 200,
+      "final_url": "https://github.com/CatsJuice/ipad-cursor/blob/main/docs/README.zh.md"
+    }
+  },
+  "perfect-cursors": {
+    "url": "https://github.com/steveruizok/perfect-cursors#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/steveruizok/perfect-cursors#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/steveruizok/perfect-cursors#readme"
+    }
+  },
+  "img-comparison-slider": {
+    "url": "https://github.com/sneas/img-comparison-slider/blob/master/docs/installation/angular.md",
+    "basis": "Repository README: Angular",
+    "check": {
+      "url": "https://github.com/sneas/img-comparison-slider/blob/master/docs/installation/angular.md",
+      "http_status": 200,
+      "final_url": "https://github.com/sneas/img-comparison-slider/blob/master/docs/installation/angular.md"
+    }
+  },
+  "party.js": {
+    "url": "https://party.js.org/docs/",
+    "basis": "Repository README: quick start",
+    "check": {
+      "url": "https://party.js.org/docs/",
+      "http_status": 200,
+      "final_url": "https://party.js.org/docs/"
+    }
+  },
+  "Devices.css": {
+    "url": "https://github.com/picturepan2/devices.css#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/picturepan2/devices.css#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/picturepan2/devices.css#readme"
+    }
+  },
+  "react-3d-mockups": {
+    "url": "https://area.is/react-3d-mockups",
+    "basis": "Repository README: Documentation and live demos →",
+    "check": {
+      "url": "https://area.is/react-3d-mockups",
+      "http_status": 200,
+      "final_url": "https://area.is/react-3d-mockups"
+    }
+  },
+  "Atrament": {
+    "url": "https://github.com/jakubfiala/atrament#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/jakubfiala/atrament#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/jakubfiala/atrament#readme"
+    }
+  },
+  "drauu": {
+    "url": "https://github.com/antfu/drauu#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/antfu/drauu#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/antfu/drauu#readme"
+    }
+  },
+  "cards-css": {
+    "url": "https://github.com/kongyo2/cards-css#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/kongyo2/cards-css#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/kongyo2/cards-css#readme"
+    }
+  },
+  "MetalUI": {
+    "url": "https://github.com/vijayksingh/metalui/blob/main/docs/CSS_SYSTEM.md",
+    "basis": "Repository README: docs/CSS_SYSTEM.md",
+    "check": {
+      "url": "https://github.com/vijayksingh/metalui/blob/main/docs/CSS_SYSTEM.md",
+      "http_status": 200,
+      "final_url": "https://github.com/vijayksingh/metalui/blob/main/docs/CSS_SYSTEM.md"
+    }
+  },
+  "RPGUI": {
+    "url": "https://github.com/RonenNess/RPGUI#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/RonenNess/RPGUI#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/RonenNess/RPGUI#readme"
+    }
+  },
+  "Sakura.js": {
+    "url": "https://github.com/jhammann/sakura#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/jhammann/sakura#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/jhammann/sakura#readme"
+    }
+  },
+  "LDRS": {
+    "url": "https://github.com/GriffinJohnston/ldrs#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/GriffinJohnston/ldrs#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/GriffinJohnston/ldrs#readme"
+    }
+  },
+  "SVG Spinners": {
+    "url": "https://github.com/n3r4zzurr0/svg-spinners#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/n3r4zzurr0/svg-spinners#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/n3r4zzurr0/svg-spinners#readme"
+    }
+  },
+  "Whirl": {
+    "url": "https://github.com/jh3y/whirl#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/jh3y/whirl#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/jh3y/whirl#readme"
+    }
+  },
+  "Flip": {
+    "url": "https://github.com/pqina/flip#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/pqina/flip#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/pqina/flip#readme"
+    }
+  },
+  "canvas-gauges": {
+    "url": "http://canvas-gauges.com/documentation/api/",
+    "basis": "Repository README: Developer's Docs",
+    "check": {
+      "url": "http://canvas-gauges.com/documentation/api/",
+      "http_status": 200,
+      "final_url": "https://canvas-gauges.com/documentation/api/"
+    }
+  },
+  "Precision Inputs": {
+    "url": "https://github.com/jhnsnc/precision-inputs/tree/master/docs/",
+    "basis": "Repository README: the documentation table-of-contents",
+    "check": {
+      "url": "https://github.com/jhnsnc/precision-inputs/tree/master/docs/",
+      "http_status": 200,
+      "final_url": "https://github.com/jhnsnc/precision-inputs/tree/master/docs/"
+    }
+  },
+  "Ambient CSS": {
+    "url": "https://kikkupico.github.io/ambientcss/",
+    "basis": "Repository README: Documentation",
+    "check": {
+      "url": "https://kikkupico.github.io/ambientcss/",
+      "http_status": 200,
+      "final_url": "https://kikkupico.github.io/ambientcss/"
+    }
+  },
+  "goey-toast": {
+    "url": "https://goey-toast.vercel.app",
+    "basis": "Repository README: Live Demo & Docs",
+    "check": {
+      "url": "https://goey-toast.vercel.app",
+      "http_status": 200,
+      "final_url": "https://goey-toast.vercel.app/"
+    }
+  },
+  "Sileo": {
+    "url": "https://sileo.aaryan.design/docs",
+    "basis": "Repository README: Docs",
+    "check": {
+      "url": "https://sileo.aaryan.design/docs",
+      "http_status": 200,
+      "final_url": "https://sileo.aaryan.design/docs"
+    }
+  },
+  "ScratchCard-js": {
+    "url": "https://github.com/Masth0/ScratchCard#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/Masth0/ScratchCard#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/Masth0/ScratchCard#readme"
+    }
+  },
+  "Spin Wheel": {
+    "url": "https://github.com/CrazyTim/spin-wheel#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/CrazyTim/spin-wheel#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/CrazyTim/spin-wheel#readme"
+    }
+  },
+  "React Bits": {
+    "url": "https://reactbits.dev/get-started/introduction",
+    "basis": "Repository README: Documentation",
+    "check": {
+      "url": "https://reactbits.dev/get-started/introduction",
+      "http_status": 200,
+      "final_url": "https://reactbits.dev/get-started/introduction"
+    }
+  },
+  "Magic UI": {
+    "url": "https://magicui.design/docs",
+    "basis": "Repository README: https://magicui.design/docs",
+    "check": {
+      "url": "https://magicui.design/docs",
+      "http_status": 200,
+      "final_url": "https://magicui.design/docs"
+    }
+  },
+  "Aceternity UI": {
+    "url": "https://ui.aceternity.com",
+    "basis": "Directory site / examples; separate docs not identified",
+    "check": {
+      "url": "https://ui.aceternity.com",
+      "http_status": 200,
+      "final_url": "https://ui.aceternity.com/"
+    }
+  },
+  "Animate UI": {
+    "url": "https://animate-ui.com/docs",
+    "basis": "Repository README: animate-ui.com",
+    "check": {
+      "url": "https://animate-ui.com/docs",
+      "http_status": 200,
+      "final_url": "https://animate-ui.com/docs"
+    }
+  },
+  "Motion Primitives": {
+    "url": "http://motion-primitives.com/docs",
+    "basis": "Repository README: motion-primitives.com/docs",
+    "check": {
+      "url": "http://motion-primitives.com/docs",
+      "http_status": 200,
+      "final_url": "http://motion-primitives.com/docs"
+    }
+  },
+  "Sonner": {
+    "url": "https://sonner.emilkowal.ski/getting-started",
+    "basis": "Repository README: documentation",
+    "check": {
+      "url": "https://sonner.emilkowal.ski/getting-started",
+      "http_status": 200,
+      "final_url": "https://sonner.emilkowal.ski/getting-started"
+    }
+  },
+  "Vaul": {
+    "url": "https://github.com/emilkowalski/vaul#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/emilkowalski/vaul#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/emilkowalski/vaul#readme"
+    }
+  },
+  "cmdk": {
+    "url": "https://github.com/dip/cmdk#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/dip/cmdk#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/dip/cmdk#readme"
+    }
+  },
+  "8bitcn": {
+    "url": "https://8bitcn.com/docs",
+    "basis": "Repository README: Documentation",
+    "check": {
+      "url": "https://8bitcn.com/docs",
+      "http_status": 200,
+      "final_url": "https://www.8bitcn.com/docs"
+    }
+  },
+  "Ephemera": {
+    "url": "https://ephemera.kerrshift.com",
+    "basis": "Repository README: Website & docs",
+    "check": {
+      "url": "https://ephemera.kerrshift.com",
+      "http_status": 200,
+      "final_url": "https://ephemera.kerrshift.com/"
+    }
+  },
+  "Kokonut UI": {
+    "url": "https://kokonutui.com/docs",
+    "basis": "Repository README: https://kokonutui.com/docs",
+    "check": {
+      "url": "https://kokonutui.com/docs",
+      "http_status": 200,
+      "final_url": "https://kokonutui.com/docs"
+    }
+  },
+  "audiocn": {
+    "url": "https://audiocn.dev/docs",
+    "basis": "Repository README: Docs",
+    "check": {
+      "url": "https://audiocn.dev/docs",
+      "http_status": 200,
+      "final_url": "https://www.audiocn.dev/docs"
+    }
+  },
+  "neobrutalism.dev": {
+    "url": "https://www.neobrutalism.dev/docs",
+    "basis": "Repository README: docs",
+    "check": {
+      "url": "https://www.neobrutalism.dev/docs",
+      "http_status": 200,
+      "final_url": "https://www.neobrutalism.dev/docs"
+    }
+  },
+  "soundcn": {
+    "url": "https://github.com/kapishdima/soundcn#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/kapishdima/soundcn#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/kapishdima/soundcn#readme"
+    }
+  },
+  "Fancy Components": {
+    "url": "https://fancycomponents.dev/docs/introduction",
+    "basis": "Repository README: https://fancycomponents.dev/docs/introduction",
+    "check": {
+      "url": "https://fancycomponents.dev/docs/introduction",
+      "http_status": 200,
+      "final_url": "https://www.fancycomponents.dev/docs/introduction"
+    }
+  },
+  "lucide-animated": {
+    "url": "https://github.com/pqoqubbw/icons#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/pqoqubbw/icons#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/pqoqubbw/icons#readme"
+    }
+  },
+  "Motion Core": {
+    "url": "https://motion-core.dev",
+    "basis": "Repository README: documentation",
+    "check": {
+      "url": "https://motion-core.dev",
+      "http_status": 200,
+      "final_url": "https://motion-core.dev/"
+    }
+  },
+  "CrafterUI": {
+    "url": "https://github.com/SriSomanaath/crafterui#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/SriSomanaath/crafterui#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/SriSomanaath/crafterui#readme"
+    }
+  },
+  "threecn": {
+    "url": "https://github.com/ln-dev7/threecn#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/ln-dev7/threecn#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/ln-dev7/threecn#readme"
+    }
+  },
+  "NS UI": {
+    "url": "https://github.com/nikolas-sapa/ns-ui/blob/main/docs/saved-library.md",
+    "basis": "Repository README: docs/saved-library.md",
+    "check": {
+      "url": "https://github.com/nikolas-sapa/ns-ui/blob/main/docs/saved-library.md",
+      "http_status": 200,
+      "final_url": "https://github.com/nikolas-sapa/ns-ui/blob/main/docs/saved-library.md"
+    }
+  },
+  "Componentry": {
+    "url": "https://componentry.dev",
+    "basis": "Repository README: Documentation",
+    "check": {
+      "url": "https://componentry.dev",
+      "http_status": 200,
+      "final_url": "https://componentry.dev/"
+    }
+  },
+  "Crucible": {
+    "url": "https://crucibleui.com",
+    "basis": "Directory site / examples; separate docs not identified",
+    "check": {
+      "url": "https://crucibleui.com",
+      "http_status": 200,
+      "final_url": "https://crucibleui.com/"
+    }
+  },
+  "Atelier UI": {
+    "url": "https://atelier-ui.com/docs",
+    "basis": "Repository README: atelier-ui.com/docs",
+    "check": {
+      "url": "https://atelier-ui.com/docs",
+      "http_status": 200,
+      "final_url": "https://www.atelier-ui.com/en/docs/getting-started/how-it-works"
+    }
+  },
+  "Hyperiux Vault": {
+    "url": "https://github.com/Hyperiux-Immersion-Labs/hyperiux-components#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/Hyperiux-Immersion-Labs/hyperiux-components#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/Hyperiux-Immersion-Labs/hyperiux-components#readme"
+    }
+  },
+  "AnimateIcons": {
+    "url": "https://animateicons.in/icons/docs",
+    "basis": "Repository README: Docs",
+    "check": {
+      "url": "https://animateicons.in/icons/docs",
+      "http_status": 200,
+      "final_url": "https://animateicons.in/icons/docs"
+    }
+  },
+  "Canvas UI": {
+    "url": "https://canvasui.dev/docs",
+    "basis": "Repository README: Docs",
+    "check": {
+      "url": "https://canvasui.dev/docs",
+      "http_status": 200,
+      "final_url": "https://canvasui.dev/docs"
+    }
+  },
+  "1st-pouf": {
+    "url": "https://github.com/moji2002/1st-pouf/blob/main/docs/testing.md",
+    "basis": "Repository README: consumer testing guide",
+    "check": {
+      "url": "https://github.com/moji2002/1st-pouf/blob/main/docs/testing.md",
+      "http_status": 200,
+      "final_url": "https://github.com/moji2002/1st-pouf/blob/main/docs/testing.md"
+    }
+  },
+  "Uiverse Galaxy": {
+    "url": "https://github.com/uiverse-io/galaxy#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/uiverse-io/galaxy#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/uiverse-io/galaxy#readme"
+    }
+  },
+  "Benday": {
+    "url": "https://benday.kacemmathlouthi.dev/usage",
+    "basis": "Repository README: Docs",
+    "check": {
+      "url": "https://benday.kacemmathlouthi.dev/usage",
+      "http_status": 200,
+      "final_url": "https://benday.kacemmathlouthi.dev/usage"
+    }
+  },
+  "agentfaces": {
+    "url": "https://ajibadedapo.github.io/agentfaces/",
+    "basis": "Repository README: Docs and playground",
+    "check": {
+      "url": "https://ajibadedapo.github.io/agentfaces/",
+      "http_status": 200,
+      "final_url": "https://ajibadedapo.github.io/agentfaces/"
+    }
+  },
+  "Meteocons": {
+    "url": "https://meteocons.com/docs/cdn",
+    "basis": "Repository README: CDN documentation",
+    "check": {
+      "url": "https://meteocons.com/docs/cdn",
+      "http_status": 200,
+      "final_url": "https://meteocons.com/docs/cdn/"
+    }
+  },
+  "Animotion": {
+    "url": "https://animotion.pages.dev",
+    "basis": "Repository README: Animotion documentation",
+    "check": {
+      "url": "https://animotion.pages.dev",
+      "http_status": 200,
+      "final_url": "https://animotion.pages.dev/"
+    }
+  },
+  "UI Capsule": {
+    "url": "https://github.com/kyh/uicapsule#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/kyh/uicapsule#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/kyh/uicapsule#readme"
+    }
+  },
+  "000h (cojeev-ui)": {
+    "url": "https://cojeev.com/ui/docs/",
+    "basis": "Repository README: Browse components",
+    "check": {
+      "url": "https://cojeev.com/ui/docs/",
+      "http_status": 200,
+      "final_url": "https://cojeev.com/ui/docs/"
+    }
+  },
+  "Isometric": {
+    "url": "https://isometric.buildlab.in/docs#theming",
+    "basis": "Repository README: the docs",
+    "check": {
+      "url": "https://isometric.buildlab.in/docs#theming",
+      "http_status": 200,
+      "final_url": "https://isometric.buildlab.in/docs/"
+    }
+  },
+  "Evil Buttons": {
+    "url": "https://github.com/radiumcoders/Evil-Buttons#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/radiumcoders/Evil-Buttons#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/radiumcoders/Evil-Buttons#readme"
+    }
+  },
+  "AI Canvas": {
+    "url": "https://github.com/aicanvas-me/aicanvas#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/aicanvas-me/aicanvas#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/aicanvas-me/aicanvas#readme"
+    }
+  },
+  "Pixelium Design": {
+    "url": "https://shika-works.github.io/pixelium-design/",
+    "basis": "Repository README: View the documentation",
+    "check": {
+      "url": "https://shika-works.github.io/pixelium-design/",
+      "http_status": 200,
+      "final_url": "https://shika-works.github.io/pixelium-design/"
+    }
+  },
+  "Soonish": {
+    "url": "https://soonish.rushikeshmahajan.com/docs",
+    "basis": "Repository README: Docs",
+    "check": {
+      "url": "https://soonish.rushikeshmahajan.com/docs",
+      "http_status": 200,
+      "final_url": "https://soonish.rushikeshmahajan.com/docs"
+    }
+  },
+  "loading.dev": {
+    "url": "https://github.com/jakubkrehel/loading#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/jakubkrehel/loading#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/jakubkrehel/loading#readme"
+    }
+  },
+  "Bevel": {
+    "url": "https://bevel-ui.vercel.app/docs/installation",
+    "basis": "Repository README: installation guide",
+    "check": {
+      "url": "https://bevel-ui.vercel.app/docs/installation",
+      "http_status": 200,
+      "final_url": "https://bevel-ui.vercel.app/docs/installation"
+    }
+  },
+  "TheGridCN": {
+    "url": "https://github.com/educlopez/thegridcn-ui/blob/main/docs/install.md",
+    "basis": "Repository README: docs/install.md",
+    "check": {
+      "url": "https://github.com/educlopez/thegridcn-ui/blob/main/docs/install.md",
+      "http_status": 200,
+      "final_url": "https://github.com/educlopez/thegridcn-ui/blob/main/docs/install.md"
+    }
+  },
+  "Tactile UI": {
+    "url": "https://tactileui.dev/docs/introduction",
+    "basis": "Repository README: Docs",
+    "check": {
+      "url": "https://tactileui.dev/docs/introduction",
+      "http_status": 200,
+      "final_url": "https://tactileui.dev/docs/introduction"
+    }
+  },
+  "Cult UI": {
+    "url": "https://www.cult-ui.com/docs",
+    "basis": "Repository README: Docs",
+    "check": {
+      "url": "https://www.cult-ui.com/docs",
+      "http_status": 200,
+      "final_url": "https://www.cult-ui.com/docs"
+    }
+  },
+  "Liveline": {
+    "url": "https://github.com/benjitaylor/liveline#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/benjitaylor/liveline#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/benjitaylor/liveline#readme"
+    }
+  },
+  "ThreeUI Community": {
+    "url": "https://github.com/MengTo/threeui#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/MengTo/threeui#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/MengTo/threeui#readme"
+    }
+  },
+  "uselayouts": {
+    "url": "https://uselayouts.com/docs/introduction",
+    "basis": "Repository README: documentation",
+    "check": {
+      "url": "https://uselayouts.com/docs/introduction",
+      "http_status": 200,
+      "final_url": "https://uselayouts.com/docs"
+    }
+  },
+  "p5.js": {
+    "url": "https://p5js.org/reference/",
+    "basis": "Repository README: documentation",
+    "check": {
+      "url": "https://p5js.org/reference/",
+      "http_status": 200,
+      "final_url": "https://p5js.org/reference/"
+    }
+  },
+  "Elementary Audio": {
+    "url": "https://www.elementary.audio/docs/packages/core",
+    "basis": "Repository README: @elemaudio/core",
+    "check": {
+      "url": "https://www.elementary.audio/docs/packages/core",
+      "http_status": 200,
+      "final_url": "https://www.elementary.audio/docs/packages/core"
+    }
+  },
+  "Tone.js": {
+    "url": "https://tonejs.github.io/docs/",
+    "basis": "Repository README: API",
+    "check": {
+      "url": "https://tonejs.github.io/docs/",
+      "http_status": 200,
+      "final_url": "https://tonejs.github.io/docs/"
+    }
+  },
+  "xterm.js": {
+    "url": "https://github.com/xtermjs/xterm.js#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/xtermjs/xterm.js#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/xtermjs/xterm.js#readme"
+    }
+  },
+  "Kaplay": {
+    "url": "https://kaplayjs.com/docs/",
+    "basis": "Repository README: KAPLAY Official Docs",
+    "check": {
+      "url": "https://kaplayjs.com/docs/",
+      "http_status": 200,
+      "final_url": "https://kaplayjs.com/docs/guides/"
+    }
+  },
+  "Paper.js": {
+    "url": "https://github.com/paperjs/paper.js#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/paperjs/paper.js#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/paperjs/paper.js#readme"
+    }
+  },
+  "Pts": {
+    "url": "https://github.com/williamngan/pts/blob/master/docs.md",
+    "basis": "Repository README: docs.md",
+    "check": {
+      "url": "https://github.com/williamngan/pts/blob/master/docs.md",
+      "http_status": 200,
+      "final_url": "https://github.com/williamngan/pts/blob/master/docs.md"
+    }
+  },
+  "Mafs": {
+    "url": "https://mafs.dev",
+    "basis": "Repository README: Visit the docs →",
+    "check": {
+      "url": "https://mafs.dev",
+      "http_status": 200,
+      "final_url": "https://mafs.dev/"
+    }
+  },
+  "BassoonTracker": {
+    "url": "https://www.stef.be/bassoontracker/docs/",
+    "basis": "Repository README: The Docs",
+    "check": {
+      "url": "https://www.stef.be/bassoontracker/docs/",
+      "http_status": 200,
+      "final_url": "https://www.stef.be/bassoontracker/docs/"
+    }
+  },
+  "BeepBox": {
+    "url": "https://github.com/johnnesky/beepbox#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/johnnesky/beepbox#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/johnnesky/beepbox#readme"
+    }
+  },
+  "html5bytebeat": {
+    "url": "https://github.com/greggman/html5bytebeat#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/greggman/html5bytebeat#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/greggman/html5bytebeat#readme"
+    }
+  },
+  "NexusUI": {
+    "url": "https://github.com/nexus-js/ui#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/nexus-js/ui#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/nexus-js/ui#readme"
+    }
+  },
+  "webaudio-tinysynth": {
+    "url": "https://github.com/g200kg/webaudio-tinysynth#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/g200kg/webaudio-tinysynth#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/g200kg/webaudio-tinysynth#readme"
+    }
+  },
+  "jsfxr": {
+    "url": "https://github.com/chr15m/jsfxr#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/chr15m/jsfxr#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/chr15m/jsfxr#readme"
+    }
+  },
+  "audio/ui": {
+    "url": "https://www.audio-ui.dev/docs/get-started",
+    "basis": "Repository README: Get started",
+    "check": {
+      "url": "https://www.audio-ui.dev/docs/get-started",
+      "http_status": 200,
+      "final_url": "https://www.audio-ui.dev/docs/get-started"
+    }
+  },
+  "Snd": {
+    "url": "https://github.com/snd-lib/snd-lib#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/snd-lib/snd-lib#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/snd-lib/snd-lib#readme"
+    }
+  },
+  "SVGuitar": {
+    "url": "https://omnibrain.github.io/svguitar/docs/",
+    "basis": "Repository README: https://omnibrain.github.io/svguitar/docs/",
+    "check": {
+      "url": "https://omnibrain.github.io/svguitar/docs/",
+      "http_status": 200,
+      "final_url": "https://omnibrain.github.io/svguitar/docs/"
+    }
+  },
+  "Fretboard.js": {
+    "url": "https://moonwave99.github.io/fretboard.js/documentation-fretboard.html",
+    "basis": "Repository README: See online documentation",
+    "check": {
+      "url": "https://moonwave99.github.io/fretboard.js/documentation-fretboard.html",
+      "http_status": 200,
+      "final_url": "https://moonwave99.github.io/fretboard.js/documentation-fretboard.html"
+    }
+  },
+  "VexFlow": {
+    "url": "https://github.com/vexflow/vexflow#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/vexflow/vexflow#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/vexflow/vexflow#readme"
+    }
+  },
+  "alphaTab": {
+    "url": "https://alphatab.net/docs/introduction",
+    "basis": "Repository README: Documentation",
+    "check": {
+      "url": "https://alphatab.net/docs/introduction",
+      "http_status": 200,
+      "final_url": "https://alphatab.net/docs/introduction"
+    }
+  },
+  "@web-kits/audio": {
+    "url": "https://github.com/raphaelsalaja/audio#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/raphaelsalaja/audio#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/raphaelsalaja/audio#readme"
+    }
+  },
+  "Orca": {
+    "url": "https://github.com/hundredrabbits/Orca#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/hundredrabbits/Orca#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/hundredrabbits/Orca#readme"
+    }
+  },
+  "Patchcab": {
+    "url": "https://github.com/spectrome/patchcab#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/spectrome/patchcab#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/spectrome/patchcab#readme"
+    }
+  },
+  "The Endless Acid Banger": {
+    "url": "https://github.com/vitling/acid-banger#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/vitling/acid-banger#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/vitling/acid-banger#readme"
+    }
+  },
+  "Viktor NV-1": {
+    "url": "https://github.com/nicroto/viktor#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/nicroto/viktor#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/nicroto/viktor#readme"
+    }
+  },
+  "Glicol": {
+    "url": "https://github.com/chaosprint/glicol#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/chaosprint/glicol#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/chaosprint/glicol#readme"
+    }
+  },
+  "ZzFXM": {
+    "url": "https://github.com/keithclark/ZzFXM#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/keithclark/ZzFXM#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/keithclark/ZzFXM#readme"
+    }
+  },
+  "abcjs": {
+    "url": "https://docs.abcjs.net/",
+    "basis": "Repository README: abcjs documentation",
+    "check": {
+      "url": "https://docs.abcjs.net/",
+      "http_status": 200,
+      "final_url": "https://docs.abcjs.net/"
+    }
+  },
+  "Pitchy": {
+    "url": "https://github.com/ianprime0509/pitchy#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/ianprime0509/pitchy#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/ianprime0509/pitchy#readme"
+    }
+  },
+  "webaudio-pianoroll": {
+    "url": "https://github.com/g200kg/webaudio-pianoroll#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/g200kg/webaudio-pianoroll#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/g200kg/webaudio-pianoroll#readme"
+    }
+  },
+  "Chrome Music Lab": {
+    "url": "https://github.com/googlecreativelab/chrome-music-lab#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/googlecreativelab/chrome-music-lab#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/googlecreativelab/chrome-music-lab#readme"
+    }
+  },
+  "Pink Trombone": {
+    "url": "https://github.com/asmatzaile/pink-trombone#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/asmatzaile/pink-trombone#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/asmatzaile/pink-trombone#readme"
+    }
+  },
+  "ElevenLabs UI": {
+    "url": "https://ui.elevenlabs.io/docs/components",
+    "basis": "Repository README: here",
+    "check": {
+      "url": "https://ui.elevenlabs.io/docs/components",
+      "http_status": 429,
+      "final_url": "https://ui.elevenlabs.io/docs/components"
+    }
+  },
+  "chiptune3": {
+    "url": "https://github.com/DrSnuggles/chiptune#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/DrSnuggles/chiptune#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/DrSnuggles/chiptune#readme"
+    }
+  },
+  "ZzFX": {
+    "url": "https://github.com/KilledByAPixel/ZzFX#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/KilledByAPixel/ZzFX#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/KilledByAPixel/ZzFX#readme"
+    }
+  },
+  "Chromatone": {
+    "url": "https://github.com/chromatone/chromatone.center#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/chromatone/chromatone.center#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/chromatone/chromatone.center#readme"
+    }
+  },
+  "Sandspiel": {
+    "url": "https://github.com/MaxBittker/sandspiel#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/MaxBittker/sandspiel#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/MaxBittker/sandspiel#readme"
+    }
+  },
+  "binjgb": {
+    "url": "https://github.com/binji/binjgb#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/binji/binjgb#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/binji/binjgb#readme"
+    }
+  },
+  "JSNES": {
+    "url": "https://github.com/bfirsh/jsnes#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/bfirsh/jsnes#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/bfirsh/jsnes#readme"
+    }
+  },
+  "Decker": {
+    "url": "https://github.com/JohnEarnest/Decker#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/JohnEarnest/Decker#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/JohnEarnest/Decker#readme"
+    }
+  },
+  "Octo": {
+    "url": "https://github.com/JohnEarnest/Octo/tree/gh-pages/docs/Manual.md",
+    "basis": "Repository README: Language Manual",
+    "check": {
+      "url": "https://github.com/JohnEarnest/Octo/tree/gh-pages/docs/Manual.md",
+      "http_status": 200,
+      "final_url": "https://github.com/JohnEarnest/Octo/blob/gh-pages/docs/Manual.md"
+    }
+  },
+  "Phaser 4": {
+    "url": "https://docs.phaser.io/",
+    "basis": "Repository README: https://docs.phaser.io/",
+    "check": {
+      "url": "https://docs.phaser.io/",
+      "http_status": 403,
+      "final_url": "https://docs.phaser.io/"
+    }
+  },
+  "Excalibur": {
+    "url": "https://excaliburjs.com/docs",
+    "basis": "Repository README: https://excaliburjs.com/docs",
+    "check": {
+      "url": "https://excaliburjs.com/docs",
+      "http_status": 200,
+      "final_url": "https://excaliburjs.com/docs/"
+    }
+  },
+  "SpessaSynth": {
+    "url": "https://spessasus.github.io/spessasynth_lib",
+    "basis": "Repository README: Documentation",
+    "check": {
+      "url": "https://spessasus.github.io/spessasynth_lib",
+      "http_status": 200,
+      "final_url": "https://spessasus.github.io/spessasynth_lib/"
+    }
+  },
+  "WASM-4": {
+    "url": "https://wasm4.org/docs",
+    "basis": "Repository README: Docs",
+    "check": {
+      "url": "https://wasm4.org/docs",
+      "http_status": 200,
+      "final_url": "https://wasm4.org/docs/"
+    }
+  },
+  "TIC-80": {
+    "url": "https://github.com/nesbox/TIC-80#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/nesbox/TIC-80#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/nesbox/TIC-80#readme"
+    }
+  },
+  "Pyxel": {
+    "url": "https://github.com/kitao/pyxel#readme",
+    "basis": "Repository README; no dedicated docs identified",
+    "check": {
+      "url": "https://github.com/kitao/pyxel#readme",
+      "http_status": 200,
+      "final_url": "https://github.com/kitao/pyxel#readme"
+    }
+  },
+  "Uxn5": {
+    "url": "https://rabbits.srht.site/uxn5/",
+    "basis": "Directory site / examples; separate docs not identified",
+    "check": {
+      "url": "https://rabbits.srht.site/uxn5/",
+      "http_status": 200,
+      "final_url": "https://rabbits.srht.site/uxn5/"
+    }
+  },
+  "v86": {
+    "url": "https://github.com/copy/v86/blob/master/docs/how-it-works.md",
+    "basis": "Repository README: How it works",
+    "check": {
+      "url": "https://github.com/copy/v86/blob/master/docs/how-it-works.md",
+      "http_status": 200,
+      "final_url": "https://github.com/copy/v86/blob/master/docs/how-it-works.md"
+    }
+  },
+  "PuzzleScript": {
+    "url": "https://www.puzzlescript.net/Documentation/documentation.html",
+    "basis": "Repository README: the documentation is here",
+    "check": {
+      "url": "https://www.puzzlescript.net/Documentation/documentation.html",
+      "http_status": 200,
+      "final_url": "https://www.puzzlescript.net/Documentation/documentation.html"
+    }
+  },
+  "LittleJS": {
+    "url": "https://killedbyapixel.github.io/LittleJS/docs",
+    "basis": "Repository README: Docs",
+    "check": {
+      "url": "https://killedbyapixel.github.io/LittleJS/docs",
+      "http_status": 200,
+      "final_url": "https://killedbyapixel.github.io/LittleJS/docs/"
+    }
+  }
+}

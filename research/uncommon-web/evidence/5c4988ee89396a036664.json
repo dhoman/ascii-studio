@@ -1,0 +1,180 @@
+{
+  "url": "https://github.com/sneas/img-comparison-slider",
+  "final_url": "https://github.com/sneas/img-comparison-slider",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:48:17.647294+00:00",
+  "stars": 873,
+  "forks": 58,
+  "description": "Image comparison slider. Compare images before and after. Supports React, Vue, Angular.",
+  "homepage": "https://img-comparison-slider.sneas.io",
+  "topics": [
+    "angular",
+    "compare-images",
+    "comparison-slider",
+    "html",
+    "image-comparison",
+    "react",
+    "slider",
+    "vue",
+    "web-component"
+  ],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2019-07-31T16:58:40.000Z",
+  "branch": "master",
+  "commit": "c73939d61c8fb010342c9910f1de420edbf0b067",
+  "readme": "img-comparison-slider Slider Component for Comparing Images (Before and After). Usage examples: https://img-comparison-slider.sneas.io/examples.html Most Important Features Mobile friendly Accessible Responsive Compact - less than 12 kB minified (Or less than 4 kB if gzipped) Compatible with modern frameworks (React, Angular, Vue2, Vue3) Distributed via CDN or NPM Installation Browser Requirements Support for ECMAScript 2015 (ES6). Use Babel if needed. Support for Custom Elements (V1) and ShadowDOM (V1). Use Polyfills if support for older browsers is needed. Support for CSS Variables (Custom Properties). Polyfill it for IE11. HTML <script defer src=\"https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/index.js\" ></script> <link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/img-comparison-slider@8/dist/styles.css\" /> <img-comparison-slider> <img slot=\"first\" src=\"before.jpg\" /> <img slot=\"second\" src=\"after.jpg\" /> </img-comparison-slider> Frameworks Support React Angular Vue2 Vue3 Supported Attributes Besides the default HTMLElement attributes such as class, tabindex, title, etc., img-comparison-slider supports: Attribute Description Default Available value Position of the divider in percents. 50 0..100 hover Automatically slide on mouse over. false direction Set slider direction. horizontal horizontal, vertical keyboard Enable/disable slider position control with the keyboard. enabled enabled, disabled handle Enable/disable dragging by handle only. false true, false Events The component emits slide event when the slider position is changed by user. Styling Some styling techniques and ideas can be found in examples. The component elements like the default handle or the separator line could be styled using CSS3 variables. Example: <style type=\"text/css\"> img-comparison-slider { --divider-width: 2px; --divider-color: #c0c0c0; --default-handle-opacity: 0.3; } </style> Available Variables Variable Description Default value Example value --divider-width Width of the vertical line separating both images 1px 1em --divider-color Color of the vertical line separating the two images #fff rgba(0, 0, 0, 0.5) --divider-shadow Shadow cast by the vertical line separating the two images none 0px 0px 5px rgba(0, 0, 0, 0.5) --handle-position-start Handle position on the divider axis. In case the handle must be displaced off the center 50% --default-handle-width Width of the default handle 50px --default-handle-color Color of the default handle #fff rgba(0, 0, 0, 0.5) --default-handle-opacity Opacity of the default handle 1 0.3 --default-handle-shadow Shadow cast by the default handle none 0px 0px 5px rgba(0, 0, 0, 1) Handle The handle of the component can be changed by assigning the attribute slot=\"handle\" to any element within img-comparison-slider.",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://github.com/sneas/img-comparison-slider#img-comparison-slider"
+    },
+    {
+      "label": "",
+      "url": "https://www.npmjs.com/package/img-comparison-slider"
+    },
+    {
+      "label": "",
+      "url": "https://www.jsdelivr.com/package/npm/img-comparison-slider"
+    },
+    {
+      "label": "",
+      "url": "https://www.webcomponents.org/element/img-comparison-slider"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/sneas/img-comparison-slider#slider-component-for-comparing-images-before-and-after"
+    },
+    {
+      "label": "https://img-comparison-slider.sneas.io/examples.html",
+      "url": "https://img-comparison-slider.sneas.io/examples.html"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/sneas/img-comparison-slider/blob/master/docs/example.gif"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/sneas/img-comparison-slider#most-important-features"
+    },
+    {
+      "label": "React",
+      "url": "https://github.com/sneas/img-comparison-slider/blob/master/packages/react/README.md"
+    },
+    {
+      "label": "Angular",
+      "url": "https://github.com/sneas/img-comparison-slider/blob/master/docs/installation/angular.md"
+    },
+    {
+      "label": "Vue2",
+      "url": "https://github.com/sneas/img-comparison-slider/blob/master/docs/installation/vue.md"
+    },
+    {
+      "label": "Vue3",
+      "url": "https://github.com/sneas/img-comparison-slider/blob/master/packages/vue/README.md"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/sneas/img-comparison-slider#installation"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/sneas/img-comparison-slider#browser-requirements"
+    },
+    {
+      "label": "ECMAScript 2015 (ES6)",
+      "url": "https://caniuse.com/?search=es6"
+    },
+    {
+      "label": "Babel",
+      "url": "https://babeljs.io/docs/en/babel-preset-env"
+    },
+    {
+      "label": "Custom Elements (V1)",
+      "url": "https://caniuse.com/?search=custom%20elements%20v1"
+    },
+    {
+      "label": "ShadowDOM (V1)",
+      "url": "https://caniuse.com/?search=shadowdom%20v1"
+    },
+    {
+      "label": "Polyfills",
+      "url": "https://www.webcomponents.org/polyfills"
+    },
+    {
+      "label": "CSS Variables (Custom Properties)",
+      "url": "https://caniuse.com/?search=css%20custom%20properties"
+    },
+    {
+      "label": "Polyfill",
+      "url": "https://github.com/nuxodin/ie11CustomProperties"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/sneas/img-comparison-slider#html"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/sneas/img-comparison-slider#frameworks-support"
+    },
+    {
+      "label": "React",
+      "url": "https://github.com/sneas/img-comparison-slider/blob/master/packages/react/README.md"
+    },
+    {
+      "label": "Angular",
+      "url": "https://github.com/sneas/img-comparison-slider/blob/master/docs/installation/angular.md"
+    },
+    {
+      "label": "Vue2",
+      "url": "https://github.com/sneas/img-comparison-slider/blob/master/docs/installation/vue.md"
+    },
+    {
+      "label": "Vue3",
+      "url": "https://github.com/sneas/img-comparison-slider/blob/master/packages/vue/README.md"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/sneas/img-comparison-slider#supported-attributes"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/sneas/img-comparison-slider#events"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/sneas/img-comparison-slider#styling"
+    },
+    {
+      "label": "examples",
+      "url": "https://img-comparison-slider.sneas.io/examples.html"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/sneas/img-comparison-slider#available-variables"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/sneas/img-comparison-slider#handle"
+    }
+  ],
+  "root_files": [
+    ".circleci",
+    ".husky",
+    "docs",
+    "packages",
+    "scripts",
+    ".editorconfig",
+    ".gitattributes",
+    ".gitignore",
+    ".lintstagedrc",
+    ".prettierignore",
+    ".prettierrc",
+    "LICENSE",
+    "README.md",
+    "package-lock.json",
+    "package.json"
+  ],
+  "release_count": null,
+  "status": "verified"
+}

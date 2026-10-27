@@ -1,0 +1,129 @@
+{
+  "url": "https://github.com/iurvish/uselayouts",
+  "final_url": "https://github.com/iurvish/uselayouts",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:47:53.158784+00:00",
+  "stars": 696,
+  "forks": 52,
+  "description": "Free premium animated React components and micro-interactions built with Framer Motion and Tailwind CSS",
+  "homepage": "https://uselayouts.com",
+  "topics": [
+    "animated-components",
+    "components-library-web-development",
+    "nextjs-ui-components",
+    "open-source",
+    "open-source-ui-library",
+    "shadcn-ui"
+  ],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2025-12-14T07:44:47.000Z",
+  "branch": "main",
+  "commit": "f1a066916515193336cbdb09f817aa42d888a0e2",
+  "readme": "uselayouts A micro-interaction UI library for professionals. uselayouts provides free premium animated React components and micro-interactions built with Framer Motion and Tailwind CSS. Designed to integrate seamlessly with Shadcn UI, it helps you bring your interfaces to life with ease. Why uselayouts? People don’t fall in love with components. They fall in love with how something feels. uselayouts focuses on the fine details of interaction: Premium Animations: Built with Framer Motion for buttery smooth transitions. Shadcn Compatible: Designed to work with your existing Shadcn UI setup. Micro-interactions: Focused on the small details that make a big difference in UX. Copy & Paste: Easy to integrate into any React project. Installation You can add components to your project using the Shadcn CLI: npx shadcn@latest add https://uselayouts.com/r/3d-book Replace 3d-book with any component name from our documentation. Features Accessible: Built on top of accessible primitives. Customizable: Fully stylable with Tailwind CSS classes. Development If you'd like to run the documentation site locally: Clone the repository: git clone https://github.com/iurvish/uselayouts.git Install dependencies: yarn install Run the development server: yarn dev Registry Build To build the component registry: yarn build:registry Community Website: uselayouts.com Twitter/X: @0xUrvish GitHub: iurvish/uselayouts License Built by Urvish Mali. Licensed under the MIT License.",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://github.com/iurvish/uselayouts#uselayouts"
+    },
+    {
+      "label": "uselayouts",
+      "url": "https://uselayouts.com"
+    },
+    {
+      "label": "",
+      "url": "https://vercel.com/oss"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/a141aff74939d15cfaf9a3cb431148d97b62350677b5382d59c5b6b2fc0c3c03/68747470733a2f2f7573656c61796f7574732e636f6d2f6f672e6a7067"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/iurvish/uselayouts#why-uselayouts"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/iurvish/uselayouts#installation"
+    },
+    {
+      "label": "documentation",
+      "url": "https://uselayouts.com/docs/introduction"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/iurvish/uselayouts#features"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/iurvish/uselayouts#development"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/iurvish/uselayouts#registry-build"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/iurvish/uselayouts#community"
+    },
+    {
+      "label": "uselayouts.com",
+      "url": "https://uselayouts.com"
+    },
+    {
+      "label": "@0xUrvish",
+      "url": "https://x.com/0xUrvish"
+    },
+    {
+      "label": "iurvish/uselayouts",
+      "url": "https://github.com/iurvish/uselayouts"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/iurvish/uselayouts#license"
+    },
+    {
+      "label": "Urvish Mali",
+      "url": "https://x.com/0xUrvish"
+    },
+    {
+      "label": "MIT License",
+      "url": "https://github.com/iurvish/uselayouts/blob/main/LICENSE"
+    }
+  ],
+  "root_files": [
+    ".github",
+    "app",
+    "components",
+    "content/docs",
+    "emails/auth",
+    "hooks",
+    "lib",
+    "public",
+    "registry",
+    "scripts",
+    "styles",
+    "supabase/migrations",
+    "types",
+    ".env.example",
+    ".gitignore",
+    "LICENSE",
+    "README.md",
+    "cli.json",
+    "components.json",
+    "eslint.config.mjs",
+    "mdx-components.tsx",
+    "middleware.ts",
+    "next.config.mjs",
+    "package-lock.json",
+    "package.json",
+    "postcss.config.mjs",
+    "registry.json",
+    "skills-lock.json",
+    "source.config.ts",
+    "tsconfig.json",
+    "yarn.lock"
+  ],
+  "release_count": 0,
+  "status": "verified"
+}

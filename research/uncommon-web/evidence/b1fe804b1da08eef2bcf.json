@@ -1,0 +1,187 @@
+{
+  "url": "https://github.com/jberg/butterchurn",
+  "final_url": "https://github.com/jberg/butterchurn",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:47:53.909250+00:00",
+  "stars": 1973,
+  "forks": 171,
+  "description": "Butterchurn is a WebGL implementation of the Milkdrop Visualizer",
+  "homepage": "https://butterchurnviz.com/",
+  "topics": [
+    "assemblyscript",
+    "music-visualizer",
+    "reimplementation",
+    "visualization",
+    "wasm",
+    "webaudio-api",
+    "webgl",
+    "webgl2"
+  ],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2018-04-22T05:35:19.000Z",
+  "branch": "master",
+  "commit": "fbac2f6bab62fd9c6a50ebbeb29359c5eb05903e",
+  "readme": "Butterchurn Butterchurn is a WebGL implementation of the Milkdrop Visualizer Try it out Usage Installation With pnpm, yarn or npm installed, run $ pnpm add butterchurn butterchurn-presets or $ yarn add butterchurn butterchurn-presets or $ npm install butterchurn butterchurn-presets Create a visualizer import butterchurn from 'butterchurn'; import butterchurnPresets from 'butterchurn-presets'; // initialize audioContext and get canvas const visualizer = butterchurn.createVisualizer(audioContext, canvas, { width: 800, height: 600 }); // get audioNode from audio source or microphone visualizer.connectAudio(audioNode); // load a preset const presets = butterchurnPresets.getPresets(); const preset = presets['Flexi, martin + geiss - dedicated to the sherwin maxawow']; visualizer.loadPreset(preset, 0.0); // 2nd argument is the number of seconds to blend presets // resize visualizer visualizer.setRendererSize(1600, 1200); // render a frame visualizer.render(); Browser Support Butterchurn requires the browser support WebGL 2. You can test for support using our minimal isSupported script: import isButterchurnSupported from \"butterchurn/lib/isSupported.min\"; if (isButterchurnSupported()) { // Load and use butterchurn } Integrations Webamp, the fantastic reimplementation of Winamp 2.9 in HTML5 and Javascript, built by captbaritone Butterchurn Extension, use Butterchurn to visualize the audio from any page Rekt Networks, Live DJs, Archives & Exclusive Releases, built by Zei mStream, your personal music streaming server, built by IrosTheBeggar pasteur, trippy videos generated from your music, built by markneub ChromeAudioVisualizerExtension, put on some music and turn your browsing session into a party! built by afreakk Karaoke Forever, an open karaoke party system, built by bhj Syqel, the World's Best AI Powered Music Visualizer Thanks Ryan Geiss for creating MilkDrop Nullsoft for creating Winamp All the amazing preset creators, special thanks to Flexi License This project is licensed under the MIT License - see the LICENSE file for details",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://github.com/jberg/butterchurn#butterchurn"
+    },
+    {
+      "label": "Try it out",
+      "url": "https://butterchurnviz.com"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/jberg/butterchurn#try-it-out"
+    },
+    {
+      "label": "",
+      "url": "https://butterchurnviz.com"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/jberg/butterchurn#usage"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/jberg/butterchurn#installation"
+    },
+    {
+      "label": "pnpm",
+      "url": "https://pnpm.io/"
+    },
+    {
+      "label": "yarn",
+      "url": "https://yarnpkg.com/"
+    },
+    {
+      "label": "npm",
+      "url": "https://npmjs.org/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/jberg/butterchurn#create-a-visualizer"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/jberg/butterchurn#browser-support"
+    },
+    {
+      "label": "browser support WebGL 2",
+      "url": "https://caniuse.com/#feat=webgl2"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/jberg/butterchurn#integrations"
+    },
+    {
+      "label": "Webamp",
+      "url": "https://github.com/captbaritone/webamp"
+    },
+    {
+      "label": "captbaritone",
+      "url": "https://github.com/captbaritone"
+    },
+    {
+      "label": "Butterchurn Extension",
+      "url": "https://chrome.google.com/webstore/detail/butterchurn-music-visuali/jfdmelgfepjcmlljpdeajbiiibkehnih"
+    },
+    {
+      "label": "Rekt Networks",
+      "url": "https://nightride.fm/#Mathdrop"
+    },
+    {
+      "label": "Zei",
+      "url": "https://twitter.com/TheRektNetwork"
+    },
+    {
+      "label": "mStream",
+      "url": "http://mstream.io/"
+    },
+    {
+      "label": "IrosTheBeggar",
+      "url": "https://github.com/IrosTheBeggar"
+    },
+    {
+      "label": "pasteur",
+      "url": "https://www.pasteur.cc/"
+    },
+    {
+      "label": "markneub",
+      "url": "https://github.com/markneub"
+    },
+    {
+      "label": "ChromeAudioVisualizerExtension",
+      "url": "https://chrome.google.com/webstore/detail/audiovisualizer/bojhikphaecldnbdekplmadjkflgbkfh"
+    },
+    {
+      "label": "afreakk",
+      "url": "https://github.com/afreakk"
+    },
+    {
+      "label": "Karaoke Forever",
+      "url": "https://www.karaoke-forever.com"
+    },
+    {
+      "label": "bhj",
+      "url": "https://github.com/bhj"
+    },
+    {
+      "label": "Syqel",
+      "url": "https://syqel.com/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/jberg/butterchurn#thanks"
+    },
+    {
+      "label": "Ryan Geiss",
+      "url": "http://www.geisswerks.com/"
+    },
+    {
+      "label": "MilkDrop",
+      "url": "http://www.geisswerks.com/about_milkdrop.html"
+    },
+    {
+      "label": "Winamp",
+      "url": "http://www.winamp.com/"
+    },
+    {
+      "label": "Flexi",
+      "url": "https://twitter.com/Flexi23"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/jberg/butterchurn#license"
+    },
+    {
+      "label": "LICENSE",
+      "url": "https://github.com/jberg/butterchurn/blob/master/LICENSE"
+    }
+  ],
+  "root_files": [
+    ".github/workflows",
+    "config",
+    "examples",
+    "experiments/wasm-eel",
+    "scripts",
+    "src",
+    "test",
+    ".dockerignore",
+    ".eslintrc",
+    ".gitignore",
+    ".npmrc",
+    "Dockerfile.test",
+    "LICENSE",
+    "README.md",
+    "jest.config.mjs",
+    "package.json",
+    "pnpm-lock.yaml",
+    "preview.png",
+    "rollup.config.js"
+  ],
+  "release_count": null,
+  "status": "verified"
+}

@@ -1,0 +1,371 @@
+{
+  "url": "https://github.com/audiocn/ui",
+  "final_url": "https://github.com/audiocn/ui",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:47:35.962999+00:00",
+  "stars": 277,
+  "forks": 11,
+  "description": "Audio UI components for React, built the shadcn way.",
+  "homepage": "https://audiocn.dev",
+  "topics": [],
+  "license": "NOASSERTION",
+  "archived": false,
+  "created_at": "2026-09-30T14:04:23.000Z",
+  "branch": "main",
+  "commit": "521c03f636a4e2cf14a25b79c5838223a3fd6ae8",
+  "readme": "Audio components for React, built the shadcn way. Level meters, visualizers, faders, knobs, channel strips, a complete mixer, players and sound pads. Copy, paste, make them yours. Docs · Installation · Components · Blocks · Theming Why audiocn You own the code. It is not a package. Like shadcn/ui, every component is copied into your project with the shadcn CLI, so you can change anything. Themed by shadcn. Built on Base UI, styled with Tailwind CSS and themed with the same CSS variables as shadcn/ui. Any shadcn theme restyles audiocn. Fast by default. Meters and visualizers paint on the animation frame without re-rendering React, so a mixer with many channels stays smooth. Bring your own audio. Components receive levels and values; they never open a microphone themselves. Use the included Web Audio hooks, or feed them from any other engine. Real units. Mixer components speak decibels, the way audio engineers do. Accessible. Keyboard control on every fader, knob and strip, real ARIA roles and reduced-motion support. Components All 23 components Meters and visualizers Component What it does Level Meter Peak and RMS meter with zones, peak hold, a scale, a readout and a clip light dB Scale Tick marks and labels for a decibel range, shared by meters and faders dB Readout A numeric level label that updates at a readable rate and never shifts the layout Clip Indicator A clip light that holds after the signal clips, with a count and click to reset Bar Visualizer Bars driven by frequency bands, with idle, loading and mirrored modes Electric Bar Visualizer Bars as crackling filaments, with arcs between loud neighbours and sparks Electric Waveform One electric line with a white-hot core, a tall glow, forks and sparks Smooth Waveform A clean line that follows the sound, as a flowing wave or an oscilloscope trace Live Waveform A canvas waveform of a live signal, as scrolling history or the current frame Waveform A clip's waveform with a playhead, seeking, hover time, regions and markers Spectrum A frequency spectrum analyser with axes, a grid and peak hold Controls Component What it does Fader A volume fader in decibels, with tapers, detents, a scale, reset and an editable value Parameter Slider A labelled slider with a numeric input, unit, marks and reset Knob A rotary control for dense layouts, drawn in SVG LCD Display A themeable dot-matrix screen, backlit or glowing, with dropdown rows Pan Control Left and right balance with a fill from the centre and a centre detent Channel Toggle Mute, solo and monitor buttons with their own pressed colours Volume Control A simple volume slider with a mute button, for players Audio Device Select A microphone, speaker or source picker with permission and disconnected states Mixer Component What it does Channel Strip One mixer channel, as a row or a console strip, composed from the parts you need Mixer The container for channel strips, with shared meter settings and keyboard navigation Sounds and music Component What it does Audio Player A composable player with transport, seeking, time, volume, rate, loop and shortcuts Track List Tracks with active and playing states and arrow-key navigation Sound Pad A trigger pad with modes, a hotkey, playback progress and an accent colour Blocks Complete, working audio features composed from the components. Drop one in and ship. Hooks Web Audio plumbing so the components have something to show. Use them, or feed the components from your own engine. Hook What it does useMicrophone Open a microphone as a MediaStream, with browser processing off by default useSystemAudio Capture system or tab audio through the browser's screen-share picker useAudioAnalyser Meter and visual frame sources from a stream, media element or AudioNode useWebAudioMixer Bind mixer state to a Web Audio graph, with ducking, monitor sends and a limited master useMixer Gain, mute, solo, pan and monitor per channel, plus a master, with no audio attached useAudioPlayer Playback state for an audio element the hook owns useSound Low-latency playback of short sounds decoded into memory useWaveformData Decode an audio file and reduce it to cached waveform peaks useAudioDevices Audio input or output devices, with permission state and live updates useDemoSignal Synthetic speech, music, tone or noise, for previews, prototypes and tests Plus useAudioContext, useFrameSource, useLevel, useClipHold, useReducedMotion and useAudioConfig. Quick start audiocn is a shadcn registry. You need React 19.2 or later, Tailwind CSS v4 and a project set up with shadcn/ui. 1. Add the registry to components.json: { \"registries\": { \"@audiocn\": \"https://audiocn.dev/r/{name}.json\" } } 2. Add components. The CLI copies each one with everything it depends on: the audio core, the audio theme tokens and any hooks it uses. npx shadcn@latest add @audiocn/level-meter npx shadcn@latest add @audiocn/system-audio-mixer 3. Use them. import { LevelMeter } from \"@/components/ui/level-meter\"; export const MicLevel = ({ peakDb }: { peakDb: number }) => ( <LevelMeter aria-label=\"Microphone level\" peakDb={peakDb} /> ); Full guide: audiocn.dev/docs/installation. Develop This repository is the docs site, the registry source and the component source in one Next.js app. Path What it is components/ui/ Components (audiocn's and the shadcn ones the site uses) components/blocks/ Blocks hooks/ Hooks lib/audio/ The audio core components/examples/ Docs previews content/docs/ Docs pages (Fumadocs MDX) registry.json The registry; pnpm registry:build writes public/r/ plans/ The plan and component specs pnpm install pnpm dev # docs site on http://localhost:3000 pnpm test # unit and component tests (Vitest) pnpm test:e2e # browser tests (Playwright) pnpm test:install # installs every registry item into a fresh app and type-checks it pnpm typecheck pnpm check # lint and format check (Ultracite) pnpm build # examples, registry and site pnpm og:build # regenerate the social cards in public/og/ The screenshots in this README are the social cards captured at 2x into .github/readme/. pnpm og:build refreshes them alongside the social images. Licence MIT Built by fortysevenfx and orcdev with 🪓🪓",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://audiocn.dev"
+    },
+    {
+      "label": "",
+      "url": "https://audiocn.dev/docs/components"
+    },
+    {
+      "label": "",
+      "url": "https://audiocn.dev/docs/blocks"
+    },
+    {
+      "label": "",
+      "url": "https://audiocn.dev/docs/hooks/use-audio-analyser"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/audiocn/ui/blob/main/license.md"
+    },
+    {
+      "label": "",
+      "url": "https://react.dev"
+    },
+    {
+      "label": "",
+      "url": "https://ui.shadcn.com/docs/registry"
+    },
+    {
+      "label": "",
+      "url": "https://tailwindcss.com"
+    },
+    {
+      "label": "",
+      "url": "https://base-ui.com"
+    },
+    {
+      "label": "",
+      "url": "https://developer.mozilla.org/docs/Web/API/Web_Audio_API"
+    },
+    {
+      "label": "Docs",
+      "url": "https://audiocn.dev/docs"
+    },
+    {
+      "label": "Installation",
+      "url": "https://audiocn.dev/docs/installation"
+    },
+    {
+      "label": "Components",
+      "url": "https://audiocn.dev/docs/components"
+    },
+    {
+      "label": "Blocks",
+      "url": "https://audiocn.dev/docs/blocks"
+    },
+    {
+      "label": "Theming",
+      "url": "https://audiocn.dev/docs/concepts/theming"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/audiocn/ui#why-audiocn"
+    },
+    {
+      "label": "Base UI",
+      "url": "https://base-ui.com"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/audiocn/ui#components"
+    },
+    {
+      "label": "",
+      "url": "https://audiocn.dev/docs/components/mixer"
+    },
+    {
+      "label": "",
+      "url": "https://audiocn.dev/docs/components/level-meter"
+    },
+    {
+      "label": "",
+      "url": "https://audiocn.dev/docs/components/knob"
+    },
+    {
+      "label": "",
+      "url": "https://audiocn.dev/docs/components/waveform"
+    },
+    {
+      "label": "",
+      "url": "https://audiocn.dev/docs/components/electric-waveform"
+    },
+    {
+      "label": "",
+      "url": "https://audiocn.dev/docs/components/electric-bar-visualizer"
+    },
+    {
+      "label": "",
+      "url": "https://audiocn.dev/docs/components/spectrum"
+    },
+    {
+      "label": "",
+      "url": "https://audiocn.dev/docs/components/smooth-waveform"
+    },
+    {
+      "label": "",
+      "url": "https://audiocn.dev/docs/components/audio-player"
+    },
+    {
+      "label": "",
+      "url": "https://audiocn.dev/docs/components/sound-pad"
+    },
+    {
+      "label": "Level Meter",
+      "url": "https://audiocn.dev/docs/components/level-meter"
+    },
+    {
+      "label": "dB Scale",
+      "url": "https://audiocn.dev/docs/components/db-scale"
+    },
+    {
+      "label": "dB Readout",
+      "url": "https://audiocn.dev/docs/components/db-readout"
+    },
+    {
+      "label": "Clip Indicator",
+      "url": "https://audiocn.dev/docs/components/clip-indicator"
+    },
+    {
+      "label": "Bar Visualizer",
+      "url": "https://audiocn.dev/docs/components/bar-visualizer"
+    },
+    {
+      "label": "Electric Bar Visualizer",
+      "url": "https://audiocn.dev/docs/components/electric-bar-visualizer"
+    },
+    {
+      "label": "Electric Waveform",
+      "url": "https://audiocn.dev/docs/components/electric-waveform"
+    },
+    {
+      "label": "Smooth Waveform",
+      "url": "https://audiocn.dev/docs/components/smooth-waveform"
+    },
+    {
+      "label": "Live Waveform",
+      "url": "https://audiocn.dev/docs/components/live-waveform"
+    },
+    {
+      "label": "Waveform",
+      "url": "https://audiocn.dev/docs/components/waveform"
+    },
+    {
+      "label": "Spectrum",
+      "url": "https://audiocn.dev/docs/components/spectrum"
+    },
+    {
+      "label": "Fader",
+      "url": "https://audiocn.dev/docs/components/fader"
+    },
+    {
+      "label": "Parameter Slider",
+      "url": "https://audiocn.dev/docs/components/parameter-slider"
+    },
+    {
+      "label": "Knob",
+      "url": "https://audiocn.dev/docs/components/knob"
+    },
+    {
+      "label": "LCD Display",
+      "url": "https://audiocn.dev/docs/components/lcd-display"
+    },
+    {
+      "label": "Pan Control",
+      "url": "https://audiocn.dev/docs/components/pan-control"
+    },
+    {
+      "label": "Channel Toggle",
+      "url": "https://audiocn.dev/docs/components/channel-toggle"
+    },
+    {
+      "label": "Volume Control",
+      "url": "https://audiocn.dev/docs/components/volume-control"
+    },
+    {
+      "label": "Audio Device Select",
+      "url": "https://audiocn.dev/docs/components/audio-device-select"
+    },
+    {
+      "label": "Channel Strip",
+      "url": "https://audiocn.dev/docs/components/channel-strip"
+    },
+    {
+      "label": "Mixer",
+      "url": "https://audiocn.dev/docs/components/mixer"
+    },
+    {
+      "label": "Audio Player",
+      "url": "https://audiocn.dev/docs/components/audio-player"
+    },
+    {
+      "label": "Track List",
+      "url": "https://audiocn.dev/docs/components/track-list"
+    },
+    {
+      "label": "Sound Pad",
+      "url": "https://audiocn.dev/docs/components/sound-pad"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/audiocn/ui#blocks"
+    },
+    {
+      "label": "",
+      "url": "https://audiocn.dev/docs/blocks/system-audio-mixer"
+    },
+    {
+      "label": "",
+      "url": "https://audiocn.dev/docs/blocks/music-player"
+    },
+    {
+      "label": "",
+      "url": "https://audiocn.dev/docs/blocks/soundboard"
+    },
+    {
+      "label": "",
+      "url": "https://audiocn.dev/docs/blocks/mic-setup"
+    },
+    {
+      "label": "",
+      "url": "https://audiocn.dev/docs/blocks/quick-audio-popover"
+    },
+    {
+      "label": "",
+      "url": "https://audiocn.dev/docs/blocks/system-audio-settings"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/audiocn/ui#hooks"
+    },
+    {
+      "label": "useMicrophone",
+      "url": "https://audiocn.dev/docs/hooks/use-microphone"
+    },
+    {
+      "label": "useSystemAudio",
+      "url": "https://audiocn.dev/docs/hooks/use-system-audio"
+    },
+    {
+      "label": "useAudioAnalyser",
+      "url": "https://audiocn.dev/docs/hooks/use-audio-analyser"
+    },
+    {
+      "label": "useWebAudioMixer",
+      "url": "https://audiocn.dev/docs/hooks/use-web-audio-mixer"
+    },
+    {
+      "label": "useMixer",
+      "url": "https://audiocn.dev/docs/hooks/use-mixer"
+    },
+    {
+      "label": "useAudioPlayer",
+      "url": "https://audiocn.dev/docs/hooks/use-audio-player"
+    },
+    {
+      "label": "useSound",
+      "url": "https://audiocn.dev/docs/hooks/use-sound"
+    },
+    {
+      "label": "useWaveformData",
+      "url": "https://audiocn.dev/docs/hooks/use-waveform-data"
+    },
+    {
+      "label": "useAudioDevices",
+      "url": "https://audiocn.dev/docs/hooks/use-audio-devices"
+    },
+    {
+      "label": "useDemoSignal",
+      "url": "https://audiocn.dev/docs/hooks/use-demo-signal"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/audiocn/ui#quick-start"
+    },
+    {
+      "label": "shadcn registry",
+      "url": "https://ui.shadcn.com/docs/registry"
+    },
+    {
+      "label": "audiocn.dev/docs/installation",
+      "url": "https://audiocn.dev/docs/installation"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/audiocn/ui#develop"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/audiocn/ui#licence"
+    },
+    {
+      "label": "MIT",
+      "url": "https://github.com/audiocn/ui/blob/main/license.md"
+    },
+    {
+      "label": "fortysevenfx",
+      "url": "https://x.com/fortysevenfx"
+    },
+    {
+      "label": "orcdev",
+      "url": "https://x.com/orcdev"
+    }
+  ],
+  "root_files": [
+    ".agents/skills",
+    ".claude",
+    ".cursor",
+    ".github/readme",
+    ".vscode",
+    "app",
+    "components",
+    "content/docs",
+    "e2e",
+    "hooks",
+    "lib",
+    "plans",
+    "public",
+    "scripts",
+    "test",
+    ".gitignore",
+    "AGENTS.md",
+    "README.md",
+    "THIRD_PARTY_NOTICES.md",
+    "components.json",
+    "doctor.config.ts",
+    "license.md",
+    "mdx-components.tsx",
+    "next.config.ts",
+    "oxfmt.config.ts",
+    "oxlint.config.ts",
+    "package.json",
+    "playwright.config.ts",
+    "pnpm-lock.yaml",
+    "pnpm-workspace.yaml",
+    "postcss.config.mjs",
+    "registry.json",
+    "skills-lock.json",
+    "source.config.ts",
+    "tsconfig.json",
+    "vitest.config.ts"
+  ],
+  "release_count": 0,
+  "status": "verified"
+}

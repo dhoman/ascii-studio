@@ -1,0 +1,355 @@
+{
+  "url": "https://github.com/ratatui/ratzilla",
+  "final_url": "https://github.com/ratatui/ratzilla",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:48:13.007535+00:00",
+  "stars": 1472,
+  "forks": 68,
+  "description": "Build terminal-themed web applications with Rust and WebAssembly. Powered by Ratatui.",
+  "homepage": "https://ratatui.github.io/ratzilla/demo/",
+  "topics": [
+    "ratatui",
+    "rust",
+    "trunk",
+    "tui",
+    "wasm",
+    "wasm-bindgen",
+    "web",
+    "web-framework",
+    "web-sys",
+    "webassembly"
+  ],
+  "license": "Apache-2.0",
+  "archived": false,
+  "created_at": "2025-01-01T23:56:29.000Z",
+  "branch": "main",
+  "commit": "c07436dd14fae60a33ce23974e30aa1ef5ed4f96",
+  "readme": "Watch the conference talk: Bringing Terminal Aesthetics to the Web With Rust (and Vice Versa) Ratzilla Build terminal-themed web applications with Rust and WebAssembly. Powered by Ratatui. Quickstart Templates Install cargo-generate: cargo install cargo-generate Generate a new project: cargo generate ratatui/ratzilla And then serve the application on your browser ➡️ See templates for more information. Manual Setup Add Ratzilla as a dependency in your Cargo.toml: cargo add ratzilla Here is a minimal example: use std::{cell::RefCell, io, rc::Rc}; use ratzilla::ratatui::{ layout::Alignment, style::Color, widgets::{Block, Paragraph}, Terminal, }; use ratzilla::{event::KeyCode, DomBackend, WebRenderer}; fn main() -> io::Result<()> { let counter = Rc::new(RefCell::new(0)); let backend = DomBackend::new()?; let mut terminal = Terminal::new(backend)?; terminal.on_key_event({ let counter_cloned = counter.clone(); move |key_event| { if key_event.code == KeyCode::Char(' ') { let mut counter = counter_cloned.borrow_mut(); *counter += 1; } } })?; terminal.draw_web(move |f| { let counter = counter.borrow(); f.render_widget( Paragraph::new(format!(\"Count: {counter}\")) .alignment(Alignment::Center) .block( Block::bordered() .title(\"Ratzilla\") .title_alignment(Alignment::Center) .border_style(Color::Yellow), ), f.area(), ); }); Ok(()) } Add your index.html. During build, trunk will automatically inject and initialize your Rust code (compiled to WebAssembly) as a JavaScript module. index.html <!doctype html> <html lang=\"en\"> <head> <meta charset=\"UTF-8\" /> <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0, user-scalable=no\" /> <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/firacode/6.2.0/fira_code.min.css\" /> <link data-trunk rel=\"rust\"/> <title>Ratzilla</title> <style> body { margin: 0; width: 100%; height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; align-content: center; background-color: #121212; } pre { font-family: \"Fira Code\", monospace; font-size: 16px; margin: 0px; } </style> </head> <body> <!-- (optional) subscribe to the application started event --> <script type=\"module\"> window.addEventListener(\"TrunkApplicationStarted\", (_) => { // #[wasm_bindgen] functions are now bound to window.wasmBindings.* console.log(\"application initialized\"); }); </script> </body> </html> And then serve the application on your browser ➡️ Serve Install trunk to build and serve the web application. cargo install --locked trunk Add compilation target wasm32-unknown-unknown: rustup target add wasm32-unknown-unknown Then serve it on your browser: trunk serve Now go to http://localhost:8080 and enjoy TUIs in your browser! Deploy To build the WASM bundle, you can run the following command: trunk build --release Then you can serve the server from the dist directory. Example Build Script #!/bin/bash set -euo pipefail export HOME=/root # Install Rustup curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y -t wasm32-unknown-unknown --profile minimal source \"$HOME/.cargo/env\" # Install trunk using binstall curl -L --proto '=https' --tlsv1.2 -sSf https://raw.githubusercontent.com/cargo-bins/cargo-binstall/main/install-from-binstall-release.sh | bash cargo binstall --targets x86_64-unknown-linux-musl -y trunk # Build project with trunk trunk build --release Vercel There is a Vercel deployment template available for Ratzilla here. Documentation API Documentation Backends Widgets Examples Minimal (Preview) Demo (Preview) Pong (Preview) Colors RGB (Preview) Animations (Preview) World Map (Preview) Websites built with Ratzilla https://ratatui.github.io/ratzilla - The official website of Ratzilla https://terminalcollective.org - Terminal Collective community website https://www.function-type.com/tusistor - Resistor calculator http://timbeck.me - Personal website of Tim Beck https://map.apt-swarm.orca.toys - Map of apt-swarm p2p locations TachyonFX FTL - DSL editor and previewer for TachyonFX effects https://emrecansuster.com - Personal website of Emrecan Şuşter (source) https://junkdog.github.io/exabind - A tachyonfx tech demo: animated KDE keyboard shortcut viewer https://rbn.dev - Personal website of 0x01d (source) https://gluesql.org/glues - Glues, a Vim-inspired TUI note-taking app (source) https://alertangel.github.io/ - Website for AlertAngel: A device to make monitoring the Elderly a breeze. (source) (WIP) https://sdr-geo-db.vercel.app/ - SDR contact logging database (source) https://kana.rezoleo.fr - Learn Kana in a terminal fashion (source) https://shenoi.dev/twozero48 - A 2048 game (source) https://inowattio.github.io/MTUI/ - Modbus Client (source) Acknowledgements Thanks to Webatui projects for the inspiration. Special thanks to: Martin Blasko for his huge help with the initial implementation. Adrian Papari for implementing WebGL2 backend. Lastly, thanks to Ratatui for providing the core UI components. Contributing Pull requests are welcome! Consider submitting your ideas via issues first and check out the existing issues. License Licensed under either of Apache License Version 2.0 or The MIT License at your option. 🦀 ノ( º _ º ノ) - respect crables! Copyright Copyright © 2025, Orhun Parmaksız",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://github.com/ratatui/ratzilla"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/ratatui/ratzilla"
+    },
+    {
+      "label": "",
+      "url": "https://crates.io/crates/ratzilla"
+    },
+    {
+      "label": "",
+      "url": "https://docs.rs/ratzilla"
+    },
+    {
+      "label": "Bringing Terminal Aesthetics to the Web With Rust (and Vice Versa)",
+      "url": "https://www.youtube.com/watch?v=iepbyYrF_YQ"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/ratatui/ratzilla#ratzilla"
+    },
+    {
+      "label": "Ratatui",
+      "url": "https://ratatui.rs"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/ratatui/ratzilla#quickstart"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/ratatui/ratzilla#templates"
+    },
+    {
+      "label": "cargo-generate",
+      "url": "https://github.com/cargo-generate/cargo-generate"
+    },
+    {
+      "label": "serve the application on your browser",
+      "url": "https://github.com/ratatui/ratzilla#serve"
+    },
+    {
+      "label": "templates",
+      "url": "https://github.com/ratatui/ratzilla/blob/main/templates"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/ratatui/ratzilla#manual-setup"
+    },
+    {
+      "label": "serve the application on your browser",
+      "url": "https://github.com/ratatui/ratzilla#serve"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/ratatui/ratzilla#serve"
+    },
+    {
+      "label": "trunk",
+      "url": "https://github.com/trunk-rs/trunk"
+    },
+    {
+      "label": "http://localhost:8080",
+      "url": "http://localhost:8080"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/ratatui/ratzilla#deploy"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/ratatui/ratzilla#vercel"
+    },
+    {
+      "label": "here",
+      "url": "https://vercel.com/templates/other/ratzilla"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/ratatui/ratzilla#documentation"
+    },
+    {
+      "label": "API Documentation",
+      "url": "https://docs.rs/ratzilla"
+    },
+    {
+      "label": "Backends",
+      "url": "https://docs.rs/ratzilla/latest/ratzilla/backend/index.html"
+    },
+    {
+      "label": "Widgets",
+      "url": "https://docs.rs/ratzilla/latest/ratzilla/widgets/index.html"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/ratatui/ratzilla#examples"
+    },
+    {
+      "label": "Minimal",
+      "url": "https://github.com/ratatui/ratzilla/tree/main/examples/minimal"
+    },
+    {
+      "label": "Preview",
+      "url": "https://ratatui.github.io/ratzilla/minimal"
+    },
+    {
+      "label": "Demo",
+      "url": "https://github.com/ratatui/ratzilla/tree/main/examples/demo"
+    },
+    {
+      "label": "Preview",
+      "url": "https://ratatui.github.io/ratzilla/demo"
+    },
+    {
+      "label": "Pong",
+      "url": "https://github.com/ratatui/ratzilla/tree/main/examples/pong"
+    },
+    {
+      "label": "Preview",
+      "url": "https://ratatui.github.io/ratzilla/pong"
+    },
+    {
+      "label": "Colors RGB",
+      "url": "https://github.com/ratatui/ratzilla/tree/main/examples/colors_rgb"
+    },
+    {
+      "label": "Preview",
+      "url": "https://ratatui.github.io/ratzilla/colors_rgb"
+    },
+    {
+      "label": "Animations",
+      "url": "https://github.com/ratatui/ratzilla/tree/main/examples/animations"
+    },
+    {
+      "label": "Preview",
+      "url": "https://ratatui.github.io/ratzilla/animations"
+    },
+    {
+      "label": "World Map",
+      "url": "https://github.com/ratatui/ratzilla/tree/main/examples/world_map"
+    },
+    {
+      "label": "Preview",
+      "url": "https://ratatui.github.io/ratzilla/world_map"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/ratatui/ratzilla#websites-built-with-ratzilla"
+    },
+    {
+      "label": "https://ratatui.github.io/ratzilla",
+      "url": "https://ratatui.github.io/ratzilla"
+    },
+    {
+      "label": "https://terminalcollective.org",
+      "url": "https://terminalcollective.org"
+    },
+    {
+      "label": "https://www.function-type.com/tusistor",
+      "url": "https://www.function-type.com/tusistor"
+    },
+    {
+      "label": "http://timbeck.me",
+      "url": "http://timbeck.me"
+    },
+    {
+      "label": "https://map.apt-swarm.orca.toys",
+      "url": "https://map.apt-swarm.orca.toys"
+    },
+    {
+      "label": "TachyonFX FTL",
+      "url": "https://junkdog.github.io/tachyonfx-ftl/"
+    },
+    {
+      "label": "https://emrecansuster.com",
+      "url": "https://emrecansuster.com"
+    },
+    {
+      "label": "source",
+      "url": "https://github.com/Tarbetu/website"
+    },
+    {
+      "label": "https://junkdog.github.io/exabind",
+      "url": "https://junkdog.github.io/exabind"
+    },
+    {
+      "label": "https://rbn.dev",
+      "url": "https://rbn.dev"
+    },
+    {
+      "label": "source",
+      "url": "https://github.com/0x01d/website"
+    },
+    {
+      "label": "https://gluesql.org/glues",
+      "url": "https://gluesql.org/glues"
+    },
+    {
+      "label": "source",
+      "url": "https://github.com/gluesql/glues"
+    },
+    {
+      "label": "https://alertangel.github.io/",
+      "url": "https://alertangel.github.io/"
+    },
+    {
+      "label": "source",
+      "url": "https://github.com/AlertAngel/alertangel.github.io"
+    },
+    {
+      "label": "https://sdr-geo-db.vercel.app/",
+      "url": "https://sdr-geo-db.vercel.app/"
+    },
+    {
+      "label": "source",
+      "url": "https://github.com/nuts-rice/sdr_geo_db"
+    },
+    {
+      "label": "https://kana.rezoleo.fr",
+      "url": "https://kana.rezoleo.fr"
+    },
+    {
+      "label": "source",
+      "url": "https://github.com/benoitlx/kanash"
+    },
+    {
+      "label": "https://shenoi.dev/twozero48",
+      "url": "https://shenoi.dev/twozero48"
+    },
+    {
+      "label": "source",
+      "url": "https://github.com/de-sh/twozero48"
+    },
+    {
+      "label": "https://inowattio.github.io/MTUI/",
+      "url": "https://inowattio.github.io/MTUI/"
+    },
+    {
+      "label": "source",
+      "url": "https://github.com/inowattio/MTUI"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/ratatui/ratzilla#acknowledgements"
+    },
+    {
+      "label": "Webatui",
+      "url": "https://github.com/TylerBloom/webatui"
+    },
+    {
+      "label": "Martin Blasko",
+      "url": "https://github.com/MartinBspheroid"
+    },
+    {
+      "label": "Adrian Papari",
+      "url": "https://github.com/junkdog"
+    },
+    {
+      "label": "Ratatui",
+      "url": "https://ratatui.rs"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/ratatui/ratzilla#contributing"
+    },
+    {
+      "label": "issues",
+      "url": "https://github.com/ratatui/ratzilla/issues/new"
+    },
+    {
+      "label": "existing issues",
+      "url": "https://github.com/ratatui/ratzilla/issues"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/ratatui/ratzilla#license"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/ratatui/ratzilla/blob/main/LICENSE-MIT"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/ratatui/ratzilla/blob/main/LICENSE-APACHE"
+    },
+    {
+      "label": "Apache License Version 2.0",
+      "url": "https://github.com/ratatui/ratzilla/blob/main/LICENSE-APACHE"
+    },
+    {
+      "label": "The MIT License",
+      "url": "https://github.com/ratatui/ratzilla/blob/main/LICENSE-MIT"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/ratatui/ratzilla#copyright"
+    },
+    {
+      "label": "Orhun Parmaksız",
+      "url": "mailto:orhunparmaksiz@gmail.com"
+    }
+  ],
+  "root_files": [
+    ".github/workflows",
+    "assets",
+    "examples",
+    "scripts",
+    "src",
+    "templates",
+    ".gitignore",
+    "CHANGELOG.md",
+    "Cargo.lock",
+    "Cargo.toml",
+    "LICENSE-APACHE",
+    "LICENSE-MIT",
+    "README.md",
+    "cargo-generate.toml",
+    "cliff.toml",
+    "release-plz.toml",
+    "rustfmt.toml"
+  ],
+  "release_count": 16,
+  "status": "verified"
+}

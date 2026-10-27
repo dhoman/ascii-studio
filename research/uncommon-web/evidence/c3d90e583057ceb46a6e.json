@@ -1,0 +1,130 @@
+{
+  "url": "https://github.com/magicuidesign/magicui",
+  "final_url": "https://github.com/magicuidesign/magicui",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:48:00.497942+00:00",
+  "stars": 22802,
+  "forks": 1197,
+  "description": "UI Library for Design Engineers. Animated components and effects you can copy and paste into your apps. Free. Open Source.",
+  "homepage": "https://magicui.design",
+  "topics": [
+    "components",
+    "framer-motion",
+    "nextjs",
+    "react",
+    "shadcn-ui",
+    "tailwindcss",
+    "typescript"
+  ],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2023-06-26T19:17:10.000Z",
+  "branch": "main",
+  "commit": "efe76fc5755eca1142dd4f74c1d6f0ace2887e3c",
+  "readme": "Magic UI UI Library for Design Engineers Documentation Visit https://magicui.design/docs to view the documentation. Contributing Visit our contributing guide to learn how to contribute. It only takes ~5 minutes to add your own! Community Have questions, comments or feedback? Join our discord. Authors Stats Star History License Licensed under the MIT license.",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/bb5f1fbf783d3a89fd3cc9f47bb0849cbca7a2c6123b79529beab95f07463578/68747470733a2f2f63646e2e6d6167696375692e64657369676e2f62656e746f2d677269642e676966"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/magicuidesign/magicui#magic-ui"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/magicuidesign/magicui/stargazers"
+    },
+    {
+      "label": "",
+      "url": "https://twitter.com/magicuidesign"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/magicuidesign/magicui/blob/main/LICENSE.md"
+    },
+    {
+      "label": "",
+      "url": "https://discord.com/invite/87p2vpsat5"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/magicuidesign/magicui#documentation"
+    },
+    {
+      "label": "https://magicui.design/docs",
+      "url": "https://magicui.design/docs"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/magicuidesign/magicui#contributing"
+    },
+    {
+      "label": "contributing guide",
+      "url": "https://github.com/magicuidesign/magicui/blob/main/CONTRIBUTING.md"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/magicuidesign/magicui#community"
+    },
+    {
+      "label": "Join our discord",
+      "url": "http://magicui.design/discord"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/magicuidesign/magicui#authors"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/magicuidesign/magicui/graphs/contributors"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/magicuidesign/magicui#stats"
+    },
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/26e007b6d15e10745f58998faca0c95eacb4cc44d680da642098c2fba6aae14a/68747470733a2f2f7265706f62656174732e6178696f6d2e636f2f6170692f656d6265642f333862363363343531346138613463643764313330373938356166323838396337386436376263632e737667"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/magicuidesign/magicui#star-history"
+    },
+    {
+      "label": "",
+      "url": "https://www.star-history.com/#magicuidesign/magicui&Date"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/magicuidesign/magicui#license"
+    },
+    {
+      "label": "MIT license",
+      "url": "https://github.com/magicuidesign/magicui/blob/main/LICENSE.md"
+    }
+  ],
+  "root_files": [
+    ".cursor",
+    ".github",
+    "apps/www",
+    "skills/magic-ui",
+    ".editorconfig",
+    ".gitattributes",
+    ".gitignore",
+    ".nvmrc",
+    ".prettierignore",
+    "AGENTS.md",
+    "CONTRIBUTING.md",
+    "LICENSE.md",
+    "README.md",
+    "lefthook.yml",
+    "package.json",
+    "pnpm-lock.yaml",
+    "pnpm-workspace.yaml",
+    "registry.json",
+    "turbo.json"
+  ],
+  "release_count": 0,
+  "status": "verified"
+}

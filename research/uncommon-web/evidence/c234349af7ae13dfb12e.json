@@ -1,0 +1,345 @@
+{
+  "url": "https://github.com/regl-project/regl",
+  "final_url": "https://github.com/regl-project/regl",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:48:13.767440+00:00",
+  "stars": 5588,
+  "forks": 327,
+  "description": "👑 Functional WebGL",
+  "homepage": "https://regl-project.github.io/",
+  "topics": [
+    "javascript",
+    "regl",
+    "webgl"
+  ],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2016-02-23T00:03:11.000Z",
+  "branch": "main",
+  "commit": "581f8071182a8127d37a0cd1d3b035d7e5fef074",
+  "readme": "👑 regl Fast functional WebGL Docs | Chat | Download | Minified Example regl simplifies WebGL programming by removing as much shared state as it can get away with. To do this, it replaces the WebGL API with two fundamental abstractions, resources and commands: A resource is a handle to a GPU resident object, like a texture, FBO or buffer. A command is a complete representation of the WebGL state required to perform some draw call. To define a command you specify a mixture of static and dynamic data for the object. Once this is done, regl takes this description and then compiles it into optimized JavaScript code. For example, here is a simple regl program to draw a triangle: // Calling the regl module with no arguments creates a full screen canvas and // WebGL context, and then uses this context to initialize a new REGL instance const regl = require('regl')() // Calling regl() creates a new partially evaluated draw command const drawTriangle = regl({ // Shaders in regl are just strings. You can use glslify or whatever you want // to define them. No need to manually create shader objects. frag: ` precision mediump float; uniform vec4 color; void main() { gl_FragColor = color; }`, vert: ` precision mediump float; attribute vec2 position; void main() { gl_Position = vec4(position, 0, 1); }`, // Here we define the vertex attributes for the above shader attributes: { // regl.buffer creates a new array buffer object position: regl.buffer([ [-2, -2], // no need to flatten nested arrays, regl automatically [4, -2], // unrolls them into a typedarray (default Float32) [4, 4] ]) // regl automatically infers sane defaults for the vertex attribute pointers }, uniforms: { // This defines the color of the triangle to be a dynamic variable color: regl.prop('color') }, // This tells regl the number of vertices to draw in this command count: 3 }) // regl.frame() wraps requestAnimationFrame and also handles viewport changes regl.frame(({time}) => { // clear contents of the drawing buffer regl.clear({ color: [0, 0, 0, 0], depth: 1 }) // draw a triangle using the command defined above drawTriangle({ color: [ Math.cos(time * 0.001), Math.sin(time * 0.0008), Math.cos(time * 0.003), 1 ] }) }) See this example live More examples Check out the gallery. The source code of all the gallery examples can be found here. Setup regl has no dependencies, so setting it up is pretty easy. There are 2 basic ways to do this: npm The easiest way to use regl in a project is via npm. Once you have node set up, you can install and use regl in your project using the following command: npm i -S regl For more info on how to use npm, check out the official docs. If you are using npm, you may also want to try budo which is a live development server. Run time error checking and browserify By default if you compile regl with browserify then all error messages and run time checks are removed. This is done to reduce the size of the final bundle. If you are developing an application, you should run browserify using the --debug flag in order to enable error messages. This will also generate source maps which make reading the source code of your application easier. Standalone script tag You can also use regl as a standalone script if you are really stubborn. The most recent versions can be found in the dist/ folder and is also available from npm cdn in both minified and unminified versions. Unminified: https://npmcdn.com/regl/dist/regl.js Minified: https://npmcdn.com/regl/dist/regl.min.js There are some difference when using regl in standalone. Because script tags don't assume any sort of module system, the standalone scripts inject a global constructor function which is equivalent to the module.exports of regl: <!DOCTYPE html> <html> <head> <meta content=\"width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0\" name=\"viewport\" /> <meta charset=utf-8> </head> <body> </body> <script language=\"javascript\" src=\"https://npmcdn.com/regl/dist/regl.js\"></script> <script language=\"javascript\"> var regl = createREGL() regl.frame(function () { regl.clear({ color: [0, 0, 0, 1] }) }) </script> </html> Why regl regl just removes shared state from WebGL. You can do anything you could in regular WebGL with little overhead and way less debugging. regl emphasizes the following values: Simplicity The interface is concise and emphasizes separation of concerns. Removing shared state helps localize the effects and interactions of code, making it easier to reason about. Correctness regl has more than 30,000 unit tests and above 95% code coverage. In development mode, regl performs strong validation and sanity checks on all input data to help you catch errors faster. Performance regl uses dynamic code generation and partial evaluation to remove almost all overhead. Minimalism regl just wraps WebGL. It is not a game engine and doesn't have opinions about scene graphs or vector math libraries. Any feature in WebGL is accessible, including advanced extensions like multiple render targets or instancing. Stability regl takes interface compatibility and semantic versioning seriously, making it well suited for long lived applications that must be supported for months or years down the road. It also has no dependencies limiting exposure to risky or unplanned updates. Comparisons While regl is lower level than many 3D engines, code written in it tends to be highly compact and flexible. A comparison of regl to various other WebGL libraries across several tasks can be found here. Benchmarks In order to prevent performance regressions, regl is continuously benchmarked. You can run benchmarks locally using npm run bench or check them out online. The results for the last few days can be found here. These measurements were taken using our custom scripts bench-history and bench-graph. You can read more about them in the development guide. Projects using regl The following is an incomplete list of projects using regl: 538 Gun Deaths Infinite Terrain Demo GPGPU Smooth Life Summed Area Tables GPGPU Fourier Analysis GPU accelerated handwritten digit recognition with regl using Convolutional Neural Networks Bokeh Deepscatter - Zoomable, animated scatterplots in the browser that scales over a billion points Allen Institute ABC Atlas - Brain science data explorer GLadly - A lightweight, GPU-accelerated plotting library with a declarative API. If you have a project using regl that isn't on this list that you would like to see added, please send us a pull request! Help Wanted regl is still under active development, and anyone willing to contribute is very much welcome to do so. Right now, what we need the most is for people to write examples and demos with the framework. This will allow us to find bugs and deficiencies in the API. We have a list of examples we would like to be implemented here, but you are of course welcome to come up with your own examples. To add an example to our gallery of examples, please send us a pull request! API docs regl has extensive API documentation. You can browse the docs online here. Development The latest changes in regl can be found in the CHANGELOG. For info on how to build and test headless, see the contributing guide here License All code (c) 2016 MIT License Development supported by the Freeman Lab and the Howard Hughes Medical Institute (@freeman-lab on GitHub) Asset licenses Many examples use creative commons or public domain artwork for illustrative purposes. These assets are not included in any of the redistributable packages of regl. Peppers test image for cube comparison is public domain Test video (doggie-chromakey.ogv) by L0ckergn0me, used under creative commons license Cube maps (posx.jpeg, negx.jpeg, posy.jpeg, negy.jpeg, posz.jpeg, negz.jpeg) by Humus, used under creative commons 3 license Environment map of Oregon (ogd-oregon-360.jpg) due to Max Ogden (@maxogd on GitHub) DDS test images (alpine_cliff_a, alpine_cliff_a_norm, alpine_cliff_a_spec) taken from the CC0 license 0-AD texture pack by Wildfire games Tile set for tile mapping demo (tiles.png) from CC0 licensed cobblestone paths pack Audio track for audio.js example is \"Bamboo Cactus\" by 8bitpeoples. CC BY-ND-NC 1.0 license Matcap (spheretexture.jpg) by Ben Simonds. CC 3 license. Normal map (normaltexture.jpg) by rubberduck. CC0 license.",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://github.com/regl-project/regl#--regl"
+    },
+    {
+      "label": "",
+      "url": "https://npmjs.org/package/regl"
+    },
+    {
+      "label": "",
+      "url": "https://npmcdn.com/regl/dist/regl.min.js"
+    },
+    {
+      "label": "",
+      "url": "https://npmjs.org/package/regl"
+    },
+    {
+      "label": "",
+      "url": "https://standardjs.com"
+    },
+    {
+      "label": "Docs",
+      "url": "https://github.com/regl-project/regl/blob/gh-pages/API.md"
+    },
+    {
+      "label": "Chat",
+      "url": "https://gitter.im/mikolalysenko/regl"
+    },
+    {
+      "label": "Download",
+      "url": "https://npmcdn.com/regl/dist/regl.js"
+    },
+    {
+      "label": "Minified",
+      "url": "https://npmcdn.com/regl/dist/regl.min.js"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/regl-project/regl#----------docs--------------------chat--------------------download--------------------minified------"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/regl-project/regl#example"
+    },
+    {
+      "label": "live",
+      "url": "https://regl-project.github.io/regl/www/gallery.html"
+    },
+    {
+      "label": "More examples",
+      "url": "https://regl-project.github.io/regl/www/gallery.html"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/regl-project/regl#more-examples"
+    },
+    {
+      "label": "gallery",
+      "url": "https://regl-project.github.io/regl/www/gallery.html"
+    },
+    {
+      "label": "here",
+      "url": "https://github.com/regl-project/regl/tree/gh-pages/example"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/regl-project/regl#setup"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/regl-project/regl#npm"
+    },
+    {
+      "label": "npm",
+      "url": "http://npmjs.com"
+    },
+    {
+      "label": "check out the official docs",
+      "url": "https://docs.npmjs.com/"
+    },
+    {
+      "label": "budo",
+      "url": "https://github.com/mattdesl/budo"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/regl-project/regl#run-time-error-checking-and-browserify"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/regl-project/regl#standalone-script-tag"
+    },
+    {
+      "label": "npm cdn",
+      "url": "https://npmcdn.com"
+    },
+    {
+      "label": "https://npmcdn.com/regl/dist/regl.js",
+      "url": "https://npmcdn.com/regl/dist/regl.js"
+    },
+    {
+      "label": "https://npmcdn.com/regl/dist/regl.min.js",
+      "url": "https://npmcdn.com/regl/dist/regl.min.js"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/regl-project/regl#why-regl"
+    },
+    {
+      "label": "multiple render targets",
+      "url": "https://github.com/regl-project/regl/blob/gh-pages/example/deferred_shading.js"
+    },
+    {
+      "label": "instancing",
+      "url": "https://github.com/regl-project/regl/blob/gh-pages/example/instance-triangle.js"
+    },
+    {
+      "label": "Comparisons",
+      "url": "https://regl-project.github.io/regl/www/compare.html"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/regl-project/regl#comparisons"
+    },
+    {
+      "label": "libraries across several tasks can be found here",
+      "url": "https://regl-project.github.io/regl/www/compare.html"
+    },
+    {
+      "label": "Benchmarks",
+      "url": "https://regl-project.github.io/regl/www/bench-results/bench-result-8ea4a7e806beed0b9732"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/regl-project/regl#benchmarks"
+    },
+    {
+      "label": "check them out online",
+      "url": "https://regl-project.github.io/regl/www/bench.html"
+    },
+    {
+      "label": "results for the last few days can be found here.",
+      "url": "https://regl-project.github.io/regl/www/bench-results/bench-result-db4b76e25bd8ed6d7ed9"
+    },
+    {
+      "label": "the development guide",
+      "url": "https://github.com/regl-project/regl/blob/gh-pages/DEVELOPING.md"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/regl-project/regl#projects-using-regl"
+    },
+    {
+      "label": "538 Gun Deaths",
+      "url": "http://fivethirtyeight.com/features/gun-deaths/"
+    },
+    {
+      "label": "Infinite Terrain Demo",
+      "url": "https://github.com/Erkaman/wireframe-world"
+    },
+    {
+      "label": "GPGPU Smooth Life",
+      "url": "https://github.com/rreusser/regl-smooth-life"
+    },
+    {
+      "label": "Summed Area Tables",
+      "url": "https://github.com/realazthat/glsl-sat"
+    },
+    {
+      "label": "GPGPU Fourier Analysis",
+      "url": "https://github.com/dfcreative/gl-fourier"
+    },
+    {
+      "label": "GPU accelerated handwritten digit recognition with regl using Convolutional Neural Networks",
+      "url": "https://github.com/Erkaman/regl-cnn"
+    },
+    {
+      "label": "Bokeh",
+      "url": "https://github.com/bokeh/bokeh"
+    },
+    {
+      "label": "Deepscatter - Zoomable, animated scatterplots in the browser that scales over a billion points",
+      "url": "https://github.com/nomic-ai/deepscatter"
+    },
+    {
+      "label": "Allen Institute ABC Atlas - Brain science data explorer",
+      "url": "https://knowledge.brain-map.org/abcatlas"
+    },
+    {
+      "label": "GLadly - A lightweight, GPU-accelerated plotting library with a declarative API.",
+      "url": "https://redhog.github.io/gladly/"
+    },
+    {
+      "label": "please send us a pull request!",
+      "url": "https://github.com/regl-project/regl/edit/gh-pages/README.md"
+    },
+    {
+      "label": "Help Wanted",
+      "url": "https://github.com/regl-project/regl/issues?q=is%3Aopen+is%3Aissue+label%3A%22help+wanted%22"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/regl-project/regl#help-wanted"
+    },
+    {
+      "label": "here",
+      "url": "https://github.com/regl-project/regl/issues?q=is%3Aopen+is%3Aissue+label%3Aexample"
+    },
+    {
+      "label": "please send us a pull request!",
+      "url": "https://github.com/regl-project/regl/pulls"
+    },
+    {
+      "label": "API docs",
+      "url": "https://github.com/regl-project/regl/blob/gh-pages/API.md"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/regl-project/regl#api-docs"
+    },
+    {
+      "label": "docs online here",
+      "url": "https://github.com/regl-project/regl/blob/gh-pages/API.md"
+    },
+    {
+      "label": "Development",
+      "url": "https://github.com/regl-project/regl/blob/gh-pages/DEVELOPING.md"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/regl-project/regl#development"
+    },
+    {
+      "label": "CHANGELOG",
+      "url": "https://github.com/regl-project/regl/blob/gh-pages/CHANGES.md"
+    },
+    {
+      "label": "For info on how to build and test headless, see the contributing guide here",
+      "url": "https://github.com/regl-project/regl/blob/gh-pages/DEVELOPING.md"
+    },
+    {
+      "label": "License",
+      "url": "https://github.com/regl-project/regl/blob/main/LICENSE"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/regl-project/regl#license"
+    },
+    {
+      "label": "Freeman Lab",
+      "url": "https://www.janelia.org/lab/freeman-lab"
+    },
+    {
+      "label": "@freeman-lab",
+      "url": "https://github.com/freeman-lab"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/regl-project/regl#asset-licenses"
+    },
+    {
+      "label": "L0ckergn0me",
+      "url": "https://archive.org/details/L0ckergn0me-PixieGreenScreen446"
+    },
+    {
+      "label": "Humus",
+      "url": "http://www.humus.name/index.php?page=Textures"
+    },
+    {
+      "label": "@maxogd",
+      "url": "https://github.com/maxogden"
+    },
+    {
+      "label": "0-AD texture pack by Wildfire games",
+      "url": "http://opengameart.org/content/0-ad-textures"
+    },
+    {
+      "label": "cobblestone paths pack",
+      "url": "http://opengameart.org/content/rpg-tiles-cobble-stone-paths-town-objects"
+    },
+    {
+      "label": "Bamboo Cactus",
+      "url": "https://archive.org/details/8bp033"
+    },
+    {
+      "label": "8bitpeoples",
+      "url": "https://archive.org/details/8bitpeoples"
+    },
+    {
+      "label": "Ben Simonds",
+      "url": "https://bensimonds.com/2010/07/30/matcap-generator/"
+    },
+    {
+      "label": "rubberduck",
+      "url": "http://opengameart.org/node/21219"
+    }
+  ],
+  "root_files": [
+    ".github/workflows",
+    "bench",
+    "bin",
+    "browserify",
+    "compare/cube",
+    "example",
+    "lib",
+    "rollup",
+    "test",
+    ".gitignore",
+    ".npmignore",
+    ".remarkrc",
+    "API.md",
+    "CHANGES.md",
+    "DEVELOPING.md",
+    "LICENSE",
+    "README.md",
+    "package-lock.json",
+    "package.json",
+    "regl.d.ts",
+    "regl.js",
+    "tsconfig.json"
+  ],
+  "release_count": 0,
+  "status": "verified"
+}

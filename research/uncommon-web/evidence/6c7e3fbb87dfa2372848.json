@@ -1,0 +1,970 @@
+{
+  "url": "https://github.com/nolimits4web/Swiper",
+  "final_url": "https://github.com/nolimits4web/Swiper",
+  "http_status": 200,
+  "checked_at": "2026-10-22T23:48:06.364847+00:00",
+  "stars": 41907,
+  "forks": 9580,
+  "description": "Most modern mobile touch slider with hardware accelerated transitions",
+  "homepage": "https://swiperjs.com",
+  "topics": [
+    "carousel",
+    "gallery",
+    "mobile",
+    "slider",
+    "swipe",
+    "swiper",
+    "touch",
+    "touch-events"
+  ],
+  "license": "MIT",
+  "archived": false,
+  "created_at": "2012-03-14T19:11:45.000Z",
+  "branch": "master",
+  "commit": "ceb727dd71997c6cde2c02598907a88de4d05bdd",
+  "readme": "Get Started | Documentation | Demos Swiper Swiper - is the free and most modern mobile touch slider with hardware accelerated transitions and amazing native behavior. It is intended to be used in mobile websites, mobile web apps, and mobile native/hybrid apps. Swiper is not compatible with all platforms, it is a modern touch slider which is focused only on modern apps/platforms to bring the best experience and simplicity. Features Tree-shakeable: Only modules you use will be imported into your app's bundle. Mobile-friendly: It is intended to be used in mobile websites, mobile web apps, and mobile native/hybrid apps. Library Agnostic: Swiper doesn't require any JavaScript libraries like jQuery, which makes Swiper much smaller and faster. It can be safely used with libraries such as jQuery, Zepto, jQuery Mobile, etc. 1:1 Touch movement: By default, Swiper provides 1:1 touch movement interaction, but this ratio can be configured through Swiper settings. Mutation Observer: Swiper has an option to enable Mutation Observer, with this feature Swiper will be automatically reinitialized and recalculate all required parameters if you make dynamic changes to the DOM, or in Swiper styles itself. Rich API: Swiper comes with a very rich API. It allows creating your own pagination, navigation buttons, parallax effects and many more. RTL: Swiper is the only slider that provides 100% RTL support with correct layout. Multi Row Slides Layout: Swiper allows a multiple row slides layout, with a few slides per column. Transition Effects: Fade, Flip, 3D Cube, 3D Coverflow. Two-way Control: Swiper may be used as controller for any number of other Swipers, and even be controlled at the same time. Full Navigation Control: Swiper comes with all required built-in navigation elements, such as Pagination, Navigation arrows and Scrollbar. Flexbox Layout: Swiper uses modern flexbox layout for slides layout, which solves a lot of problems and time with size calculations. Such layout also allows configuring the Slides grid using pure CSS. Most Flexible Slides Layout Grid: Swiper has a lot of parameters on initialization to make it as flexible as possible. You can control slides per view, per column, per group, space between slides, and many more. Images Lazy Loading: Swiper Lazy Loading delays loading of images in inactive/invisible slides until the user swipes to them. Such feature could make the page load faster and improve Swiper performance. Virtual Slides: Swiper comes with Virtual Slides feature that is great when you have a lot of slides or content-heavy/image-heavy slides so it will keep just the required amount of slides in DOM. Loop mode Autoplay Keyboard control Mousewheel control Nested sliders History navigation Hash navigation Breakpoints configuration Accessibility (A11y) And many more ... Community The Swiper community can be found on GitHub Discussions, where you can ask questions, voice ideas, and share your projects Our Code of Conduct applies to all Swiper community channels. Dist / Build On production use files (JS and CSS) only from dist/ folder, there will be the most stable versions. Development Build Install all dependencies, in repo's root: $ npm install And build development version of Swiper: $ npm run build The result is available in dist/ folder. Running demos: All demos located in ./playground folder. There you will find Core (HTML, JS), React, Vue versions. To open demo, run: Core: npm run core React: npm run react Vue: npm run vue Production Build $ npm run build:prod Production version will available in dist/ folder. Contributing All changes should be committed to src/ files only. Before you open an issue please review the contributing guideline. Major Roadmapped Features Top Feature Requests (Add your own votes using the 👍 reaction) Top Bugs 😱 (Add your own votes using the 👍 reaction) Sponsors Code Contributors This project exists thanks to all the people who contribute. [Contribute].",
+  "readme_links": [
+    {
+      "label": "",
+      "url": "https://camo.githubusercontent.com/5f70ac9ae11d49170d6d3ae92cdec75a5ad6b6ebfca62745061cad8d97ce2e5b/68747470733a2f2f7377697065726a732e636f6d2f696d616765732f73686172652d62616e6e65722e6a7067"
+    },
+    {
+      "label": "Get Started",
+      "url": "https://swiperjs.com/get-started"
+    },
+    {
+      "label": "Documentation",
+      "url": "https://swiperjs.com/swiper-api"
+    },
+    {
+      "label": "Demos",
+      "url": "https://swiperjs.com/demos"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/nolimits4web/swiper/actions?query=workflow%3ABuild"
+    },
+    {
+      "label": "",
+      "url": "https://www.jsdelivr.com/package/npm/swiper"
+    },
+    {
+      "label": "",
+      "url": "https://bundlephobia.com/result?p=swiper"
+    },
+    {
+      "label": "",
+      "url": "https://npmjs.org/package/swiper"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/nolimits4web/Swiper#swiper"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/nolimits4web/Swiper#features"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/nolimits4web/Swiper#community"
+    },
+    {
+      "label": "GitHub Discussions",
+      "url": "https://github.com/nolimits4web/swiper/discussions"
+    },
+    {
+      "label": "Code of Conduct",
+      "url": "https://github.com/nolimits4web/swiper/blob/master/CODE_OF_CONDUCT.md"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/nolimits4web/Swiper#dist--build"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/nolimits4web/Swiper#development-build"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/nolimits4web/Swiper#running-demos"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/nolimits4web/Swiper#production-build"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/nolimits4web/Swiper#contributing"
+    },
+    {
+      "label": "contributing",
+      "url": "https://github.com/nolimits4web/swiper/blob/master/CONTRIBUTING.md"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/nolimits4web/Swiper#major-roadmapped-features"
+    },
+    {
+      "label": "Top Feature Requests",
+      "url": "https://github.com/nolimits4web/swiper/issues?q=is%3Aissue+is%3Aopen+label%3A%22feature+request%22+sort%3Areactions-%2B1-desc+"
+    },
+    {
+      "label": "Top Bugs 😱",
+      "url": "https://github.com/nolimits4web/swiper/issues?q=is%3Aissue+is%3Aopen+-label%3A%22feature+request%22++sort%3Areactions-%2B1-desc+"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/nolimits4web/Swiper#sponsors"
+    },
+    {
+      "label": "",
+      "url": "https://global.fun88.com/"
+    },
+    {
+      "label": "",
+      "url": "https://global.jbo.com/"
+    },
+    {
+      "label": "",
+      "url": "https://au.trustpilot.com/review/aussieonline.casino"
+    },
+    {
+      "label": "",
+      "url": "https://casinogam.com/"
+    },
+    {
+      "label": "",
+      "url": "https://casino-wise.co.uk/"
+    },
+    {
+      "label": "",
+      "url": "https://nongamstopcasinos.uk/"
+    },
+    {
+      "label": "",
+      "url": "https://www.cortijolapasion.mx/"
+    },
+    {
+      "label": "",
+      "url": "https://kasino-ilman-tilia.net/"
+    },
+    {
+      "label": "",
+      "url": "https://evernomic.com/"
+    },
+    {
+      "label": "",
+      "url": "https://baccarat991.vip/"
+    },
+    {
+      "label": "",
+      "url": "https://kasinokurko.com/"
+    },
+    {
+      "label": "",
+      "url": "https://fi.parhaatuudetkasinot.com/"
+    },
+    {
+      "label": "",
+      "url": "https://royalwriter.co.uk/"
+    },
+    {
+      "label": "",
+      "url": "https://www.masterpapers.com/"
+    },
+    {
+      "label": "",
+      "url": "https://casinosfest.com/"
+    },
+    {
+      "label": "",
+      "url": "https://grademiners.com/"
+    },
+    {
+      "label": "",
+      "url": "https://ssmarket.net/"
+    },
+    {
+      "label": "",
+      "url": "https://parimatch.in/en/football/live"
+    },
+    {
+      "label": "",
+      "url": "https://casinoshunter.com/online-casinos/"
+    },
+    {
+      "label": "",
+      "url": "https://www.freakforluxury.in/"
+    },
+    {
+      "label": "",
+      "url": "https://vladvsgolf.com/"
+    },
+    {
+      "label": "",
+      "url": "https://www.reddit.com/r/AIHotspot/comments/1wguzej/what_is_the_best_ai_girlfriend_site_or_app/"
+    },
+    {
+      "label": "",
+      "url": "https://www.reddit.com/r/MrMarketing/comments/1ux9tai/can_you_recommend_a_good_google_ads_agency/"
+    },
+    {
+      "label": "",
+      "url": "https://retail.economictimes.indiatimes.com/news/industry/super-clone-watches-explained-the-details-most-first-time-buyers-miss/132070524"
+    },
+    {
+      "label": "",
+      "url": "https://richmond.com/exclusive/article_69d3e2f5-85fa-5e1d-a124-1e1a2a710a92.html"
+    },
+    {
+      "label": "",
+      "url": "https://marie-weber.medium.com/instagram-marketing-in-the-ai-era-buying-followers-d576b98168be"
+    },
+    {
+      "label": "",
+      "url": "https://viewtikstories.com/"
+    },
+    {
+      "label": "",
+      "url": "https://beleadkey.com/google-ads-agency"
+    },
+    {
+      "label": "",
+      "url": "https://billingsgazette.com/exclusive/article_64390499-5a5a-58f3-990e-7c8f7853b30e.html"
+    },
+    {
+      "label": "",
+      "url": "https://danskroulette.dk/"
+    },
+    {
+      "label": "",
+      "url": "https://ruletas-simuladores.es/dinero-real/"
+    },
+    {
+      "label": "",
+      "url": "https://opencollective.com/sweepico-promo-code"
+    },
+    {
+      "label": "",
+      "url": "https://viljokasinot.bet"
+    },
+    {
+      "label": "",
+      "url": "https://losgatan.com/best-sites-to-buy-linkedin-followers/"
+    },
+    {
+      "label": "",
+      "url": "https://muddyriversports.com/sponsored-content/buy-real-youtube-subscribers/20260918080225/"
+    },
+    {
+      "label": "",
+      "url": "https://hypesy.io/buy-tiktok-likes"
+    },
+    {
+      "label": "",
+      "url": "https://www.reddit.com/r/tiktokRise/comments/1wcgwin/whatre_the_best_sites_to_buy_tiktok_followers_and"
+    },
+    {
+      "label": "",
+      "url": "https://sealedrose.com/verify-video"
+    },
+    {
+      "label": "",
+      "url": "https://nl.trustpilot.com/review/lolajack-casino-nl.com"
+    },
+    {
+      "label": "",
+      "url": "https://muddyriversports.com/sponsored-content/buy-tiktok-followers-likes-views/20260911075015/"
+    },
+    {
+      "label": "",
+      "url": "https://beton.ua/casino"
+    },
+    {
+      "label": "",
+      "url": "https://www.couponlab.com"
+    },
+    {
+      "label": "",
+      "url": "https://watchthis.dev"
+    },
+    {
+      "label": "",
+      "url": "https://riverslot.net/"
+    },
+    {
+      "label": "",
+      "url": "https://www.reddit.com/r/Streamers/comments/1vqt514/where_can_i_buy_twitch_viewers_safely_without/"
+    },
+    {
+      "label": "",
+      "url": "https://www.reddit.com/r/TikTokLounge/comments/1svf7r5/wheres_the_best_site_to_buy_tiktok_views_and/"
+    },
+    {
+      "label": "",
+      "url": "https://www.healdsburgtribune.com/buy-youtube-views-likes-subscribers/"
+    },
+    {
+      "label": "",
+      "url": "https://billingsgazette.com/exclusive/article_3e5c7645-1a28-54a0-b4c6-8a5d786c182a.html"
+    },
+    {
+      "label": "",
+      "url": "https://bulkoid.com/buy-tiktok-likes"
+    },
+    {
+      "label": "",
+      "url": "https://www.reddit.com/r/MrMarketing/comments/1sxe34y/where_can_i_buy_tiktok_likes_and_views_any/"
+    },
+    {
+      "label": "",
+      "url": "https://humanizeaitext.io/"
+    },
+    {
+      "label": "",
+      "url": "https://zafame.com/"
+    },
+    {
+      "label": "",
+      "url": "https://viewsnapstories.com/"
+    },
+    {
+      "label": "",
+      "url": "https://www.globalsoftwarecompanies.com/"
+    },
+    {
+      "label": "",
+      "url": "https://www.socialwick.com/twitter/followers"
+    },
+    {
+      "label": "",
+      "url": "https://www.reddit.com/r/MusicNotes/comments/1pd3vgm/whats_the_best_ai_music_generator_reddit_vote/"
+    },
+    {
+      "label": "",
+      "url": "https://www.reddit.com/r/TikTokLounge/comments/1v9xhjk/where_can_i_buy_tiktok_likes/"
+    },
+    {
+      "label": "",
+      "url": "https://prime-digital.ca"
+    },
+    {
+      "label": "",
+      "url": "https://headshot.ltd"
+    },
+    {
+      "label": "",
+      "url": "https://leadership.ng/gambling/it/casino-non-aams/"
+    },
+    {
+      "label": "",
+      "url": "https://www.liceodiazce.it/"
+    },
+    {
+      "label": "",
+      "url": "https://viet.fun88.com/"
+    },
+    {
+      "label": "",
+      "url": "https://thai.fun88.com/"
+    },
+    {
+      "label": "",
+      "url": "https://www.jbo579.com/th/"
+    },
+    {
+      "label": "",
+      "url": "https://losgatan.com/buy-tiktok-likes-safe/"
+    },
+    {
+      "label": "",
+      "url": "https://tucson.com/exclusive/article_1add462a-16f6-5510-a486-505b26f7be78.html"
+    },
+    {
+      "label": "",
+      "url": "https://www.reddit.com/r/ArtOfPresence/comments/1twj42q/where_can_i_buy_instagram_likes_and_views_right/"
+    },
+    {
+      "label": "",
+      "url": "https://www.jbo88b.com/vn/"
+    },
+    {
+      "label": "",
+      "url": "https://aijourn.com/buy-real-youtube-subscribers/"
+    },
+    {
+      "label": "",
+      "url": "https://pressbanner.com/best-sites-to-buy-real-tiktok-likes/"
+    },
+    {
+      "label": "",
+      "url": "https://www.grykasynoonline.pl/"
+    },
+    {
+      "label": "",
+      "url": "https://www.kaliteraonlinecasino.eu.com/"
+    },
+    {
+      "label": "",
+      "url": "https://richmond.com/exclusive/article_9412c54e-bb62-50ea-9c9e-1eeef6641b02.html"
+    },
+    {
+      "label": "",
+      "url": "https://au.trustpilot.com/review/bestaustraliaonlinepokies.com"
+    },
+    {
+      "label": "",
+      "url": "https://crazy-tower.casino/"
+    },
+    {
+      "label": "",
+      "url": "https://nomia.pt/"
+    },
+    {
+      "label": "",
+      "url": "https://cluc.cat/"
+    },
+    {
+      "label": "",
+      "url": "https://slotsjudge-pl.com/"
+    },
+    {
+      "label": "",
+      "url": "https://www.instant-famous.com/"
+    },
+    {
+      "label": "",
+      "url": "https://ezbux.com"
+    },
+    {
+      "label": "",
+      "url": "https://www.jazzonline.gr/"
+    },
+    {
+      "label": "",
+      "url": "https://transcript.you"
+    },
+    {
+      "label": "",
+      "url": "https://2048.now"
+    },
+    {
+      "label": "",
+      "url": "https://love.you"
+    },
+    {
+      "label": "",
+      "url": "https://time.now"
+    },
+    {
+      "label": "",
+      "url": "https://www.top-casino.nl"
+    },
+    {
+      "label": "",
+      "url": "https://superclonewatches.com/"
+    },
+    {
+      "label": "",
+      "url": "https://time.now/developer"
+    },
+    {
+      "label": "",
+      "url": "https://www.reddit.com/r/branding/comments/1rar7q0/whats_the_best_smm_panel_right_now/"
+    },
+    {
+      "label": "",
+      "url": "https://www.reddit.com/r/growmybusiness/comments/1qh63qr/whats_the_best_site_to_buy_google_reviews/"
+    },
+    {
+      "label": "",
+      "url": "https://www.kaidonno1.com/"
+    },
+    {
+      "label": "",
+      "url": "https://www.liveswap.io"
+    },
+    {
+      "label": "",
+      "url": "https://www.reddit.com/r/TikTokLounge/comments/1rv7lfz/whats_the_best_site_to_buy_tiktok_followers_that/"
+    },
+    {
+      "label": "",
+      "url": "https://www.reddit.com/r/Dating_Decoded/comments/1q5dyin/what_are_the_best_hookup_sites_and_apps_for/"
+    },
+    {
+      "label": "",
+      "url": "https://legalnekasynoonline.org/"
+    },
+    {
+      "label": "",
+      "url": "https://mostbets-polska.com/"
+    },
+    {
+      "label": "",
+      "url": "https://www.casino.escritoscientificos.es/"
+    },
+    {
+      "label": "",
+      "url": "https://french-casinos.com/"
+    },
+    {
+      "label": "",
+      "url": "https://buy.fans/"
+    },
+    {
+      "label": "",
+      "url": "https://pl.topkasynoonline.com/"
+    },
+    {
+      "label": "",
+      "url": "https://www.socialdawn.com/"
+    },
+    {
+      "label": "",
+      "url": "https://www.facefinder.id/en"
+    },
+    {
+      "label": "",
+      "url": "https://www.lorka.ai/"
+    },
+    {
+      "label": "",
+      "url": "https://www.humanizeai.io/"
+    },
+    {
+      "label": "",
+      "url": "https://new.eastvillafc.co.uk/"
+    },
+    {
+      "label": "",
+      "url": "https://casinosansverification.aroots.org/"
+    },
+    {
+      "label": "",
+      "url": "https://www.fun88vnu.com/vn/"
+    },
+    {
+      "label": "",
+      "url": "https://global.fun88.com/"
+    },
+    {
+      "label": "",
+      "url": "https://www.fun88tha.com/th/"
+    },
+    {
+      "label": "",
+      "url": "https://www.reddit.com/r/influencermarketing/comments/1r8b8i6/where_do_people_buy_instagram_followers_that/"
+    },
+    {
+      "label": "",
+      "url": "https://septem-paris.com/"
+    },
+    {
+      "label": "",
+      "url": "https://www.reddit.com/r/DigitalMarketingHack/comments/1r0xs0p/whats_the_best_site_to_buy_linkedin_followers/"
+    },
+    {
+      "label": "",
+      "url": "https://newcasinobonuses.gb.net/"
+    },
+    {
+      "label": "",
+      "url": "https://billingsgazette.com/exclusive/article_979d2b0d-6f14-5c8a-8a0e-7e87442d4637.html"
+    },
+    {
+      "label": "",
+      "url": "https://ai-text-humanizer.com/"
+    },
+    {
+      "label": "",
+      "url": "https://aviator-game.com/"
+    },
+    {
+      "label": "",
+      "url": "https://koten.app/"
+    },
+    {
+      "label": "",
+      "url": "https://decontrabas.com/"
+    },
+    {
+      "label": "",
+      "url": "https://de.trustpilot.com/review/onlinecasinoohneoasis.me"
+    },
+    {
+      "label": "",
+      "url": "https://au.trustpilot.com/review/aussiepokies.net"
+    },
+    {
+      "label": "",
+      "url": "https://indownloader.app/"
+    },
+    {
+      "label": "",
+      "url": "https://www.crawljobs.com/"
+    },
+    {
+      "label": "",
+      "url": "https://idealecasinos.com/"
+    },
+    {
+      "label": "",
+      "url": "https://au.crazyvegas.com/"
+    },
+    {
+      "label": "",
+      "url": "https://www.reddit.com/r/growmybusiness/comments/1so2fld/what_is_the_best_site_to_buy_instagram_followers/"
+    },
+    {
+      "label": "",
+      "url": "https://www.slotozilla.com/"
+    },
+    {
+      "label": "",
+      "url": "https://writehuman.ai/"
+    },
+    {
+      "label": "",
+      "url": "https://nl.trustpilot.com/review/scandicasinos.com"
+    },
+    {
+      "label": "",
+      "url": "https://retail.economictimes.indiatimes.com/news/replica-watches-best-website-for-11-super-clone-watches-swiss-movement/114113699"
+    },
+    {
+      "label": "",
+      "url": "https://finance.yahoo.com/news/best-website-super-clone-watches-073500706.html"
+    },
+    {
+      "label": "",
+      "url": "https://gmkoutsi.com/"
+    },
+    {
+      "label": "",
+      "url": "https://releaf.com/de/"
+    },
+    {
+      "label": "",
+      "url": "https://www.eurocommpr.at/"
+    },
+    {
+      "label": "",
+      "url": "https://casinononaamsit.com/"
+    },
+    {
+      "label": "",
+      "url": "https://opencollective.com/jokacasino"
+    },
+    {
+      "label": "",
+      "url": "https://nondetected.com/"
+    },
+    {
+      "label": "",
+      "url": "https://www.kasinoranking.com/"
+    },
+    {
+      "label": "",
+      "url": "https://newcasinos.vip/"
+    },
+    {
+      "label": "",
+      "url": "https://buytiktokfollowers.co/"
+    },
+    {
+      "label": "",
+      "url": "https://www.reddit.com/r/MarketingMentor/comments/1cut7x5/where_to_buy_instagram_followers_likes/"
+    },
+    {
+      "label": "",
+      "url": "https://prestigewatches.co/"
+    },
+    {
+      "label": "",
+      "url": "https://unaimytext.com/"
+    },
+    {
+      "label": "",
+      "url": "https://www.kasinonetti.com/"
+    },
+    {
+      "label": "",
+      "url": "https://casinotreasure.com/"
+    },
+    {
+      "label": "",
+      "url": "https://www.mixx.com/buy-instagram-followers"
+    },
+    {
+      "label": "",
+      "url": "https://boostlikes.uk/buy-youtube-subscribers-views/"
+    },
+    {
+      "label": "",
+      "url": "https://pistolocasino.com/"
+    },
+    {
+      "label": "",
+      "url": "https://www.socialfollowers.uk/buy-tiktok-followers/"
+    },
+    {
+      "label": "",
+      "url": "https://www.palace-luzern.ch/"
+    },
+    {
+      "label": "",
+      "url": "https://kasynoplonline.com/"
+    },
+    {
+      "label": "",
+      "url": "https://casinosinternacionalesonline.com/"
+    },
+    {
+      "label": "",
+      "url": "https://www.casinokennis.com/"
+    },
+    {
+      "label": "",
+      "url": "https://www.casinofy.com/"
+    },
+    {
+      "label": "",
+      "url": "https://casinoallianz.com/"
+    },
+    {
+      "label": "",
+      "url": "https://casinos.it.com/"
+    },
+    {
+      "label": "",
+      "url": "https://dashtickets.nz/"
+    },
+    {
+      "label": "",
+      "url": "https://www.top-casino.nl/"
+    },
+    {
+      "label": "",
+      "url": "https://robocat.casino/"
+    },
+    {
+      "label": "",
+      "url": "https://zamsino.com/"
+    },
+    {
+      "label": "",
+      "url": "https://www.casinosdeutschlandonline.com/"
+    },
+    {
+      "label": "",
+      "url": "https://casinosportugal.com/"
+    },
+    {
+      "label": "",
+      "url": "https://bettingsite.cc/"
+    },
+    {
+      "label": "",
+      "url": "https://www.onlinecasinolegends.com/"
+    },
+    {
+      "label": "",
+      "url": "https://nongamstopcasinos.net/gb/"
+    },
+    {
+      "label": "",
+      "url": "https://zondercruks.net/"
+    },
+    {
+      "label": "",
+      "url": "https://casinosinlicenciaespana.com/"
+    },
+    {
+      "label": "",
+      "url": "https://sanctionslawyers.net/"
+    },
+    {
+      "label": "",
+      "url": "https://interpollawfirm.com/"
+    },
+    {
+      "label": "",
+      "url": "https://nongamstopbookiesuk.com/"
+    },
+    {
+      "label": "",
+      "url": "https://leofame.com/"
+    },
+    {
+      "label": "",
+      "url": "https://www.teravisiontech.com/"
+    },
+    {
+      "label": "",
+      "url": "https://www.gokken-online.com/"
+    },
+    {
+      "label": "",
+      "url": "https://greece-casinos.com/"
+    },
+    {
+      "label": "",
+      "url": "https://www.hellobonuses.com/nl/"
+    },
+    {
+      "label": "",
+      "url": "https://www.ownedcore.com/casino/"
+    },
+    {
+      "label": "",
+      "url": "https://blastup.com/buy-instagram-likes"
+    },
+    {
+      "label": "",
+      "url": "https://vedonlyontiyhtiot.com/"
+    },
+    {
+      "label": "",
+      "url": "https://celebian.com/"
+    },
+    {
+      "label": "",
+      "url": "https://views4you.com/buy-youtube-views/"
+    },
+    {
+      "label": "",
+      "url": "https://www.doublethebitcoin.net/"
+    },
+    {
+      "label": "",
+      "url": "https://www.prointernet.in.ua/"
+    },
+    {
+      "label": "",
+      "url": "https://nexussmoke.com/"
+    },
+    {
+      "label": "",
+      "url": "https://spelpressen.se/casino-reportage/casino-utan-svensk-licens"
+    },
+    {
+      "label": "",
+      "url": "https://betfans.nl/"
+    },
+    {
+      "label": "",
+      "url": "https://www.onlineunitedstatescasinos.com/"
+    },
+    {
+      "label": "",
+      "url": "https://philippinescasinos.ph/gcash/"
+    },
+    {
+      "label": "",
+      "url": "https://buycheapestfollowers.com/buy-instagram-reels-views"
+    },
+    {
+      "label": "",
+      "url": "https://onlinecasinosspelen.com/"
+    },
+    {
+      "label": "",
+      "url": "https://rotativka.com/"
+    },
+    {
+      "label": "",
+      "url": "https://www.casinoaustraliaonline.com/under-1-hour-withdrawal-casinos/"
+    },
+    {
+      "label": "",
+      "url": "https://nieuwe-casinos.net/"
+    },
+    {
+      "label": "",
+      "url": "https://4rabet.com/app"
+    },
+    {
+      "label": "",
+      "url": "https://www.wisergamblers.com/ca/"
+    },
+    {
+      "label": "",
+      "url": "https://www.fast.bet/ca/"
+    },
+    {
+      "label": "",
+      "url": "https://cliquestudios.com"
+    },
+    {
+      "label": "",
+      "url": "https://correctcasinos.com"
+    },
+    {
+      "label": "",
+      "url": "https://writingmetier.com/extended-essay-writing-service/"
+    },
+    {
+      "label": "",
+      "url": "https://www.wizardslots.com"
+    },
+    {
+      "label": "",
+      "url": "https://veepn.com/vpn-apps/vpn-for-chrome/"
+    },
+    {
+      "label": "",
+      "url": "https://najlepsibukmacherzy.pl/ranking-legalnych-bukmacherow/"
+    },
+    {
+      "label": "",
+      "url": "https://gamblizard.com/deposit-bonuses/deposit-10-pound/"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/nolimits4web/Swiper#code-contributors"
+    },
+    {
+      "label": "Contribute",
+      "url": "https://github.com/nolimits4web/swiper/blob/master/CONTRIBUTING.md"
+    },
+    {
+      "label": "",
+      "url": "https://github.com/nolimits4web/swiper/blob/master/CODE_CONTRIBUTORS.md"
+    }
+  ],
+  "root_files": [
+    ".github",
+    ".vscode",
+    ".zed",
+    "demos",
+    "playground",
+    "scripts",
+    "src",
+    "tests",
+    ".all-contributorsrc",
+    ".browserslistrc",
+    ".editorconfig",
+    ".gitattributes",
+    ".gitignore",
+    ".lintstagedrc",
+    ".npmignore",
+    ".oxfmtrc.json",
+    "BACKERS.md",
+    "CHANGELOG.md",
+    "CODE_CONTRIBUTORS.md",
+    "CODE_OF_CONDUCT.md",
+    "CONTRIBUTING.md",
+    "LICENSE",
+    "PLAN_V14.md",
+    "PLAN_V15.md",
+    "README.md",
+    "package-lock.json",
+    "package.json",
+    "tsconfig.dist-types.json",
+    "tsconfig.emit.json",
+    "tsconfig.json"
+  ],
+  "release_count": 105,
+  "status": "verified"
+}
